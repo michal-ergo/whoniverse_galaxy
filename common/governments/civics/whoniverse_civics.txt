@@ -1,0 +1,286 @@
+#civic_example = {
+#	playable = {}									# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
+#	potential = {}									# requirements list, see ../readme_requirements.txt
+#	possible = {}									# requirements list, see ../readme_requirements.txt
+#	pickable_at_start = yes / no					# default: yes
+#	modification = {								# ( modification = yes/no) | Can be a set of two triggers:
+#		moddable_conditions_custom_tooltip = loc	# Used for localizaton when add or remove is not set but the other one is (replaces CIVIC_NOT_MODDABLE)
+#		add = {}									# add to check if can be added later under certain conditions
+#		remove = {}									# remove to check if can be removed later under certain conditions
+#	}
+#
+#													# default: yes, set to no to prevent adding or removing this after creation of the empire
+#	custom_tooltip_with_modifiers = ...				# Appends localization key to the end of auto-generated modifier effect text.
+#
+#	random_weight = { base = 5 }					# scriptable weight for randomizing a civic
+#													# Note: If omitted, a default weight of 1 is used
+#													# Also note: after game start, AI selection of new civics uses the below weight instead
+#
+#	ai_weight = { base = 5 }						# scriptable weight for AI picking civics in-game (when unlocking a new slot).
+#													# Note: If omitted, a default weight of 1 is used. Not needed when "modification = no"
+#
+#	modifier = {}									# modifier added to the country if the civic is selected and valid
+#	hide_modifiers = yes / no						# default: no; if yes will hide the modifiers from the origin/civic tooltip.
+#	can_build_ruler_ship = yes / no					# default: no
+#	traits = { trait = ... }						# default: empty; trait set to enforce on the primary species. They cannot be removed, but more can be added if points/picks permit
+#	has_secondary_species = {						# default: none; if present, will enable secondary species customization in empire designer and will create secondary species & pops at galaxy generation time (see empire_init_create_capital_secondary_pops)
+#		traits = { trait = ... }					# default: empty; trait set to enforce on the secondary species. They cannot be removed, but more can be added if points/picks permit
+#	}
+#	is_origin = yes / no							# default: no, set to yes if civic should be treated as an Origin
+#	description = LOC_KEY							# Custom text that will appear under the "Effects" heading.
+#	negative_description = LOC_KEY					# Custom text that will appear under the "Penalties" heading.
+#   alternate_civic_version = civic_key				# Key of the civic that will try to replace the current one during a government reform if the current civic is locked (ex: corporate version of the civic that will replace it when attempting to reform to Megacorporation)
+#													# Note: if no replacement civic is indicated, it fallback to non-moddable civics behaviour, i.e. you can't change authority
+#
+#	swap_type = {									# triggered name, desc, custom desc and modifiers
+#		name = ...
+#		description = ...
+#		negative_description = ...
+#		trigger = {									# In empire creation / galaxy setup, this has no scope. During the game, when there are actual countries existing, it is set to country scope.
+#			local_human_species_class = ..			# If you want to use country scope here, you must always check is_scope_valid first (see civic_devouring_swarm), or you will get errors or it won't work as intended.
+#		}
+#		modifier = {								# modifier that is applied to the country when triggers are evaluated as true
+#			...
+#		}
+#	}
+#	ai_playable = {}								# Similar to "playable", for AI
+#	blocks_random_machine_empire_generation	= yes	# ORIGIN EXCLUSIVE: Makes sure that random empire creation does not create invalid combinations with individualistic machines. Defaults to yes. Required for all origins that should be blocked by individualist machines.
+#}
+civic_whoniverse_dalek_supremacy = {
+	potential = { authority = { NOR = { value = auth_hive_mind value = auth_machine_intelligence } } } # not hivemind or machine
+	
+	possible = {
+		# origin = {
+		# 	value = origin_whoniverse_new_dalek_paradigm
+		# }
+		civics = {
+			NOR = {
+				value = civic_nationalistic_zeal
+				value = civic_whoniverse_cyber_conversion
+				value = civic_whoniverse_silence
+				value = civic_whoniverse_unit_hq
+			}
+		}
+		ethics = {
+			value = ethic_fanatic_xenophobe
+		} 
+	}
+	modification = yes
+	random_weight = {
+		base = 0
+	}
+
+	# description = "civic_tooltip_whoniverse_dalek_supremacy_effects"
+
+	modifier = {
+		country_war_exhaustion_mult = -0.2
+		country_claim_influence_cost_mult = -0.1
+		planet_resettlement_unemployed_mult = 0.25
+		planet_crime_mult = -0.1
+	}
+}
+
+civic_whoniverse_cyber_fleet = {
+	potential = { authority = { value = auth_hive_mind } } # hivemind
+	
+	possible = {
+		civics = {
+			OR = {
+				value = civic_whoniverse_cyber_conversion
+				value = civic_whoniverse_cyber_conversion_ai
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_hive_devouring_swarm
+				value = civic_hive_idyllic_bloom
+				value = civic_natural_design
+			}
+		}
+	}
+	modification = yes
+	random_weight = {
+		base = 0
+	}
+
+	# description = "civic_tooltip_whoniverse_cyber_fleet_effects"
+
+	modifier = {
+		councilor_gestalt_legion_exp_gain = @gestalt_civic_node_xp_rate
+		ship_fire_rate_mult = 0.25
+		country_naval_cap_mult = 0.25
+		planet_resettlement_unemployed_mult = 0.25
+	}
+}
+
+civic_whoniverse_maximum_efficiency = {
+	potential = { authority = { value = auth_hive_mind } } # hivemind
+	
+	possible = {
+		civics = {
+			OR = {
+				value = civic_whoniverse_cyber_conversion
+				value = civic_whoniverse_cyber_conversion_ai
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_hive_devouring_swarm
+				value = civic_hive_idyllic_bloom
+				value = civic_natural_design
+			}
+		}
+	}
+	modification = yes
+	random_weight = {
+		base = 0
+	}
+
+	# description = "civic_tooltip_whoniverse_cyber_fleet_effects"
+
+	modifier = {
+		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
+		planet_structures_cost_mult = -0.15
+		starbase_shipyard_build_cost_mult = -0.15
+		country_engineering_tech_research_speed = 0.15
+	}
+}
+
+
+
+civic_whoniverse_cyber_conversion = {
+	# playable = { has_synthetic_dawn = yes }
+	potential = { authority = { value = auth_hive_mind } } # auth_machine_intelligence
+	
+	possible = {
+		origin = {
+			NOT = {
+			value = origin_whoniverse_new_dalek_paradigm
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_hive_devouring_swarm
+				value = civic_hive_idyllic_bloom
+				value = civic_natural_design
+			}
+		}
+	}
+	modification = no
+	random_weight = {
+		base = 0
+	}
+
+	description = civic_tooltip_whoniverse_cyber_conversion_effects
+	has_secondary_species = {	# see game_start.12
+		title = whoniverse_cybermen_secondary_species
+	}
+	modifier = {
+		councilor_gestalt_growth_exp_gain = @gestalt_civic_node_xp_rate
+		planet_pop_assembly_organic_mult = -10.00
+	}
+}
+
+civic_whoniverse_cyber_conversion_ai = {
+	playable = { 
+		always = no
+	}
+	potential = { authority = { value = auth_hive_mind } } # hive mind
+	
+	pickable_at_start = no
+
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_hive_devouring_swarm
+				value = civic_hive_idyllic_bloom
+				value = civic_natural_design
+				value = civic_whoniverse_cyber_conversion
+			}
+		}
+	}
+	modification = no
+	random_weight = {
+		base = 0
+	}
+
+	description = "civic_tooltip_whoniverse_cyber_conversion_effects"
+
+	modifier = {
+		councilor_gestalt_growth_exp_gain = @gestalt_civic_node_xp_rate
+		planet_pop_assembly_organic_mult = -10.00
+	}
+}
+
+civic_whoniverse_unit_hq = {
+	potential = { authority = { NOR = { value = auth_hive_mind value = auth_machine_intelligence } } } # not hivemind or machine
+	
+	possible = {
+		origin = {
+			value = origin_whoniverse_unit
+		}
+		civics = {
+			NOR = {
+				value = civic_fanatic_purifiers
+				value = civic_barbaric_despoilers
+				value = civic_inwards_perfection
+			}
+		}
+	}
+	modification = yes
+	random_weight = {
+		base = 0
+	}
+
+	description = "civic_tooltip_whoniverse_unit_hq_effects"
+
+	modifier = {
+		planet_sensor_range_add = 2
+		councilor_skill_add = 1
+		starbase_shipyard_build_speed_mult = 0.1
+
+	}
+}
+
+civic_whoniverse_silence = {
+	potential = { authority = { NOR = { value = auth_hive_mind value = auth_machine_intelligence } } } # not hivemind or machine
+	
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_fanatic_spiritualist
+				value = ethic_spiritualist
+			}
+			OR = {
+				value = ethic_fanatic_militarist
+				value = ethic_militarist
+			}
+		}
+		origin = {
+			OR = {
+				value = origin_whoniverse_church
+				value = origin_separatists
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_fanatic_purifiers
+				value = civic_barbaric_despoilers
+				value = civic_inwards_perfection
+			}
+		}
+	}
+	modification = yes
+	random_weight = {
+		base = 0
+	}
+
+	# description = "civic_tooltip_whoniverse_silence_effects"
+
+	modifier = {
+		army_damage_mult = 0.15
+		intel_decryption_add = 1
+		spy_network_daily_value_mult = 0.1
+		planet_stability_add = 5
+	}
+}

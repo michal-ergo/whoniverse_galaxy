@@ -1,0 +1,315 @@
+##################
+# Species Traits #
+##################
+
+# Dalek Travel Machine trait
+trait_whoniverse_dalek_machine = {
+	cost = 3
+
+	initial = yes
+	randomized = no
+
+	species_potential_add = {
+		OR = {
+			species_portrait = whoniverse_dalek_empire
+			species_portrait = whoniverse_dalek_paradigm
+			species_portrait = whoniverse_dalek_imperial
+			species_portrait = whoniverse_dalek_renegade
+		}
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+
+	opposites = { "trait_adaptive" "trait_extremely_adaptive" "trait_whoniverse_cyber_suit" "trait_whoniverse_time_lord" }
+	
+	modifier = {
+
+		#pop_environment_tolerance = 0.10
+		planet_pops_organics_food_upkeep_mult = -0.25
+		planet_pops_consumer_goods_upkeep_mult = -0.25
+		army_damage_mult = 0.25
+		pop_housing_usage_mult = 0.1
+	}
+	potential_crossbreeding_chance = 0
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	ai_weight = {
+		weight = 0
+	}
+
+	icon = "gfx/interface/icons/traits/trait_whoniverse_dalek_machine.dds"
+}
+
+# Dalek DNA trait
+trait_whoniverse_dalek_infertile = {
+	cost = 0
+	potential_crossbreeding_chance = 0
+	opposites = { "trait_conservational" "trait_wasteful" "trait_slow_breeders" "trait_rapid_breeders" "trait_plantoid_budding" "trait_lithoid_budding" "trait_advanced_budding" "trait_vat_grown" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" }
+	sorting_priority = 20
+
+	initial = no
+	randomized = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+
+	opposites = { "trait_whoniverse_time_lord" "trait_whoniverse_cyber_suit" }
+
+	immortal_leaders = no
+	infertile = yes
+
+	potential_crossbreeding_chance = 0
+
+	allowed_archetypes = { BIOLOGICAL }
+	ai_weight = {
+		weight = 0
+	}
+
+	icon = "gfx/interface/icons/traits/trait_whoniverse_dalek_infertile.dds"
+	
+	modifier = {
+		# Leader modifiers		
+		negative_leader_traits_species = -1
+
+		# Pop modifiers
+		pop_government_ethic_attraction = 0.5
+	}
+
+	#custom_tooltip_with_modifiers = trait_necrophage_gestalt_tooltip
+}
+
+# Cyber Suit trait
+trait_whoniverse_cyber_suit = {
+	cost = 2
+
+	initial = yes
+	randomized = no
+
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+
+	opposites = { "trait_whoniverse_dalek_machine" "trait_whoniverse_dalek_infertile" }
+	
+	modifier = {
+
+		planet_pops_organics_food_upkeep_mult = -0.75
+		pop_environment_tolerance = 0.10
+		army_damage_mult = 0.25
+		planet_pops_organics_energy_upkeep_mult = 0.15
+		pop_housing_usage_mult = 0.25
+	}
+
+	infertile = yes
+	potential_crossbreeding_chance = 0
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	ai_weight = {
+		weight = 0
+	}
+
+	icon = "gfx/interface/icons/traits/trait_whoniverse_cyber_suit.dds"
+}
+
+# Time Lord trait
+trait_whoniverse_time_lord = {
+	cost = 1
+
+	initial = yes
+	randomized = no
+
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+
+	opposites = { "trait_whoniverse_dalek_infertile" "trait_whoniverse_dalek_machine" "trait_hive_mind" }
+	
+	modifier = {
+		
+		planet_jobs_specialist_produces_mult = 1
+		planet_resettlement_unemployed_mult = 1
+		pop_growth_speed = -0.9
+	}
+
+	immortal_leaders = yes
+	potential_crossbreeding_chance = 0
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	ai_weight = {
+		weight = 0
+	}
+
+	icon = "gfx/interface/icons/traits/trait_whoniverse_time_lord.dds"
+}
+
+# Zygon electricity trait
+trait_whoniverse_bio_electricity = {
+	cost = 2
+
+	initial = yes
+	randomized = no
+
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = yes
+	}
+	species_possible_merge_add = {
+		always = yes
+	}
+
+	opposites = { "trait_whoniverse_dalek_infertile" "trait_whoniverse_dalek_machine" }
+	
+	modifier = {
+		
+		planet_jobs_energy_produces_mult = 0.1
+		army_damage_mult = 0.25
+	}
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	ai_weight = {
+		weight = 0
+	}
+
+	icon = "gfx/interface/icons/traits/trait_whoniverse_bio_electricity.dds"
+}
+
+# Zygon shapeshifter trait
+trait_whoniverse_zygon = {
+	cost = 1
+
+	initial = yes
+	randomized = no
+
+	species_potential_add = {
+		species_portrait = whoniverse_zygon
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+
+	opposites = { "trait_whoniverse_dalek_infertile" "trait_whoniverse_dalek_machine" "trait_whoniverse_cyber_suit" "trait_hive_mind" }
+
+	custom_tooltip_with_modifiers = trait_whoniverse_zygon_tooltip
+	triggered_pop_modifier = {
+		planet_jobs_specialist_produces_mult = @whoniverse_zygon_bonus
+		mult = planet.value:counter_whoniverse_not_zygon
+	}
+
+	modifier = {
+		army_damage_mult = 0.25
+	}
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	ai_weight = {
+		weight = 0
+	}
+
+	icon = "gfx/interface/icons/traits/trait_whoniverse_zygon.dds"
+}
+
+# Weeping Angel trait
+trait_whoniverse_weeping_angel = {
+	cost = 2
+
+	initial = yes
+	randomized = no
+
+	species_potential_add = {
+		species_portrait = whoniverse_weeping_angel
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+
+	opposites = { "trait_whoniverse_dalek_machine" "trait_whoniverse_dalek_infertile" "trait_whoniverse_cyber_suit" }
+	custom_tooltip = trait_whoniverse_weeping_angel_tooltip
+	
+	modifier = {
+		pop_environment_tolerance = 0.10
+		army_defense_health_mult = 2
+		army_defense_damage_mult = 0.5
+	}
+
+	immortal_leaders = yes
+	infertile = yes
+	potential_crossbreeding_chance = 0
+
+	allowed_archetypes = { BIOLOGICAL LITHOID PRESAPIENT }
+
+	ai_weight = {
+		weight = 0
+	}
+
+	icon = "gfx/interface/icons/traits/trait_whoniverse_weeping_angel.dds"
+}
+
+# Silence trait
+trait_whoniverse_silence = {
+	cost = 0
+
+	initial = yes
+	randomized = no
+
+	species_potential_add = {
+		species_portrait = whoniverse_silence
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+
+	opposites = { "trait_whoniverse_dalek_machine" "trait_whoniverse_dalek_infertile" "trait_whoniverse_cyber_suit" }
+	# custom_tooltip = trait_whoniverse_silence_tooltip
+	
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+	}
+
+	infertile = yes
+	potential_crossbreeding_chance = 0
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	ai_weight = {
+		weight = 0
+	}
+
+	icon = "gfx/interface/icons/traits/trait_whoniverse_silence.dds"
+}

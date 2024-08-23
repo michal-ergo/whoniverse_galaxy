@@ -1,0 +1,232 @@
+origin_whoniverse_new_dalek_paradigm = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_whoniverse_new_dalek_paradigm.dds"
+	picture = origin_whoniverse_new_dalek_paradigm
+
+	starting_colony = pc_nuked
+
+	playable = {
+		always = yes
+	}
+
+	possible = {
+		species_archetype = { NOT = { value = MACHINE } }
+		civics = {
+			NOT = {
+				value = civic_agrarian_idyll
+			}
+			NOR = {
+				text = civic_tooltip_not_anglers
+				value = civic_anglers
+				value = civic_corporate_anglers
+				value = civic_machine_anglers
+				value = civic_corporate_machine_anglers
+				value = civic_permanent_employment
+				value = civic_natural_design
+			}
+		}
+	}
+
+	description = "origin_tooltip_whoniverse_new_dalek_paradigm"
+
+	traits = {
+		trait = trait_survivor
+		trait = trait_cybernetic
+		trait = trait_whoniverse_dalek_infertile
+	}
+
+	flags = { whoniverse_new_dalek_paradigm custom_start_screen }
+
+	advanced_start = no
+	blocks_random_machine_empire_generation	= yes
+
+	random_weight = {
+		base = 0
+	}
+}
+
+origin_whoniverse_dalek_empire_remnants = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_whoniverse_dalek_empire_remnants.dds"
+	picture = origin_whoniverse_dalek_empire_remnants
+
+	starting_colony = pc_habitat
+
+	playable = {
+		always = yes
+	}
+
+	possible = {
+		species_archetype = { NOT = { value = MACHINE } }
+		civics = {
+			NOT = {
+				value = civic_agrarian_idyll
+			}
+			NOR = {
+				text = civic_tooltip_not_anglers
+				value = civic_anglers
+				value = civic_corporate_anglers
+				value = civic_machine_anglers
+				value = civic_corporate_machine_anglers
+				value = civic_permanent_employment
+				value = civic_natural_design
+			}
+		}
+	}
+
+	description = "origin_tooltip_whoniverse_dalek_empire_remnants"
+
+	traits = {
+		trait = trait_survivor
+		trait = trait_cybernetic
+		trait = trait_whoniverse_dalek_infertile
+	}
+
+	flags = { whoniverse_new_dalek_paradigm custom_start_screen }
+
+	advanced_start = no
+	blocks_random_machine_empire_generation	= yes
+
+	random_weight = {
+		base = 0
+	}
+}
+
+origin_whoniverse_cybermen_cyberiad = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_whoniverse_cybermen.dds"
+	picture = origin_whoniverse_cybermen
+
+	possible = {
+		authority = { value = auth_hive_mind } # auth_machine_intelligence
+		# species_archetype = { value = BIOLOGICAL } # Machine
+		species_class = { value = HUM }
+		civics = {
+				value = civic_whoniverse_cyber_conversion
+			}
+		}
+
+	initializers = { whoniverse_cyberiad_system_initializer }
+
+	description = "origin_tooltip_whoniverse_cybermen"
+
+	traits = {
+		trait = trait_cybernetic
+		trait = trait_whoniverse_cyber_suit
+		trait = trait_cyborg_durable
+		trait = trait_cyborg_neural_limiters
+	}
+
+	flags = { whoniverse_cyber_empire1 custom_start_screen }
+
+	advanced_start = no
+	blocks_random_machine_empire_generation	= no
+
+	random_weight = {
+		base = 0
+	}
+}
+
+origin_whoniverse_cybermen_cybus = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_whoniverse_cybus.dds"
+	picture = origin_whoniverse_cybus
+
+	possible = {
+		authority = { value = auth_hive_mind } # auth_machine_intelligence
+		# species_archetype = { value = BIOLOGICAL } # Machine
+		species_class = { value = HUM }
+		civics = {
+				value = civic_whoniverse_cyber_conversion
+			}
+		}
+
+	description = "origin_tooltip_whoniverse_cybusmen"
+
+	initializers = { whoniverse_cybusmen_start_initializer }
+
+	traits = {
+		trait = trait_cybernetic
+		trait = trait_whoniverse_cyber_suit
+		trait = trait_cyborg_durable
+		trait = trait_cyborg_neural_limiters
+	}
+
+	flags = { whoniverse_cybermen_cybus custom_start_screen }
+
+	advanced_start = no
+	blocks_random_machine_empire_generation	= no
+
+	random_weight = {
+		base = 0
+	}
+}
+
+origin_whoniverse_unit = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_whoniverse_unit.dds"
+	picture = origin_whoniverse_unit
+
+	possible = {
+		authority = { value = auth_democratic }
+		species_class = { value = HUM }
+		}
+
+	description = "origin_tooltip_whoniverse_unit"
+
+	starting_colony = pc_continental
+	
+	initializers = { sol_system_initializer }
+
+	flags = { whoniverse_unit custom_start_screen }
+
+	advanced_start = no
+	blocks_random_machine_empire_generation	= yes
+
+	random_weight = {
+		base = 0
+	}
+}
+
+origin_whoniverse_church = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_whoniverse_church.dds"
+	picture = origin_whoniverse_church
+
+	possible = {
+		ethics = { 
+			OR = {
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+				}
+			}
+		civics = { 
+			NOR = {
+				value = civic_anglers
+				value = civic_corporate_anglers
+				}
+			}
+		species_class = { value = HUM }
+		}
+
+	description = "origin_tooltip_whoniverse_church"
+
+	has_secondary_species = {
+		title = whoniverse_church_secondary_species
+		traits = {
+			trait = trait_whoniverse_silence
+		}
+	}
+
+	starting_colony = pc_habitat
+	initializers = { whoniverse_trenzalore_system }
+	
+	flags = { whoniverse_church custom_start_screen }
+
+	advanced_start = no
+	blocks_random_machine_empire_generation	= yes
+
+	random_weight = {
+		base = 0
+	}
+}

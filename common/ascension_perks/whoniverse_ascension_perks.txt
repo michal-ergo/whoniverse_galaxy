@@ -1,0 +1,87 @@
+#Dalek Ascension - enables creation of puppet armies
+ap_whoniverse_dalek = {
+	on_enabled = {
+		custom_tooltip = "whoniverse_ap_dalek_tooltip"
+	}
+	possible = {
+		host_has_dlc = "Necroids Species Pack"
+		custom_tooltip = {
+			fail_text = "requires_free_tradition_tree"
+			num_tradition_categories < @max_tradition_trees
+		}
+	}
+
+	potential = {
+		is_whoniverse_dalek = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+#Cybermen Ascension - enables conversion of all organic species in whoniverse_citizenship_types
+ap_whoniverse_cybermen = {
+ 	on_enabled = {
+ 		custom_tooltip = "whoniverse_ap_cybermen_tooltip"
+ 	}
+ 	possible = {
+ 		# custom_tooltip = {
+ 		#  	fail_text = "requires_ascension_perks_2"
+ 		#  	num_ascension_perks > 1
+ 		# }
+ 		# custom_tooltip = {
+ 		# 	fail_text = "requires_not_ap_engineered_evolution"
+ 		# 	NOT = { has_ascension_perk = ap_engineered_evolution }
+ 		# }
+ 		# custom_tooltip = {
+ 		# 	fail_text = "requires_not_ap_the_flesh_is_weak"
+ 		# 	NOT = { has_ascension_perk = ap_the_flesh_is_weak }
+ 		# }
+ 		custom_tooltip = {
+ 			fail_text = "requires_free_tradition_tree"
+ 			num_tradition_categories < @max_tradition_trees
+ 		}
+ 	}
+
+ 	potential = {
+ 		has_authority = auth_hive_mind
+ 		OR = {
+			has_origin = "origin_whoniverse_cybermen_cyberiad"
+			has_origin = "origin_whoniverse_cybermen_cybus"
+		}
+		is_natural_design_empire = no
+ 	}
+
+ 	ai_weight = {
+ 		factor = 10
+ 	modifier = {
+ 		factor = 1000
+ 		has_whoniverse_cyber_conversion = yes
+ 		}
+ 	}
+}
+
+#Church/Silence Ascension - Order of the Headless
+ap_whoniverse_church = {
+	on_enabled = {
+		custom_tooltip = "whoniverse_ap_church_tooltip"
+	}
+	possible = {
+		host_has_dlc = "Necroids Species Pack"
+		custom_tooltip = {
+			fail_text = "requires_free_tradition_tree"
+			num_tradition_categories < @max_tradition_trees
+		}
+	}
+
+	potential = {
+		has_valid_civic = civic_whoniverse_silence
+		is_natural_design_empire = no
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+

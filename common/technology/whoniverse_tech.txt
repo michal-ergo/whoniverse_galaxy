@@ -1,0 +1,31 @@
+#New Worlds Protocol
+tech_whoniverse_church_habitats = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = { new_worlds }
+	prerequisites = { "tech_space_exploration" }
+	start_tech = no
+	is_rare = yes
+
+	icon = tech_habitat_1
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	modifier = {
+		pc_habitat_habitability = 0.2
+	}
+
+	potential = { 
+		OR = {
+			has_origin = origin_whoniverse_church
+			has_origin = origin_separatists
+		}
+	}
+
+	ai_weight = {
+
+	}
+}

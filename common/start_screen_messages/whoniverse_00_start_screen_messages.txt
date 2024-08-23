@@ -1,0 +1,79 @@
+# Start Screen Messages
+# Parameters:
+#	trigger, a trigger with country which decides if this is a valid part. Empty will be treated as always=yes.
+#	localization, a key to a localized string.
+#	location, decides where this chunk of text is located in the description, cannot be negative.
+
+
+
+### PRE-SCRIPTED
+
+# UNIT Empire
+part = {
+	location = 0
+	localization = "START_SCREEN_WHONIVERSE_UNIT"
+
+	trigger = {
+		has_country_flag = whoniverse_unit
+	}
+}
+
+# Dalek Empire
+# part = {
+# 	location = 0
+# 	localization = "START_SCREEN_WHONIVERSE_DALEK1"
+
+# 	trigger = {
+# 		has_country_flag = whoniverse_dalek_empire1
+# 	}
+# }
+
+# New Dalek Paradigm
+part = {
+	location = 0
+	localization = "START_SCREEN_WHONIVERSE_NEW_DALEK_PARADIGM"
+
+	trigger = {
+		has_country_flag = whoniverse_new_dalek_paradigm
+	}
+}
+
+# Dalek Empire Remnants
+part = {
+	location = 0
+	localization = "START_SCREEN_WHONIVERSE_DALEK_EMPIRE_REMNANTS"
+
+	trigger = {
+		has_country_flag = whoniverse_dalek_empire_remnants
+	}
+}
+
+# Cybermen - Cyberiad start
+part = {
+	location = 0
+	localization = "START_SCREEN_WHONIVERSE_CYBERIAD"
+
+	trigger = {
+		has_country_flag = whoniverse_cyberiad
+	}
+}
+
+# Cybermen - Cybus Industries start
+part = {
+	location = 0
+	localization = "START_SCREEN_WHONIVERSE_CYBUS"
+
+	trigger = {
+		has_country_flag = whoniverse_cybermen_cybus
+	}
+}
+
+# Church of the Papal Mainframe Empire
+part = {
+	location = 0
+	localization = "START_SCREEN_WHONIVERSE_CHURCH"
+
+	trigger = {
+		has_country_flag = whoniverse_church
+	}
+}

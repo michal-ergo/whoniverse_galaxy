@@ -1,0 +1,55 @@
+concept_whoniverse_dalek_infertile = {
+	icon = "gfx/interface/icons/traits/trait_whoniverse_dalek_infertile.dds"
+}
+
+concept_whoniverse_dalek_machine = {
+	icon = "gfx/interface/icons/traits/trait_whoniverse_dalek_machine.dds"
+}
+
+concept_whoniverse_dalek_supremacy = {
+	icon = "gfx/interface/icons/governments/civics/civic_whoniverse_dalek_supremacy.dds"
+}
+
+concept_whoniverse_dalek_incubation_vats = {
+	icon = "gfx/interface/icons/buildings/building_whoniverse_dalek_incubation_vats.dds"
+}
+
+concept_whoniverse_dalek_happiness = {
+	icon = "gfx/interface/icons/traits/trait_whoniverse_dalek_machine.dds"
+}
+
+concept_genome_mapping = {
+	icon = "gfx/interface/icons/technologies/tech_genome_mapping.dds"
+}
+
+concept_whoniverse_cyber_fleet = {
+	icon = "gfx/interface/icons/governments/civics/civic_whoniverse_cyber_fleet.dds"
+}
+
+concept_whoniverse_cyber_conversion = {
+	icon = "gfx/interface/icons/governments/civics/civic_whoniverse_cyber_conversion.dds"
+}
+
+concept_whoniverse_maximum_efficiency = {
+	icon = "gfx/interface/icons/governments/civics/civic_whoniverse_maximum_efficiency.dds"
+}
+
+concept_whoniverse_cyber_suit = {
+	icon = "gfx/interface/icons/traits/trait_whoniverse_cyber_suit.dds"
+}
+
+concept_whoniverse_unit_hq = {
+	icon = "gfx/interface/icons/governments/civics/civic_whoniverse_unit_hq.dds"
+}
+
+concept_whoniverse_black_archive = {
+	icon = "gfx/interface/icons/buildings/building_whoniverse_black_archive.dds"
+}
+
+concept_whoniverse_silence = {
+	icon = "gfx/interface/icons/governments/civics/civic_whoniverse_silence.dds"
+}
+
+concept_whoniverse_seventh_transept = {
+	icon = "gfx/interface/icons/buildings/building_whoniverse_seventh_transept.dds"
+}

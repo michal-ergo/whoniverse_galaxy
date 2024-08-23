@@ -1,0 +1,2 @@
+@whoniverse_zygon_bonus = 0.01
+# @whoniverse_zygon_count = counter_whoniverse_zygon # Doesn't work apparently

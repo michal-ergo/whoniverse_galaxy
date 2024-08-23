@@ -1,0 +1,2641 @@
+namespace = whoniverse
+
+# 01 - 03 = placeholders
+# 04 - 05 = Dalek Conversion effect
+# 06 - 07 = Dalek Reinvention of the Dalek Empire event
+# 08 - 12 = Dalek setup events
+# 12 - 17 = Dalek Asylum event chain
+# 19 + 23 = Dalek Necros 
+# 20 - 24 = Dalek Davros event chain
+# 30 - 39 = Cybermen setup events
+# 40 - 49 = Cybermen Mondasian Colony Ship chain
+# 50 - 59 = Cybermen Cyberiad Origin event chain
+# 60 - 69 = Cybermen Cyberiad systems events and anomalies
+# 70 - 79 = UNIT setup / Life on Mars project
+# 80 - 99 = UNIT Zygon Invasion event chain
+# 100 - 109 = Zygon system events and anomalies
+# 110 - 119 = Weeping Angels UNIT Blink event chain
+# 120 - 139 = Weeping Angels random events
+# 140 - 149 = Church of the Papal Mainframe setup
+# 150 - 159 = The Question (Trenzalore) event chain
+# 160 - 169 = Kovarian Chapter event chain (planned)
+# 170 - 179 = Alfava Metraxis archaelogy digsite
+# 180 - 189 = Cybusmen Pete's World events
+# 190 - 199 = Cybusmen Cybus Industries events
+# 200 - 209 = Dalek Empire Remnants setup events
+# 210 - 219 = Dalek Emperor events
+
+
+### Cybermen events
+# Assimilate Pops on Yearly Pulse
+event = {
+	id = whoniverse.30
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_playable_country = {
+			num_unique_species > 1
+			has_whoniverse_cyber_conversion = yes
+		}
+	}
+	
+	immediate = {
+		every_playable_country = {
+			limit = {
+				num_unique_species > 1
+				has_whoniverse_cyber_conversion = yes
+			}
+			
+			every_owned_planet = {
+				planet_event = { id = whoniverse.31 }
+			}
+		}
+	}
+}
+
+# Assimilate Pops on yearly pulse (Cyber-Conversion)
+planet_event = {
+	id = whoniverse.31
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_species = {
+			NOR = {
+				is_same_species = root.owner
+				is_robotic_species = yes
+				is_mechanical_species = yes
+			}
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			1 = { # 1 pop
+				set_variable = {
+					which = cyber_conversion_counter
+					value = 1
+				}
+				while = {
+					count = 1
+					limit = {
+						any_owned_pop = {
+							has_citizenship_type = {
+								type = citizenship_whoniverse_cyber_conversion
+								country = root.owner
+							}
+						}
+						check_variable = {
+							which = cyber_conversion_counter
+							value > 0
+							}
+						}
+				whoniverse_cybermen_assimilation_effect = yes
+				}
+			}
+			1 = { # 3 pop
+				set_variable = {
+					which = cyber_conversion_counter
+					value = 3
+				}
+				while = {
+					count = 3
+					limit = {
+						any_owned_pop = {
+							has_citizenship_type = {
+								type = citizenship_whoniverse_cyber_conversion
+								country = root.owner
+							}
+						}
+						check_variable = {
+							which = cyber_conversion_counter
+							value > 0
+							}
+						}
+				whoniverse_cybermen_assimilation_effect = yes
+				}
+			}
+			1 = { # 6 pop
+				set_variable = {
+					which = cyber_conversion_counter
+					value = 6
+				}
+				while = {
+					count = 6
+					limit = {
+						any_owned_pop = {
+							has_citizenship_type = {
+								type = citizenship_whoniverse_cyber_conversion
+								country = root.owner
+							}
+						}
+						check_variable = {
+							which = cyber_conversion_counter
+							value > 0
+							}
+						}
+				whoniverse_cybermen_assimilation_effect = yes
+				}
+			}
+			1 = { # 12 pop
+				set_variable = {
+					which = cyber_conversion_counter
+					value = 12
+				}
+				while = {
+					count = 12
+					limit = {
+						any_owned_pop = {
+							has_citizenship_type = {
+								type = citizenship_whoniverse_cyber_conversion
+								country = root.owner
+							}
+						}
+						check_variable = {
+							which = cyber_conversion_counter
+							value > 0
+							}
+						}
+				whoniverse_cybermen_assimilation_effect = yes
+				}
+				
+			}
+		}
+	}
+}
+
+# Cybermen start secondary species setup event, remove spawning pools
+planet_event = {
+    id = whoniverse.32
+    is_triggered_only = yes
+    hide_window = yes
+	
+	trigger = {
+		owner = { has_whoniverse_cyber_conversion = yes }
+	}
+    immediate = {
+        whoniverse_generate_cybermen_pops = yes
+    }
+}
+
+# changes an empire's policy (Cybermen AI event)
+country_event = {
+	id = whoniverse.33
+	is_triggered_only = yes
+	hide_window = yes
+  
+	trigger = {
+		owner = {
+			has_whoniverse_cyber_conversion = yes
+			is_ai = yes
+		}
+	}
+
+	immediate = {
+	    set_policy = {
+			policy = interference
+			option = interference_aggressive
+			cooldown = yes # determines should this effect set a 10-year cooldown of policy change
+		}
+		set_policy = {
+			policy = first_contact_protocol
+			option = first_contact_attack_allowed
+			cooldown = yes # determines should this effect set a 10-year cooldown of policy change
+		}
+	}
+}
+
+# Cybermen remove spawning pool on home planet
+planet_event = {
+	id = whoniverse.34
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		owner = {
+			has_whoniverse_cyber_conversion = yes
+		}
+	}
+
+	immediate = {
+		#capital_scope = {
+			if = {
+				limit = {
+		 			free_building_slots <= 0
+		 			has_district = district_generator
+		 			has_district = district_city
+		 			}
+		 		remove_district = district_generator
+		 		add_district = district_city
+		 		}
+		 	remove_building = building_spawning_pool
+			add_building = building_sensorium_1
+		 	}
+		}
+
+# Cyberiad setup
+country_event = {
+	id = whoniverse.35
+	hide_window = yes
+	trigger = {
+		has_origin = origin_whoniverse_cybermen_cyberiad
+			}
+	is_triggered_only = yes	
+	fire_only_once = yes
+		
+	immediate = {
+		event_target:whoniverse_start_hedgewick = {
+			add_deposit = d_whoniverse_spacey_zoomer_ride
+				}
+			}
+		}
+
+# Cyber-Conversion info message on conquered planet
+country_event = {
+	id = whoniverse.36
+	title = "whoniverse.36.name"
+	desc = "whoniverse.36.desc"
+	picture = GFX_evt_whoniverse_cybermen
+	show_sound = whoniverse_cybermen_cyberiad_event
+
+	trigger = { owner = { has_whoniverse_cyber_conversion = yes } }
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = EXCELLENT
+    	}
+	}
+
+# Cyber-Conversion info mesasge on conquered planet setup
+planet_event = {
+  	id = whoniverse.37
+  	hide_window = yes
+  	is_triggered_only = yes
+	
+	trigger = { from = { has_whoniverse_cyber_conversion = yes } }
+
+  	immediate = { from = { country_event = { id = whoniverse.36 days = 1 random = 0}  } }
+
+  	fire_only_once = yes
+
+  	}
+
+# # change an empire's citizenship policy (last_created_species)
+# country_event = {
+# 	id = whoniverse.38
+# 	is_triggered_only = yes
+# 	hide_window = yes
+  
+# 	trigger = {
+# 		owner = {
+# 			has_valid_civic = civic_whoniverse_cyber_conversion
+# 		}
+# 	}
+
+# 	immediate = {
+# 	    event_target:cybertalosian_species = {
+# 			set_citizenship_type = {
+# 				type = citizenship_full
+# 			}
+# 		}
+# 	}
+# }
+
+# Add "seen bypass wormholes" to empires starting on Pete's World, wormhole tech
+country_event = {
+	id = whoniverse.38
+	hide_window = yes
+	
+	trigger = { 
+		owner = { 
+			any_system = {
+				has_star_flag = whoniverse_cybusmen_start_system
+				}
+			}
+		}
+
+	is_triggered_only = yes
+	
+	immediate = {
+		add_seen_bypass_type = wormhole
+		add_research_option = tech_wormhole_stabilization
+		add_tech_progress = {
+			tech = tech_wormhole_stabilization
+			progress = 0.75
+		}
+		owner = {
+			add_monthly_resource_mult = {
+			resource = food
+			value = @tier3materialreward
+			min = @tier3materialmin
+			max = @tier3materialmax
+			}
+		}
+	}
+}
+
+
+### Cybermen galaxy events
+# CyberMondasian colony ship event chain
+planet_event = {
+	id = whoniverse.40
+	title = "whoniverse.40.name"
+	desc = "whoniverse.40.desc"
+	picture = GFX_evt_relic_shipyard
+	show_sound = event_alien_nature
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_mondasian_colony_ship_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = no
+		original_owner = yes
+		is_ai = no # changed in v0.31 to only human players
+		has_ground_combat = no
+		is_capital = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_whoniverse_cyber_conversion = no
+		}
+		num_pops > 0
+		OR = {
+			is_planet_class = pc_continental
+			is_planet_class = pc_tropical
+			is_planet_class = pc_arid
+			is_planet_class = pc_tundra
+			is_planet_class = pc_savannah
+		}
+		NOR = {
+			has_global_flag = whoniverse_mondasian_colony_ship_global
+			has_planet_flag = colony_event
+		}
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = whoniverse_mondasian_colony_ship_global
+		set_planet_flag = colony_event
+		owner = {
+				set_country_flag = whoniverse_mondasian_colony_ship_country
+			}
+		begin_event_chain = {
+			event_chain = "whoniverse_mondasian_colony_ship_chain"
+			target = ROOT
+		}
+	}
+ 
+	option = {
+		name = whoniverse.40.a
+        owner = {
+        }
+		enable_special_project = {
+			name = "whoniverse_mondasian_colony_ship_project"
+			location = this
+			owner = root
+		}
+		hidden_effect = {
+			set_planet_flag = whoniverse_mondasian_colony_ship_planet
+		}
+	}
+}
+
+
+# Mondasian colony ship project completed
+planet_event = {
+	id = whoniverse.41
+	title = "PROJECT_COMPLETE"
+	desc = "whoniverse.41.desc"
+	picture = GFX_evt_whoniverse_mondasian
+	show_sound = whoniverse_cybermen_mondasian_event
+	location = ROOT
+	event_chain = whoniverse_mondasian_colony_ship_chain
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = whoniverse.41.a
+		hidden_effect = {
+			random_list = {
+				40 = { planet_event = { id = whoniverse.48 days = 30 random = 0 } }
+				60 = { planet_event = { id = whoniverse.49 days = 30 random = 0 } }
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.41.b
+		owner = {
+			add_monthly_resource_mult = {
+			resource = alloys
+			value = @tier4materialreward
+			min = @tier4materialmin
+			max = @tier4materialmax
+			}
+		}
+		hidden_effect = {
+			planet_event = { id = whoniverse.44 days = 30 random = 0 } # 1 month full
+			}
+		}
+
+	option = {
+		name = whoniverse.41.c
+		trigger = {
+			owner = {
+				OR = {
+				is_whoniverse_dalek = yes
+				has_ethic = ethic_fanatic_militarist
+				}
+			}
+		}		
+		hidden_effect = {
+			planet_event = { id = whoniverse.43 days = 30 random = 0  }
+        }
+    }
+
+}		
+
+# Mondasian colony ship project failed
+planet_event = {
+	id = whoniverse.42
+	#title = "PROJECT_FAILURE"
+	#desc = "whoniverse.42.desc"
+	hide_window = yes
+	#picture = GFX_evt_relic_shipyard
+	#how_sound = event_alien_nature
+	location = ROOT
+
+	is_triggered_only = yes
+
+	immediate = {
+		#name = "DISCONCERTING"
+		hidden_effect = {
+			planet_event = { id = whoniverse.45 days = 30 random = 0}
+		}
+	}
+}
+
+# Mondasian colony ship exterminate option
+planet_event = {
+    id = whoniverse.43
+    is_triggered_only = yes
+    hide_window = yes
+	
+    immediate = {
+        planet_event = { id = whoniverse.47 days = 30 random = 0 }
+    }
+}
+
+# Mondasian colony ship dismantle project option
+planet_event = {
+	id = whoniverse.44
+	title = "whoniverse.44.name"
+	desc = "whoniverse.44.desc"
+	picture = GFX_evt_whoniverse_mondasian
+	show_sound = whoniverse_cybermen_mondasian_event
+	location = ROOT
+	event_chain = whoniverse_mondasian_colony_ship_chain
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "WORRYING"
+		owner = {
+			add_monthly_resource_mult = {
+			resource = alloys
+			value = @tier4materialreward
+			min = @tier4materialmin
+			max = @tier4materialmax
+			}
+		}
+	hidden_effect = {
+		planet_event = { id = whoniverse.45 days = 30 random = 0 } # now full
+	    }
+	}
+}
+
+# full mondasian invasion, create proper country
+planet_event = {
+	id = whoniverse.45
+	title = "whoniverse.45.name"
+	desc = "whoniverse.45.desc"
+	picture = GFX_evt_whoniverse_mondasian
+	show_sound = event_air_raid_siren
+	location = ROOT
+	event_chain = whoniverse_mondasian_colony_ship_chain
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = no
+		original_owner = yes
+		has_ground_combat = no
+	}
+
+	trigger = {
+		has_planet_flag = whoniverse_mondasian_colony_ship_planet
+		num_pops > 0
+	}
+
+	immediate = {
+		owner = {
+			end_event_chain = "whoniverse_mondasian_colony_ship_chain"
+			save_event_target_as = old_empire
+		}
+		while = {
+            limit = { num_pops > 1 }
+            random_owned_pop = {
+                kill_pop = yes
+            }
+        }
+		# every_country = {
+		# 	limit = { has_country_flag = whoniverse_mondasian_colony_ship_country }
+		# 	country_event = { id = whoniverse.46 days = 1 }
+		# }
+		create_species = {
+			name = "SPEC_WHO_MONDASIAN"
+			plural = "SPEC_WHO_MONDASIAN_pl"
+			class = HUM
+			portrait = "whoniverse_cyberman_05"
+			namelist = "CYBERMAN1"
+			traits = {
+				trait = "trait_hive_mind"
+				trait = "trait_cybernetic"
+				trait = "trait_whoniverse_cyber_suit"
+				trait = "trait_cyborg_durable"
+				trait = "trait_cyborg_neural_limiters"
+			}
+		}
+		create_country = {
+			name = "CyberMondasian Empire"
+			species = last_created_species
+			type = default
+			ethos = {
+				ethic = ethic_gestalt_consciousness
+			}
+			authority = auth_hive_mind
+			origin = origin_default
+			civics = {
+				civic = civic_whoniverse_cyber_conversion_ai
+				civic = civic_hive_subsumed_will
+			}	
+			flag = {
+				icon = {
+					category = "whoniverse"
+					file = "whoniverse_flag_03.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"dark_grey"
+					"grey"
+					"null"
+					"null"
+				}
+			}
+			
+			effect = {
+				set_graphical_culture = mammalian_01
+				establish_contact = { who = event_target:old_empire location = root.solar_system }
+				establish_communications = event_target:old_empire
+				save_global_event_target_as = whoniverse_cybermondian_global
+			##Copy technology
+				if = {
+					limit = {
+						any_country = { is_ai = no }
+					}
+					random_country = {
+						limit = { is_ai = no }
+						save_event_target_as = tech_country
+					}
+					copy_techs_from = {
+						target = event_target:tech_country
+						except = {
+							# Horizon Signal
+							tech_akx_worm_1
+							tech_akx_worm_2
+							tech_akx_worm_3
+						}
+					}
+				}
+				else = {
+					random_country = {
+						limit = { is_country_type = default	}
+						save_event_target_as = tech_country
+					}
+					copy_techs_from = {
+						target = event_target:tech_country
+						except = {
+							# Horizon Signal
+							tech_akx_worm_1
+							tech_akx_worm_2
+							tech_akx_worm_3
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_technology = tech_starbase_2 }
+					}
+					give_technology = { tech = tech_starbase_2 }
+				}
+				if = {
+					limit = {
+						NOT = { has_technology = tech_destroyers }
+					}
+					give_technology = { tech = tech_destroyers }
+				}
+				if = {
+					limit = {
+						NOT = { has_technology = tech_cruisers }
+					}
+					give_technology = { tech = tech_cruisers }
+				}
+			}
+		}
+		set_owner = last_created_country
+		set_capital = yes
+
+		hidden_effect = {
+			last_created_country = {
+				set_country_flag = whoniverse_cybermondian_empire_flag
+				
+			}
+		}
+		while = {
+			count = 20
+			create_pop = {
+				species = last_created_species
+			}
+		}
+
+		while = {
+			count = 20
+			create_army = {
+				name = random
+				owner = last_created_country
+				species = last_created_species
+				type = "defense_army"
+			}
+		}
+	
+			##Build Starbases
+		create_fleet = {
+			name = "NAME_CyberMondasian_Fleet"
+			effect = {
+				set_owner = last_created_country
+				set_location = {
+					target = ROOT
+					distance = 10
+					angle = random
+					}
+				while = {
+					count = 5
+					create_ship = {
+					name = "CyberMondasian Cruiser"
+					design = "NAME_CYBERMONDASIAN_CRUISER"
+						}
+					}
+				while = {
+					count = 15
+					create_ship = {
+						name = "CyberMondasian Corvette"
+						design = "NAME_CYBERMONDASIAN_CORVETTE"
+						}
+					}
+				}
+			}
+		starbase = {
+			set_owner = last_created_country
+				}
+
+		create_starbase = {
+			size = starbase_starport
+			owner = last_created_country
+			module = shipyard
+			building = crew_quarters
+				effect = {
+				set_starbase_module = {
+					slot = 1
+						module = anchorage
+					}
+					set_starbase_module = {
+						slot = 2
+						module = anchorage
+					}
+				}
+			}
+
+			while = {
+				count = 4
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_city
+				}
+			}
+			while = {
+				count = 2
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_industrial
+				}
+			}
+			while = {
+				count = 3
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_farming
+				}
+			}
+			while = {
+				count = 3
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_mining
+				}
+			}
+			while = {
+				count = 3
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_generator
+				}
+			}
+		
+		add_building = building_capital
+		add_building = building_research_lab_1
+		add_building = building_foundry_1
+		add_building = building_commercial_zone
+		add_building = building_food_processing_facility
+		add_building = building_energy_grid
+		add_building = building_mineral_purification_plant
+		add_building = building_bureaucratic_1
+
+		last_created_country = {
+			add_resource = { minerals = 7000 }
+			add_resource = { energy = 7000 }
+			add_resource = { food = 4000 }
+			add_resource = { consumer_goods = 4000 }
+			add_resource = { alloys = 4000 }
+			add_resource = { influence = 1000 }
+			add_resource = { unity = 27000 }	
+			while = {
+				count = 4
+				create_leader = {
+					class = scientist
+					species = last_created_species
+					name = random
+					skill = 3
+				}
+			}
+			while = {
+				count = 1
+				create_leader = {
+					class = commander
+					species = last_created_species
+					name = random
+					skill = 3
+				}
+			}
+			create_leader = {
+				class = official
+				species = last_created_species
+				name = random
+				skill = 3
+				}			
+			}
+		}
+		
+	option = {
+		name = "DISCONCERTING"
+		custom_tooltip = whoniverse_cybermondasians_appeared
+		}
+	}
+
+# country_event = { #Alert that the CyberMondians default empire has been created
+# 	id = whoniverse.46
+# 	title = "whoniverse.46.name"
+# 	desc = "whoniverse.46.desc"
+# 	picture = GFX_evt_whoniverse_mondasian
+# 	show_sound = cybermen_mondasian_event
+# 	# location = event_target:whoniverse_cybermondian_empire_flag
+
+# 	is_triggered_only = yes
+
+# 	# trigger = {
+# 	# 	any_system = {
+# 	# 		exists = owner
+# 	# 		owner = {
+# 	# 			is_same_value =	event_target:whoniverse_cybermondian_empire_flag
+# 	# 		}
+# 	# 	}
+# 	# }
+# 	option = {
+# 		name = DISCONCERTING
+# 	}
+# }
+
+# CyberMondasian - Create faction on planet
+planet_event = {
+	id = whoniverse.47
+	title = "whoniverse.47.name"
+	desc = "whoniverse.47.desc"
+	picture = GFX_evt_whoniverse_mondasian
+	show_sound = event_air_raid_siren
+	location = ROOT
+	event_chain = whoniverse_mondasian_colony_ship_chain
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = no
+		original_owner = yes
+		has_ground_combat = no
+	}
+
+	trigger = {
+		has_planet_flag = whoniverse_mondasian_colony_ship_planet
+		num_pops > 0
+	}
+
+	immediate = {
+		owner = {
+			end_event_chain = "whoniverse_mondasian_colony_ship_chain"
+		}
+		set_planet_flag = whoniverse_mondasian_colony_ship_invasion_flag
+		owner = { set_country_flag = whoniverse_mondasian_colony_ship_invaded_flag }
+		create_country = {
+			name = "CyberMondasian Incursion"
+			type = faction
+			flag = {
+				icon = {
+					category = "whoniverse"
+					file = "whoniverse_flag_03.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"dark_grey"
+					"grey"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				establish_communications_no_message = root.owner
+				establish_contact = { who = root.owner location = root.solar_system }
+			}
+		}
+		create_species = {
+			name = "CYBERMAN"
+			class = HUM
+			portrait = whoniverse_cyberman_05
+			traits = {
+				trait = "trait_hive_mind"
+				trait = "trait_cybernetic"
+				trait = "trait_whoniverse_cyber_suit"
+				trait = "trait_cyborg_durable"
+				trait = "trait_cyborg_neural_limiters"
+			}
+		}
+		while = {
+			count = 8
+			create_army = {
+				name = "CYBERMAN1_ARMY"
+				owner = last_created_country
+				species = last_created_species
+				type = "assault_army"
+			}
+		}
+	}
+
+	option = {
+		name = "DISCONCERTING"
+	}
+}
+
+# Mondasian colony ship seal random option A - Cybermen minor incursion
+planet_event = {
+	id = whoniverse.48
+	title = "whoniverse.48.name"
+	desc = "whoniverse.48.desc"
+	picture = GFX_evt_whoniverse_mondasian
+	show_sound = whoniverse_cybermen_mondasian_event
+	location = ROOT
+	event_chain = whoniverse_mondasian_colony_ship_chain
+
+	is_triggered_only = yes
+	
+	option = {
+		name = whoniverse.48.a
+		hidden_effect = {
+			planet_event = { id = whoniverse.47 days = 30 random = 0 } # faction
+	    }
+	}
+}
+
+# Mondasian colony ship seal random option B - Ship permanently sealed
+planet_event = {
+	id = whoniverse.49
+	title = "whoniverse.49.name"
+	desc = "whoniverse.49.desc"
+	picture = GFX_evt_relic_shipyard
+	show_sound = event_construction
+	location = ROOT
+	event_chain = whoniverse_mondasian_colony_ship_chain
+
+	is_triggered_only = yes
+	
+	option = {
+		name = whoniverse.49.a
+		owner = {
+			end_event_chain = "whoniverse_mondasian_colony_ship_chain"
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier3unityreward
+				min = @tier3unitymin
+				max = @tier3unitymax
+				}
+		}
+	}
+}
+
+### Cybermen Cyberiad origin event chain / MrClever chain
+# Cyberiad setup
+country_event = {
+    id = whoniverse.50
+    hide_window = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_origin = origin_whoniverse_cybermen_cyberiad
+			}
+	}
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	immediate = { 
+		capital_scope = {
+			planet_event = { id = whoniverse.51 days = 9125 random = 1825 } }  # 20-30 years			
+		}
+	}
+
+# Visitors come to homeplanet
+planet_event = {
+	id = whoniverse.51
+	title = "whoniverse.51.name"
+	desc = "whoniverse.51.desc"
+	picture = GFX_evt_whoniverse_cybermen
+	show_sound = whoniverse_cybermen_cyberiad_event
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_cyberiad_mrclever_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_whoniverse_cyber_conversion = yes
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		begin_event_chain = {
+			event_chain = "whoniverse_cyberiad_mrclever_chain"
+			target = ROOT
+		}
+	}
+ 
+	option = {
+		name = whoniverse.51.a
+		trigger = { owner = { resource_stockpile_compare = { resource = energy value >= 75 } }}
+        hidden_effect = {
+			planet_event = { id = whoniverse.52 days = 90 } } 
+		owner = {
+			add_resource = { energy = -75 }}
+		}
+
+	option = {
+		name = whoniverse.51.b
+        hidden_effect = {
+			planet_event = { id = whoniverse.57 days = 90 } }
+		}		
+
+}
+
+
+# Meeting the doctor, cyber-convert or not
+planet_event = {
+	id = whoniverse.52
+	title = "whoniverse.52.name"
+	desc = "whoniverse.52.desc"
+	picture = GFX_evt_whoniverse_eleventh_doctor
+	show_sound = whoniverse_tardis_event
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_cyberiad_mrclever_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_whoniverse_cyber_conversion = yes
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.52.a
+        owner = {
+        }
+		enable_special_project = {
+			name = "whoniverse_cyberiad_mrclever_project"
+			location = this
+			owner = root
+		}
+	}
+	option = {
+		name = whoniverse.52.b
+        hidden_effect = {
+			planet_event = { id = whoniverse.54 days = 90 } } 
+		custom_tooltip = whoniverse.cyberiad.custom_tooltip
+	}
+}
+
+# MrClever Cyber-Conversion partially succesful
+planet_event = {
+	id = whoniverse.53
+	title = "PROJECT_COMPLETE"
+	desc = "whoniverse.53.desc"
+	picture = GFX_evt_whoniverse_mrclever
+	show_sound = whoniverse_cybermen_mrclever_event1
+	location = ROOT
+	event_chain = whoniverse_cyberiad_mrclever_chain
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = whoniverse.53.a
+		owner = {
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = @tier3researchreward
+			min = @tier3researchmin
+			max = @tier3materialmax
+			}
+		}
+		hidden_effect = {
+			planet_event = { id = whoniverse.55 days = 180 random = 0 }
+		}
+	}
+}	
+
+# Doctor blows the planet
+planet_event = {
+	id = whoniverse.54
+	title = "whoniverse.54.name"
+	desc = "whoniverse.54.desc"
+	picture = GFX_evt_exploding_planet
+	show_sound = event_air_raid_siren
+	trackable = yes
+	event_chain = whoniverse_cyberiad_mrclever_chain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = whoniverse.54.a
+		# set_planet_flag = planet_cracked
+        # change_pc = pc_shattered
+		
+		owner = {
+		end_event_chain = "whoniverse_cyberiad_mrclever_chain"
+		}
+		hidden_effect = {
+			planet_event = { id = planet_destruction.100 }
+			# remove_all_buildings = yes
+			# clear_deposits = yes
+			# every_owned_pop = {
+			# 	kill_pop = yes
+			# }
+			}
+		}   
+    }
+
+#  Let's play chess	
+planet_event = {
+	id = whoniverse.55
+	title = "whoniverse.55.name"
+	desc = "whoniverse.55.desc"
+	picture = GFX_evt_whoniverse_mrclever
+	show_sound = whoniverse_cybermen_mrclever_event2
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_cyberiad_mrclever_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_whoniverse_cyber_conversion = yes
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.55.a
+        owner = {
+        }
+		enable_special_project = {
+			name = "whoniverse_cyberiad_mrclever_chess_project"
+			location = this
+			owner = root
+		}
+	}
+	option = {
+		name = whoniverse.55.b
+        hidden_effect = {
+			planet_event = { id = whoniverse.54 days = 90 } } 
+		custom_tooltip = whoniverse.cyberiad.custom_tooltip
+	}
+}
+
+# MrClever: HIRE/DISMISS
+country_event = {
+	id = whoniverse.56
+	title = "whoniverse.56.name"
+ 	desc = whoniverse.56.desc
+
+	show_sound = whoniverse_cybermen_mrclever_event1
+    location = fromfrom
+	is_triggered_only = yes
+
+	trigger = {
+		has_whoniverse_cyber_conversion = yes
+		NOT = { exists = event_target:whoniverse_mrclever_leader }
+	}
+
+	event_window_type = leader_recruit
+	picture_event_data = {
+		portrait = event_target:whoniverse_mrclever_leader
+		room = personality_hive_mind_room
+	}
+	picture = GFX_crisis_conversation_bg_synth_queen
+
+	immediate = {
+		hidden_effect = {
+			create_country = {
+				name = "whoniverse_mrclever_country"
+				type = global_event
+				auto_delete = yes
+				flag = {
+					icon = {
+						category = "special"
+						file = "unknown.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors = {
+						"blue"
+						"blue"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					save_event_target_as = mrclever_country
+				}
+			}
+			event_target:mrclever_country = {
+				create_species = {
+					name = "NAME_whoniverse_mrclever_species"
+					class = PARAGON
+					portrait = whoniverse_cyberman_02_mrclever
+					namelist = "CYBERMAN1"
+					traits = {
+						trait = trait_hive_mind
+						trait = trait_cybernetic
+						trait = trait_whoniverse_time_lord
+						trait = trait_charismatic
+						trait = trait_quarrelsome
+					}
+					effect = {
+						save_event_target_as = mrclever_species
+					}
+				}
+				create_leader = {
+					species = event_target:mrclever_species
+					event_leader = yes
+					class = scientist
+					name = "NAME_whoniverse_mrclever_name"
+					skill = 7
+					randomize_traits = no
+					skip_background_generation = yes
+					background_ethic = ethic_gestalt_consciousness
+					custom_catch_phrase = whoniverse_mrclever_catch_phrase
+					custom_description = whoniverse_mrclever_backstory
+					can_manually_change_location = yes
+					traits = {
+						trait = leader_trait_cyborg
+						trait = leader_trait_carefree # intuition
+						trait = leader_trait_meticulous # roamer
+						trait = leader_trait_lawless # crime
+						trait = subclass_scientist_explorer
+					}
+					gender = male
+					set_age = 1208
+					immortal = yes
+					effect = {
+						save_global_event_target_as = whoniverse_mrclever_leader
+						set_leader_flag = legendary_leader
+						set_leader_flag = mrclever
+						set_owner = root
+						exile_leader_as = whoniverse_mrclever_leader
+					}
+				}
+			}
+		}
+	}
+
+	option = { # Identify
+		name = whoniverse.56.a
+		is_dialog_only = yes
+		response_text = whoniverse.56.a.response
+	}
+	option = { # Become like us
+		name = whoniverse.56.b
+		is_dialog_only = yes
+		response_text = whoniverse.56.b.response
+	}
+
+	option = { # You are not compatible
+	name = whoniverse.56.c
+	is_dialog_only = yes
+	response_text = whoniverse.56.c.response
+	}
+
+	option = { # HIRE
+		name = whoniverse.56.d
+		tag = hire_leader
+		custom_tooltip = whoniverse.56.d.custom_tooltip # MrClever joins
+		sound = whoniverse_cybermen_mrclever_event1
+
+		hidden_effect = {
+			clone_leader = {
+				target = event_target:whoniverse_mrclever_leader
+			}
+			last_created_leader = {
+				set_leader_flag = legendary_leader
+				save_global_event_target_as = whoniverse_mrclever_leader
+				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = whoniverse_mrclever_leader
+				set_owner = root
+			}
+			event_target:whoniverse_start_hedgewick = {
+				planet_event = { id = whoniverse.57 days = 30}
+			}
+			owner = { country_event = { id = whoniverse.59 days = 54750 random = 18250 } } # MrClever leaves in 100-200 years
+			create_fleet = {
+				name = "NAME_Tardis"
+				settings = {
+					can_upgrade = no
+					can_change_composition = no
+					can_change_leader = no
+					can_disband = no
+					spawn_debris = no
+				}
+				effect = {
+					set_owner = root.owner
+					if = {
+						limit = {
+							has_first_contact_dlc = yes
+						}
+						create_ship_design = {
+							design = "NAME_Tardis_Cloaked" # NAME_Tardis_Cloaked
+						}
+					}
+					else = {
+						create_ship_design = {
+							design = "NAME_Tardis" #NAME_Tardis
+						}
+					}
+					create_ship = {
+						design = last_created_design
+						name = "NAME_Tardis"
+						prefix = no
+						upgradable = no
+						effect = {
+							set_ship_flag = is_mrclever_ship
+							save_global_event_target_as = whoniverse_mrclever_ship
+							set_ship_flag = special_science_ship
+						}
+					}
+					set_fleet_stance = evasive
+					set_location = root.capital_scope
+					assign_leader = event_target:whoniverse_mrclever_leader
+				}
+			}
+		}
+	}
+	option = { # DISMISS
+		name = whoniverse.56.e
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:whoniverse_mrclever_leader = {
+				kill_leader = { show_notification = no }
+				}
+			event_target:whoniverse_start_hedgewick = {
+				planet_event = { id = whoniverse.57 days = 30}		
+				}
+		}
+	}
+}
+
+
+# Cyberiad planet name change option
+planet_event = {
+	id = whoniverse.57
+	title = "whoniverse.57.name"
+	desc = "whoniverse.57.desc"
+	picture = GFX_evt_whoniverse_cybermen
+	show_sound = whoniverse_cybermen_cyberiad_event
+	location = ROOT
+	event_chain = whoniverse_cyberiad_mrclever_chain
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = { owner_species = { save_event_target_as = owner_species }}
+	}
+
+	option = {
+		name = whoniverse.57.a
+		while = {
+			count = 1
+			create_pop = {
+				species = event_target:owner_species
+			}
+		owner = {
+			add_monthly_resource_mult = {
+                resource = unity
+				value = @tier3materialreward
+				min = @tier3materialmin
+				max = @tier3materialmax
+            	}
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.57.b
+		while = {
+			count = 1
+			create_pop = {
+				species = event_target:owner_species
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+                resource = unity
+				value = @tier3materialreward
+				min = @tier3materialmin
+				max = @tier3materialmax
+            	}
+			}
+		set_name = "whoniverse_name_cyberiad_core"
+		solar_system = { set_name = "whoniverse_name_cyberiad_core" }		
+	}
+}
+
+# Cybermen AI cheat to change name on beginning
+planet_event = {
+	id = whoniverse.58
+	hide_window = yes
+	location = ROOT
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = yes
+		has_ground_combat = no
+		is_capital = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_cybermen_cyberiad
+			is_ai = yes
+		}
+		num_pops > 0
+		}
+
+	is_triggered_only = yes
+
+	immediate = {
+		# set_name = "whoniverse_name_cyberiad_core"
+		solar_system = { set_name = "whoniverse_name_cyberiad_core" }
+	}
+}
+
+# MrClever leaves
+country_event = {
+	id = whoniverse.59
+	title = "whoniverse.59.name"
+	desc = "whoniverse.59.desc"
+	picture = GFX_evt_whoniverse_eleventh_doctor
+	show_sound = whoniverse_tardis_event
+	event_chain = whoniverse_cyberiad_mrclever_chain
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:whoniverse_mrclever_leader
+	}
+
+	immediate = {
+		hidden_effect = {
+			event_target:whoniverse_mrclever_ship = {
+                leader = { unassign_leader = this }
+
+                delete_ship = this
+            }
+            event_target:whoniverse_mrclever_leader = {
+                kill_leader = { show_notification = no }
+            }
+			set_country_flag = million_souls_achievement
+		}
+	}
+
+	option = {
+		name = whoniverse.59.a
+		owner = {
+			end_event_chain = "whoniverse_cyberiad_mrclever_chain"
+			}
+		}
+	}
+
+### Telos events
+# Telos Minor anomaly
+ship_event = {
+    id = whoniverse.60
+    title = "whoniverse.60.name"
+    desc = "whoniverse.60.desc"
+    picture = GFX_evt_city_ruins
+    show_sound = event_scanner
+    location = FROM
+            
+    is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		trigger = {
+			owner = {
+				has_whoniverse_cyber_conversion = yes
+					}
+				}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier3researchreward
+				min = @tier3researchmin
+				max = @tier3researchmax
+					}
+			add_monthly_resource_mult = {
+                resource = unity
+				value = @tier3materialreward
+				min = @tier3materialmin
+				max = @tier3materialmax
+            	}
+			}		
+	   	}
+	option = {
+		name = WORRYING
+		trigger = {
+			owner = {
+				NOT = { has_whoniverse_cyber_conversion = yes }
+					}
+				}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier3researchreward
+				min = @tier3researchmin
+				max = @tier3researchmax
+				}
+			}		
+	   	}
+	}
+
+# Telos Minor colony event
+planet_event = {
+	id = whoniverse.61
+	title = "whoniverse.61.name"
+	desc = "whoniverse.61.desc"
+	picture = GFX_evt_discovered_hidden_door
+	show_sound = event_alien_nature
+	location = ROOT
+	trackable = yes
+	fire_only_once = yes
+	
+	pre_triggers = {
+		is_homeworld = no
+	}
+	
+	trigger = {
+		owner = {
+			has_whoniverse_cyber_conversion = yes
+		}
+		num_pops > 0
+		has_modifier = whoniverse_pm_telos
+		}
+	
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.61.a
+		enable_special_project = {
+			name = "whoniverse_telos_project"
+			owner = root
+			location = this
+			}
+	 		set_name = "whoniverse_name_telos"
+	 		}
+	}
+
+# Telos project successful
+planet_event = {
+	id = whoniverse.62
+	title = "PROJECT_COMPLETE"
+	desc = "whoniverse.62.desc"
+	picture = GFX_evt_whoniverse_cybermen_classic
+	show_sound = whoniverse_cybermen_classic_event
+	location = ROOT
+	fire_only_once = yes
+		
+	trigger = {
+		owner = {
+			has_whoniverse_cyber_conversion = yes
+			}
+		num_pops > 0
+		has_modifier = whoniverse_pm_telos
+			}
+		
+	is_triggered_only = yes
+		
+	option = {
+		name = whoniverse.62.a
+		custom_tooltip = whoniverse.62.tooltip
+		hidden_effect = {
+			remove_modifier = "whoniverse_pm_telos"
+			add_modifier = {
+				modifier =  "whoniverse_pm_cyber_tomb"
+			}
+			modify_species = {
+				species = owner_main_species
+				portrait = whoniverse_cyberman_04
+				remove_trait = trait_pc_continental_preference
+				add_trait = trait_pc_arctic_preference
+				effect = {
+					save_event_target_as = cybertalosian_species
+					}
+				}
+			while = {
+				count = 5
+				create_pop = {
+					species = last_created_species
+					}
+				}			
+			last_created_pop = { 
+				set_citizenship_type = {
+					type = citizenship_full cooldown = yes
+				}
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+				}
+			}
+		}
+	}
+
+
+# Cyber-tomb pop generation
+planet_event = {
+	id = whoniverse.63
+	title = "whoniverse.63.name"
+	desc = "whoniverse.63.desc"
+	picture = GFX_evt_whoniverse_cybermen_classic
+	show_sound = whoniverse_cybermen_classic_event
+	location = ROOT
+
+	pre_triggers = {
+		has_owner = yes
+	}
+	
+	trigger = {
+		owner = {
+			has_whoniverse_cyber_conversion = yes
+			}
+		num_pops > 0
+		has_modifier = whoniverse_pm_cyber_tomb
+			}
+		
+	is_triggered_only = yes
+		
+	option = {
+		name = whoniverse.63.a
+		custom_tooltip = whoniverse.63.tooltip
+		hidden_effect = {
+			modify_species = {
+				species = owner_main_species
+				portrait = whoniverse_cyberman_04
+				remove_trait = trait_pc_continental_preference
+				add_trait = trait_pc_arctic_preference
+				effect = {
+					save_event_target_as = cybertalosian_species
+					}
+				}
+			last_created_pop = { 
+				set_citizenship_type = {
+					type = citizenship_full cooldown = yes
+				}
+			}
+			while = {
+				count = 2
+				create_pop = {
+					species = event_target:cybertalosian_species
+					}
+				}
+			last_created_pop = { 
+				set_citizenship_type = {
+					type = citizenship_full
+					}
+				}
+			}
+		}
+	}
+
+### Tasak events
+# Tasak anomaly
+ship_event = {
+    id = whoniverse.64
+    title = "whoniverse.64.name"
+    desc = "whoniverse.64.desc"
+    picture = GFX_evt_whoniverse_cybermen_classic
+    show_sound = whoniverse_cybermen_classic_event
+    location = FROM
+            
+    is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		trigger = {
+			owner = {
+				has_whoniverse_cyber_conversion = yes
+					}
+				}
+		owner = {
+			add_monthly_resource_mult = {
+                resource = unity
+				value = @tier2materialreward
+				min = @tier2materialmin
+				max = @tier2materialmax
+            	}    
+			}		
+	   	}
+	option = {
+		name = WORRYING
+		trigger = {
+			owner = {
+				has_whoniverse_cyber_conversion = no
+					}
+				}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+				}
+			}		
+	   	}
+	}
+
+### Cybusmen - Pete's World events ###
+# Scope = Fleet
+# From = System
+fleet_event = {
+	id = whoniverse.180
+	hide_window = yes
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		from = { has_star_flag = whoniverse_cybusmen_system }
+		NOT = {
+			any_country = {
+				has_origin = origin_whoniverse_cybermen_cybus
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			save_global_event_target_as = whoniverse_petes_world_explorer
+		}
+		random_galaxy_planet = {
+			limit = {
+				has_planet_flag = whoniverse_petes_world
+			}
+			save_global_event_target_as = whoniverse_petes_world
+		}
+		if = {
+			limit = {
+				exists = event_target:whoniverse_petes_world
+			}
+			owner = {
+				random_list = {
+					1 = {
+						country_event = {
+							id = whoniverse.181
+						}
+					}
+					1 = {
+						country_event = {
+							id = whoniverse.182
+						}
+					}
+					1 = {
+						country_event = {
+							id = whoniverse.183
+						}
+					}
+				}
+			}
+		}
+	}	
+}
+
+# Cybusmen - Pete's World Event 1 - Rise of Cybermen
+country_event = {
+	id = whoniverse.181
+	title = "whoniverse.181.name"
+	desc = "whoniverse.181.desc"
+	picture = GFX_evt_whoniverse_cybusmen
+	show_sound = whoniverse_cybermen_cybus_event
+	location = event_target:whoniverse_petes_world
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	trigger = {
+		exists = event_target:whoniverse_petes_world
+	}
+
+	immediate = {
+		event_target:whoniverse_petes_world = {
+			create_species = {
+				name = "SPEC_WHO_CYBUSMAN"
+				plural = "SPEC_WHO_CYBUSMAN_plural"
+				class = HUM
+				portrait = whoniverse_cyberman_cybus
+				namelist = "CYBERMAN1"
+				traits = {
+					trait = "trait_hive_mind"
+					trait = "trait_cybernetic"
+					trait = "trait_whoniverse_cyber_suit"
+					trait = "trait_cyborg_durable"
+					trait = "trait_cyborg_neural_limiters"
+				}
+			}
+			create_country = {
+				name = "PRESCRIPTED_cybus_industries"
+				species = last_created_species
+				type = default
+				ethos = {
+					ethic = ethic_gestalt_consciousness
+				}
+				authority = auth_hive_mind
+				origin = origin_default
+				civics = {
+					civic = civic_whoniverse_cyber_conversion_ai
+					civic = civic_whoniverse_maximum_efficiency
+				}
+				flag = {
+					icon = {
+						category = "whoniverse"
+						file = "whoniverse_flag_08.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors = {
+						"dark_grey"
+						"dark_grey"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					set_graphical_culture = mammalian_01
+					establish_contact = { who = root.owner location = event_target:whoniverse_petes_world }
+					establish_communications = root.owner
+					save_global_event_target_as = whoniverse_cybus_industries_global
+				##Copy technology
+					if = {
+						limit = {
+							any_country = { is_ai = no }
+						}
+						random_country = {
+							limit = { is_ai = no }
+							save_event_target_as = tech_country
+						}
+						copy_techs_from = {
+							target = event_target:tech_country
+							except = {
+								# Horizon Signal
+								tech_akx_worm_1
+								tech_akx_worm_2
+								tech_akx_worm_3
+							}
+						}
+					}
+					else = {
+						random_country = {
+							limit = { is_country_type = default	}
+							save_event_target_as = tech_country
+						}
+						copy_techs_from = {
+							target = event_target:tech_country
+							except = {
+								# Horizon Signal
+								tech_akx_worm_1
+								tech_akx_worm_2
+								tech_akx_worm_3
+							}
+						}
+					}
+					if = {
+						limit = {
+							NOT = { has_technology = tech_starbase_2 }
+						}
+						give_technology = { tech = tech_starbase_2 }
+					}
+					if = {
+						limit = {
+							NOT = { has_technology = tech_destroyers }
+						}
+						give_technology = { tech = tech_destroyers }
+					}
+					if = {
+						limit = {
+							NOT = { has_technology = tech_cruisers }
+						}
+						give_technology = { tech = tech_cruisers }
+					}
+				}
+			}
+			set_owner = last_created_country
+			set_capital = yes
+
+			hidden_effect = {
+				last_created_country = {
+					set_country_flag = whoniverse_cybus_industries_flag
+				}
+			}
+			while = {
+				count = 4
+				create_pop = {
+					species = last_created_species
+				}
+			}
+			create_species = {
+				name = PRESCRIPTED_species_name_whoniverse_human
+				plural = PRESCRIPTED_species_plural_whoniverse_human
+				class = "HUM"
+				portrait = whoniverse_human
+				homeworld = THIS
+					traits = {
+						trait = "trait_adaptive"
+						trait = "trait_nomadic"
+						trait = "trait_wasteful"
+					}
+				}
+			while = {
+				count = 24
+				create_pop = {
+					species = last_created_species
+				}
+			}
+			
+			##Build Starbases
+			
+			# starbase = {
+			# 	set_owner = last_created_country
+			# 		}
+	
+			create_starbase = {
+				size = starbase_starport
+				owner = last_created_country
+				module = shipyard
+				building = crew_quarters
+					effect = {
+					set_starbase_module = {
+						slot = 1
+							module = anchorage
+						}
+						set_starbase_module = {
+							slot = 2
+							module = anchorage
+						}
+					}
+				}
+		
+				while = {
+					count = 10
+					create_army = {
+						name = "Cybusmen Army"
+						owner = last_created_country
+						species = last_created_species
+						type = "defense_army"
+					}
+				}
+
+				while = {
+					count = 4
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_city
+					}
+				}
+				while = {
+					count = 2
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_industrial
+					}
+				}
+				while = {
+					count = 3
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_farming
+					}
+				}
+				while = {
+					count = 3
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_mining
+					}
+				}
+				while = {
+					count = 3
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_generator
+					}
+				}
+				
+			add_building = building_capital
+			add_building = building_research_lab_1
+			add_building = building_foundry_1
+			add_building = building_hive_warren
+			add_building = building_stronghold
+			add_building = building_energy_grid
+			add_building = building_mineral_purification_plant
+			add_building = building_hive_node
+		
+			last_created_country = {
+				add_resource = {
+					minerals = 15000
+					energy = 15000
+					food = 15000
+					consumer_goods = 10000
+					alloys = 10000
+					rare_crystals = 1000
+					volatile_motes = 1000
+					exotic_gases = 1000
+					influence = 1000
+					unity = 10000
+				}
+				create_fleet_from_naval_cap = 0.5
+				while = {
+					count = 2
+					create_leader = {
+						class = scientist
+						species = last_created_species
+						name = random
+						skill = 3
+						}
+				}
+				while = {
+					count = 1
+					create_leader = {
+						class = commander
+						species = last_created_species
+						name = random
+						skill = 3
+					}
+				}
+				create_leader = {
+					class = official
+					species = last_created_species
+					name = random
+					skill = 3
+				}			
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.181.a
+		custom_tooltip = whoniverse_cybus_industries_appeared
+		trigger = {
+			owner = {
+				OR = {
+					is_whoniverse_dalek = no
+					has_whoniverse_cyber_conversion = no
+				}
+			}
+		}
+	}	
+	option = {
+		name = whoniverse.181.b
+		custom_tooltip = whoniverse_cybus_industries_appeared
+		trigger = {
+			owner = {
+				is_whoniverse_dalek = yes
+			}
+		}
+	}	
+	option = {
+		name = whoniverse.181.c
+		custom_tooltip = whoniverse_cybus_industries_appeared
+		trigger = {
+			owner = {
+				has_whoniverse_cyber_conversion = yes
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+				}
+		}
+	}		
+}
+
+# Cybusmen - Pete's World Event 2 - Age of Steel
+country_event = {
+	id = whoniverse.182
+	title = "whoniverse.182.name"
+	desc = "whoniverse.182.desc"
+	picture = GFX_evt_whoniverse_cybusmen
+	show_sound = whoniverse_cybermen_cybus_event
+	location = event_target:whoniverse_petes_world
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	trigger = {
+		exists = event_target:whoniverse_petes_world
+	}
+
+	immediate = {
+		event_target:whoniverse_petes_world = {
+			create_species = {
+				name = "SPEC_WHO_CYBUSMAN"
+				plural = "SPEC_WHO_CYBUSMAN_plural"
+				class = HUM
+				portrait = whoniverse_cyberman_cybus
+				namelist = "CYBERMAN1"
+				traits = {
+					trait = "trait_hive_mind"
+					trait = "trait_cybernetic"
+					trait = "trait_whoniverse_cyber_suit"
+					trait = "trait_cyborg_durable"
+					trait = "trait_cyborg_neural_limiters"
+				}
+			}
+			create_country = {
+				name = "PRESCRIPTED_cybus_empire"
+				species = last_created_species
+				type = default
+				ethos = {
+					ethic = ethic_gestalt_consciousness
+				}
+				authority = auth_hive_mind
+				origin = origin_default
+				civics = {
+					civic = civic_whoniverse_cyber_conversion_ai
+					civic = civic_whoniverse_maximum_efficiency
+				}	
+				flag = {
+					icon = {
+						category = "whoniverse"
+						file = "whoniverse_flag_08.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors = {
+						"dark_grey"
+						"dark_grey"
+						"null"
+						"null"
+					}
+				}	
+				effect = {
+					set_graphical_culture = mammalian_01
+					establish_contact = { who = root.owner location = event_target:whoniverse_petes_world }
+					establish_communications = root.owner
+					save_global_event_target_as = whoniverse_cybus_empire_global
+				##Copy technology
+					if = {
+						limit = {
+							any_country = { is_ai = no }
+						}
+						random_country = {
+							limit = { is_ai = no }
+							save_event_target_as = tech_country
+						}
+						copy_techs_from = {
+							target = event_target:tech_country
+							except = {
+								# Horizon Signal
+								tech_akx_worm_1
+								tech_akx_worm_2
+								tech_akx_worm_3
+							}
+						}
+					}
+					else = {
+						random_country = {
+							limit = { is_country_type = default	}
+							save_event_target_as = tech_country
+						}
+						copy_techs_from = {
+							target = event_target:tech_country
+							except = {
+								# Horizon Signal
+								tech_akx_worm_1
+								tech_akx_worm_2
+								tech_akx_worm_3
+							}
+						}
+					}
+					if = {
+						limit = {
+							NOT = { has_technology = tech_starbase_2 }
+						}
+						give_technology = { tech = tech_starbase_2 }
+					}
+					if = {
+						limit = {
+							NOT = { has_technology = tech_starbase_3 }
+						}
+						give_technology = { tech = tech_starbase_3 }
+					}
+					if = {
+						limit = {
+							NOT = { has_technology = tech_destroyers }
+						}
+						give_technology = { tech = tech_destroyers }
+					}
+					if = {
+						limit = {
+							NOT = { has_technology = tech_cruisers }
+						}
+						give_technology = { tech = tech_cruisers }
+					}
+				}
+			}
+			set_owner = last_created_country
+			set_capital = yes
+
+			hidden_effect = {
+				last_created_country = {
+					set_country_flag = whoniverse_cybus_industries_flag
+				}
+			}
+			while = {
+				count = 28
+				create_pop = {
+					species = last_created_species
+				}
+			}
+			
+			##Build Starbases
+			
+			# starbase = {
+			#  	set_owner = last_created_country
+			#  		}
+	
+			create_starbase = {
+				size = starbase_starfortress
+				owner = last_created_country
+				module = shipyard
+				module = shipyard
+				module = gun_battery
+				building = crew_quarters
+					effect = {
+					set_starbase_module = {
+						slot = 1
+							module = anchorage
+						}
+						set_starbase_module = {
+							slot = 2
+							module = anchorage
+						}
+					}
+				}
+		
+			while = {
+				count = 20
+				create_army = {
+					name = "Cybusmen Army"
+					owner = last_created_country
+					species = last_created_species
+					type = "defense_army"
+				}
+			}	
+
+			while = {
+				count = 4
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_city
+				}
+			}
+			while = {
+				count = 2
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_industrial
+				}
+			}
+			while = {
+				count = 3
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_farming
+				}
+			}
+			while = {
+				count = 3
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_mining
+				}
+			}
+			while = {
+				count = 3
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_generator
+				}
+			}
+				
+			add_building = building_capital
+			add_building = building_research_lab_1
+			add_building = building_foundry_1
+			add_building = building_hive_warren
+			add_building = building_stronghold
+			add_building = building_energy_grid
+			add_building = building_mineral_purification_plant
+			add_building = building_hive_node
+		
+			last_created_country = {
+				add_resource = {
+					minerals = 15000
+					energy = 15000
+					food = 15000
+					consumer_goods = 10000
+					alloys = 10000
+					rare_crystals = 1000
+					volatile_motes = 1000
+					exotic_gases = 1000
+					influence = 1000
+					unity = 10000
+				}
+				create_fleet_from_naval_cap = 0.9
+				while = {
+					count = 2
+					create_leader = {
+						class = scientist
+						species = last_created_species
+						name = random
+						skill = 3
+						}
+				}
+				while = {
+					count = 1
+					create_leader = {
+						class = commander
+						species = last_created_species
+						name = random
+						skill = 3
+					}
+				}
+				create_leader = {
+					class = official
+					species = last_created_species
+					name = random
+					skill = 3
+				}			
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.182.a
+		custom_tooltip = whoniverse_cybus_empire_appeared
+		trigger = {
+			owner = {
+				OR = {
+					is_whoniverse_dalek = no
+					has_whoniverse_cyber_conversion = no
+				}
+			}
+		}
+	}	
+	option = {
+		name = whoniverse.182.b
+		custom_tooltip = whoniverse_cybus_empire_appeared
+		trigger = {
+			owner = {
+				is_whoniverse_dalek = yes
+			}
+		}
+	}	
+	option = {
+		name = whoniverse.182.c
+		custom_tooltip = whoniverse_cybus_empire_appeared
+		trigger = {
+			owner = {
+				has_whoniverse_cyber_conversion = yes
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+				}
+		}
+	}		
+}
+
+# Cybusmen - Pete's World Event 3 - Golden Age
+country_event = {
+	id = whoniverse.183
+	title = "whoniverse.183.name"
+	desc = "whoniverse.183.desc"
+	picture = GFX_evt_alpine_city
+	show_sound = event_scanner
+	location = event_target:whoniverse_petes_world
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	trigger = {
+		exists = event_target:whoniverse_petes_world
+	}
+
+	immediate = {
+		event_target:whoniverse_petes_world = {
+			create_species = {
+				name = PRESCRIPTED_species_name_whoniverse_human
+				plural = PRESCRIPTED_species_plural_whoniverse_human
+				class = "HUM"
+				portrait = whoniverse_human
+				homeworld = THIS
+					traits = {
+						trait = "trait_adaptive"
+						trait = "trait_nomadic"
+						trait = "trait_wasteful"
+					}
+				}
+			create_country = {
+				name = "NAME_petes_world_country"
+				species = last_created_species
+				authority = auth_democratic
+				day_zero_contact = no
+				civics = {
+					civic = civic_increasing_urbanization
+					civic = civic_atmospheric_pollution
+					}
+					ethos = {
+						ethic = "ethic_xenophile"
+						ethic = "ethic_fanatic_egalitarian"
+						}
+				origin = origin_default_pre_ftl
+				flag = {
+					icon = {
+					category = "human"
+					file = "flag_human_9.dds"
+						}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+						}
+					colors={
+						"blue"
+						"white"
+						"null"
+						"null"
+						}
+					}
+				type = primitive
+				}
+			last_created_country = {
+				set_graphical_culture = industrial_01
+				set_country_flag = early_space_age
+			#	set_country_flag = humans_early_space_age
+				set_pre_ftl_age = early_space_age
+			}
+			set_owner = last_created_country
+			set_capital = yes
+			create_pre_ftl_blockers = yes
+			create_army = {
+				name = "NAME_petes_world_country_East"
+				owner = last_created_country
+				species = last_created_species
+				type = "postatomic_army"
+			}
+			create_army = {
+				name = "NAME_petes_world_country_West"
+				owner = last_created_country
+				species = last_created_species
+				type = "postatomic_army"
+			}
+			create_army = {
+				name = "NAME_petes_world_country_North"
+				owner = last_created_country
+				species = last_created_species
+				type = "postatomic_army"
+			}
+			create_army = {
+				name = "NAME_petes_world_country_South"
+				owner = last_created_country
+				species = last_created_species
+				type = "postatomic_army"
+			}
+			while = {
+				count = @atomic_age_pops
+				create_pop = {
+					species = last_created_species
+				}
+			}
+			add_building = building_primitive_farm
+			add_building = building_primitive_factory
+			add_building = building_primitive_mine
+			add_building = building_primitive_power_plant
+			add_building = building_primitive_capital
+			add_building = building_urban_dwellings
+
+			last_created_country = {
+				capital_scope = { set_name = "Pete's World" }
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.183.a
+		custom_tooltip = whoniverse_peoples_republic_appeared
+		trigger = {
+			owner = {
+				OR = {
+					is_whoniverse_dalek = no
+					has_whoniverse_cyber_conversion = no
+				}
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+				}
+		}
+	}	
+	option = {
+		name = whoniverse.183.b
+		custom_tooltip = whoniverse_peoples_republic_appeared
+		trigger = {
+			owner = {
+				is_whoniverse_dalek = yes
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+				}
+		}
+	}	
+	option = {
+		name = whoniverse.183.c
+		custom_tooltip = whoniverse_peoples_republic_appeared
+		trigger = {
+			owner = {
+				has_whoniverse_cyber_conversion = yes
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+				}
+		}
+	}		
+}
+
+
+# whoniverse_peoples_republic_appeared
+
+# Cybus Industries - Rename event after planet conquer
+planet_event = {
+	id = whoniverse.190
+	title = "whoniverse.190.name"
+	desc = "whoniverse.190.desc"
+	picture = GFX_evt_whoniverse_cybusmen
+	show_sound = whoniverse_cybermen_cybus_event
+	
+	trigger = { from = { has_origin = origin_whoniverse_cybermen_cybus } }
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = whoniverse.190.a
+		custom_tooltip = whoniverse.190.a.tooltip
+		hidden_effect = {
+			from = { set_name = "PRESCRIPTED_cybus_empire" }
+		}
+		from = {
+			add_monthly_resource_mult = {
+                resource = influence
+				value = @tier2influencereward
+				min = @tier2influencemin
+				max = @tier2influencemax
+            }
+		}
+	}
+
+	option = {
+		name = whoniverse.190.b
+		trigger = {
+			owner = {
+				is_ai = no
+			}
+		}
+	}
+}

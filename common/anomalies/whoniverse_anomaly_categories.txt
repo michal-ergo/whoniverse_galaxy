@@ -1,0 +1,115 @@
+whoniverse_asylum_cat = {
+	should_ai_use = no
+
+	desc = "whoniverse_asylum_desc"
+	picture = GFX_evt_shielded_planet
+	level = 7
+	null_spawn_chance = 0
+	max_once = yes
+	max_once_global = yes
+	
+	spawn_chance = {
+		modifier = {
+			add = 0 # added in system initializer
+		}
+	}
+	
+	on_success = {
+		1 = whoniverse.12
+	}
+}
+
+whoniverse_necros_cat = {
+	should_ai_use = yes
+
+	desc = "whoniverse_necros_desc"
+	picture = GFX_evt_city_ruins
+	level = 3
+	null_spawn_chance = 0
+	max_once = yes
+	max_once_global = yes
+	
+	spawn_chance = {
+		base = 1
+	}
+	
+	on_success = {
+		1 = whoniverse.19
+	}
+}
+
+whoniverse_telos_minor_cat = {
+	should_ai_use = yes
+
+	desc = "whoniverse_telos_minor_desc"
+	picture = GFX_evt_city_ruins
+	level = 5
+	null_spawn_chance = 0
+	max_once = yes
+	max_once_global = yes
+	
+	spawn_chance = {
+		base = 1
+	}
+	
+	on_success = {
+		1 = whoniverse.60
+	}
+}
+
+whoniverse_zygor_cat = {
+	should_ai_use = yes
+
+	desc = "whoniverse_zygor_desc"
+	picture = GFX_evt_city_ruins
+	level = 5
+	null_spawn_chance = 0
+	max_once = yes
+	max_once_global = yes
+	
+	spawn_chance = {
+		base = 1
+	}
+	
+	on_success = {
+		1 = whoniverse.100
+	}
+}
+
+whoniverse_tasak_cat = {
+	should_ai_use = yes
+
+	desc = "whoniverse_tasak_desc"
+	picture = GFX_evt_discovered_hidden_door
+	level = 5
+	null_spawn_chance = 0
+	max_once = yes
+	max_once_global = yes
+	
+	spawn_chance = {
+		base = 1
+	}
+	
+	on_success = {
+		1 = whoniverse.64
+	}
+}
+
+whoniverse_alfava_metraxis_cat = {
+	should_ai_use = no
+
+	desc = "whoniverse_alfava_metraxis_desc"
+	picture = GFX_evt_alien_ruins
+	level = 6
+	null_spawn_chance = 0
+	max_once = yes
+	max_once_global = yes
+	
+	spawn_chance = {
+		base = 1
+	}
+	
+	on_success = {
+		1 = whoniverse.170
+	}
+}

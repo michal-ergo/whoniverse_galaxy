@@ -1,0 +1,439 @@
+@distance = 50
+@base_moon_distance = 10
+@jumps = 3
+
+### DALEK SYSTEMS ###
+# D5-Gamma-Z / Skaro
+# Necros
+# Dalek Asylum
+
+# Dalek Empire homeworld
+whoniverse_skaro_system_initializer = {
+	name = "whoniverse_name_skaro_system"
+	
+	class = "sc_neutron_star"
+
+	usage = custom_empire
+
+	flags = { empire_home_system whoniverse_skaro_system }
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "D5-Gamma-Z"
+		class = "pc_neutron_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 40
+		has_ring = no
+	}
+
+	change_orbit = 15
+	
+	planet = {
+		name = "D5-Gamma-Z I"
+		class = "pc_molten"
+		orbit_distance = 25
+		size = 6
+		has_ring = no
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 30
+	}
+	
+	planet = {
+		name = "D5-Gamma-Z II"
+		class = "pc_molten"
+		orbit_distance = 25
+		orbit_angle = 115
+		size = 10
+		has_ring = no
+	}
+	
+	planet = {
+		name = "D5-Gamma-Z III"
+		class = "pc_molten"
+		orbit_distance = 15
+		orbit_angle = 60
+		size = 6
+		has_ring = no
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 60
+	}
+
+	planet = {
+		name = "D5-Gamma-Z IV"
+		class = "pc_barren"
+		orbit_distance = 25
+		orbit_angle = 130
+		size = 14
+		has_ring = no
+	}
+	
+	planet = {
+		name = "D5-Gamma-Z V"
+		class = "pc_barren"
+		orbit_distance = 25
+		orbit_angle = 130
+		size = 8
+		has_ring = no
+	}
+	
+	planet = {
+		name = "D5-Gamma-Z VI"
+		class = "pc_toxic"
+		orbit_distance = 22
+		orbit_angle = 75
+		size = 11
+		has_ring = no
+	}
+	
+	planet = {
+		name = "D5-Gamma-Z VII"
+		class = "pc_barren"
+		orbit_distance = 17
+		orbit_angle = 1
+		size = 12
+		has_ring = no
+	}
+	
+	planet = {
+		name = "D5-Gamma-Z VIII"
+		class = "pc_barren"
+		orbit_distance = 20
+		orbit_angle = 120
+		size = 8
+		has_ring = no
+	}
+	
+	change_orbit = 15
+
+	planet = {
+		name = "D5-Gamma-Z IX"
+		class = "pc_toxic"
+		orbit_distance = 35
+		orbit_angle = 90
+		size = 16
+		has_ring = no
+	}
+	# Antalin, destroyed decoy of Skaro
+	planet = {
+		name = "Antalin"
+		class = "pc_shattered"
+		orbit_distance = 30
+		orbit_angle = 100
+		size = 20
+		has_ring = no
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 160
+	}
+
+
+	change_orbit = 10
+
+	# Alvega, planet closest to Skaro
+	planet = {
+		name = "Alvega"
+		class = "pc_shattered"
+		orbit_distance = 25
+		orbit_angle = 135
+		size = 14
+		has_ring = no
+	}
+
+	#Skaro, the twelth planet
+	planet = {
+		name = "whoniverse_name_skaro"
+		class = "pc_arid"
+		orbit_distance = 30
+		orbit_angle = 200
+		size = 26
+		starting_planet = yes
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+			set_planet_flag = can_organic_assemble_flag
+			set_planet_flag = whoniverse_dalek_skaro
+			save_global_event_target_as = whoniverse_start_skaro
+		}
+
+		moon = {
+			name = "Flidor"
+			class = "pc_barren_cold"
+			size = 5
+			orbit_distance = 12
+			orbit_angle = 90
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				set_deposit = d_minerals_3
+			}
+		}
+
+		moon = {
+			name = "Falkus"
+			class = "pc_ai"
+			size = 3
+			orbit_distance = 15
+			orbit_angle = 180
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				set_deposit = d_society_3
+			}
+		}
+
+		moon = {
+			name = "Omega Mysterium"
+			class = "pc_barren_cold"
+			size = 7
+			orbit_distance = 10
+			orbit_angle = 320
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+	}
+
+	neighbor_system = {
+		initializer = whoniverse_necros_system_initializer
+		hyperlane_jumps = { min = 1 max = @jumps }
+	}
+}
+
+# Necros System
+whoniverse_necros_system_initializer = {
+	name = "whoniverse_name_necros_system"
+	
+	class = "sc_g"
+
+	flags = { empire_home_system whoniverse_necros_system }
+
+	init_effect = {
+		every_neighbor_system = { set_star_flag = empire_cluster }
+	}
+
+	planet = {
+		name = "Pherra"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+	}
+
+	change_orbit = 15
+	
+	planet = {
+		name = "Pherra I"
+		class = "pc_molten"
+		orbit_distance = 20
+		orbit_angle = 90
+		size = 6
+		has_ring = no
+	}
+
+	planet = {
+		name = "Pherra II"
+		class = "pc_molten"
+		orbit_distance = 35
+		orbit_angle = 120
+		size = 7
+		has_ring = no
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 60
+	}
+	
+	planet = {
+		name = "Pherra III"
+		class = "pc_barren"
+		orbit_distance = 70
+		orbit_angle = 180
+		size = 10
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Pherra IV"
+		class = "pc_toxic"
+		orbit_distance = 45
+		orbit_angle = 220
+		size = 12
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Pherra V"
+		class = "pc_barren"
+		orbit_distance = 60
+		orbit_angle = 110
+		size = 14
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Pherra VI"
+		class = "pc_barren"
+		orbit_distance = 45
+		orbit_angle = 240
+		size = 18
+		has_ring = no
+	}
+	
+	# Necros
+	planet = {
+		name = "Pherra VII"
+		class = "pc_continental"
+		orbit_distance = 60
+		orbit_angle = 105
+		size = { min = 13 max = 14 }
+		has_ring = no
+
+		init_effect = {
+			add_anomaly = { category = whoniverse_necros_cat }
+			set_planet_flag = whoniverse_necros
+		}
+
+		moon = {
+			name = "Pherra VIIa"
+			class = "pc_barren_cold"
+			size = 4
+			orbit_distance = 10
+			orbit_angle = 90
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				set_deposit = d_minerals_3
+			}
+		}
+
+		moon = {
+			name = "Pherra VIIb"
+			class = "pc_ai"
+			size = 3
+			orbit_distance = 12
+			orbit_angle = 180
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				set_deposit = d_society_3
+			}
+		}
+
+		moon = {
+			name = "Pherra VIIc"
+			class = "pc_barren_cold"
+			size = 5
+			orbit_distance = 13
+			orbit_angle = 300
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+	}
+
+	change_orbit = 10
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 160
+	}
+
+	change_orbit = 15
+
+	planet = {
+		name = "Pherra VIII"
+		class = "pc_gas_giant"
+		orbit_distance = 85
+		orbit_angle = 90
+		size = 24
+		has_ring = yes
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 400
+	}
+
+	neighbor_system = {
+	 	initializer = whoniverse_asylum_system
+	 	hyperlane_jumps = { min = 3 max = 6 } # 3 - 7
+	}
+
+}
+
+# Dalek Asylum
+whoniverse_asylum_system = {
+	name = "whoniverse_name_asylum_system"
+
+	 	init_effect = {
+		every_neighbor_system = { set_star_flag = empire_cluster }
+	}
+
+	class = "sc_b"
+
+	flags = { whoniverse_dalek_asylum_system }
+
+	planet = {
+		name = "D-4-Lambda-E"
+		class = "pc_b_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 25
+		has_ring = no
+	}
+
+	# Dalek Asylum
+	planet = {
+		name = "D-4-Lambda-E I"
+		class = "pc_shielded"
+		orbit_distance = 65
+		orbit_angle = 220
+		size = { min = 20 max = 24 }
+		has_ring = no
+
+		init_effect = {
+			prevent_anomaly = yes
+			add_anomaly = { category = whoniverse_asylum_cat }
+			set_planet_flag = whoniverse_dalek_asylum
+			set_global_flag = whoniverse_global_dalek_asylum
+			add_modifier = {
+				modifier = whoniverse_pm_dalek_asylum
+			}
+		}
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 120
+	}
+}

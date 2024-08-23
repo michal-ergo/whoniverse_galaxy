@@ -1,0 +1,14 @@
+# WHO_CYBERMEN = {
+#  	archetype = BIOLOGICAL
+
+#  	possible = { 
+#  			ethic = { 
+
+#  						value = "ethic_gestalt_consciousness"
+#  						#text = SPECIES_CLASS_MUST_USE_NOT_MACHINE_INTELLIGENCE 
+#  					} 
+#  			} 
+	
+#  	graphical_culture = mammalian_01	
+#  	move_pop_sound_effect = "machine_pops_move"
+#  }

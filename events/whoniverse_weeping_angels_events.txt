@@ -1,0 +1,853 @@
+# 01 - 03 = placeholders
+# 04 - 05 = Dalek Conversion effect
+# 06 - 07 = Dalek Reinvention of the Dalek Empire event
+# 08 - 12 = Dalek setup events
+# 12 - 17 = Dalek Asylum event chain
+# 19 + 23 = Dalek Necros 
+# 20 - 24 = Dalek Davros event chain
+# 30 - 39 = Cybermen setup events
+# 40 - 49 = Cybermen Mondasian Colony Ship chain
+# 50 - 59 = Cybermen Cyberiad Origin event chain
+# 60 - 69 = Cybermen Cyberiad systems events and anomalies
+# 70 - 79 = UNIT setup / Life on Mars project
+# 80 - 99 = UNIT Zygon Invasion event chain
+# 100 - 109 = Zygon system events and anomalies
+# 110 - 119 = Weeping Angels UNIT Blink event chain
+# 120 - 139 = Weeping Angels random events
+# 140 - 149 = Church of the Papal Mainframe setup
+# 150 - 159 = The Question (Trenzalore) event chain
+# 160 - 169 = Kovarian Chapter event chain (planned)
+# 170 - 179 = Alfava Metraxis archaelogy digsite
+# 180 - 189 = Cybusmen Pete's World events
+# 190 - 199 = Cybusmen Cybus Industries events
+# 200 - 209 = Dalek Empire Remnants setup events
+# 210 - 219 = Dalek Emperor events
+
+
+### Weeping Angels
+# Kill organic pops on Yearly Pulse
+event = {
+	id = whoniverse.110
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_playable_country = {
+			num_unique_species > 1
+			any_owned_pop = {
+				has_trait = trait_whoniverse_weeping_angel
+			}
+		}
+	}
+	
+	immediate = {
+		every_playable_country = {
+			limit = {
+				num_unique_species > 1
+				any_owned_pop = {
+					has_trait = trait_whoniverse_weeping_angel
+				}
+			}
+			
+			every_owned_planet = {
+				planet_event = { id = whoniverse.111 }
+			}
+		}
+	}
+}
+
+# Kill organic Pops on yearly pulse
+planet_event = {
+	id = whoniverse.111
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_species = {
+			has_trait = trait_whoniverse_weeping_angel
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			50 = { # 1 pop
+				set_variable = {
+					which = weeping_angel_counter
+					value = 1
+				}
+				while = {
+					count = 1
+					limit = {
+						any_owned_pop = {
+							NOT = {
+								has_trait = trait_whoniverse_weeping_angel
+							}
+						}
+						check_variable = {
+							which = weeping_angel_counter
+							value > 0
+							}
+						}
+					random_owned_pop = {
+						limit = {
+							is_organic_species = yes
+							NOT = { has_trait = trait_whoniverse_weeping_angel }
+							}
+						kill_pop = yes
+						}
+					}
+				}
+			35 = { # 1 pop and leave
+				set_variable = {
+					which = weeping_angel_counter
+					value = 1
+				}
+				while = {
+					count = 1
+					limit = {
+						any_owned_pop = {
+							NOT = {
+								has_trait = trait_whoniverse_weeping_angel
+							}
+						}
+						check_variable = {
+							which = weeping_angel_counter
+							value > 0
+							}
+						}
+					random_owned_pop = {
+						limit = {
+							is_organic_species = yes
+							NOT = { has_trait = trait_whoniverse_weeping_angel }
+							}
+						kill_pop = yes
+						}
+					random_owned_pop = {
+						limit = {
+							has_trait = trait_whoniverse_weeping_angel
+							}
+						kill_pop = yes
+						}
+					}
+				}
+			15 = { # 1 pop and create new angel
+				set_variable = {
+					which = weeping_angel_counter
+					value = 1
+				}
+				while = {
+					count = 1
+					limit = {
+						any_owned_pop = {
+							NOT = {
+								has_trait = trait_whoniverse_weeping_angel
+							}
+						}
+						check_variable = {
+							which = weeping_angel_counter
+							value > 0
+							}
+						}
+					random_owned_pop = {
+						limit = {
+							is_organic_species = yes
+							NOT = { has_trait = trait_whoniverse_weeping_angel }
+							}
+						kill_pop = yes
+						}
+					random_owned_species = {
+						limit = {
+							has_trait = trait_whoniverse_weeping_angel
+							}
+						save_global_event_target_as = weeping_angel_species
+						}
+					create_pop = {
+						species = event_target:weeping_angel_species
+						}
+					}
+				}
+		}
+	}
+}
+
+# UNIT Blink event chain
+# Blink event setup
+country_event = {
+    id = whoniverse.120
+	hide_window = yes
+
+	trigger = {
+		is_ai = no
+		has_origin = origin_whoniverse_unit
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			capital_scope = {
+				planet_event = { id = whoniverse.121 days = 1825 random = 60 } # timing 1825 days = 5 years
+			}
+		}
+	}
+}
+
+# Blink Create Weeping Angels
+planet_event = {
+	id = whoniverse.121
+	title = "whoniverse.121.name"
+	desc = "whoniverse.121.desc"
+	picture = GFX_evt_whoniverse_weeping_angels
+	show_sound = whoniverse_weeping_angel_greetings
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_blink_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_unit
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { exists = event_target:weeping_angel_species }
+			while = {
+				count = 3
+					create_pop = {
+						species = event_target:weeping_angel_species
+					}
+				}
+			}
+		else_if = {
+			limit = { NOT = { exists = event_target:weeping_angel_species } }
+			if = {
+				limit = { host_has_dlc = "Lithoids Species Pack" }
+				create_species = {
+					name = "SPEC_WHO_WEEPING_ANGEL"
+					class = PRE_LITHOID
+					portrait = whoniverse_weeping_angel
+					traits = {
+						# trait = "trait_pc_tropical_preference"
+						trait = "trait_whoniverse_weeping_angel"
+						trait = "trait_adaptive"
+						trait = "trait_repugnant"
+						}
+					homeworld = root
+					effect = {
+						save_global_event_target_as = weeping_angel_species
+						}
+					}
+				}
+			else_if = {
+				limit = { NOT = { host_has_dlc = "Lithoids Species Pack" } }
+				create_species = {
+					name = "SPEC_WHO_WEEPING_ANGEL"
+					class = PRE_MAM
+					portrait = whoniverse_weeping_angel
+					traits = {
+						# trait = "trait_pc_tropical_preference"
+						trait = "trait_whoniverse_weeping_angel"
+						trait = "trait_adaptive"
+						trait = "trait_repugnant"
+						}
+					homeworld = root
+					effect = {
+						save_global_event_target_as = weeping_angel_species
+						}
+				}
+			}
+			while = {
+				count = 3
+				create_pop = {
+					species = event_target:weeping_angel_species
+					}
+				}			
+			}
+		last_created_pop = { 
+			set_citizenship_type = {
+				type = citizenship_whoniverse_predator cooldown = yes
+				}
+			set_living_standard = {
+				type = living_standard_whoniverse_predator cooldown = yes
+				}
+			set_military_service_type = {
+				type = military_service_none cooldown = yes
+				}
+			set_colonization_controls = {
+				type = colonization_control_yes cooldown = yes
+				}
+			set_migration_controls = {
+				type = migration_control_no cooldown = yes
+				}
+			}
+		}
+
+	option = {
+		name = whoniverse.121.a
+		custom_tooltip = whoniverse.121.tooltip
+		begin_event_chain = {
+			event_chain = "whoniverse_blink_chain"
+			target = ROOT
+			}
+		hidden_effect = {
+			planet_event = { id = whoniverse.122 days = 60 } 
+			}
+		}
+
+	option = {
+		name = whoniverse.121.b
+		custom_tooltip = whoniverse.121.tooltip
+		}
+}
+
+# Blink Special Project Enabled
+planet_event = {
+	id = whoniverse.122
+	title = "whoniverse.122.name"
+	desc = "whoniverse.122.desc"
+	picture = GFX_evt_whoniverse_blink
+	show_sound = whoniverse_blink_event
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_blink_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_unit
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.122.a
+			enable_special_project = {
+				name = "whoniverse_blink_project"
+				owner = root
+				location = this
+				} 
+		}
+}
+
+# Blink Special Project Completed
+planet_event = {
+	id = whoniverse.123
+	title = "PROJECT_COMPLETE"
+	desc = "whoniverse.123.desc"
+	picture = GFX_evt_whoniverse_time_vortex
+	show_sound = whoniverse_tardis_event
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_blink_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_unit
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.123.a
+		every_owned_pop = {
+			limit = {
+					has_trait = trait_whoniverse_weeping_angel
+			}
+			kill_pop = yes
+		}
+		owner = {
+			end_event_chain = "whoniverse_blink_chain"
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+				}
+			}
+	}
+}
+
+# Weeping Angels random colony event 1 setup
+planet_event = {
+	id = whoniverse.130
+	hide_window = yes
+	location = ROOT
+
+	pre_triggers = {
+		has_owner = yes
+		is_ai = no
+		# is_homeworld = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			NOR = {
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+				}
+			}
+		num_pops > 0
+	}	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		planet_event = { id = whoniverse.131 days = 365 random = 90 }
+		}
+	}
+
+
+# Weeping Angels random colony event 1
+planet_event = {
+	id = whoniverse.131
+	title = "whoniverse.131.name"
+	desc = "whoniverse.131.desc"
+	picture = GFX_evt_whoniverse_weeping_angels
+	show_sound = whoniverse_weeping_angel_greetings
+	location = ROOT
+	trackable = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			NOR = {
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+				}
+			}
+		num_pops > 0
+	}
+
+	immediate = {
+		if = {
+			limit = { exists = event_target:weeping_angel_species }
+			while = {
+				count = 1
+					create_pop = {
+						species = event_target:weeping_angel_species
+					}
+				}
+			}
+		else_if = {
+			limit = { NOT = { exists = event_target:weeping_angel_species } }
+			if = {
+				limit = { host_has_dlc = "Lithoids Species Pack" }
+				create_species = {
+					name = "SPEC_WHO_WEEPING_ANGEL"
+					class = PRE_LITHOID
+					portrait = whoniverse_weeping_angel
+					traits = {
+						# trait = "trait_pc_tropical_preference"
+						trait = "trait_whoniverse_weeping_angel"
+						trait = "trait_adaptive"
+						trait = "trait_repugnant"
+						}
+					homeworld = root
+					effect = {
+						save_global_event_target_as = weeping_angel_species
+						}
+					}
+				}
+			else_if = {
+				limit = { NOT = { host_has_dlc = "Lithoids Species Pack" } }
+				create_species = {
+					name = "SPEC_WHO_WEEPING_ANGEL"
+					class = PRE_MAM
+					portrait = whoniverse_weeping_angel
+					traits = {
+						# trait = "trait_pc_tropical_preference"
+						trait = "trait_whoniverse_weeping_angel"
+						trait = "trait_adaptive"
+						trait = "trait_repugnant"
+						}
+					homeworld = root
+					effect = {
+						save_global_event_target_as = weeping_angel_species
+						}
+				}
+			}
+			while = {
+				count = 1
+				create_pop = {
+					species = event_target:weeping_angel_species
+					}
+				}			
+			}
+		last_created_pop = { 
+			set_citizenship_type = {
+				type = citizenship_whoniverse_predator cooldown = yes
+				}
+			set_living_standard = {
+				type = living_standard_whoniverse_predator cooldown = yes
+				}
+			set_military_service_type = {
+				type = military_service_none cooldown = yes
+				}
+			set_colonization_controls = {
+				type = colonization_control_yes cooldown = yes
+				}
+			set_migration_controls = {
+				type = migration_control_no cooldown = yes
+				}
+			}
+		}
+
+	option = {
+		name = WORRYING
+		custom_tooltip = whoniverse.131.tooltip
+		}
+}
+
+# Weeping Angels random colony event 2 setup
+planet_event = {
+	id = whoniverse.132
+	hide_window = yes
+	location = ROOT
+
+	pre_triggers = {
+		has_owner = yes
+		is_ai = no
+		# is_homeworld = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			NOR = {
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+				}
+			}
+		NOT = {
+			has_planet_flag = colony_event
+		}
+		num_pops > 0
+	}	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		planet_event = { id = whoniverse.133 days = 730 random = 365 }
+		}
+	}
+
+
+# Weeping Angels random colony event 2 - Angelic Host
+planet_event = {
+	id = whoniverse.133
+	title = "whoniverse.133.name"
+	desc = "whoniverse.133.desc"
+	picture = GFX_evt_whoniverse_weeping_angels
+	show_sound = whoniverse_weeping_angel_greetings
+	location = ROOT
+	trackable = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			NOR = {
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+				}
+			}
+		num_pops > 0
+	}
+
+	immediate = {
+		if = {
+			limit = { exists = event_target:weeping_angel_species }
+			while = {
+				count = 5
+					create_pop = {
+						species = event_target:weeping_angel_species
+					}
+				}
+			}
+		else_if = {
+			limit = { NOT = { exists = event_target:weeping_angel_species } }
+			if = {
+				limit = { host_has_dlc = "Lithoids Species Pack" }
+				create_species = {
+					name = "SPEC_WHO_WEEPING_ANGEL"
+					class = PRE_LITHOID
+					portrait = whoniverse_weeping_angel
+					traits = {
+						# trait = "trait_pc_tropical_preference"
+						trait = "trait_whoniverse_weeping_angel"
+						trait = "trait_adaptive"
+						trait = "trait_repugnant"
+						}
+					homeworld = root
+					effect = {
+						save_global_event_target_as = weeping_angel_species
+						}
+					}
+				}
+			else_if = {
+				limit = { NOT = { host_has_dlc = "Lithoids Species Pack" } }
+				create_species = {
+					name = "SPEC_WHO_WEEPING_ANGEL"
+					class = PRE_MAM
+					portrait = whoniverse_weeping_angel
+					traits = {
+						# trait = "trait_pc_tropical_preference"
+						trait = "trait_whoniverse_weeping_angel"
+						trait = "trait_adaptive"
+						trait = "trait_repugnant"
+						}
+					homeworld = root
+					effect = {
+						save_global_event_target_as = weeping_angel_species
+						}
+				}
+			}
+			while = {
+				count = 5
+				create_pop = {
+					species = event_target:weeping_angel_species
+					}
+				}			
+			}
+		last_created_pop = { 
+			set_citizenship_type = {
+				type = citizenship_whoniverse_predator cooldown = yes
+				}
+			set_living_standard = {
+				type = living_standard_whoniverse_predator cooldown = yes
+				}
+			set_military_service_type = {
+				type = military_service_none cooldown = yes
+				}
+			set_colonization_controls = {
+				type = colonization_control_yes cooldown = yes
+				}
+			set_migration_controls = {
+				type = migration_control_no cooldown = yes
+				}
+			}
+		}
+
+	option = {
+		name = DISCONCERTING
+		custom_tooltip = whoniverse.133.tooltip
+		}
+}
+
+# Weeping Angels random colony event 3 setup - Cult of the Weeping Angel
+planet_event = {
+	id = whoniverse.134
+	hide_window = yes
+	location = ROOT
+
+	pre_triggers = {
+		has_owner = yes
+		is_ai = no
+		# is_homeworld = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			NOR = {
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+				}
+			}
+		NOT = {
+			has_planet_flag = colony_event
+		}
+		num_pops > 0
+	}	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		planet_event = { id = whoniverse.135 days = 1825 random = 730 }
+		}
+	}
+
+
+# Weeping Angels random colony event 3 - Cult of the Weeping Angel
+planet_event = {
+	id = whoniverse.135
+	title = "whoniverse.135.name"
+	desc = "whoniverse.135.desc"
+	picture = GFX_evt_whoniverse_weeping_angels
+	show_sound = whoniverse_weeping_angel_greetings
+	location = ROOT
+	trackable = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			NOR = {
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+				}
+			}
+		num_pops > 2
+	}
+
+	immediate = {
+		if = {
+			limit = { exists = event_target:weeping_angel_species }
+			while = {
+				count = 1
+					create_pop = {
+						species = event_target:weeping_angel_species
+					}
+				}
+			}
+		else_if = {
+			limit = { NOT = { exists = event_target:weeping_angel_species } }
+			if = {
+				limit = { host_has_dlc = "Lithoids Species Pack" }
+				create_species = {
+					name = "SPEC_WHO_WEEPING_ANGEL"
+					class = PRE_LITHOID
+					portrait = whoniverse_weeping_angel
+					traits = {
+						# trait = "trait_pc_tropical_preference"
+						trait = "trait_whoniverse_weeping_angel"
+						trait = "trait_adaptive"
+						trait = "trait_repugnant"
+						}
+					homeworld = root
+					effect = {
+						save_global_event_target_as = weeping_angel_species
+						}
+					}
+				}
+			else_if = {
+				limit = { NOT = { host_has_dlc = "Lithoids Species Pack" } }
+				create_species = {
+					name = "SPEC_WHO_WEEPING_ANGEL"
+					class = PRE_MAM
+					portrait = whoniverse_weeping_angel
+					traits = {
+						# trait = "trait_pc_tropical_preference"
+						trait = "trait_whoniverse_weeping_angel"
+						trait = "trait_adaptive"
+						trait = "trait_repugnant"
+						}
+					homeworld = root
+					effect = {
+						save_global_event_target_as = weeping_angel_species
+						}
+				}
+			}
+			while = {
+				count = 1
+				create_pop = {
+					species = event_target:weeping_angel_species
+					}
+				}			
+			}
+		last_created_pop = { 
+			set_citizenship_type = {
+				type = citizenship_whoniverse_predator cooldown = yes
+				}
+			set_living_standard = {
+				type = living_standard_whoniverse_predator cooldown = yes
+				}
+			set_military_service_type = {
+				type = military_service_none cooldown = yes
+				}
+			set_colonization_controls = {
+				type = colonization_control_yes cooldown = yes
+				}
+			set_migration_controls = {
+				type = migration_control_no cooldown = yes
+				}
+			}
+		}
+
+	option = {
+		name = DISCONCERTING
+		custom_tooltip = whoniverse.135.tooltip
+		random_owned_pop = {
+			limit = {
+				NOR = {
+					has_ethic = "ethic_fanatic_spiritualist"
+					pop_has_trait = trait_whoniverse_weeping_angel
+				}
+			}
+			pop_change_ethic = ethic_fanatic_spiritualist
+		}
+		random_owned_pop = {
+			limit = {
+				NOR = {
+					has_ethic = "ethic_fanatic_spiritualist"
+					pop_has_trait = trait_whoniverse_weeping_angel
+				}
+			}
+			pop_change_ethic = ethic_fanatic_spiritualist
+		}
+		random_owned_pop = {
+			limit = {
+				NOR = {
+					has_ethic = "ethic_fanatic_spiritualist"
+					pop_has_trait = trait_whoniverse_weeping_angel
+				}
+			}
+			pop_change_ethic = ethic_fanatic_spiritualist
+		}
+	}
+}

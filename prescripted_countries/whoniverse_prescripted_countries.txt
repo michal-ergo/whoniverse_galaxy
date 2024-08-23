@@ -1,0 +1,588 @@
+# UNIT
+whoniverse_unit_empire = {
+	name = "PRESCRIPTED_unitempire"
+	adjective = "PRESCRIPTED_adjective_unitempire"
+	spawn_enabled = always # yes / no / always
+	# ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_unitempire"
+
+	species = {
+		class = "HUM"
+		portrait = "whoniverse_human"
+		name = PRESCRIPTED_species_name_whoniverse_human
+		plural = PRESCRIPTED_species_plural_whoniverse_human
+		adjective = PRESCRIPTED_species_adjective_whoniverse_human
+		name_list = "HUMAN1"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+
+	room = "personality_federation_builders_room"
+
+	authority = "auth_democratic"
+	civics = { "civic_meritocracy" "civic_whoniverse_unit_hq" }
+	government = gov_representative_democracy
+	advisor_voice_type = l_the_soldier
+
+	ethic = "ethic_xenophile"
+	ethic = "ethic_egalitarian"
+	ethic = "ethic_militarist"
+
+	origin = "origin_whoniverse_unit"
+
+	# flags = { start_screen_whoniverse_unit custom_start_screen }
+
+	planet_name = "PRESCRIPTED_planet_name_unitempire"
+	planet_class = "pc_continental"
+	initializer = "sol_system_initializer"
+	system_name = "NAME_Sol"
+
+	graphical_culture = "mammalian_01"
+	city_graphical_culture = "mammalian_01"
+
+	empire_flag = {
+		icon= {
+			category = "whoniverse"
+			file = "whoniverse_flag_04.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "circle.dds"
+		}
+		colors={
+			"off_white"
+			"dark_grey"
+			"black"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_unitempire"
+		gender = female
+		portrait = "whoniverse_unit_kate_stewart"
+		texture = 0
+		attachment = 1
+		clothes = 0
+		trait = "trait_ruler_eye_for_talent"
+		leader_class = official
+	}
+}
+
+# Church of the Papal Mainframe
+whoniverse_church_olig = {
+	name = "PRESCRIPTED_whoniverse_church"
+	adjective = "PRESCRIPTED_adjective_whoniverse_church"
+	spawn_enabled = always # yes / no / always
+	# ignore_portrait_duplication = yes
+
+	# playable = has_not_megacorp
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_whoniverse_church"
+
+	species = {
+		class = "HUM"
+		portrait = "whoniverse_human"
+		name = PRESCRIPTED_species_name_whoniverse_human
+		plural = PRESCRIPTED_species_plural_whoniverse_human
+		adjective = PRESCRIPTED_species_adjective_whoniverse_human
+		name_list = "HUMAN3"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+
+	secondary_species={
+		class="HUM"
+		portrait="whoniverse_silence"
+		name="PRESCRIPTED_secondary_species_name_whoniverse_silence"
+		plural="PRESCRIPTED_secondary_species_plural_whoniverse_silence"
+		adjective="PRESCRIPTED_secondary_species_adjective_whoniverse_silence"
+		name_list="MAM3"
+
+		trait = trait_whoniverse_silence
+		trait = trait_whoniverse_bio_electricity
+		trait = trait_adaptive
+		trait = trait_repugnant
+	}
+
+	room = "personality_evangelizing_zealots_room"
+
+	authority = auth_oligarchic
+	civics = { "civic_exalted_priesthood" "civic_whoniverse_silence" }
+	government = gov_holy_tribunal
+	advisor_voice_type = l_spiritualist
+
+	ethic = "ethic_spiritualist"
+	ethic = "ethic_militarist"
+	ethic = "ethic_egalitarian"
+
+	origin = "origin_whoniverse_church"
+
+	# flags = { start_screen_whoniverse_unit custom_start_screen }
+
+	planet_name = "whoniverse_name_papal_mainframe"
+	planet_class = "pc_continental"
+	initializer = "whoniverse_trenzalore_system"
+	system_name = "whoniverse_name_trenzalore_system"
+
+	graphical_culture = "mammalian_01"
+	city_graphical_culture = "mammalian_01"
+
+	empire_flag = {
+		icon= {
+			category = "whoniverse"
+			file = "whoniverse_flag_05.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripes.dds"
+		}
+		colors={
+			"dark_blue"
+			"red"
+			"black"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_whoniverse_church"
+		ruler_title = "PRESCRIPTED_ruler_title_whoniverse_church"
+		ruler_title_female = "PRESCRIPTED_ruler_title_whoniverse_church_female"
+		heir_title = "PRESCRIPTED_heir_title_whoniverse_church"
+		heir_title_female = "PRESCRIPTED_heir_title_whoniverse_church"
+		gender = female
+		portrait = "whoniverse_church_tasha"
+		texture = 0
+		attachment = 1
+		clothes = 0
+		trait = trait_ruler_charismatic
+		leader_class = official
+	}
+}
+
+# # Church of the Papal Mainframe
+# whoniverse_church_corp = {
+# 	name = "PRESCRIPTED_whoniverse_church"
+# 	adjective = "PRESCRIPTED_adjective_whoniverse_church"
+# 	spawn_enabled = always # yes / no / always
+# 	# ignore_portrait_duplication = yes
+
+# 	playable = has_megacorp
+
+# 	ship_prefix = "PRESCRIPTED_ship_prefix_whoniverse_church"
+
+# 	species = {
+# 		class = "HUM"
+# 		portrait = "whoniverse_human"
+# 		name = PRESCRIPTED_species_name_whoniverse_human
+# 		plural = PRESCRIPTED_species_plural_whoniverse_human
+# 		adjective = PRESCRIPTED_species_adjective_whoniverse_human
+# 		name_list = "HUMAN3"
+# 		trait = "trait_adaptive"
+# 		trait = "trait_nomadic"
+# 		trait = "trait_wasteful"
+# 	}
+
+# 	secondary_species={
+# 		class="HUM"
+# 		portrait="whoniverse_silence"
+# 		name="PRESCRIPTED_secondary_species_name_whoniverse_silence"
+# 		plural="PRESCRIPTED_secondary_species_plural_whoniverse_silence"
+# 		adjective="PRESCRIPTED_secondary_species_adjective_whoniverse_silence"
+# 		name_list="MAM3"
+
+# 		trait = trait_whoniverse_silence
+# 		trait = trait_whoniverse_bio_electricity
+# 		trait = trait_adaptive
+# 		trait = trait_repugnant
+# 	}
+
+# 	room = "personality_evangelizing_zealots_room"
+
+# 	authority = auth_corporate
+# 	civics = { "civic_gospel_of_the_masses" "civic_whoniverse_silence" }
+# 	government = gov_megachurch
+# 	advisor_voice_type = l_spiritualist
+
+# 	ethic = "ethic_spiritualist"
+# 	ethic = "ethic_militarist"
+# 	ethic = "ethic_egalitarian"
+
+# 	origin = "origin_whoniverse_church"
+
+# 	# flags = { start_screen_whoniverse_unit custom_start_screen }
+
+# 	planet_name = "whoniverse_name_papal_mainframe"
+# 	planet_class = "pc_continental"
+# 	initializer = "whoniverse_trenzalore_system"
+# 	system_name = "whoniverse_name_trenzalore_system"
+
+# 	graphical_culture = "mammalian_01"
+# 	city_graphical_culture = "mammalian_01"
+
+# 	empire_flag = {
+# 		icon= {
+# 			category = "whoniverse"
+# 			file = "whoniverse_flag_05.dds"
+# 		}
+# 		background= {
+# 			category = "backgrounds"
+# 			file = "stripes.dds"
+# 		}
+# 		colors={
+# 			"dark_blue"
+# 			"red"
+# 			"black"
+# 			"null"
+# 		}
+# 	}
+
+# 	ruler = {
+# 		name = "PRESCRIPTED_ruler_name_whoniverse_church"
+# 		gender = female
+# 		portrait = "whoniverse_church_tasha"
+# 		texture = 0
+# 		attachment = 1
+# 		clothes = 0
+# 		trait = trait_ruler_charismatic
+# 		leader_class = official
+# 	}
+# }
+
+
+
+# New Dalek Paradigm
+whoniverse_new_dalek_paradigm = {
+	name = "PRESCRIPTED_new_dalek_paradigm"
+	adjective = "PRESCRIPTED_new_dalek_paradigm"
+	spawn_enabled = always # yes / no / always
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_new_dalek_paradigm"
+
+	species = {
+		class = "HUM"
+		portrait = "whoniverse_dalek_paradigm"
+		name = "PRESCRIPTED_species_name_new_dalek_paradigm"
+		plural = "PRESCRIPTED_species_plural_new_dalek_paradigm"
+		adjective = "PRESCRIPTED_species_adjective_new_dalek_paradigm"
+		species_bio="The Daleks are a warrior race made up of genetically engineered mutants belonging to fundamental DNA type 467-989. The mutants are encased inside an armoured travel machine built from polycarbide and the metal Dalekanium. The Daleks fought the Time Lords in the Last Great Time War, ending in the near-total destruction of the Dalek race. Their goal is to eradicate all non-Dalek life."
+		name_list = "DALEK1"
+		gender = indeterminable
+		trait = "trait_survivor"
+		trait = "trait_cybernetic"
+		trait = "trait_whoniverse_dalek_infertile"
+		trait = "trait_whoniverse_dalek_machine"
+		trait = "trait_slow_learners"
+	}
+
+	room = "personality_xenophobic_isolationists_room"
+
+	authority = auth_dictatorial
+	civics = { "civic_fanatic_purifiers" "civic_whoniverse_dalek_supremacy" }
+	government = gov_purity_order
+	origin = "origin_whoniverse_new_dalek_paradigm"
+
+	ethic = "ethic_militarist"
+	ethic = "ethic_fanatic_xenophobe"
+
+	planet_name = "PRESCRIPTED_planet_name_new_dalek_paradigm"
+	planet_class = "pc_continental"
+	initializer="whoniverse_skaro_system_initializer"
+	system_name = "PRESCRIPTED_system_name_new_dalek_paradigm"
+
+	graphical_culture = "fungoid_01"
+	city_graphical_culture = "fungoid_01"
+
+	# flags = { human_1 custom_start_screen }
+
+	empire_flag = {
+		icon= {
+			category = "whoniverse"
+			file = "whoniverse_flag_01.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "flag_BG_1.dds"
+		}
+		colors={
+			"black"
+			"red"
+			"black"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_new_dalek_paradigm"
+		portrait = "whoniverse_dalek_03_white"
+		ruler_title = "PRESCRIPTED_ruler_title_new_dalek_paradigm"
+		heir_title = "PRESCRIPTED_heir_title_new_dalek_paradigm"
+		texture = 0
+		attachment = 0
+		clothes = 0
+		gender = indeterminable
+ 		trait = "leader_trait_principled"
+		leader_class = official
+
+	}
+}
+
+# Dalek Empire Remnants
+whoniverse_dalek_empire_remnants = {
+	name = "PRESCRIPTED_dalek_empire_remnants"
+	adjective = "PRESCRIPTED_adjective_dalek_empire_remnants"
+	spawn_enabled = no # yes / no / always
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_dalek_empire_remnants"
+
+	species = {
+		class = "HUM"
+		portrait = "whoniverse_dalek_paradigm"
+		name = "PRESCRIPTED_species_name_dalek_empire_remnants"
+		plural = "PRESCRIPTED_species_plural_dalek_empire_remnants"
+		adjective = "PRESCRIPTED_species_adjective_dalek_empire_remnants"
+		species_bio="The Daleks are a warrior race made up of genetically engineered mutants belonging to fundamental DNA type 467-989. The mutants are encased inside an armoured travel machine built from polycarbide and the metal Dalekanium. The Daleks fought the Time Lords in the Last Great Time War, ending in the near-total destruction of the Dalek race. Their goal is to eradicate all non-Dalek life."
+		name_list = "DALEK1"
+		gender = indeterminable
+		trait = "trait_survivor"
+		trait = "trait_cybernetic"
+		trait = "trait_whoniverse_dalek_infertile"
+		trait = "trait_whoniverse_dalek_machine"
+		trait = "trait_slow_learners"
+	}
+
+	room = "personality_xenophobic_isolationists_room"
+
+	authority = auth_dictatorial
+	civics = { "civic_fanatic_purifiers" "civic_whoniverse_dalek_supremacy" }
+	government = gov_purity_order
+	origin = "origin_whoniverse_dalek_empire_remnants"
+
+	ethic = "ethic_spiritualist"
+	ethic = "ethic_fanatic_xenophobe"
+
+	planet_name = "PRESCRIPTED_planet_name_dalek_empire_remnants"
+	planet_class = "pc_continental"
+	initializer="whoniverse_dalek_empire_remnants_start_initializer"
+	system_name = "PRESCRIPTED_system_name_dalek_empire_remnants"
+
+	graphical_culture = "fungoid_01"
+	city_graphical_culture = "fungoid_01"
+
+	flags = { whoniverse_dalek_empire_remnants custom_start_screen }
+
+	empire_flag = {
+		icon= {
+			category = "whoniverse"
+			file = "whoniverse_flag_09.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "circle.dds"
+		}
+		colors={
+			"light_grey"
+			"black"
+			"black"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_dalek_empire_remnants"
+		portrait = "whoniverse_dalek_01_emperor"
+		ruler_title = "PRESCRIPTED_ruler_title_dalek_empire_remnants"
+		heir_title = "PRESCRIPTED_heir_title_dalek_empire_remnants"
+		texture = 0
+		attachment = 0
+		clothes = 0
+		gender = indeterminable
+ 		trait = "leader_trait_principled"
+		leader_class = official
+
+	}
+}
+
+# Cybermen Cyberiad empire
+whoniverse_cyberiad = {
+	name = "PRESCRIPTED_cybermanempire"
+	adjective = "PRESCRIPTED_adjective_cybermanempire"
+	spawn_enabled = always # yes / no / always
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_cybermanempire"
+
+	species = {
+		class = "HUM"
+		portrait = "whoniverse_cyberman_cyberiad"
+		name = "PRESCRIPTED_species_name_cybermanempire"
+		plural = "PRESCRIPTED_species_plural_cybermanempire"
+		adjective = "PRESCRIPTED_species_adjective_cybermanempire"
+		species_bio="The Cybermen are a race of cybernetically augmented humanoids. They vary greatly in design between numerous different Cyber-subspecies, and originated independently through parallel evolution from various locations across time, space and universes."
+		name_list = "CYBERMAN1"
+		gender = indeterminable
+		trait = "trait_hive_mind"
+		trait = "trait_cybernetic"
+		trait = "trait_whoniverse_cyber_suit"
+		trait = "trait_cyborg_durable"
+		trait = "trait_cyborg_neural_limiters"
+	}
+
+	secondary_species = {
+		class = "HUM"
+		portrait = "whoniverse_human"
+		name = "PRESCRIPTED_secondary_species_name_cybermanempire"
+		plural = "PRESCRIPTED_secondary_species_plural_cybermanempire"
+		adjective = "PRESCRIPTED_secondary_species_adjective_cybermanempire"
+		species_bio = "Humans are a species of sentient primates. Though humans could trace their evolutionary past to Earth, many billions of humans were born on other worlds after humanity spread through the cosmos."
+		name_list = "HUMAN1"
+	}
+
+	room = "machine_room"
+
+	authority = "auth_hive_mind"
+	civics = { "civic_whoniverse_cyber_conversion" "civic_whoniverse_cyber_fleet" }
+	government = gov_hive_mind
+	advisor_voice_type="l_machine"
+	origin = "origin_whoniverse_cybermen_cyberiad"
+
+	ethic = "ethic_gestalt_consciousness"
+
+	planet_name = "PRESCRIPTED_planet_name_cybermanempire"
+	planet_class = "pc_continental"
+	initializer="whoniverse_cyberiad_system_initializer"
+	system_name = "PRESCRIPTED_system_name_cybermanempire"
+
+	graphical_culture = "mammalian_01"
+	city_graphical_culture = "mammalian_01"
+
+	flags = { whoniverse_cyberiad custom_start_screen }
+
+	empire_flag=
+	{
+		icon=
+		{
+			category="whoniverse"
+			file="whoniverse_flag_02.dds"
+		}
+		background=
+		{
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors=
+		{
+			"grey"
+			"dark_grey"
+			"black"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_cybermanempire"
+		portrait = "whoniverse_cyberman_02"
+		ruler_title = "PRESCRIPTED_ruler_title_cybermanempire"
+		heir_title = "PRESCRIPTED_heir_title_cybermanempire"
+		texture = 0
+		attachment = 0
+		clothes = 0
+		gender = indeterminable
+ 		trait = "trait_ruler_logistic_understanding"
+		leader_class = official
+
+	}
+}
+
+# Cybermen Cybus Industries empire
+whoniverse_cybus_industries = {
+	name = "PRESCRIPTED_cybus_industries"
+	adjective = "PRESCRIPTED_adjective_cybus_industries"
+	spawn_enabled = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_cybus_industries"
+
+	species = {
+		class = "HUM"
+		portrait = whoniverse_cyberman_cybus
+		name = "SPEC_WHO_CYBUSMAN"
+		plural = "SPEC_WHO_CYBUSMAN_plural"
+		adjective = "SPEC_WHO_CYBUSMAN_adj"
+		species_bio="The Cybermen are a race of cybernetically augmented humanoids. They vary greatly in design between numerous different Cyber-subspecies, and originated independently through parallel evolution from various locations across time, space and universes."
+		name_list = "CYBERMAN1"
+		gender = indeterminable
+		trait = "trait_hive_mind"
+		trait = "trait_cybernetic"
+		trait = "trait_whoniverse_cyber_suit"
+		trait = "trait_cyborg_durable"
+		trait = "trait_cyborg_neural_limiters"
+	}
+
+	secondary_species = {
+		class = "HUM"
+		portrait = "whoniverse_human"
+		name = "PRESCRIPTED_secondary_species_name_cybermanempire"
+		plural = "PRESCRIPTED_secondary_species_plural_cybermanempire"
+		adjective = "PRESCRIPTED_secondary_species_adjective_cybermanempire"
+		species_bio = "Humans are a species of sentient primates. Though humans could trace their evolutionary past to Earth, many billions of humans were born on other worlds after humanity spread through the cosmos."
+		name_list = "HUMAN1"
+	}
+
+	room = "machine_room"
+
+	authority = "auth_hive_mind"
+	civics = { "civic_whoniverse_cyber_conversion" "civic_whoniverse_maximum_efficiency" }
+	government = gov_hive_mind
+	advisor_voice_type="l_machine"
+	origin = "origin_whoniverse_cybermen_cybus"
+
+	ethic = "ethic_gestalt_consciousness"
+
+	planet_name = "PRESCRIPTED_planet_name_cybus_industries"
+	planet_class = "pc_continental"
+	initializer="whoniverse_cybusmen_start_initializer"
+	system_name = "PRESCRIPTED_system_name_cybus_industries"
+
+	graphical_culture = "mammalian_01"
+	city_graphical_culture = "mammalian_01"
+
+	flags = { start_screen_whoniverse_cybusmen whoniverse_cybusmen custom_start_screen }
+
+	empire_flag=
+	{
+		icon=
+		{
+			category="whoniverse"
+			file="whoniverse_flag_08.dds"
+		}
+		background=
+		{
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors=
+		{
+			"light_grey"
+			"dark_grey"
+			"black"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_cybus_industries"
+		portrait = "whoniverse_cyberman_01_controller"
+		ruler_title = "PRESCRIPTED_ruler_title_cybus_industries"
+		heir_title = "PRESCRIPTED_heir_title_cybus_industries"
+		texture = 0
+		attachment = 0
+		clothes = 0
+		gender = indeterminable
+ 		trait = "trait_ruler_logistic_understanding"
+		leader_class = official
+
+	}
+}

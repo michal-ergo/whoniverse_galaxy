@@ -1,0 +1,173 @@
+portraits = {
+	# Bronze Dalek (Time War) set
+	whoniverse_dalek_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/dalek_01.dds" }
+	whoniverse_dalek_01_supreme = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_01_supreme.dds" }
+	whoniverse_dalek_01_sec = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_01_sec.dds" }
+	whoniverse_dalek_01_emperor = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_emperor_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_01_emperor.dds" }
+	# New Dalek Paradigm
+	whoniverse_dalek_03_bronze = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_03_bronze.dds" }		
+	whoniverse_dalek_03_red = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_supreme_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_03_red.dds" }			
+	whoniverse_dalek_03_black = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+	 			greeting_sound = "whoniverse_dalek_supreme_greetings" 
+	 			texturefile = "gfx/models/portraits/whoniverse/dalek_03_black.dds" }	
+	whoniverse_dalek_03_orange = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_supreme_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_03_orange.dds" }
+	whoniverse_dalek_03_yellow = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_supreme_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_03_yellow.dds" }
+	whoniverse_dalek_03_blue = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_supreme_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_03_blue.dds" }
+	whoniverse_dalek_03_white = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_supreme_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_03_white.dds" }
+	whoniverse_dalek_prime_minister = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_prime_minister.dds" }
+	# Imperial Daleks
+	whoniverse_dalek_05 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_05.dds" }
+	whoniverse_dalek_05_supreme = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_05_supreme.dds" }
+	whoniverse_dalek_05_special = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_05_special.dds" }
+	whoniverse_dalek_05_emperor = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_05_emperor.dds" }
+	# Renegade Daleks
+	whoniverse_dalek_06 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_06.dds" }
+	# whoniverse_dalek_06_black = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+	# 			greeting_sound = "whoniverse_dalek_greetings" 
+	# 			texturefile = "gfx/models/portraits/whoniverse/dalek_06_black.dds" }
+	whoniverse_dalek_06_supreme = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_06_supreme.dds" }
+	# Davros
+	whoniverse_dalek_davros = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_davros_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_davros.dds" }
+	# Cybus Cybermen
+	whoniverse_cyberman_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_cybermen_cybus_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/cyberman_01.dds" }	
+	whoniverse_cyberman_01_controller = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_cybermen_cybus_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/cyberman_01_controller.dds" }
+	# Cyberiad Cybermen / Weapons-Grade Cybermen
+	whoniverse_cyberman_02 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_cybermen_cyberiad_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/cyberman_02.dds" }	
+	whoniverse_cyberman_02_mrclever = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_cybermen_mrclever_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/cyberman_02_mrclever.dds" }
+	# Cyber-Warriors
+	whoniverse_cyberman_03 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_cybermen_cyberiad_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/cyberman_03.dds" }	
+	whoniverse_cyberman_03_ashad = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_cybermen_ashad_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/cyberman_03_ashad.dds" }	
+	# Cyber-Telosians
+	whoniverse_cyberman_04 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_cybermen_classic_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/cyberman_04.dds" }
+	whoniverse_cyberman_04_controller = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_cybermen_classic_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/cyberman_04_controller.dds" }
+	# Cyber-Mondasians
+	whoniverse_cyberman_05 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_cybermen_mondasian_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/cyberman_05.dds" }
+	# Zygons
+	whoniverse_zygon_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_zygon_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/zygon_01.dds" }	
+	whoniverse_zygon_osgood = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_zygon_osgood_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/zygon_osgood.dds" }	
+	whoniverse_zygon_bonnie = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_zygon_bonnie_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/zygon_bonnie.dds" }
+	# UNIT
+	whoniverse_unit_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_unit_male_soldier_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/unit_01.dds" }
+	whoniverse_unit_02 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_unit_female_soldier_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/unit_02.dds" }
+	whoniverse_unit_03 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_unit_male_leader_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/unit_03.dds" }
+	whoniverse_unit_05 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_unit_male_scientist_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/unit_05.dds" }
+	whoniverse_unit_06 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_unit_female_scientist_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/unit_06.dds" }
+	whoniverse_unit_08 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_unit_female_leader_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/unit_08.dds" }
+	# whoniverse_unit_alistair = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+	# 			greeting_sound = "whoniverse_unit_male_leader_greetings"
+	# 			texturefile = "gfx/models/portraits/whoniverse/unit_alistair.dds" }
+	whoniverse_unit_kate_stewart = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_unit_kate_stewart_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/unit_kate_stewart.dds" }
+	# Weeping Angels
+	whoniverse_weeping_angel_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_weeping_angel_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/weeping_angel_01.dds" }
+	# Church of the Papal Mainframe
+	whoniverse_church_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_church_soldier_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/church_01.dds" }
+	whoniverse_church_02 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_church_lorna_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/church_02.dds" }
+	whoniverse_church_03 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_church_boom_soldier_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/church_03.dds" }
+	whoniverse_church_04 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_church_boom_mundy_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/church_04.dds" }
+	whoniverse_church_05 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_church_boom_father_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/church_05.dds" }
+	whoniverse_church_07 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_church_octavian_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/church_07.dds" }
+	whoniverse_church_tasha = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_church_tasha_lem_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/church_tasha.dds" }
+	whoniverse_church_kovarian = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_church_kovarian_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/church_kovarian.dds" }
+	# Silence
+	whoniverse_silence_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_silence_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/silence_01.dds" }
+	# Mechanoid
+	whoniverse_mechanoid_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_mechanoid_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/mechanoid_01.dds" }			
+	}
+	
+

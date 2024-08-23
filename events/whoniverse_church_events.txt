@@ -1,0 +1,1340 @@
+namespace = whoniverse
+
+# 01 - 03 = placeholders
+# 04 - 05 = Dalek Conversion effect
+# 06 - 07 = Dalek Reinvention of the Dalek Empire event
+# 08 - 12 = Dalek setup events
+# 12 - 17 = Dalek Asylum event chain
+# 19 + 23 = Dalek Necros 
+# 20 - 24 = Dalek Davros event chain
+# 30 - 39 = Cybermen setup events
+# 40 - 49 = Cybermen Mondasian Colony Ship chain
+# 50 - 59 = Cybermen Cyberiad Origin event chain
+# 60 - 69 = Cybermen Cyberiad systems events and anomalies
+# 70 - 79 = UNIT setup / Life on Mars project
+# 80 - 99 = UNIT Zygon Invasion event chain
+# 100 - 109 = Zygon system events and anomalies
+# 110 - 119 = Weeping Angels UNIT Blink event chain
+# 120 - 139 = Weeping Angels random events
+# 140 - 149 = Church of the Papal Mainframe setup
+# 150 - 159 = The Question (Trenzalore) event chain
+# 160 - 169 = Kovarian Chapter event chain (planned)
+# 170 - 179 = Alfava Metraxis archaelogy digsite
+# 180 - 189 = Cybusmen Pete's World events
+# 190 - 199 = Cybusmen Cybus Industries events
+# 200 - 209 = Dalek Empire Remnants setup events
+# 210 - 219 = Dalek Emperor events
+
+
+# Church of the Papal Mainframe setup (Trenzalore)
+planet_event = {
+	id = whoniverse.140
+	hide_window = yes
+	location = ROOT
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		has_ground_combat = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_church
+			}
+		# num_pops > 0
+		}
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_planet_flag = church_habitat_1 }
+			whoniverse_church_home_planet_setup = yes
+		}
+		random_owned_species = {
+			limit = {
+				has_trait = trait_whoniverse_silence
+				}
+			save_global_event_target_as = silence_species
+			}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = food
+				value = 100
+					}
+		}
+	}
+}
+
+# Demon's Run System Setup
+country_event = {
+	id = whoniverse.141
+	hide_window = yes
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_origin = origin_whoniverse_church
+	}
+
+	immediate = {
+		owner = {
+			save_event_target_as = whoniverse_church_owner
+		}
+		ruler = {
+			set_immortal = yes
+		}
+		random_owned_species = {
+			limit = {
+				has_trait = trait_whoniverse_silence
+				}
+			save_global_event_target_as = silence_species
+			}
+		# random_system = {
+			# limit = { has_global_flag = whoniverse_demons_run_home_system }
+
+		event_target:whoniverse_kovarian_system = {
+			
+			create_starbase = {
+				size = starbase_starport
+				owner = event_target:whoniverse_church_owner
+				module = shipyard
+				building = hydroponics_bay
+					effect = {
+					set_starbase_module = {
+						slot = 1
+							module = shipyard
+						}
+					}
+				}
+
+			starbase = {
+				set_owner = event_target:whoniverse_church_owner
+					}
+			
+			random_system_planet = {
+				limit = { has_planet_flag = whoniverse_demons_run_habitat_1_planet }
+				save_event_target_as = whoniverse_demons_run_habitat_1_planet
+			}
+			spawn_megastructure = {
+				type = "major_orbital"
+				planet = event_target:whoniverse_demons_run_habitat_1_planet
+				coords_from = event_target:whoniverse_demons_run_habitat_1_planet
+				owner = event_target:whoniverse_church_owner
+				graphical_culture = event_target:whoniverse_church_owner
+			}
+			random_system_planet = {
+				limit = { has_planet_flag = whoniverse_demons_run_habitat_2_planet }
+				save_event_target_as = whoniverse_demons_run_habitat_2_planet
+			}
+			spawn_megastructure = {
+				type = "major_orbital"
+				planet = event_target:whoniverse_demons_run_habitat_2_planet
+				coords_from = event_target:whoniverse_demons_run_habitat_2_planet
+				owner = event_target:whoniverse_church_owner
+				graphical_culture = event_target:whoniverse_church_owner
+			}
+			random_system_planet = {
+				limit = { has_planet_flag = whoniverse_demons_run_habitat_3_planet }
+				save_event_target_as = whoniverse_demons_run_habitat_3_planet
+			}
+			spawn_megastructure = {
+				type = "major_orbital"
+				planet = event_target:whoniverse_demons_run_habitat_3_planet
+				coords_from = event_target:whoniverse_demons_run_habitat_3_planet
+				owner = event_target:whoniverse_church_owner
+				graphical_culture = event_target:whoniverse_church_owner
+			}
+			every_system_planet = {
+				limit = { has_planet_flag = mining_planet }
+				create_mining_station = { owner = event_target:whoniverse_church_owner }
+			}
+			
+			create_fleet = {
+				name = "CPMSS Byzantium"
+				effect = {
+					set_owner = event_target:whoniverse_church_owner
+					set_location = {
+						target = PREV
+						distance = 10
+						angle = random
+						}
+					while = {
+						count = 1
+						create_ship = {
+						name = "CPMSS Octavia"
+						random_existing_design = constructor
+						}
+					}
+					set_fleet_stance = evasive
+				}
+			}
+			
+			random_system_planet = {
+				limit = { has_planet_flag = habitat }
+				save_event_target_as = demons_run_habitat_1
+				set_owner = event_target:whoniverse_church_owner
+				add_district = district_hab_housing
+				add_district = district_hab_housing
+				add_district = district_hab_industrial
+				add_district = district_hab_industrial
+				add_district = district_hab_energy
+				add_district = district_hab_energy
+				add_building = building_hab_capital
+				add_building = building_holo_theatres
+				add_building = building_precinct_house
+				save_global_event_target_as = kovarian_planet
+
+				## MAIN ##
+				while = {
+					count = 11
+					create_pop = {
+					species = owner_main_species
+					ethos = random
+					}
+				}     
+
+				## SILENCE ##
+				while = {
+					count = 3
+					create_pop = {
+						species = event_target:silence_species
+						ethos = random
+						}
+        		}
+			}
+		}
+	}
+}
+
+### The Question (Trenzalore) event chain
+# Event setup
+country_event = {
+	id = whoniverse.150
+	hide_window = yes
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_origin = origin_whoniverse_church
+	}
+	
+	immediate = {
+		capital_scope = {
+			planet_event = { id = whoniverse.151 days = 365 random = 180 } # originally 50 (18250) years
+		}
+	}
+}
+
+# The Doctor's Arrival
+planet_event = {
+	id = whoniverse.151
+	title = "whoniverse.151.name"
+	desc = "whoniverse.151.desc"
+	picture = GFX_evt_whoniverse_eleventh_doctor
+	show_sound = whoniverse_tardis_event
+	location = ROOT
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_church
+		}
+		num_pops > 0
+	}
+
+	option = {
+		name = whoniverse.151.a
+		hidden_effect = {
+			planet_event = { id = whoniverse.152 days = 90 random = 0 }
+		}
+	}
+	
+	# option = {
+	# 	trigger = {
+	# 		owner = {
+	# 			is_ai = no
+	# 		}
+	# 	}
+	# 	name = whoniverse.151.b
+	# 	custom_tooltip = whoniverse.151.b.tooltip
+	# }
+}
+
+# The Oldest Question
+planet_event = {
+	id = whoniverse.152
+	title = "whoniverse.152.name"
+	desc = "whoniverse.152.desc"
+	picture = GFX_evt_whoniverse_crack_in_time
+	show_sound = whoniverse_the_question_event
+	location = ROOT
+
+	is_triggered_only = yes
+	fire_only_once = yes	
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_church
+		}
+		num_pops > 0
+	}
+
+	option = {
+		name = whoniverse.152.a
+		owner = {
+			add_monthly_resource_mult = {
+                resource = alloys
+                value = @tier2materialreward
+                min = @tier2materialmin
+                max = @tier2materialmax
+            }
+		}
+		hidden_effect = {
+			owner = {
+				country_event = { id = whoniverse.153 days = 1825 random = 365 } # 5 years	
+			}
+		}
+	}
+	
+	option = {
+		name = whoniverse.152.b
+		owner = {
+			add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier2researchreward
+                min = @tier2researchmin
+                max = @tier2researchmax
+            }
+		}
+		hidden_effect = {
+			owner = {
+				country_event = { id = whoniverse.153 days = 1825 random = 365 } # 5 years	
+			}
+		}
+	}
+}
+
+# The Siege of Trenzalore
+country_event = {
+	id = whoniverse.153
+	title = "whoniverse.153.name"
+	desc = "whoniverse.153.desc"
+	picture = GFX_evt_whoniverse_dalek_fleet
+	show_sound = event_faceoff_in_space
+	location = event_target:whoniverse_trenzalore
+	event_chain = whoniverse_trenzalore_chain
+
+	is_triggered_only = yes
+	fire_only_once = yes	
+
+	auto_opens = yes
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_church
+		}
+	}
+
+	immediate = {
+		create_species = {
+			name = "DALEK"
+			plural = "DALEK_plural"
+			class = HUM
+			portrait = "whoniverse_dalek_paradigm"
+			namelist = "DALEK1"
+			traits = {
+				trait = "trait_cybernetic"
+				trait = "trait_whoniverse_dalek_infertile"
+				trait = "trait_whoniverse_dalek_machine"
+			}
+		}
+		create_country = {
+			name = "Trenzalore Invaders"
+			species = last_created_species
+			type = faction
+			name_list = DALEK1
+			auto_delete = no
+			flag = {
+				icon = {
+					category = "whoniverse"
+					file = "whoniverse_flag_07.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"blue"
+					"blue"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_country_flag = trenzalore_invaders
+				set_graphical_culture = fungoid_01
+				establish_communications_no_message = root
+				establish_contact = { who = root.owner }
+				create_leader = {
+					class = commander
+					species = owner_main_species
+					name = random
+					skill = 3
+				}
+				create_fleet = {
+					name = "NAME_Invading_Fleet" # cca 10k strength
+					effect = {
+						set_owner = prev
+						while = {
+							count = 1
+							create_ship = {
+							name = "Dalek Mothership"
+							design = "NAME_AH4B"
+								}
+							}
+						while = {
+							count = 10
+							create_ship = {
+								name = "Dalek Saucer"
+								design = "NAME_S8751"
+								}
+							}
+							while = {
+								count = 5
+								create_ship = {
+									name = "Cyber Cruiser"
+									design = "NAME_Sword"
+									}
+								}
+						set_location = event_target:whoniverse_trenzalore
+						set_fleet_stance = aggressive
+						# set_aggro_range_measure_from = return_point
+						# set_aggro_range = 50
+						assign_leader = last_created_leader
+						# queue_actions = {
+						# 	repeat = {
+						# 		wait = {
+						# 			duration = 100
+						# 		}
+						# 	}
+						# }
+					}
+				}
+				save_global_event_target_as = whoniverse_trenzalore_invaders
+				set_country_flag = whoniverse_trenzalore_invaders_flag
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.153.a
+		custom_tooltip = whoniverse.153.a.tooltip
+		hidden_effect = {
+			set_name = "PRESCRIPTED_whoniverse_church_of_the_silence"
+			capital_scope = {
+				while = {
+					count = 3
+					create_pop = {
+						species = event_target:silence_species
+						ethos = random
+						}
+				}	
+			}
+		}
+		owner = {
+			begin_event_chain = {
+				event_chain = "whoniverse_trenzalore_chain"
+				target = this
+			}
+		}
+		add_modifier = {
+			modifier = whoniverse_church_faith_change
+			years = 10
+		}
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier3unityreward
+			min = @tier3unitymin
+			max = @tier3unitymax
+			}
+		hidden_effect = {
+			event_target:kovarian_planet = {
+				planet_event = { id = whoniverse.154 days = 7300 random = 730 } # 20 years
+			}
+			country_event = { id = whoniverse.161 days = 3600 random = 730 } # 10 years
+			country_event = { id = whoniverse.160 days = 10800 random = 730 } # 30 years
+			country_event = { id = whoniverse.158 days = 23400 random = 730 } # 65 years
+			country_event = { id = whoniverse.155 days = 29200 random = 730 } # 80 years
+		}	
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				is_ai = no
+			}
+		}
+		owner = {
+			begin_event_chain = {
+				event_chain = "whoniverse_trenzalore_chain"
+				target = this
+			}
+		}
+		add_monthly_resource_mult = {
+            resource = alloys
+			value = @tier2materialreward
+			min = @tier2materialmin
+			max = @tier2materialmax
+			}
+		name = whoniverse.153.b
+		custom_tooltip = whoniverse.153.b.tooltip
+		hidden_effect = {
+			event_target:kovarian_planet = {
+				planet_event = { id = whoniverse.154 days = 7300 random = 730 } # 20 years
+			}
+			country_event = { id = whoniverse.161 days = 3600 random = 730 } # 10 years
+			country_event = { id = whoniverse.160 days = 10800 random = 730 } # 30 years
+			country_event = { id = whoniverse.158 days = 23400 random = 730 } # 65 years
+			country_event = { id = whoniverse.155 days = 29200 random = 730 } # 80 years
+		}
+	}
+}
+
+# Kovarian Chapter rebellion
+planet_event = {
+	id = whoniverse.154
+	title = "whoniverse.154.name"
+	desc = "whoniverse.154.desc"
+	picture = GFX_evt_whoniverse_kovarian
+	show_sound = whoniverse_church_kovarian_greetings
+	location = ROOT
+
+	auto_opens = yes
+	event_chain = whoniverse_trenzalore_chain
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = no
+		original_owner = yes
+		has_ground_combat = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_church
+		}
+		num_pops > 0
+	}
+	
+	immediate = {
+		# save_event_target_as = kovarian_planet
+		owner = {
+			save_event_target_as = whoniverse_church_owner
+		}
+		owner_main_species = {
+			save_event_target_as = kovarian_species
+		}
+		create_rebels = {
+			name = "Kovarian Chapter"
+			ethos = {
+				ethic = ethic_fanatic_militarist
+				ethic = ethic_spiritualist
+			}
+			authority = auth_dictatorial
+			origin = origin_separatists
+			civics = {
+				civic = civic_exalted_priesthood
+				civic = civic_whoniverse_silence
+			}
+			species = event_target:kovarian_species
+			flag = {
+				icon = {
+					category = "whoniverse"
+					file = "whoniverse_flag_06.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"dark_purple"
+					"black"
+					"null"
+					"null"
+				}
+			}
+			# type = default
+			effect = {
+				set_country_type = default
+				save_event_target_as = kovarian_chapter
+				set_graphical_culture = mammalian_01
+				establish_contact = { who = root.owner location = root.solar_system }
+				save_global_event_target_as = whoniverse_kovarian_global
+				create_species = {
+					name = "PRESCRIPTED_species_name_whoniverse_human"
+					class = PARAGON
+					portrait = whoniverse_church_kovarian
+					namelist = "HUM2"
+					traits = {
+						trait = trait_adaptive
+						trait = trait_nomadic
+						trait = trait_wasteful
+					}
+					effect = {
+						save_event_target_as = kovarian_species
+					}
+				}				
+				create_leader = {
+					class = random_ruler
+					species = last_created_species
+					name = "Madame Kovarian"
+					immortal = yes
+					skill = 7
+					traits = {
+						trait = leader_trait_spycraft_2
+					}
+					effect = {
+						event_target:kovarian_chapter = { assign_leader = prev }
+					}
+				}
+			
+				# establish_communications_no_message = root.owner
+				establish_communications = root.owner
+			
+				add_resource = {
+					minerals = 15000
+							energy = 15000
+							food = 15000
+							consumer_goods = 10000
+							alloys = 10000
+							rare_crystals = 1000
+							volatile_motes = 1000
+							exotic_gases = 1000
+							influence = 1000
+							unity = 10000
+				}
+				
+				create_fleet_from_naval_cap = 1.0			
+				
+			}
+		}
+		set_owner = event_target:kovarian_chapter
+		set_capital = yes
+
+		while = {
+			count = 5
+			create_pop = {
+				species = event_target:silence_species
+				ethos = random
+				}
+		}
+
+		add_modifier = {
+			modifier = insurgents_free
+			clear_on_owner_change = yes
+			days = 7200
+		}
+
+		starbase = {
+			set_owner = event_target:kovarian_chapter
+				}
+
+		solar_system = {
+			if = {
+				limit = { exists = starbase }
+				starbase = {
+					if = {
+						limit = {
+							is_owned_by = root.owner
+						}
+						set_owner = event_target:kovarian_chapter
+						if = {
+							limit = { has_starbase_size = starbase_outpost }
+							set_starbase_size = starbase_starport
+							set_starbase_module = {
+								slot = 1
+								module = shipyard
+							}
+							set_starbase_module = {
+								slot = 2
+								module = shipyard
+							}
+						}
+						else_if = {
+							limit = {
+								NOT = { has_starbase_module = shipyard }
+							}
+							set_starbase_module = {
+								slot = 1
+								module = shipyard
+							}
+							set_starbase_module = {
+								slot = 2
+								module = shipyard
+							}
+						}
+					}
+				}
+			}
+			else = {
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = shipyard
+					owner = event_target:kovarian_chapter
+				}
+			}
+			add_claims = {
+				who = event_target:whoniverse_church_owner
+				show_notification = no
+			}
+			every_system_planet = {
+				limit = {
+					is_colony = yes
+					NOT = { is_same_value = event_target:kovarian_planet }
+					is_owned_by = event_target:whoniverse_church_owner
+				}
+				set_owner = event_target:kovarian_chapter
+			}
+			every_fleet_in_system = {
+				limit = {
+					is_owned_by = root.owner
+					can_go_mia = yes
+				}
+				set_mia = mia_return_home
+			}
+			every_neighbor_system = {
+				limit = {
+					exists = owner
+					owner = { is_same_value = event_target:whoniverse_church_owner }
+					exists = starbase
+				}
+				starbase = { set_owner = event_target:kovarian_chapter }
+				every_system_planet = {
+					limit = {
+						is_colony = yes
+						is_owned_by = event_target:whoniverse_church_owner
+					}
+					set_owner = event_target:kovarian_chapter
+				}
+				add_claims = {
+					who = event_target:whoniverse_church_owner
+					show_notification = no
+				}
+			}
+		}
+	}
+	option = {
+		name = whoniverse.154.a
+	}
+}
+
+# Dalek War Fleet
+country_event = {
+	id = whoniverse.155
+	title = "whoniverse.155.name"
+	desc = "whoniverse.155.desc"
+	picture = GFX_evt_whoniverse_dalek_fleet
+	show_sound = event_faceoff_in_space
+	location = event_target:whoniverse_trenzalore
+	event_chain = whoniverse_trenzalore_chain
+
+	is_triggered_only = yes
+	fire_only_once = yes	
+
+	auto_opens = yes
+
+	trigger = {
+	 	owner = {
+	 		has_origin = origin_whoniverse_church
+	 	}
+	}
+
+	immediate = {
+		event_target:whoniverse_trenzalore_invaders = {
+			create_leader = {
+				class = commander
+				species = owner_main_species
+				name = random
+				skill = 5
+			}
+		}
+		random_system = {
+			limit = { has_star_flag = whoniverse_trenzalore_system }		
+			create_fleet = {
+				name = "NAME_Dalek_War_Fleet" # cca 60K strength
+				effect = {
+					set_owner = event_target:whoniverse_trenzalore_invaders
+					while = {
+						count = 20
+						create_ship = {
+						name = "Dalek Mothership"
+						design = "NAME_AH4B"
+							}
+						}
+						while = {
+							count = 60
+							create_ship = {
+								name = "Dalek Saucer"
+								design = "NAME_S8751"
+								}
+							}
+					set_location = event_target:whoniverse_trenzalore
+					set_fleet_stance = aggressive
+					# set_aggro_range_measure_from = return_point
+					# set_aggro_range = 50
+					assign_leader = last_created_leader
+					# queue_actions = {
+					# 	repeat = {
+					# 		wait = {
+					# 			duration = 100
+					# 		}
+					# 	}
+					# }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.155.a
+		custom_tooltip = whoniverse.155.a.tooltip
+		hidden_effect = {
+			country_event = { id = whoniverse.156 days = 3285 random = 720 } # 9-11 years
+		}
+	}
+}
+
+# The Eleventh Hour
+country_event = {
+	id = whoniverse.156
+	title = "whoniverse.156.name"
+	desc = "whoniverse.156.desc"
+	picture = GFX_evt_whoniverse_regeneration
+	show_sound = whoniverse_regeneration_event
+	location = event_target:whoniverse_trenzalore
+	event_chain = whoniverse_trenzalore_chain
+
+	is_triggered_only = yes
+	fire_only_once = yes	
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_church
+		}
+	}
+
+	immediate = {
+		event_target:whoniverse_trenzalore_invaders = {
+			every_owned_ship = {
+				delete_ship = this
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.156.a
+		custom_tooltip = whoniverse.156.a.tooltip
+		owner = {
+			add_monthly_resource_mult = {
+                resource = unity
+                value = @tier4unityreward
+                min = @tier4unitymin
+                max = @tier4unitymax
+            }
+			add_modifier = {
+				modifier = whoniverse_church_defenders_of_trenzalore
+				years = 50
+			}
+			end_event_chain = "whoniverse_trenzalore_chain"
+		}
+		hidden_effect = {
+			owner_main_species = {
+				save_event_target_as = owner_main_species
+			}
+			event_target:whoniverse_trenzalore = {
+				change_pc = pc_continental
+				clear_deposits = yes
+				while = {
+					count = 2
+						create_pop = {
+							species = event_target:owner_main_species
+					}
+				}
+			}
+		}
+	}
+}
+
+# Cyber Fleet
+country_event = {
+	id = whoniverse.157
+	title = "whoniverse.157.name"
+	desc = "whoniverse.157.desc"
+	picture = GFX_evt_whoniverse_dalek_fleet
+	show_sound = event_faceoff_in_space
+	location = event_target:whoniverse_trenzalore
+	event_chain = whoniverse_trenzalore_chain
+
+	is_triggered_only = yes
+	fire_only_once = yes	
+
+	auto_opens = yes
+
+	trigger = {
+	 	owner = {
+	 		has_origin = origin_whoniverse_church
+		}
+	}
+
+	immediate = {
+		random_system = {
+			limit = { has_star_flag = whoniverse_trenzalore_system }		
+			create_fleet = { # 20K strength
+				name = "NAME_Cyber_Fleet"
+				effect = {
+					set_owner = event_target:whoniverse_trenzalore_invaders
+					while = {
+						count = 20
+						create_ship = {
+							name = "Cyber Cruiser"
+							design = "NAME_Sword"
+						}
+					}
+					set_location = event_target:whoniverse_trenzalore
+					set_fleet_stance = aggressive
+					# set_aggro_range_measure_from = return_point
+					# set_aggro_range = 100
+				}
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.157.a
+		custom_tooltip = whoniverse.157.a.tooltip
+		hidden_effect = {
+			country_event = { id = whoniverse.159 days = 1800 random = 720 } # 3-7 years
+		}
+	}
+}
+
+# Dalek Scout Fleet
+country_event = {
+	id = whoniverse.158
+	title = "whoniverse.158.name"
+	desc = "whoniverse.158.desc"
+	picture = GFX_evt_whoniverse_dalek_fleet
+	show_sound = event_faceoff_in_space
+	location = event_target:whoniverse_trenzalore
+	event_chain = whoniverse_trenzalore_chain
+
+	is_triggered_only = yes
+	fire_only_once = yes	
+
+	auto_opens = yes
+
+	trigger = {
+	 	owner = {
+	 		has_origin = origin_whoniverse_church
+	 	}
+	}
+
+	immediate = {
+		random_system = {
+			limit = { has_star_flag = whoniverse_trenzalore_system }		
+			create_fleet = { # 16K Strength
+				name = "NAME_Dalek_Scout_Fleet"
+				effect = {
+					set_owner = event_target:whoniverse_trenzalore_invaders
+					while = {
+						count = 60
+						create_ship = {
+							name = "Dalek Saucer"
+							design = "NAME_S8751"
+						}
+					}
+					set_location = event_target:whoniverse_trenzalore
+					set_fleet_stance = aggressive
+					# set_aggro_range_measure_from = return_point
+					# set_aggro_range = 100
+				}
+			}
+		}
+	}
+
+	option = {
+		name = WORRYING
+		custom_tooltip = whoniverse.158.a.tooltip
+	}
+}
+
+# Cyber Fleet
+country_event = {
+	id = whoniverse.159
+	title = "whoniverse.159.name"
+	desc = "whoniverse.159.desc"
+	picture = GFX_evt_whoniverse_dalek_fleet
+	show_sound = event_faceoff_in_space
+	location = event_target:whoniverse_trenzalore
+	event_chain = whoniverse_trenzalore_chain
+
+	is_triggered_only = yes
+	fire_only_once = yes	
+
+	auto_opens = yes
+
+	trigger = {
+	 	owner = {
+	 		has_origin = origin_whoniverse_church
+			is_ai = no
+		}
+	}
+
+	immediate = {
+		random_system = {
+			limit = { has_star_flag = whoniverse_trenzalore_system }		
+			create_fleet = { # 33K Strength
+				name = "NAME_Cyber_Fleet"
+				effect = {
+					set_owner = event_target:whoniverse_trenzalore_invaders
+					while = {
+						count = 30
+						create_ship = {
+							name = "Cyber Cruiser"
+							design = "NAME_Sword"
+						}
+					}
+					set_location = event_target:whoniverse_trenzalore
+					set_fleet_stance = aggressive
+					# set_aggro_range_measure_from = return_point
+					# set_aggro_range = 100
+				}
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.159.a
+		custom_tooltip = whoniverse.159.a.tooltip
+	}
+}
+
+# Cyber Scout Fleet
+country_event = {
+	id = whoniverse.160
+	title = "whoniverse.160.name"
+	desc = "whoniverse.160.desc"
+	picture = GFX_evt_whoniverse_dalek_fleet
+	show_sound = event_faceoff_in_space
+	location = event_target:whoniverse_trenzalore
+	event_chain = whoniverse_trenzalore_chain
+
+	is_triggered_only = yes
+	fire_only_once = yes	
+
+	auto_opens = yes
+
+	trigger = {
+	 	owner = {
+	 		has_origin = origin_whoniverse_church
+			is_ai = no
+		}
+	}
+
+	immediate = {
+		random_system = {
+			limit = { has_star_flag = whoniverse_trenzalore_system }		
+			create_fleet = { # 13K Strength
+				name = "NAME_Cyber_Fleet"
+				effect = {
+					set_owner = event_target:whoniverse_trenzalore_invaders
+					while = {
+						count = 12
+						create_ship = {
+							name = "Cyber Cruiser"
+							design = "NAME_Sword"
+						}
+					}
+					set_location = event_target:whoniverse_trenzalore
+					set_fleet_stance = aggressive
+					# set_aggro_range_measure_from = return_point
+					# set_aggro_range = 100
+				}
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.160.a
+		custom_tooltip = whoniverse.160.a.tooltip
+		hidden_effect = {
+			country_event = { id = whoniverse.157 days = 3600 random = 730 } # 40 years	
+		}
+	}
+}
+
+# Sontaran Fleet
+country_event = {
+	id = whoniverse.161
+	title = "whoniverse.161.name"
+	desc = "whoniverse.161.desc"
+	picture = GFX_evt_whoniverse_dalek_fleet
+	show_sound = event_faceoff_in_space
+	location = event_target:whoniverse_trenzalore
+	event_chain = whoniverse_trenzalore_chain
+
+	is_triggered_only = yes
+	fire_only_once = yes	
+
+	auto_opens = yes
+
+	trigger = {
+	 	owner = {
+	 		has_origin = origin_whoniverse_church
+			is_ai = no
+		}
+	}
+
+	immediate = {
+		random_system = {
+			limit = { has_star_flag = whoniverse_trenzalore_system }		
+			create_fleet = { # 13K Strength
+				name = "NAME_Sontaran_Fleet"
+				effect = {
+					set_owner = event_target:whoniverse_trenzalore_invaders
+					while = {
+						count = 12
+						create_ship = {
+							name = "Sontaran Cruiser"
+							design = "NAME_Sword"
+						}
+					}
+					set_location = event_target:whoniverse_trenzalore
+					set_fleet_stance = aggressive
+					# set_aggro_range_measure_from = return_point
+					# set_aggro_range = 100
+				}
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.161.a
+		custom_tooltip = whoniverse.161.a.tooltip
+	}
+}
+ 
+### Alfava Metraxis digsite ###
+# via on_survey = {} | this = surveying vessel
+ship_event = {
+	id = whoniverse.170
+	title = "whoniverse.170.name"
+	desc = "whoniverse.170.desc"
+	picture = GFX_evt_alien_ruins
+	location = from
+	show_sound = event_wind_ruins
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			is_ai = no
+		}
+		solar_system = { has_star_flag = whoniverse_dundra_system }
+		FROM = {
+			has_planet_flag = whoniverse_alfava_metraxis
+		}
+	}
+
+	immediate = {
+		owner = { set_country_flag = whoniverse_alfava_metraxis_archaeology }
+		from = { prevent_anomaly = yes }
+	}
+
+	option = {
+		name = CURIOUS
+		from = {
+			create_archaeological_site = whoniverse_digsite_alfava_metraxis
+			save_global_event_target_as = alfava_metraxis_event
+		} 
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+	}
+}
+
+#Alfava Metraxis Stage 1
+fleet_event = {
+	id = whoniverse.171
+	title = "whoniverse.171.name"
+	desc = whoniverse.171.desc
+	picture = GFX_evt_riftworld_archsite_ancestors
+	show_sound = event_wind_ruins
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.171.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = whoniverse.172
+	title = "whoniverse.172.name"
+	desc = whoniverse.172.desc
+	picture = GFX_evt_whoniverse_weeping_angels
+	show_sound = whoniverse_weeping_angel_greetings
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:alfava_metraxis_event = {
+			if = {
+				limit = { exists = event_target:weeping_angel_species }
+				while = {
+					count = 8
+						create_pop = {
+							species = event_target:weeping_angel_species
+						}
+					}
+				}
+			else_if = {
+				limit = { NOT = { exists = event_target:weeping_angel_species } }
+				if = {
+					limit = { host_has_dlc = "Lithoids Species Pack" }
+					create_species = {
+						name = "SPEC_WHO_WEEPING_ANGEL"
+						class = PRE_LITHOID
+						portrait = whoniverse_weeping_angel
+						traits = {
+							# trait = "trait_pc_tropical_preference"
+							trait = "trait_whoniverse_weeping_angel"
+							trait = "trait_adaptive"
+							trait = "trait_repugnant"
+							}
+						homeworld = from
+						effect = {
+							save_global_event_target_as = weeping_angel_species
+							}
+						}
+					}
+				else_if = {
+					limit = { NOT = { host_has_dlc = "Lithoids Species Pack" } }
+					create_species = {
+						name = "SPEC_WHO_WEEPING_ANGEL"
+						class = PRE_MAM
+						portrait = whoniverse_weeping_angel
+						traits = {
+							# trait = "trait_pc_tropical_preference"
+							trait = "trait_whoniverse_weeping_angel"
+							trait = "trait_adaptive"
+							trait = "trait_repugnant"
+							}
+						homeworld = from
+						effect = {
+							save_global_event_target_as = weeping_angel_species
+							}
+					}
+				}
+				while = {
+					count = 8
+					create_pop = {
+						species = event_target:weeping_angel_species
+						}
+					}			
+				}
+			last_created_pop = { 
+				set_citizenship_type = {
+					type = citizenship_whoniverse_predator cooldown = yes
+					}
+				set_living_standard = {
+					type = living_standard_whoniverse_predator cooldown = yes
+					}
+				set_military_service_type = {
+					type = military_service_none cooldown = yes
+					}
+				set_colonization_controls = {
+					type = colonization_control_yes cooldown = yes
+					}
+				set_migration_controls = {
+					type = migration_control_no cooldown = yes
+					}
+				}
+			}
+	}
+	option = {
+		name = whoniverse.172.a
+		custom_tooltip = whoniverse.172.tooltip
+		small_artifact_reward = no
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = whoniverse.173
+	title = whoniverse.173.name
+	desc = whoniverse.173.desc
+	picture = GFX_evt_whoniverse_crack_in_time
+	show_sound = event_mystic_reveal
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:alfava_metraxis_event = {
+			every_owned_pop = {
+				limit = {
+						has_trait = trait_whoniverse_weeping_angel
+				}
+				kill_pop = yes
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.173.a
+		custom_tooltip = whoniverse.173.a.tooltip
+		small_artifact_reward = yes
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier4researchreward
+				min = @tier4researchmin
+				max = @tier4researchmax
+			}
+		}
+	}
+}

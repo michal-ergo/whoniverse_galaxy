@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ap_whoniverse_cybermen"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_whoniverse_cybermen.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_whoniverse_dalek"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_whoniverse_dalek.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_whoniverse_church"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_whoniverse_church.dds"
+		alwaystransparent = yes
+	}
+}

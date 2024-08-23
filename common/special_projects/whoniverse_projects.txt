@@ -1,0 +1,255 @@
+# Dalek Asylum special project
+
+special_project = {
+	key = "whoniverse_dalek_caan_project"
+	cost = 0
+	tech_department = physics_technology
+	days_to_research = 180
+	timelimit = 1080
+	picture = GFX_evt_whoniverse_time_vortex
+	icon = "gfx/interface/icons/situation_log/situation_log_extradimensional.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		owner = {
+			country_event = { 
+				id = whoniverse.21 
+			}
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "whoniverse_dalek_asylum_project1"
+	event_chain = whoniverse_dalek_asylum_chain
+	cost = 0
+	tech_department = society_technology
+	days_to_research = 180
+	timelimit = -1
+	picture = GFX_evt_whoniverse_dalek
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		owner = { country_event = { id = whoniverse.13 }}
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "whoniverse_dalek_asylum_project2"
+	event_chain = whoniverse_dalek_asylum_chain
+	cost = 1000
+	tech_department = society_technology
+	timelimit = -1
+	picture = GFX_evt_whoniverse_dalek
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = country_event
+
+	on_success = {
+		country_event = { id = whoniverse.14 }
+		owner = { end_event_chain = "whoniverse_dalek_asylum_chain" }
+	}
+
+	on_fail = {
+	}
+}
+
+
+special_project = {
+	key = "whoniverse_mondasian_colony_ship_project"
+	event_chain = whoniverse_mondasian_colony_ship_chain
+	cost = 3000
+	tech_department = engineering_technology
+	timelimit = 720
+	picture = GFX_evt_relic_shipyard
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = planet_event
+
+	on_success = {
+		planet_event = { id = whoniverse.41 }
+		owner = { end_event_chain = "whoniverse_mondasian_colony_ship_chain" }
+	}
+
+	on_fail = {
+		FROM = { planet_event = { id = whoniverse.42 } }
+		owner = { end_event_chain = "whoniverse_mondasian_colony_ship_chain" }
+	}
+}
+
+
+special_project = {
+	key = "whoniverse_cyberiad_mrclever_project"
+	event_chain = whoniverse_cyberiad_mrclever_chain
+	cost = 1000
+	tech_department = engineering_technology
+	timelimit = 1000
+	picture = GFX_evt_whoniverse_eleventh_doctor
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = planet_event
+
+	on_success = {
+		planet_event = { id = whoniverse.53 }
+	}
+
+	on_fail = {
+		FROM = { planet_event = { id = whoniverse.54 } }
+	}
+}
+
+special_project = {
+	key = "whoniverse_cyberiad_mrclever_chess_project"
+	event_chain = whoniverse_cyberiad_mrclever_chain
+	cost = 2000
+	tech_department = society_technology
+	timelimit = 1000
+	picture = GFX_evt_whoniverse_mrclever
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = planet_event
+
+	on_success = {
+		owner = { country_event = { id = whoniverse.56 } }
+	}
+
+	on_fail = {
+		FROM = { planet_event = { id = whoniverse.54 } }
+	}
+}
+
+# Telos project
+special_project = {
+	key = "whoniverse_telos_project"
+	cost = 500
+	tech_department = engineering_technology
+	timelimit = -1
+	picture = GFX_evt_city_ruins
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+	event_scope = planet_event
+
+	on_success = {
+		planet_event = { id = whoniverse.62 }
+	}
+
+	on_fail = {
+	}
+}
+
+# UNIT Waters of Mars Project
+special_project = {
+	key = "whoniverse_waters_of_mars_project"
+	cost = 0
+	tech_department = society_technology
+	days_to_research = 180
+	timelimit = 360
+	picture = GFX_evt_barren_dig_site
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		ship_event = { id = whoniverse.72 }
+	}
+
+	on_fail = {
+		country_event = { id = whoniverse.73 }
+	}
+}
+
+# Zygon Invasion project
+special_project = {
+	key = "whoniverse_osgood_box_project"
+	event_chain = whoniverse_zygon_invasion_chain
+	cost = 500
+	tech_department = society_technology
+	timelimit = 360
+	picture = GFX_evt_whoniverse_osgood_boxes
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = planet_event
+
+	on_success = {
+		planet_event = { id = whoniverse.87 }
+	}
+
+	on_fail = {
+		capital_scope = {
+			planet_event = {
+				id = whoniverse.90
+			}	
+		}
+	}
+}
+
+# Zygor planet anomaly event
+special_project = {
+	key = "whoniverse_zygor_project"
+	cost = 0
+	tech_department = engineering_technology
+	days_to_research = 180
+	timelimit = -1
+	picture = GFX_evt_clones
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_constructor = 1
+	}
+
+	on_success = {
+		owner = { country_event = { id = whoniverse.101 }}
+	}
+
+	on_fail = {
+	}
+}
+
+# UNIT Blink project
+special_project = {
+	key = "whoniverse_blink_project"
+	event_chain = whoniverse_blink_chain
+	cost = 500
+	tech_department = society_technology
+	timelimit = 720
+	picture = GFX_evt_whoniverse_blink
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = planet_event
+
+	on_success = {
+		planet_event = { id = whoniverse.123 }
+	}
+
+	on_fail = {
+		owner = {
+			end_event_chain = "whoniverse_blink_chain"
+			}
+	}
+}

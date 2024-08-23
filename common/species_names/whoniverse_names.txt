@@ -1,0 +1,81 @@
+# Generated species derive their names from here
+
+# DALEK = {
+# 	dalek = {
+# 		name = DALEK
+# 		plural =  DALEK_plural
+# 		home_planet = DALEK_planet
+# 		home_system = DALEK_system
+# 		name_list = "DALEK1"
+# 	}
+# }
+
+HUM = {
+	Cyberman = {
+		name = CYBERMAN
+		plural =  CYBERMAN_plural
+	   home_planet = CYBERMAN_planet
+		home_system = CYBERMAN_system
+		name_list = "CYBERMAN1"
+	}
+}
+
+HUM = {
+ 	CyberMondasian = {
+ 		name = SPEC_WHO_MONDASIAN
+ 		plural =  SPEC_WHO_MONDASIAN_pl
+		home_planet = SPEC_WHO_MONDASIAN_planet
+ 		home_system = SPEC_WHO_MONDASIAN_system
+ 		name_list = "CYBERMAN1"
+ 	}
+ }
+
+HUM = {
+	CyberTelosian = {
+		name = SPEC_WHO_TELOSIAN
+		plural =  SPEC_WHO_TELOSIAN_pl
+	    home_planet = SPEC_WHO_MONDASIAN_planet
+		home_system = SPEC_WHO_MONDASIAN_system
+		name_list = "CYBERMAN1"
+	}
+}
+
+HUM = {
+	CybusMan = {
+		name = SPEC_WHO_CYBUSMAN
+		plural =  SPEC_WHO_CYBUSMAN_plural
+	    home_planet = SPEC_WHO_CYBUSMAN_planet
+		home_system = SPEC_WHO_CYBUSMAN_system
+		name_list = "CYBERMAN1"
+	}
+}
+
+FUN = {
+	Zygon = {
+		name = SPEC_WHO_ZYGON
+		plural =  SPEC_WHO_ZYGON_pl
+	    home_planet = SPEC_WHO_ZYGON_planet
+		home_system = SPEC_WHO_ZYGON_system
+		name_list = "FUN1"
+	}
+}
+
+PRE_MAM = {
+	WeepingAngel = {
+		name = SPEC_WHO_WEEPING_ANGEL
+		plural =  SPEC_WHO_WEEPING_ANGEL_plural
+	    home_planet = SPEC_WHO_WEEPING_ANGEL_planet
+		home_system = SPEC_WHO_WEEPING_ANGEL_system
+		name_list = "LITHOID1"
+	}
+}
+
+PRE_LITHOID = {
+	WeepingAngel = {
+		name = SPEC_WHO_WEEPING_ANGEL
+		plural =  SPEC_WHO_WEEPING_ANGEL_plural
+	    home_planet = SPEC_WHO_WEEPING_ANGEL_planet
+		home_system = SPEC_WHO_WEEPING_ANGEL_system
+		name_list = "LITHOID1"
+	}
+}

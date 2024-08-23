@@ -1,0 +1,53 @@
+﻿l_russian:
+
+# Dalek origin concepts
+ concept_whoniverse_dalek_infertile: "$trait_whoniverse_dalek_infertile$"
+ concept_whoniverse_dalek_infertile_desc: "- $MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$: §G+50%§! $NEW_LINE$- Leader Maximum Negative Traits: §G-1§!$NEW_LINE$$TRAIT_IMPROVES_LEADERS$$DOUBLE_NEW_LINE$§L$trait_whoniverse_dalek_infertile_desc$§! $NEW_LINE$- $TRAIT_INFERTILE$"
+
+ concept_whoniverse_dalek_machine: "$trait_whoniverse_dalek_machine$"
+ concept_whoniverse_dalek_machine_desc: "- Pop Food Upkeep: §G-25%§!$NEW_LINE$- Pop Consumer Goods Upkeep: §G-25%§!$NEW_LINE$- Resettlemnt Cost: §G-25%§!$NEW_LINE$- $MOD_ARMY_DAMAGE_MULT$: §G+25%§!$NEW_LINE$- Pop Housing Usage: §R+10%§!"
+
+ concept_whoniverse_dalek_supremacy: "$civic_whoniverse_dalek_supremacy$"
+ concept_whoniverse_dalek_supremacy_desc: "- War Exhaustion Gain: §G-20%§!\n- Claim Influence Cost: §G-10%§!\n- Automatic Resettlement Chance: §G+25%§!\n- Crime Rate: §G-10%§! \n\n§L$civic_whoniverse_cyber_conversion_desc$§!"
+
+ concept_whoniverse_dalek_happiness: "§RThis species is not affected by happiness§!"
+ concept_whoniverse_dalek_happiness_desc: "Population of this species is not affected by §HHappiness§!."
+
+ concept_whoniverse_dalek_incubation_vats: "$building_whoniverse_dalek_incubation_vats$"
+ concept_whoniverse_dalek_incubation_vats_desc: "Planet Limit: §I1§! $NEW_LINE$$MOD_PLANET_POP_ASSEMBLY_ORGANIC_ADD$: §G+4-10§!$NEW_LINE$£mod_job_healthcare_add£ $job_healthcare$ Jobs: §G+1§! $NEW_LINE$$building_whoniverse_dalek_incubation_vats_effect_desc$"
+
+ concept_genome_mapping: "$tech_genome_mapping$"
+ concept_genome_mapping_desc: "- $MOD_POP_GROWTH_SPEED$ §G+10%§!$DOUBLE_NEW_LINE$§L$tech_genome_mapping_desc$§!"
+
+ concept_wormhole_stabilization: "$tech_wormhole_stabilization$"
+ concept_wormhole_stabilization_desc: "- Science ships can stabilize wormholes"
+
+# Cybermen concepts
+
+ concept_whoniverse_cyber_fleet: "$civic_whoniverse_cyber_fleet$"
+ concept_whoniverse_cyber_fleet_desc: "- Ship Fire Rate: §G+25%§!\n- Naval Capacity: §G+25%§!\n- Automatic Resettlement Chance: §G+25%§!\n- Legion Node Experience Gain: §G+25%§!\n\n§L$civic_whoniverse_cyber_fleet_desc$§!"
+
+ concept_whoniverse_maximum_efficiency: "$civic_whoniverse_maximum_efficiency$"
+ concept_whoniverse_maximum_efficiency_desc: "- Building and District Cost: §G-15%§!\n- Ship Build Cost: §G-15%§!\n- Research Speed (Engineering): §G+15%§!\n- Cognitive Node Experience Gain: §G+25%§!"
+
+ concept_whoniverse_cyber_conversion: "$civic_whoniverse_cyber_conversion$"
+ concept_whoniverse_cyber_conversion_desc: "$civic_tooltip_whoniverse_cyber_conversion_effects$\n- Growth Node Experience Gain: §G+25%§!\n\n§L$civic_whoniverse_cyber_conversion_desc$§!"
+
+ concept_whoniverse_cyber_suit: "$trait_whoniverse_cyber_suit$"
+ concept_whoniverse_cyber_suit_desc: "- Pop Food Upkeep: §G-90%§!$NEW_LINE$- Habitability: §G+10%§!$NEW_LINE$- $MOD_ARMY_DAMAGE_MULT$: §G+25%§!$NEW_LINE$- Pop Energy Upkeep: §R+25%§!$NEW_LINE$- $TRAIT_INFERTILE$\n\n§L$civic_whoniverse_cyber_conversion_desc$§!"
+
+# UNIT concepts
+ concept_whoniverse_black_archive: "$building_whoniverse_black_archive$"
+ concept_whoniverse_black_archive_desc: "- Empire Limit: §I1§! $NEW_LINE$- Research speed: §G+5%§! $NEW_LINE$- Scientist Capacity: §G+1§! $NEW_LINE$- Science Director jobs: §G+1§! \n\n§L$building_whoniverse_black_archive_desc$§!"
+
+ concept_whoniverse_unit_hq: "$civic_whoniverse_unit_hq$"
+ concept_whoniverse_unit_hq_desc: "- Planet Sensor Range: §G+2§! $NEW_LINE$- Effective Councilor Skill: §G+1§! $NEW_LINE$- Ship Build Speed: §G+10%§! $NEW_LINE$- Starts with a unique ['concept_whoniverse_black_archive'] building \n\n§L$civic_whoniverse_unit_hq_desc$§!"
+
+# Church concepts
+ concept_whoniverse_silence: "$civic_whoniverse_silence$"
+ concept_whoniverse_silence_desc: "- Army Damage: §G+15%§!$NEW_LINE$- Codebreaking: §G+1§!$NEW_LINE$- Infiltration Speed: §G+10%§!$NEW_LINE$- Stability: §G+5§! \n\n§L$civic_whoniverse_silence_desc$§!"
+
+ concept_whoniverse_seventh_transept: "$building_whoniverse_seventh_transept$"
+ concept_whoniverse_seventh_transept_desc: "- Empire Limit: §I1§! $NEW_LINE$- $i_unity$ from Priests: §G+1§! $NEW_LINE$- Allows recruitment of §HHeadless Monk§! armies§! $NEW_LINE$- Necromancer jobs: §G+4§!\n\n§L$building_whoniverse_seventh_transept_desc$§!"
+
+

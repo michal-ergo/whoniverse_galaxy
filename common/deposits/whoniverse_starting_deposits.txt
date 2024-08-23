@@ -1,0 +1,126 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# planet_modifier - applied to planet only when deposit blocker has been cleared
+# constant_modifier - applied to planet always
+# blocker = <key/any/none> - default any
+# station = station class in orbit to gather
+
+@high = 16
+@med = 8
+@low = 4
+
+@high_rare = 2
+@med_rare = 1
+@low_rare = 0.5
+
+# Skaro Deposits
+
+d_whoniverse_petrified_jungle = {
+	is_for_colonizable = yes
+	icon = d_whoniverse_petrified_jungle
+
+	planet_modifier = {
+		district_farming_max = 1
+		district_mining_max = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_whoniverse_kaalann = {
+	is_for_colonizable = yes
+	icon = d_whoniverse_kaalann
+
+	planet_modifier = {
+		district_generator_max = 2
+		planet_housing_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_whoniverse_skaro_sewers = {
+	is_for_colonizable = yes
+	icon = d_whoniverse_skaro_sewers
+
+	planet_modifier = {
+		district_farming_max = 1
+		district_generator_max = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_whoniverse_tranquil_repose = {
+	is_for_colonizable = yes
+	icon = d_whoniverse_tranquil_repose
+
+	planet_modifier = {
+		district_farming_max = 2
+		planet_housing_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_whoniverse_spacey_zoomer_ride = {
+	is_for_colonizable = yes
+	icon = d_whoniverse_spacey_zoomer_ride
+
+	planet_modifier = {
+		district_generator_max = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 1
+		mult = value:district_amount_mastery_of_nature
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}

@@ -1,0 +1,120 @@
+triggered_whoniverse_spiritualist_negative_opinion_of_cybermen = {
+	trigger = {
+		is_country_type = default
+		is_individual_machine = no
+		OR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		FROM = { 
+			OR = { 
+				has_valid_civic = civic_whoniverse_cyber_conversion
+				has_valid_civic = civic_whoniverse_cyber_conversion_ai
+			}
+		}
+	}
+	opinion = {
+		base = -200
+	}
+}
+
+triggered_whoniverse_negative_opinion_of_cybermen = {
+	trigger = {
+		is_country_type = default
+		is_individual_machine = no
+		NOR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+			has_ethic = ethic_gestalt_consciousness
+			has_ai_personality = democratic_crusaders
+		}
+		FROM = { 
+			OR = { 
+				has_valid_civic = civic_whoniverse_cyber_conversion
+				has_valid_civic = civic_whoniverse_cyber_conversion_ai
+			}
+		}
+	}
+
+	opinion = {
+		base = -100
+	}
+}
+
+triggered_whoniverse_opinion_both_cybermen = {
+	trigger = {
+		is_country_type = default
+		has_valid_civic = civic_whoniverse_cyber_conversion
+		FROM = { 
+			OR = { 
+				has_valid_civic = civic_whoniverse_cyber_conversion
+				has_valid_civic = civic_whoniverse_cyber_conversion_ai
+			}
+		}
+	}
+	opinion = {
+		base = 200
+	}
+}
+
+triggered_whoniverse_opinion_cybermen_assimilators = {
+	trigger = {
+		is_country_type = default
+		OR = {
+			has_valid_civic = civic_whoniverse_cyber_conversion
+			has_valid_civic = civic_whoniverse_cyber_conversion_ai
+		}
+		FROM = { has_valid_civic = civic_machine_assimilator }
+	}
+	opinion = {
+		base = 200
+	}
+}
+
+triggered_whoniverse_opinion_assimilators_cybermen = {
+	trigger = {
+		is_country_type = default
+		has_valid_civic = civic_machine_assimilator
+		FROM = { 
+			OR = { 
+				has_valid_civic = civic_whoniverse_cyber_conversion
+				has_valid_civic = civic_whoniverse_cyber_conversion_ai
+			}
+		}
+	}
+	opinion = {
+		base = 40
+	}
+}
+
+triggered_whoniverse_cybermen_negative_opinion_of_preftl = {
+	trigger = {
+		is_country_type = default
+		OR = { 
+			has_valid_civic = civic_whoniverse_cyber_conversion
+			has_valid_civic = civic_whoniverse_cyber_conversion_ai
+			}
+		FROM = { is_country_type = primitive }
+	}
+	opinion = {
+		base = -1000
+	}
+}
+
+triggered_whoniverse_cybermen_opinion_of_humans = {
+	trigger = {
+		is_country_type = default
+		OR = {
+			has_valid_civic = civic_whoniverse_cyber_conversion
+			has_valid_civic = civic_whoniverse_cyber_conversion_ai
+		}
+		FROM = { 
+			owner_main_species = {
+				is_whoniverse_human_species = yes
+			}
+		}
+	}
+	opinion = {
+		base = -100
+	}
+}

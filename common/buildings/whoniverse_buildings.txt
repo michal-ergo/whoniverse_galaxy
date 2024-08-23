@@ -1,0 +1,312 @@
+#############
+# Dalek Incubation vats
+#############
+
+building_whoniverse_dalek_incubation_vats = {
+	base_buildtime = @b1_time
+
+	category = pop_assembly
+
+	base_cap_amount = 1
+
+	potential = {
+		exists = owner
+		owner = {
+			is_whoniverse_dalek = yes
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			AND = {
+				owner = { is_ai = yes }
+				free_district_slots = 0
+				free_building_slots = 0
+				free_housing <= 0
+				free_jobs <= 0
+				NOT = { owner = { has_trait = trait_whoniverse_dalek_infertile } }
+			}
+		}
+	}
+
+	ruined_trigger = {
+		exists = owner
+		NOT = { owner = { has_trait = trait_whoniverse_dalek_infertile } }
+		}
+
+	planet_modifier = {
+		planet_pop_assembly_organic_add = 3
+		job_healthcare_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_ascension_perk = ap_whoniverse_dalek
+			}
+		}
+		modifier = {
+			job_necromancer_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_at_war = yes
+			}
+		}
+		modifier = {
+			planet_pop_assembly_organic_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_gene_tailoring
+			}
+		}
+		modifier = {
+			planet_pop_assembly_organic_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_genetics_efficient_cloning }
+		}
+		modifier = {
+			planet_pop_assembly_organic_add = 2
+		}
+	}
+
+	resources = {
+		category = planet_buildings_clone_vats
+
+		# Base cost
+		cost = {
+			minerals = 500
+		}
+		# Org/Lith cost
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = no }
+			}
+			food = 500
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = yes }
+			}
+			energy = 500
+		}
+
+		# Base upkeep
+		upkeep = {
+			energy = 10
+			minerals = 10
+		}
+		# Org/Lith upkeep
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = no }
+			}
+			food = 10
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = yes }
+			}
+			minerals = 20
+		}
+	}
+	
+	on_built = { set_planet_flag = can_organic_assemble_flag }
+
+	ai_weight = {
+		factor = 300
+	}
+
+	triggered_desc = {
+		trigger = {
+			OR = {
+				has_building = building_robot_assembly_plant
+				AND = {
+					exists = assembling_species
+					assembling_species = { is_robotic_species = yes }
+				}
+			}
+		}
+		text = tooltip_organic_and_artificial_assembly_warning
+	}
+}
+
+
+#############
+# Black Archive
+#############
+
+building_whoniverse_black_archive = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	empire_limit = 1
+	category = research
+	can_demolish = yes
+	can_be_ruined = yes
+	can_be_disabled = yes
+	is_essential = yes
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = { has_origin = origin_whoniverse_unit }
+		}
+	}
+
+	position_priority = 100
+
+	allow = {
+		has_upgraded_capital = yes
+		hidden_trigger = {
+			owner = {
+				OR = {
+					is_ai = no
+					resource_stockpile_compare = { resource = minerals value >= 800 }
+				}
+			}
+		}
+	}
+
+	potential = {
+		custom_tooltip = {
+			text = EMPIRE_UNIQUE_BUILDING
+			owner = { has_origin = origin_whoniverse_unit }
+		}
+		exists = planet
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_scientist_cap_add = 1
+		all_technology_research_speed = 0.05
+	}
+	
+	planet_modifier = {
+		job_head_researcher_add = 1
+	}
+
+	# inline_script = {
+	# 	script = jobs/researchers_add
+	# 	AMOUNT = 2
+	# }
+
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 30
+			}
+		}
+		physics_research = 5
+		society_research = 5
+		engineering_research = 5
+	}
+}
+
+#############
+# Seventh Transept
+#############
+
+building_whoniverse_seventh_transept = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	empire_limit = 1
+	category = army
+	can_demolish = yes
+	can_be_ruined = yes
+	can_be_disabled = yes
+	is_essential = yes
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = { has_ascension_perk = ap_whoniverse_church }
+		}
+	}
+
+	position_priority = 100
+
+	allow = {
+		has_upgraded_capital = yes
+		hidden_trigger = {
+			owner = {
+				OR = {
+					is_ai = no
+					resource_stockpile_compare = { resource = minerals value >= 800 }
+				}
+			}
+		}
+	}
+
+	potential = {
+		custom_tooltip = {
+			text = EMPIRE_UNIQUE_BUILDING
+			owner = { has_valid_civic = civic_whoniverse_silence }
+		}
+		exists = planet
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	country_modifier = {
+		planet_priests_unity_produces_add = 1
+	}
+	
+	planet_modifier = {
+		job_necromancer_add = 4
+		# job_death_chronicler_add = 1
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = job_necromancer_effect_desc
+	}
+
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = { is_gestalt = no }
+	# 	}
+	# 	text = "job_death_chronicler_effect_desc"
+	# }
+
+}
+
+

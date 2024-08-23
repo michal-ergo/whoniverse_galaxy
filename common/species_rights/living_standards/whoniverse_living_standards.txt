@@ -1,0 +1,59 @@
+living_standard_whoniverse_cyber_conversion = {
+	pop_modifier = {
+		pop_happiness = -0.40
+	}
+	potential = {
+		# Changed: Display for all empires
+		# Changed: Check for all DLC that allows any sort of assimilation
+		OR = {
+			has_utopia = yes
+			has_machine_age_dlc = yes
+			has_synthetic_dawn = yes
+		}
+		exists = from
+	}
+	allow = {
+		hidden_trigger = {
+			exists = from
+		}
+		custom_tooltip = {
+			fail_text = SPECIES_MUST_BE_CYBER_CONVERTING
+			has_citizenship_type = {
+				type = citizenship_whoniverse_cyber_conversion
+				country = from
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+living_standard_whoniverse_predator = {
+	pop_modifier = {
+		pop_happiness = 0
+	}
+	potential = {
+		# Changed: Display for all empires
+		# Changed: Check for all DLC that allows any sort of assimilation
+		exists = from
+		this = {
+			has_trait = trait_whoniverse_weeping_angel
+			}
+	}
+	allow = {
+		hidden_trigger = {
+			exists = from
+		}
+		custom_tooltip = {
+			fail_text = SPECIES_MUST_BE_PREDATING
+			has_citizenship_type = {
+				type = citizenship_whoniverse_predator
+				country = from
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}

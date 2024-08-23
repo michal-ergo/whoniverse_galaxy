@@ -1,0 +1,659 @@
+@jumps = 3
+
+# Trenzalore System
+whoniverse_trenzalore_system = {
+	name = "whoniverse_name_trenzalore_system"
+	class = "sc_g"
+	usage = origin
+	flags = { empire_home_system whoniverse_trenzalore_system }
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "Trenzalore"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = { min = 30 max = 35 }
+		has_ring = no
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 70
+	}
+	
+	change_orbit = 30
+
+	#Trenzalore planet, moons, habitat
+	planet = {
+		name = "whoniverse_name_trenzalore"
+		class = "pc_shielded"
+		orbit_distance = 80
+		orbit_angle = 120
+		size = { min = 10 max = 20 }
+		has_ring = yes
+		flags = { ignore_startup_effect empire_home_system has_megastructure whoniverse_church_habitat_1_planet }
+
+		init_effect = {
+			prevent_anomaly = yes
+			set_planet_flag = whoniverse_trenzalore
+			save_global_event_target_as = whoniverse_trenzalore
+			set_deposit = d_physics_3
+		}
+
+		moon = {
+			name = "Soror"
+			class = "pc_barren_cold"
+			size = 4
+			orbit_distance = 10
+			orbit_angle = 90
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				set_deposit = d_minerals_3
+			}
+		}
+
+		moon = {
+			name = "Frater"
+			class = "pc_barren_cold"
+			size = 5
+			orbit_distance = 5
+			orbit_angle = 300
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				set_deposit = d_minerals_2
+			}
+		}
+
+		moon = {
+			name = "whoniverse_name_papal_mainframe"
+			class = pc_habitat
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 20
+			size = 10
+			starting_planet = yes
+			flags = { church_habitat_1 special_start_planet megastructure habitat }
+			deposit_blockers = none
+		}
+	}
+
+	planet = {
+		name = "Trenzalore II"
+		class = "pc_gas_giant"
+		orbit_distance = 50
+		orbit_angle = 90
+		size = 22
+		flags = { ignore_startup_effect whoniverse_church_habitat_2_planet has_megastructure }
+		init_effect = {
+			set_deposit = d_energy_6
+		}
+	}
+
+	planet = {
+		name = "Trenzalore III"
+		class = "pc_barren_cold"
+		orbit_distance = 40
+		orbit_angle = 50
+		size = 12
+		flags = { ignore_startup_effect whoniverse_church_habitat_3_planet has_megastructure }
+		init_effect = {
+			set_deposit = d_minerals_3
+		}
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 170
+	}
+
+	neighbor_system = {
+		trigger = { num_guaranteed_colonies >= 1 }
+		hyperlane_jumps = { min = 1 max = @jumps }
+		initializer = "whoniverse_dundra_system_initializer"
+	}
+
+	neighbor_system = {
+		hyperlane_jumps = { min = 3 max = 4 }
+		initializer = "whoniverse_demons_run_system_initializer"
+	}
+	
+}
+
+# Dundra / Alfava Metraxis System
+whoniverse_dundra_system_initializer = {
+	name = "whoniverse_name_dundra_system"
+	
+	class = "sc_a"
+
+	flags = { suppress_archaeological_sites empire_home_system whoniverse_dundra_system }
+
+	init_effect = {
+		every_neighbor_system = { set_star_flag = empire_cluster }
+	}
+
+	planet = {
+		name = "whoniverse_name_dundra_star"
+		class = "pc_a_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+		init_effect = {
+			set_planet_flag = suppress_archaeological_sites
+		}
+	}
+
+	change_orbit = 20
+	
+	planet = {
+		name = "Dundra I"
+		class = "pc_molten"
+		orbit_distance = 25
+		orbit_angle = 90
+		size = 7
+		has_ring = no
+		init_effect = {
+			set_planet_flag = suppress_archaeological_sites
+		}
+	}
+
+	planet = {
+		name = "Dundra II"
+		class = "pc_molten"
+		orbit_distance = 30
+		orbit_angle = 250
+		size = 10
+		has_ring = no
+		init_effect = {
+			set_planet_flag = suppress_archaeological_sites
+		}
+	}
+
+	planet = {
+		name = "Dundra III"
+		class = "pc_toxic"
+		orbit_distance = 40
+		orbit_angle = 110
+		size = 12
+		has_ring = no
+		init_effect = {
+			set_planet_flag = suppress_archaeological_sites
+		}
+	}
+
+	planet = {
+		name = "Dundra III"
+		class = "pc_toxic"
+		orbit_distance = 35
+		orbit_angle = 140
+		size = 13
+		has_ring = no
+		init_effect = {
+			set_planet_flag = suppress_archaeological_sites
+		}
+	}
+
+	planet = {
+		name = "Dundra IV"
+		class = "pc_barren"
+		orbit_distance = 40
+		orbit_angle = 90
+		size = 16
+		has_ring = no
+		init_effect = {
+			set_planet_flag = suppress_archaeological_sites
+		}
+	}
+
+	planet = {
+		name = "Dundra V"
+		class = "pc_barren"
+		orbit_distance = 30
+		orbit_angle = 160
+		size = 13
+		has_ring = no
+		init_effect = {
+			set_planet_flag = suppress_archaeological_sites
+		}
+	}
+	planet = {
+		name = "Dundra VI"
+		class = "pc_toxic"
+		orbit_distance = 35
+		orbit_angle = 65
+		size = 14
+		has_ring = no
+		init_effect = {
+			set_planet_flag = suppress_archaeological_sites
+		}
+	}
+
+	planet = {
+		name = "whoniverse_name_alfava_metraxis_planet"
+		class = "pc_continental"
+		orbit_distance = 35
+		orbit_angle = 190
+		size = { min = 17 max = 22 }
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			# create_archaeological_site = whoniverse_digsite_alfava_metraxis
+			add_anomaly = { category = whoniverse_alfava_metraxis_cat }
+			set_planet_flag = whoniverse_alfava_metraxis
+			set_planet_flag = suppress_archaeological_sites
+		}
+	}
+
+	change_orbit = 10
+
+	planet = {
+		name = "Dundra VIII"
+		class = "pc_barren"
+		orbit_distance = 40
+		orbit_angle = 90
+		size = 7
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			set_planet_flag = suppress_archaeological_sites
+		}
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 275
+	}
+
+	neighbor_system = {
+		trigger = { num_guaranteed_colonies >= 1 }
+		hyperlane_jumps = { min = 1 max = @jumps }
+		initializer = "whoniverse_kastarion_system_initializer"
+	}
+}
+
+# Kastarion System
+whoniverse_kastarion_system_initializer = {
+	name = "whoniverse_name_kastarion_system"
+	
+	class = "sc_g"
+
+	flags = { unique_system whoniverse_kastarion_system }
+
+	init_effect = {
+		every_neighbor_system = { set_star_flag = empire_cluster }
+	}
+
+	planet = {
+		name = "whoniverse_name_kastarion_star"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 32
+		has_ring = no
+	}
+
+	change_orbit = 20
+	
+	planet = {
+		name = "Kastarion I"
+		class = "pc_molten"
+		orbit_distance = 20
+		orbit_angle = 90
+		size = 7
+		has_ring = no
+	}
+
+	planet = {
+		name = "Kastarion II"
+		class = "pc_molten"
+		orbit_distance = 30
+		orbit_angle = 110
+		size = 5
+		has_ring = no
+		init_effect = {
+			clear_deposits = yes
+				set_deposit = d_energy_3
+		}
+	}
+
+	planet = {
+		name = "whoniverse_name_kastarion_planet"
+		class = "pc_continental"
+		orbit_distance = 30
+		orbit_angle = 180
+		size = { min = 18 max = 23 }
+		has_ring = no
+		init_effect = {
+			# add_anomaly = { category = whoniverse_necros_cat }
+			set_planet_flag = whoniverse_kastarion
+		}
+	}
+	
+	planet = {
+		name = "Kastarion IV"
+		class = "pc_gas_giant"
+		orbit_distance = 30
+		orbit_angle = 30
+		size = 30
+		has_ring = yes
+
+		moon = {
+			name = "Kastarion IVa"
+			class = "pc_barren"
+			size = 3
+			orbit_distance = 10
+			orbit_angle = 180
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				set_deposit = d_minerals_3
+			}
+		}
+	}
+
+	change_orbit = 10
+
+	planet = {
+		name = "Kastarion V"
+		class = "pc_barren"
+		orbit_distance = 60
+		orbit_angle = 90
+		size = 9
+		has_ring = no
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 275
+	}
+}
+
+
+# Demon's Run system
+whoniverse_demons_run_system_initializer = {
+	name = "whoniverse_name_demons_run_system"
+	
+	class = "sc_m"
+
+	usage = custom_empire
+
+	flags = { unique_system whoniverse_demons_run_system }
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		set_global_flag = whoniverse_demons_run_home_system
+		save_global_event_target_as = whoniverse_kovarian_system
+	}
+
+	planet = {
+		name = "whoniverse_name_demons_run"
+		class = "pc_m_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 26
+		has_ring = no
+		deposit_blockers = none
+		flags = { ignore_startup_effect }
+
+		init_effect = {
+			set_deposit = d_null_deposit
+			solar_system = {
+				spawn_planet = {
+					name = "whoniverse_name_demons_run_base"
+					class = pc_habitat
+					location = prev
+					orbit_location = yes
+					orbit_angle_offset = 45
+					orbit_distance_offset = 85
+					size = 10
+					has_ring = no
+		
+					init_effect = {
+						set_planet_flag = megastructure
+						set_planet_flag = habitat
+						set_planet_flag = habitat_level_2
+						clear_blockers = yes
+						set_planet_entity = {
+							entity = habitat_phase_03_entity
+							graphical_culture = mammalian_01
+						
+						}
+					}
+				}
+			}
+			set_planet_flag = has_megastructure
+		}
+	}
+
+	change_orbit = 25
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 100
+	}
+
+	planet = {
+		name = "DR-1854"
+		class = "pc_asteroid"
+		orbit_distance = 70
+		orbit_angle = 90
+		size = 6
+		has_ring = no
+		flags = { ignore_startup_effect whoniverse_demons_run_habitat_1_planet has_megastructure }
+		init_effect = {
+			set_deposit = d_minerals_3
+		}
+	}
+
+	planet = {
+		name = "DR-2862"
+		class = "pc_asteroid"
+		orbit_distance = 10
+		orbit_angle = 120
+		size = 7
+		has_ring = no
+		flags = { ignore_startup_effect whoniverse_demons_run_habitat_2_planet has_megastructure }
+		init_effect = {
+			set_deposit = d_engineering_3
+		}
+	}
+
+	planet = {
+		name = "DR-3415"
+		class = "pc_asteroid"
+		orbit_distance = 45
+		orbit_angle = 120
+		size = 6
+		has_ring = no
+		flags = { ignore_startup_effect whoniverse_demons_run_habitat_3_planet has_megastructure }
+		init_effect = {
+			set_deposit = d_energy_5
+		}
+	}
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
+
+	neighbor_system = {
+		hyperlane_jumps = { min = 1 max = @jumps }
+		initializer = "whoniverse_gamma_forests_system_initializer"
+	}
+}
+
+# Gamma Forests System - habitable planet
+whoniverse_gamma_forests_system_initializer = {
+	name = "whoniverse_name_gamma_forests_system"
+	
+	class = "sc_g"
+
+	flags = { unique_system whoniverse_gamma_forests_system }
+
+	init_effect = {
+		every_neighbor_system = { set_star_flag = empire_cluster }
+	}
+
+	planet = {
+		name = "whoniverse_name_gamma_forests_star"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 35
+		has_ring = no
+	}
+
+	change_orbit = 25
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 85
+	}	
+
+	planet = {
+		name = "Gamme Forests I"
+		class = "pc_toxic"
+		orbit_distance = 30
+		orbit_angle = 150
+		size = 15
+		has_ring = no
+	}
+
+	planet = {
+		name = "whoniverse_name_gamma_forests_planet"
+		class = "pc_continental"
+		orbit_distance = 65
+		orbit_angle = 110
+		size = { min = 18 max = 25 }
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		flags = { suppress_archaeological_sites whoniverse_planet_gamma_forests }
+
+		init_effect = {
+			save_global_event_target_as = whoniverse_gamma_forests_planet
+			create_species = {
+				name = PRESCRIPTED_species_name_whoniverse_human
+				plural = PRESCRIPTED_species_plural_whoniverse_human
+				class = "HUM"
+				portrait = "whoniverse_human"
+				homeworld = THIS
+					traits = {
+						trait = "trait_adaptive"
+						trait = "trait_nomadic"
+						trait = "trait_wasteful"
+					}
+				}
+			create_country = {
+				name = "NAME_whoniverse_gamma_forests"
+				authority = auth_democratic
+				day_zero_contact = no
+				civics = {
+					civic = civic_landed_nobility
+					civic = civic_flat_world_theory
+					}
+				species = last_created_species
+					ethos = {
+						ethic = "ethic_spiritualist"
+						ethic = "ethic_militarist"
+						ethic = "ethic_egalitarian"
+						}
+				origin = origin_default_pre_ftl
+				flag = {
+					icon = {
+					category = "zoological"
+					file = "flag_zoological_13.dds"
+						}
+					background= {
+						category = "backgrounds"
+						file = "00_solid.dds"
+						}
+					colors={
+						"green"
+						"green"
+						"null"
+						"null"
+						}
+					}
+				type = primitive
+				}
+			last_created_country = {
+				set_graphical_culture = industrial_01
+				set_country_flag = machine_age
+			#	set_country_flag = humans_early_space_age
+				set_pre_ftl_age = machine_age
+			}
+			set_owner = last_created_country
+
+			while = {
+				count = @machine_age_pops
+				create_pop = {
+					species = last_created_species
+				}
+			}
+
+			while = {
+				count = 6
+				create_army = {
+					name = "NAME_Feudal_Levies"
+					owner = last_created_country
+					species = last_created_species
+					type = "industrial_army"
+				}
+			}
+
+			add_building = building_primitive_capital
+			add_building = building_urban_dwellings
+			add_building = building_primitive_factory
+			add_building = building_primitive_mine
+			add_building = building_primitive_power_plant
+			add_building = building_primitive_farm
+
+			last_created_country = {
+				capital_scope = { set_name = "whoniverse_name_gamma_forests_planet" }
+			}
+		}
+	}
+
+	change_orbit = 10
+
+	planet = {
+		name = "Gamma Forests III"
+		class = "pc_gas_giant"
+		orbit_distance = 25
+		orbit_angle = 170
+		size = 28
+		has_ring = yes
+		change_orbit = 20
+
+		moon = {
+			class = "pc_frozen"
+			size = 6
+			orbit_distance = 12
+			orbit_angle = 320
+			has_ring = no
+		}
+	}
+}
+
+
+
+
+# Gamma Forests
+# Dundra System - Alfava Metraxis planet

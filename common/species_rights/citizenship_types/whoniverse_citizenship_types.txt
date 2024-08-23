@@ -1,0 +1,76 @@
+# from = country
+# this = species
+
+# cyber-conversion citizenship
+citizenship_whoniverse_cyber_conversion = {
+	is_assimilation = yes
+
+	potential = {
+		OR = {
+			has_synthetic_dawn = yes
+			has_utopia = yes
+			has_machine_age_dlc = yes
+		}
+		exists = from
+		from = {
+			has_whoniverse_cyber_conversion = yes
+		}
+		this = {
+			is_robotic_species = no
+			is_mechanical_species = no
+			}
+			# is_human_species = yes
+		}
+
+	allow = {
+		hidden_trigger = { exists = from }
+		custom_tooltip = {
+			fail_text = MUST_NOT_BE_DOMINANT_SPECIES
+			NOT = { is_exact_same_species = from }
+		}
+		custom_tooltip = {
+			fail_text = whoniverse_not_organic
+			NOR = {
+				has_trait = trait_whoniverse_dalek_infertile
+				has_trait = trait_whoniverse_cyber_suit
+				has_trait = trait_whoniverse_cyber_suit
+			}
+		}
+		custom_tooltip = {
+			fail_text = whoniverse_not_human
+			OR = {
+		 	this = {
+				is_whoniverse_human_species = yes
+			 	}
+		 	from = { has_ascension_perk = ap_whoniverse_cybermen }
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1000
+		}
+	}
+
+# predator citizenship
+citizenship_whoniverse_predator = {
+
+	potential = {
+		exists = from
+		this = {
+			has_trait = trait_whoniverse_weeping_angel
+			}
+		}
+
+	allow = {
+		hidden_trigger = { exists = from }
+		this = {
+			has_trait = trait_whoniverse_weeping_angel
+			}
+	}
+	ai_will_do = {
+		factor = 1000
+		}
+	}
+
+
+

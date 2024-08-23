@@ -1,0 +1,26 @@
+counter_whoniverse_not_zygon = {
+	complex_trigger_modifier = {
+		trigger = count_owned_pop
+		parameters = {
+			limit = {
+				NOT = { has_trait = trait_whoniverse_zygon }
+				pop_has_happiness = yes
+			}
+		}
+		mode = add
+	}
+	max = 20
+}
+
+counter_whoniverse_zygon = {
+	complex_trigger_modifier = {
+		trigger = count_owned_pop
+		parameters = {
+			limit = {
+				has_trait = trait_whoniverse_zygon
+			}
+		}
+		mode = add
+	}
+	max = 20
+}

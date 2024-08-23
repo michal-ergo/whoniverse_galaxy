@@ -1,0 +1,86 @@
+# Headless Monk Army
+headless_monk_army = {
+	damage = 1.25
+	health = 1.25
+	has_morale = no
+	collateral_damage = 1.00
+	morale_damage = 2.00
+	war_exhaustion = 1.50
+	has_species = no
+	time = 60
+	icon = GFX_army_type_undead
+	pop_limited = no
+	disband_if_species_lacks_rights = no #i.e. if you resurrect your enemies, you get to keep these armies, even if you are a purifier
+	prerequisites = { "tech_assault_armies" }
+
+	resources = {
+		category = armies
+		cost = {
+			energy = 125
+		}
+
+		upkeep = {
+			energy = 1.00
+		}
+	}
+
+	show_tech_unlock_if = {
+		has_ascension_perk = ap_whoniverse_church
+	}
+
+	potential_country = { has_ascension_perk = ap_whoniverse_church }
+	potential = {
+		# from = {
+		# 	NOR = {
+		# 		has_trait = "trait_mechanical"
+		# 		has_trait = "trait_machine_unit"
+		# 		is_sapient = no
+		# 	}
+		# }
+		planet = {
+			has_active_building = building_whoniverse_seventh_transept
+			num_assigned_jobs = {
+				job = necromancer
+				value >= 1
+			}
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			text = headless_limit_tooltip
+			planet = { has_active_building = building_whoniverse_seventh_transept }
+			owner = {
+				has_ascension_perk = ap_whoniverse_church
+				NOT = { 
+					 check_variable = {
+						which = "headless_monks_count" 
+						value = 7
+					}
+				}
+			}
+		}
+	}
+	
+	on_queued = {
+		owner = {
+			change_variable = {
+				which = "headless_monks_count" 
+				value = 1
+			}
+		}
+	}
+	
+	on_unqueued = {
+		owner = {
+			change_variable = {
+				which = "headless_monks_count" 
+				value = -1
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 100
+	}
+}

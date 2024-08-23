@@ -1,0 +1,463 @@
+# Phenotypes
+sound = 
+{
+	name = "whoniverse_exterminate"
+	file = "vo/phenotypes/daleks/exterminate.wav"
+	volume = 0.2
+}
+sound = 
+{
+	name = "whoniverse_explain"
+	file = "vo/phenotypes/daleks/explain.wav"
+	volume = 0.5
+}
+
+sound = 
+{
+	name = "whoniverse_doctor_must_die"
+	file = "vo/phenotypes/daleks/doctor_must_die.wav"
+	volume = 0.2
+}
+sound = 
+{
+	name = "whoniverse_maximum_extermination"
+	file = "vo/phenotypes/daleks/maximum_extermination.wav"
+	volume = 0.6
+}
+sound = 
+{
+	name = "whoniverse_tardis_will_be_destroyed"
+	file = "vo/phenotypes/daleks/tardis_will_be_destroyed.wav"
+	volume = 0.6
+}
+sound = 
+{
+	name = "whoniverse_what_do_you_want"
+	file = "vo/phenotypes/daleks/what_do_you_want.wav"
+	volume = 0.6
+}
+sound = 
+{
+	name = "whoniverse_activate_the_holding_cells"
+	file = "vo/phenotypes/daleks/activate_the_holding_cells.wav"
+	volume = 0.55
+}
+
+sound = 
+{
+	name = "whoniverse_we_have_exhausted"
+	file = "vo/phenotypes/daleks/we_have_exhausted.wav"
+	volume = 0.55
+}
+
+sound = 
+{
+	name = "whoniverse_i_flew_into_the_wild"
+	file = "vo/phenotypes/daleks/i_flew_into_the_wild.wav"
+	volume = 0.5
+}
+
+sound = 
+{
+	name = "whoniverse_dalek_I_am_the_god_of_all_daleks"
+	file = "vo/phenotypes/daleks/i_am_the_god_of_all_daleks.wav"
+	volume = 0.5
+}
+
+sound = 
+{
+	name = "whoniverse_dalek_they_survived_through_me"
+	file = "vo/phenotypes/daleks/they_survived_through_me.wav"
+	volume = 0.5
+}
+
+sound = 
+{
+	name = "whoniverse_dalek_we_waited_here_in_the_dark_space"
+	file = "vo/phenotypes/daleks/we_waited_here_in_the_dark_space.wav"
+	volume = 0.5
+}
+
+sound = 
+{
+	name = "whoniverse_we_will_survive"
+	file = "vo/phenotypes/cybermen/we_will_survive.wav"
+	volume = 0.4
+}
+
+sound = 
+{
+	name = "whoniverse_you_will_be_deleted"
+	file = "vo/phenotypes/cybermen/you_will_be_deleted.wav"
+	volume = 0.4
+}
+sound = 
+{
+	name = "whoniverse_upgrading_is_compulsory"
+	file = "vo/phenotypes/cybermen/upgrading_is_compulsory.wav"
+	volume = 0.4
+}
+
+sound = 
+{
+	name = "whoniverse_your_presence"
+	file = "vo/phenotypes/cybermen/your_presence.wav"
+	volume = 0.4
+}
+
+sound = 
+{
+	name = "whoniverse_upgrade_in_progress"
+	file = "vo/phenotypes/cybermen/upgrade_in_progress.wav"
+	volume = 0.4
+}
+
+sound = 
+{
+	name = "whoniverse_i_could_call_myself_mrclever"
+	file = "vo/phenotypes/cybermen/i_could_call_myself_mrclever.wav"
+	volume = 0.45
+}
+
+sound = 
+{
+	name = "whoniverse_oh_this_is_just_dreamy"
+	file = "vo/phenotypes/cybermen/oh_this_is_just_dreamy.wav"
+	volume = 0.45
+}
+
+sound = 
+{
+	name = "whoniverse_this_is_brilliant"
+	file = "vo/phenotypes/cybermen/this_is_brilliant.wav"
+	volume = 0.4
+}
+
+sound = 
+{
+	name = "whoniverse_ascension_is_near"
+	file = "vo/phenotypes/cybermen/ascension_is_near.wav"
+	volume = 0.4
+}
+
+sound = 
+{
+	name = "whoniverse_abandoned_no_longer"
+	file = "vo/phenotypes/cybermen/abandoned_no_longer.wav"
+	volume = 0.4
+}
+
+sound = 
+{
+	name = "whoniverse_pain"
+	file = "vo/phenotypes/cybermen/pain.wav"
+	volume = 0.5
+}
+
+sound = 
+{
+	name = "whoniverse_die_me"
+	file = "vo/phenotypes/cybermen/die_me.wav"
+	volume = 0.5
+}
+
+sound = 
+{
+	name = "whoniverse_zygon_scream"
+	file = "vo/phenotypes/zygons/zygon_scream.wav"
+	volume = 0.85
+}
+
+sound = 
+{
+	name = "whoniverse_zygon_we_want_the_world"
+	file = "vo/phenotypes/zygons/we_want_the_world.wav"
+	volume = 0.85
+}
+
+sound = 
+{
+	name = "whoniverse_zygon_im_osgood"
+	file = "vo/phenotypes/zygons/im_osgood.wav"
+	volume = 0.7
+}
+
+sound = 
+{
+	name = "whoniverse_zygon_any_race_is_capable"
+	file = "vo/phenotypes/zygons/any_race_is_capable.wav"
+	volume = 0.75
+}
+
+sound = 
+{
+	name = "whoniverse_zygon_ive_been_looking_forward"
+	file = "vo/phenotypes/zygons/ive_been_looking_forward.wav"
+	volume = 0.75
+}
+
+sound = 
+{
+	name = "whoniverse_zygon_why_are_you_still_talking"
+	file = "vo/phenotypes/zygons/why_are_you_still_talking.wav"
+	volume = 0.75
+}
+
+sound = 
+{
+	name = "whoniverse_unit_immediate_assistance"
+	file = "vo/phenotypes/unit/immediate_assistance.wav"
+	volume = 0.75
+}
+
+sound = 
+{
+	name = "whoniverse_unit_kitchen_secured"
+	file = "vo/phenotypes/unit/kitchen_secured.wav"
+	volume = 0.75
+}
+
+sound = 
+{
+	name = "whoniverse_unit_im_representing_unit"
+	file = "vo/phenotypes/unit/im_representing_unit.wav"
+	volume = 0.75
+}
+
+sound = 
+{
+	name = "whoniverse_unit_is_there_someone"
+	file = "vo/phenotypes/unit/is_there_someone.wav"
+	volume = 0.75
+}
+
+
+sound = 
+{
+	name = "whoniverse_unit_stop_playing"
+	file = "vo/phenotypes/unit/stop_playing.wav"
+	volume = 0.75
+}
+
+
+sound = 
+{
+	name = "whoniverse_unit_wait_for_backup"
+	file = "vo/phenotypes/unit/wait_for_backup.wav"
+	volume = 0.75
+}
+
+sound = 
+{
+	name = "whoniverse_unit_im_measuring"
+	file = "vo/phenotypes/unit/im_measuring.wav"
+	volume = 0.75
+}
+
+sound = 
+{
+	name = "whoniverse_unit_fifteen_malcolms"
+	file = "vo/phenotypes/unit/fifteen_malcolms.wav"
+	volume = 0.75
+}
+
+sound = 
+{
+	name = "whoniverse_unit_we_dont_know"
+	file = "vo/phenotypes/unit/we_dont_know.wav"
+	volume = 0.75
+}
+
+sound = 
+{
+	name = "whoniverse_unit_i_think_we_should_wait"
+	file = "vo/phenotypes/unit/i_think_we_should_wait.wav"
+	volume = 0.75
+}
+
+sound = 
+{
+	name = "whoniverse_unit_how_did_that_happen"
+	file = "vo/phenotypes/unit/how_did_that_happen.wav"
+	volume = 0.75
+}
+
+
+sound = 
+{
+	name = "whoniverse_unit_kate_hello_kate_stewart"
+	file = "vo/phenotypes/unit/hello_kate_stewart.wav"
+	volume = 0.75
+}
+
+
+sound = 
+{
+	name = "whoniverse_unit_kate_this_is_why_we_called_you_in"
+	file = "vo/phenotypes/unit/this_is_why_we_called_you_in.wav"
+	volume = 0.75
+}
+
+sound = 
+{
+	name = "whoniverse_weeping_angel_01"
+	file = "vo/phenotypes/weeping_angel/weeping_angel_01.wav"
+	volume = 0.6
+}
+
+sound = 
+{
+	name = "whoniverse_church_combat_distance_10_feet"
+	file = "vo/phenotypes/church/combat_distance_10_feet.wav"
+	volume = 0.7
+}
+
+sound = 
+{
+	name = "whoniverse_church_dont_get_too_close"
+	file = "vo/phenotypes/church/dont_get_too_close.wav"
+	volume = 0.7
+}
+
+sound = 
+{
+	name = "whoniverse_church_why_would_i_lie_to_you"
+	file = "vo/phenotypes/church/why_would_i_lie_to_you.wav"
+	volume = 0.7
+}
+
+sound = 
+{
+	name = "whoniverse_church_the_only_reason_i_joined"
+	file = "vo/phenotypes/church/the_only_reason_i_joined.wav"
+	volume = 0.7
+}
+
+sound = 
+{
+	name = "whoniverse_church_give_the_order"
+	file = "vo/phenotypes/church/give_the_order.wav"
+	volume = 0.8
+}
+
+sound = 
+{
+	name = "whoniverse_church_the_anger_of_a_good_man"
+	file = "vo/phenotypes/church/the_anger_of_a_good_man.wav"
+	volume = 0.8
+}
+
+sound = 
+{
+	name = "whoniverse_church_how_do_you_expect"
+	file = "vo/phenotypes/church/how_do_you_expect.wav"
+	volume = 0.8
+}
+
+sound = 
+{
+	name = "whoniverse_church_i_want_to_change_the_future"
+	file = "vo/phenotypes/church/i_want_to_change_the_future.wav"
+	volume = 0.7
+}
+
+sound = 
+{
+	name = "whoniverse_church_no_sacrifice_is_required"
+	file = "vo/phenotypes/church/no_sacrifice_is_required.wav"
+	volume = 0.7
+}
+
+sound = 
+{
+	name = "whoniverse_church_signal_your_understanding"
+	file = "vo/phenotypes/church/signal_your_understanding.wav"
+	volume = 0.7
+}
+
+sound = 
+{
+	name = "whoniverse_church_how_are_we_doing"
+	file = "vo/phenotypes/church/how_are_we_doing.wav"
+	volume = 0.7
+}
+
+sound = 
+{
+	name = "whoniverse_church_less_than_a_mile_from_base_camp"
+	file = "vo/phenotypes/church/less_than_a_mile_from_base_camp.wav"
+	volume = 0.7
+}
+
+sound = 
+{
+	name = "whoniverse_silence_01"
+	file = "vo/phenotypes/silence/silence_1.wav"
+	volume = 0.7
+}
+
+sound = 
+{
+	name = "whoniverse_silence_02"
+	file = "vo/phenotypes/silence/silence_2.wav"
+	volume = 0.7
+}
+
+sound = 
+{
+	name = "whoniverse_mechanoid"
+	file = "vo/phenotypes/mechanoid/mechanoid.wav"
+	volume = 0.7
+}
+
+sound = 
+{
+	name = "whoniverse_mechanoid_beep"
+	file = "vo/phenotypes/mechanoid/mechanoid_beep.wav"
+	volume = 0.7
+}
+
+
+### Sound Effects ###
+
+sound = 
+{
+	name = "whoniverse_tardis"
+	file = "event/whoniverse_tardis.wav"
+	volume = 0.5
+}
+
+sound = 
+{
+	name = "whoniverse_make_your_mind_up_time"
+	file = "event/whoniverse_make_your_mind_up_time.wav"
+	volume = 1.0
+}
+
+sound = 
+{
+	name = "whoniverse_scale_model_of_war"
+	file = "event/whoniverse_scale_model_of_war.wav"
+	volume = 1.0
+}
+
+sound = 
+{
+	name = "whoniverse_timey_wimey_stuff"
+	file = "event/whoniverse_timey_wimey_stuff.wav"
+	volume = 1.0
+}
+
+sound = 
+{
+	name = "whoniverse_the_question"
+	file = "event/whoniverse_the_question.wav"
+	volume = 1.0
+}
+
+sound = 
+{
+	name = "whoniverse_regeneration"
+	file = "event/whoniverse_regeneration.wav"
+	volume = 0.8
+}

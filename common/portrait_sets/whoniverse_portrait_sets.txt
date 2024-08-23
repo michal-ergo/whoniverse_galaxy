@@ -1,0 +1,130 @@
+# Portrait sets associated with species classes.
+# Portrait sets are grouped into portrait categories to be shown on empire editor. Check out portrait_categories database.
+# portraits = {}									List of portraits which are available for the species class without any conditions
+# conditional_portraits = {}
+#	randomizable = yes/no/trigger (default: yes)	Condition that specifies if the portraits in the list below can be used with species which design is randomly generated
+#	playable = yes/no/trigger (default: yes)		Condition that specifies if the portraits in the list below are available in empire design view
+#	portraits = {}									List of portraits which can be used by species of corresponding class depending on the
+# non_randomized_portraits							List of portraits which are not available for empires whose design was randomly generated
+# non_pre_ftl_portraits								List of portraits which are not available for pre-ftl empires
+# uplifted_portraits = {}							List of portraits which will be used by species of corresponding class after uplifting
+#													(the number of uplifted portraits must be the same as the number of portraits in 'portraits' list).
+
+whoniverse_dalek_set = {
+	species_class = HUM
+
+	portraits = {
+		"whoniverse_dalek_paradigm"
+		"whoniverse_dalek_imperial"
+		"whoniverse_dalek_renegade"
+	}
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"whoniverse_dalek_paradigm"
+		"whoniverse_dalek_empire"
+		"whoniverse_dalek_imperial"
+		"whoniverse_dalek_renegade"
+		}
+}
+
+whoniverse_cyberman_set = {
+	species_class = HUM
+
+	portraits = {
+		"whoniverse_cyberman_cybus"
+		"whoniverse_cyberman_cyberiad"
+		"whoniverse_cyberman_warrior"
+		"whoniverse_cyberman_classic"
+		"whoniverse_cyberman_mondasian"
+	}
+
+	non_randomized_portraits = {
+		"whoniverse_cyberman_cybus"
+		"whoniverse_cyberman_cyberiad"
+		"whoniverse_cyberman_warrior"
+		"whoniverse_cyberman_classic"
+		"whoniverse_cyberman_mondasian"
+	}
+}
+
+whoniverse_zygon_set = {
+	species_class = FUN
+
+	portraits = {
+		"whoniverse_zygon"
+	}
+
+	non_randomized_portraits = {
+		"whoniverse_zygon"
+	}
+}
+
+# whoniverse_unit_set = {
+# 	species_class = HUM
+
+# 	portraits = {
+# 		"whoniverse_unit"
+# 	}
+
+# 	# These should not be used for randomly generated species
+# 	non_randomized_portraits = {
+# 		"whoniverse_unit"
+# 	}
+# }
+
+whoniverse_weeping_angel_set = {
+	species_class = HUM
+
+	portraits = {
+		"whoniverse_weeping_angel"
+	}
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"whoniverse_weeping_angel"
+	}
+}
+
+whoniverse_human_set = {
+	species_class = HUM
+
+	portraits = {
+		# "whoniverse_church"
+		# "whoniverse_unit"
+		"whoniverse_human"
+	}
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"whoniverse_church"
+		"whoniverse_unit"
+		"whoniverse_human"
+	}
+}
+
+whoniverse_silence_set = {
+	species_class = HUM
+
+	portraits = {
+		"whoniverse_silence"
+	}
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"whoniverse_weeping_angel"
+	}
+}
+
+whoniverse_mechanoid_set = {
+	species_class = MACHINE
+
+	portraits = {
+		"whoniverse_mechanoid"
+	}
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"whoniverse_mechanoid"
+	}
+}

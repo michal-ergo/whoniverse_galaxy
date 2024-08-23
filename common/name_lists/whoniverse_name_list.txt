@@ -1,0 +1,1120 @@
+﻿### Whoniverse mod
+# Dalek 1
+# Cyberman 1
+
+### Dalek name list
+DALEK1 = {
+	category = "Humanoid"
+	ship_names = {
+
+		generic = {
+			"Saucer 1"
+			"Saucer 2"
+			"Saucer 3"
+			"Saucer 4"
+			"Saucer 5"
+			"Saucer 6"
+			"Saucer 7"
+			"Saucer 8"
+			"Saucer 9"
+			"Saucer 10"
+			"Saucer 11"
+			"Saucer 12"
+			"Saucer 13"
+			"Saucer 14"
+			"Saucer 15"
+			"Saucer 16"
+			"Saucer 17"
+			"Saucer 18"
+			"Saucer 19"
+			"Saucer 20"
+			"Saucer 21"
+			"Saucer 22"
+			"Saucer 23"
+			"Saucer 24"
+			"Saucer 25"
+			"Saucer 26"
+			"Saucer 27"
+			"Saucer 28"
+			"Saucer 29"
+			"Saucer 30"
+			"Saucer 31"
+			"Saucer 32"
+			"Saucer 33"
+			"Saucer 34"
+			"Saucer 35"
+			"Saucer 36"
+			"Saucer 37"
+			"Saucer 38"
+			"Saucer 39"
+			"Saucer 40"
+			"Saucer 41"
+			"Saucer 42"
+			"Saucer 43"
+			"Saucer 44"
+			"Saucer 45"
+			"Saucer 46"
+			"Saucer 47"
+			"Saucer 48"
+			"Saucer 49"
+			"Saucer 50"
+			"Saucer 51"
+			"Saucer 52"
+			"Saucer 53"
+			"Saucer 54"
+			"Saucer 55"
+			"Saucer 56"
+			"Saucer 57"
+			"Saucer 58"
+			"Saucer 59"
+			"Saucer 60"
+			"Saucer 61"
+			"Saucer 62"
+			"Saucer 63"
+			"Saucer 64"
+			"Saucer 65"
+			"Saucer 66"
+			"Saucer 67"
+			"Saucer 68"
+			"Saucer 69"
+			"Saucer 70"
+			"Saucer 71"
+			"Saucer 72"
+			"Saucer 73"
+			"Saucer 74"
+			"Saucer 75"
+			"Saucer 76"
+			"Saucer 77"
+			"Saucer 78"
+			"Saucer 79"
+			"Saucer 80"
+			"Saucer 81"
+			"Saucer 82"
+			"Saucer 83"
+			"Saucer 84"
+			"Saucer 85"
+			"Saucer 86"
+			"Saucer 87"
+			"Saucer 88"
+			"Saucer 89"
+			"Saucer 90"
+			"Saucer 91"
+			"Saucer 92"
+			"Saucer 93"
+			"Saucer 94"
+			"Saucer 95"
+			"Saucer 96"
+			"Saucer 97"
+			"Saucer 98"
+			"Saucer 99"
+			"Saucer 100"
+			"Saucer 101"
+			"Saucer 102"
+			"Saucer 103"
+			"Saucer 104"
+			"Saucer 105"
+			"Saucer 106"
+			"Saucer 107"
+			"Saucer 108"
+			"Saucer 109"
+			"Saucer 110"
+			"Saucer 111"
+			"Saucer 112"
+			"Saucer 113"
+			"Saucer 114"
+			"Saucer 115"
+			"Saucer 116"
+			"Saucer 117"
+			"Saucer 118"
+			"Saucer 119"
+			"Saucer 120"
+			"Saucer 121"
+			"Saucer 122"
+			"Saucer 123"
+			"Saucer 124"
+			"Saucer 125"
+			"Saucer 126"
+			"Saucer 127"
+			"Saucer 128"
+			"Saucer 129"
+			"Saucer 130"
+			"Saucer 131"
+			"Saucer 132"
+			"Saucer 133"
+			"Saucer 134"
+			"Saucer 135"
+			"Saucer 136"
+			"Saucer 137"
+			"Saucer 138"
+			"Saucer 139"
+			"Saucer 140"
+			"Saucer 141"
+			"Saucer 142"
+			"Saucer 143"
+			"Saucer 144"
+			"Saucer 145"
+			"Saucer 146"
+			"Saucer 147"
+			"Saucer 148"
+			"Saucer 149"
+			"Saucer 150"
+			"Saucer 151"
+			"Saucer 152"
+			"Saucer 153"
+			"Saucer 154"
+			"Saucer 155"
+			"Saucer 156"
+			"Saucer 157"
+			"Saucer 158"
+			"Saucer 159"
+			"Saucer 160"
+			"Saucer 161"
+			"Saucer 162"
+			"Saucer 163"
+			"Saucer 164"
+			"Saucer 165"
+			"Saucer 166"
+			"Saucer 167"
+			"Saucer 168"
+			"Saucer 169"
+			"Saucer 170"
+			"Saucer 171"
+			"Saucer 172"
+			"Saucer 173"
+			"Saucer 174"
+			"Saucer 175"
+			"Saucer 176"
+			"Saucer 177"
+			"Saucer 178"
+			"Saucer 179"
+			"Saucer 180"
+			"Saucer 181"
+			"Saucer 182"
+			"Saucer 183"
+			"Saucer 184"
+			"Saucer 185"
+			"Saucer 186"
+			"Saucer 187"
+			"Saucer 188"
+			"Saucer 189"
+			"Saucer 190"
+			"Saucer 191"
+			"Saucer 192"
+			"Saucer 193"
+			"Saucer 194"
+			"Saucer 195"
+			"Saucer 196"
+			"Saucer 197"
+			"Saucer 198"
+			"Saucer 199"
+			"Saucer 200"
+}
+
+		corvette = {
+			"Attack Ship"
+		}
+
+		destroyer = {
+		}
+
+		cruiser = {
+			"Battlecruiser"
+		}
+
+		battleship = {
+			"Battleship"
+		}
+
+		titan = {
+			"Mothership"
+		}
+
+		colossus = {
+			"Planet Destroyer"
+		}
+
+		science = {
+			"Recon Ship"
+		}
+
+		colonizer = {
+			"Colony Ship"
+		}
+
+		constructor = {
+			"Constructor"
+		}
+
+
+		transport = {
+			"Shuttle"		
+		}
+
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+		}
+		sequential_name = DALEK1_FLEET
+	}
+
+	army_names = {
+
+		generic = {
+			sequential_name = DALEK1_ARMY
+		}
+
+		machine_defense = {
+			sequential_name = DALEK1_SURFACEGUARD
+		}
+
+		machine_assault_1 = {
+			sequential_name = DALEK1_ARMY
+		}
+
+		machine_assault_2 = {
+			sequential_name = DALEK1_ARMY
+		}
+
+		machine_assault_3 = {
+			sequential_name = DALEK1_ARMY
+		}
+
+		defense_army = {
+			sequential_name = DALEK1_SURFACEGUARD
+		}
+
+		assault_army = {
+			sequential_name = DALEK1_ARMY
+		}
+
+		slave_army = {
+			sequential_name = DALEK1_SLAVES
+		}
+
+		clone_army = {
+			sequential_name = DALEK1_CLONEARMY
+		}
+
+		undead_army = {
+			sequential_name = DALEK1_PUPPETS
+		}
+
+		robotic_army = {
+			sequential_name = DALEK1_ROBOTARMY
+		}
+
+		robotic_defense_army = {
+			sequential_name = DALEK1_ROBOTGUARD
+		}
+
+		psionic_army = {
+			sequential_name = DALEK1_PSYCHICARMY
+		}
+
+		xenomorph_army = {
+			sequential_name = DALEK1_HYBRID
+		}
+
+		gene_warrior_army = {
+			sequential_name = DALEK1_DEATHSQUAD
+		}
+
+		occupation_army = {
+			sequential_name = DALEK1_OCCUPATIONGUARD
+		}
+
+		individual_machine_occupation_army = {
+			sequential_name = DALEK1_OCCUPATIONGUARD
+		}
+
+		robotic_occupation_army = {
+			sequential_name = DALEK1_OCCUPATIONNEXUS
+		}
+
+		primitive_army = {
+			sequential_name = DALEK1_PRIMITIVEARMY
+		}
+
+		industrial_army = {
+			sequential_name = DALEK1_INDUSTRIALARMY
+		}
+
+		postatomic_army = {
+			sequential_name = DALEK1_POSTATOMICARMY
+		}
+
+		warpling_army = {
+			sequential_name = seq_warpling_army
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+						  "Ameron"
+						  "Seriphia"
+						  "Trodos"
+                          "Mira"
+                          "Mazam"
+                          "Exxilon"
+                          "Movella"
+                          "Zaleria"
+                          "Spiridon"
+                          "Magella"
+                          "Archetryx"
+                          "Veestrax"
+                          "Marinus"
+                          "Kembel"
+                          "Vulcan"
+                          "Aridius"
+                          "Mechanus"
+                          "Styre"
+                          "Vortisa"
+                          "Stronghold"
+                          "Zarphalon"
+                          "Blargoth"
+                          "Xylara"
+                          "Nemos"
+                          "Quintarus"
+                          "Veltrax"
+                          "Ophidia"
+                          "Eldoria"
+                          "Morzania"
+                          "Krythoria"
+                          "Zephyros"
+                          "Thalaxia"
+                          "Ydrasil"
+                          "Auraxis"
+                          "Nebulon"
+                          "Zylaris"
+                          "Davralon"
+                          "Dalektron"
+                          "Exterminon"
+                          "Exterria"
+                          "Davrax"
+                          "Skaronis"
+			}
+		}
+
+		pc_desert = {
+			names = {
+			}
+		}
+
+		pc_tropical = {
+			names = {
+			}
+		}
+
+		pc_arid = {
+			names = {
+			}
+		}
+
+		pc_continental = {
+			names = {
+			}
+		}
+
+		pc_ocean = {
+			names = {
+			}
+		}
+
+		pc_tundra = {
+			names = {
+			}
+		}
+
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+
+	}
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				# "Zeg"
+				# "Jast"
+				# "Thay"
+				# "Sec"
+				# "Yarv"
+				# "Thik"
+				# "Dal"
+				# "Ghaast"
+				# "Thac"
+				# "Cess"
+				# "Kan"
+				# "Khis"
+				# "Ghak"
+				# "Rad"
+				# "Dhath"
+				# "Ghik"
+				# "Kor"
+				# "Vem"
+				# "Dhey"
+				# "Thast"
+				# "Ghoc"
+				# "Gost"
+				# "Sest"
+				# "Kad"
+				# "Dhast"
+				# "Sat"
+				# "Cet"
+				# "Chas"
+				# "Dhiss"
+				# "Var"
+				# "Daath"
+				# "Chok"
+				# "Dac"
+				# "Thost"
+				# "Ged"
+				# "Ghom"
+				# "Rath"
+				# "Thek"
+				# "Kek"
+				# "Veth"
+				# "Ded"
+				# "Can"
+				# "Khaath"
+				# "Giy"
+				# "Ther"
+				# "Sess"
+				# "Ras"
+				# "Kac"
+				# "Kan"
+				# "Ghan"
+				"Alpha"
+				"Gamma"
+				"Delta"
+				"Epsilon"
+				"Zeta"
+				"Eta"
+				"Theta"
+				"Iota"
+				"Kappa"
+				"Lambda"
+				"Mu"
+				"Nu"
+				"Xi"
+				"Omicron"
+				"Pi"
+				"Rho"
+				"Sigma"
+				"Tau"
+				"Upsilon"
+				"Phi"
+				"Chi"
+				"Psi"
+				"Omega"
+				"Alpha-Beta"
+				"Gamma-Delta"
+				"Epsilon-Zeta"
+				"Omicron-Xi"
+				"Psi-Nu"
+				"Alpha-Gamma"
+				"Gamma-Zeta"
+				"Epsilon-Theta"
+				"Lambda-Mu"
+				"Omicron-Rho"
+				"Sigma-Tau"
+				"Upsilon-Gamma"
+			}
+
+			# Always combined with a second name
+			first_names = {
+			}
+
+			# Always combined with a first name
+			second_names = {
+			}
+
+		}
+	}
+}
+
+# Cyberman name list
+CYBERMAN1 = {
+	category = "Humanoid" # Machine
+	ship_names = {
+
+		generic = {
+			"Cyber-Ship 1"
+			"Cyber-Ship 2"
+			"Cyber-Ship 3"
+			"Cyber-Ship 4"
+			"Cyber-Ship 5"
+			"Cyber-Ship 6"
+			"Cyber-Ship 7"
+			"Cyber-Ship 8"
+			"Cyber-Ship 9"
+			"Cyber-Ship 10"
+			"Cyber-Ship 11"
+			"Cyber-Ship 12"
+			"Cyber-Ship 13"
+			"Cyber-Ship 14"
+			"Cyber-Ship 15"
+			"Cyber-Ship 16"
+			"Cyber-Ship 17"
+			"Cyber-Ship 18"
+			"Cyber-Ship 19"
+			"Cyber-Ship 20"
+			"Cyber-Ship 21"
+			"Cyber-Ship 22"
+			"Cyber-Ship 23"
+			"Cyber-Ship 24"
+			"Cyber-Ship 25"
+			"Cyber-Ship 26"
+			"Cyber-Ship 27"
+			"Cyber-Ship 28"
+			"Cyber-Ship 29"
+			"Cyber-Ship 30"
+			"Cyber-Ship 31"
+			"Cyber-Ship 32"
+			"Cyber-Ship 33"
+			"Cyber-Ship 34"
+			"Cyber-Ship 35"
+			"Cyber-Ship 36"
+			"Cyber-Ship 37"
+			"Cyber-Ship 38"
+			"Cyber-Ship 39"
+			"Cyber-Ship 40"
+			"Cyber-Ship 41"
+			"Cyber-Ship 42"
+			"Cyber-Ship 43"
+			"Cyber-Ship 44"
+			"Cyber-Ship 45"
+			"Cyber-Ship 46"
+			"Cyber-Ship 47"
+			"Cyber-Ship 48"
+			"Cyber-Ship 49"
+			"Cyber-Ship 50"
+			"Cyber-Ship 51"
+			"Cyber-Ship 52"
+			"Cyber-Ship 53"
+			"Cyber-Ship 54"
+			"Cyber-Ship 55"
+			"Cyber-Ship 56"
+			"Cyber-Ship 57"
+			"Cyber-Ship 58"
+			"Cyber-Ship 59"
+			"Cyber-Ship 60"
+			"Cyber-Ship 61"
+			"Cyber-Ship 62"
+			"Cyber-Ship 63"
+			"Cyber-Ship 64"
+			"Cyber-Ship 65"
+			"Cyber-Ship 66"
+			"Cyber-Ship 67"
+			"Cyber-Ship 68"
+			"Cyber-Ship 69"
+			"Cyber-Ship 70"
+			"Cyber-Ship 71"
+			"Cyber-Ship 72"
+			"Cyber-Ship 73"
+			"Cyber-Ship 74"
+			"Cyber-Ship 75"
+			"Cyber-Ship 76"
+			"Cyber-Ship 77"
+			"Cyber-Ship 78"
+			"Cyber-Ship 79"
+			"Cyber-Ship 80"
+			"Cyber-Ship 81"
+			"Cyber-Ship 82"
+			"Cyber-Ship 83"
+			"Cyber-Ship 84"
+			"Cyber-Ship 85"
+			"Cyber-Ship 86"
+			"Cyber-Ship 87"
+			"Cyber-Ship 88"
+			"Cyber-Ship 89"
+			"Cyber-Ship 90"
+			"Cyber-Ship 91"
+			"Cyber-Ship 92"
+			"Cyber-Ship 93"
+			"Cyber-Ship 94"
+			"Cyber-Ship 95"
+			"Cyber-Ship 96"
+			"Cyber-Ship 97"
+			"Cyber-Ship 98"
+			"Cyber-Ship 99"
+			"Cyber-Ship 100"
+			"Cyber-Ship 101"
+			"Cyber-Ship 102"
+			"Cyber-Ship 103"
+			"Cyber-Ship 104"
+			"Cyber-Ship 105"
+			"Cyber-Ship 106"
+			"Cyber-Ship 107"
+			"Cyber-Ship 108"
+			"Cyber-Ship 109"
+			"Cyber-Ship 110"
+			"Cyber-Ship 111"
+			"Cyber-Ship 112"
+			"Cyber-Ship 113"
+			"Cyber-Ship 114"
+			"Cyber-Ship 115"
+			"Cyber-Ship 116"
+			"Cyber-Ship 117"
+			"Cyber-Ship 118"
+			"Cyber-Ship 119"
+			"Cyber-Ship 120"
+			"Cyber-Ship 121"
+			"Cyber-Ship 122"
+			"Cyber-Ship 123"
+			"Cyber-Ship 124"
+			"Cyber-Ship 125"
+			"Cyber-Ship 126"
+			"Cyber-Ship 127"
+			"Cyber-Ship 128"
+			"Cyber-Ship 129"
+			"Cyber-Ship 130"
+			"Cyber-Ship 131"
+			"Cyber-Ship 132"
+			"Cyber-Ship 133"
+			"Cyber-Ship 134"
+			"Cyber-Ship 135"
+			"Cyber-Ship 136"
+			"Cyber-Ship 137"
+			"Cyber-Ship 138"
+			"Cyber-Ship 139"
+			"Cyber-Ship 140"
+			"Cyber-Ship 141"
+			"Cyber-Ship 142"
+			"Cyber-Ship 143"
+			"Cyber-Ship 144"
+			"Cyber-Ship 145"
+			"Cyber-Ship 146"
+			"Cyber-Ship 147"
+			"Cyber-Ship 148"
+			"Cyber-Ship 149"
+			"Cyber-Ship 150"
+			"Cyber-Ship 151"
+			"Cyber-Ship 152"
+			"Cyber-Ship 153"
+			"Cyber-Ship 154"
+			"Cyber-Ship 155"
+			"Cyber-Ship 156"
+			"Cyber-Ship 157"
+			"Cyber-Ship 158"
+			"Cyber-Ship 159"
+			"Cyber-Ship 160"
+			"Cyber-Ship 161"
+			"Cyber-Ship 162"
+			"Cyber-Ship 163"
+			"Cyber-Ship 164"
+			"Cyber-Ship 165"
+			"Cyber-Ship 166"
+			"Cyber-Ship 167"
+			"Cyber-Ship 168"
+			"Cyber-Ship 169"
+			"Cyber-Ship 170"
+			"Cyber-Ship 171"
+			"Cyber-Ship 172"
+			"Cyber-Ship 173"
+			"Cyber-Ship 174"
+			"Cyber-Ship 175"
+			"Cyber-Ship 176"
+			"Cyber-Ship 177"
+			"Cyber-Ship 178"
+			"Cyber-Ship 179"
+			"Cyber-Ship 180"
+			"Cyber-Ship 181"
+			"Cyber-Ship 182"
+			"Cyber-Ship 183"
+			"Cyber-Ship 184"
+			"Cyber-Ship 185"
+			"Cyber-Ship 186"
+			"Cyber-Ship 187"
+			"Cyber-Ship 188"
+			"Cyber-Ship 189"
+			"Cyber-Ship 190"
+			"Cyber-Ship 191"
+			"Cyber-Ship 192"
+			"Cyber-Ship 193"
+			"Cyber-Ship 194"
+			"Cyber-Ship 195"
+			"Cyber-Ship 196"
+			"Cyber-Ship 197"
+			"Cyber-Ship 198"
+			"Cyber-Ship 199"
+			"Cyber-Ship 200"
+		
+}
+
+		corvette = {
+		}
+
+		destroyer = {
+		}
+
+		cruiser = {
+			"Cyber-Cruiser"
+		}
+		
+		battleship = {
+			"Cyber-Warship"
+		}
+
+		titan = {
+			"Cyber-Flagship"
+		}
+
+		colossus = {
+			"Cyber-Colossus"
+		}
+		
+		science = {
+			"Cyber-Explorer"
+		}
+		
+		colonizer = {
+			"Colony Ship"
+		}
+		
+		constructor = {
+			"Cyber-Constructor"
+		}
+
+
+		transport = {
+			"Cyber-Shuttle"		
+		}
+
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+		}
+		sequential_name = CYBERMAN1_FLEET
+	}
+
+	army_names = {
+
+		generic = {
+			sequential_name = CYBERMAN1_ARMY
+		}
+
+		machine_defense = {
+			sequential_name = CYBERMAN1_SURFACEGUARD
+		}
+
+		machine_assault_1 = {
+			sequential_name = CYBERMAN1_ARMY
+		}
+
+		machine_assault_2 = {
+			sequential_name = CYBERMAN1_ARMY
+		}
+
+		machine_assault_3 = {
+			sequential_name = CYBERMAN1_ARMY
+		}
+
+		defense_army = {
+			sequential_name = CYBERMAN1_SURFACEGUARD
+		}
+
+		assault_army = {
+			sequential_name = CYBERMAN1_ARMY
+		}
+
+		slave_army = {
+			sequential_name = CYBERMAN1_SLAVES
+		}
+
+		clone_army = {
+			sequential_name = CYBERMAN1_CLONEARMY
+		}
+
+		undead_army = {
+			sequential_name = CYBERMAN1_UNDEADARMY
+		}
+
+		robotic_army = {
+			sequential_name = CYBERMAN1_ROBOTICARMY
+		}
+
+		robotic_defense_army = {
+			sequential_name = CYBERMAN1_ROBOTICGUARD
+		}
+
+		psionic_army = {
+			sequential_name = CYBERMAN1_PSYCHICARMY
+		}
+
+		xenomorph_army = {
+			sequential_name = CYBERMAN1_XENOMORPH
+		}
+
+		gene_warrior_army = {
+			sequential_name = CYBERMAN1_GENEWARRIOR
+		}
+
+		occupation_army = {
+			sequential_name = CYBERMAN1_OCCUPATIONGUARD
+		}
+
+		individual_machine_occupation_army = {
+			sequential_name = CYBERMAN1_OCCUPATIONGUARD
+		}
+
+		robotic_occupation_army = {
+			sequential_name = CYBERMAN1_OCCUPATIONNEXUS
+		}
+
+		primitive_army = {
+			sequential_name = CYBERMAN1_PRIMITIVEARMY
+		}
+
+		industrial_army = {
+			sequential_name = CYBERMAN1_INDUSTRIALARMY
+		}
+
+		postatomic_army = {
+			sequential_name = CYBERMAN1_POSTATOMICARMY
+		}
+
+		warpling_army = {
+			sequential_name = seq_warpling_army
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+						  "Mondas"
+						  "Planet 14"
+                          "Marinus"
+                          "Cyber-World 1"
+                          "Cyberus"
+                          "Mondaxis"
+                          "Telorium"
+                          "Cybros"
+                          "Cyberion"
+                          "Neomon"
+                          "Telonix"
+                          "Cybrix"
+                          "Telara"
+                          "Cybrosia"
+                          "Neotelos"
+                          "Planet Cybra"
+                          "Neomond"
+                          "Cyberiax"
+                          "Mondata"
+                          "Cybronis"
+                          "Telodox"
+                          "Nexustar"
+                          "Steeloris"
+                          "Metallion"
+                          "Ferralis"
+                          "Alloyara"
+                          "Chromidon"
+                          "Platinus"
+                          "Silvoria"
+                          "Neotronic"
+                          "Argentara"
+                          "Cybranth"
+                          "Telora"
+                          "Mondaria"
+                          "Cybrelon"
+                          "Lostark"
+                          "Silverlight"
+                          "Ironveil"
+                          "Chronovox"
+                          "Cyber-Colony"
+                          "Shipwreck Metalis"
+			}
+		}
+
+		pc_desert = {
+			names = {
+			}
+		}
+
+		pc_tropical = {
+			names = {
+			}
+		}
+
+		pc_arid = {
+			names = {
+			}
+		}
+
+		pc_continental = {
+			names = {
+			}
+		}
+
+		pc_ocean = {
+			names = {
+			}
+		}
+
+		pc_tundra = {
+			names = {
+			}
+		}
+
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+
+	}
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				"Cyber-Unit 002"
+				"Cyber-Unit 003"
+				"Cyber-Unit 004"
+				"Cyber-Unit 005"
+				"Cyber-Unit 006"
+				"Cyber-Unit 007"
+				"Cyber-Unit 008"
+				"Cyber-Unit 009"
+				"Cyber-Unit 010"
+				"Cyber-Unit 011"
+				"Cyber-Unit 012"
+				"Cyber-Unit 013"
+				"Cyber-Unit 014"
+				"Cyber-Unit 015"
+				"Cyber-Unit 016"
+				"Cyber-Unit 017"
+				"Cyber-Unit 018"
+				"Cyber-Unit 019"
+				"Cyber-Unit 020"
+				"Cyber-Unit 021"
+				"Cyber-Unit 022"
+				"Cyber-Unit 023"
+				"Cyber-Unit 024"
+				"Cyber-Unit 025"
+				"Cyber-Unit 026"
+				"Cyber-Unit 027"
+				"Cyber-Unit 028"
+				"Cyber-Unit 029"
+				"Cyber-Unit 030"
+				"Cyber-Unit 031"
+				"Cyber-Unit 032"
+				"Cyber-Unit 033"
+				"Cyber-Unit 034"
+				"Cyber-Unit 035"
+				"Cyber-Unit 036"
+				"Cyber-Unit 037"
+				"Cyber-Unit 038"
+				"Cyber-Unit 039"
+				"Cyber-Unit 040"
+				"Cyber-Unit 041"
+				"Cyber-Unit 042"
+				"Cyber-Unit 043"
+				"Cyber-Unit 044"
+				"Cyber-Unit 045"
+				"Cyber-Unit 046"
+				"Cyber-Unit 047"
+				"Cyber-Unit 048"
+				"Cyber-Unit 049"
+				"Cyber-Unit 050"
+				"Cyber-Unit 051"
+				"Cyber-Unit 052"
+				"Cyber-Unit 053"
+				"Cyber-Unit 054"
+				"Cyber-Unit 055"
+				"Cyber-Unit 056"
+				"Cyber-Unit 057"
+				"Cyber-Unit 058"
+				"Cyber-Unit 059"
+				"Cyber-Unit 060"
+				"Cyber-Unit 061"
+				"Cyber-Unit 062"
+				"Cyber-Unit 063"
+				"Cyber-Unit 064"
+				"Cyber-Unit 065"
+				"Cyber-Unit 066"
+				"Cyber-Unit 067"
+				"Cyber-Unit 068"
+				"Cyber-Unit 069"
+				"Cyber-Unit 070"
+				"Cyber-Unit 071"
+				"Cyber-Unit 072"
+				"Cyber-Unit 073"
+				"Cyber-Unit 074"
+				"Cyber-Unit 075"
+				"Cyber-Unit 076"
+				"Cyber-Unit 077"
+				"Cyber-Unit 078"
+				"Cyber-Unit 079"
+				"Cyber-Unit 080"
+				"Cyber-Unit 081"
+				"Cyber-Unit 082"
+				"Cyber-Unit 083"
+				"Cyber-Unit 084"
+				"Cyber-Unit 085"
+				"Cyber-Unit 086"
+				"Cyber-Unit 087"
+				"Cyber-Unit 088"
+				"Cyber-Unit 089"
+				"Cyber-Unit 090"
+				"Cyber-Unit 091"
+				"Cyber-Unit 092"
+				"Cyber-Unit 093"
+				"Cyber-Unit 094"
+				"Cyber-Unit 095"
+				"Cyber-Unit 096"
+				"Cyber-Unit 097"
+				"Cyber-Unit 098"
+				"Cyber-Unit 099"
+				"Cyber-Unit 100"
+
+			}
+
+			# Always combined with a second name
+			first_names = {
+			}
+
+			# Always combined with a first name
+			second_names = {
+			}
+
+		}
+	}
+}
+

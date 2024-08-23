@@ -1,0 +1,117 @@
+
+# Origin setup events
+on_game_start_country = {
+	events = {
+		whoniverse.10 # New Dalek Paradigm origin setup
+		whoniverse.200 # Dalek Empire Remnants origin setup
+		whoniverse.201 # Dalek Empire Remnants wormholes seen
+		whoniverse.35 # Cyberiad origin event
+		whoniverse.50 # Cyberiad origin event
+		whoniverse.80 # UNIT origin event
+		whoniverse.75 # UNIT origin event
+		whoniverse.6 # Reinvention of the Dalek Empire
+		whoniverse.20 # Davros
+		whoniverse.70 # UNIT Colonization forbidden
+		whoniverse.120 # Weeping Angels UNIT Blink event
+		whoniverse.141 # Church of the Papal Mainframe Devil's Run setup	
+		whoniverse.38 # Cybusmen start wormholes seen
+	}
+}
+
+empire_init_capital_planet = {
+    events = { 
+		whoniverse.32 # Cybermen Cyberiad setup (secondary pop)
+		whoniverse.34 # Cybermen Cyberiad setup (remove spawning pool)
+		whoniverse.58 # Cybermen Cyberiad rename
+		whoniverse.74 # UNIT Black Archive setup
+		# whoniverse.76 # UNIT species setup
+		whoniverse.140 # Church of the Papal Mainframe setup
+		whoniverse.202 # Dalek Empire Remnants setup
+ 	}
+}
+
+on_mid_game_pulse_country = {
+	events = {
+		whoniverse.150 # Silence Will Fall event chain
+	}
+}
+
+# Dalek Incubation Vats planet transfer
+on_planet_transfer = {
+	events = {
+		whoniverse.9
+	}
+}
+
+# Planet Conquer: Dalek Vats for AI .9, Cyber-Conversion message .37
+on_planet_conquer = {
+    events = { 
+		whoniverse.9
+		whoniverse.37
+		whoniverse.190 # Cybusmen rename event
+		whoniverse.203 # Dalek rename event
+ 	}
+}
+
+
+# Dalek Conversion event .4, Cybermen assimilation event .30, Weeping Angels kill event .110
+on_yearly_pulse = {
+	events = {
+		whoniverse.4 # Dalek conversion
+		whoniverse.30 # Cybermen assimilation
+		whoniverse.110 # Weeping Angels predation
+	}
+}
+
+on_awareness_level_increase = {
+	events = {
+		whoniverse.33 # Cybermen interference policy .33
+	}
+}
+
+# X years has passed since a planet was colonized (won't trigger on empire homeworld).
+# Scope = Planet
+# Dalek incubation vats for AI
+on_colony_1_year_old = {
+	events = {
+		whoniverse.11
+		whoniverse.61
+	}
+}
+
+# Colony event triggers
+# 6 years old has no vanilla events
+on_colony_6_years_old = {
+	random_events = {
+		50 = 0
+		10 = whoniverse.40 # CyberMondasian Colony Ship
+		20 = whoniverse.130 # Weeping Angels Random Colony Event 1
+		10 = whoniverse.132 # Weeping Angels Random Colony Event 2
+		10 = whoniverse.134 # Weeping Angels Random Colony Event 3
+	}
+}
+
+on_colony_5_year_pulse = {
+	random_events = {
+		100 = 0
+		20 = whoniverse.63 # Cyber-tombs create Cybermen
+		20 = whoniverse.17 # Asylum makes Dalek Puppets
+	}
+}
+
+# Scope = Fleet
+# From = System
+on_entering_system_fleet = {
+		events = {
+			whoniverse.180 # Pete's World (Parallel Universe) exploration
+			# whoniverse.210 # A.D. 200,100 exploration
+		}
+}
+
+# Cybermen species policy change to cyber-conversion on acquired planets
+# on_planet_transfer = {
+# 	events = {
+# 		whoniverse.34
+# 	}
+# }
+

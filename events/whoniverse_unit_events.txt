@@ -1,0 +1,1092 @@
+namespace = whoniverse
+
+# 01 - 03 = placeholders
+# 04 - 05 = Dalek Conversion effect
+# 06 - 07 = Dalek Reinvention of the Dalek Empire event
+# 08 - 12 = Dalek setup events
+# 12 - 17 = Dalek Asylum event chain
+# 19 + 23 = Dalek Necros 
+# 20 - 24 = Dalek Davros event chain
+# 30 - 39 = Cybermen setup events
+# 40 - 49 = Cybermen Mondasian Colony Ship chain
+# 50 - 59 = Cybermen Cyberiad Origin event chain
+# 60 - 69 = Cybermen Cyberiad systems events and anomalies
+# 70 - 79 = UNIT setup / Life on Mars project
+# 80 - 99 = UNIT Zygon Invasion event chain
+# 100 - 109 = Zygon system events and anomalies
+# 110 - 119 = Weeping Angels UNIT Blink event chain
+# 120 - 139 = Weeping Angels random events
+# 140 - 149 = Church of the Papal Mainframe setup
+# 150 - 159 = The Question (Trenzalore) event chain
+# 160 - 169 = Kovarian Chapter event chain (planned)
+# 170 - 179 = Alfava Metraxis archaelogy digsite
+# 180 - 189 = Cybusmen Pete's World events
+# 190 - 199 = Cybusmen Cybus Industries events
+# 200 - 209 = Dalek Empire Remnants setup events
+# 210 - 219 = Dalek Emperor events
+
+
+# UNIT setup - colonization forbidden
+country_event = {
+    id = whoniverse.70
+    title = "whoniverse.70.name"
+    desc = "whoniverse.70.desc"
+    picture = GFX_evt_satellite_in_orbit
+
+	trigger = {
+		has_origin = origin_whoniverse_unit
+		# is_ai = no
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	option = {
+		name = "whoniverse.70.a"
+		owner = {
+			add_modifier = {
+				modifier = whoniverse_unit_colonization_forbidden
+				years = 89
+			}
+		}
+		hidden_effect = {
+			owner = { country_event = { id = whoniverse.71 days = 21170 random = 10 }} # timing 21170 days = 58 years
+			}
+	}
+}
+
+# Waters of Mars project enabled
+country_event = {
+    id = whoniverse.71
+    title = "whoniverse.71.name"
+    desc = "whoniverse.71.desc"
+    picture = GFX_evt_barren_dig_site
+	show_sound = event_yellow_alert
+
+	trigger = {
+		has_origin = origin_whoniverse_unit
+		# is_ai = no
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	option = {
+		name = "whoniverse.71.a"
+		hidden_effect = {
+			random_galaxy_planet = {
+				limit = {
+					has_planet_flag = planet_mars
+				}
+				enable_special_project = {
+					name = "whoniverse_waters_of_mars_project"
+					owner = root
+					location = this
+					}
+				}    
+		}
+	}
+}
+
+# Waters of Mars project completed
+ship_event = {
+	id = whoniverse.72
+	title = "whoniverse.72.name"
+	desc = "whoniverse.72.desc"
+	picture = GFX_evt_whoniverse_tenth_doctor
+	show_sound = whoniverse_tardis_event
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "whoniverse.72.a"
+        owner = {
+			remove_modifier = whoniverse_unit_colonization_forbidden
+			add_monthly_resource_mult = {
+                resource = unity
+                value = @tier4unityreward
+                min = @tier4unitymin
+                max = @tier4unitymax
+                }
+			}
+    	}
+}
+
+# Waters of Mars project failed
+country_event = {
+	id = whoniverse.73
+	title = "whoniverse.73.name"
+	desc = "whoniverse.73.desc"
+	picture = GFX_evt_nuclear_explosion
+	show_sound = event_super_explosion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "whoniverse.73.a"
+		owner = {
+			remove_modifier = whoniverse_unit_colonization_forbidden
+		}	
+	}
+}
+
+# UNIT HQ Black Archive building built on capital planet
+planet_event = {
+	id = whoniverse.74
+	hide_window = yes
+	location = ROOT
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		has_ground_combat = no
+		is_capital = yes
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_unit
+			}
+		NOT = { has_building = building_whoniverse_black_archive }
+		num_pops > 0
+		}
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				free_building_slots <= 0
+				has_district = district_generator
+				has_district = district_city
+				}
+				remove_district = district_generator
+				add_district = district_city
+				}
+		add_building = building_whoniverse_black_archive
+		set_planet_flag = can_organic_assemble_flag
+		 	}
+	}
+
+country_event = {
+	id = whoniverse.75
+	hide_window = yes
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		owner = { has_origin = origin_whoniverse_unit }
+	}
+
+	immediate = {
+		hidden_effect = {
+			capital_scope = {
+				solar_system = {
+					every_fleet_in_system = {
+						every_owned_ship = {
+							limit = {
+									is_ship_class = shipclass_science_ship
+							}
+							unassign_leader = this
+							delete_ship = this
+						}
+						every_owned_ship = {
+							limit = {	
+									is_ship_class = shipclass_constructor	
+							}
+							delete_ship = this
+						}
+						every_owned_ship = {
+							limit = {	
+									is_ship_class = shipclass_military	
+							}
+							unassign_leader = this
+							delete_ship = this
+						}
+					}
+				}
+			}
+		}	
+	}
+}
+
+planet_event = {
+	id = whoniverse.76
+	hide_window = yes
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_unit
+		}
+	}
+
+	immediate = {
+		whoniverse_generate_unit_pops = yes
+	}
+}
+
+### ZYGON INVASION EVENT CHAIN
+# Zygon Invasion Setup
+country_event = {
+    id = whoniverse.80
+    hide_window = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_origin = origin_whoniverse_unit
+			}
+	}
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	immediate = { 
+		capital_scope = {
+			planet_event = { id = whoniverse.81 days = 4745 random = 90 } }  # timing 4745 days (13 years)
+	}
+}
+
+# Zygon Invasion DOTD Start
+planet_event = {
+	id = whoniverse.81
+	title = "whoniverse.81.name"
+	desc = "whoniverse.81.desc"
+	picture = GFX_evt_whoniverse_zygon
+	show_sound = whoniverse_zygon_event
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_zygon_invasion_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_unit
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		begin_event_chain = {
+			event_chain = "whoniverse_zygon_invasion_chain"
+			target = ROOT
+		}
+	}
+ 
+	option = {
+		name = whoniverse.81.a
+		hidden_effect = {
+			planet_event = { id = whoniverse.82 days = 45 random = 0 }
+		}
+	}
+}
+
+# Zygon Invasion DOTD Black Archive
+planet_event = {
+	id = whoniverse.82
+	title = "whoniverse.82.name"
+	desc = "whoniverse.82.desc"
+	picture = GFX_evt_whoniverse_zygon
+	show_sound = whoniverse_zygon_event
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_zygon_invasion_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_unit
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.82.a
+        hidden_effect = {
+			planet_event = { id = whoniverse.83 days = 45 } 
+			}
+		}
+
+	option = {
+		name = whoniverse.82.b
+		custom_tooltip = whoniverse.82.b.tooltip
+		hidden_effect = {
+			planet_event = { id = whoniverse.84 days = 20 } 
+			}
+		}
+}
+
+# Zygon Invasion DOTD peaceful solution, create species
+planet_event = {
+	id = whoniverse.83
+	title = "whoniverse.83.name"
+	desc = "whoniverse.83.desc"
+	picture = GFX_evt_whoniverse_osgood_box
+	show_sound = whoniverse_zygon_osgood_greetings
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_zygon_invasion_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_unit
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.83.a
+		custom_tooltip = whoniverse.83.tooltip
+        hidden_effect = {
+			planet_event = { id = whoniverse.85 days = 730 random = 90 } # cca 2 years later
+			create_species = {
+				name = "SPEC_WHO_ZYGON"
+				class = FUN
+				portrait = whoniverse_zygon
+				traits = {
+					# trait = "trait_pc_tropical_preference"
+					trait = "trait_whoniverse_zygon"
+					trait = "trait_whoniverse_bio_electricity"
+					trait = "trait_adaptive"
+					trait = "trait_repugnant"
+					trait = "trait_deviants"
+					}
+				homeworld = root
+				effect = {
+					save_global_event_target_as = zygon_species
+					}
+				}
+			while = {
+				count = 4
+				create_pop = {
+					species = event_target:zygon_species
+					}
+				}
+			last_created_pop = { 
+				set_citizenship_type = {
+					type = citizenship_limited
+					}
+				}
+			}
+		}
+}
+
+# Zygon Invasion Nuke
+planet_event = {
+	id = whoniverse.84
+	title = "whoniverse.84.name"
+	desc = "whoniverse.84.desc"
+	picture = GFX_evt_nuclear_explosion
+	show_sound = event_super_explosion
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_zygon_invasion_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_unit
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.84.a
+		add_planet_devastation = 20
+		random_owned_pop = {
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			kill_pop = yes
+		}
+		owner = {
+			add_modifier = {
+				modifier = whoniverse_unit_guilt_of_genocide
+				years = 10
+			}
+			end_event_chain = "whoniverse_zygon_invasion_chain"
+			}
+	}
+}
+
+# Zygon Invasion first act
+planet_event = {
+	id = whoniverse.85
+	title = "whoniverse.85.name"
+	desc = "whoniverse.85.desc"
+	picture = GFX_evt_whoniverse_zygon
+	show_sound = whoniverse_zygon_event
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_zygon_invasion_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_unit
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.85.a
+		add_modifier = {
+			modifier = "whoniverse_pm_zygon_invasion"
+			}
+		hidden_effect = {
+			planet_event = { id = whoniverse.86 days = 45 } 
+			}
+		}
+}
+
+# Zygon Invasion - Bonnie introduction
+planet_event = {
+	id = whoniverse.86
+	title = "whoniverse.86.name"
+	desc = "whoniverse.86.desc"
+	picture = GFX_evt_whoniverse_bonnie
+	show_sound = whoniverse_zygon_bonnie_greetings
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_zygon_invasion_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_unit
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.86.a
+			enable_special_project = {
+				name = "whoniverse_osgood_box_project"
+				owner = root
+				location = this
+				} 
+		}
+}
+
+# Zygon Inversion osgood boxes choice
+planet_event = {
+	id = whoniverse.87
+	title = "whoniverse.87.name"
+	desc = "whoniverse.87.desc"
+	picture = GFX_evt_whoniverse_osgood_boxes
+	show_sound = whoniverse_make_your_mind_up_time_event
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_zygon_invasion_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_unit
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.87.a
+        hidden_effect = {
+			planet_event = { id = whoniverse.88 days = 20 } 
+			}
+		}
+
+	option = {
+		name = whoniverse.87.b
+		hidden_effect = {
+			planet_event = { id = whoniverse.89 days = 20 } 
+			}
+		}
+
+	option = {
+		name = whoniverse.87.c
+		hidden_effect = {
+			planet_event = { id = whoniverse.89 days = 20 } 
+			}
+		}
+}
+
+# Zygon Inversion peaceful solution
+planet_event = {
+	id = whoniverse.88
+	title = "whoniverse.88.name"
+	desc = "whoniverse.88.desc"
+	picture = GFX_evt_whoniverse_osgood_boxes
+	show_sound = whoniverse_scale_model_of_war_event
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_zygon_invasion_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_unit
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.88.a
+		remove_modifier = "whoniverse_pm_zygon_invasion"
+		owner = {
+			end_event_chain = "whoniverse_zygon_invasion_chain"
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4materialreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+				}
+			}
+        hidden_effect = {
+				owner = {
+					country_event = { id = whoniverse.91 days = 1 } 
+					} 
+			}
+		}
+}
+
+# Zygon Invasion genocide
+planet_event = {
+	id = whoniverse.89
+	title = "whoniverse.89.name"
+	desc = "whoniverse.89.desc"
+	picture = GFX_evt_victorious_army
+	show_sound = event_ground_battle
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_zygon_invasion_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_unit
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.84.a
+		add_planet_devastation = 35
+		every_owned_pop = {
+			limit = {
+					has_trait = trait_whoniverse_zygon
+			}
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			limit = {
+				NOT = {
+					has_trait = trait_whoniverse_zygon
+				}
+			}
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			limit = {
+				NOT = {
+					has_trait = trait_whoniverse_zygon
+				}
+			}
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			limit = {
+				NOT = {
+					has_trait = trait_whoniverse_zygon
+				}
+			}
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			limit = {
+				NOT = {
+					has_trait = trait_whoniverse_zygon
+				}
+			}
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			limit = {
+				NOT = {
+					has_trait = trait_whoniverse_zygon
+				}
+			}
+			kill_pop = yes
+		}
+		remove_modifier = "whoniverse_pm_zygon_invasion"
+		add_modifier = {
+			modifier = whoniverse_unit_guilt_of_genocide
+			years = 20
+		}
+		owner = {
+			end_event_chain = "whoniverse_zygon_invasion_chain"
+			}
+	}
+}
+
+# Zygon Invasion project failure
+planet_event = {
+	id = whoniverse.90
+	title = "whoniverse.90.name"
+	desc = "whoniverse.90.desc"
+	picture = GFX_evt_victorious_army
+	show_sound = event_ground_battle
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_zygon_invasion_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_unit
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.84.a
+		add_planet_devastation = 35
+		every_owned_pop = {
+			limit = {
+					has_trait = trait_whoniverse_zygon
+			}
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			limit = {
+				NOT = {
+					has_trait = trait_whoniverse_zygon
+				}
+			}
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			limit = {
+				NOT = {
+					has_trait = trait_whoniverse_zygon
+				}
+			}
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			limit = {
+				NOT = {
+					has_trait = trait_whoniverse_zygon
+				}
+			}
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			limit = {
+				NOT = {
+					has_trait = trait_whoniverse_zygon
+				}
+			}
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			limit = {
+				NOT = {
+					has_trait = trait_whoniverse_zygon
+				}
+			}
+			kill_pop = yes
+		}
+		remove_modifier = "whoniverse_pm_zygon_invasion"
+		add_modifier = {
+			modifier = whoniverse_unit_guilt_of_genocide
+			years = 20
+		}
+		owner = {
+			end_event_chain = "whoniverse_zygon_invasion_chain"
+			}
+	}
+}
+
+# Zygon Invasion Osgood HIRE/DISMISS
+country_event = {
+	id = whoniverse.91
+	title = "whoniverse.91.name"
+ 	desc = whoniverse.91.desc
+
+	show_sound = whoniverse_zygon_osgood_greetings
+    location = fromfrom
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_whoniverse_unit
+	}
+
+	event_window_type = leader_recruit
+	picture_event_data = {
+		portrait = event_target:whoniverse_osgood_leader
+		room = personality_federation_builders_room
+	}
+	picture = GFX_leader_recruitment_bg_renowned
+
+	immediate = {
+		hidden_effect = {
+			create_country = {
+				name = "whoniverse_osgood_country"
+				type = global_event
+				auto_delete = yes
+				flag = {
+					icon = {
+						category = "special"
+						file = "unknown.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors = {
+						"blue"
+						"blue"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					save_event_target_as = osgood_country
+				}
+			}
+			event_target:osgood_country = {
+				create_species = {
+					name = "NAME_whoniverse_osgood_species"
+					class = PARAGON
+					portrait = whoniverse_zygon_osgood
+					namelist = "HUMAN1"
+					traits = {
+						trait = "trait_whoniverse_zygon"
+						trait = "trait_whoniverse_bio_electricity"
+						trait = "trait_adaptive"
+						trait = "trait_nomadic"
+						trait = "trait_wasteful"
+					}
+					effect = {
+						save_event_target_as = osgood_species
+					}
+				}
+				create_leader = {
+					species = event_target:osgood_species
+					event_leader = yes
+					class = scientist
+					name = "NAME_whoniverse_osgood_name"
+					skill = 5
+					randomize_traits = no
+					skip_background_generation = yes
+					background_ethic = ethic_fanatic_xenophile
+					custom_catch_phrase = whoniverse_osgood_catch_phrase
+					custom_description = whoniverse_osgood_backstory
+					can_manually_change_location = yes
+					traits = {
+						trait = leader_trait_scholarium_investigator
+						trait = leader_trait_collaborator
+						trait = leader_trait_bureaucrat
+						trait = subclass_scientist_governor
+					}
+					gender = female
+					set_age = 38
+					immortal = no
+					effect = {
+						save_global_event_target_as = whoniverse_osgood_leader
+						set_leader_flag = legendary_leader
+						set_leader_flag = osgood
+						set_owner = root
+						exile_leader_as = whoniverse_osgood_leader
+					}
+				}
+			}
+		}
+	}
+
+	option = { # Trust Zygons
+		name = whoniverse.91.a
+		is_dialog_only = yes
+		response_text = whoniverse.91.a.response
+	}
+	option = { # Which one are you
+		name = whoniverse.91.b
+		is_dialog_only = yes
+		response_text = whoniverse.91.b.response
+	}
+
+	option = { # Do you need to stay in London
+	name = whoniverse.91.c
+	is_dialog_only = yes
+	response_text = whoniverse.91.c.response
+	}
+
+	option = { # There are two of you
+	name = whoniverse.91.d
+	is_dialog_only = yes
+	response_text = whoniverse.91.d.response
+	}
+
+	option = { # HIRE
+		name = whoniverse.91.e
+		tag = hire_leader
+		custom_tooltip = whoniverse.91.e.custom_tooltip # Osgood joins
+		sound = whoniverse_zygon_osgood_greetings
+
+		hidden_effect = {
+			clone_leader = {
+				target = event_target:whoniverse_osgood_leader
+			}
+			last_created_leader = {
+				set_leader_flag = legendary_leader
+				save_global_event_target_as = whoniverse_osgood_leader
+				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = whoniverse_osgood_leader
+				set_owner = root
+			}
+		}
+	}
+	option = { # DISMISS
+		name = whoniverse.91.f
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:whoniverse_osgood_leader = {
+				kill_leader = { show_notification = no }
+				}
+		}
+	}
+}
+
+### Zygon system events and anomalies
+# Zygor anomaly
+ship_event = {
+    id = whoniverse.100
+    title = "whoniverse.100.name"
+    desc = "whoniverse.100.desc"
+    picture = GFX_evt_clones
+    show_sound = event_scanner
+    location = FROM
+            
+    is_triggered_only = yes
+
+	trigger = {
+		owner = { is_ai = no }
+	}
+
+	option = {
+		name = whoniverse.100.a
+		trigger = {
+			owner = {
+				is_whoniverse_dalek = no
+					}
+				}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = whoniverse_zygor }
+			
+			enable_special_project = {
+				name = "whoniverse_zygor_project"
+				owner = root
+				location = this
+				}
+			}
+		}
+	option = {
+		name = whoniverse.100.b
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier3researchreward
+				min = @tier3researchmin
+				max = @tier3researchmax
+				}
+			}
+	   	}
+	option = {
+		name = whoniverse.100.c
+		trigger = {
+			owner = {
+				is_whoniverse_dalek = yes
+					}
+				}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier3materialreward
+				min = @tier3materialmin
+				max = @tier3materialmax
+				}
+			}
+	}
+}
+
+# Zygor project successful - either creates new Zygon species, or adds extra Zygons if they exist already
+country_event = {
+	id = whoniverse.101
+	title = "PROJECT_COMPLETE"
+	desc = "whoniverse.101.desc"
+	picture = GFX_evt_whoniverse_zygon
+	show_sound = whoniverse_zygon_event
+	location = ROOT
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+		
+	option = {
+		name = whoniverse.101.a
+		custom_tooltip = whoniverse.101.tooltip
+		hidden_effect = {
+			if = {
+				limit = { exists = event_target:zygon_species }
+				while = {
+					count = 2
+					capital_scope = {
+						create_pop = {
+							species = event_target:zygon_species
+							}
+						}
+					}
+			}
+			else_if = {
+				limit = { NOT = { exists = event_target:zygon_species } }
+			capital_scope = {
+				create_species = {
+					name = "SPEC_WHO_ZYGON"
+					class = FUN
+					portrait = whoniverse_zygon
+					traits = {
+						# trait = "trait_pc_tropical_preference"
+						trait = "trait_whoniverse_zygon"
+						trait = "trait_whoniverse_bio_electricity"
+						trait = "trait_adaptive"
+						trait = "trait_repugnant"
+						trait = "trait_deviants"
+						}
+					homeworld = root
+					effect = {
+						save_global_event_target_as = zygon_species
+						}
+					}
+				while = {
+					count = 2
+					create_pop = {
+						species = event_target:zygon_species
+						}
+					}			
+				last_created_pop = { 
+					set_citizenship_type = {
+						type = citizenship_limited
+						}
+					}
+				}
+			}
+		}
+	}
+}

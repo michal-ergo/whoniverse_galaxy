@@ -1,0 +1,550 @@
+### Greetings ###
+
+category = {
+	name = "Whoniverse Greeting"
+	soundeffects = {
+		whoniverse_dalek_greetings
+		whoniverse_dalek_supreme_greetings
+		whoniverse_dalek_davros_greetings
+		whoniverse_dalek_caan_greetings
+		whoniverse_dalek_emperor_greetings
+		whoniverse_cybermen_classic_greetings
+		whoniverse_cybermen_cybus_greetings
+		whoniverse_cybermen_cyberiad_greetings
+		whoniverse_cybermen_mondasian_greetings
+		whoniverse_cybermen_mrclever_greetings
+		whoniverse_cybermen_ashad_greetings
+		whoniverse_zygon_greetings
+		whoniverse_zygon_osgood_greetings
+		whoniverse_zygon_bonnie_greetings
+		whoniverse_unit_male_soldier_greetings
+		whoniverse_unit_female_soldier_greetings
+		whoniverse_unit_male_leader_greetings
+		whoniverse_unit_female_leader_greetings
+		whoniverse_unit_kate_stewart_greetings
+		whoniverse_unit_male_scientist_greetings
+		whoniverse_unit_female_scientist_greetings
+		whoniverse_weeping_angel_greetings
+		whoniverse_church_soldier_greetings
+		whoniverse_church_octavian_greetings
+		whoniverse_church_lorna_greetings
+		whoniverse_church_kovarian_greetings
+		whoniverse_church_tasha_lem_greetings
+		whoniverse_silence_greetings
+		whoniverse_church_boom_soldier_greetings
+		whoniverse_church_boom_father_greetings
+		whoniverse_church_boom_mundy_greetings
+		whoniverse_mechanoid_greetings
+	}
+}
+
+soundeffect = {
+	name = whoniverse_dalek_greetings
+	sounds = {
+		sound = whoniverse_exterminate
+		sound = whoniverse_doctor_must_die
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_dalek_supreme_greetings
+	sounds = {
+		sound = whoniverse_maximum_extermination
+		sound = whoniverse_tardis_will_be_destroyed
+		sound = whoniverse_what_do_you_want
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_dalek_davros_greetings
+	sounds = {
+		sound = whoniverse_we_have_exhausted
+		sound = whoniverse_activate_the_holding_cells
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_dalek_caan_greetings
+	sounds = {
+		sound = whoniverse_i_flew_into_the_wild
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_dalek_emperor_greetings
+	sounds = {
+		sound = whoniverse_dalek_I_am_the_god_of_all_daleks
+		sound = whoniverse_dalek_they_survived_through_me
+		sound = whoniverse_dalek_we_waited_here_in_the_dark_space
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+# Cyberman Greetings
+
+soundeffect = {
+	name = whoniverse_cybermen_cybus_greetings
+	sounds = {
+		sound = whoniverse_upgrading_is_compulsory
+		sound = whoniverse_you_will_be_deleted
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_cybermen_cyberiad_greetings
+	sounds = {
+		sound = whoniverse_upgrade_in_progress
+		sound = whoniverse_your_presence
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_cybermen_mrclever_greetings
+	sounds = {
+		sound = whoniverse_i_could_call_myself_mrclever
+		sound = whoniverse_oh_this_is_just_dreamy
+		sound = whoniverse_this_is_brilliant
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_cybermen_classic_greetings
+	sounds = {
+		sound = whoniverse_we_will_survive
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_cybermen_mondasian_greetings
+	sounds = {
+		sound = whoniverse_pain
+		sound = whoniverse_die_me
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_cybermen_ashad_greetings
+	sounds = {
+		sound = whoniverse_abandoned_no_longer
+		sound = whoniverse_ascension_is_near
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+# Zygon greetings
+
+soundeffect = {
+	name = whoniverse_zygon_greetings
+	sounds = {
+		sound = whoniverse_zygon_scream
+		sound = whoniverse_zygon_we_want_the_world
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_zygon_osgood_greetings
+	sounds = {
+		sound = whoniverse_zygon_im_osgood
+		sound = whoniverse_zygon_any_race_is_capable
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_zygon_bonnie_greetings
+	sounds = {
+		sound = whoniverse_zygon_why_are_you_still_talking
+		sound = whoniverse_zygon_ive_been_looking_forward
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+
+# Unit greetings
+
+soundeffect = {
+	name = whoniverse_unit_male_soldier_greetings
+	sounds = {
+		sound = whoniverse_unit_kitchen_secured
+		# sound = whoniverse_unit_immediate_assistance
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_unit_female_soldier_greetings
+	sounds = {
+		sound = whoniverse_unit_im_representing_unit
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_unit_male_leader_greetings
+	sounds = {
+		sound = whoniverse_unit_is_there_someone
+		sound = whoniverse_unit_wait_for_backup
+		sound = whoniverse_unit_stop_playing
+
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_unit_female_scientist_greetings
+	sounds = {
+		sound = whoniverse_unit_we_dont_know
+		sound = whoniverse_unit_i_think_we_should_wait
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_unit_female_leader_greetings
+	sounds = {
+		sound = whoniverse_unit_how_did_that_happen
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_unit_male_scientist_greetings
+	sounds = {
+		sound = whoniverse_unit_im_measuring
+		sound = whoniverse_unit_fifteen_malcolms
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_unit_kate_stewart_greetings
+	sounds = {
+		sound = whoniverse_unit_kate_hello_kate_stewart
+		sound = whoniverse_unit_kate_this_is_why_we_called_you_in
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+# Weeping Angels
+soundeffect = {
+	name = whoniverse_weeping_angel_greetings
+	sounds = {
+		sound = whoniverse_weeping_angel_01
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+# Church greetings
+
+soundeffect = {
+	name = whoniverse_church_soldier_greetings
+	sounds = {
+		sound = whoniverse_church_dont_get_too_close
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_church_octavian_greetings
+	sounds = {
+		sound = whoniverse_church_combat_distance_10_feet
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_church_lorna_greetings
+	sounds = {
+		sound = whoniverse_church_why_would_i_lie_to_you
+		sound = whoniverse_church_the_only_reason_i_joined
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_church_kovarian_greetings
+	sounds = {
+		# sound = whoniverse_church_give_the_order
+		sound = whoniverse_church_the_anger_of_a_good_man
+		sound = whoniverse_church_how_do_you_expect
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_church_tasha_lem_greetings
+	sounds = {
+		sound = whoniverse_church_i_want_to_change_the_future
+		sound = whoniverse_church_no_sacrifice_is_required
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_church_boom_father_greetings
+	sounds = {
+		sound = whoniverse_church_how_are_we_doing
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_church_boom_soldier_greetings
+	sounds = {
+		sound = whoniverse_church_less_than_a_mile_from_base_camp
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_church_boom_mundy_greetings
+	sounds = {
+		sound = whoniverse_church_signal_your_understanding
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_silence_greetings
+	sounds = {
+		sound = whoniverse_silence_01
+		sound = whoniverse_silence_02
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+# Mechanoid Greetings
+soundeffect = {
+	name = whoniverse_mechanoid_greetings
+	sounds = {
+		sound = whoniverse_mechanoid
+		sound = whoniverse_mechanoid_beep
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+# Sound Effects
+
+category = {
+	name = "Whoniverse Sound Effects"
+	soundeffects = {
+		whoniverse_tardis_event
+		whoniverse_dalek_exterminate
+		whoniverse_dalek_explain
+		whoniverse_activate_the_holding_cells
+		whoniverse_cybermen_cybus_event
+		whoniverse_cybermen_cyberiad_event
+		whoniverse_cybermen_classic_event
+		whoniverse_cybermen_mondasian_event
+		whoniverse_cybermen_mrclever_event1
+		whoniverse_cybermen_mrclever_event2
+		whoniverse_cybermen_ashad_event
+		whoniverse_zygon_event
+		whoniverse_make_your_mind_up_time_event
+		whoniverse_scale_model_of_war_event
+		whoniverse_blink_event
+		whoniverse_the_question_event
+		whoniverse_regeneration_event
+		}
+	}
+
+soundeffect = {
+	name = whoniverse_tardis_event
+	sounds = {
+		sound = whoniverse_tardis
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_activate_the_holding_cells
+	sounds = {
+		sound = whoniverse_activate_the_holding_cells
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_dalek_exterminate
+	sounds = {
+		sound = whoniverse_exterminate
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_dalek_explain
+	sounds = {
+		sound = whoniverse_explain
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_cybermen_cybus_event
+	sounds = {
+		sound = whoniverse_upgrading_is_compulsory
+		sound = whoniverse_you_will_be_deleted
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_cybermen_cyberiad_event
+	sounds = {
+		sound = whoniverse_upgrade_in_progress
+		sound = whoniverse_your_presence
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_cybermen_classic_event
+	sounds = {
+		sound = whoniverse_we_will_survive
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_cybermen_mondasian_event
+	sounds = {
+		sound = whoniverse_pain
+		sound = whoniverse_die_me
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_cybermen_mrclever_event1
+	sounds = {
+		sound = whoniverse_i_could_call_myself_mrclever
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_cybermen_mrclever_event2
+	sounds = {
+		sound = whoniverse_oh_this_is_just_dreamy
+		sound = whoniverse_this_is_brilliant
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_cybermen_ashad_event
+	sounds = {
+		sound = whoniverse_ascension_is_near
+		sound = whoniverse_abandoned_no_longer
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_zygon_event
+	sounds = {
+		sound = whoniverse_zygon_scream
+		sound = whoniverse_zygon_we_want_the_world
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_make_your_mind_up_time_event
+	sounds = {
+		sound = whoniverse_make_your_mind_up_time
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_scale_model_of_war_event
+	sounds = {
+		sound = whoniverse_scale_model_of_war
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_blink_event
+	sounds = {
+		sound = whoniverse_timey_wimey_stuff
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_the_question_event
+	sounds = {
+		sound = whoniverse_the_question
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_regeneration_event
+	sounds = {
+		sound = whoniverse_regeneration
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}

@@ -1,0 +1,176 @@
+spriteTypes = {
+	
+	# Origin pictures
+	spriteType = {
+		name = "origin_whoniverse_dalek"
+		texturefile = "gfx/event_pictures/origins/origin_whoniverse_dalek.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "origin_whoniverse_dalek_empire_remnants"
+		texturefile = "gfx/event_pictures/origins/origin_whoniverse_dalek_empire_remnants.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "origin_whoniverse_new_dalek_paradigm"
+		texturefile = "gfx/event_pictures/origins/origin_whoniverse_new_dalek_paradigm.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "origin_whoniverse_cybermen"
+		texturefile = "gfx/event_pictures/origins/origin_whoniverse_cybermen.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "origin_whoniverse_unit"
+		texturefile = "gfx/event_pictures/origins/origin_whoniverse_unit.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "origin_whoniverse_church"
+		texturefile = "gfx/event_pictures/origins/origin_whoniverse_church.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "origin_whoniverse_cybus"
+		texturefile = "gfx/event_pictures/origins/origin_whoniverse_cybus.dds"
+		alwaystransparent = yes
+	}
+
+	# Event pictures
+	spriteType = {
+		name = "GFX_evt_whoniverse_time_vortex"
+		texturefile = "gfx/event_pictures/whoniverse_time_vortex.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_whoniverse_tenth_doctor"
+		texturefile = "gfx/event_pictures/whoniverse_tenth_doctor.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_whoniverse_eleventh_doctor"
+		texturefile = "gfx/event_pictures/whoniverse_eleventh_doctor.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_whoniverse_dalek"
+		texturefile = "gfx/event_pictures/whoniverse_dalek.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_whoniverse_dalek_parliament"
+		texturefile = "gfx/event_pictures/whoniverse_dalek_parliament.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_whoniverse_mondasian"
+		texturefile = "gfx/event_pictures/whoniverse_mondasian.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_whoniverse_cybermen"
+		texturefile = "gfx/event_pictures/whoniverse_cybermen.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_whoniverse_mrclever"
+		texturefile = "gfx/event_pictures/whoniverse_mrclever.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_whoniverse_cybermen_classic"
+		texturefile = "gfx/event_pictures/whoniverse_cybermen_classic.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_whoniverse_cybusmen"
+		texturefile = "gfx/event_pictures/whoniverse_cybusmen.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_whoniverse_zygon"
+		texturefile = "gfx/event_pictures/whoniverse_zygon.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_whoniverse_osgood_box"
+		texturefile = "gfx/event_pictures/whoniverse_osgood_box.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_whoniverse_osgood_boxes"
+		texturefile = "gfx/event_pictures/whoniverse_osgood_boxes.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_whoniverse_bonnie"
+		texturefile = "gfx/event_pictures/whoniverse_bonnie.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_whoniverse_weeping_angels"
+		texturefile = "gfx/event_pictures/whoniverse_weeping_angels.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_whoniverse_blink"
+		texturefile = "gfx/event_pictures/whoniverse_blink.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_whoniverse_crack_in_time"
+		texturefile = "gfx/event_pictures/whoniverse_crack_in_time.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_whoniverse_dalek_fleet"
+		texturefile = "gfx/event_pictures/whoniverse_dalek_fleet.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_whoniverse_kovarian"
+		texturefile = "gfx/event_pictures/whoniverse_kovarian.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_whoniverse_regeneration"
+		texturefile = "gfx/event_pictures/whoniverse_regeneration.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+}

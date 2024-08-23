@@ -1,0 +1,14 @@
+whoniverse = {
+	name = Whoniverse
+
+	sets = {
+		# whoniverse_unit_set
+		whoniverse_human_set
+		whoniverse_dalek_set
+		whoniverse_cyberman_set
+		whoniverse_zygon_set
+		whoniverse_weeping_angel_set
+		whoniverse_silence_set
+		whoniverse_mechanoid_set
+	}
+}

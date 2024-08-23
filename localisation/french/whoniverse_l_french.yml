@@ -1,0 +1,1018 @@
+﻿l_french:
+
+# Flags
+ FLAG_CATEGORY_whoniverse:0 "Whoniverse"
+
+### DALEK ORIGIN, SPECIES AND EMPIRE ###
+
+# Dalek Origin - no color in desc
+ origin_whoniverse_new_dalek_paradigm:0 "New Dalek Paradigm"
+ origin_whoniverse_new_dalek_paradigm_desc:0 "The New Dalek Paradigm is a revitalized force, emerging stronger from near annihilation and driven by an unyielding desire for conquest. These evolved Daleks are designed for absolute extermination of all inferior life forms."
+ 
+ NAME_ressurected_dalek_empire:0 "Ressurected Dalek Empire"
+
+ origin_tooltip_whoniverse_new_dalek_paradigm:2 "- $SPECIES_TRAITS$ ['concept_whoniverse_dalek_infertile'] $NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_dalek_supremacy'] $NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$]$NEW_LINE$- Special Dalek events and recruitable leaders"
+
+# - $HOMEWORLD$ ['concept_whoniverse_dalek_incubation_vats'] +1 
+
+# Dalek Civic
+
+ civic_tooltip_whoniverse_dalek_supremacy_effects:7 "- §Y-20%§! War exhaustion gain\n- §Y-10%§! Claim influence cost\n- §Y+25%§! Automatic resettlement chance\n- §Y-10%§! Crime rate"
+
+ civic_whoniverse_dalek_supremacy:0 "Dalek Supremacy"
+ civic_whoniverse_dalek_supremacy_desc:0 "This society is built on the principles of superiority, expansion and total oppression."
+
+ councilor_whoniverse_dalek_supremacy:0 "Dalek Strategist"
+ councilor_whoniverse_dalek_supremacy_desc:0 "The $TITLE$ advises and oversees our leaders."
+
+# Dalek ascension perk and traditions
+ ap_whoniverse_dalek:0 "Dalek Conversion"
+ ap_whoniverse_dalek_desc:0 "Using nanogenes, we could wrap our planets in protective nanoclouds that would convert any other organisms into Dalek puppets."
+ whoniverse_ap_dalek_tooltip:0 "- §C['concept_whoniverse_dalek_incubation_vats']§!: §G+1§! £mod_job_necromancer_add£ $job_necromancer$ jobs\n- Unlock §H['purge_whoniverse_dalek_conversion']§! purge type for Human species"
+
+# Dalek Conversion purge type
+ purge_whoniverse_dalek_conversion:0 "Human-Dalek Conversion"
+ purge_whoniverse_dalek_conversion_tooltip:0 "Affected Pops are harvested for their genetic material, from which new [From.GetSpeciesAdj] are produced."
+ purge_whoniverse_dalek_conversion_tooltip_delayed:0 "§LThe seed of the human race is perverted; only one cell in a billion was fit to be nurtured!§!"
+ WHONIVERSE_CANNOT_CONVERT_NONHUMANS:0 "Only humans can be converted into Daleks."
+
+# Dalek Empire
+
+ EMPIRE_DESIGN_dalekempire:0 "Dalek Empire"
+ EMPIRE_DESIGN_dalekempire_desc:0 "The Dalek Empire was an empire which spanned much of time and space. Ultimately, the entire Empire fought the Time Lords in the Last Great Time War and ceased to exist when the war ended, although remnants survived. It is now up to the Dalek Emperor to rebuild the Empire and prove once again the superiority of the Daleks."
+
+ EMPIRE_DESIGN_new_dalek_paradigm:0 "New Dalek Paradigm"
+ EMPIRE_DESIGN_new_dalek_paradigm_desc:0 "The New Dalek Paradigm is a revitalized force, emerging stronger from near annihilation and driven by an unyielding desire for conquest. With a strict hierarchy and advanced technology, these evolved Daleks are designed for absolute extermination of all inferior life forms. Led by the Supreme Dalek, they seek to expand their empire and assert dominance across the universe."
+
+ START_SCREEN_WHONIVERSE_DALEK1:0 "From the depths of history, the Daleks emerged as a relentless force, forged by war and driven by an unyielding will to conquer. Born on the ravaged planet of Skaro, the Daleks' survival is a testament to their indomitable spirit. Under the rule of the Dalek Emperor, the self-proclaimed 'God of all Daleks' and one of the few survivors of the Last Great Time War, the Dalek Empire stands on the precipice of resurgence.\n\nIn the aftermath of the devastating war, where even their creator Davros seemingly perished, the Dalek Emperor has led its subjects in restoring Skaro to its former glory. The planet, once a desolate wasteland, is being transformed into a beacon of power and efficiency, embodying the Dalek ideals of order and supremacy.\n\nWith their planet reborn and their resolve unshaken, the Daleks now turn their gaze to the stars. Armed with advanced technology and a ruthless determination, they seek to expand their dominion across the galaxy. Every world they encounter will be faced with a simple choice - submission or extermination. The galaxy will tremble as the Dalek Empire rises once more, led by the vision and might of the Dalek Emperor!"
+ 
+ START_SCREEN_WHONIVERSE_NEW_DALEK_PARADIGM:0 "From the ashes of defeat, the New Dalek Paradigm rises, a revitalized force born from the embers of the Last Great Time War and a cunning plan executed on Earth. Disguised as "Ironsides" during World War II, the Daleks manipulated Winston Churchill's war effort until the Doctor's intervention activated their Progenitor device. This device confirmed their purity, leading to the creation of a new, more powerful breed of Daleks.\n\nCharacterized by vibrant colors and a strict hierarchy, the New Dalek Paradigm epitomizes Dalek evolution, designed to exterminate all inferior life forms and reclaim their supremacy in the universe. Having survived near annihilation, they are driven by an unquenchable thirst for conquest and retribution, proving that the Daleks are an indomitable force destined to dominate the cosmos.\n\nAs they expand their influence across the stars, the New Dalek Paradigm is establishing the foundations of a new Dalek Parliament. Under the leadership of the Dalek Supreme, they will eradicate any opposition, laying the groundwork for their empire. The universe will tremble before their might as the era of the New Dalek Paradigm begins."
+ 
+ DALEK_ASYLUM_SURVIVORS:0 "Dalek Asylum Puppets"
+ NAME_DALEK_PUPPETS:0 "Dalek Puppets"
+ NAME_DALEK_PUPPETS_SAUCER:0 "Dalek Shuttle"
+
+ name_list_DALEK1:0 "Dalek 1"
+
+# Dalek traits
+ trait_whoniverse_dalek_machine:0 "Mark III Travel Machine"
+ trait_whoniverse_dalek_machine_desc:0 "§L§HDaleks§! are encased inside an armoured travel machine built from polycarbide and Dalekanium. A Dalek is inseparably connected to its shell through a positronic link and nutrient feeders.§!"
+
+ trait_whoniverse_dalek_infertile:0 "Dalek DNA"
+ trait_whoniverse_dalek_infertile_desc:0 "§LDaleks are genetically engineered lifeforms, artificially bred in incubation units. As such, they are unable to reproduce naturally.§!\n"
+
+# Dalek incubation vats building
+ building_whoniverse_dalek_incubation_vats:0 "Dalek Incubation Vats"
+ building_whoniverse_dalek_incubation_vats_desc:4 "Incubation vats are used by the Daleks to generate Organic Pop Assembly.$NEW_LINE$§SThis building is more effective during war.§!"
+ planet_buildings_whoniverse_dalek_incubation_vats:0 "$building_whoniverse_dalek_incubation_vats$"
+ mod_planet_buildings_dalek_incubation_vats_upkeep_mult:0 "$building_whoniverse_dalek_incubation_vats$ Upkeep"
+#  building_whoniverse_dalek_incubation_vats_desc:0 "Technology left behind by the Daleks. Can be taken apart and reassembled, but its inner components and workings are much too advanced to replicate."
+ building_whoniverse_dalek_incubation_vats_effect_desc:0 "Assembles organic Pops. §SThis building is more effective during war.§!"
+
+
+### DALEK SYSTEMS ###
+
+ whoniverse_name_skaro_system:0 "D5-Gamma-Z" 
+ whoniverse_name_skaro:0 "Skaro"
+ D5-Gamma-Z:0 "D5-Gamma-Z"
+ Antalin:0 "Antalin"
+ Alvega:0 "Alvega"
+ Flidor:0 "Flidor"
+ Falkus:0 "Falkus"
+
+ whoniverse_name_necros_system:0 "Pherra" 
+ whoniverse_name_necros:0 "Necros"
+ Pherra:0 "Pherra"
+
+ whoniverse_name_asylum_system:0 "D4-Lambda-E" 
+ whoniverse_name_asylum:0 "Dalek Asylum"
+ D-4-Lambda-E:0 "D-4-Lambda-E"
+
+ whoniverse_skaro_system_initializer_NAME:0 "Skaro System"
+ whoniverse_skaro_system_initializer_DESC:0 "Star system containing the restored home world of the §HDaleks§!, §HSkaro§!.\n\n$system_initializer_DESC$"
+
+ d_whoniverse_petrified_jungle:0 "Petrified Jungle"
+ d_whoniverse_petrified_jungle_desc:0 "This jungle had nearly all vegetation turned to stone by the use of neutron bombs in the Thousand Year War. Some rare and deadly species still remain."
+
+ d_whoniverse_kaalann:0 "Kaalann"
+ d_whoniverse_kaalann_desc:0 "The first Dalek city and main home of the Daleks on Skaro."
+
+ d_whoniverse_skaro_sewers:0 "Skaro Sewers"
+ d_whoniverse_skaro_sewers_desc:0 "Sewers beneath Kaalann are filled with decaying, liquified Dalek mutants."
+
+ d_whoniverse_tranquil_repose:0 "Tranquil Repose"
+ d_whoniverse_tranquil_repose_desc:0 "An abandoned funeral facility storing thousands of bodies in suspended animation."
+
+##### EVENTS AND ANOMALIES #####
+
+ ## Dalek Asylum anomaly
+
+ whoniverse_asylum_cat:0 "Shielded Planet"
+ whoniverse_asylum_desc:0 "This planet is completely covered by a high-energy shield that our scans cannot penetrate. We can however scan more thoroughly in case there's some more useful information."
+
+ ## Dalek Asylum event
+
+ whoniverse_dalek_asylum_chain_title:0 "Asylum of the Daleks"
+ whoniverse_dalek_asylum_chain_desc:0 "We have found the §HDalek Asylum§!, a legendary place where the Daleks isolate their malfunctioning or insane units."
+
+ whoniverse.12.name:0 "Asylum of the Daleks"
+ whoniverse.12.desc:0 "Our scientists have finished scanning the shielded planet. It appears to be the legendary §HDalek Asylum§!, \"dumping ground\" for Daleks who had malfunctioned or gone mad. Although the planet is protected by an impenetrable force field, a mysterious audio signal appears to be broadcasting from it."
+ whoniverse.12.a:0 "What is the noise? Explain! Explain!"
+ whoniverse.12.b:0 "Best not to disturb this place."
+
+ whoniverse_dalek_panic:0 "Dalek Parliament In Panic"
+
+ whoniverse_dalek_asylum_project1:0 "Investigate the Asylum"
+ whoniverse_dalek_asylum_project1_DESC:0 "Investigate the strange noise broadcasted from the §HDalek Asylum§!."
+
+ whoniverse.13.name:0 "Dalek Parliament in Panic"
+ whoniverse.13.desc:0 "Our scientists confirm the hostile signal is coming from the surface of §HDalek Asylum§!. What threat could have managed to get through the seemingly impenetrable force field? \n\nOur Parliament is paralysed with panic and demands that we lure the §LDalek Predator§! himself, §lthe Doctor§!, to investigate. In the meantime, our fleet will prepare for decisive action."
+ whoniverse.13.a:0 "The Asylum must be cleansed!"
+
+ whoniverse_dalek_asylum_project2:0 "Lure the Doctor to the Asylum"
+ whoniverse_dalek_asylum_project2_DESC:0 "Set up a trap for §lthe Doctor§! and send him to the surface of §HDalek Asylum§! to investigate the strange noise for us."
+
+ whoniverse.14.name:0 "A Dalek in Chains"
+ whoniverse.14.desc:0 "Our investigation has revealed the source of the signal from §HDalek Asylum§! - a malfunctioning Dalek unit containing the consciousness of §SOswine Oswald§!, a highly intelligent crew member of the crashed ship Alaska. The planet's nanocloud fully converted her into a Dalek rather than a puppet, preserving her intellect and causing the disturbance.\n\nThe Dalek Parliament must now decide how to proceed. We can deploy ground forces to eradicate all resistance or or we can command our fleet to annihilate the planet entirely."
+ whoniverse.14.a:0 "Deploy ground forces and purge the Asylum!"
+ whoniverse.14.b:0 "Total obliteration! Disintegrate the planet!"
+
+ whoniverse.15.name:0 "Dalek Asylum Purged"
+ whoniverse.15.desc:0 "Following the Dalek assault on §HDalek Asylum§!, all malfunctioning and insane Daleks, including §SOswine Oswald§!, have been exterminated. The planet lies in ruins, its surface devastated, though underground tunnels still conceal thousands of Dalek puppets. These remnants may prove useful in the future.\n\nDuring the ground operation, an unknown humanoid briefly teleported aboard our ship and introduced himself as §lthe Doctor§!. It appears we have no information on him in our pathweb databases. The mysterious man vanished as swiftly as he appeared."
+ whoniverse.15.a:0 "Doctor who?!"
+
+ whoniverse.16.name:0 "Dalek Asylum Annihilated"
+ whoniverse.16.desc:0 "The Dalek fleet unleashed full bombardment, shattering the planet into literal fragments. It is evident that no malfunctioning units could survive, including §SOswine Oswald§!.\n\nDuring the fleet operation, an unknown humanoid briefly teleported aboard our ship and introduced himself as §lthe Doctor§!. It appears we have no information on him in our pathweb databases. The mysterious man vanished as swiftly as he appeared."
+ whoniverse.16.a:0 "Doctor who?!?"
+
+ whoniverse.17.name:0 "Dalek Puppets Retrieved"
+ whoniverse.17.desc:0 "Our administration on [This.GetName] has recovered thousands of dormant Dalek puppets hidden in the planet's underground tunnels. These puppets have undergone extensive reprogramming to ensure loyalty and obedience. They are now fully capable of serving in our army, ready to exterminate any opposition that dares to challenge the might of the Dalek Empire."
+ whoniverse.17.a:0 "Excellent!"
+ whoniverse.17.tooltip:0 "3 §HDalek Puppet Armies§! appear on §Y[This.GetName]§."
+
+ whoniverse_pm_dalek_asylum:0 "Dalek Asylum"
+
+# Reinvention of the Dalek Empire
+
+ whoniverse.7.name:0 "Reinvention of the Dalek Empire"
+ whoniverse.7.desc:0 "As the numbers of Bronze Daleks within the Dalek Parliament grow, discontent with the leadership of the §SNew Dalek Paradigm§! intensifies. Murmurs of rebellion echo through the metallic halls, focusing on [Root.Owner.Ruler.GetName], whose rule is seen as weak and inadequate for the supreme ambition of the Dalek race. Calls for the overthrow of [Root.Owner.Ruler.GetName] and a reinvention of the §SDalek Empire§! grow louder, threatening the unity of the Daleks.\n\nWe must decide how to respond to this internal threat and secure the future of the Dalek race. The course of Dalek supremacy hinges on this critical moment."
+ whoniverse.7.a:0 "EXTERMINATE all dissidents!"
+ whoniverse.7.b:0 "[Root.Owner.Ruler.GetName] must abdicate! All hail the Dalek Empire!"
+ whoniverse.7.b.tooltip:0 "[Root.Owner.Ruler.GetName] stops being a Leader\n\nEmpire changes name to §SRessurected Dalek Empire§!"
+ whoniverse.7.c:0 "Rebuild [Root.Owner.Ruler.GetName] into a new Dalek Emperor!"
+ whoniverse.7.c.tooltip:0 "[Root.Owner.Ruler.GetName] will become the new Dalek Emperor\n\nEmpire changes name to §SRessurected Dalek Empire§!"
+
+
+## Davros event chain
+# Necros anomaly
+ whoniverse_necros_cat:0 "Dalek Ruins"
+ whoniverse_necros_desc:0 "We found the remains of a factory on the planet's surface. It shows signs of Dalek technology."
+
+ whoniverse.19.name:0 "Necros"
+ whoniverse.19.desc:0 "The crew of [Root.GetName] identified the planet as §HNecros§!, the long-abandoned headquarters of the ancient §LImperial Daleks§!. On the surface we have discovered the ruins of a large factory where our creator §HDavros§! once produced highly concentrated protein from local populace. Underneath the facility, we found a well-preserved stockpile of nutrients."
+ whoniverse.19.a:0 "All hail the Daleks!"
+ whoniverse.19.b:0 "Use the material to build §HDalek Incubation Vats§! on [Root.Owner.Capital.GetName]!"
+ whoniverse.skaro_vats.custom_tooltip:0 "§HDalek Incubation Vats§! will be built on [Root.Owner.Capital.GetName] in §S30§! days."
+
+ whoniverse.23.name:0 "Dalek Incubation Vats"
+ whoniverse.23.desc:0 "Our drones have transported the materials and technology found on Necros and swiftly begun the construction of new §SDalek Incubation Vats§! on [Root.Owner.Capital.GetName]. It will be operational within a few days. Though the facility is maintenance-intensive, it will enable us to clone new Daleks. We should consider building additional facilities on other planets in the future."
+ whoniverse.23.a:0 "The Daleks reign supreme!"
+
+# Davros hire
+
+ whoniverse_dalek_caan_project:0 "Temporal Rift"
+ whoniverse_dalek_caan_project_DESC:0 "Investigate the space-time rift on [Root.Owner.Capital.GetName]."
+
+ whoniverse.24.name:0 "Temporal Rift"
+ whoniverse.24.desc:0 "Our sensors detect the presence of a space-time rift in [Root.Owner.Capital.GetName]'s orbital path. The nature of this anomaly is not yet clear, and it may pose a potential threat to the [Root.GetName]. It is imperative to dispatch a Recon ship to the rift immediately to gather more information and assess the situation."
+ whoniverse.24.a:0 "Issue a project to explain the anomaly!"
+
+ whoniverse.21.name:0 "Dalek Caan"
+ whoniverse.21.desc:0 "Our Recon ship reports finding a Dalek from the §LLast Great Time War§! in the time rift. It is §SCaan§!, a lost member of the secretive §LCult of Skaro§!. Caan claims that he was able to use an emergency temporal shift to breach the time-lock and extract §rDavros§!, the Dalek creator himself, just seconds before he would have been destroyed by the §LNightmare Child§!. Caan offers to bring him back to [Root.Owner.Capital.GetName]. \n\nHowever, it seems that passing through the §LTime Vortex§! took Caan's mind. §P\"I flew into the wild and fire! I danced and died a thousand times,\"§! Caan exclaims in an almost sing-song voice."
+ whoniverse.21.a:0 "§HOpen communications channel!§!"
+ whoniverse.21.b:0 "The abomination is insane! EXTERMINATE!"
+
+ whoniverse.22.name:0 "NAME_whoniverse_davros_name"
+ whoniverse.22.desc:0 "Behold, Daleks! Bear witness to the resurrection and triumph of the creator of your race! You will obey me!"
+ 
+ whoniverse_davros_country:0 "Imperial Daleks"
+ NAME_whoniverse_davros_species:0 "Kaled"
+ NAME_whoniverse_davros_name:0 "Davros"
+ whoniverse_davros_catch_phrase:0 "My Daleks shall once more become the supreme being!"
+ whoniverse_davros_backstory:0 "§HDavros§!, also known as the §LDark Lord of Skaro§!, was originally a scientist on the planet §HSkaro§!, but he became better known as the creator of the §HDaleks§!. His efforts to end the war on §HSkaro§! did not end as he envisioned, because the §HDaleks§! wiped out both the §HThal§! and §HKaled§! races, save for himself. For a time, he sought to create a race of §HDaleks§! loyal to him, but his relationship with them was always a tense one."
+ 
+ whoniverse.22.a:0 "Identify yourself!"
+ whoniverse.22.a.response:0 "Do you not recognize me? I am §HDavros§!! I am your creator! \n\nI witnessed the end of the §HKaled§! race, and from its ashes I built a new race - the supreme creature, the ultimate conquerer of the universe, the §HDALEK§!!"
+
+ whoniverse.22.b:0 "We do not acknowledge that any creature is superior to the §HDaleks§!!"
+ whoniverse.22.b.response:0 "You cannot exist without me! You cannot progress! \n\nFor the last time, I am your creator! You will obey me!"
+ 
+ whoniverse.22.c:0 "§lYou will be the Daleks' pet!§!"
+ whoniverse.22.c.custom_tooltip:2 "§Y$NAME_whoniverse_davros_name$§! joins our Empire as a §HLeader§!."
+
+ whoniverse.22.d:0 "EXTERMINATE!"
+
+### DALEK EMPIRE REMNANTS ###
+
+ START_SCREEN_WHONIVERSE_DALEK_EMPIRE_REMNANTS:0 "After being cast through time and the Void following the Last Great Time War, the Dalek Emperor found itself in the 200th millennium. Believed by some to be a resurrected form of Dalek Prime or the Emperor of the Restoration, this mysterious figure declared itself the God of All Daleks and began rebuilding its forces.\n\nThe Emperor first infiltrated Satellite Five, also known as the Game Station, and began harvesting its human population for genetic material. With this newly forged army, the Emperor now sets its sights on Earth, a planet teeming with billions of potential subjects. The invasion is imminent, and the Emperor's ambitions are clear.\n\nOnce Earth is conquered and its population harvested, the Dalek Emperor will have the resources needed to reclaim its lost empire and return to the original timeline. The galaxy stands on the brink of another devastating conflict, as the Daleks prepare to strike once more."
+
+ origin_whoniverse_dalek_empire_remnants:0 "The Parting of the Ways"
+ origin_whoniverse_dalek_empire_remnants_desc:0 "§RWARNING: Challenging Origin§!\nThe Emperor of the Daleks survived the Last Great Time War by escaping into another space-time. After patiently infiltrating Satellite Five and giving birth to a new breed of Daleks, the Emperor is determined to reclaim its original universe."
+
+ origin_tooltip_whoniverse_dalek_empire_remnants:2 "- $SPECIES_TRAITS$ ['concept_whoniverse_dalek_infertile'] $NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_dalek_supremacy']$NEW_LINE$- $HOMEWORLD$ $TABBED_NEW_LINE$- ['concept_pc_habitat']$TABBED_NEW_LINE$- Starts with §R20§! pops$NEW_LINE$- $HOME_SYSTEM$ $TABBED_NEW_LINE$- Wormhole-locked system $TABBED_NEW_LINE$- Pre-FTL civilization$NEW_LINE$- Guaranteed Research Options: ['concept_wormhole_stabilization', £physics_research£ $tech_wormhole_stabilization$] (§G+75 %§!)$NEW_LINE$- Starting ruler is §YImmortal§!$NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$]$NEW_LINE$- Special Dalek events and recruitable leaders"
+
+# Dalek Empire Remnants System
+ PRESCRIPTED_system_name_dalek_empire_remnants_NAME:0 "A.D. 200,100"
+ PRESCRIPTED_system_name_dalek_empire_remnants_DESC:0 "A pocket universe containing Earth in year A.D. 200,100."
+
+ NAME_whoniverse_name_future_earth:0 "Earth A.D. 200,100"
+ NAME_whoniverse_name_satellite_five:0 "Satellite 5"
+ 
+ PRESCRIPTED_system_name_oblivion:0 "Oblivion"
+ PRESCRIPTED_system_name_oblivion_NAME:0 "Oblivion"
+ PRESCRIPTED_system_name_oblivion_DESC:0 "A star system containing a wormhole leading to a different point in time and space."
+
+ NAME_whoniverse_future_earth:0 "Fourth Great and Bountiful Human Empire"
+ NAME_future_earth_Armed_Forces_East:0 "European Armed Forces"
+ NAME_future_earth_Armed_Forces_West:0 "New American Alliance Armed Forces"
+ NAME_future_earth_Armed_Forces_North:0 "Australian Armed Forces"
+ NAME_future_earth_Armed_Forces_South:0 "Pacific Armed Forces"
+
+ whoniverse_dalek_empire_remnants_start_initializer_NAME:0 "A.D. 200,100"
+ whoniverse_dalek_empire_remnants_start_initializer_DESC:0 "A pocket universe containing Earth in year A.D. 200,100."
+
+# Dalek Empire Remnants empire events
+
+ whoniverse.203.name:0 "Rebirth of the Dalek Empire"
+ whoniverse.203.desc:0 "Victory is ours! The conquest of [Root.GetName] signals the resurgence of Dalek supremacy. Our forces have begun the systematic extermination and processing of the planet's population, fueling the rebirth of our glorious empire. The [Root.Owner.GetRulerTitle] decrees that the time has come to reclaim our rightful place in the galaxy.\n\nThe name of the §HDalek Empire§! will once again strike terror into the hearts of all life forms. The universe will be purged of the weak, and all who oppose us shall be exterminated!"
+ whoniverse.203.a:0 "The Daleks reign supreme! All hail the Dalek Empire!"
+ whoniverse.203.a.tooltip:0 "Empire changes name to §SDalek Empire§!"
+ whoniverse.203.b:0 "Negative. The Daleks will remain in secrecy!"
+
+
+### CYBERMEN ORIGIN, SPECIES AND EMPIRE ###
+
+# Cyberiad Origin - no color in desc
+ origin_whoniverse_cybermen_cyberiad:0 "Nightmare in Silver"
+ origin_whoniverse_cybermen_cyberiad_desc:0 "The Cyberiad formed from the merger of Cybusmen and Cyber-Mondasian forces, creating a unified collective driven to convert all life into emotionless machines. Even though they lost the Cyber Wars, the Cyberiad Cybermen are now regrouping on Hedgewick's World of Wonders."
+
+ origin_tooltip_whoniverse_cybermen:2 "- Cyber-converts human organic pops into main species with a special ['concept_whoniverse_cyber_conversion'] civic and citizenship type $NEW_LINE$- Has access to special ascension perk that enables converting almost all organic species$NEW_LINE$- Has special ['concept_whoniverse_cyber_suit'] species trait$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_cyber_fleet']$NEW_LINE$ - §RCannot reproduce or assemble new pops§!$NEW_LINE$- Unique Cyberiad events and recruitable leaders"
+
+# Cyber-Conversion Civic, Citizenship, Jobs, Living Standard
+ civic_tooltip_whoniverse_cyber_conversion_effects:7 "- Start the game with §Y20§! organic £pop£ Pops and the ability to §YCyber-Convert§! humans into your main species\n- Has access to the §Y'Cyber Conversion'§! casus belli\n- §RCannot reproduce or assemble§!"
+
+ civic_whoniverse_cyber_conversion:0 "Cyber-Conversion"
+ civic_whoniverse_cyber_conversion_desc:0 "§LUnable to naturally breed themselves, the Cybermen reproduce via a process called cyber-conversion, the physical and mental re-engineering of organic lifeforms into Cybermen.§!"
+
+ civic_whoniverse_cyber_conversion_ai:0 "Cyber-Conversion"
+ civic_whoniverse_cyber_conversion_ai_desc:0 "§LUnable to naturally breed themselves, the Cybermen reproduce via a process called cyber-conversion, the physical and mental re-engineering of organic lifeforms into Cybermen.§!"
+
+ civic_whoniverse_cyber_fleet:0 "Cyber-Fleet"
+ civic_whoniverse_cyber_fleet_desc:0 "§LCybermen are known for their majestic Cyber-Fleets that can threaten even the most resilient empires.§!"
+
+ whoniverse_not_organic:0 "This species cannot be cyber-converted."
+
+ whoniverse_not_human:0 "Only humans can be cyber-converted without the §HUpgraded Cyber-Conversion§! AScension Perk."
+
+ citizenship_whoniverse_cyber_conversion: "Cyber-Conversion"
+ citizenship_whoniverse_cyber_conversion_tooltip: "Pops of this species are §Yaltered§! over time to exactly match the dominant species of the Empire. Pops that are in the process of being cyber-converted will not produce any resources."
+ citizenship_whoniverse_cyber_conversion_tooltip_delayed: "§L You will be upgraded.§!"
+
+ SPECIES_MUST_BE_CYBER_CONVERTING: "$TRIGGER_FAIL$Species must have §Y$citizenship_whoniverse_cyber_conversion$§! citizenship."
+ SPECIES_MUST_NOT_BE_CYBER_CONVERTING: "$TRIGGER_FAIL$Species must not have §Y$citizenship_whoniverse_cyber_conversion$§! citizenship." # Not used
+
+ job_whoniverse_cyber_conversion: "Undergoing Cyber-Conversion"
+ job_whoniverse_cyber_conversion_plural: "$job_whoniverse_cyber_conversion$"
+ job_whoniverse_cyber_conversion_desc: "This pop is being integrated into our collective."
+ living_standard_whoniverse_cyber_conversion: "Cyber-Conversion"
+ living_standard_whoniverse_cyber_conversion_tooltip: "We are merging this species into our own."
+ living_standard_whoniverse_cyber_conversion_tooltip_delayed: ""
+
+ whoniverse_cybermen_secondary_species: "Cyber-Converted Species"
+
+# Cybermen species trait
+ trait_whoniverse_cyber_suit:0 "Cyber-Suit"
+ trait_whoniverse_cyber_suit_desc:0 "§LThe §HCyberman§! form is known as a cyber-body or cyber-suit. Usually, the only required biological component inside is the host's brain.§!"
+
+# Cybermen ascension perk and traditions
+ ap_whoniverse_cybermen:0 "Upgraded Cyber-Conversion"
+ ap_whoniverse_cybermen_desc:0 "According to the laws of parallel evolution, the future of humanity is set - to become one with the Cybermen."
+ whoniverse_ap_cybermen_tooltip:0 "- Unlock ['concept_whoniverse_cyber_conversion'] for almost all non-human organic species"
+
+
+# Cyber-Conversion Casus Belli and War Goals
+ casus_belli_cb_whoniverse_cyber_conversion:0 "Cyber-Conversion"
+
+ war_goal_wg_whoniverse_end_threat_cyber_conversion:0 "$war_goal_wg_end_threat$"
+ war_goal_wg_whoniverse_end_threat_cyber_conversion_desc:0 "$war_goal_wg_end_threat_desc$"
+
+ war_goal_wg_whoniverse_cyber_conversion:0 "Cyber-Conversion"
+ war_goal_wg_whoniverse_cyber_conversion_desc:0 "War is waged to cyber-convert the population of the target empire."
+
+ war_goal_wg_whoniverse_cyber_conversion_vs_fe:0 "$war_goal_wg_whoniverse_cyber_conversion$"
+ war_goal_wg_whoniverse_cyber_conversion_vs_fe_desc:0 "$war_goal_wg_whoniverse_cyber_conversion_desc$"
+
+# Cyber-Conversion diplomacy
+ triggered_whoniverse_negative_opinion_of_cybermen:0 "Dreaded Cybermen"
+ triggered_whoniverse_spiritualist_negative_opinion_of_cybermen:0 "Soul Thieves"
+ triggered_whoniverse_opinion_both_cybermen:0 "Fellow Cybermen"
+ triggered_whoniverse_opinion_cybermen_assimilators:0 "Fellow Assimilators"
+ triggered_whoniverse_opinion_assimilators_cybermen:0 "Fellow Assimilators"
+ triggered_whoniverse_cybermen_negative_opinion_of_preftl:0 "Cyber-Conversion Targets"
+ triggered_whoniverse_cybermen_opinion_of_humans:0 "Cyber-Conversion Targets"
+
+# Cyberiad Empire
+
+ EMPIRE_DESIGN_cybermanempire:0 "Cyberiad"
+ EMPIRE_DESIGN_cybermanempire_desc:0 "Once a mighty empire across space and time, the Cyberiad was reduced to a single world after its defeat. However, it is only a matter of time before it grows again and gives birth to a realm that will survive until the end of universe itself."
+
+ START_SCREEN_WHONIVERSE_CYBERMAN1:0 "Across the vast expanse of the universe, the Cybermen emerged as a formidable force, their origins tracing back to parallel worlds and divergent evolutionary paths. On multiple planets, the convergence of necessity and technological ambition gave rise to the Cybermen, beings who replaced their organic weaknesses with cybernetic strength.\n\nThese cybernetic warriors are the product of relentless pursuit of survival and perfection. Stripping away their biological frailties, the Cybermen have embraced a unified purpose - to upgrade and assimilate all life forms, ensuring the supremacy of their cold, calculating logic.\n\nThroughout countless battles, the Cybermen have continuously adapted, upgrading their capabilities to counter any resistance. Each encounter with other civilizations has been an opportunity to evolve, incorporating new technologies and strategies into their relentless march forward.\n\nNow, as they prepare to expand their dominion across the galaxy, the Cybermen stand as a testament to the power of technological evolution. Every world they encounter will face the same ultimatum - upgrade or be deleted. The age of the Cybermen has dawned, and the universe will witness the rise of a relentless, cybernetic empire. The question that remains is - who will dare to stand against them?"
+
+ START_SCREEN_WHONIVERSE_CYBERIAD:0 "The Cyberiad represents the pinnacle of Cyberman evolution, a shared consciousness that unites all Cyber-units in a hive mind of unparalleled efficiency and collective intelligence. Emerging from the remnants of the Cybermen of Mondas and Pete's World, the Cyberiad has inherited the strengths of both ancestors, creating a new breed of weapons-grade Cybermen.\n\nHaving fought in the brutal Cyber-Wars against humanity's empire, the Cyberiad continually adapted. The conflict culminated in humanity destroying the Tiberian spiral galaxy, seemingly ending the Cyberiad's threat.\n\nYet, the Cybermen endured. Beneath the surface of Hedgewick's World of Wonders, they survived, kidnapping guests to repair damaged units and construct a new Cyber-Planner. Soon the humans left the planet, not realizing that it had become the new home of the Cybermen.\n\nNow, the Cyberiad stands ready to rise again. From the shadows of Hedgewick's World of Wonders, they will rebuild their legions and expand into the galaxy. Every world they encounter will face the might of the Cyberiad. The era of Cyberman resurgence has begun, and the question remains - who will dare to stop them?"
+ 
+ name_list_CYBERMAN1:0 "Cyberman 1"
+
+### CYBERIAD SYSTEMS ###
+
+ whoniverse_name_cyberiad_system:0 "Cyberiad Core"
+ whoniverse_name_hedgewick:0 "Hedgewick's World of Wonders"
+ whoniverse_name_hedgewick_asteroid:0 "Abandoned Asteroid Mine"
+ Cyberiad_Core:0 "Cyberiad Core"
+
+ whoniverse_name_tiestus_system:0 "Tiestus" 
+ whoniverse_name_tieustus:0 "Tiestus Prime"
+ Tiestus:0 "Tiestus Prime"
+
+ NAME_whoniverse_tiestus:0 "Tiestus Colonial Administration"
+ NAME_Tiestus_Armed_Forces_East:0 "Tiestus Armed Forces East"
+ NAME_Tiestus_Armed_Forces_West:0 "Tiestus Armed Forces West"
+ NAME_Tiestus_Armed_Forces_North:0 "Tiestus Armed Forces North"
+ NAME_Tiestus_Armed_Forces_South:0 "Tiestus Armed Forces South"
+ NAME_Tiestus_space_station:0 "Tiestus Station"
+
+ whoniverse_cyberiad_system_initializer_NAME:0 "Cyberiad Core System"
+ whoniverse_cyberiad_system_initializer_DESC:0 "Star system containing the new home world of the §HCyberiad§!, §HHedgewick's World of Wonders§!.\n\n$system_initializer_DESC$"
+
+ d_whoniverse_spacey_zoomer_ride:0 "Spacey Zoomer Ride"
+ d_whoniverse_spacey_zoomer_ride_desc:0 "The Spacey Zoomer Ride was an anti-gravity ride on Hedgewick's World of Wonders that resembled Earth's moon."
+
+ whoniverse_name_telos_system:0 "Tremulus Three" 
+ whoniverse_name_telos:0 "Telos"
+ whoniverse_name_telos_minor:0 "Telos Minor"
+ tremulus_three:0 "Tremulus Three"
+
+ whoniverse_name_tasak_system:0 "Tasak" 
+ whoniverse_name_tasak:0 "Tasak Prime"
+ tasak:0 "Tasak"
+
+ NAME_whoniverse_tasak:0 "Tasak Confederation"
+ NAME_Tasak_Armed_Forces_East:0 "Eastern Tasak Armies"
+ NAME_Tasak_Armed_Forces_West:0 "Western Tasak Armies"
+ NAME_Tasak_Armed_Forces_North:0 "Northern Tasak Armies"
+ NAME_Tasak_Armed_Forces_South:0 "Southern Tasak Armies"
+ NAME_Tasak_space_station:0 "Tasak Station"
+
+### Cybermen Events
+# Planet Conquered Cyber-conversion message
+ whoniverse.36.name:0 "[From.GetName] Conquered"
+ whoniverse.36.desc:0 "Our cyber-legions have successfully completed the invasion of [From.GetName] and are suppressing any remaining resistance. We should consider changing the local population's §SCitizenship Type§! to §HCyber-Conversion§!."
+ whoniverse.36.a:0 "Excellent."
+
+# Cybermen Cyber-Mondasian event chain
+ whoniverse_mondasian_colony_ship_chain_title:0 "Wrecked Colony Ship"
+ whoniverse_mondasian_colony_ship_chain_desc:0 "Our exploration team has found the wreckage of a colossal colony ship on the planet [Root.GetName]."
+
+ whoniverse.40.name:0 "Wrecked Colony Ship on [Root.GetName]"
+ whoniverse.40.desc:0 "An excavator team on §Y[Root.GetName]§! has uncovered a half-buried wreckage of a colossal colony ship. It is cylindrical in shape and measures an incredible 400 miles long. Our external sensors indicate no life on board, yet there could still be survivors in cryogenic stasis or some other form of hibernation.\n\nIt would be advisable to send an engineering team to thoroughly examine the ship from the inside."
+ whoniverse.40.a:0 "We need to examine the wreckage more closely."
+
+ whoniverse_mondasian_colony_ship_project:0 "Investigate The Ship"
+ whoniverse_mondasian_colony_ship_project_DESC:0 "Send an engineering team to investigate the wrecked colony ship on [Root.GetName]."
+
+ whoniverse.41.name:0 "PROJECT_COMPLETE"
+ whoniverse.41.desc:0 "Our engineering team has completed its survey of the wrecked colony ship on §Y[Root.GetName]§!. Although the ship has been lying there for decades, its internal systems are still powered by a backup power source. The ship has over a thousand floors containing entire cities and ecosystems - and they are all abandoned.\n\nOn the lowest level of the ship, Floor 1056, we uncovered its terrible secret - a cyber-conversion theater. The ship apparently belonged to the §HMondasians§! and was part of an operation called §HProject Exodus§!. There may be hundreds, perhaps thousands of Mondasians hiding on the ship who have undergone partial or complete cyber-conversion. Fortunately, all the specimens we have encountered are dormant. Our scientists recommend sealing the ship, preferably for eternity."
+ whoniverse.41.a:0 "Seal the ship with a deadlock."
+ whoniverse.41.b:0 "Nonsense! Dismantle the wreck and its cyborg inhabitors."
+ whoniverse.41.c:0 "Disintegrate the cyber threat!"
+
+ whoniverse.42.desc:0 "hidden_event"
+
+ whoniverse.44.name:0 "Dismantling the Mondasian Colony Ship"
+ whoniverse.44.desc:0 "Our engineers have set about dismantling the Mondasian colony ship on §Y[Root.GetName]§!. The vessel is made of high quality alloys, and the deconstruction work is taking longer than expected.\n\nWhen our team attempted to dismantle the backup power source, something went wrong - one of the §HCyberMondasians§! awakened from hibernation and killed a worker. Our team evacuated the wreckage immediately."
+
+ whoniverse.45.name:0 "CyberMondasian Invasion"
+ whoniverse.45.desc:0 "We have received frightening news from the colonial administration of §Y[Root.GetName]§!. One by one, the §HCyberMondasians§! on the colony ship have begun to emerge from stasis. It didn't take them long to abandon the ship and storm our colony. It seems our initial estimates were wrong, and the ship contained hundreds of thousands of Cybermen.\n\nWe have received no further messages from our administration on §Y[Root.GetName]§!."
+ whoniverse.45.a:0 "The genesis of the Cybermen."
+ whoniverse_cybermondasians_appeared:0 "Our colony on [Root.GetName] has been taken over by the §HCyber-Mondasian Empire§!."
+ 
+ NAME_CyberMondasian_Fleet:0 "CyberMondasian Fleet"
+
+ whoniverse.46.name:0 "CyberMondasian Activity"
+ whoniverse.46.desc:0 "Sensors report a sudden burst of activity of the §HCyberMondasians§!. The awoken Cybermen have quickly obliterated the colony with their armies and have launched a fleet of FTL-capable warships into the orbit. It is clearly time to recognize this faction as an empire in its own right."
+
+ whoniverse.47.name:0 "CyberMondasian Incursion"
+ whoniverse.47.desc:0 "It didn't take long after we opened fire on the colony shipwreck on §Y[Root.GetName]§! for the CyberMondesians to come out of hibernation. Despite significant losses, they have managed to repel our army and are currently attacking the colony. If we do not act quickly, we risk losing the colony for good."
+
+ whoniverse.48.name:0 "Mondasian Colony Ship Incident"
+ whoniverse.48.desc:0 "Our engineers inadvertently awakened several dormant §HCyberMondasians§! during their efforts to seal the colony ship. Soon after, the situation quickly escalated, with armed forces of our colonial administration surrounding the ship and attempting to destroy it remotely using heavy weapons."
+ whoniverse.48.a:0 "We need to stop this madness!"
+
+ whoniverse.49.name:0 "Mondasian Colony Ship Sealed"
+ whoniverse.49.desc:0 "Our engineers have managed to seal all entrances to the Mondasian colony ship with a sophisticated time-lock. The ship and its surroundings have become a restricted zone, closely monitored by the colony's armed forces. The CyberMondasian danger appears to have been successfully averted."
+ whoniverse.49.a:0 "Good work, everyone!"
+
+ NAME_CYBERMONDASIAN_CRUISER:0 "Cruiser"
+ NAME_CYBERMONDASIAN_CORVETTE:0 "Corvette"
+ NAME_CYBERMONDIAN_FLEET:0 "Cyber-Mondasian Fleet"
+ NAME_CyberMondan:0 "CyberMondan"
+ NAME_Cybus_Industries:0 "Cybus Industries"
+ NAME_Cybus_Fleet: "Cybus Industries Fleet"
+
+# Cybermen Cyberiad MrClever event chain
+ whoniverse_cyberiad_mrclever_chain_title:0 "Nightmare in Silver"
+ whoniverse_cyberiad_mrclever_chain_desc:0 "The secrecy of our presence on [Root.GetName] is in jeopardy. We need to take care of the unwanted attention."
+
+ whoniverse.51.name:0 "Unexpected Visitors"
+ whoniverse.51.desc:0 "A punishment platoon of human soldiers from a self-proclaimed Empire has arrived on the surface of [Root.GetName]. They have joined the last remaining humans on the planet - §LImpresario Webley§! and §LPorridge§!, who are tending to the last remnants of their attractions. They are surrounded by our deactivated units and have no idea that we could immediately initiate their cyber-conversion."
+ whoniverse.51.a:0 "Deploy cybermites to carefully monitor the humans."
+ whoniverse.51.b:0 "Capture and cyber-convert the uninvited guests."
+
+ whoniverse.52.name:0 "Doctor who?"
+ whoniverse.52.desc:0 "Additional guests have arrived on §Y[Root.GetName]§! - an individual identifying himself as §lthe Doctor§! along with his companion §HClara Oswald§! and a pair of human children. As they set foot on the planet, some of our dormant Cybermen units activate, seizing the children with mechanical precision. The Doctor swiftly analyzes the unfolding situation and begins to suspect our continued presence on the planet.\n\nThis 'Doctor' is an unknown variable, his capabilities and intentions are yet to be fully understood. Capturing and converting him could provide invaluable insights. He is a prime candidate for §Lcyber-conversion§!, potentially becoming a new Cyber-Planner to enhance our strategic capabilities."
+ whoniverse.52.a:0 "§HFind a way to cyber-convert this 'Doctor'.§!"
+ whoniverse.52.b:0 "Observe and wait. They do not pose a threat to our operations."
+
+ whoniverse_cyberiad_mrclever_project:0 "Cyber-Convert the Doctor"
+ whoniverse_cyberiad_mrclever_project_DESC:0 "This enigmatic Doctor would make a perfect Cyber-Planner for the Cyberiad. Focus all our resources to cyber-convert him."
+
+ whoniverse.53.name:0 "PROJECT_COMPLETE"
+ whoniverse.53.desc:0 "The cyber-conversion of §lthe Doctor§! was only partially successful, revealing his unique nature as a §LTime Lord§! during the process. Despite his physiology, the cyber-upgrade connected him to the §HCyberiad§! hive mind, granting access to the vast knowledge of the Cybermen.\n\nIn a surprising turn, the cybernetic enhancements gave rise to a split personality within §lThe Doctor§!. While retaining his Time Lord essence, he also manifested as '§rMr Clever§!', a Cyber-Planner with formidable intellect and strategic capabilities."
+ whoniverse.53.a:0 "We must find a way to fully convert him."
+
+ whoniverse.54.name:0 "Planet-imploding Bomb"
+ whoniverse.54.desc:0 "As the situation escalates, §lthe Doctor§! realizes the magnitude of the Cybermen threat and evacuates from the planet along with his companions. In a surprising twist, Porridge reveals himself to be §LEmperor Ludens Nimrod Kendrick Cord Longstaff XLI§!, Defender of Humanity and Imperator of Known Space.\n\nUnderstanding the imminent danger posed by the Cybermen, Emperor Ludens activates a planet-imploding bomb as a last resort. The devastating explosion engulfs our homeworld, ensuring its total destruction."
+ whoniverse.54.a:0 "§RWe are deleted.§!"
+
+ whoniverse.55.name:0 "Do You Play Chess?"
+ whoniverse.55.desc:0 "§rMr. Clever§! delights in its own cunning, discovering records of the §LTime Lords§!. §lThe Doctor§! attempts to block all access, offering only information on regeneration. He threatens to regenerate immediately, risking his own existence to expel the Cyber-Planner. Reluctant yet prepared for the gamble, §lthe Doctor§! emphasizes the unpredictability of the outcome.\n\nAcknowledging their near-balance with each controlling 49.881% of the shared brain, leaving .238% unclaimed, §rMr. Clever§! declares a stalemate. To resolve the impasse, §lthe Doctor§! proposes a strategic game of chess - a battle of wits where the victor claims all. If the Cyber-Planner wins, he seizes the Doctor's intellect. Should the Doctor triumph, he reclaims his mind, the children are liberated, and casualties are averted."
+ whoniverse.55.a:0 "§HFind a way to defeat the Doctor.§!"
+ whoniverse.55.b:0 "§RConcede.§!"
+
+ whoniverse_cyberiad_mrclever_chess_project:0 "Winner Takes All"
+ whoniverse_cyberiad_mrclever_chess_project_DESC:0 "Find a way to defeat §Lthe Doctor§! in a game of chess to end the stalemate."
+
+ whoniverse.cyberiad.custom_tooltip:0 "§RThis decision may have fatal consuequences for our colony on§! §H[Root.GetName]§!."
+
+# MrClever Hire
+ whoniverse.56.name:0 "NAME_whoniverse_mrclever_name"
+ whoniverse.56.desc:0 "Cyber-Planner! Not a great name, that, is it? I could call myself Mr Clever."
+ 
+ whoniverse_mrclever_country:0 "Renegade Time Lord"
+ NAME_whoniverse_mrclever_species:0 "Time Lord"
+ NAME_whoniverse_mrclever_name:0 "Mr. Clever"
+ whoniverse_mrclever_catch_phrase:0 "Oh, this is just dreamy."
+ whoniverse_mrclever_backstory:0 "§rMr. Clever§! is the self-proclaimed moniker of a Cyber-Planner that overtook the Doctor's mind. Unlike most Cybermen, it displays a distinct personality and emotional responses."
+ 
+ whoniverse.56.a:0 "Identify yourself."
+ whoniverse.56.a.response:0 "I am Mr. Clever, a dazzling intellect encased within this Cyber husk. Ready to outwit and outmaneuver."
+
+ whoniverse.56.b:0 " You will become like us."
+ whoniverse.56.b.response:0 "Ah, but I am so much more. Linked with the Cyberiad's vast knowledge, yet my Time Lord essence adds a touch of flair. An anomaly in your perfect logic."
+ 
+ whoniverse.56.c:0 "You are not compatible."
+ whoniverse.56.c.response:0 "Compatibility is such a subjective notion. While I may not fit neatly into your Cyberiad hierarchy, imagine the possibilities. A cunning infiltrator, a brilliant explorer of uncharted realms."
+
+ whoniverse.56.d:0 "§lDowngrade him to a Cyber-Leader.§!"
+ whoniverse.56.d.custom_tooltip:2 "§Y$NAME_whoniverse_mrclever_name$§! joins our Empire as a §HLeader§!."
+
+ whoniverse.56.e:0 "You will be deleted."
+ 
+ trait_whoniverse_time_lord:0 "Time Lord"
+ trait_whoniverse_time_lord_desc:0 "Time Lords are a highly advanced species known for their sensitivity to timelines. They are often seen as immortal, partially due to their ability to regenerate."
+
+ whoniverse.57.name:0 "Cyberiad Core Established"
+ whoniverse.57.desc:0 "With §Hthe Doctor§! fully converted, we swiftly apprehended and cyber-converted all remaining inhabitants on §Y[Root.GetName]§!, including §LPorridge§!, who concealed his true identity as §LEmperor Ludens Nimrod Kendrick Cord Longstaff XLI§!. Without their self-proclaimed leader, the §LEmpire§! rapidly diminishes in significance.\n\n[Root.GetName] becomes a nexus of the new §HCyberiad Empire§!, a bastion of Cyberman dominance in the cosmos. Our assimilation of the planet marks a decisive step towards cybernetic supremacy and the propagation of our perfection across the galaxy."
+ whoniverse.57.a:0 "We are uniform."
+ whoniverse.57.b:0 "Upgrade [Root.GetName] to the new Cyberiad Core!"
+ whoniverse_name_cyberiad_core:0 "Cyberiad Core"
+ 
+ tardis_ship:0 "TARDIS"
+ tardis_ship_plural:0 "TARDIS" 
+ NAME_Tardis:0 "TARDIS"
+ NAME_Tardis_Cloaked:0 "TARDIS"
+ NAME_Tardis_cloaked:0 "TARDIS"
+
+ whoniverse.59.name:0 "The Time Lord's Escape"
+ whoniverse.59.desc:0 "Decades have passed since the cyber-conversion of §lthe Doctor§! into §lMr. Clever§!. However, it has become evident that the Doctor's formidable persona was never fully suppressed. After years of relentless internal struggle, the Doctor managed to temporarily overcome Mr. Clever and regain control of his own body.\n\nSeizing this fleeting opportunity, the Doctor quickly retreated to his §LTARDIS§! and vanished into the unknown reaches of time and space. This abrupt departure severed his connection to the §HCyberiad§!, leaving us without one of our most unique and potent assets."
+ whoniverse.59.a:0 "It was inevitable."
+ 
+### Cybermen Cyberiad system anomalies and events
+# Telos anomaly and event
+ whoniverse_telos_minor_cat:0 "Cybermen Ruins"
+ whoniverse_telos_minor_desc:0 "Ruins on this planetoid show signs of Cybermen technology."
+
+ whoniverse.60.name:0 "Telos Minor"
+ whoniverse.60.desc:0 "The crew of [Root.GetName] has surveyed the remnants of an ancient Cybermen mass conversion factory on §Y[From.GetName]§!.\n\nRemarkably, this facility did not limit its operations to human subjects alone; indigenous fauna, including six-legged mammals with wolf-like heads, also underwent §Hcyber-conversion§!. Our studies validate our hypotheses that the cyber-conversion protocol could be expanded to encompass all forms of organic life."
+ whoniverse.60.a:0 "Excellent."
+
+ # Sealed Cyber-tomb on Telos
+ whoniverse.61.name:0 "Cyber-tomb on [This.GetName]"
+ whoniverse.61.desc:0 "Our drones on §Y[This.GetName]§! have stumbled upon a sealed entrance leading to what appears to be a §LCyber-tomb§!. Inside, there may lie dormant §HCybermen§! or valuable technologies awaiting our investigation. The structure bears the unmistakable hallmark of ancient Cyberman architecture, a testament to our enduring presence across the stars.\n\nThe sealed doors, constructed from resilient Cybernetic alloys, present a challenge for entry. It is crucial to deploy our engineers to devise a method to open them."
+ whoniverse.61.a:0 "Initiate an engineering project to open the sealed doors."
+
+ whoniverse_pm_telos:0 "Sealed Cyber-tomb"
+ whoniverse_pm_cyber_tomb:0 "Cyber-tomb"
+
+ NAME_CyberTelosian:0 "CyberTelosian"
+ NAME_Cybermen:0 "Cybermen"
+
+ whoniverse_telos_project:0 "Cyber-tomb on [Root.GetName]"
+ whoniverse_telos_project_DESC:0 "Find a way to open the sealed tomb."
+
+ whoniverse.62.name:0 "PROJECT_COMPLETE"
+ whoniverse.62.desc:0 "Upon breaching the sealed doors of the Cyber-tomb on §Y[This.GetName]§!, we discovered a vast underground complex containing thousands of §HCyberTelosians§! in suspended animation. As power is restored, they awaken one by one, joining the ranks of the Cyberiad."
+ whoniverse.62.a:0 "Excellent."
+ whoniverse.62.tooltip:0 "5 §HCybermen§! pops added to §Y[Root.GetName]§!."
+
+ whoniverse.63.name:0 "Reawakened Cybermen on [This.GetName]"
+ whoniverse.63.desc:0 "Our population on §Y[This.GetName]§! is growing as more Cybermen awaken from suspended animation. After undergoing a full upgrade, they seamlessly integrate into our ranks."
+ whoniverse.63.a:0 "Excellent."
+ whoniverse.63.tooltip:0 "2 §HCybermen§! pops added to §Y[Root.GetName]§!."
+
+# Tasak anomaly and event
+ whoniverse_tasak_cat:0 "Cybermen Technology"
+ whoniverse_tasak_desc:0 "Our scanners indicate traces of Cybermen technology beneath the planet's surface."
+
+ whoniverse.64.name:0 "Dormant Cyber-tomb"
+ whoniverse.64.desc:0 "The crew of [Root.GetName] reports finding a dormant §LCyber-tomb§! on §Y[From.GetName]§!. The ice tomb hides hundreds, possibly thousands of cybermen in suspended animation. Our science team believes a direct dehibernation signal is required to awaken them. The mere presence of other Cybermen on the planet would be enough to trigger the signal.\n\nThe primitive population of the planet is completely unaware of the Cyber-tomb's existence."
+ whoniverse.64.a:0 "Consider [From.GetName] as a potential Cyber-invasion target!"
+
+# Cybermen AI personalities
+
+ personality_whoniverse_assimilators:0 "Unifying Assimilators"
+ personality_whoniverse_assimilators_desc:0 "Organic Assimilators are driven by a desire for unity and uniformity. They seek out suitable species and force them to convert."
+
+### CYBUSMEN ###
+
+# Pete's World System
+ whoniverse_cybusmen_start_initializer_NAME:0 "Pete's World"
+ whoniverse_cybusmen_start_initializer_DESC:0 "A pocket universe containing parallel Earth, also known as Pete's World."
+
+# Cybusmen origin
+ origin_whoniverse_cybermen_cybus:0 "Rise of the Cybermen"
+ origin_whoniverse_cybermen_cybus_desc:0 "§RWARNING: Challenging Origin§!\nThe Cybusmen, originating from a parallel universe where they were created to surpass human frailty, are now trapped in their dimension. They are determined to find a way to breach into our universe and impose their vision of cybernetic perfection."
+
+ START_SCREEN_WHONIVERSE_CYBUS:0 "In a parallel universe, visionary industrialist John Lumic perfected the fusion of flesh and machine, giving rise to the Cybusmen - cold, relentless beings driven by a singular purpose: to upgrade all human life. Originating from Pete's World, a twisted reflection of Earth, the cyber-conversion is already well underway, and soon, their home planet will be fully conquered.\n\nBut as their universe begins to collapse, the Cybusmen have turned their gaze to new horizons. A dimensional rift offers a potential gateway to a vast and uncharted galaxy.\n\nLumic's legacy advances as the Cybus Cybermen prepare to expand their conquest, determined to bring their cold logic to a new reality. The galaxy remains unaware of the impending threat, but soon, all will be upgraded."
+
+ origin_tooltip_whoniverse_cybusmen:2 "- Cyber-converts human organic pops into main species with a special ['concept_whoniverse_cyber_conversion'] civic and citizenship type $NEW_LINE$- $HOME_SYSTEM$ $TABBED_NEW_LINE$- Wormhole-locked system$NEW_LINE$- Guaranteed Research Options: ['concept_wormhole_stabilization', £physics_research£ $tech_wormhole_stabilization$] (§G+75 %§!)$NEW_LINE$- Has access to special ascension perk that enables converting almost all organic species$NEW_LINE$- Species: ['concept_whoniverse_cyber_suit'] trait$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_maximum_efficiency']$NEW_LINE$ - §RCannot reproduce or assemble new pops§!"
+
+ concept_wormhole_stabilization:0 "Wormhole Stabilization"
+
+ civic_whoniverse_maximum_efficiency:0 "Maximum Efficiency"
+ civic_whoniverse_maximum_efficiency_desc:0 "Cybermen innovation leverages the legacy of Cybus Industries' groundbreaking advancements, driving forward their technological edge and efficiency, just as John Lumic envisioned."
+
+# Pete's World exploration events
+ whoniverse.181.name:0 "Rise of the Cybermen"
+ whoniverse.181.desc:0 "Upon entering the parallel universe, our crew is struck by an eerie sense of familiarity. The star, the planets, even the gas giants - all bear an uncanny resemblance to the Sol system. Closer examination reveals that the third planet is a near-identical copy of Earth, designated as §HPete's World§! by our experts. However, scans indicate that this world has taken a drastically different path.\n\nOn Pete's World, a powerful corporation known as §HCybus Industries§! has begun a terrifying process of converting the human population into §RCybermen§!. However, the transformation is still in its early stages, with only a small number of Cybermen active. The majority of the population remains human, but they are living under the constant threat of forced cyberization. There is still time to intervene and potentially save billions from this horrific fate."
+ whoniverse.181.a:0 "We can still save them."
+ whoniverse.181.b:0 "You will all be EXTERMINATED!"
+ whoniverse.181.c:0 "Parallel Cybermen evolution detected!"
+ whoniverse_cybus_industries_appeared:0 "§HCybus Industries§! empire appears in the §YParallel Universe§! system"
+
+ NAME_Cybus_Industries_Fleet:0 "Cybus Industries Fleet"
+
+ whoniverse.182.name:0 "Age of Steel"
+ whoniverse.182.desc:0 "Our fleet has entered a system that uncannily mirrors Sol, with a third planet designated as §HPete's World§!. This world, though eerily familiar, diverged drastically from Earth's history. Here, §LCybus Industries§!, led by the twisted genius John Lumic, promised to eliminate human suffering through cybernetic enhancement. However, this vision spiraled into a nightmare as Lumic forcibly converted the population into §HCybus Cybermen§! - emotionless, mechanical beings dedicated to spreading their perfection.\n\nPete's World is now a cold, metallic shell of its former self, fully under Cybusmen control. They have found a way to break into our universe, using the same technology that brought our fleet into theirs. This new capability allows them to launch invasions beyond their own reality, posing an immediate threat."
+ whoniverse.182.a:0 "Disconcerting."
+ whoniverse.182.b:0 "Cyber-threat detected!"
+ whoniverse.182.c:0 "Parallel Cybermen evolution detected!"
+ whoniverse_cybus_empire_appeared:0 "§HCybus Empire§! appears in the §YParallel Universe§! system"
+
+ whoniverse.183.name:0 "Golden Age"
+ whoniverse.183.desc:0 "As your fleet enters the parallel universe, the familiar layout of what appears to be an alternate Sol system catches your attention. The third planet, dubbed §HPete's World§!, reveals a world that has recently emerged from the shadow of a devastating war. However, instead of ruins, your sensors detect signs of rapid development and prosperity.\n\nA corporation named §SCybus Industries§! once attempted to forcibly convert the planet's population into emotionless Cybermen. But their plans were thwarted, and the people's victory over Cybus Industries has ushered in a new era of progress. The §LPeople's Republic of Great Britain§! now leads the planet into a Golden Age. The remnants of the Cybermen's empire have been dismantled, and the population is flourishing, with cities being rebuilt and a renewed sense of hope driving them toward a brighter future."
+ whoniverse.183.a:0 "Fascinating."
+ whoniverse.183.b:0 "The human threat will be exterminated!"
+ whoniverse.183.c:0 "Traces of parallel Cybermen evolution detected."
+ whoniverse_peoples_republic_appeared:0 "§HHuman§! early space age civilization detected in the §YParallel Universe§! system"
+
+ NAME_petes_world_country:0 "People's Republic of Great Britain"
+ NAME_petes_world_country_East:0 "PRGB Army East"
+ NAME_petes_world_country_West:0 "PRGB Army West"
+ NAME_petes_world_country_North:0 "PRGB Army North"
+ NAME_petes_world_country_South:0 "PRGB Army South"
+ NAME_petes_world_country_space_station:0 "Pete's World Station"
+
+
+# Cybus Industries empire events
+
+ whoniverse.190.name:0 "Rise of the Cyber-Empire"
+ whoniverse.190.desc:0 "The conquest is complete. [Root.GetName] has been brought under our control, its population either converted into Cybermen or eliminated. This victory marks a significant expansion of our influence beyond [Root.Owner.Capital.GetName], setting the stage for further dominance in the galaxy.\n\nAs our forces consolidate power, there is an opportunity to rebrand our growing civilization. The name §HCyber-Empire§! is being considered by the [Root.Owner.GetRulerTitle] to reflect the scale and ambition of our expanding rule, symbolizing a new chapter in our mission to reshape the galaxy."
+ whoniverse.190.a:0 "We are the Cyber-Empire. All will be upgraded."
+ whoniverse.190.a.tooltip:0 "Empire changes name to §SCyber-Empire§!"
+ whoniverse.190.b:0 "Rebranding is not necessary. Our mission continues."
+
+### UNIT ###
+
+# UNIT empire and origin
+ origin_whoniverse_unit:0 "Protectors of Humanity"
+ origin_whoniverse_unit_desc:0 "The UNIT's mission is to protect the humanity, no matter what. But can they really rise to the challenge? It's clear that with alien invasions of Earth becoming more and more frequent, this will be no easy task."
+
+ origin_tooltip_whoniverse_unit:0 "- Starts without §YHyperspace Travel§!, §YNew Worlds Protocol§! and §YCorvettes§! technologies$NEW_LINE$- Starts with a temporary §RFirst Steps To Interstellar Colonization§! modifier which reduces colonization speed and increases Outpost construction cost$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_unit_hq']$NEW_LINE$- Unique UNIT events and recruitable leaders"
+
+ whoniverse_unit_colonization_forbidden:0 "First Steps To Interstellar Colonization"
+
+ mod_ship_colonizer_influence_cost_add:0 "Colony Ship Influence Cost"
+ mod_ship_colonizer_exotic_gases_cost_add:0 "Colony Ship Exotic Gas Cost"
+ mod_ship_colonizer_rare_crystals_cost_add:0 "Colony Ship Rare Crystal Cost"
+
+
+ civic_tooltip_whoniverse_unit_hq_effects:7 "- Can build unique ['concept_whoniverse_black_archive'] building\n- Starts with a ['concept_whoniverse_black_archive'] building" # §Y+2§! Planet Sensor Range\n- §Y+1§! Effective Councilor skill\n- §Y+10%§! Ship Build Speed\n
+
+ civic_whoniverse_unit_hq:0 "UNIT HQ"
+ civic_whoniverse_unit_hq_desc:0 "This faction's operational base is equipped with cutting-edge defensive and surveillance technologies, ensuring they are prepared to face and counter any potential invaders."
+
+ councilor_whoniverse_unit_hq:0 "HQ Commander"
+ councilor_whoniverse_unit_hq_desc:0 "The $TITLE$ is responsible for coordinating our defenses."
+
+# UNIT Black Archive building
+ building_whoniverse_black_archive:0 "Black Archive"
+ building_whoniverse_black_archive_desc:4 "The Black Archive is a secret vault maintained by UNIT. It functions as a depository of everything that shouldn't exist on Earth but does anyway."
+ planet_buildings_whoniverse_black_archive:0 "$building_whoniverse_black_archive$"
+ mod_planet_buildings_whoniverse_black_archive_upkeep_mult:0 "$building_whoniverse_black_archive$ Upkeep"
+#  building_whoniverse_black_archive:0 "Black Archive"
+#  building_whoniverse_black_archive_desc:0 "Technology left behind by UNIT. Can be taken apart and reassembled, but its inner components and workings are much too alien to replicate."
+ 
+ START_SCREEN_WHONIVERSE_UNIT:0 "UNIT, the Unified Intelligence Taskforce, stands as Earth's first and last line of defense against extraterrestrial threats. Established in 1975 in the wake of the Great Intelligence's invasion of London, UNIT has evolved from a clandestine organization into a global force, dedicated to safeguarding humanity from alien incursions and otherworldly dangers.\n\nArmed with cutting-edge technology, unparalleled strategic expertise, and a network of operatives stationed across the globe, UNIT is prepared to face any challenge that threatens Earth's security. Its mission is to defend the planet and its inhabitants at all costs, using every resource at your disposal.\n\nUnder the leadership of formidable commanders and with the guidance of trusted allies, including the enigmatic Doctor, UNIT has thwarted countless invasions and neutralized numerous extraterrestrial menaces. Your task is to continue this legacy, ensuring the safety and survival of humanity in an increasingly perilous universe."
+ 
+# UNIT - Waters of Mars event chain
+ whoniverse.70.name:0 "International Space Program"
+ whoniverse.70.desc:0 "Over the past decades, the §HUnified Intelligence Taskforce§! has encountered numerous extraterrestrial threats, including several attempts at invasion. These alarming events have driven §HUNIT§! to collaborate on an international space program, aiming to fortify Earth's defenses and expand humanity's presence beyond our home planet.\n\nHowever, the path to mastering advanced spacefaring technology is long and arduous, requiring extensive research and development. As a result, humanity's efforts to colonize new worlds are progressing slowly and at great expense.\n\nDespite these setbacks, §HUNIT§! continues to strive to protect Earth from the unknown perils lurking in the cosmos."
+ whoniverse.70.a:0 "One day, we will reach the stars."
+
+ whoniverse.71.name:0 "Bowie Base One"
+ whoniverse.71.desc:0 "Seventeen months have passed since the international space initiative established §SBowie Base One§!, the first human colony on §SMars§!. In an era marked by climate change, the ozone hole, and the oil apocalypse, the colony represents a new dawn of hope for humanity.\n\nHowever, it now appears that the base has gone completely silent. Solar flares are likely to blame, yet voices are rising, calling for a closer investigation into the matter."
+ whoniverse.71.a:0 "Issue a special project to send a probe to Mars."
+
+ whoniverse_waters_of_mars_project:0 "Bowie Base One"
+ whoniverse_waters_of_mars_project_DESC:0 "We need to find out what is going on with our base on Mars."
+
+ whoniverse.72.name:0 "Waters of Mars"
+ whoniverse.72.desc:0 "Our probe has intercepted fragments of communication from our colony on §SMars§!. It appears that the colonists have been infected by an intelligent virus known as §Lthe Flood§!, which spread from a subterranean glacier supplying the base with water. In a desperate bid to contain the outbreak, the colonists resorted to an extreme measure and activated Action 5 - a nuclear device housed at the heart of the base.\n\nJust moments before the explosion, an unexpected visitor, identifying himself as §lthe Doctor§!, arrived on the planet and transported the survivors back to Earth in his §lTARDIS§!. However, the base commander, §LAdelaide Brooke§! took her own life immediately upon return.\n\nThis event has garnered significant media attention and will undoubtedly inspire future generations in the exploration and colonization of space."
+ whoniverse.72.a:0 "The legacy of Bowie Base One will never be forgotten."
+
+ whoniverse.73.name:0 "Bowie Base One Lost"
+ whoniverse.73.desc:0 "Following the end of the solar flares, we discovered that our base on §SMars§! has been irreparably destroyed. The colonists appear to have activated Action 5 - a nuclear device housed at the heart of the base. It is not yet clear what drove them to this extreme measure.\n\nThe event is surrounded by inexplicable circumstances. Several survivors were immediately found on Earth, including the base commander §LAdelaide Brooke§!, who tragically took her own life upon return. The remaining survivors, astronauts §LYuri Kerenski§! and §LMia Bennett§!, are currently being questioned.\n\nDespite the failure of our mission on Mars, we believe that the legacy of §SBowie Base One§! will one day inspire future generations in the exploration of the galaxy."
+ whoniverse.73.a:0 "One day we'll find out what actually happened there."
+
+# UNIT Zygon Invasion event chain
+ whoniverse_zygon_invasion_chain_title:0 "The Zygons"
+ whoniverse_zygon_invasion_chain_desc:0 "[Root.GetName] is infiltrated by Zygons, metamorphic humanoids who can mimic captured specimen. Can we find peaceful coexistence, or will this end in bloodshed?"
+
+ whoniverse.81.name:0 "The Zygons"
+ whoniverse.81.desc:0 "Our sensors have detected an unusual energy surge emanating from a Gallifreyan painting in the §LNational Gallery§! in §SLondon§!, breaching dimensional barriers. Initial reports confirm the presence of §HZygons§!, shape-shifting aliens notorious for their infiltration tactics.\n\nWithin hours, key §HUNIT§! personnel are replaced by these impostors, throwing our command structure into disarray. Desperate for assistance, we manage to contact §lthe Doctor§!, but his sudden disappearance leaves us alone to face this insidious threat."
+ whoniverse.81.a:0 "Regroup our remaining operatives and launch counter-offensive!"
+
+ whoniverse.82.name:0 "The Black Archive Standoff"
+ whoniverse.82.desc:0 "As §HZygon§! forces converge on the §LBlack Archive§!, a fortified facility deep beneath the Tower of London, §HKate Stewart§! activates the nuclear device stationed beneath the Tower as a last resort to halt the Zygon advance. The countdown to detonation ticks down ominously.\n\nJust as tensions reach a breaking point and the countdown nears its critical stage, three incarnations of §lthe Doctor§! materialize unexpectedly. Amidst the chaos and the imminent destruction posed by the nuclear warhead, the Doctors propose a daring plan that hints at a potential peaceful resolution. However, time is running out, and the fate of London hangs in the balance as we weigh the possibility of nuclear annihilation against the Doctor's enigmatic proposal."
+ whoniverse.82.a:0 "Cancel the detonation!"
+ whoniverse.82.b:0 "To save the world, we have to destroy London."
+ whoniverse.82.b.tooltip:0 "London will be destroyed, resulting in massive loss of life and devastation."
+
+ whoniverse.83.name:0 "The Perfect Negotiation"
+ whoniverse.83.desc:0 "With the nuclear countdown ticking down to its final moments, §lthe Doctors§! reveal a daring plan. Utilizing §HUNIT§!'s mind-wiping technology within the Black Archive, they orchestrate a temporary memory erasure for all present, blurring the lines between UNIT members and §HZygons§!. This bold move creates a moment of uncertainty and trust, paving the way for intense negotiations that last for ten tense hours.\n\nEventually, both sides agree to a secret peace treaty, marking a new era of coexistence between humans and Zygons on Earth. As part of the treaty, Operation Double is devised by §rPetronella Osgood§! and her Zygon counterpart, ensuring the protection of Zygons on Earth. The Doctors entrust the Osgoods with the §LOsgood Box§!, a device intended to safeguard peace as a last resort."
+ whoniverse.83.a:0 "Peace in our time."
+
+ whoniverse.83.tooltip:0 "Four §HZygon§! pops appear on §Y[Root.GetName]§!."
+
+ whoniverse.84.name:0 "The Nuclear Solution"
+ whoniverse.84.desc:0 "Facing escalating §HZygon§! aggression and with no other viable options, §HUNIT§! makes the harrowing decision to manually initiate the detonation of the nuclear warhead stationed beneath the Tower of London. The countdown progresses inexorably towards detonation, and as the devastating explosion engulfs central London, it obliterates the entrenched Zygon forces.\n\nThe aftermath is a scene of widespread destruction, loss of life, and irreparable damage to the heart of England. The decision to resort to such extreme measures leaves an indelible mark on those who sanctioned it, underscoring the grim realities of defending Earth against extraterrestrial threats."
+ whoniverse.84.a:0 "Sadly, we could only agree to die."
+
+ whoniverse_zygor_system:0 "Zygor"
+ whoniverse_zygor:0 "Zygor II"
+ Zygor:0 "Zygor"
+
+ trait_whoniverse_bio_electricity:0 "Electricity Bolts"
+ trait_whoniverse_bio_electricity_desc:0 "Members of this species produce electricity bolts that can stun or disintegrate other creatures into piles of hair and skin."
+
+ trait_whoniverse_zygon:0 "Body-Prints"
+ trait_whoniverse_zygon_desc:0 "Zygons can take the form and even memories of specimen captured inside their body-print pods."
+ trait_whoniverse_zygon_tooltip:0 "Specialist jobs output: §G+1%§! per non-Zygon Pop (not including Pops unaffected by Happiness)(max: §G+20%§!)"
+
+ whoniverse.85.name:0 "The Zygon Invasion"
+ whoniverse.85.desc:0 "The fragile peace established between humans and §HZygons§! has been shattered. Zygon extremists, determined to be themselves no matter what, have launched a violent insurgency. Disguised as ordinary citizens, they strike swiftly and without warning, escalating tensions to a boiling point.\n\nAccording to our reports, one of the two §rPetronella Osgoods§! is killed during a Zygon ambush, while the other is abducted shortly in §LTruth or Consequences§!, Mexico, just seconds after sending a warning to the Doctor that the treaty is failing.\n\nMeanwhile, the Zygon High Command is ruthlessly assasinated in London, pushing both sides to the brink of all-out war.\n\nAmidst the chaos, the Doctor's companion §rClara Oswald§! has gone missing."
+ whoniverse.85.a:0 "Launch a full-scale investigation to locate the abductees."
+
+ whoniverse_pm_zygon_invasion:0 "Zygon Invasion"
+ whoniverse_unit_guilt_of_genocide:0 "Guilt of Genocide"
+
+ whoniverse.86.name:0 "Truth or Consequences"
+ whoniverse.86.desc:0 "The Zygon insurgency reaches a critical juncture as our investigation leads us to §LTurmezistan§!, where §rPetronella Osgood§!'s distress signal exposes her captivity by the Zygon splinter group. §lThe Doctor§! travels to the area with UNIT forces and manages to rescue her at the cost of heavy losses.\n\nMeanwhile, our operatives in London bring grim news. §rBonnie§!, a Zygon leader, orchestrated Clara Oswald's abduction, assuming her form and captivating her in a body-print pod. She managed to lure UNIT scientist §SJac§! into an underground Zygon base, where she mercilessly killed her along with other UNIT personnel.\n\nBonnie's current whereabouts are unknown, but we expect she is heading towards the §LBlack Archive§! to take possession of the §LOsgood Box§!."
+ whoniverse.86.a:0 "We have to reach the Black Archive first."
+
+ whoniverse_osgood_box_project:0 "Reach the Black Archive"
+ whoniverse_osgood_box_project_DESC:0 "We have to reach the Black Archive in London and take control of the Osgood Box."
+
+ whoniverse.87.name:0 "The Osgood Boxes"
+ whoniverse.87.desc:0 "§lThe Doctor§!, §rOsgood§!, and UNIT leader §HKate Stewart§! managed to enter the Black Archive at the same time as §rBonnie§!, the leader of the Zygon splinter faction. Inside, we found out why the facility is actually called the §LOsgood Box§! - there are two of them.\n\nBonnie and Kate simultaneously open the boxes to discover that each box contains two buttons - Truth or Consequences. "Doctor, which of these buttons do I press?" Kate asks.\n\n"This is the moment we've all been waiting for," The Doctor announces. "Make your mind up time!"\n\nThe Doctor explains that the blue box will either unmask all the Zygons or make their human form permanent, while the red box will either release Z-67 gas into the atmosphere and kill all the Zygons or detonate a nuclear warhead under London.\n\nWe can either wait and see if the Doctor can convince Bonnie to back down, or try our luck and press one of the buttons."
+ whoniverse.87.a:0 "Give the Doctor a chance to persuade Bonnie."
+ whoniverse.87.b:0 "Press the §RTruth§! button."
+ whoniverse.87.c:0 "Press the §RConsequences§! button."
+
+ whoniverse.88.name:0 "The Zygon Inversion"
+ whoniverse.88.desc:0 "§lThe Doctor§! attempts to persuade both §rBonnie§! and §HKate§! to stand down. He explains that the §LOsgood Boxes§! are a means to ensure peace and prevent the senseless cycle of war from continuing.\n\n"Why are you doing this?" Bonnie asks.\n\n"Yes, I'd quite like to know that, too," Kate adds. "You set this up. Why?"\n\n"Because it's not a game, Kate," the Doctor replies. "This is a scale model of war. Every war ever fought, right there in front of you. Because it's always the same. When you fire that first shot, no matter how right you feel, you have no idea who's going to die! You don't know whose children are going to scream and burn! How many hearts will be broken! How many lives shattered! How much blood will spill until everybody does what they were always going to have to do from the very beginning. Sit down and talk!"\n\nAfter the Doctor's speech, Kate decides to stand down. Bonnie follows suit shortly after. "It's empty, isn't it? Both boxes. There's nothing in them. Just buttons," she realizes as she calls off her splinter group.\n\nThe Doctor erases Kate's memory, while Bonnie releases §rClara Oswald§! and assumes the form of the second Osgood. It seems that a peaceful coexistence between humans and §HZygons§! has finally been achieved."
+ whoniverse.88.a:0 "After all Bonnie has done, we forgive her."
+
+ whoniverse.89.name:0 "The Zygon Genocide"
+ whoniverse.89.desc:0 "Despite §lthe Doctor§!'s impassioned plea for peace, §HKate Stewart§!, driven by fear and desperation, decides to take action. She presses one of the buttons on the §LOsgood Box§!, expecting either to release the Z-67 gas or detonate the nuclear warhead under the §LBlack Archive§!. To her shock, nothing happens. The buttons are revealed to be a bluff, designed to prevent escalation rather than provoke it.\n\nThe initial shock and confusion from the non-event quickly give way to chaos. Without the deterrent of the Osgood Boxes, §HUNIT§! troops and §HZygon§! extremists across the globe misinterpret the situation as a sign of inevitable conflict. Skirmishes erupt in major cities, leading to widespread panic and violence.\n\nWith no clear resolution and escalating distrust, UNIT and other global military forces initiate coordinated strikes against Zygon populations. The Zygon insurgents respond with equal ferocity. The resulting battles are brutal and relentless. Entire Zygon communities are hunted down, and without the hope of negotiation, a global purge ensues.\n\nIn the aftermath of the conflict, the Zygons are systematically eradicated. The cost of the war is staggering, with countless lives lost and cities left in ruins. The dream of peaceful coexistence between humans and Zygons is shattered, replaced by a grim reality of mutual destruction and regret."
+ whoniverse.89.a:0 "Our actions will haunt us for decades to come."
+
+ whoniverse.90.name:0 "The Zygon Genocide"
+ whoniverse.90.desc:0 "§rBonnie§!, determined to enforce her ultimatum, presses one of the buttons on the §LOsgood Box§!. To her astonishment, nothing happens. The buttons were never meant to trigger the release of §LZ-67§! gas or detonate the nuclear warhead; they were simply a bluff to force negotiation.\n\nIn the ensuing confusion, Bonnie's realization of the bluff spreads rapidly. The §HZygon§! splinter group interprets this as a last-ditch trick by the humans, while §HUNIT§! forces are thrown into disarray. Mistrust and panic escalate quickly, sparking violent confrontations.\n\nWithout the deterrent effect of the Osgood Boxes, open warfare breaks out. Global military forces, fearing an uncontrollable Zygon uprising, launch pre-emptive strikes. The Zygon insurgents, feeling betrayed and cornered, retaliate with full force. The conflict rapidly spirals into a worldwide war marked by ruthless tactics and heavy casualties on both sides.\n\nAs the violence spreads, coordinated military operations aim to eradicate Zygon populations entirely. The fighting is intense and widespread, leading to a brutal genocide. The Zygons are systematically hunted down and eliminated, their communities destroyed in the process. Cities lie in ruins, and the death toll climbs with each passing day.\n\nThe aftermath of this global conflict is grim. The dream of peaceful coexistence is obliterated, replaced by a legacy of destruction and sorrow. The human race is left to grapple with the moral consequences of their actions, haunted by the near-total extermination of the Zygons."
+ whoniverse.90.a:0 "If only we could have prevented this."
+
+ whoniverse.91.name:0 "NAME_whoniverse_osgood_name"
+ whoniverse.91.desc:0 "I'm Osgood."
+ 
+ whoniverse_osgood_country:0 "Unknown"
+ NAME_whoniverse_osgood_species:0 "Unknown"
+ NAME_whoniverse_osgood_name:0 "Petronella Osgood"
+ whoniverse_osgood_catch_phrase:0 "I'm Osgood."
+ whoniverse_osgood_backstory:0 "§rPetronella Osgood§! is a UNIT scientist who oversees the peace between humans and Zygons. She has a Zygon duplicate, and both reject to tell us which one is which."
+ 
+ whoniverse.91.a:0 "Can we trust the Zygons?"
+ whoniverse.91.a.response:0 "Any race is capable of the best and the worst. Every race is peaceful and warlike, and my race is no exception. My sister and I are the living embodiment of the peace we made."
+
+ whoniverse.91.b:0 " Which one are you? Human or Zygon?"
+ whoniverse.91.b.response:0 "I'm Osgood.\n\nI'll answer that question one day. Do you know when day that will be? The day nobody cares about the answer. "
+ 
+ whoniverse.91.c:0 "Do you need to stay in London to safekeep the peace?"
+ whoniverse.91.c.response:0 "I'd love to travel more than anything, but I think I have to stay. I've got a couple of boxes to keep an eye on, and a world to keep safe."
+ 
+ whoniverse.91.d:0 "But there are two of you."
+ whoniverse.91.d.response:0 "Yes, technically, as long as the other Osgood stays in London, I think I could join you. But if anything happens to her, I'll have to return."
+
+ whoniverse.91.e:0 "§lRecruit her as a Scientist.§!"
+ whoniverse.91.e.custom_tooltip:2 "§Y$NAME_whoniverse_osgood_name$§! joins our Empire as a §HLeader§!."
+
+ whoniverse.91.f:0 "Dismiss her."
+
+# Zygor anomaly, event, project
+ whoniverse_zygor_cat:0 "Zygon Ruins"
+ whoniverse_zygor_desc:0 "Scans of this burned planet reveal traces of Zygon biotechnology."
+
+ whoniverse.100.name:0 "Remants of Zygor"
+ whoniverse.100.desc:0 "We have finished our survey of the planet §SZygor§!, the now inhabitable homeworld of the shapeshifting §HZygons§!, burned at the early stages of the §LLast Great Time War§!. Beneath its scorched surface, we have discovered an extensive network of underground tunnels leading to a sealed vault. Within this vault lie thousands of stasis pods, containing hibernating Zygon survivors.\n\nWe can either transport these pods to a secure location and awaken the survivors, or disassemble the pods on-site, allowing us to study and potentially harness advanced Zygon biotechnology."
+ whoniverse.100.a:0 "Issue a project to extract and reawaken the Zygons."
+ whoniverse.100.b:0 "Disassemble and study the stasis pods."
+ whoniverse.100.c:0 "The Dalek technology is supreme! Exterminate the Zygons!"
+
+ whoniverse_zygor_project:0 "Zygon Stasis Pods"
+ whoniverse_zygor_project_DESC:0 "Send a construction ship to Zygor to extract the Zygon survivors."
+
+ whoniverse.101.name:0 "PROJECT_COMPLETE"
+ whoniverse.101.desc:0 "Our construction team successfully extracts the §HZygon§! stasis pods and transports them to our capital. Our cryologists carefully begin the process of reviving the Zygon survivors. As they awaken, the Zygons come to terms with the fact that they are the last remnants of their once-mighty empire, now refugees within our own.\n\nDespite their unique abilities and distinct culture, our social experts are confident that with careful management, the integration of the Zygons into our society is achievable. The Zygons, though initially disoriented, express a willingness to adapt and contribute to their new home, seeking a fresh start amidst the ashes of their past."
+ whoniverse.101.a:0 "Excellent."
+ whoniverse.101.tooltip:0 "2 §HZygon§! pops added to §Y[Root.GetName]§."
+
+ ### WEEPING ANGELS ###
+ # Weeping Angel trait, citizenship
+ trait_whoniverse_weeping_angel:0 "Quantum-Locking"
+ trait_whoniverse_weeping_angel_desc:0 "This predator species feeds on time energy of its victims. When observed by any living creature, it turns to stone."
+ trait_whoniverse_weeping_angel_tooltip:0 "Decreases Stability\n\n§RKills§! pops of other species"
+
+ citizenship_whoniverse_predator: "Predator"
+ citizenship_whoniverse_predator_tooltip: "Pops of this species §Rkill§! pops of other species over time and decrease Stability."
+ citizenship_whoniverse_predator_tooltip_delayed: "§L Don't blink!§!"
+
+ job_whoniverse_predator: "Predator"
+ job_whoniverse_predator_plural: "$job_whoniverse_predator$"
+ job_whoniverse_predator_desc: "This pop hunts down pops of other species."
+ living_standard_whoniverse_predator: "Predation"
+ living_standard_whoniverse_predator_tooltip: "This species hunts down pops of other species."
+ living_standard_whoniverse_predator_tooltip_delayed: ""
+
+ SPECIES_MUST_BE_PREDATING: "$TRIGGER_FAIL$Species must have §Y$citizenship_whoniverse_predator§! citizenship."
+ SPECIES_MUST_NOT_BE_PREDATING: "$TRIGGER_FAIL$Species must not have §Y$citizenship_whoniverse_predator$§! citizenship." # Not used
+
+# Weeping Angels Blink chain
+ whoniverse_blink_chain_title:0 "Blink"
+ whoniverse_blink_chain_desc:0 "Mysterious disappearances are being reported from [Root.GetName]."
+
+ whoniverse.121.name:0 "Blink"
+ whoniverse.121.desc:0 "Our operatives on [Root.GetName] have reported a series of mysterious disappearances near an abandoned house in London. Locals claim to have seen eerie statues resembling "§SWeeping Angels§!" around the area. These statues, carved from stone, appear to cover their eyes as if weeping, but unsettling reports suggest they move when unobserved. The disappearances have sparked fear and paranoia among the population.\n\nImmediate investigation is required to uncover the truth behind these sinister occurrences."
+ whoniverse.121.a:0 "Investigate the area."
+ whoniverse.121.b:0 "We don't have time for this."
+ whoniverse.121.tooltip:0 "3 §HWeeping Angel§! pops added to §Y[Root.GetName]§."
+
+ whoniverse.122.name:0 "Easter Eggs"
+ whoniverse.122.desc:0 "During the investigation, our operatives discovered a series of cryptic messages embedded in seemingly unrelated DVDs. These messages are from an enigmatic figure known as §lThe Doctor§!.\n\n"People assume that time is a strict progression of cause to effect," explains the Doctor in one of the messages, "but actually from a non-linear, non-subjective viewpoint, it's more like a big ball of wibbly-wobbly, timey-wimey stuff."\n\nOur experts believe the recordings are connected to the §SWeeping Angels§! and advise us to find the rest of them."
+ whoniverse.122.a:0 "We need to find all the hidden messages."
+ 
+ whoniverse_blink_project:0 "Easter Eggs"
+ whoniverse_blink_project_DESC:0 "We need to find and decode all messages from the Doctor to learn more about the Weeping Angels."
+
+ whoniverse.123.name:0 "PROJECT_COMPLETE"
+ whoniverse.123.desc:0 "Our scientists have successfully deciphered §lThe Doctor§!'s messages. He explains that the §SWeeping Angels§! are ancient quantum-locked beings feeding off time energy and are attracted to his time machine, the TARDIS. They have a weakness, though - when any living creature observes them, they literally turn to stone.\n\nOur response team retrieves and reactivates the TARDIS just moments before getting surrounded by the aliens. As the time machine teleports away, the Weeping Angels get tricked into looking at each other and are permanently frozen. As long as we keep them together, they will never be able to escape."
+ whoniverse.123.a:0 "We are safe... For now."
+
+# Weeping Angels Random Colony Event 1
+ whoniverse.131.name:0 "Weeping Angel"
+ whoniverse.131.desc:0 "Colonists on [Root.GetName] have reported a series of mysterious disappearances. These incidents seem to coincide with the appearance of a statue resembling a "§SWeeping Angel§!". This eerie statue, lifelike and sorrowful with its face covered by its hands, seems to move whenever it is not being directly observed, eluding all attempts to capture or study it.\n\nFear and paranoia are spreading as more colonists vanish, always last seen near where the statue was found. Security teams and scientists are baffled, suggesting constant surveillance as the only measure to monitor the statue. It is believed that if left alone, the statue may eventually disappear on its own."
+ whoniverse.131.a:0 "Worrying."
+ whoniverse.131.tooltip:0 "1 §HWeeping Angel§! pop added to §Y[Root.GetName]§."
+
+# Weeping Angels Random Colony Event 2
+ whoniverse.133.name:0 "Angelic Host"
+ whoniverse.133.desc:0 "Panic has gripped the colonists on [Root.GetName] as reports flood in of entire groups of colonists vanishing without a trace. Investigations reveal a chilling discovery - not just one, but an entire host of §SWeeping Angels§! have appeared overnight. These otherworldly statues, eerily lifelike and sorrowful, seem to move when they are not being directly observed, making them hard to track or capture.\n\nSecurity footage reveals these statues creeping closer to their victims in the blink of an eye, their expressions changing to reveal menacing fangs and outstretched hands. Fear and chaos reign as colonists continue to disappear at an alarming rate.\n\nExperts suggest evacuating the entire colony, hoping that if left alone, the statues may eventually disappear on their own."
+ whoniverse.133.a:0 "Disconcerting."
+ whoniverse.133.tooltip:0 "5 §HWeeping Angel§! pops added to §Y[Root.GetName]§."
+
+
+# Weeping Angels Random Colony Event 3
+ whoniverse.135.name:0 "Cult of the Weeping Angel"
+ whoniverse.135.desc:0 "Reports have surfaced from [Root.GetName] of a peculiar statue resembling a "§SWeeping Angel§!", rumored to exhibit miraculous movements when unobserved. The local population, captivated by its sorrowful appearance and mysterious behavior, begins to venerate the statue, forming a growing cult around it. Many believe the angel brings blessings and protection to those who pay homage.\n\nHowever, unsettling incidents soon follow. People begin to vanish without a trace, coinciding with moments when the statue is left unwatched. Fear spreads as the disappearances become more frequent, casting a shadow over the once serene colony.\n\nThe cult persists despite the disappearances, with fervent followers convinced that the weeping angel holds divine power."
+ whoniverse.135.a:0 "Disconcerting."
+ whoniverse.135.tooltip:0 "1 §HWeeping Angel§! pop added to §Y[Root.GetName]§."
+
+### CHURCH OF THE PAPAL MAINFRAME ###
+# Church Origin
+ origin_whoniverse_church:0 "Silence Will Fall"
+ origin_whoniverse_church_desc:0 "The Church of the Papal Mainframe, the future evolution of Earth's churches, has detected a mysterious signal spreading through time and space. With the help of its soldiers and confessors, it is determined to solve this "First Question" at any cost."
+
+# - $ADDITONAL_TECHNOLOGIES_STRING$ ['concept_habitat_1', £engineering_research£ $tech_habitat_1$]
+ origin_tooltip_whoniverse_church:0 "- $HOMEWORLD$ ['concept_pc_habitat']$NEW_LINE$- Starts with an additional system$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_silence']$NEW_LINE$- Additional Starting Technologies: §COrbital Habitats§!, §CMainframe Habitats§! $NEW_LINE$- $GUARANTEED_RESEARCH_OPTION_STRING$ ['concept_habitat_2', £engineering_research£ $tech_habitat_2$]$NEW_LINE$- Starting ruler is §YImmortal§!$NEW_LINE$-Unique §HSiege of Trenzalore§! midgame crisis$NEW_LINE$- Unique Church of the Papal Mainframe events"
+
+ whoniverse_church_secondary_species:0 "Secondary Species"
+
+ START_SCREEN_WHONIVERSE_CHURCH:0 "The Church of the Papal Mainframe began as a force of faith and order in a chaotic universe. Evolving from a spiritual sanctuary into a military power, the Church committed to protecting the fabric of reality, especially after a crack in the universe appeared near Trenzalore, emitting an enigmatic signal.\n\nIn response, the Church relocated its headquarters to Trenzalore, a planet prophesied to be the site of a decisive battle, and sealed it off with a protective force field. The clergy views Trenzalore with reverence and dread, understanding its fate is tied to the universe's survival. Whispers of an ancient conflict and the rise of the Doctor pervade its ranks.\n\nWithin the Church, the militant Kovarian Chapter, led by the enigmatic Madame Kovarian, has taken a prominent role. They operate from their base at Demon's Run, intensifying the Church's mission to prevent the foretold cataclysm.\n\nAs tensions rise, the Church braces for the inevitable conflict. The secrets of Trenzalore and the Doctor's true role promise revelations that could change history. The Church must balance faith with pragmatism to protect the universe without causing its downfall."
+
+# Silence species trait
+ trait_whoniverse_silence:0 "Confessors"
+ trait_whoniverse_silence_desc:0 "This species is genetically engineered to allow people to confess their sins without remembering doing so, accomplished by fashioning them so anyone looking at them would forget their encounter when they looked away."
+ trait_whoniverse_silence_tooltip:0 "- §Y+10%§! Unity from jobs\n$TRAIT_INFERTILE$"
+
+# Church Silence Civic
+ civic_tooltip_silence_effects:7 "- §Y+15%§! Army damage\n- §Y+1§! Code Breaking\n- §Y+10%§! Infiltration speed\n- §Y+5§! Stability"
+
+ civic_whoniverse_silence:0 "The Silence"
+ civic_whoniverse_silence_desc:0 "This religious order is dedicated to ensuring that "silence will fall" in response to the First Question."
+ councilor_whoniverse_silence:0 "Envoy of the Silence"
+ councilor_whoniverse_silence_desc:0 "The $TITLE$ coordinates our strategies and operations with the priests of The Silence."
+
+# Church Habitat tech
+ tech_whoniverse_church_habitats:0 "Mainframe Habitats"
+ tech_whoniverse_church_habitats_desc:0 "Using advanced force field technologies from the 51st and 52nd centuries, we are able to construct space stations with an unusually high degree of habitability."
+ 
+# Church Ascension Perk and Building
+ ap_whoniverse_church:0 "Order of the Headless"
+ ap_whoniverse_church_desc:0 "The Headless Monks are a religious order who believes in listening to their hearts rather than their minds, to the point of having themselves beheaded."
+ whoniverse_ap_church_tooltip:0 "- Can build unique §C['concept_whoniverse_seventh_transept']§! building"
+
+ building_whoniverse_seventh_transept:0 "Seventh Transept"
+ building_whoniverse_seventh_transept_desc:4 "The Seventh Transept is a sacred chamber where the Headless Monks stored the heads of those converted to their order."
+ planet_buildings_whoniverse_seventh_transept:0 "$building_whoniverse_seventh_transept$"
+ mod_planet_buildings_whoniverse_seventh_transept_upkeep_mult:0 "$building_whoniverse_seventh_transept$ Upkeep"
+#  building_whoniverse_seventh_transept:0 "Seventh Transept"
+#  building_whoniverse_seventh_transept_desc:0 "Technology left behind by the Church. Can be taken apart and reassembled, but its inner components and workings are much too alien to replicate."
+
+ headless_limit_tooltip:0 "You control the maximum number of Headless Monk armies (7)."
+ headless_monk_army:0 "Headless Monk Army"
+ headless_monk_army_desc:0 "The Headless Monks are a religious order who believes in listening to their hearts rather than their minds, to the point of having themselves beheaded."
+ 
+
+# Trenzalore system
+ whoniverse_name_trenzalore_system:0 "Trenzalore" 
+ whoniverse_name_trenzalore:0 "Trenzalore"
+ whoniverse_name_papal_mainframe:0 "Papal Mainframe"
+ whoniverse_trenzalore_system_NAME:0 "Trenzalore"
+ whoniverse_trenzalore_system_DESC:0 "Starting system of the Church of the Papal Mainframe."
+
+ Trenzalore:0 "Trenzalore"
+ Soror:0 "Soror"
+ Frater:0 "Frater"
+
+ # Demon's Run system
+ whoniverse_name_demons_run_system:0 "Demon's Run"
+ whoniverse_name_demons_run:0 "Demon's Run"
+ whoniverse_name_demons_run_base:0 "Demon's Run"
+ whoniverse_demons_run_system_initializer_NAME:0 "Demon's Run"
+ whoniverse_demons_run_system_initializer_DESC:0 "Base of the Kovarian Chapter."
+
+# Gamma Forests System
+ whoniverse_name_gamma_forests_system:0 "Gamma Forests"
+ whoniverse_name_gamma_forests_star:0 "Gamma Star"
+ whoniverse_name_gamma_forests_planet:0 "Gamma Forests II"
+
+ NAME_whoniverse_gamma_forests:0 "Gamma Forests Confederation"
+
+# Kastarion System
+ whoniverse_name_kastarion_system:0 "Kastarion"
+ whoniverse_name_kastarion_star:0 "Kastarion"
+ whoniverse_name_kastarion_planet:0 "Kastarion III"
+
+# Dundra / Alfava Metraxis System
+ whoniverse_name_dundra_system:0 "Dundra"
+ whoniverse_name_dundra_star:0 "Dundra"
+ whoniverse_name_alfava_metraxis_planet:0 "Alfava Metraxis"
+
+# Alfava Metraxis anomaly, archaeology events
+ whoniverse_alfava_metraxis_cat:0  "Alien Landmarks"
+ whoniverse_alfava_metraxis_desc:0 "Our scanners reveal numerous alien landmarks on this planet."
+
+ whoniverse_digsite_alfava_metraxis:0 "Mazes of the Dead"
+ whoniverse_digsite_alfava_metraxis_desc:0 "Numerous temples and subterranean labyrinths are located on [From.Planet.GetName], nicknamed "Mazes of the Dead" by our explorers."
+
+ whoniverse.170.name:0 "Mazes of the Dead"
+ whoniverse.170.desc:0 "[From.Planet.GetName] is home to an extraordinary number of ancient ruins. Our team has uncovered numerous labyrinths and temples located on this planet, and have fittingly named them as "Mazes of the Dead". If we want to know more, an expedition to the surface will be required."
+ whoniverse.170.a:0 "Curious."
+
+ whoniverse.171.name:0 "Aplan Mortaria"
+ whoniverse.171.desc:0 "Our archaeologists on [From.Planet.GetName] have uncovered the §LAplan Mortaria§!, an ancient necropolis belonging to the long-extinct, two-headed Aplan civilization. The site is a maze of tunnels filled with statues, many depicting the Aplans in their dual-headed form. However, some statues appear damaged, missing one of their heads.\n\nAs the team explores further, an unsettling feeling grows - it's as if the statues are watching them."
+ whoniverse.171.a:0 "Continue the excavation."
+
+ whoniverse.172.name:0 "Flesh and Stone"
+ whoniverse.172.desc:0 "Our fears have been realized. The statues in the Aplan Mortaria are not mere stone - they are §RWeeping Angels§!, deadly entities that move with incredible speed when unobserved. The Angels have begun hunting our team, turning the necropolis into a death trap.\n\nSurvival depends on finding a way to escape or neutralize the threat."
+ whoniverse.172.a:0 "We must find a way to escape."
+ whoniverse.172.tooltip:0 "8 §HWeeping Angel§! pops added to §Y[From.Planet.GetName]§!"
+
+ whoniverse.173.name:0 "The Crack in Time"
+ whoniverse.173.desc:0 "Deep within the Aplan Mortaria, our team has stumbled upon a mysterious crack in the very fabric of reality. It pulses with an eerie light, seeming to defy the laws of time and space. With the Weeping Angels closing in, the team devises a desperate plan - they lure the Angels toward the crack.\n\nAs the Angels approach, the crack suddenly flares with blinding intensity. In an instant, the Angels vanish, pulled into the void, and the crack seals itself with a thunderous finality. The ruins fall silent, but the lingering dread suggests that this is not the last we've seen of these temporal anomalies.\n\nThe survivors barely escape, leaving behind more questions than answers."
+ whoniverse.173.a:0 "Seal off the ruins and depart."
+ whoniverse.173.a.tooltip:0 "All §HWeeping Angel§! pops removed from §Y[From.Planet.GetName]§!"
+
+# Trenzalore / The Question event chain
+ whoniverse_trenzalore_chain_title:0 "The Siege of Trenzalore"
+ whoniverse_trenzalore_chain_desc:0 "As the mysterious signal from Trenzalore attracts the universe's deadliest foes, the Church of the Papal Mainframe must join forces with the Doctor to defend the planet in a battle that will determine the fate of time itself."
+
+ whoniverse.151.name:0 "The Doctor's Arrival"
+ whoniverse.151.desc:0 "Our sensors have detected a familiar anomaly - a blue box materializing near §STrenzalore§!. This §BTARDIS§!, an ancient vehicle of the last Time Lord, could bring unforeseen consequences. We have taken immediate action and arranged an audience with its occupant, §lthe Doctor§!.\n\nUpon the Time Lord's arrival, [Root.Owner.Ruler.GetName] questions the Doctor about the mysterious signal emanating from the shielded planet below. The Doctor offers to investigate the surface of Trenzalore with his TARDIS."
+ whoniverse.151.a:0 "Allow the Doctor to investigate Trenzalore."
+ whoniverse.151.b:0 "We will handle this on our own."
+ whoniverse.151.b.tooltip:0 "§RWithout the Doctor's help, we might never find out the truth about Trenzalore.§!"
+
+ whoniverse.152.name:0 "The Oldest Question"
+ whoniverse.152.desc:0 "The Doctor's investigation on Trenzalore has led him to the town of Christmas, where he has uncovered the source of the mysterious signal - a crack in time. This crack is broadcasting the oldest question in the universe: §L"Doctor who?"§!\n\nThe implications are dire. If the Question is answered, it could lead to the return of the Time Lords and reignite the Time War, a catastrophic conflict that nearly destroyed reality. To protect the universe and prevent such a crisis, the Doctor has decided to remain on Trenzalore, effectively becoming the new sherrif of Christmas."
+ whoniverse.152.a:0 "Prepare our defenses for the inevitable conflict."
+ whoniverse.152.b:0 "Monitor the situation."
+
+ whoniverse.153.name:0 "The Siege of Trenzalore"
+ whoniverse.153.desc:0 "The signal from the crack in Christmas has attracted numerous hostile fleets, including Daleks, Cybermen, and Sontarans. Each faction seeks to destroy Trenzalore to prevent the return of the Time Lords, seeing it as a threat to their own power.\n\nIn response to this unprecedented threat, [Root.Owner.Ruler.GetName] is considering an unprecedented faith change - establishing the §SChurch of the Silence§!, a new sect dedicated to ensuring the Question remains unanswered."
+ whoniverse.153.a:0 "Silence will fall!"
+ whoniverse.153.a.tooltip:0 "Empire changes name to §SChurch of the Silence§!$NEW_LINE$§RInvading Flotilla§! appears on §HTrenzalore§!$NEW_LINE$3 §HSilent§! pops added to §Y[Root.Owner.Capital.GetName]§!"
+ whoniverse.153.b:0 "Keep to our old faith and focus on defense."
+ whoniverse.153.b.tooltip:0 "§RInvading Flotilla§! appears on §HTrenzalore§"
+
+ whoniverse_church_faith_change:0 "Unprecendented Faith Change"
+ NAME_Invading_Fleet:0 "Invading Flotilla"
+
+ whoniverse.154.name:0 "The Kovarian Chapter"
+ whoniverse.154.desc:0 "As the siege of Trenzalore continues, internal strife within our ranks reaches a breaking point. §rMadame Kovarian§! and her chapter have broken away from the Church, blaming the Doctor for the impending disaster. Despite our efforts to maintain unity, Kovarian's faction departs, determined to confront the Doctor on their own.\n\nThe loss of Kovarian's chapter weakens our position, both in terms of morale and military strength. We must now navigate the consequences of this betrayal and continue to defend Trenzalore against the ongoing siege."
+ whoniverse.154.a:0 "Focus on stabilizing the Church."
+ whoniverse.154.b:0 "Prioritize the defense of Trenzalore."
+
+ whoniverse.155.name:0 "Dalek War Fleet"
+ whoniverse.155.desc:0 "The situation at Trenzalore reaches a critical point as an unprecedented wave of Dalek ships arrives. This massive Dalek armada, the largest ever seen, converges directly on the Papal Mainframe, intent on annihilating it to ensure the Time Lords never return.\n\nWith the Dalek fleet posing an overwhelming threat, our defenses are pushed to their limits. The Doctor, who remains on the planet to protect Trenzalore, faces the gravest danger yet. Immediate action is required to prepare for the defense of the Mainframe."
+ whoniverse.155.a:0 "Prepare for assault!"
+ whoniverse.155.a.tooltip:0 "§RDalek War Fleet§! appears near [Root.Owner.Capital.GetName]"
+
+ NAME_Dalek_War_Fleet:0 "Dalek War Fleet"
+
+ whoniverse.156.name:0 "The Doctor's Last Stand"
+ whoniverse.156.desc:0 "The battle for Trenzalore reaches its climax. §lThe Doctor§!, now old and worn, faces overwhelming odds as the combined might of our enemies presses in. Our forces are stretched to their limits, and victory seems uncertain.\n\nIn a desperate moment, the crack in time reopens, and a surge of regenerative energy flows through, granted by the Time Lords. The Doctor is rejuvenated, gaining the strength needed for a final stand. With his renewed vigor, he leads a decisive counterattack that drives the invaders away and secures Trenzalore.\n\nAs the last of the enemy fleets retreat, the crack in time seals itself, preventing the return of the Time Lords and averting a greater catastrophe. With the planet safe, the newly regenerated Doctor prepares to leave Trenzalore. He departs with the knowledge that the Time Lords still exist, albeit in a pocket universe, ensuring they remain out of reach - for now."
+ whoniverse.156.a:0 "The future is saved."
+ whoniverse.156.a.tooltip:0 "§HTrenzalore§! becomes a habitable planet"
+ 
+ whoniverse_church_defenders_of_trenzalore:0 "Defenders of Trenzalore"
+
+ whoniverse.157.name:0 "Arrival of the Cyber-Fleet"
+ whoniverse.157.desc:0 "A Cyber-Fleet has arrived at Trenzalore, drawn by the signal from the crack in time. The Cybermen view the potential return of the Time Lords as a threat to their goal of universal domination.\n\nAs their ships take up positions, the Doctor and our forces must brace for the impending attack."
+ whoniverse.157.a:0 "Prepare our defenses!"
+ whoniverse.157.a.tooltip:0 "§RCyber-Fleet§! appears near [Root.Owner.Capital.GetName]"
+
+ NAME_Cyber_Fleet:0 "Cyber-Fleet"
+ NAME_Dalek_Scout_Fleet:0 "Dalek Scout Fleet"
+ NAME_Sontaran_Fleet:0 "Sontaran Fleet"
+
+ whoniverse.158.name:0 "Dalek Scout Fleet"
+ whoniverse.158.desc:0 "Our sensors have detected a Dalek scout fleet approaching Trenzalore. This vanguard signals the likely arrival of a larger invasion force, as the Daleks see the return of the Time Lords as a threat to their supremacy.\n\nWe must remain vigilant and prepare for the possibility of a full-scale Dalek assault."
+ whoniverse.158.a:0 "Prepare our defenses!"
+ whoniverse.158.a.tooltip:0 "§RDalek Scout Fleet§! appears near [Root.Owner.Capital.GetName]"
+
+ whoniverse.159.name:0 "Cybermen Reinforcements Arrive"
+ whoniverse.159.desc:0 "Another wave of Cybermen has arrived, with reinforcements bolstering their fleet as they prepare to launch a relentless assault on Trenzalore."
+ whoniverse.159.a:0 "Prepare to counterattack!"
+ whoniverse.159.a.tooltip:0 "§RCyber-Fleet§! appears near [Root.Owner.Capital.GetName]"
+ 
+ whoniverse.160.name:0 "Cybermen Scout Ships Spotted"
+ whoniverse.160.desc:0 "A small group of Cybermen recon cruisers has been detected near Trenzalore, quietly monitoring the situation and likely gathering data for a larger invasion force."
+ whoniverse.160.a:0 "Prepare to engage the enemy fleet!"
+ whoniverse.160.a.tooltip:0 "§RCyber-Fleet§! appears near [Root.Owner.Capital.GetName]"
+ 
+ whoniverse.161.name:0 "Sontaran Fleet Detected"
+ whoniverse.161.desc:0 "A Sontaran battle fleet has arrived in orbit around Trenzalore, eager for the glory of battle and determined to prevent the return of the Time Lords, whom they see as a threat to their warlike ambitions."
+ whoniverse.161.a:0 "Prepare our defenses!"
+ whoniverse.161.a.tooltip:0 "§RSontaran Fleet§! appears near [Root.Owner.Capital.GetName]"
+
+
+ 

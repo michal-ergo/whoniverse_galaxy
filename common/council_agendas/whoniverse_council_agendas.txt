@@ -1,0 +1,16 @@
+# Agenda for Cybermen to replace councilor
+# agenda_whoniverse_cybermen = {
+# 	agenda_cost = @base_agenda_cost
+# 	potential = {
+# 		is_machine_empire = yes
+# 	}
+# 	allow = {
+# 		has_civic = civic_whoniverse_cyber_conversion
+# 	}
+# 	effect = {
+# 		unlock_council_selection = yes
+# 	}
+# 	ai_weight = {
+# 		base = 0
+# 	}
+# }

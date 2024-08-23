@@ -1,0 +1,118 @@
+@base_moon_distance = 10
+
+### RANDOM SYSTEM ###
+# Tau Ceti / Zygor
+
+# Zygon system initializer - check if Tau Ceti name stays unique or duplicates
+whoniverse_zygor_system = {
+ 	name = "whoniverse_zygor_system" # Renamed from Tau Ceti
+
+ 	usage = misc_system_init
+ 	usage_odds = 100
+ 	max_instances = 1
+
+ 	class = "sc_g"
+
+ 	flags = { tau_ceti_system whoniverse_tau_ceti_system } # tau_ceti_system whoniverse_tau_ceti_system
+
+ 	planet = {
+ 		name = "Zygor"
+ 		class = "pc_g_star"
+ 		orbit_distance = 0
+ 		orbit_angle = 1
+ 		size = 32
+ 		has_ring = no
+ 	}
+
+	 planet = {
+		name = "Zygor I"
+		class = "pc_molten"
+		orbit_distance = 22
+		size = 6
+		has_ring = no
+	}
+
+	# Zygor
+ 	planet = {
+ 		name = "whoniverse_zygor"
+ 		class = "pc_nuked"
+ 		orbit_distance = 60
+ 		orbit_angle = 220
+ 		size = { min = 18 max = 24 }
+ 		has_ring = no
+
+ 		init_effect = {
+ 			add_anomaly = { category = whoniverse_zygor_cat }
+ 			set_planet_flag = whoniverse_zygor
+ 		}
+ 	}
+	
+
+	planet = {
+		name = "Zygor III"
+		class = "pc_gas_giant"
+		orbit_distance = 55
+		orbit_angle = 90
+		size = 22
+		has_ring = yes
+	}
+
+	planet = {
+		name = "Zygor IV"
+		class = "pc_barren_cold"
+		orbit_distance = 80
+		orbit_angle = 110
+		size = 9
+		has_ring = no
+	}
+
+ 	asteroid_belt = {
+ 		type = rocky_asteroid_belt
+ 		radius = 170
+ 	}
+}
+
+# # Dalek Asylum - moved back to prescripted species systems
+# whoniverse_asylum_system = {
+# 	name = "whoniverse_name_asylum_system"
+
+# 	usage = misc_system_init
+# 	#usage = custom_empire
+# 	usage_odds = 100
+# 	max_instances = 1
+
+# 	class = "sc_b"
+
+# 	flags = { whoniverse_dalek_asylum_system }
+
+# 	planet = {
+# 		name = "D-4-Lambda-E"
+# 		class = "pc_b_star"
+# 		orbit_distance = 0
+# 		orbit_angle = 1
+# 		size = 25
+# 		has_ring = no
+# 	}
+
+# 	# Dalek Asylum
+# 	planet = {
+# 		name = "D-4-Lambda-E I"
+# 		class = "pc_shielded"
+# 		orbit_distance = 65
+# 		orbit_angle = 220
+# 		size = { min = 20 max = 24 }
+# 		has_ring = no
+
+# 		init_effect = {
+# 			clear_deposits = yes
+# 			add_deposit = d_society_5
+# 			add_anomaly = { category = whoniverse_asylum_cat }
+# 			set_planet_flag = whoniverse_dalek_asylum
+# 		}
+# 	}
+	
+# 	asteroid_belt = {
+# 		type = rocky_asteroid_belt
+# 		radius = 140
+# 	}
+# }

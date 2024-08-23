@@ -1,0 +1,559 @@
+@distance = 50
+@base_moon_distance = 10
+@jumps = 3
+
+
+### CYBERMEN SYSTEMS ###
+# Hedgewick's World of Wonders
+# Tiestus - Pre-FTL Human Empire
+# Telos - Cyber-tomb World
+# Tasak - Pre-FTL Human Empire, Cyber-tomb World
+
+# Cyberiad Home World - Hedgewick's World of Wonders
+whoniverse_cyberiad_system_initializer = {
+	name = "whoniverse_name_cyberiad_system"
+	
+	class = "sc_g"
+
+	usage = custom_empire
+
+	flags = { empire_home_system whoniverse_cyberiad_system }
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "Cyberiad Core"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 42
+		has_ring = no
+	}
+
+	change_orbit = 25
+	
+	planet = {
+		name = "Cyberiad Core I"
+		class = "pc_molten"
+		orbit_distance = 15
+		size = 5
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Cyberiad Core II"
+		class = "pc_barren"
+		orbit_distance = 55
+		orbit_angle = 220
+		size = 11
+		has_ring = no
+	}
+	
+	planet = {
+		name = "whoniverse_name_hedgewick"
+		class = "pc_continental"
+		orbit_distance = 50
+		orbit_angle = 140
+		size = 22
+		starting_planet = yes
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+			set_planet_flag = can_organic_assemble_flag
+			set_planet_flag = whoniverse_cyberiad_planet
+			save_global_event_target_as = whoniverse_start_hedgewick
+		}
+
+		moon = {
+			name = "Hedgewick's Moon"
+			class = "pc_barren_cold"
+			size = 8
+			orbit_distance = 8
+			orbit_angle = 90
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				set_deposit = d_minerals_3
+			}
+		}
+
+		moon = {
+			name = "Natty Longshoe's Moon"
+			class = "pc_barren_cold"
+			size = 3
+			orbit_distance = 2
+			orbit_angle = 180
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				set_deposit = d_society_3
+			}
+		}
+	}
+
+		change_orbit = 35
+
+		asteroid_belt = {
+			type = rocky_asteroid_belt
+			radius = 200
+		}
+
+		planet = {
+			name = "whoniverse_name_hedgewick_asteroid"
+			class = "pc_asteroid"
+			orbit_distance = 10
+			orbit_angle = 90
+			size = 4
+			has_ring = no
+		}
+		
+				
+	neighbor_system = {
+	 	initializer = whoniverse_tiestus_system_initializer
+	 	hyperlane_jumps = { min = 2 max = @jumps }
+	}
+}
+
+# Tiestus - Pre-FTL empire
+whoniverse_tiestus_system_initializer = {
+	name = "whoniverse_name_tiestus_system"
+	
+	class = "sc_k"
+
+	flags = { empire_home_system whoniverse_tiestus_system }
+
+	init_effect = {
+		every_neighbor_system = { set_star_flag = empire_cluster }
+	}
+
+	planet = {
+		name = "Tiestus"
+		class = "pc_k_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 35
+		has_ring = no
+	}
+
+	change_orbit = 20
+	
+	planet = {
+		name = "Tiestus I"
+		class = "pc_molten"
+		orbit_distance = 30
+		orbit_angle = 270
+		size = 8
+		has_ring = no
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 45
+	}
+
+	planet = {
+		name = "Tiestus II"
+		class = "pc_barren"
+		orbit_distance = 45
+		orbit_angle = 220
+		size = 16
+		has_ring = no
+	}
+
+	planet = {
+		name = "whoniverse_name_tieustus"
+		class = "pc_continental"
+		orbit_distance = 75
+		orbit_angle = 110
+		size = 18
+		has_ring = no
+		# entity = "continental_planet_earth_entity"
+		deposit_blockers = none
+		modifiers = none
+		flags = { whoniverse_planet_tiestus }
+
+		init_effect = {
+			save_global_event_target_as = whoniverse_tiestus
+			create_species = {
+				name = PRESCRIPTED_species_name_whoniverse_human
+				plural = PRESCRIPTED_species_plural_whoniverse_human
+				class = "HUM"
+				portrait = whoniverse_human
+				homeworld = THIS
+					traits = {
+						trait = "trait_adaptive"
+						trait = "trait_nomadic"
+						trait = "trait_wasteful"
+					}
+				}
+			create_country = {
+				name = "NAME_whoniverse_tiestus"
+				authority = auth_democratic
+				day_zero_contact = no
+				civics = {
+					civic = civic_increasing_urbanization
+					civic = civic_atmospheric_pollution
+					}
+				species = last_created_species
+					ethos = {
+						ethic = "ethic_xenophile"
+						ethic = "ethic_fanatic_egalitarian"
+						}
+				origin = origin_default_pre_ftl
+				flag = {
+					icon = {
+					category = "human"
+					file = "flag_human_8.dds"
+						}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+						}
+					colors={
+						"dark_blue"
+						"green"
+						"null"
+						"null"
+						}
+					}
+				type = primitive
+				}
+			last_created_country = {
+				set_graphical_culture = industrial_01
+				set_country_flag = atomic_age
+			#	set_country_flag = humans_early_space_age
+				set_pre_ftl_age = atomic_age
+			}
+			set_owner = last_created_country
+
+			create_pre_ftl_blockers = yes
+
+			create_army = {
+				name = "NAME_Tiestus_Armed_Forces_West"
+				owner = last_created_country
+				species = last_created_species
+				type = "postatomic_army"
+			}
+			create_army = {
+				name = "NAME_Tiestus_Armed_Forces_East"
+				owner = last_created_country
+				species = last_created_species
+				type = "postatomic_army"
+			}
+			create_army = {
+				name = "NAME_Tiestus_Armed_Forces_North"
+				owner = last_created_country
+				species = last_created_species
+				type = "postatomic_army"
+			}
+			create_army = {
+				name = "NAME_Tiestus_Armed_Forces_West"
+				owner = last_created_country
+				species = last_created_species
+				type = "postatomic_army"
+			}
+			while = {
+				count = @atomic_age_pops
+				create_pop = {
+					species = last_created_species
+				}
+			}
+			add_building = building_primitive_farm
+			add_building = building_primitive_factory
+			add_building = building_primitive_mine
+			add_building = building_primitive_power_plant
+			add_building = building_primitive_capital
+			add_building = building_urban_dwellings
+
+			last_created_country = {
+				capital_scope = { set_name = "Tiestus" }
+			}
+		}
+	}
+
+	change_orbit = 15
+
+	planet = {
+		name = "Tiestus IV"
+		class = "pc_barren"
+		orbit_distance = 80
+		orbit_angle = 90
+		size = 30
+		has_ring = yes
+	}
+
+	planet = {
+		name = "Tiestus V"
+		class = "pc_gas_giant"
+		orbit_distance = 110
+		orbit_angle = 90
+		size = 30
+		has_ring = yes
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 325
+	}
+
+	neighbor_system = {
+		initializer = whoniverse_telos_system_initializer
+		hyperlane_jumps = { min = 2 max = @jumps }
+   }
+	neighbor_system = {
+		initializer = whoniverse_tasak_system_initializer
+		hyperlane_jumps = { min = 3 max = 6 } # 3 - 6
+}
+
+}
+
+# Tremulus Three / Telos System - Cyber-tomb, Telos Minor anomaly
+whoniverse_telos_system_initializer = {
+	name = "whoniverse_name_telos_system"
+	
+	class = "sc_g"
+
+	flags = { empire_home_system whoniverse_tiestus_system }
+
+	init_effect = {
+		every_neighbor_system = { set_star_flag = empire_cluster }
+	}
+
+	planet = {
+		name = "tremulus_three"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 40
+		has_ring = no
+	}
+
+	change_orbit = 25
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 100
+	}	
+
+	planet = {
+		name = "whoniverse_name_telos"
+		class = "pc_arctic"
+		orbit_distance = 160
+		orbit_angle = 100
+		size = 18
+		has_ring = no
+		# entity = "continental_planet_earth_entity"
+		deposit_blockers = none
+		modifiers = none
+		flags = { whoniverse_planet_telos }
+
+		init_effect = {
+			prevent_anomaly = yes
+			save_global_event_target_as = whoniverse_telos
+			set_planet_flag = whoniverse_planet_telos
+			add_modifier = {
+				modifier = whoniverse_pm_telos
+			}
+			}
+	}
+
+	change_orbit = 10
+
+	planet = {
+		name = "whoniverse_name_telos_minor"
+		class = "pc_tropical"
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		size = 12
+		has_ring = yes
+		init_effect = {
+			prevent_anomaly = yes
+			save_global_event_target_as = whoniverse_telos_minor
+			add_anomaly = { category = whoniverse_telos_minor_cat }
+			set_planet_flag = whoniverse_telos_minor
+		}
+	}
+		
+}
+
+# Tasak System - Pre-FTL, Cyber-tomb
+whoniverse_tasak_system_initializer = {
+	name = "whoniverse_name_tasak_system"
+	
+	class = "sc_binary_9"
+
+	flags = { empire_home_system whoniverse_tiestus_system }
+
+	init_effect = {
+		every_neighbor_system = { set_star_flag = empire_cluster }
+	}
+
+	planet = {
+        name = "Tasak A"
+		class = "pc_a_star"
+        size = { min = 30 max = 35 }
+        orbit_distance = 15
+        orbit_angle = { min = 90 max = 270 }
+    }
+    planet = {
+        name = "Tasak B"
+		class = "pc_f_star"
+        size = { min = 25 max = 30 }
+        orbit_distance = 10
+        orbit_angle = 180
+    }
+
+	planet = {
+		name = "whoniverse_name_tasak"
+		class = "pc_tundra"
+		orbit_distance = 80
+		orbit_angle = 100
+		size = { min = 18 max = 23 }
+		has_ring = no
+		# entity = "continental_planet_earth_entity"
+		deposit_blockers = none
+		modifiers = none
+		flags = { whoniverse_planet_tasak }
+
+		init_effect = {
+			prevent_anomaly = yes
+			save_global_event_target_as = whoniverse_tasak
+			add_anomaly = { category = whoniverse_tasak_cat }
+			set_planet_flag = whoniverse_planet_tasak
+			add_modifier = {
+				modifier = whoniverse_pm_cyber_tomb
+			}			
+			create_species = {
+				name = PRESCRIPTED_species_name_whoniverse_human
+				plural = PRESCRIPTED_species_plural_whoniverse_human
+				class = "HUM"
+				portrait = whoniverse_human
+				homeworld = THIS
+					traits = {
+						trait = "trait_adaptive"
+						trait = "trait_nomadic"
+						trait = "trait_wasteful"
+					}
+				}
+			create_country = {
+				name = "NAME_whoniverse_tasak"
+				authority = auth_oligarchic
+				day_zero_contact = no
+				civics = {
+					civic = civic_landed_nobility
+					civic = civic_flat_world_theory
+					}
+				species = last_created_species
+					ethos = {
+						ethic = "ethic_xenophobe"
+						ethic = "ethic_spiritualist"
+						ethic = "ethic_authoritarian"
+						}
+				origin = origin_default_pre_ftl
+				flag = {
+					icon = {
+					category = "ornate"
+					file = "flag_ornate_11.dds"
+						}
+					background= {
+						category = "backgrounds"
+						file = "00_solid.dds"
+						}
+					colors={
+						"dark_blue"
+						"dark_blue"
+						"null"
+						"null"
+						}
+					}
+				type = primitive
+				}
+			last_created_country = {
+				set_graphical_culture = preindustrial_01
+				set_country_flag = late_medieval_age
+			#	set_country_flag = humans_early_space_age
+				set_pre_ftl_age = late_medieval_age
+			}
+			set_owner = last_created_country
+
+			create_pre_ftl_blockers = yes
+
+			while = {
+				count = @late_medieval_age_pops
+				create_pop = {
+					species = last_created_species
+				}
+			}
+			add_building = building_primitive_dwellings
+			add_building = building_primitive_dwellings
+			add_building = building_stone_palace
+
+			while = {
+				count = 3
+				create_army = {
+					name = "NAME_Feudal_Levies"
+					owner = last_created_country
+					species = last_created_species
+					type = "primitive_army"
+				}
+			}
+
+			last_created_country = {
+				capital_scope = { set_name = "whoniverse_name_tasak" }
+			}
+		}
+	}
+
+
+	change_orbit = 25
+
+	planet = {
+		name = "Tasak III"
+		class = "pc_barren"
+		orbit_distance = 45
+		orbit_angle = 240
+		size = 14
+		has_ring = no
+	}
+
+	change_orbit = 15
+
+	planet = {
+		name = "Tasak IV"
+		class = "pc_gas_giant"
+		orbit_distance = 65
+		orbit_angle = 90
+		size = 26
+		has_ring = yes
+	}
+
+	planet = {
+		name = "Tasak V"
+		class = "pc_barren_cold"
+		orbit_distance = 40
+		orbit_angle = 120
+		size = 8
+		has_ring = yes
+	}
+}
+	# neighbor_system = {
+	#  	initializer = whoniverse_asylum_system
+	#  	hyperlane_jumps = { min = 5 max = 8 } # 5 - 8
+	# }
+
+
+
+

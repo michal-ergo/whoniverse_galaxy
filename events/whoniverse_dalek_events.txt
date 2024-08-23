@@ -1,0 +1,1305 @@
+namespace = whoniverse
+
+# 01 - 03 = placeholders
+# 04 - 05 = Dalek Conversion effect
+# 06 - 07 = Dalek Reinvention of the Dalek Empire event
+# 08 - 12 = Dalek setup events
+# 12 - 17 = Dalek Asylum event chain
+# 19 + 23 = Dalek Necros 
+# 20 - 24 = Dalek Davros event chain
+# 30 - 39 = Cybermen setup events
+# 40 - 49 = Cybermen Mondasian Colony Ship chain
+# 50 - 59 = Cybermen Cyberiad Origin event chain
+# 60 - 69 = Cybermen Cyberiad systems events and anomalies
+# 70 - 79 = UNIT setup / Life on Mars project
+# 80 - 99 = UNIT Zygon Invasion event chain
+# 100 - 109 = Zygon system events and anomalies
+# 110 - 119 = Weeping Angels UNIT Blink event chain
+# 120 - 139 = Weeping Angels random events
+# 140 - 149 = Church of the Papal Mainframe setup
+# 150 - 159 = The Question (Trenzalore) event chain
+# 160 - 169 = Kovarian Chapter event chain (planned)
+# 170 - 179 = Alfava Metraxis archaelogy digsite
+# 180 - 189 = Cybusmen Pete's World events
+# 190 - 199 = Cybusmen Cybus Industries events
+# 200 - 209 = Dalek Empire Remnants setup events
+# 210 - 219 = Dalek Empire Remnants events
+
+# Create new Pops on Yearly Pulse (Dalek Conversion)
+event = {
+	id = whoniverse.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_playable_country = {
+			num_unique_species > 1
+			is_whoniverse_dalek = yes
+		}
+	}
+	
+	immediate = {
+		every_playable_country = {
+			limit = {
+				num_unique_species > 1
+				is_whoniverse_dalek = yes
+			}
+			
+			every_owned_planet = {
+				planet_event = { id = whoniverse.5 }
+			}
+		}
+	}
+}
+
+# Create new Pops on Yearly Pulse (Dalek-Conversion)
+planet_event = {
+	id = whoniverse.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_species = {
+			NOR = {
+				is_same_species = root.owner
+				is_robotic_species = yes
+				is_mechanical_species = yes
+				is_whoniverse_human_species = no
+			}
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			1 = { # 1 pop
+				create_pop = {
+					species = root.owner
+					ethos = root.owner
+				}
+			}
+			1 = { # 2 pop
+				while = {
+					count = 2
+					create_pop = {
+						species = root.owner
+						ethos = root.owner
+					}
+				}
+			}
+			1 = { # 3 pop
+				while = {
+					count = 3
+					create_pop = {
+						species = root.owner
+						ethos = root.owner
+					}
+				}
+			}
+		}
+	}
+}
+
+# New Dalek Paradigm setup - Reinvention of the Dalek Empire
+country_event = {
+    id = whoniverse.6
+	hide_window = yes
+
+	trigger = {
+		has_origin = origin_whoniverse_new_dalek_paradigm
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = { id = whoniverse.7 days = 32400 random = 3600 } # 80-100 years
+			}
+	}
+}
+
+# Reinvent the Dalek Empire event
+country_event = {
+	id = whoniverse.7
+	title = "whoniverse.7.name"
+	desc = "whoniverse.7.desc"
+	picture = GFX_evt_whoniverse_dalek_parliament
+	show_sound = whoniverse_dalek_explain
+	
+	trigger = {
+		has_origin = origin_whoniverse_new_dalek_paradigm
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.7.a
+		trigger = {
+			owner = {
+				is_ai = no
+			}
+		}
+		capital_scope = {
+			random_owned_pop = {
+				kill_pop = yes
+			}
+			random_owned_pop = {
+				kill_pop = yes
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.7.b
+		custom_tooltip = whoniverse.7.b.tooltip
+		hidden_effect = {
+			random_owned_leader = {
+				limit = { is_ruler = yes }
+				kill_leader = { show_notification = no }
+			}
+			set_name = "PRESCRIPTED_ressurected_dalek_empire"
+		}
+		change_government = auth_dictatorial
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier1unityreward
+			min = @tier1unitymin
+			max = @tier1unitymax
+			}
+	}
+
+	option = {
+		name = whoniverse.7.c
+		custom_tooltip = whoniverse.7.c.tooltip
+		hidden_effect = {
+			random_owned_leader = {
+				limit = { is_ruler = yes }
+				save_event_target_as = supreme_dalek
+				change_leader_portrait = whoniverse_dalek_01_emperor
+			}
+			set_name = "PRESCRIPTED_ressurected_dalek_empire"
+		}
+		change_government = auth_dictatorial
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier1unityreward
+			min = @tier1unitymin
+			max = @tier1unitymax
+			}
+	}
+}
+
+
+
+# Dalek - AI build Dalek Incubation Vats on conquered planets
+planet_event = {
+	id = whoniverse.8
+	hide_window = yes
+	location = ROOT
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = no
+		has_ground_combat = no
+		is_ai = yes
+		is_capital = no
+	}
+
+	trigger = {
+		from = {
+			is_whoniverse_dalek = yes
+			is_ai = yes
+			}
+		NOT = { has_building = building_whoniverse_dalek_incubation_vats }
+		num_pops > 0
+		}
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				free_building_slots <= 0
+				has_district = district_generator
+				has_district = district_city
+				}
+				remove_district = district_generator
+				add_district = district_city
+				}
+		add_building = building_whoniverse_dalek_incubation_vats
+		set_planet_flag = can_organic_assemble_flag
+		 	}
+	}
+
+
+
+# Dalek - enable organic pop assembly
+planet_event = {
+ 	id = whoniverse.9
+ 	hide_window = yes
+ 	location = ROOT
+
+ 	pre_triggers = {
+ 		has_owner = yes
+ 	}
+
+ 	trigger = {
+ 		owner = {
+			is_whoniverse_dalek = yes }
+		has_building = building_whoniverse_dalek_incubation_vats
+		num_pops > 0
+ 		}
+
+ 	is_triggered_only = yes
+
+ 	immediate = {
+ 		set_planet_flag = can_organic_assemble_flag
+ 	}
+}
+
+# new Dalek Paradigm setup - new technologies
+country_event = {
+    id = whoniverse.10
+    hide_window = yes
+	trigger = {
+		has_origin = origin_whoniverse_new_dalek_paradigm
+	}
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	immediate = {
+		give_technology = { tech = tech_genome_mapping message = no}
+		give_technology = { tech = tech_cloning message = no }
+		event_target:whoniverse_start_skaro = {
+			add_deposit = d_whoniverse_petrified_jungle
+			add_deposit = d_whoniverse_kaalann
+			add_deposit = d_whoniverse_skaro_sewers
+		}
+	}
+}
+
+# Dalek - AI build Dalek Incubation Vats
+planet_event = {
+	id = whoniverse.11
+	hide_window = yes
+	location = ROOT
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = no
+		original_owner = yes
+		has_ground_combat = no
+		is_ai = yes
+		is_capital = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			is_whoniverse_dalek = yes
+			is_ai = yes
+			}
+		num_pops > 0
+		}
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				free_building_slots <= 0
+				has_district = district_generator
+				has_district = district_city
+				}
+				remove_district = district_generator
+				add_district = district_city
+				}
+		add_building = building_whoniverse_dalek_incubation_vats
+		set_planet_flag = can_organic_assemble_flag
+		 	}
+	}
+
+
+## Dalek Asylum chain
+# Asylum first scan
+ship_event = {
+    id = whoniverse.12
+    title = "whoniverse.12.name"
+    desc = "whoniverse.12.desc"
+    picture = GFX_evt_whoniverse_dalek
+    show_sound = event_mysterious_signal
+    location = FROM
+	trackable = yes
+	event_chain = whoniverse_dalek_asylum_chain
+
+    is_triggered_only = yes
+	option = {
+		name = whoniverse.12.a
+		trigger = {
+			owner = {
+				is_whoniverse_dalek = yes
+			}
+		}
+		begin_event_chain = {
+			event_chain = "whoniverse_dalek_asylum_chain"
+			target = this
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = whoniverse_dalek_asylum }
+			
+			enable_special_project = {
+				name = "whoniverse_dalek_asylum_project1"
+				owner = root
+				location = this
+				}
+			}		
+        hidden_effect = {
+            random_galaxy_planet = {
+                limit = {
+                    has_planet_flag = whoniverse_dalek_asylum
+                }
+                set_name = "whoniverse_name_asylum"
+                }    
+            }    
+	    }        
+    option = {
+        name = whoniverse.12.b
+        trigger = {
+        owner = {
+            is_whoniverse_dalek = no
+                }
+            }
+        owner = {
+            add_monthly_resource_mult = {
+            resource = society_research
+            value = @tier1researchreward
+            min = @tier1researchmin
+            max = @tier1researchmax
+                }
+            }
+        hidden_effect = {
+            random_galaxy_planet = {
+                limit = {
+                    has_planet_flag = whoniverse_dalek_asylum
+                }
+                set_name = "whoniverse_name_asylum"
+                }    
+            }
+        }
+    }
+
+# Asylum scan project finished
+country_event = {
+    id = whoniverse.13
+    title = "whoniverse.13.name"
+    desc = "whoniverse.13.desc"
+    picture = GFX_evt_whoniverse_dalek_parliament
+	show_sound = whoniverse_dalek_explain
+	event_chain = whoniverse_dalek_asylum_chain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = whoniverse.13.a
+		trigger = {
+			owner = {
+				is_whoniverse_dalek = yes
+			}
+		}
+		owner = {
+			add_modifier = {
+				modifier = whoniverse_dalek_panic
+				years = 10
+			}
+		}
+        enable_special_project = {
+            name = "whoniverse_dalek_asylum_project2"
+            owner = root
+            }
+	    }
+    }
+
+# Asylum doctor project finished
+country_event = {
+	id = whoniverse.14
+	title = "whoniverse.14.name"
+	desc = "whoniverse.14.desc"
+	picture = GFX_evt_whoniverse_dalek
+	show_sound = whoniverse_dalek_exterminate
+	trackable = yes
+	event_chain = whoniverse_dalek_asylum_chain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = whoniverse.14.a
+        owner = {
+			remove_modifier = whoniverse_dalek_panic
+	        }
+		hidden_effect = {
+			owner = { country_event = { id = whoniverse.15 days = 30 random = 10 }}
+			}
+    	}
+
+	option = {
+		name = whoniverse.14.b
+        owner = {
+            remove_modifier = whoniverse_dalek_panic
+		}
+			hidden_effect = {
+			owner = { country_event = { id = whoniverse.16 days = 30 random = 10 }}
+				}
+        }
+}
+
+# Asylum planet cleared
+country_event = {
+	id = whoniverse.15
+	title = "whoniverse.15.name"
+	desc = "whoniverse.15.desc"
+	picture = GFX_evt_whoniverse_eleventh_doctor
+	show_sound = whoniverse_tardis_event
+	trackable = yes
+	event_chain = whoniverse_dalek_asylum_chain
+	
+	is_triggered_only = yes
+	
+	option = {
+		# custom_tooltip = whoniverse.15.a.custom_tooltip
+		name = whoniverse.15.a
+        random_galaxy_planet = {
+            limit = {
+                has_planet_flag = whoniverse_dalek_asylum
+                }
+                change_pc = pc_nuked
+                clear_deposits = yes
+				save_event_target_as = whoniverse_dalek_asylum
+            }
+		owner = {
+			end_event_chain = "whoniverse_dalek_asylum_chain"
+			# create_fleet = {
+			# 	name = "DALEK_ASYLUM_SURVIVORS"
+			# 	effect = {
+			# 		set_owner = prev.owner
+			# 		set_location = {
+			# 			target = event_target:whoniverse_dalek_asylum 
+			# 			distance = 10
+			# 			angle = random
+			# 			}
+			# 		while = {
+			# 			count = 10
+			# 			create_army_transport = {
+			# 				ship_name = "NAME_DALEK_PUPPETS_SAUCER"
+			# 				army_name = "NAME_DALEK_PUPPETS"
+			# 				army_type = "undead_army"
+			# 				species = owner_main_species
+			# 				}
+			# 			}
+			# 		}
+			# 	}
+			}
+    	}
+}
+	
+
+# Asylum planet destroyed
+country_event = {
+	id = whoniverse.16
+	title = "whoniverse.16.name"
+	desc = "whoniverse.16.desc"
+	picture = GFX_evt_whoniverse_eleventh_doctor
+	show_sound = whoniverse_tardis_event
+	trackable = yes
+	event_chain = whoniverse_dalek_asylum_chain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = whoniverse.16.a
+        owner = {
+			end_event_chain = "whoniverse_dalek_asylum_chain"
+            remove_modifier = whoniverse_dalek_panic
+			add_monthly_resource_mult = {
+                resource = unity
+                value = @tier4unityreward
+                min = @tier4unitymin
+                max = @tier4unitymax
+                }
+            }
+            random_galaxy_planet = {
+                limit = {
+                    has_planet_flag = whoniverse_dalek_asylum
+                    }
+                    change_pc = pc_shattered
+			        clear_deposits = yes
+					# add_modifier = {
+					# 	modifier = "whoniverse_pm_dalek_asylum"
+					# }
+	           }
+		}
+}
+
+# Dalek Asylum creating puppet armies
+planet_event = {
+	id = whoniverse.17
+	title = "whoniverse.17.name"
+	desc = "whoniverse.17.desc"
+	picture = GFX_evt_whoniverse_dalek
+	show_sound = whoniverse_dalek_greetings
+	location = ROOT
+
+	pre_triggers = {
+		has_owner = yes
+	}
+
+	trigger = {
+		owner = {
+			is_whoniverse_dalek = yes
+			}
+		num_pops > 0
+		has_modifier = whoniverse_pm_dalek_asylum
+			}
+		
+	is_triggered_only = yes
+		
+	option = {
+		name = whoniverse.17.a
+		custom_tooltip = whoniverse.17.tooltip
+		random_galaxy_planet = {
+            limit = {
+                has_planet_flag = whoniverse_dalek_asylum
+                }
+				save_event_target_as = whoniverse_dalek_asylum
+            }
+		owner = {
+			create_fleet = {
+				name = "DALEK_ASYLUM_SURVIVORS"
+				effect = {
+					set_owner = prev.owner
+					set_location = {
+						target = event_target:whoniverse_dalek_asylum 
+						distance = 10
+						angle = random
+						}
+					while = {
+						count = 3
+						create_army_transport = {
+							ship_name = "NAME_DALEK_PUPPETS_SAUCER"
+							army_name = "NAME_DALEK_PUPPETS"
+							army_type = "undead_army"
+							species = owner_main_species
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+# Necros anomaly
+ship_event = {
+    id = whoniverse.19
+    title = "whoniverse.19.name"
+    desc = "whoniverse.19.desc"
+    picture = GFX_evt_city_ruins
+    show_sound = event_scanner
+    location = FROM
+            
+    is_triggered_only = yes
+
+	immediate = { 
+		random_galaxy_planet = {
+			limit = {
+				has_planet_flag = whoniverse_necros
+				}
+		hidden_effect = { set_name = "whoniverse_name_necros" }
+			}
+		}
+
+	option = {
+		name = whoniverse.19.a
+		trigger = {
+			owner = {
+				NOT = { is_ai = yes	}
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier3researchreward
+				min = @tier3researchmin
+				max = @tier3researchmax
+					}
+			add_monthly_resource_mult = {
+                resource = food
+				value = @tier3materialreward
+				min = @tier3materialmin
+				max = @tier3materialmax
+            	}
+		random_galaxy_planet = {
+			limit = {
+				has_planet_flag = whoniverse_necros
+				}
+			add_deposit = d_whoniverse_tranquil_repose
+				}    
+			}		
+	   	}
+	option = {
+		custom_tooltip = whoniverse.skaro_vats.custom_tooltip
+		name = whoniverse.19.b
+		trigger = {
+			owner = {
+				is_whoniverse_dalek = yes
+				capital_scope = {
+					NOT = {has_building = building_whoniverse_dalek_incubation_vats}
+					free_building_slots >= 1
+				}
+			}
+		}
+		random_galaxy_planet = {
+			limit = {
+				has_planet_flag = whoniverse_necros
+				}
+			add_deposit = d_whoniverse_tranquil_repose
+				}    	
+		hidden_effect = {
+			owner = { country_event = { id = whoniverse.23 days = 30 random = 10 }
+			}
+		}	
+	}
+	option = {
+		name = whoniverse.19.a
+		trigger = {
+			owner = {
+				is_whoniverse_dalek = no
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier3researchreward
+				min = @tier3researchmin
+				max = @tier3researchmax
+					}
+			add_monthly_resource_mult = {
+                resource = food
+				value = @tier3materialreward
+				min = @tier3materialmin
+				max = @tier3materialmax
+            	}
+		random_galaxy_planet = {
+			limit = {
+				has_planet_flag = whoniverse_necros
+				}
+			set_name = "whoniverse_name_necros"
+				}    
+			}		
+	   	}
+	}
+		
+
+## Davros event chain - goes .20 > .24 > .21 > .22
+# Time delay - triggered by on press begin event
+country_event = {
+	id = whoniverse.20
+	hide_window = yes
+	is_triggered_only = yes
+    fire_only_once = yes
+
+	trigger = {
+		is_whoniverse_dalek = yes
+	}
+
+	immediate = {
+		owner = { country_event = { id = whoniverse.24 days = 27375 random = 18250 } } } # timing 25-125 (27375 days - 18250 days) years
+    }
+
+# 
+# Dalek Caan event
+country_event = {
+	id = whoniverse.21
+	title = "whoniverse.21.name"
+	desc = "whoniverse.21.desc"
+	picture = GFX_evt_whoniverse_dalek
+	show_sound = whoniverse_dalek_caan_greetings
+    is_triggered_only = yes
+
+	option = {
+		name = whoniverse.21.a
+		trigger = {
+			owner = {
+				is_whoniverse_dalek = yes
+			}
+		}		
+		hidden_effect = {
+			country_event = { id = whoniverse.22 }
+        }
+    }
+    option = {
+		name = whoniverse.21.b
+        owner = {
+            add_monthly_resource_mult = {
+                resource = influence
+				value = @tier4influencereward
+				min = @tier4influencemin
+				max = @tier4influencemax
+            }
+        }
+    }
+}
+
+# Davros: HIRE/DISMISS
+country_event = {
+	id = whoniverse.22
+	title = "whoniverse.22.name"
+ 	desc = whoniverse.22.desc
+
+	show_sound = whoniverse_activate_the_holding_cells
+    location = fromfrom
+	is_triggered_only = yes
+
+	trigger = {
+		is_whoniverse_dalek = yes
+		NOT = { exists = event_target:whoniverse_davros_leader }
+	}
+
+	event_window_type = leader_recruit
+	picture_event_data = {
+		portrait = event_target:whoniverse_davros_leader
+		room = personality_xenophobic_isolationists_room
+	}
+	picture = GFX_leader_recruitment_bg_whoniverse_davros
+
+	immediate = {
+		hidden_effect = {
+			create_country = {
+				name = "whoniverse_davros_country"
+				type = global_event
+				auto_delete = yes
+				flag = {
+					icon = {
+						category = "special"
+						file = "unknown.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors = {
+						"red"
+						"red"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					save_event_target_as = davros_country
+				}
+			}
+			event_target:davros_country = {
+				create_species = {
+					name = "NAME_whoniverse_davros_species"
+					class = PARAGON
+					portrait = whoniverse_dalek_davros
+					namelist = "DALEK1"
+					traits = {
+						trait = trait_cybernetic
+						trait = trait_talented
+						trait = trait_conformists
+						trait = trait_weak
+						trait = trait_fleeting
+					}
+					effect = {
+						save_event_target_as = kaled_species
+					}
+				}
+				create_leader = {
+					species = event_target:kaled_species
+					event_leader = yes
+					class = scientist
+					name = "NAME_whoniverse_davros_name"
+					skill = 7
+					randomize_traits = no
+					skip_background_generation = yes
+					background_ethic = ethic_fanatic_xenophobe
+					custom_catch_phrase = whoniverse_davros_catch_phrase
+					custom_description = whoniverse_davros_backstory
+					can_manually_change_location = yes
+					traits = {
+						trait = leader_trait_cyborg
+						trait = leader_trait_spark_of_genius_2
+						trait = leader_trait_expertise_biology
+						trait = leader_trait_intolerant
+						trait = subclass_scientist_councilor
+					}
+					gender = male
+					set_age = 3062
+					immortal = yes
+					effect = {
+						save_global_event_target_as = whoniverse_davros_leader
+						set_leader_flag = legendary_leader
+						set_leader_flag = davros
+						set_owner = root
+						exile_leader_as = whoniverse_davros_leader
+					}
+				}
+			}
+		}
+	}
+
+	option = { # Who are you?
+		name = whoniverse.22.a
+		is_dialog_only = yes
+		response_text = whoniverse.22.a.response
+	}
+	option = { # You are not superior!
+		name = whoniverse.22.b
+		is_dialog_only = yes
+		response_text = whoniverse.22.b.response
+	}
+
+	option = { # HIRE
+		name = whoniverse.22.c
+		tag = hire_leader
+		custom_tooltip = whoniverse.22.c.custom_tooltip # Azaryn joins
+		sound = whoniverse_activate_the_holding_cells
+
+		hidden_effect = {
+			clone_leader = {
+				target = event_target:whoniverse_davros_leader
+			}
+			last_created_leader = {
+				set_leader_flag = legendary_leader
+				save_global_event_target_as = whoniverse_davros_leader
+				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = davros
+				set_owner = root
+			}
+		}
+	}
+
+	option = { # DISMISS
+		sound = whoniverse_exterminate
+		name = whoniverse.22.d
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:whoniverse_davros_leader = {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+}
+
+# Incubation Vats built from Necros
+country_event = {
+	id = whoniverse.23
+	title = "whoniverse.23.name"
+	desc = "whoniverse.23.desc"
+	picture = GFX_evt_clones
+	show_sound = event_laboratory_sound
+    is_triggered_only = yes
+
+	immediate = {
+		capital_scope = {
+			if = {
+				limit = {
+		 			free_building_slots <= 0
+		 			has_district = district_generator
+		 			has_district = district_city
+		 			}
+		 		remove_district = district_generator
+		 		add_district = district_city
+		 		}
+		 	add_building = building_whoniverse_dalek_incubation_vats
+		 	}
+			}
+	option = {
+		name = whoniverse.23.a
+	}
+}
+
+# Dalek Davros project enabled - time rift
+country_event = {
+    id = whoniverse.24
+    title = "whoniverse.24.name"
+    desc = "whoniverse.24.desc"
+    picture = GFX_evt_whoniverse_time_vortex
+	show_sound = whoniverse_dalek_explain
+
+	trigger = {
+		is_whoniverse_dalek = yes
+		# is_ai = no
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	option = {
+		name = "whoniverse.24.a"
+		hidden_effect = {
+			random_galaxy_planet = {
+				limit = {
+					has_planet_flag = whoniverse_dalek_skaro
+				}
+				enable_special_project = {
+					name = "whoniverse_dalek_caan_project"
+					owner = root
+					location = this
+					}
+				}    
+		}
+	}
+}
+
+# Dalek Empire Remnants - new technologies setup
+country_event = {
+    id = whoniverse.200
+    hide_window = yes
+	trigger = {
+		has_origin = origin_whoniverse_dalek_empire_remnants
+	}
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	immediate = {
+		give_technology = { tech = tech_genome_mapping message = no}
+		give_technology = { tech = tech_cloning message = no }
+	}
+}
+
+# Add "seen bypass wormholes" to empires starting on Pete's World, wormhole tech, immortal ruler
+country_event = {
+	id = whoniverse.201
+	hide_window = yes
+	
+	trigger = { 
+		owner = { 
+			any_system = {
+				has_star_flag = whoniverse_dalek_empire_remnants_start_system
+				}
+			}
+		}
+
+	is_triggered_only = yes
+	
+	immediate = {
+		add_seen_bypass_type = wormhole
+		add_research_option = tech_wormhole_stabilization
+		add_tech_progress = {
+			tech = tech_wormhole_stabilization
+			progress = 0.75
+		}
+		owner = {
+			add_monthly_resource_mult = {
+			resource = food
+			value = @tier3materialreward
+			min = @tier3materialmin
+			max = @tier3materialmax
+			}
+		}
+		if = {
+			limit = {
+				is_whoniverse_dalek = yes
+			}
+			ruler = {
+				set_immortal = yes
+			}
+		}
+	}
+}
+
+# Dalek Empire Remnants planet setup (Satellite Five)
+planet_event = {
+	id = whoniverse.202
+	hide_window = yes
+	location = ROOT
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		has_ground_combat = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		# owner = {
+		# 	has_origin = origin_whoniverse_dalek_empire_remnants
+		# 	}
+			has_planet_flag = dalek_empire_remnants_habitat_1
+		# num_pops > 0
+		}
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_planet_flag = dalek_empire_remnants_habitat_1 }
+			whoniverse_dalek_empire_remnants_home_planet_setup = yes
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = food
+				value = 100
+					}
+		}
+	}
+}
+
+# Dalek Empire Remnants - Rename event after planet conquer
+planet_event = {
+	id = whoniverse.203
+	title = "whoniverse.203.name"
+	desc = "whoniverse.203.desc"
+	picture = GFX_evt_whoniverse_dalek
+	show_sound = whoniverse_dalek_greetings
+	
+	trigger = { from = { has_origin = origin_whoniverse_dalek_empire_remnants }
+				this = { NOT = { has_planet_flag = whoniverse_future_earth } } }
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = whoniverse.203.a
+		custom_tooltip = whoniverse.203.a.tooltip
+		hidden_effect = {
+			from = { set_name = "PRESCRIPTED_dalekempire" }
+		}
+		from = {
+			add_monthly_resource_mult = {
+                resource = influence
+				value = @tier2influencereward
+				min = @tier2influencemin
+				max = @tier2influencemax
+            }
+		}
+	}
+
+	option = {
+		name = whoniverse.203.b
+		trigger = {
+			owner = {
+				is_ai = no
+			}
+		}
+	}
+}
+
+
+# ### Dalek Emperor - Earth A.D. 200,100 events ###
+# # Scope = Fleet
+# # From = System
+# fleet_event = {
+# 	id = whoniverse.210
+# 	hide_window = yes
+
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+
+# 	trigger = {
+# 		from = { has_star_flag = whoniverse_dalek_empire_remnants_system }
+# 		NOT = {
+# 			any_country = {
+# 				has_origin = origin_whoniverse_dalek_empire_remnants
+# 			}
+# 		}
+# 	}
+
+# 	immediate = {
+# 		owner = {
+# 			save_global_event_target_as = whoniverse_ad_200100_explorer
+# 		}
+# 		random_galaxy_planet = {
+# 			limit = {
+# 				has_planet_flag = whoniverse_future_earth
+# 			}
+# 			save_global_event_target_as = whoniverse_future_earth
+# 		}
+# 		if = {
+# 			limit = {
+# 				exists = event_target:whoniverse_future_earth
+# 			}
+# 			owner = {
+# 				random_list = {
+# 					1 = {
+# 						country_event = {
+# 							id = whoniverse.211
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}	
+# }
+
+# # Dalek Emperor - Earth A.D. 200,100 Event 1
+# country_event = {
+# 	id = whoniverse.211
+# 	title = "whoniverse.211.name"
+# 	desc = "whoniverse.211.desc"
+# 	picture = GFX_evt_whoniverse_dalek
+# 	show_sound = event_scanner
+# 	location = event_target:dalek_empire_remnants_habitat_1
+# 	is_triggered_only = yes
+
+# 	auto_opens = yes
+
+# 	trigger = {
+# 		exists = event_target:dalek_empire_remnants_habitat_1
+# 	}
+
+# 	immediate = {
+# 		event_target:whoniverse_future_earth = {
+# 			create_species = {
+# 				name = PRESCRIPTED_species_name_whoniverse_human
+# 				plural = PRESCRIPTED_species_plural_whoniverse_human
+# 				class = "HUM"
+# 				portrait = whoniverse_human
+# 				homeworld = THIS
+# 					traits = {
+# 						trait = "trait_adaptive"
+# 						trait = "trait_nomadic"
+# 						trait = "trait_wasteful"
+# 					}
+# 				}
+# 			create_country = {
+# 				name = "NAME_whoniverse_future_earth"
+# 				species = last_created_species
+# 				authority = auth_democratic
+# 				day_zero_contact = no
+# 				civics = {
+# 					civic = civic_increasing_urbanization
+# 					civic = civic_atmospheric_pollution
+# 					}
+# 					ethos = {
+# 						ethic = "ethic_xenophile"
+# 						ethic = "ethic_fanatic_egalitarian"
+# 						}
+# 				origin = origin_default_pre_ftl
+# 				flag = {
+# 					icon = {
+# 					category = "human"
+# 					file = "flag_human_9.dds"
+# 						}
+# 					background= {
+# 						category = "backgrounds"
+# 						file = "new_dawn.dds"
+# 						}
+# 					colors={
+# 						"blue"
+# 						"green"
+# 						"null"
+# 						"null"
+# 						}
+# 					}
+# 				type = primitive
+# 				}
+# 			last_created_country = {
+# 				set_graphical_culture = industrial_01
+# 				set_country_flag = early_space_age
+# 			#	set_country_flag = humans_early_space_age
+# 				set_pre_ftl_age = early_space_age
+# 			}
+# 			set_owner = last_created_country
+# 			set_capital = yes
+# 			create_pre_ftl_blockers = yes
+# 			create_army = {
+# 				name = "NAME_future_earth_Armed_Forces_South"
+# 				owner = last_created_country
+# 				species = last_created_species
+# 				type = "postatomic_army"
+# 			}
+# 			create_army = {
+# 				name = "NAME_future_earth_Armed_Forces_East"
+# 				owner = last_created_country
+# 				species = last_created_species
+# 				type = "postatomic_army"
+# 			}
+# 			create_army = {
+# 				name = "NAME_future_earth_Armed_Forces_West"
+# 				owner = last_created_country
+# 				species = last_created_species
+# 				type = "postatomic_army"
+# 			}
+# 			create_army = {
+# 				name = "NAME_future_earth_Armed_Forces_North"
+# 				owner = last_created_country
+# 				species = last_created_species
+# 				type = "postatomic_army"
+# 			}
+# 			while = {
+# 				count = @early_space_age_pops
+# 				create_pop = {
+# 					species = last_created_species
+# 				}
+# 			}
+# 			add_building = building_primitive_farm
+# 			add_building = building_primitive_factory
+# 			add_building = building_primitive_mine
+# 			add_building = building_primitive_power_plant
+# 			add_building = building_primitive_capital
+# 			add_building = building_urban_dwellings
+
+# 			last_created_country = {
+# 				capital_scope = { set_name = "NAME_whoniverse_name_future_earth" }
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = whoniverse.211.a
+# 		custom_tooltip = whoniverse_future_earth_appeared
+# 		trigger = {
+# 			owner = {
+# 				OR = {
+# 					is_whoniverse_dalek = no
+# 					has_whoniverse_cyber_conversion = no
+# 				}
+# 			}
+# 		}
+# 		owner = {
+# 			add_monthly_resource_mult = {
+# 				resource = society_research
+# 				value = @tier1researchreward
+# 				min = @tier1researchmin
+# 				max = @tier1researchmax
+# 				}
+# 		}
+# 	}	
+# 	option = {
+# 		name = whoniverse.211.b
+# 		custom_tooltip = whoniverse_future_earth_appeared
+# 		trigger = {
+# 			owner = {
+# 				is_whoniverse_dalek = yes
+# 			}
+# 		}
+# 		owner = {
+# 			add_monthly_resource_mult = {
+# 				resource = society_research
+# 				value = @tier1researchreward
+# 				min = @tier1researchmin
+# 				max = @tier1researchmax
+# 				}
+# 		}
+# 	}	
+# 	option = {
+# 		name = whoniverse.211.c
+# 		custom_tooltip = whoniverse_future_earth_appeared
+# 		trigger = {
+# 			owner = {
+# 				has_whoniverse_cyber_conversion = yes
+# 			}
+# 		}
+# 		owner = {
+# 			add_monthly_resource_mult = {
+# 				resource = society_research
+# 				value = @tier1researchreward
+# 				min = @tier1researchmin
+# 				max = @tier1researchmax
+# 				}
+# 		}
+# 	}		
+# }

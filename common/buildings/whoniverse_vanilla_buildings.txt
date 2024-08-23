@@ -1,0 +1,130 @@
+### VANILLA BUILDINGS ###
+# Check compatibility
+
+# Spawning Pool: forbidden for Cybermen (see potential)
+building_spawning_pool = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = pop_assembly
+
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			has_whoniverse_cyber_conversion = no # added line
+			NOT = { has_origin = origin_progenitor_hive }
+		}
+		or = {
+			num_buildings = { type = any value < 15 }
+			owner = { is_ai = no }
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				is_hive_empire = no
+				has_origin = origin_progenitor_hive
+			}
+		}
+	}
+
+	planet_modifier = {
+		job_spawning_drone_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_gene_tailoring
+			}
+			any_owned_pop = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_origin = origin_overtuned
+			}
+			any_owned_pop = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_cybernetics_synaptic_sub_processing }
+		}
+		modifier = {
+			job_augmentor_drone_add = 2
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	convert_to = {
+		building_offspring_nest
+	}
+	triggered_desc = {
+		trigger = {
+			NAND = {
+				exists = owner
+				owner = { has_origin = origin_necrophage }
+				exists = growing_species
+				growing_species = {
+					NOT = { has_trait = trait_hive_mind }
+				}
+			}
+		}
+		text = job_spawning_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_origin = origin_necrophage }
+			exists = growing_species
+			growing_species = {
+				NOT = { has_trait = trait_hive_mind }
+			}
+		}
+		text = job_spawning_drone_necrophage_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_cybernetics_synaptic_sub_processing
+			}
+		}
+		text = job_augmentor_drone_assembly_desc
+	}
+
+	triggered_desc = {
+		text = spawning_pool_tooltip
+	}
+}
+

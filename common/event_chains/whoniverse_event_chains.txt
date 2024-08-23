@@ -1,0 +1,30 @@
+whoniverse_dalek_asylum_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_whoniverse_dalek
+}
+
+whoniverse_mondasian_colony_ship_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_relic_shipyard
+}
+
+whoniverse_cyberiad_mrclever_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_whoniverse_cybermen
+}
+
+whoniverse_zygon_invasion_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_whoniverse_zygon
+}
+
+whoniverse_blink_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_whoniverse_weeping_angels
+}
+
+whoniverse_trenzalore_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_whoniverse_dalek_fleet
+}
+

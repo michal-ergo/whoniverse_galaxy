@@ -1,0 +1,47 @@
+
+# Dalek Supremacy Councilor
+councilor_whoniverse_dalek_supremacy = {
+	leader_class = { commander }
+	is_leader_possible = {
+		leader_class = commander
+	}
+	civic = civic_whoniverse_dalek_supremacy
+	modifier = {
+		country_naval_cap_mult = 0.015
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+# UNIT HQ Councilor
+councilor_whoniverse_unit_hq = {
+	leader_class = { commander  }
+	is_leader_possible = {
+		leader_class = commander
+	}
+	civic = civic_whoniverse_unit_hq
+	modifier = {
+		army_defense_damage_mult = 0.1
+		shipclass_military_station_damage_mult = 0.02
+		shipclass_military_station_hull_mult = 0.02
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+# Church Silence Councilor
+councilor_whoniverse_silence = {
+	leader_class = { official }
+	is_leader_possible = {
+		leader_class = official
+	}
+	civic = civic_whoniverse_silence
+	modifier = {
+		pop_government_ethic_attraction = 0.05
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}

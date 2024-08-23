@@ -1,0 +1,35 @@
+# Modified Vanilla Triggers. Keep an eye of these for compatibility issues
+# is_homicidal = {
+# 	OR = {
+# 		has_valid_civic = civic_fanatic_purifiers
+# 		has_valid_civic = civic_machine_terminator
+# 		has_valid_civic = civic_hive_devouring_swarm
+# 		has_valid_civic = civic_whoniverse_cyber_conversion
+# 		has_valid_civic = civic_whoniverse_cyber_conversion_ai
+# 	}
+# }
+
+# is_unfriendly = {
+# 	OR = {
+# 		has_valid_civic = civic_fanatic_purifiers
+# 		has_valid_civic = civic_machine_terminator
+# 		has_valid_civic = civic_hive_devouring_swarm
+# 		has_valid_civic = civic_barbaric_despoilers
+# 		has_valid_civic = civic_whoniverse_cyber_conversion
+# 		has_valid_civic = civic_whoniverse_cyber_conversion_ai
+# 	}
+# }
+
+
+is_human_species = {
+	OR = {
+		species_portrait = human
+		species_portrait = human_legacy
+		species_portrait = pla17
+		species_portrait = cyb12
+		species_portrait = whoniverse_unit
+		species_portrait = whoniverse_church
+		species_portrait = whoniverse_human
+	}
+}
+
