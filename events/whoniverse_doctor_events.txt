@@ -1,0 +1,654 @@
+namespace = whoniverse
+
+# 01 - 03 = placeholders
+# 04 - 05 = Dalek Conversion effect
+# 06 - 07 = Dalek Reinvention of the Dalek Empire event
+# 08 - 12 = Dalek setup events
+# 12 - 17 = Dalek Asylum event chain
+# 19 + 24 = Dalek Necros 
+# 20 - 23 = Dalek Davros event chain
+# 30 - 39 = Cybermen setup events
+# 40 - 49 = Cybermen Mondasian Colony Ship chain
+# 50 - 59 = Cybermen Cyberiad Origin event chain
+# 60 - 69 = Cybermen Cyberiad systems events and anomalies
+# 70 - 79 = UNIT setup / Life on Mars project
+# 80 - 99 = UNIT Zygon Invasion event chain
+# 100 - 109 = Zygon system events and anomalies
+# 110 - 119 = Weeping Angels UNIT Blink event chain
+# 120 - 139 = Weeping Angels random events
+# 140 - 149 = Church of the Papal Mainframe setup
+# 150 - 159 = The Question (Trenzalore) event chain
+# 160 - 169 = Kovarian Chapter event chain (planned)
+# 170 - 179 = Alfava Metraxis archaelogy digsite
+# 180 - 189 = Cybusmen Pete's World events
+# 190 - 199 = Cybusmen Cybus Industries events
+# 200 - 209 = Dalek Empire Remnants setup events
+# 210 - 219 = Dalek Empire Remnants events
+# 220 - 239 = Mechanoid anomalies / Mechanus digsite
+# 240 - 249 = Nestene Consciousness setup events
+# 250 - 259 = Nestene Consciousness system events and anomalies
+# 900 - 909 = The Doctor ascension perk
+# 910 - 919 = Ninth Doctor events, Rose Tyler event chain
+
+# The Doctor Ascension Perk adoption event
+country_event = {
+    id = whoniverse.900
+	hide_window = yes
+
+	trigger = {
+		is_ai = no
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = { id = whoniverse.910 days = 30 random = 0 }
+			}
+	}
+}
+
+# Ninth Doctor project enabled
+country_event = {
+    id = whoniverse.910
+    title = "whoniverse.910.name"
+    desc = "whoniverse.910.desc"
+    picture = GFX_evt_whoniverse_time_vortex
+	show_sound = whoniverse_tardis_event
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		# is_ai = no
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	option = {
+		name = "whoniverse.910.a"
+		# hidden_effect = {
+			capital_scope = {
+				enable_special_project = {
+					name = "whoniverse_ninth_doctor_project"
+					owner = root
+					location = this
+				}
+			}
+		# }
+	}
+}
+
+# Ninth Doctor project finished
+country_event = {
+	id = whoniverse.911
+	title = "whoniverse.911.name"
+	desc = "whoniverse.911.desc"
+	picture = GFX_evt_whoniverse_ninth_doctor
+	show_sound = whoniverse_tardis_event
+    is_triggered_only = yes
+
+	option = {
+		name = whoniverse.911.a
+		trigger = {
+			owner = {
+				has_ascension_perk = ap_whoniverse_doctor
+			}
+			is_ai = no
+		}		
+		hidden_effect = {
+			country_event = { id = whoniverse.912 }
+        }
+    }
+    # option = {
+	# 	name = whoniverse.911.b
+    #     owner = {
+    #         add_monthly_resource_mult = {
+    #             resource = influence
+	# 			value = @tier4influencereward
+	# 			min = @tier4influencemin
+	# 			max = @tier4influencemax
+    #         }
+    #     }
+    # }
+}
+
+# Ninth Doctor: HIRE/DISMISS
+country_event = {
+	id = whoniverse.912
+	title = "whoniverse.912.name"
+ 	desc = whoniverse.912.desc
+
+	show_sound = whoniverse_ninth_doctor_greetings
+    location = fromfrom
+	is_triggered_only = yes
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		NOT = { exists = event_target:whoniverse_ninth_doctor_leader }
+		is_ai = no
+	}
+
+	event_window_type = leader_recruit
+	picture_event_data = {
+		portrait = event_target:whoniverse_ninth_doctor_leader
+		room = default_room
+	}
+	picture = GFX_leader_recruitment_bg_whoniverse_ninth
+
+	immediate = {
+		hidden_effect = {
+			create_country = {
+				name = "whoniverse_ninth_doctor_country"
+				type = global_event
+				auto_delete = yes
+				flag = {
+					icon = {
+						category = "special"
+						file = "unknown.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors = {
+						"blue"
+						"yellow"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					save_event_target_as = ninth_doctor_country
+				}
+			}
+			event_target:ninth_doctor_country = {
+				create_species = {
+					name = "NAME_whoniverse_ninth_doctor_species"
+					class = PARAGON
+					portrait = whoniverse_doctor_ninth
+					namelist = "HUMAN2"
+					traits = {
+						trait = trait_whoniverse_time_lord
+						trait = trait_charismatic
+						trait = trait_talented
+						trait = trait_quarrelsome
+					}
+					effect = {
+						save_event_target_as = ninth_doctor_species
+					}
+				}
+				create_leader = {
+					species = event_target:ninth_doctor_species
+					event_leader = yes
+					class = scientist
+					name = "NAME_whoniverse_ninth_doctor_name"
+					skill = 5
+					randomize_traits = no
+					skip_background_generation = yes
+					background_ethic = ethic_fanatic_pacifist
+					custom_catch_phrase = whoniverse_ninth_doctor_catch_phrase
+					custom_description = whoniverse_ninth_doctor_backstory
+					can_manually_change_location = yes
+					traits = {
+						trait = leader_trait_carefree # intuition
+						trait = leader_trait_meticulous # roamer
+						trait = leader_trait_traumatized
+						trait = subclass_scientist_explorer
+					}
+					gender = male
+					set_age = 900
+					immortal = yes
+					effect = {
+						save_global_event_target_as = whoniverse_ninth_doctor_leader
+						set_leader_flag = legendary_leader
+						set_leader_flag = ninth_doctor
+						set_owner = root
+						exile_leader_as = whoniverse_ninth_doctor_leader
+					}
+				}
+			}
+		}
+	}
+
+	option = { # Identify
+		name = whoniverse.912.a
+		is_dialog_only = yes
+		response_text = whoniverse.912.a.response
+	}
+	option = { # Tardis
+		name = whoniverse.912.b
+		is_dialog_only = yes
+		response_text = whoniverse.912.b.response
+	}
+
+	option = { # Time Lords
+	name = whoniverse.912.c
+	is_dialog_only = yes
+	response_text = whoniverse.912.c.response
+	}
+
+	option = { # HIRE
+		name = whoniverse.912.d
+		tag = hire_leader
+		custom_tooltip = whoniverse.912.d.custom_tooltip # Ninth Doctor joins
+		sound = whoniverse_ninth_doctor_greetings
+
+		hidden_effect = {
+			clone_leader = {
+				target = event_target:whoniverse_ninth_doctor_leader
+			}
+			last_created_leader = {
+				set_leader_flag = legendary_leader
+				save_global_event_target_as = whoniverse_ninth_doctor_leader
+				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = whoniverse_ninth_doctor_leader
+				set_owner = root
+			}
+			owner = { country_event = { id = whoniverse.913 days = 5400 random = 1800 } } # Rose event chain in 10 - 20 years
+			create_fleet = {
+				name = "NAME_Tardis"
+				settings = {
+					can_upgrade = no
+					can_change_composition = no
+					can_change_leader = no
+					can_disband = no
+					spawn_debris = no
+				}
+				effect = {
+					set_owner = root.owner
+					if = {
+						limit = {
+							has_first_contact_dlc = yes
+						}
+						create_ship_design = {
+							design = "NAME_Tardis_Cloaked" # NAME_Tardis_Cloaked
+						}
+					}
+					else = {
+						create_ship_design = {
+							design = "NAME_Tardis" #NAME_Tardis
+						}
+					}
+					create_ship = {
+						design = last_created_design
+						name = "NAME_Tardis"
+						prefix = no
+						upgradable = no
+						effect = {
+							set_ship_flag = is_ninth_doctor_ship
+							save_global_event_target_as = whoniverse_ninth_doctor_ship
+							set_ship_flag = special_science_ship
+						}
+					}
+					set_fleet_stance = evasive
+					set_location = root.capital_scope
+					assign_leader = event_target:whoniverse_ninth_doctor_leader
+				}
+			}
+		}
+	}
+	option = { # DISMISS
+		name = whoniverse.912.e
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:whoniverse_ninth_doctor_leader = {
+				kill_leader = { show_notification = no }
+				}
+		}
+	}
+}
+
+# Rose intro event
+country_event = {
+    id = whoniverse.913
+    title = "whoniverse.913.name"
+    desc = "whoniverse.913.desc"
+    picture = GFX_evt_whoniverse_time_vortex
+	event_chain = whoniverse_rose_chain
+	show_sound = whoniverse_tardis_event
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		exists = event_target:whoniverse_ninth_doctor_leader
+		is_human_species = yes
+		is_ai = no
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			capital_scope = {
+				set_planet_flag = whoniverse_rose_autons_planet
+			}
+		}
+	}
+
+	option = {
+		name = "whoniverse.913.a"
+		begin_event_chain = {
+			event_chain = "whoniverse_rose_chain"
+			target = this
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "whoniverse_rose_project"
+				owner = root
+				location = this
+			}
+	   }
+	}
+
+	option = {
+		name = "whoniverse.913.b"
+		capital_scope = {
+			planet_event = { id = whoniverse.917 days = 60 random = 0 }
+		}
+	}
+}
+
+# Rose investigation project finished event
+country_event = {
+    id = whoniverse.914
+    title = "whoniverse.914.name"
+    desc = "whoniverse.914.desc"
+    picture = GFX_evt_whoniverse_autons
+	event_chain = whoniverse_rose_chain
+	show_sound = whoniverse_auton_greetings
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		is_ai = no
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	option = {
+		name = "whoniverse.914.a"
+		trigger = { owner = { resource_stockpile_compare = { resource = consumer_goods value >= 1000 } }}
+        hidden_effect = {
+			country_event = { id = whoniverse.915 days = 45 } } 
+		owner = {
+			add_resource = { consumer_goods = -1000 }}
+		}
+
+	option = {
+		name = "whoniverse.914.b"
+		hidden_effect = {
+			capital_scope = {
+				planet_event = { id = whoniverse.917 days = 30 random = 0 }
+			}	
+		}
+	}
+}
+
+# Rose antiplastic funded
+country_event = {
+	id = whoniverse.915
+	title = "whoniverse.915.name"
+	desc = "whoniverse.915.desc"
+	picture = GFX_evt_whoniverse_rose_tyler
+	show_sound = whoniverse_tardis_event
+	event_chain = whoniverse_rose_chain
+    is_triggered_only = yes
+
+	option = {
+		name = "ON_SCREEN"
+		trigger = {
+			owner = {
+				has_ascension_perk = ap_whoniverse_doctor
+				is_ai = no
+			}
+		}
+		owner = {
+			end_event_chain = "whoniverse_rose_chain"
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2unityreward
+				min = @tier2unitymin
+				max = @tier2unitymax
+				}
+			}
+		hidden_effect = {
+			country_event = { id = whoniverse.916 }
+        }
+    }
+    # option = {
+	#  	name = whoniverse.915.b
+    #     owner = {
+    #         add_monthly_resource_mult = {
+    #             resource = influence
+	# 			value = @tier4influencereward
+	# 			min = @tier4influencemin
+	# 			max = @tier4influencemax
+    #         }
+    #     }
+    # }
+}
+
+# Rose Tyler: HIRE/DISMISS
+country_event = {
+	id = whoniverse.916
+	title = "whoniverse.916.name"
+ 	desc = whoniverse.916.desc
+
+	show_sound = whoniverse_rose_tyler_greetings
+    location = fromfrom
+	is_triggered_only = yes
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		NOT = { exists = event_target:whoniverse_rose_tyler_leader }
+		is_ai = no
+	}
+
+	event_window_type = leader_recruit
+	picture_event_data = {
+		portrait = event_target:whoniverse_rose_tyler_leader
+		room = default_room
+	}
+	picture = GFX_leader_recruitment_bg_renowned
+
+	immediate = {
+		hidden_effect = {
+			create_country = {
+				name = "whoniverse_rose_tyler_country"
+				type = global_event
+				auto_delete = yes
+				flag = {
+					icon = {
+						category = "special"
+						file = "unknown.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors = {
+						"blue"
+						"yellow"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					save_event_target_as = rose_tyler_country
+				}
+			}
+			event_target:rose_tyler_country = {
+				create_species = {
+					name = "NAME_whoniverse_rose_tyler_species"
+					class = PARAGON
+					portrait = whoniverse_rose_tyler
+					namelist = "HUMAN1"
+					traits = {
+						trait = trait_adaptive
+						trait = trait_nomadic
+						trait = trait_wasteful
+					}
+					effect = {
+						save_event_target_as = rose_tyler_species
+					}
+				}
+				create_leader = {
+					species = event_target:rose_tyler_species
+					event_leader = yes
+					class = commander
+					name = "NAME_whoniverse_rose_tyler_name"
+					skill = 4
+					randomize_traits = no
+					skip_background_generation = yes
+					background_ethic = ethic_egalitarian
+					custom_catch_phrase = whoniverse_rose_tyler_catch_phrase
+					custom_description = whoniverse_rose_tyler_backstory
+					can_manually_change_location = yes
+					traits = {
+						trait = leader_trait_adaptable
+						trait = leader_trait_eager
+						trait = leader_trait_disorganized # disorder
+						trait = subclass_commander_general
+					}
+					gender = female
+					set_age = 19
+					immortal = no
+					effect = {
+						save_global_event_target_as = whoniverse_rose_tyler_leader
+						set_leader_flag = legendary_leader
+						set_leader_flag = rose_tyler
+						set_owner = root
+						exile_leader_as = whoniverse_rose_tyler_leader
+					}
+				}
+			}
+		}
+	}
+
+	option = { # Identify
+		name = whoniverse.916.a
+		is_dialog_only = yes
+		response_text = whoniverse.916.a.response
+	}
+	option = { # Why help
+		name = whoniverse.916.b
+		is_dialog_only = yes
+		response_text = whoniverse.916.b.response
+	}
+
+	option = { # More about yourself
+	name = whoniverse.916.c
+	is_dialog_only = yes
+	response_text = whoniverse.916.c.response
+	}
+
+	option = { # HIRE
+		name = whoniverse.916.d
+		tag = hire_leader
+		custom_tooltip = whoniverse.916.d.custom_tooltip # Rose Tyler joins
+		sound = whoniverse_rose_tyler_greetings
+
+		hidden_effect = {
+			clone_leader = {
+				target = event_target:whoniverse_rose_tyler_leader
+			}
+			last_created_leader = {
+				set_leader_flag = legendary_leader
+				save_global_event_target_as = whoniverse_rose_tyler_leader
+				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = whoniverse_rose_tyler_leader
+				set_owner = root
+			}
+		}
+	}
+	option = { # DISMISS
+		name = whoniverse.916.e
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:whoniverse_rose_tyler_leader = {
+				kill_leader = { show_notification = no }
+				}
+		}
+	}
+}
+
+# Rose Tyler - Bad Ending - Create faction on planet
+planet_event = {
+	id = whoniverse.917
+	title = "whoniverse.917.name"
+	desc = "whoniverse.917.desc"
+	picture = GFX_evt_whoniverse_autons
+	show_sound = event_air_raid_siren
+	location = ROOT
+	event_chain = whoniverse_rose_chain
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_ai = no
+		has_ground_combat = no
+	}
+
+	trigger = {
+		num_pops > 0
+		has_planet_flag = whoniverse_rose_autons_planet
+	}
+
+	immediate = {
+		owner = {
+			end_event_chain = "whoniverse_rose_chain"
+		}
+		
+		owner = { set_country_flag = whoniverse_rose_autons_invaded_flag }
+		create_country = {
+			name = "Nestene Invasion"
+			type = faction
+			flag = {
+				icon = {
+					category = "whoniverse"
+					file = "whoniverse_flag_11.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"dark_grey"
+					"grey"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				establish_communications_no_message = root.owner
+				establish_contact = { who = root.owner location = root.solar_system }
+			}
+		}
+		create_species = {
+			name = "WHO_AUTON"
+			class = WHO_AUTON
+			portrait = whoniverse_nestene
+			traits = {
+				trait = "trait_hive_mind"
+				trait = "trait_whoniverse_auton"
+			}
+		}
+		while = {
+			count = 15
+			create_army = {
+				name = "WHO_AUTON_ARMY"
+				owner = last_created_country
+				species = last_created_species
+				type = "assault_army"
+			}
+		}
+	}
+
+	option = {
+		name = "DISCONCERTING"
+	}
+}
+

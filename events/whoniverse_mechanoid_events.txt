@@ -1,0 +1,321 @@
+# 01 - 03 = placeholders
+# 04 - 05 = Dalek Conversion effect
+# 06 - 07 = Dalek Reinvention of the Dalek Empire event
+# 08 - 12 = Dalek setup events
+# 12 - 17 = Dalek Asylum event chain
+# 19 + 23 = Dalek Necros 
+# 20 - 24 = Dalek Davros event chain
+# 30 - 39 = Cybermen setup events
+# 40 - 49 = Cybermen Mondasian Colony Ship chain
+# 50 - 59 = Cybermen Cyberiad Origin event chain
+# 60 - 69 = Cybermen Cyberiad systems events and anomalies
+# 70 - 79 = UNIT setup / Life on Mars project
+# 80 - 99 = UNIT Zygon Invasion event chain
+# 100 - 109 = Zygon system events and anomalies
+# 110 - 119 = Weeping Angels UNIT Blink event chain
+# 120 - 139 = Weeping Angels random events
+# 140 - 149 = Church of the Papal Mainframe setup
+# 150 - 159 = The Question (Trenzalore) event chain
+# 160 - 169 = Kovarian Chapter event chain (planned)
+# 170 - 179 = Alfava Metraxis archaelogy digsite
+# 180 - 189 = Cybusmen Pete's World events
+# 190 - 199 = Cybusmen Cybus Industries events
+# 200 - 209 = Dalek Empire Remnants setup events
+# 210 - 219 = Dalek Empire Remnants events
+# 220 - 239 = Mechanoid anomalies / Mechanus digsite
+
+### Mechanus digsite ###
+# via on_survey = {} | this = surveying vessel
+ship_event = {
+	id = whoniverse.220
+	title = "whoniverse.220.name"
+	desc = "whoniverse.220.desc"
+	picture = GFX_evt_ancient_alien_temple
+	location = from
+	show_sound = event_wind_ruins
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		# owner = {
+		# 	is_ai = no
+		# }
+		solar_system = { has_star_flag = whoniverse_mechanus_system }
+		FROM = {
+			has_planet_flag = whoniverse_mechanus
+		}
+	}
+
+	immediate = {
+		owner = { set_country_flag = whoniverse_mechanus_archaeology }
+		from = { prevent_anomaly = yes }
+	}
+
+	option = {
+		name = CURIOUS
+		from = {
+			create_archaeological_site = whoniverse_digsite_mechanus
+			save_global_event_target_as = mechanus_event
+		} 
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+	}
+}
+
+#Mechanus Stage 1 - City
+fleet_event = {
+	id = whoniverse.221
+	title = "whoniverse.221.name"
+	desc = whoniverse.221.desc
+	picture = GFX_evt_whoniverse_mechanoid
+	show_sound = event_dig_site
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.221.a
+		small_artifact_reward = yes
+	}
+}
+
+#Mechanus Stage 2 - Daleks!
+fleet_event = {
+	id = whoniverse.222
+	title = "whoniverse.222.name"
+	desc = whoniverse.222.desc
+	picture = GFX_evt_whoniverse_mechanoid
+	show_sound = event_dig_site
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.222.a
+		small_artifact_reward = yes
+	}
+}
+
+#Mechanus Stage 3 - Vault
+fleet_event = {
+	id = whoniverse.223
+	title = "whoniverse.223.name"
+	desc = whoniverse.223.desc
+	picture = GFX_evt_ancient_databank
+	show_sound = event_dig_site
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.223.a
+		small_artifact_reward = yes
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+	}
+}
+
+#Mechanus Stage 3 - Vault
+fleet_event = {
+	id = whoniverse.224
+	title = "whoniverse.224.name"
+	desc = whoniverse.224.desc
+	picture = GFX_evt_whoniverse_mechanoid
+	show_sound = whoniverse_mechanoid_greetings
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+
+		owner = {
+			create_species = { # Machine Intelligence or Individualist Machine
+				class = MACHINE
+				name = WHO_MECHANOID
+				namelist = "MACHINE1"
+				portrait = whoniverse_mechanoid
+				traits = {
+					trait = trait_wet_planet_preference
+					trait = trait_machine_unit
+					trait = trait_robot_learning_algorithms
+					trait = trait_robot_bulky
+				}
+				effect = {
+					set_species_homeworld = from.planet
+					save_event_target_as = mechanoid_machines
+				}
+			}
+
+			create_species = { # Regular empires
+				class = ROBOT
+				name = WHO_MECHANOID
+				namelist = "MACHINE1"
+				portrait = whoniverse_mechanoid
+				traits = {
+					trait = trait_wet_planet_preference
+					trait = trait_machine_unit
+					trait = trait_robot_learning_algorithms
+					trait = trait_robot_bulky
+				}
+				effect = {
+					set_species_homeworld = from.planet
+					save_event_target_as = mechanoid_robots
+				}
+			}
+		}
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+		large_artifact_reward = yes
+	}
+
+	option = {
+		name = whoniverse.224.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier3unityreward
+				min = @tier3unitymin
+				max = @tier3unitymax
+			}
+		}	
+	}
+
+	option = {
+		name = whoniverse.224.b
+		custom_tooltip = whoniverse.224.b.tooltip
+		trigger = {
+			owner = { is_machine_empire = no }
+		}
+		hidden_effect = {
+			event_target:mechanus_event = {
+				set_owner = root.owner
+				add_district = district_city
+				while = {
+					count = 12
+					create_pop = {
+						species = event_target:mechanoid_robots
+					}
+				}
+			}	
+		}
+	}
+
+	option = {
+		name = whoniverse.224.c
+		custom_tooltip = whoniverse.224.c.tooltip
+		trigger = {
+			owner = { is_machine_empire = yes }
+		}
+		hidden_effect = {
+			event_target:mechanus_event = {
+				set_owner = root.owner
+				add_district = district_nexus
+				while = {
+					count = 12
+					create_pop = {
+						species = event_target:mechanoid_machines
+					}
+				}
+			}	
+		}
+	}
+
+	option = {
+		name = whoniverse.224.d
+		custom_tooltip = whoniverse.224.d.tooltip
+		trigger = {
+			owner = { not = { has_ethic = ethic_fanatic_xenophobe } }
+		}
+		hidden_effect = {
+			event_target:mechanus_event = {
+				create_country = {
+					type = default
+					name = "PRESCRIPTED_whoniverse_mechanoid"
+					species = event_target:mechanoid_machines
+					name_list = MACHINE1
+					flag = {
+						icon = {
+							category = "whoniverse"
+							file = "whoniverse_flag_10.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "flag_BG_19.dds"
+						}
+						colors = {
+							"blue"
+							"red"
+							"teal"
+							"null"
+						}
+					}
+					ethos = {
+						ethic = ethic_gestalt_consciousness
+					}
+					authority = auth_machine_intelligence
+					civics = {
+						civic = civic_machine_introspective
+						civic = civic_machine_builder
+					}
+
+					effect = {
+						prev.solar_system.starbase = {
+							set_owner = prev
+						}
+						give_starting_resources_effect = yes
+						add_resource = {
+							unity = 100000
+						}
+						copy_techs_from = { target = root.owner }
+						set_subject_of = {
+							who = root.owner
+						}
+					}
+				}
+				while = {
+					count = 24
+					create_pop = {
+						species = event_target:mechanoid_machines
+					}
+				}
+				while = {
+					count = 6
+					add_district = district_nexus
+				}
+				while = {
+					count = 2
+					add_district = district_industrial
+					add_district = district_generator_uncapped
+					add_district = district_mining_uncapped
+				}
+				add_building = building_machine_major_capital
+				add_building = building_machine_assembly_complex
+			}
+		}
+	}
+}
+
+

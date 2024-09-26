@@ -8,11 +8,22 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
 	}
 
+	spriteType = {
+		name = "GFX_leader_legendary_bg_whoniverse_ninth"
+		texturefile = "gfx/portraits/leaders/leader_whoniverse_ninth_bg.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
 	### Recruitment BGs
 
 	spriteType = {
 		name = "GFX_leader_recruitment_bg_whoniverse_davros"
 		texturefile = "gfx/interface/leaders/leader_recruitment_bg_whoniverse_davros.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_recruitment_bg_whoniverse_ninth"
+		texturefile = "gfx/interface/leaders/leader_recruitment_bg_whoniverse_ninth.dds"
 	}
 
 }

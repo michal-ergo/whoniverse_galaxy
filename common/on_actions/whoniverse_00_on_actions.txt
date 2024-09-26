@@ -3,18 +3,18 @@
 on_game_start_country = {
 	events = {
 		whoniverse.10 # New Dalek Paradigm origin setup
-		whoniverse.200 # Dalek Empire Remnants origin setup
-		whoniverse.201 # Dalek Empire Remnants wormholes seen
-		whoniverse.35 # Cyberiad origin event
-		whoniverse.50 # Cyberiad origin event
-		whoniverse.80 # UNIT origin event
-		whoniverse.75 # UNIT origin event
-		whoniverse.6 # Reinvention of the Dalek Empire
+		whoniverse.35 # Cyberiad origin setup event
+		whoniverse.50 # Cyberiad origin event chain
+		whoniverse.75 # UNIT origin setup event
+		whoniverse.80 # UNIT origin setup event
 		whoniverse.20 # Davros
 		whoniverse.70 # UNIT Colonization forbidden
 		whoniverse.120 # Weeping Angels UNIT Blink event
 		whoniverse.141 # Church of the Papal Mainframe Devil's Run setup	
 		whoniverse.38 # Cybusmen start wormholes seen
+		whoniverse.200 # Dalek Empire Remnants origin setup
+		whoniverse.201 # Dalek Empire Remnants wormholes seen
+		whoniverse.240 # Nestene origin setup event		
 	}
 }
 
@@ -32,6 +32,8 @@ empire_init_capital_planet = {
 
 on_mid_game_pulse_country = {
 	events = {
+		whoniverse.6 # Reinvention of the Dalek Empire
+		whoniverse.77 # UNIT rename event
 		whoniverse.150 # Silence Will Fall event chain
 	}
 }

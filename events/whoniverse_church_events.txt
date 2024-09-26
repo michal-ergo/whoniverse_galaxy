@@ -345,9 +345,9 @@ country_event = {
 
 	immediate = {
 		create_species = {
-			name = "DALEK"
-			plural = "DALEK_plural"
-			class = HUM
+			name = "WHO_DALEK"
+			plural = "WHO_DALEK_plural"
+			class = WHO_DALEK
 			portrait = "whoniverse_dalek_paradigm"
 			namelist = "DALEK1"
 			traits = {
@@ -1186,7 +1186,7 @@ fleet_event = {
 	title = "whoniverse.171.name"
 	desc = whoniverse.171.desc
 	picture = GFX_evt_riftworld_archsite_ancestors
-	show_sound = event_wind_ruins
+	show_sound = event_dig_site
 	location = from
 
 	archaeology = yes
@@ -1195,6 +1195,30 @@ fleet_event = {
 
 	option = {
 		name = whoniverse.171.a
+		trigger = {
+			event_target:alfava_metraxis_event = {
+				has_owner = yes
+			}			
+		}
+		small_artifact_reward = yes
+	}
+
+	option = {
+		name = whoniverse.171.b
+		custom_tooltip = whoniverse.171.b.tooltip	
+		trigger = {
+			event_target:alfava_metraxis_event = {
+				has_owner = no
+			}			
+		}
+		hidden_effect = {
+			event_target:alfava_metraxis_event = {
+				set_owner = root.owner
+				create_pop = {
+					species = owner_main_species
+				}
+			}
+		}
 		small_artifact_reward = yes
 	}
 }
@@ -1227,7 +1251,7 @@ fleet_event = {
 				if = {
 					limit = { host_has_dlc = "Lithoids Species Pack" }
 					create_species = {
-						name = "SPEC_WHO_WEEPING_ANGEL"
+						name = "WHO_WEEPING_ANGEL"
 						class = PRE_LITHOID
 						portrait = whoniverse_weeping_angel
 						traits = {
@@ -1245,7 +1269,7 @@ fleet_event = {
 				else_if = {
 					limit = { NOT = { host_has_dlc = "Lithoids Species Pack" } }
 					create_species = {
-						name = "SPEC_WHO_WEEPING_ANGEL"
+						name = "WHO_WEEPING_ANGEL"
 						class = PRE_MAM
 						portrait = whoniverse_weeping_angel
 						traits = {

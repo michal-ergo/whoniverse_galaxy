@@ -229,6 +229,94 @@ planet_event = {
 	}
 }
 
+# UNIT rename event setup
+country_event = {
+    id = whoniverse.77
+	hide_window = yes
+
+	trigger = {
+		has_origin = origin_whoniverse_unit
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = { id = whoniverse.78 days = 3600 random = 3600 } # 0 - 20 years
+			}
+	}
+}
+
+# UNIT rename event
+country_event = {
+	id = whoniverse.78
+	title = "whoniverse.78.name"
+	desc = "whoniverse.78.desc"
+	picture = GFX_evt_galactic_senate
+	show_sound = event_factions
+	
+	trigger = {
+		has_origin = origin_whoniverse_unit
+	}
+
+	is_triggered_only = yes
+
+	# Earth Alliance of Corporations
+	option = {
+		name = whoniverse.78.a
+		custom_tooltip = whoniverse.78.a.tooltip
+		trigger = {
+			has_megacorp = yes
+		}
+		hidden_effect = {
+			set_name = "PRESCRIPTED_earth_alliance_of_corporations"
+		}
+		change_government = {
+			authority = auth_corporate
+			civics = { civic = civic_whoniverse_unit_hq }
+			remove_invalid_civics = yes
+		}
+		add_monthly_resource_mult = {
+			resource = energy
+			value = @tier2materialreward
+			min = @tier2materialmin
+			max = @tier2materialmax
+			}
+	}
+
+	# Earth Empire
+	option = {
+		name = whoniverse.78.b
+		custom_tooltip = whoniverse.78.b.tooltip
+		hidden_effect = {
+			set_name = "PRESCRIPTED_earth_empire"
+		}
+		shift_ethic = ethic_authoritarian
+		change_government = { 
+			authority = auth_dictatorial
+			remove_invalid_civics = yes 
+		}
+		add_monthly_resource_mult = {
+			resource = influence
+			value = @tier1influencereward
+			min = @tier1influencemin
+			max = @tier1influencemax
+			}
+	}
+
+	# no change
+	option = {
+		name = whoniverse.78.c
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier1unityreward
+			min = @tier1unitymin
+			max = @tier1unitymax
+			}
+	}
+}
+
 ### ZYGON INVASION EVENT CHAIN
 # Zygon Invasion Setup
 country_event = {
@@ -373,7 +461,7 @@ planet_event = {
         hidden_effect = {
 			planet_event = { id = whoniverse.85 days = 730 random = 90 } # cca 2 years later
 			create_species = {
-				name = "SPEC_WHO_ZYGON"
+				name = "WHO_ZYGON"
 				class = FUN
 				portrait = whoniverse_zygon
 				traits = {
@@ -1058,7 +1146,7 @@ country_event = {
 				limit = { NOT = { exists = event_target:zygon_species } }
 			capital_scope = {
 				create_species = {
-					name = "SPEC_WHO_ZYGON"
+					name = "WHO_ZYGON"
 					class = FUN
 					portrait = whoniverse_zygon
 					traits = {

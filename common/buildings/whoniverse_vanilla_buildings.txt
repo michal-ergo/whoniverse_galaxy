@@ -1,6 +1,7 @@
 ### VANILLA BUILDINGS ###
 # Check compatibility
 
+# 01_pop_assembly_buildings.txt
 # Spawning Pool: forbidden for Cybermen (see potential)
 building_spawning_pool = {
 	base_buildtime = @b1_time
@@ -127,4 +128,3 @@ building_spawning_pool = {
 		text = spawning_pool_tooltip
 	}
 }
-

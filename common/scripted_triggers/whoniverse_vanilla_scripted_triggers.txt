@@ -20,7 +20,7 @@
 # 	}
 # }
 
-
+# 00_scripted_triggers
 is_human_species = {
 	OR = {
 		species_portrait = human
@@ -33,3 +33,23 @@ is_human_species = {
 	}
 }
 
+# 05_scripted_triggers_traits
+has_energy_upkeep = {
+	OR = {
+		is_robotic_or_voidspawn_species = yes
+		has_trait = trait_cyborg_power_intensive
+		has_trait = trait_exd
+		species = { has_trait = trait_whoniverse_auton } # modded in
+	}
+}
+
+
+has_food_upkeep = {
+	species = {
+		is_archetype = BIOLOGICAL
+	}
+	NOR = {
+		has_trait = trait_voidling
+		has_trait = trait_whoniverse_auton
+	}
+}

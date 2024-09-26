@@ -55,10 +55,10 @@ ap_whoniverse_cybermen = {
 
  	ai_weight = {
  		factor = 10
- 	modifier = {
- 		factor = 1000
- 		has_whoniverse_cyber_conversion = yes
- 		}
+		modifier = {
+			factor = 1000
+			has_whoniverse_cyber_conversion = yes
+			}
  	}
 }
 
@@ -82,6 +82,47 @@ ap_whoniverse_church = {
 
 	ai_weight = {
 		factor = 100
+	}
+}
+
+# The Doctor Ascension Perk
+ap_whoniverse_doctor = {
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_free_tradition_tree"
+			num_tradition_categories < @max_tradition_trees
+		}
+		NOR = {
+			has_ethic = ethic_fanatic_xenophobe
+			has_ethic = ethic_fanatic_militarist
+			has_ethic = ethic_fanatic_authoritarian
+			}
+	}
+
+	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+		is_ai = no
+		}
+	
+	on_enabled = {
+		custom_tooltip = "whoniverse_ap_doctor_tooltip"
+		hidden_effect = {
+			country_event = {
+				id = whoniverse.900
+			}
+		}
+	}
+
+	modifier = {
+		diplo_weight_mult = 0.10
+		country_trust_cap_add = 25
+	}
+
+	ai_weight = {
+		factor = 0
 	}
 }
 

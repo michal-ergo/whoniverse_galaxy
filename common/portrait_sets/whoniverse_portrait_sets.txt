@@ -11,7 +11,7 @@
 #													(the number of uplifted portraits must be the same as the number of portraits in 'portraits' list).
 
 whoniverse_dalek_set = {
-	species_class = HUM
+	species_class = WHO_DALEK
 
 	portraits = {
 		"whoniverse_dalek_paradigm"
@@ -22,14 +22,13 @@ whoniverse_dalek_set = {
 	# These should not be used for randomly generated species
 	non_randomized_portraits = {
 		"whoniverse_dalek_paradigm"
-		"whoniverse_dalek_empire"
 		"whoniverse_dalek_imperial"
 		"whoniverse_dalek_renegade"
 		}
 }
 
 whoniverse_cyberman_set = {
-	species_class = HUM
+	species_class = WHO_CYBERMAN
 
 	portraits = {
 		"whoniverse_cyberman_cybus"
@@ -126,5 +125,18 @@ whoniverse_mechanoid_set = {
 	# These should not be used for randomly generated species
 	non_randomized_portraits = {
 		"whoniverse_mechanoid"
+	}
+}
+
+whoniverse_nestene_set = {
+	species_class = WHO_AUTON
+
+	portraits = {
+		"whoniverse_nestene"
+	}
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"whoniverse_nestene"
 	}
 }

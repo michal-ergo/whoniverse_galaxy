@@ -1,0 +1,118 @@
+@distance = 50
+@base_moon_distance = 10
+@jumps = 3
+
+# Mechanoid system initializer (disabled if Mechanoid Empire premade empire in game)
+ 
+# Mechanus
+whoniverse_mechanus_system = {
+	name = "whoniverse_name_mechanus_system"
+
+	# init_effect = {
+	# 	every_neighbor_system = { set_star_flag = empire_cluster }
+	# }
+
+ 	usage = misc_system_init
+ 	usage_odds = {
+ 		base = 0
+ 		modifier = {
+ 			add = 10000
+			host_has_dlc = "Synthetic Dawn Story Pack"
+ 			# NOR = {
+ 			# 	any_country = { has_country_flag = whoniverse_dalek_empire_remnants }
+ 			# 	any_system = { has_star_flag = whoniverse_dalek_empire_remnants_start_system }
+ 			# }
+ 		}
+ 	}
+ 	max_instances = 1
+
+	class = "sc_a"
+
+	flags = { suppress_archaeological_sites whoniverse_mechanus_system }
+
+	planet = {
+		name = "whoniverse_name_mechanus"
+		class = "pc_b_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 27
+		has_ring = no
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 65
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 190
+	}
+
+	change_orbit = 20
+	
+	planet = {
+		name = "Mechanus I"
+		class = "pc_molten"
+		orbit_distance = 30
+		orbit_angle = 90
+		size = 10
+		has_ring = no
+		init_effect = {
+			set_planet_flag = suppress_archaeological_sites
+		}
+	}
+
+	planet = {
+		name = "Mechanus II"
+		class = "pc_tropical"
+		orbit_distance = 35
+		orbit_angle = 150
+		size = { min = 18 max = 25 }
+		has_ring = yes
+		init_effect = {
+			prevent_anomaly = yes
+			# create_archaeological_site = whoniverse_digsite_alfava_metraxis
+			add_anomaly = { category = whoniverse_mechanus_cat }
+			set_planet_flag = whoniverse_mechanus
+			set_planet_flag = suppress_archaeological_sites
+		}
+	}
+
+	planet = {
+		name = "Mechanus III"
+		class = "pc_gas_giant"
+		orbit_distance = 30
+		orbit_angle = 250
+		size = 18
+		has_ring = no
+		init_effect = {
+			set_planet_flag = suppress_archaeological_sites
+		}
+	}
+
+	planet = {
+		name = "Mechanus IV"
+		class = "pc_barren"
+		orbit_distance = 65
+		orbit_angle = 140
+		size = 13
+		has_ring = no
+		init_effect = {
+			set_planet_flag = suppress_archaeological_sites
+		}
+	}
+
+	planet = {
+		name = "Mechanus V"
+		class = "pc_barren_cold"
+		orbit_distance = 80
+		orbit_angle = 210
+		size = 10
+		has_ring = no
+		init_effect = {
+			set_planet_flag = suppress_archaeological_sites
+		}
+	}
+
+}

@@ -2,10 +2,10 @@
 
 # Dalek origin concepts
  concept_whoniverse_dalek_infertile: "$trait_whoniverse_dalek_infertile$"
- concept_whoniverse_dalek_infertile_desc: "- $MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$: §G+50%§! $NEW_LINE$- Leader Maximum Negative Traits: §G-1§!$NEW_LINE$$TRAIT_IMPROVES_LEADERS$$DOUBLE_NEW_LINE$§L$trait_whoniverse_dalek_infertile_desc$§! $NEW_LINE$- $TRAIT_INFERTILE$"
+ concept_whoniverse_dalek_infertile_desc: "- $MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$: §G+50%§! $NEW_LINE$- Leader Maximum Negative Traits: §G-1§!$NEW_LINE$$TRAIT_IMPROVES_LEADERS$ $NEW_LINE$- $TRAIT_INFERTILE$ $DOUBLE_NEW_LINE$§L$trait_whoniverse_dalek_infertile_desc$§! "
 
  concept_whoniverse_dalek_machine: "$trait_whoniverse_dalek_machine$"
- concept_whoniverse_dalek_machine_desc: "- Pop Food Upkeep: §G-25%§!$NEW_LINE$- Pop Consumer Goods Upkeep: §G-25%§!$NEW_LINE$- Resettlemnt Cost: §G-25%§!$NEW_LINE$- $MOD_ARMY_DAMAGE_MULT$: §G+25%§!$NEW_LINE$- Pop Housing Usage: §R+10%§!"
+ concept_whoniverse_dalek_machine_desc: "- Pop Food Upkeep: §G-25%§!$NEW_LINE$- Pop Consumer Goods Upkeep: §G-25%§!$NEW_LINE$- Resettlement Cost: §G-25%§!$NEW_LINE$- $MOD_ARMY_DAMAGE_MULT$: §G+25%§!$NEW_LINE$- Pop Housing Usage: §R+10%§!"
 
  concept_whoniverse_dalek_supremacy: "$civic_whoniverse_dalek_supremacy$"
  concept_whoniverse_dalek_supremacy_desc: "- War Exhaustion Gain: §G-20%§!\n- Claim Influence Cost: §G-10%§!\n- Automatic Resettlement Chance: §G+25%§!\n- Crime Rate: §G-10%§! \n\n§L$civic_whoniverse_cyber_conversion_desc$§!"
@@ -50,4 +50,9 @@
  concept_whoniverse_seventh_transept: "$building_whoniverse_seventh_transept$"
  concept_whoniverse_seventh_transept_desc: "- Empire Limit: §I1§! $NEW_LINE$- $i_unity$ from Priests: §G+1§! $NEW_LINE$- Allows recruitment of §HHeadless Monk§! armies§! $NEW_LINE$- Necromancer jobs: §G+4§!\n\n§L$building_whoniverse_seventh_transept_desc$§!"
 
+# Nestene concepts
+ concept_whoniverse_auton: "$trait_whoniverse_auton$"
+ concept_whoniverse_auton_desc: "- Replaces Food upkeep with §YEnergy§!$NEW_LINE$- Habitability: §G+20%§! $NEW_LINE$- Army Damage: §G+20%§! $NEW_LINE$- Pop Housing Usage: §G-15%§! $NEW_LINE$- Leaders are §GImmortal§!$NEW_LINE$- $TRAIT_INFERTILE$ $DOUBLE_NEW_LINE$§L$trait_whoniverse_auton_desc$§!"
 
+ concept_whoniverse_metamorphic_hive: "$civic_whoniverse_metamorphic_hive$"
+ concept_whoniverse_metamorphic_hive_desc: "- Codebreaking: §G+1§! $NEW_LINE$- Infiltration Speed: §G+25%§! $NEW_LINE$- Legion Node Experience Gain: §G+25%§! $DOUBLE_NEW_LINE$§L$civic_whoniverse_metamorphic_hive_desc$§!"

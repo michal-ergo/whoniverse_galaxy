@@ -3,6 +3,7 @@
 category = {
 	name = "Whoniverse Greeting"
 	soundeffects = {
+		whoniverse_ninth_doctor_greetings
 		whoniverse_dalek_greetings
 		whoniverse_dalek_supreme_greetings
 		whoniverse_dalek_davros_greetings
@@ -35,7 +36,29 @@ category = {
 		whoniverse_church_boom_father_greetings
 		whoniverse_church_boom_mundy_greetings
 		whoniverse_mechanoid_greetings
+		whoniverse_auton_greetings
+		whoniverse_nestene_greetings
 	}
+}
+
+soundeffect = {
+	name = whoniverse_ninth_doctor_greetings
+	sounds = {
+		sound = whoniverse_doctor_ninth_1
+		sound = whoniverse_doctor_ninth_2
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_rose_tyler_greetings
+	sounds = {
+		sound = whoniverse_rose_tyler_five_million_cybermen
+		sound = whoniverse_rose_tyler_tell_me_who_are_you
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
 }
 
 soundeffect = {
@@ -360,6 +383,26 @@ soundeffect = {
 	sounds = {
 		sound = whoniverse_mechanoid
 		sound = whoniverse_mechanoid_beep
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+# Nestene Greetings
+soundeffect = {
+	name = whoniverse_auton_greetings
+	sounds = {
+		sound = whoniverse_auton_fire
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_nestene_greetings
+	sounds = {
+		sound = whoniverse_nestene_scream_1
+		sound = whoniverse_nestene_scream_2
 	}
 	max_audible = 1
 	max_audible_behaviour = fail

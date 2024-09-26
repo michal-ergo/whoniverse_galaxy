@@ -1,0 +1,111 @@
+# 01 - 03 = placeholders
+# 04 - 05 = Dalek Conversion effect
+# 06 - 07 = Dalek Reinvention of the Dalek Empire event
+# 08 - 12 = Dalek setup events
+# 12 - 17 = Dalek Asylum event chain
+# 19 + 23 = Dalek Necros 
+# 20 - 24 = Dalek Davros event chain
+# 30 - 39 = Cybermen setup events
+# 40 - 49 = Cybermen Mondasian Colony Ship chain
+# 50 - 59 = Cybermen Cyberiad Origin event chain
+# 60 - 69 = Cybermen Cyberiad systems events and anomalies
+# 70 - 79 = UNIT setup / Life on Mars project
+# 80 - 99 = UNIT Zygon Invasion event chain
+# 100 - 109 = Zygon system events and anomalies
+# 110 - 119 = Weeping Angels UNIT Blink event chain
+# 120 - 139 = Weeping Angels random events
+# 140 - 149 = Church of the Papal Mainframe setup
+# 150 - 159 = The Question (Trenzalore) event chain
+# 160 - 169 = Kovarian Chapter event chain (planned)
+# 170 - 179 = Alfava Metraxis archaelogy digsite
+# 180 - 189 = Cybusmen Pete's World events
+# 190 - 199 = Cybusmen Cybus Industries events
+# 200 - 209 = Dalek Empire Remnants setup events
+# 210 - 219 = Dalek Empire Remnants events
+# 220 - 239 = Mechanoid anomalies / Mechanus digsite
+# 240 - 249 = Nestene Consciousness setup events
+# 250 - 259 = Nestene Consciousness system events and anomalies
+
+# Nestene Consciousness setup
+country_event = {
+	id = whoniverse.240
+	hide_window = yes
+	trigger = {
+		has_origin = origin_whoniverse_nestene
+			}
+	is_triggered_only = yes	
+	fire_only_once = yes
+		
+	immediate = {
+		event_target:whoniverse_start_nestenia = {
+			add_deposit = d_whoniverse_polymeric_crust
+				}
+			}
+		}
+
+
+# Polymos anomaly
+ship_event = {
+    id = whoniverse.250
+    title = "whoniverse.250.name"
+    desc = "whoniverse.250.desc"
+    picture = GFX_evt_shattered_planet
+    show_sound = event_scanner
+    location = FROM
+            
+    is_triggered_only = yes
+
+	immediate = {
+		from = { add_deposit = d_energy_5 }
+	}
+
+	option = {
+		name = CURIOUS
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+					}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+					}
+			}		
+	   	}
+	option = {
+		name = whoniverse.250.b
+		owner = {
+			add_monthly_resource_mult = {
+				resource = energy
+				value = @tier3materialreward
+				min = @tier3materialmax
+				max = @tier3materialmax
+				}
+			}		
+	   	}
+	option = {
+		name = whoniverse.250.c
+		custom_tooltip = whoniverse.250.c.tooltip
+		trigger = {
+			owner = {
+				has_origin = origin_whoniverse_nestene
+			}
+		}
+		hidden_effect = {
+			owner = {
+				capital_scope = {
+					while = {
+						count = 3
+						create_pop = {
+							species = owner_main_species
+						}
+					}
+				}		
+			}
+		}
+	}	
+}

@@ -35,3 +35,44 @@ whoniverse_digsite_alfava_metraxis = {
 		}
 	}
 }
+
+# Mechanus Digsite
+whoniverse_digsite_mechanus = {
+	desc = whoniverse_digsite_mechanus_desc
+	picture = GFX_evt_ancient_alien_temple
+	stages = 4
+	max_instances = 1
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		has_country_flag = whoniverse_mechanus_archaeology
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_F1
+		event = whoniverse.221
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_F2
+		event = whoniverse.222
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_F3
+		event = whoniverse.223
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_F3
+		event = whoniverse.224
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}

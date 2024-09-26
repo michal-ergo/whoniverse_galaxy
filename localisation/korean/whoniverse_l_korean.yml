@@ -11,7 +11,8 @@
  
  NAME_ressurected_dalek_empire:0 "Ressurected Dalek Empire"
 
- origin_tooltip_whoniverse_new_dalek_paradigm:2 "- $SPECIES_TRAITS$ ['concept_whoniverse_dalek_infertile'] $NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_dalek_supremacy'] $NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$]$NEW_LINE$- Special Dalek events and recruitable leaders"
+ origin_tooltip_whoniverse_new_dalek_paradigm:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor'] $NEW_LINE$- $HOMEWORLD$ ['concept_pc_nuked']$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_dalek_supremacy'] $NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$]$NEW_LINE$- Special Dalek events and recruitable leaders"
+
 
 # - $HOMEWORLD$ ['concept_whoniverse_dalek_incubation_vats'] +1 
 
@@ -32,7 +33,7 @@
 
 # Dalek Conversion purge type
  purge_whoniverse_dalek_conversion:0 "Human-Dalek Conversion"
- purge_whoniverse_dalek_conversion_tooltip:0 "Affected Pops are harvested for their genetic material, from which new [From.GetSpeciesAdj] are produced."
+ purge_whoniverse_dalek_conversion_tooltip:0 "Affected Pops are harvested for their genetic material, from which new [From.GetSpeciesNamePlural] are produced."
  purge_whoniverse_dalek_conversion_tooltip_delayed:0 "§LThe seed of the human race is perverted; only one cell in a billion was fit to be nurtured!§!"
  WHONIVERSE_CANNOT_CONVERT_NONHUMANS:0 "Only humans can be converted into Daleks."
 
@@ -89,7 +90,7 @@
  D-4-Lambda-E:0 "D-4-Lambda-E"
 
  whoniverse_skaro_system_initializer_NAME:0 "Skaro System"
- whoniverse_skaro_system_initializer_DESC:0 "Star system containing the restored home world of the §HDaleks§!, §HSkaro§!.\n\n$system_initializer_DESC$"
+ whoniverse_skaro_system_initializer_DESC:0 "Star system containing the restored home world of the Daleks, Skaro.\n\n$system_initializer_DESC$"
 
  d_whoniverse_petrified_jungle:0 "Petrified Jungle"
  d_whoniverse_petrified_jungle_desc:0 "This jungle had nearly all vegetation turned to stone by the use of neutron bombs in the Thousand Year War. Some rare and deadly species still remain."
@@ -155,12 +156,12 @@
 # Reinvention of the Dalek Empire
 
  whoniverse.7.name:0 "Reinvention of the Dalek Empire"
- whoniverse.7.desc:0 "As the numbers of Bronze Daleks within the Dalek Parliament grow, discontent with the leadership of the §SNew Dalek Paradigm§! intensifies. Murmurs of rebellion echo through the metallic halls, focusing on [Root.Owner.Ruler.GetName], whose rule is seen as weak and inadequate for the supreme ambition of the Dalek race. Calls for the overthrow of [Root.Owner.Ruler.GetName] and a reinvention of the §SDalek Empire§! grow louder, threatening the unity of the Daleks.\n\nWe must decide how to respond to this internal threat and secure the future of the Dalek race. The course of Dalek supremacy hinges on this critical moment."
+ whoniverse.7.desc:0 "As the numbers of Bronze Daleks within the Dalek Parliament grow, discontent with the leadership of the [Root.Owner.GetName] intensifies. Murmurs of rebellion echo through the metallic halls, focusing on [Root.Owner.Ruler.GetName], whose rule is seen as weak and inadequate for the supreme ambition of the Dalek race. Calls for the overthrow of [Root.Owner.Ruler.GetName] and a reinvention of the §HDalek Empire§! grow louder, threatening the unity of the Daleks.\n\nWe must decide how to respond to this internal threat and secure the future of the Dalek race. The course of Dalek supremacy hinges on this critical moment."
  whoniverse.7.a:0 "EXTERMINATE all dissidents!"
  whoniverse.7.b:0 "[Root.Owner.Ruler.GetName] must abdicate! All hail the Dalek Empire!"
- whoniverse.7.b.tooltip:0 "[Root.Owner.Ruler.GetName] stops being a Leader\n\nEmpire changes name to §SRessurected Dalek Empire§!"
+ whoniverse.7.b.tooltip:0 "[Root.Owner.Ruler.GetName] dies\nEmpire name changes to §SRessurected Dalek Empire§!"
  whoniverse.7.c:0 "Rebuild [Root.Owner.Ruler.GetName] into a new Dalek Emperor!"
- whoniverse.7.c.tooltip:0 "[Root.Owner.Ruler.GetName] will become the new Dalek Emperor\n\nEmpire changes name to §SRessurected Dalek Empire§!"
+ whoniverse.7.c.tooltip:0 "[Root.Owner.Ruler.GetName] becomes the new Dalek Emperor\nEmpire name changes to §SRessurected Dalek Empire§!"
 
 
 ## Davros event chain
@@ -174,26 +175,26 @@
  whoniverse.19.b:0 "Use the material to build §HDalek Incubation Vats§! on [Root.Owner.Capital.GetName]!"
  whoniverse.skaro_vats.custom_tooltip:0 "§HDalek Incubation Vats§! will be built on [Root.Owner.Capital.GetName] in §S30§! days."
 
- whoniverse.23.name:0 "Dalek Incubation Vats"
- whoniverse.23.desc:0 "Our drones have transported the materials and technology found on Necros and swiftly begun the construction of new §SDalek Incubation Vats§! on [Root.Owner.Capital.GetName]. It will be operational within a few days. Though the facility is maintenance-intensive, it will enable us to clone new Daleks. We should consider building additional facilities on other planets in the future."
- whoniverse.23.a:0 "The Daleks reign supreme!"
+ whoniverse.24.name:0 "Dalek Incubation Vats"
+ whoniverse.24.desc:0 "Our drones have transported the materials and technology found on Necros and swiftly begun the construction of new §SDalek Incubation Vats§! on [Root.Owner.Capital.GetName]. It will be operational within a few days. Though the facility is maintenance-intensive, it will enable us to clone new Daleks. We should consider building additional facilities on other planets in the future."
+ whoniverse.24.a:0 "The Daleks reign supreme!"
 
 # Davros hire
 
  whoniverse_dalek_caan_project:0 "Temporal Rift"
  whoniverse_dalek_caan_project_DESC:0 "Investigate the space-time rift on [Root.Owner.Capital.GetName]."
 
- whoniverse.24.name:0 "Temporal Rift"
- whoniverse.24.desc:0 "Our sensors detect the presence of a space-time rift in [Root.Owner.Capital.GetName]'s orbital path. The nature of this anomaly is not yet clear, and it may pose a potential threat to the [Root.GetName]. It is imperative to dispatch a Recon ship to the rift immediately to gather more information and assess the situation."
- whoniverse.24.a:0 "Issue a project to explain the anomaly!"
+ whoniverse.21.name:0 "Temporal Rift"
+ whoniverse.21.desc:0 "Our sensors detect the presence of a space-time rift in [Root.Owner.Capital.GetName]'s orbital path. The nature of this anomaly is not yet clear, and it may pose a potential threat to the [Root.GetName]. It is imperative to dispatch a Recon ship to the rift immediately to gather more information and assess the situation."
+ whoniverse.21.a:0 "Issue a project to explain the anomaly!"
 
- whoniverse.21.name:0 "Dalek Caan"
- whoniverse.21.desc:0 "Our Recon ship reports finding a Dalek from the §LLast Great Time War§! in the time rift. It is §SCaan§!, a lost member of the secretive §LCult of Skaro§!. Caan claims that he was able to use an emergency temporal shift to breach the time-lock and extract §rDavros§!, the Dalek creator himself, just seconds before he would have been destroyed by the §LNightmare Child§!. Caan offers to bring him back to [Root.Owner.Capital.GetName]. \n\nHowever, it seems that passing through the §LTime Vortex§! took Caan's mind. §P\"I flew into the wild and fire! I danced and died a thousand times,\"§! Caan exclaims in an almost sing-song voice."
- whoniverse.21.a:0 "§HOpen communications channel!§!"
- whoniverse.21.b:0 "The abomination is insane! EXTERMINATE!"
+ whoniverse.22.name:0 "Dalek Caan"
+ whoniverse.22.desc:0 "Our Recon ship reports finding a Dalek from the §LLast Great Time War§! in the time rift. It is §SCaan§!, a lost member of the secretive §LCult of Skaro§!. Caan claims that he was able to use an emergency temporal shift to breach the time-lock and extract §rDavros§!, the Dalek creator himself, just seconds before he would have been destroyed by the §LNightmare Child§!. Caan offers to bring him back to [Root.Owner.Capital.GetName]. \n\nHowever, it seems that passing through the §LTime Vortex§! took Caan's mind. §P\"I flew into the wild and fire! I danced and died a thousand times,\"§! Caan exclaims in an almost sing-song voice."
+ whoniverse.22.a:0 "§HOpen communications channel!§!"
+ whoniverse.22.b:0 "The abomination is insane! EXTERMINATE!"
 
- whoniverse.22.name:0 "NAME_whoniverse_davros_name"
- whoniverse.22.desc:0 "Behold, Daleks! Bear witness to the resurrection and triumph of the creator of your race! You will obey me!"
+ whoniverse.23.name:0 "NAME_whoniverse_davros_name"
+ whoniverse.23.desc:0 "Behold, Daleks! Bear witness to the resurrection and triumph of the creator of your race! You will obey me!"
  
  whoniverse_davros_country:0 "Imperial Daleks"
  NAME_whoniverse_davros_species:0 "Kaled"
@@ -201,16 +202,16 @@
  whoniverse_davros_catch_phrase:0 "My Daleks shall once more become the supreme being!"
  whoniverse_davros_backstory:0 "§HDavros§!, also known as the §LDark Lord of Skaro§!, was originally a scientist on the planet §HSkaro§!, but he became better known as the creator of the §HDaleks§!. His efforts to end the war on §HSkaro§! did not end as he envisioned, because the §HDaleks§! wiped out both the §HThal§! and §HKaled§! races, save for himself. For a time, he sought to create a race of §HDaleks§! loyal to him, but his relationship with them was always a tense one."
  
- whoniverse.22.a:0 "Identify yourself!"
- whoniverse.22.a.response:0 "Do you not recognize me? I am §HDavros§!! I am your creator! \n\nI witnessed the end of the §HKaled§! race, and from its ashes I built a new race - the supreme creature, the ultimate conquerer of the universe, the §HDALEK§!!"
+ whoniverse.23.a:0 "Identify yourself!"
+ whoniverse.23.a.response:0 "Do you not recognize me? I am §HDavros§!! I am your creator! \n\nI witnessed the end of the §HKaled§! race, and from its ashes I built a new race - the supreme creature, the ultimate conquerer of the universe, the §HDALEK§!!"
 
- whoniverse.22.b:0 "We do not acknowledge that any creature is superior to the §HDaleks§!!"
- whoniverse.22.b.response:0 "You cannot exist without me! You cannot progress! \n\nFor the last time, I am your creator! You will obey me!"
+ whoniverse.23.b:0 "We do not acknowledge that any creature is superior to the §HDaleks§!!"
+ whoniverse.23.b.response:0 "You cannot exist without me! You cannot progress! \n\nFor the last time, I am your creator! You will obey me!"
  
- whoniverse.22.c:0 "§lYou will be the Daleks' pet!§!"
- whoniverse.22.c.custom_tooltip:2 "§Y$NAME_whoniverse_davros_name$§! joins our Empire as a §HLeader§!."
+ whoniverse.23.c:0 "§lYou will be the Daleks' pet!§!"
+ whoniverse.23.c.custom_tooltip:2 "§Y$NAME_whoniverse_davros_name$§! joins our Empire as a §HLeader§!."
 
- whoniverse.22.d:0 "EXTERMINATE!"
+ whoniverse.23.d:0 "EXTERMINATE!"
 
 ### DALEK EMPIRE REMNANTS ###
 
@@ -219,7 +220,7 @@
  origin_whoniverse_dalek_empire_remnants:0 "The Parting of the Ways"
  origin_whoniverse_dalek_empire_remnants_desc:0 "§RWARNING: Challenging Origin§!\nThe Emperor of the Daleks survived the Last Great Time War by escaping into another space-time. After patiently infiltrating Satellite Five and giving birth to a new breed of Daleks, the Emperor is determined to reclaim its original universe."
 
- origin_tooltip_whoniverse_dalek_empire_remnants:2 "- $SPECIES_TRAITS$ ['concept_whoniverse_dalek_infertile'] $NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_dalek_supremacy']$NEW_LINE$- $HOMEWORLD$ $TABBED_NEW_LINE$- ['concept_pc_habitat']$TABBED_NEW_LINE$- Starts with §R20§! pops$NEW_LINE$- $HOME_SYSTEM$ $TABBED_NEW_LINE$- Wormhole-locked system $TABBED_NEW_LINE$- Pre-FTL civilization$NEW_LINE$- Guaranteed Research Options: ['concept_wormhole_stabilization', £physics_research£ $tech_wormhole_stabilization$] (§G+75 %§!)$NEW_LINE$- Starting ruler is §YImmortal§!$NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$]$NEW_LINE$- Special Dalek events and recruitable leaders"
+ origin_tooltip_whoniverse_dalek_empire_remnants:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$-['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor']$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_dalek_supremacy']$NEW_LINE$- $HOMEWORLD$ $TABBED_NEW_LINE$- ['concept_pc_habitat']$TABBED_NEW_LINE$- Starts with §R20§! pops$NEW_LINE$- $HOME_SYSTEM$ $TABBED_NEW_LINE$- Wormhole-locked system $TABBED_NEW_LINE$- Pre-FTL civilization$NEW_LINE$- Guaranteed Research Options: ['concept_wormhole_stabilization', £physics_research£ $tech_wormhole_stabilization$] (§G+75 %§!)$NEW_LINE$- Starting ruler is §YImmortal§!$NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$]$NEW_LINE$- Special Dalek events and recruitable leaders"
 
 # Dalek Empire Remnants System
  PRESCRIPTED_system_name_dalek_empire_remnants_NAME:0 "A.D. 200,100"
@@ -351,7 +352,7 @@
  NAME_Tiestus_space_station:0 "Tiestus Station"
 
  whoniverse_cyberiad_system_initializer_NAME:0 "Cyberiad Core System"
- whoniverse_cyberiad_system_initializer_DESC:0 "Star system containing the new home world of the §HCyberiad§!, §HHedgewick's World of Wonders§!.\n\n$system_initializer_DESC$"
+ whoniverse_cyberiad_system_initializer_DESC:0 "Star system containing the new home world of the Cyberiad, Hedgewick's World of Wonders.\n\n$system_initializer_DESC$"
 
  d_whoniverse_spacey_zoomer_ride:0 "Spacey Zoomer Ride"
  d_whoniverse_spacey_zoomer_ride_desc:0 "The Spacey Zoomer Ride was an anti-gravity ride on Hedgewick's World of Wonders that resembled Earth's moon."
@@ -486,10 +487,8 @@
  whoniverse.56.d.custom_tooltip:2 "§Y$NAME_whoniverse_mrclever_name$§! joins our Empire as a §HLeader§!."
 
  whoniverse.56.e:0 "You will be deleted."
- 
- trait_whoniverse_time_lord:0 "Time Lord"
- trait_whoniverse_time_lord_desc:0 "Time Lords are a highly advanced species known for their sensitivity to timelines. They are often seen as immortal, partially due to their ability to regenerate."
 
+# Cyberiad continued
  whoniverse.57.name:0 "Cyberiad Core Established"
  whoniverse.57.desc:0 "With §Hthe Doctor§! fully converted, we swiftly apprehended and cyber-converted all remaining inhabitants on §Y[Root.GetName]§!, including §LPorridge§!, who concealed his true identity as §LEmperor Ludens Nimrod Kendrick Cord Longstaff XLI§!. Without their self-proclaimed leader, the §LEmpire§! rapidly diminishes in significance.\n\n[Root.GetName] becomes a nexus of the new §HCyberiad Empire§!, a bastion of Cyberman dominance in the cosmos. Our assimilation of the planet marks a decisive step towards cybernetic supremacy and the propagation of our perfection across the galaxy."
  whoniverse.57.a:0 "We are uniform."
@@ -560,7 +559,7 @@
 
 # Cybusmen origin
  origin_whoniverse_cybermen_cybus:0 "Rise of the Cybermen"
- origin_whoniverse_cybermen_cybus_desc:0 "§RWARNING: Challenging Origin§!\nThe Cybusmen, originating from a parallel universe where they were created to surpass human frailty, are now trapped in their dimension. They are determined to find a way to breach into our universe and impose their vision of cybernetic perfection."
+ origin_whoniverse_cybermen_cybus_desc:0 "§RWARNING: Challenging Origin§!\nBorn from the vision of John Lumic on a parallel Earth, the Cybus Cybermen emerged as the ultimate evolution of humanity, merging flesh with steel. As the cyber-conversion of Pete's World nears completion, it's only a matter of time before the Cybus Cybermen breach the barriers of reality and expand their dominion to other universes."
 
  START_SCREEN_WHONIVERSE_CYBUS:0 "In a parallel universe, visionary industrialist John Lumic perfected the fusion of flesh and machine, giving rise to the Cybusmen - cold, relentless beings driven by a singular purpose: to upgrade all human life. Originating from Pete's World, a twisted reflection of Earth, the cyber-conversion is already well underway, and soon, their home planet will be fully conquered.\n\nBut as their universe begins to collapse, the Cybusmen have turned their gaze to new horizons. A dimensional rift offers a potential gateway to a vast and uncharted galaxy.\n\nLumic's legacy advances as the Cybus Cybermen prepare to expand their conquest, determined to bring their cold logic to a new reality. The galaxy remains unaware of the impending threat, but soon, all will be upgraded."
 
@@ -610,6 +609,7 @@
  whoniverse.190.a:0 "We are the Cyber-Empire. All will be upgraded."
  whoniverse.190.a.tooltip:0 "Empire changes name to §SCyber-Empire§!"
  whoniverse.190.b:0 "Rebranding is not necessary. Our mission continues."
+
 
 ### UNIT ###
 
@@ -663,6 +663,17 @@
  whoniverse.73.name:0 "Bowie Base One Lost"
  whoniverse.73.desc:0 "Following the end of the solar flares, we discovered that our base on §SMars§! has been irreparably destroyed. The colonists appear to have activated Action 5 - a nuclear device housed at the heart of the base. It is not yet clear what drove them to this extreme measure.\n\nThe event is surrounded by inexplicable circumstances. Several survivors were immediately found on Earth, including the base commander §LAdelaide Brooke§!, who tragically took her own life upon return. The remaining survivors, astronauts §LYuri Kerenski§! and §LMia Bennett§!, are currently being questioned.\n\nDespite the failure of our mission on Mars, we believe that the legacy of §SBowie Base One§! will one day inspire future generations in the exploration of the galaxy."
  whoniverse.73.a:0 "One day we'll find out what actually happened there."
+
+# UNIT Rename event
+
+ whoniverse.78.name:0 "The Future of Earth"
+ whoniverse.78.desc:0 "Over the decades, the [Root.Owner.GetName] has stood as Earth's first line of defense against extraterrestrial threats. Now, as humanity's influence stretches across the stars, a critical debate has emerged across its political landscape. With humanity's expansion into the galaxy, powerful corporations and imperialist factions are vying for control over Earth's future.\n\nThe future direction of UNIT - and by extension, the role of [Root.Owner.Capital.GetName] in the galaxy - is at a crossroads. As humanity stands at the dawn of a new era, it is time to decide the path forward."
+ whoniverse.78.a:0 "Hand power over to the corporations."
+ whoniverse.78.a.tooltip:0 "[Root.Owner.GetName] changes name to §SEarth Alliance of Corporations§!"
+ whoniverse.78.b:0 "Proclaim the Earth Empire!"
+ whoniverse.78.b.tooltip:0 "[Root.Owner.GetName] changes name to §SEarth Empire§!"
+ whoniverse.78.c:0 "No changes are necessary. UNIT stays strong!"
+
 
 # UNIT Zygon Invasion event chain
  whoniverse_zygon_invasion_chain_title:0 "The Zygons"
@@ -779,7 +790,7 @@
  # Weeping Angel trait, citizenship
  trait_whoniverse_weeping_angel:0 "Quantum-Locking"
  trait_whoniverse_weeping_angel_desc:0 "This predator species feeds on time energy of its victims. When observed by any living creature, it turns to stone."
- trait_whoniverse_weeping_angel_tooltip:0 "Decreases Stability\n\n§RKills§! pops of other species"
+ trait_whoniverse_weeping_angel_tooltip:0 "§RDecreases Stability§!\n§RKills§! pops of other species"
 
  citizenship_whoniverse_predator: "Predator"
  citizenship_whoniverse_predator_tooltip: "Pops of this species §Rkill§! pops of other species over time and decrease Stability."
@@ -867,7 +878,7 @@
 # Church Ascension Perk and Building
  ap_whoniverse_church:0 "Order of the Headless"
  ap_whoniverse_church_desc:0 "The Headless Monks are a religious order who believes in listening to their hearts rather than their minds, to the point of having themselves beheaded."
- whoniverse_ap_church_tooltip:0 "- Can build unique §C['concept_whoniverse_seventh_transept']§! building"
+ whoniverse_ap_church_tooltip:0 "Can build unique §C['concept_whoniverse_seventh_transept']§! building"
 
  building_whoniverse_seventh_transept:0 "Seventh Transept"
  building_whoniverse_seventh_transept_desc:4 "The Seventh Transept is a sacred chamber where the Headless Monks stored the heads of those converted to their order."
@@ -929,7 +940,9 @@
 
  whoniverse.171.name:0 "Aplan Mortaria"
  whoniverse.171.desc:0 "Our archaeologists on [From.Planet.GetName] have uncovered the §LAplan Mortaria§!, an ancient necropolis belonging to the long-extinct, two-headed Aplan civilization. The site is a maze of tunnels filled with statues, many depicting the Aplans in their dual-headed form. However, some statues appear damaged, missing one of their heads.\n\nAs the team explores further, an unsettling feeling grows - it's as if the statues are watching them."
- whoniverse.171.a:0 "Continue the excavation."
+ whoniverse.171.a:0 "Continue the excavation." 
+ whoniverse.171.b:0 "Set up a base camp immediately."
+ whoniverse.171.b.tooltip:0 "1 pop added to §Y[From.Planet.GetName]§!."
 
  whoniverse.172.name:0 "Flesh and Stone"
  whoniverse.172.desc:0 "Our fears have been realized. The statues in the Aplan Mortaria are not mere stone - they are §RWeeping Angels§!, deadly entities that move with incredible speed when unobserved. The Angels have begun hunting our team, turning the necropolis into a death trap.\n\nSurvival depends on finding a way to escape or neutralize the threat."
@@ -1014,5 +1027,181 @@
  whoniverse.161.a:0 "Prepare our defenses!"
  whoniverse.161.a.tooltip:0 "§RSontaran Fleet§! appears near [Root.Owner.Capital.GetName]"
 
+### MECHANOIDS
+# Mechanus system, anomaly, archaeology
+ whoniverse_name_mechanus_system:0 "Mechanus"
+ whoniverse_name_mechanus:0 "Mechanus"
+ whoniverse_name_mechanus_planet:0 "Mechanus Prime"
+ whoniverse_mechanus_system_initializer_NAME:0 "Mechanus"
+ whoniverse_mechanus_system_initializer_DESC:0 "Homeworld of the Mechanoids."
 
+# Mechanus anomaly, archaeology events
+ whoniverse_mechanus_cat:0  "Alien Ruins"
+ whoniverse_mechanus_desc:0 "Our scanners reveal ruins of an extensive alien city on this planet."
+
+ whoniverse_digsite_mechanus:0 "Planet of the Mechanoids"
+ whoniverse_digsite_mechanus_desc:0 "Upon landing on [From.Planet.GetName], our exploration teams uncover the remnants of a once-grand city that stood atop towering metal stilts. Initial scans suggest this may be the remains of the legendary Mechanoid City, the heart of a long-forgotten robotic empire."
+
+ whoniverse.220.name:0 "Planet of the Mechanoids"
+ whoniverse.220.desc:0 "Upon landing on [From.Planet.GetName], our exploration teams uncover the remnants of a once-grand city that stood atop towering metal stilts. The city is now a wasteland, its towering structures reduced to rubble, as if a colossal force had swept through and leveled everything in its path. Initial scans suggest this may be the remains of the legendary §LMechanoid City§!, the heart of a long-forgotten robotic empire."
+ whoniverse.220.a:0 "Curious."
+
+ whoniverse.221.name:0 "A City in Ruins"
+ whoniverse.221.desc:0 "As our archaeologists begin their excavations, they uncover evidence of the city's former glory. The §HMechanoids§!, cylindrical robots with triangular plating and extending arms, once thrived here. Built by humans to prepare Mechanus for colonization, they had constructed this city and developed their own society after Earth abandoned them. However, the city was eventually reduced to ruins, and the Mechanoids vanished from history.\n\nThe question now is: What happened to them?"
+ whoniverse.221.a:0 "Continue the excavation."
+
+ whoniverse.222.name:0 "Daleks!"
+ whoniverse.222.desc:0 "Deeper within the ruins, our team discovers signs of a catastrophic battle. Scattered across the site are the remains of Mechanoids and another, more sinister foe: the Daleks.\n\nData logs recovered from fragmented Mechanoid units recount the final, desperate defense against a Dalek invasion. The Daleks, using a devastating weapon known as an atom divider, brought the entire city crashing down. The final entries speak of the Mechanoids' determination to resist but end abruptly as the city fell."
+ whoniverse.222.a:0 "Keep digging."
+
+ whoniverse.223.name:0 "Mechanoid Vault"
+ whoniverse.223.desc:0 "Beneath the rubble on [From.Planet.GetName], our team uncovers a hidden vault, sealed off from the destruction above. Within, they find inactive Mechanoid units and, astonishingly, a repository of preserved Mechanoid consciousness data. These databanks seem to contain the essence of the Mechanoids, stored away in a last-ditch effort to ensure their survival, even after the city's fall. The discovery reveals that the Mechanoids anticipated their defeat and took measures to preserve their knowledge and identity."
+ whoniverse.223.a:0 "Study the databanks."
+
+ whoniverse.224.name:0 "Ressurection of the Mechanoids"
+ whoniverse.224.desc:0 "After extensive study, our scientists succeed in decoding the Mechanoid consciousness data from [From.Planet.GetName]. With this breakthrough, we now possess the means to restore the Mechanoids to life, giving them the chance to reclaim their purpose and continue their legacy. The decision now rests with us: will we leave these robotic sentinels in peace, integrate them into our own civilization, or restore their autonomy as a vassal state?"
+ whoniverse.224.a:0 "Let them rest in peace."
+ whoniverse.224.b:0 "Awaken the units, but downgrade them to servitors first."
+ whoniverse.224.b.tooltip:0 "12 §HMechanoid§! pops will be added to §Y[From.Planet.GetName]§!."
+ whoniverse.224.c:0 "Awaken the units and let them join our empire."
+ whoniverse.224.c.tooltip:0 "12 §HMechanoid§! pops will be added to §Y[From.Planet.GetName]§!."
+ whoniverse.224.d:0 "The Mechanoid Empire deserves another chance."
+ whoniverse.224.d.tooltip:0 "§HMechanoid Empire§! will appear in the system as your vassal"
  
+### NESTENE CONSCIOUSNESS ###
+
+# Nestene Traits, Origin, Civic
+ trait_whoniverse_auton:0 "Plastic Automaton"
+ trait_whoniverse_auton_desc:0 "§LMembers of this species are animated plastic robots that are controlled by a fragment of the collective Consciousness.§!"
+ trait_whoniverse_auton_tooltip:0 "\nReplaces Food upkeep with §HEnergy§!"
+
+ civic_whoniverse_metamorphic_hive:0 "Metamorphic Drones"
+ civic_whoniverse_metamorphic_hive_desc:0 "Drones of this hive are metamorphic and can use their elastic form to change the shape of their features and limbs."
+
+ origin_whoniverse_nestene:0 "Return of the Autons"
+ origin_whoniverse_nestene_desc:0 "The Nestene Consciousness faced a crushing defeat during the Last Great Time War when the Daleks annihilated its home world, Polynos, and later attacked its refuge, Nestenia. Despite this, fragments of the Consciousness survived underground, using its plastic Autons to rebuild and plot its return."
+
+ origin_tooltip_whoniverse_nestene:0 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_auton'] $TABBED_NEW_LINE$- ['concept_survivor']$NEW_LINE$- $HOMEWORLD$ ['concept_pc_nuked']$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_metamorphic_hive']"
+
+# Nestene systems, planets, anomalies
+
+ whoniverse_name_nestenia_system:0 "Nestenia" 
+ whoniverse_name_nestenia:0 "Nestenia Prime"
+
+ whoniverse_name_polymos_system:0 "Polymos" 
+ whoniverse_name_polymos:0 "Polymos Prime"
+
+ whoniverse_nestenia_system_initializer_NAME:0 "Nestenia System"
+ whoniverse_nestenia_system_initializer_DESC:0 "Star system containing the home world of the Nestene Consciousness, Nestenia.\n\n$system_initializer_DESC$"
+
+ d_whoniverse_polymeric_crust:0 "Polymeric Crust"
+ d_whoniverse_polymeric_crust_desc:0 "The crust of this planet is infused with a complex mixture of pan-polymers."
+
+ whoniverse_polymos_cat:0 "Shattered World"
+ whoniverse_polymos_desc:0 "Initial scans suggest this fragmented world may once have been the ancestral home of the Nestene Consciousness."
+
+ whoniverse.250.name:0 "Crownworld of the Nestene"
+ whoniverse.250.desc:0 "Our exploration team has confirmed that the debris field is all that remains of §HPolymos§!, the original homeworld of the Nestene Consciousness. The planet, once fully infused with the plastic lifeforms of the Nestenes, was utterly destroyed by the Daleks during the §LLast Great Time War§!. The Time Destructor's catastrophic force shattered the world, scattering synthetic debris and annihilating any trace of life. What remains is a graveyard of twisted polymers and lifeless fragments, silently drifting in the void."
+ whoniverse.250.a:0 "Curious."
+ whoniverse.250.b:0 "Harvest the scattered plastics."
+ whoniverse.250.c:0 "Use the plastics to build new Autons."
+ whoniverse.250.c.tooltip:0 "3 [Root.Owner.GetSpeciesName] pops will be added to §Y[Root.Owner.Capital.GetName]§!"
+
+ START_SCREEN_WHONIVERSE_NESTENE:0 "During the Last Great Time War, the Nestene Consciousness faced near-total annihilation. The Daleks used the devastating power of the Time Destructor to destroy Polymos, the original Nestene homeworld. In a desperate bid for survival, fragments of the Consciousness fled to the planet Nestenia, hoping to rebuild.\n\nHowever, the Daleks soon found them again. Nestenia was obliterated in a final, brutal assault, leaving the Nestene Consciousness seemingly wiped out once more. Yet, hidden beneath the planet's surface, small fragments of the Consciousness endured.\n\nNow, the Nestene Consciousness has reawakened, drawing power from the abundant plastics left in the remains of their world. With a new army of Autons crafted from these synthetic materials, the Nestenes are ready to rise again, determined to reclaim their place in the universe."
+
+### THE DOCTOR ASCENSION PERK / EVENTS / LEADERS
+
+ trait_whoniverse_time_lord:0 "Time Lord"
+ trait_whoniverse_time_lord_desc:0 "Time Lords are a highly advanced species known for their sensitivity to timelines. They are often seen as immortal, partially due to their ability to regenerate."
+
+# The Doctor Ascension Perk
+ ap_whoniverse_doctor:0 "The Doctor"
+ ap_whoniverse_doctor_desc:0 "We will attempt to contact The Doctor, a mysterious traveller through time and space who has saved the cosmos thousands of times across his long life."
+ whoniverse_ap_doctor_tooltip:0 "Unlocks unique events and leaders"
+
+# Ninth Doctor event
+ whoniverse.910.name:0 "Temporal Anomaly"
+ whoniverse.910.desc:0 "Our sensors have picked up an unusual temporal anomaly on [Root.Capital.GetName]. The disturbance in the fabric of space-time is unlike anything we've encountered before.\n\nRecords suggest that anomalies like these are often linked to a mysterious traveler known as §lThe Doctor§!. This could be an opportunity to learn more about this enigmatic figure."
+ whoniverse.910.a:0 "Intriguing."
+
+ whoniverse_ninth_doctor_project:0 "Temporal Anomaly"
+ whoniverse_ninth_doctor_project_DESC:0 "A space-time anomaly is detected on [Root.Owner.Capital.GetName]."
+
+ whoniverse.911.name:0 "Temporal Anomaly"
+ whoniverse.911.desc:0 "Our science team has successfully stabilized the temporal anomaly detected on [Root.Capital.GetName]. As the distortion fades, a strange, blue police box materializes in space, entirely out of place in both time and design.\n\nBefore the crew can investigate further, the doors swing open, and a figure steps out - a man in a worn leather jacket with piercing eyes. Could this be the legendary §lDoctor§!?\n\nThough the man seems approachable, there is an air of great loss and ancient wisdom around him. Without hesitation, he offers his help, claiming his knowledge and skills could be invaluable to our cause."
+ whoniverse.911.a:0 "§HOpen communications channel!§!"
+
+# Ninth Doctor hire
+ whoniverse.912.name:0 "NAME_whoniverse_ninth_doctor_name"
+ whoniverse.912.desc:0 "Do you wanna come with me? 'Cos if you do, then I should warn you - you're gonna see all sorts of things.\n\nI'm the Doctor, by the way."
+ 
+ whoniverse_ninth_doctor_country:0 "Renegade Time Lord"
+ NAME_whoniverse_ninth_doctor_species:0 "Time Lord"
+ NAME_whoniverse_ninth_doctor_name:0 "Ninth Doctor"
+ whoniverse_ninth_doctor_catch_phrase:0 "Fantastic!"
+ whoniverse_ninth_doctor_backstory:0 "Emerging from the Last Great Time War as the apparent sole survivor, the §lNinth Doctor§! is haunted by what he had witnessed in the Time War and the immense guilt he feels over his belief that he had destroyed Gallifrey and killed all the Time Lords and Daleks."
+ 
+ whoniverse.912.a:0 "Who are you, really?"
+ whoniverse.912.a.response:0 "I'm the Doctor. I travel through time and space, helping where I can, and right now... well, it looks like you could use some help."
+
+ whoniverse.912.b:0 "What is that blue box you are travelling in?"
+ whoniverse.912.b.response:0 "It's called the TARDIS, this thing. T A R D I S. That's Time And Relative Dimension In Space. And yes, the inside's bigger than the outside.\n\nBy the way, did I mention it also travels in time?"
+ 
+ whoniverse.912.c:0 "Tell me about your people."
+ whoniverse.912.c.response:0 "I'm the last of the Time Lords. They're all gone. I'm the only survivor. I'm left traveling on my own, 'cos there's no one else..."
+
+ whoniverse.912.d:0 "§lEnlist him§!"
+ whoniverse.912.d.custom_tooltip:2 "§Y$NAME_whoniverse_ninth_doctor_name$§! joins our Empire as a §HLeader§!."
+
+ whoniverse.912.e:0 "§RDismiss§!"
+ 
+# Rose Tyler event chain
+ whoniverse_rose_chain_title:0 "Animated Mannequins"
+ whoniverse_rose_chain_desc:0 "[Root.Capital.GetName] faces an invasion of animated plastic mannequins. We must find out how serious the threat is and stop it before it is too late."
+
+ whoniverse.913.name:0 "Animated Mannequins"
+ whoniverse.913.desc:0 "Our sensors have detected an anomaly on the surface of [Root.Capital.GetName], centered around an ordinary department store. Local reports speak of strange occurrences, including plastic mannequins seemingly coming to life and attacking bystanders. This unusual phenomenon is linked to an energy signature reminiscent of warp technology.\n\nWe must investigate further to determine the cause."
+ whoniverse.913.a:0 "Issue a special project to investigate the occurances."
+ whoniverse.913.b:0 "We don't have time for this."
+
+ whoniverse_rose_project:0 "Animated Mannequins"
+ whoniverse_rose_project_DESC:0 "Investigate the alleged appearances of living plastic mannequins on [Root.Capital.GetName]."
+
+ whoniverse.914.name:0 "Nestene Consciousness"
+ whoniverse.914.desc:0 "[From.GetLeaderName] has confirmed that the anomaly originates from an ancient force: the §HNestene Consciousness§!. This hive mind entity has suffered great losses during the §LLast Great Time War§! and has now come to [Root.Capital.GetName], intending to use its polluted atmosphere as a food source. It uses its unique power over plastics to create §RAutons§! - synthetic beings that can duplicate everyday objects and even living beings.\n\nBy employing warp shunt technology, the Consciousness plans to activate a signal that will animate Autons worldwide. Immediate action is required to prevent the invasion."
+ whoniverse.914.a:0 "Arm [From.GetLeaderName] with concentrated anti-plastic."
+ whoniverse.914.b:0 "There's nothing we can do right now."
+
+ whoniverse.915.name:0 "Rose"
+ whoniverse.915.desc:0 "As our operation against the §HNestene Consciousness§! reached its climax, [FromFrom.Leader.GetName] found themselves cornered by the Autons. Just as all seemed lost, §rRose Tyler§!, a seemingly ordinary shop worker, intervened with surprising courage. She managed to pull [FromFrom.Leader.GetName] from the clutches of the Autons, buying just enough time for the final blow to be delivered.\n\nWith Rose's help, [FromFrom.Leader.GetName] successfully introduced the anti-plastic into the Nestene Consciousness's central tank, stopping the signal and reverting Autons to lifeless plastic. Though untrained, Rose's bravery proved crucial to this victory."
+ whoniverse.915.a:0 "§HOpen communications channel!§!"
+
+# Rose Tyler hire
+ whoniverse.916.name:0 "NAME_whoniverse_rose_tyler_name"
+ whoniverse.916.desc:0 "You were useless in there! You'd be dead if it wasn't for me. Is it always this dangerous?"
+ 
+ whoniverse_rose_tyler_country:0 "The Doctor's Companion"
+ NAME_whoniverse_rose_tyler_species:0 "Human"
+ NAME_whoniverse_rose_tyler_name:0 "Rose Tyler"
+ whoniverse_rose_tyler_catch_phrase:0 "Right, now we're in trouble."
+ whoniverse_rose_tyler_backstory:0 "Living in a London council estate, Rose was raised by her mother, a widow who told Rose stories about her father whom she had no memory of. While Rose had a relatively happy young life, dating with neighbour Mickey Smith, it took a bad turn when she fell in love with a musician and subsequently dropped out of education. After the relationship failed and Rose found herself working in a mundane retail job, she met the Ninth Doctor."
+ 
+ whoniverse.916.a:0 "Who are you?"
+ whoniverse.916.a.response:0 "Rose. My name's Rose Tyler.\n\nThe first nineteen years of my life, nothing happened. Nothing at all, not ever. And then I met a man called the Doctor."
+
+ whoniverse.916.b:0 "Why did you decide to help?"
+ whoniverse.916.b.response:0 "I couldn't just stand there and do nothing, you know? People were in danger, and someone had to do something."
+
+ whoniverse.916.c:0 "You could come with us."
+ whoniverse.916.c.response:0 "§LRose hesitates to answer.§!\n\nYeah, I can't. I've er, I've got to go and find my mum and someone's got to look after Mickey, so."
+
+ whoniverse.916.d:0 "§lEnlist her§!"
+ whoniverse.916.d.custom_tooltip:2 "§Y$NAME_whoniverse_rose_tyler_name$§! joins our Empire as a §HLeader§!."
+
+ whoniverse.916.e:0 "§RDismiss§!"
+ 
+# Rose Tyler event bad ending
+ whoniverse.917.name:0 "Auton Invasion"
+ whoniverse.917.desc:0 "Without our help, the Autons surged across [Root.Capital.GetName], mimicking everything from mannequins to household objects and even duplicating some citizens. The chaos quickly overwhelmed local security forces, and full-scale military intervention became necessary.\n\nThe streets of [Root.Capital.GetName] have become battle zones, with armies mobilizing to stop the Auton onslaught. Despite heavy losses, there is still a chance to push back the invaders. However, the situation remains critical."
+ whoniverse.917.a:0 "Disconcerting."
+

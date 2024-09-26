@@ -14,4 +14,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/ascension_perks/ap_whoniverse_church.dds"
 		alwaystransparent = yes
 	}
+
+	spriteType = {
+		name = "GFX_ap_whoniverse_doctor"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_whoniverse_doctor.dds"
+		alwaystransparent = yes
+	}
 }

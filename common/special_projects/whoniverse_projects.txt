@@ -19,7 +19,7 @@ special_project = {
 	on_success = {
 		owner = {
 			country_event = { 
-				id = whoniverse.21 
+				id = whoniverse.22 
 			}
 		}
 	}
@@ -253,3 +253,67 @@ special_project = {
 			}
 	}
 }
+
+# Ninth Doctor recruit project
+special_project = {
+	key = "whoniverse_ninth_doctor_project"
+	cost = 0
+	tech_department = physics_technology
+	days_to_research = 180
+	timelimit = -1
+	picture = GFX_evt_whoniverse_time_vortex
+	icon = "gfx/interface/icons/situation_log/situation_log_extradimensional.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		owner = {
+			country_event = { 
+				id = whoniverse.911 
+			}
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# Rose Tyler recruit project
+special_project = {
+	key = "whoniverse_rose_project"
+	event_chain = whoniverse_rose_chain
+	cost = 0
+	tech_department = physics_technology
+	days_to_research = 180
+	timelimit = 720
+	picture = GFX_evt_whoniverse_autons
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		owner = {
+			country_event = { 
+				id = whoniverse.914 
+			}
+		}
+	}
+
+	on_fail = {
+		capital_scope = {
+			planet_event = { id = whoniverse.917 }
+		}
+	}
+}
+
+

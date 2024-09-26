@@ -82,7 +82,7 @@ origin_whoniverse_dalek_empire_remnants = {
 		trait = trait_whoniverse_dalek_infertile
 	}
 
-	flags = { whoniverse_new_dalek_paradigm custom_start_screen }
+	flags = { whoniverse_dalek_empire_remnants custom_start_screen }
 
 	advanced_start = no
 	blocks_random_machine_empire_generation	= yes
@@ -100,7 +100,7 @@ origin_whoniverse_cybermen_cyberiad = {
 	possible = {
 		authority = { value = auth_hive_mind } # auth_machine_intelligence
 		# species_archetype = { value = BIOLOGICAL } # Machine
-		species_class = { value = HUM }
+		species_class = { value = WHO_CYBERMAN }
 		civics = {
 				value = civic_whoniverse_cyber_conversion
 			}
@@ -135,7 +135,7 @@ origin_whoniverse_cybermen_cybus = {
 	possible = {
 		authority = { value = auth_hive_mind } # auth_machine_intelligence
 		# species_archetype = { value = BIOLOGICAL } # Machine
-		species_class = { value = HUM }
+		species_class = { value = WHO_CYBERMAN }
 		civics = {
 				value = civic_whoniverse_cyber_conversion
 			}
@@ -168,9 +168,14 @@ origin_whoniverse_unit = {
 	picture = origin_whoniverse_unit
 
 	possible = {
-		authority = { value = auth_democratic }
+		# authority = { value = auth_democratic }
 		species_class = { value = HUM }
+		ethics = {
+			NOT = {
+				value = ethic_fanatic_xenophobe
+			}
 		}
+	}
 
 	description = "origin_tooltip_whoniverse_unit"
 
@@ -222,6 +227,55 @@ origin_whoniverse_church = {
 	initializers = { whoniverse_trenzalore_system }
 	
 	flags = { whoniverse_church custom_start_screen }
+
+	advanced_start = no
+	blocks_random_machine_empire_generation	= yes
+
+	random_weight = {
+		base = 0
+	}
+}
+
+origin_whoniverse_nestene = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_whoniverse_nestene.dds"
+	picture = origin_whoniverse_nestene
+
+	starting_colony = pc_nuked
+
+	playable = {
+		always = yes
+	}
+
+	possible = {
+		species_class = { value = WHO_AUTON }
+		authority = { 
+				value = auth_hive_mind
+			} 
+		civics = {
+			NOT = {
+				value = civic_whoniverse_cyber_conversion
+			}
+			NOR = {
+				text = civic_tooltip_not_anglers
+				value = civic_anglers
+				value = civic_corporate_anglers
+				value = civic_machine_anglers
+				value = civic_corporate_machine_anglers
+				value = civic_permanent_employment
+				value = civic_natural_design
+			}
+		}
+	}
+
+	description = "origin_tooltip_whoniverse_nestene"
+
+	traits = {
+		trait = trait_survivor
+		trait = trait_whoniverse_auton
+	}
+
+	flags = { whoniverse_nestene_consciousness custom_start_screen }
 
 	advanced_start = no
 	blocks_random_machine_empire_generation	= yes

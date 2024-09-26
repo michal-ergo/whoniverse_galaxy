@@ -1,4 +1,4 @@
-version="0.5"
+version="0.6"
 tags={
 	"Events"
 	"Gameplay"
@@ -6,7 +6,7 @@ tags={
 	"Species"
 	"Total Conversion"
 }
-name="Whoniverse Galaxy Mod"
-supported_version="v3.12.5"
+name="Whoniverse Galaxy Mod (Doctor Who)"
+supported_version="v3.13.1"
 path="C:/Users/Michal/OneDrive/Documents/Paradox Interactive/Stellaris/mod/whoniverse_galaxy"
 remote_file_id="3267895064"

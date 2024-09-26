@@ -4,16 +4,17 @@
 ### OTHER ###
 # Cyber-Conversion Civics
 has_whoniverse_cyber_conversion = {
-	OR = { 
+	# OR = { 
 		has_civic = civic_whoniverse_cyber_conversion
-		has_civic = civic_whoniverse_cyber_conversion_ai
-	}
+		# has_civic = civic_whoniverse_cyber_conversion_ai
+	# }
 }
 
 # Dalek Identifier
 is_whoniverse_dalek = {
 	OR = { 
 		has_origin = origin_whoniverse_new_dalek_paradigm
+		has_origin = origin_whoniverse_dalek_empire_remnants
 		has_civic = civic_whoniverse_dalek_supremacy
 	}
 }
@@ -29,6 +30,11 @@ is_whoniverse_human_species = {
 		species_portrait = whoniverse_church
 		species_portrait = whoniverse_human
  	}
+}
+
+whoniverse_has_not_toxoids = {
+	optimize_memory
+	NOT = { host_has_dlc = "Toxoids Species Pack" }
 }
 
 

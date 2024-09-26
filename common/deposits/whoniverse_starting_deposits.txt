@@ -30,7 +30,7 @@ d_whoniverse_petrified_jungle = {
 			always = yes
 		}
 		district_farming_max = 2
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -52,7 +52,7 @@ d_whoniverse_kaalann = {
 			always = yes
 		}
 		district_generator_max = 2
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -74,7 +74,7 @@ d_whoniverse_skaro_sewers = {
 			always = yes
 		}
 		district_generator_max = 2
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -96,7 +96,7 @@ d_whoniverse_tranquil_repose = {
 			always = yes
 		}
 		district_generator_max = 2
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -117,7 +117,30 @@ d_whoniverse_spacey_zoomer_ride = {
 			always = yes
 		}
 		district_generator_max = 1
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_whoniverse_polymeric_crust = {
+	is_for_colonizable = yes
+	icon = d_whoniverse_polymeric_crust
+
+	planet_modifier = {
+		district_generator_max = 2
+		district_mining_max = 2
+		district_farming_max = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 1
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {

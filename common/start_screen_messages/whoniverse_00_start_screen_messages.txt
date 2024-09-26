@@ -18,6 +18,16 @@ part = {
 	}
 }
 
+# Church of the Papal Mainframe Empire
+part = {
+	location = 0
+	localization = "START_SCREEN_WHONIVERSE_CHURCH"
+
+	trigger = {
+		has_country_flag = whoniverse_church
+	}
+}
+
 # Dalek Empire
 # part = {
 # 	location = 0
@@ -68,12 +78,12 @@ part = {
 	}
 }
 
-# Church of the Papal Mainframe Empire
+# Nestene Consciousness start
 part = {
 	location = 0
-	localization = "START_SCREEN_WHONIVERSE_CHURCH"
+	localization = "START_SCREEN_WHONIVERSE_NESTENE"
 
 	trigger = {
-		has_country_flag = whoniverse_church
+		has_country_flag = whoniverse_nestene_consciousness
 	}
 }

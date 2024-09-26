@@ -12,10 +12,10 @@
 
 HUM = {
 	Cyberman = {
-		name = CYBERMAN
-		plural =  CYBERMAN_plural
-	   home_planet = CYBERMAN_planet
-		home_system = CYBERMAN_system
+		name = WHO_CYBERMAN
+		plural = WHO_CYBERMAN_plural
+		home_planet = WHO_CYBERMAN_planet
+		home_system = WHO_CYBERMAN_system
 		name_list = "CYBERMAN1"
 	}
 }
@@ -32,20 +32,20 @@ HUM = {
 
 HUM = {
 	CyberTelosian = {
-		name = SPEC_WHO_TELOSIAN
-		plural =  SPEC_WHO_TELOSIAN_pl
-	    home_planet = SPEC_WHO_MONDASIAN_planet
-		home_system = SPEC_WHO_MONDASIAN_system
+		name = WHO_TELOSIAN
+		plural =  WHO_TELOSIAN_pl
+	    home_planet = WHO_MONDASIAN_planet
+		home_system = WHO_MONDASIAN_system
 		name_list = "CYBERMAN1"
 	}
 }
 
 HUM = {
 	CybusMan = {
-		name = SPEC_WHO_CYBUSMAN
-		plural =  SPEC_WHO_CYBUSMAN_plural
-	    home_planet = SPEC_WHO_CYBUSMAN_planet
-		home_system = SPEC_WHO_CYBUSMAN_system
+		name = WHO_CYBUSMAN
+		plural =  WHO_CYBUSMAN_plural
+	    home_planet = WHO_CYBUSMAN_planet
+		home_system = WHO_CYBUSMAN_system
 		name_list = "CYBERMAN1"
 	}
 }
@@ -62,20 +62,40 @@ FUN = {
 
 PRE_MAM = {
 	WeepingAngel = {
-		name = SPEC_WHO_WEEPING_ANGEL
-		plural =  SPEC_WHO_WEEPING_ANGEL_plural
-	    home_planet = SPEC_WHO_WEEPING_ANGEL_planet
-		home_system = SPEC_WHO_WEEPING_ANGEL_system
+		name = WHO_WEEPING_ANGEL
+		plural =  WHO_WEEPING_ANGEL_plural
+	    home_planet = WHO_WEEPING_ANGEL_planet
+		home_system = WHO_WEEPING_ANGEL_system
 		name_list = "LITHOID1"
 	}
 }
 
 PRE_LITHOID = {
 	WeepingAngel = {
-		name = SPEC_WHO_WEEPING_ANGEL
-		plural =  SPEC_WHO_WEEPING_ANGEL_plural
-	    home_planet = SPEC_WHO_WEEPING_ANGEL_planet
-		home_system = SPEC_WHO_WEEPING_ANGEL_system
+		name = WHO_WEEPING_ANGEL
+		plural =  WHO_WEEPING_ANGEL_plural
+	    home_planet = WHO_WEEPING_ANGEL_planet
+		home_system = WHO_WEEPING_ANGEL_system
 		name_list = "LITHOID1"
+	}
+}
+
+MACHINE = {
+	Mechanoid = {
+		name = WHO_MECHANOID
+		plural =  WHO_MECHANOID_plural
+	    home_planet = WHO_MECHANOID_planet
+		home_system = WHO_MECHANOID_system
+		name_list = "MACHINE1"
+	}
+}
+
+ROBOT = {
+	Mechanoid = {
+		name = WHO_MECHANOID
+		plural = WHO_MECHANOID_plural
+	    home_planet = WHO_MECHANOID_planet
+		home_system = WHO_MECHANOID_system
+		name_list = "MACHINE1"
 	}
 }

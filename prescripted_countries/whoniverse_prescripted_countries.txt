@@ -3,7 +3,7 @@ whoniverse_unit_empire = {
 	name = "PRESCRIPTED_unitempire"
 	adjective = "PRESCRIPTED_adjective_unitempire"
 	spawn_enabled = always # yes / no / always
-	# ignore_portrait_duplication = yes
+	ignore_portrait_duplication = yes
 
 	ship_prefix = "PRESCRIPTED_ship_prefix_unitempire"
 
@@ -13,6 +13,7 @@ whoniverse_unit_empire = {
 		name = PRESCRIPTED_species_name_whoniverse_human
 		plural = PRESCRIPTED_species_plural_whoniverse_human
 		adjective = PRESCRIPTED_species_adjective_whoniverse_human
+		species_bio = "Humans, as represented by UNIT, are a resilient and resourceful species. UNIT was established to protect Earth from extraterrestrial threats, coordinating defense efforts across the globe. Known for their strategic acumen and adaptability, UNIT has become humanity's first line of defense against alien incursions. Despite their technological limitations compared to some galactic powers, their unwavering determination and cooperation have allowed them to hold their own against formidable foes."
 		name_list = "HUMAN1"
 		trait = "trait_adaptive"
 		trait = "trait_nomadic"
@@ -76,7 +77,7 @@ whoniverse_church_olig = {
 	name = "PRESCRIPTED_whoniverse_church"
 	adjective = "PRESCRIPTED_adjective_whoniverse_church"
 	spawn_enabled = always # yes / no / always
-	# ignore_portrait_duplication = yes
+	ignore_portrait_duplication = yes
 
 	# playable = has_not_megacorp
 
@@ -88,13 +89,14 @@ whoniverse_church_olig = {
 		name = PRESCRIPTED_species_name_whoniverse_human
 		plural = PRESCRIPTED_species_plural_whoniverse_human
 		adjective = PRESCRIPTED_species_adjective_whoniverse_human
+		species_bio = "The Humans of the Church of the Papal Mainframe are devout and disciplined, serving a higher calling within one of the most powerful religious institutions in the universe. The Church, known for its far-reaching influence, blends faith with advanced technology, safeguarding the peace and enforcing the Silence. These humans are marked by their devotion, willingness to sacrifice, and their belief in the greater good, making them formidable in both faith and battle."
 		name_list = "HUMAN3"
 		trait = "trait_adaptive"
 		trait = "trait_nomadic"
 		trait = "trait_wasteful"
 	}
 
-	secondary_species={
+	secondary_species = {
 		class="HUM"
 		portrait="whoniverse_silence"
 		name="PRESCRIPTED_secondary_species_name_whoniverse_silence"
@@ -164,97 +166,6 @@ whoniverse_church_olig = {
 	}
 }
 
-# # Church of the Papal Mainframe
-# whoniverse_church_corp = {
-# 	name = "PRESCRIPTED_whoniverse_church"
-# 	adjective = "PRESCRIPTED_adjective_whoniverse_church"
-# 	spawn_enabled = always # yes / no / always
-# 	# ignore_portrait_duplication = yes
-
-# 	playable = has_megacorp
-
-# 	ship_prefix = "PRESCRIPTED_ship_prefix_whoniverse_church"
-
-# 	species = {
-# 		class = "HUM"
-# 		portrait = "whoniverse_human"
-# 		name = PRESCRIPTED_species_name_whoniverse_human
-# 		plural = PRESCRIPTED_species_plural_whoniverse_human
-# 		adjective = PRESCRIPTED_species_adjective_whoniverse_human
-# 		name_list = "HUMAN3"
-# 		trait = "trait_adaptive"
-# 		trait = "trait_nomadic"
-# 		trait = "trait_wasteful"
-# 	}
-
-# 	secondary_species={
-# 		class="HUM"
-# 		portrait="whoniverse_silence"
-# 		name="PRESCRIPTED_secondary_species_name_whoniverse_silence"
-# 		plural="PRESCRIPTED_secondary_species_plural_whoniverse_silence"
-# 		adjective="PRESCRIPTED_secondary_species_adjective_whoniverse_silence"
-# 		name_list="MAM3"
-
-# 		trait = trait_whoniverse_silence
-# 		trait = trait_whoniverse_bio_electricity
-# 		trait = trait_adaptive
-# 		trait = trait_repugnant
-# 	}
-
-# 	room = "personality_evangelizing_zealots_room"
-
-# 	authority = auth_corporate
-# 	civics = { "civic_gospel_of_the_masses" "civic_whoniverse_silence" }
-# 	government = gov_megachurch
-# 	advisor_voice_type = l_spiritualist
-
-# 	ethic = "ethic_spiritualist"
-# 	ethic = "ethic_militarist"
-# 	ethic = "ethic_egalitarian"
-
-# 	origin = "origin_whoniverse_church"
-
-# 	# flags = { start_screen_whoniverse_unit custom_start_screen }
-
-# 	planet_name = "whoniverse_name_papal_mainframe"
-# 	planet_class = "pc_continental"
-# 	initializer = "whoniverse_trenzalore_system"
-# 	system_name = "whoniverse_name_trenzalore_system"
-
-# 	graphical_culture = "mammalian_01"
-# 	city_graphical_culture = "mammalian_01"
-
-# 	empire_flag = {
-# 		icon= {
-# 			category = "whoniverse"
-# 			file = "whoniverse_flag_05.dds"
-# 		}
-# 		background= {
-# 			category = "backgrounds"
-# 			file = "stripes.dds"
-# 		}
-# 		colors={
-# 			"dark_blue"
-# 			"red"
-# 			"black"
-# 			"null"
-# 		}
-# 	}
-
-# 	ruler = {
-# 		name = "PRESCRIPTED_ruler_name_whoniverse_church"
-# 		gender = female
-# 		portrait = "whoniverse_church_tasha"
-# 		texture = 0
-# 		attachment = 1
-# 		clothes = 0
-# 		trait = trait_ruler_charismatic
-# 		leader_class = official
-# 	}
-# }
-
-
-
 # New Dalek Paradigm
 whoniverse_new_dalek_paradigm = {
 	name = "PRESCRIPTED_new_dalek_paradigm"
@@ -264,12 +175,12 @@ whoniverse_new_dalek_paradigm = {
 	ship_prefix = "PRESCRIPTED_ship_prefix_new_dalek_paradigm"
 
 	species = {
-		class = "HUM"
+		class = "WHO_DALEK"
 		portrait = "whoniverse_dalek_paradigm"
 		name = "PRESCRIPTED_species_name_new_dalek_paradigm"
 		plural = "PRESCRIPTED_species_plural_new_dalek_paradigm"
 		adjective = "PRESCRIPTED_species_adjective_new_dalek_paradigm"
-		species_bio="The Daleks are a warrior race made up of genetically engineered mutants belonging to fundamental DNA type 467-989. The mutants are encased inside an armoured travel machine built from polycarbide and the metal Dalekanium. The Daleks fought the Time Lords in the Last Great Time War, ending in the near-total destruction of the Dalek race. Their goal is to eradicate all non-Dalek life."
+		species_bio="The New Dalek Paradigm represents the evolution of the Daleks into an even more terrifying force. This new generation, embodying purity and driven by a fanatical desire to exterminate all non-Dalek life, sees itself as the pinnacle of Dalek evolution. The Paradigm includes distinct color-coded ranks, each specialized for a specific function, making them more efficient over previous generations. United in their purpose to dominate the universe, the New Dalek Paradigm is a relentless force of destruction, with no room for mercy or compromise."
 		name_list = "DALEK1"
 		gender = indeterminable
 		trait = "trait_survivor"
@@ -297,7 +208,7 @@ whoniverse_new_dalek_paradigm = {
 	graphical_culture = "fungoid_01"
 	city_graphical_culture = "fungoid_01"
 
-	# flags = { human_1 custom_start_screen }
+	flags = { whoniverse_new_dalek_paradigm custom_start_screen }
 
 	empire_flag = {
 		icon= {
@@ -340,12 +251,12 @@ whoniverse_dalek_empire_remnants = {
 	ship_prefix = "PRESCRIPTED_ship_prefix_dalek_empire_remnants"
 
 	species = {
-		class = "HUM"
+		class = "WHO_DALEK"
 		portrait = "whoniverse_dalek_paradigm"
 		name = "PRESCRIPTED_species_name_dalek_empire_remnants"
 		plural = "PRESCRIPTED_species_plural_dalek_empire_remnants"
 		adjective = "PRESCRIPTED_species_adjective_dalek_empire_remnants"
-		species_bio="The Daleks are a warrior race made up of genetically engineered mutants belonging to fundamental DNA type 467-989. The mutants are encased inside an armoured travel machine built from polycarbide and the metal Dalekanium. The Daleks fought the Time Lords in the Last Great Time War, ending in the near-total destruction of the Dalek race. Their goal is to eradicate all non-Dalek life."
+		species_bio="The Dalek Empire Remnants are the scattered survivors of a once-great empire. Led by a mysterious Dalek Emperor, who claims a divine purpose, these Daleks have clawed their way back from near extinction. Isolated in the far reaches of space and time, they have rebuilt their forces, harvesting what remains of their old enemies to fuel their resurgence. Driven by a singular purpose to reclaim their former glory, these Daleks are more ruthless than ever, using their god-like Emperor as the rallying point for a new age of conquest."
 		name_list = "DALEK1"
 		gender = indeterminable
 		trait = "trait_survivor"
@@ -416,12 +327,12 @@ whoniverse_cyberiad = {
 	ship_prefix = "PRESCRIPTED_ship_prefix_cybermanempire"
 
 	species = {
-		class = "HUM"
+		class = "WHO_CYBERMAN"
 		portrait = "whoniverse_cyberman_cyberiad"
 		name = "PRESCRIPTED_species_name_cybermanempire"
 		plural = "PRESCRIPTED_species_plural_cybermanempire"
 		adjective = "PRESCRIPTED_species_adjective_cybermanempire"
-		species_bio="The Cybermen are a race of cybernetically augmented humanoids. They vary greatly in design between numerous different Cyber-subspecies, and originated independently through parallel evolution from various locations across time, space and universes."
+		species_bio="The Cyberiad represents the cold, calculating nature of the Cybermen, whose origins trace back to the planet Mondas. These Cybermen, constantly seeking to upgrade themselves and others, have formed a collective consciousness driven by logic and efficiency. Ruthless in their quest to eliminate emotions and individuality, the Cyberiad seeks to convert all organic life into their ranks, viewing this as the ultimate form of survival and superiority. Their mechanical minds are dedicated to the expansion of their collective, with each new conversion marking another step toward their goal of universal domination."
 		name_list = "CYBERMAN1"
 		gender = indeterminable
 		trait = "trait_hive_mind"
@@ -437,7 +348,7 @@ whoniverse_cyberiad = {
 		name = "PRESCRIPTED_secondary_species_name_cybermanempire"
 		plural = "PRESCRIPTED_secondary_species_plural_cybermanempire"
 		adjective = "PRESCRIPTED_secondary_species_adjective_cybermanempire"
-		species_bio = "Humans are a species of sentient primates. Though humans could trace their evolutionary past to Earth, many billions of humans were born on other worlds after humanity spread through the cosmos."
+		# species_bio = "Humans are a species of sentient primates. Though humans could trace their evolutionary past to Earth, many billions of humans were born on other worlds after humanity spread through the cosmos."
 		name_list = "HUMAN1"
 	}
 
@@ -500,18 +411,18 @@ whoniverse_cyberiad = {
 # Cybermen Cybus Industries empire
 whoniverse_cybus_industries = {
 	name = "PRESCRIPTED_cybus_industries"
-	adjective = "PRESCRIPTED_adjective_cybus_industries"
+	adjective = "PRESCRIPTED_adjective_cybus_industries"  
 	spawn_enabled = no
 
 	ship_prefix = "PRESCRIPTED_ship_prefix_cybus_industries"
 
 	species = {
-		class = "HUM"
+		class = "WHO_CYBERMAN"
 		portrait = whoniverse_cyberman_cybus
-		name = "SPEC_WHO_CYBUSMAN"
-		plural = "SPEC_WHO_CYBUSMAN_plural"
-		adjective = "SPEC_WHO_CYBUSMAN_adj"
-		species_bio="The Cybermen are a race of cybernetically augmented humanoids. They vary greatly in design between numerous different Cyber-subspecies, and originated independently through parallel evolution from various locations across time, space and universes."
+		name = "WHO_CYBUSMAN"
+		plural = "WHO_CYBUSMAN_plural"
+		adjective = "WHO_CYBUSMAN_adj"
+		species_bio="Born from the twisted vision of John Lumic, the Cybus Cybermen emerged as a horrifying fusion of flesh and machine. Originating in a parallel universe on Pete's World, they began as an industrial revolution gone awry, converting unwilling subjects into emotionless soldiers. With their universe on the brink of collapse, the Cybus Cybermen have turned their attention to new dimensions, seeking to spread their brand of upgrades across the multiverse. Efficient, relentless, and driven by a need to perpetuate Lumic’s legacy, they are a cold, calculating force prepared to upgrade any species they encounter."
 		name_list = "CYBERMAN1"
 		gender = indeterminable
 		trait = "trait_hive_mind"
@@ -527,7 +438,7 @@ whoniverse_cybus_industries = {
 		name = "PRESCRIPTED_secondary_species_name_cybermanempire"
 		plural = "PRESCRIPTED_secondary_species_plural_cybermanempire"
 		adjective = "PRESCRIPTED_secondary_species_adjective_cybermanempire"
-		species_bio = "Humans are a species of sentient primates. Though humans could trace their evolutionary past to Earth, many billions of humans were born on other worlds after humanity spread through the cosmos."
+		# species_bio = "Humans are a species of sentient primates. Though humans could trace their evolutionary past to Earth, many billions of humans were born on other worlds after humanity spread through the cosmos."
 		name_list = "HUMAN1"
 	}
 
@@ -561,7 +472,7 @@ whoniverse_cybus_industries = {
 		background=
 		{
 			category="backgrounds"
-			file="circle.dds"
+			file="flag_BG_42.dds"
 		}
 		colors=
 		{
@@ -586,3 +497,165 @@ whoniverse_cybus_industries = {
 
 	}
 }
+
+# Nestene Consciousness empire (Toxoids)
+whoniverse_nestene_consciousness = {
+	name = "PRESCRIPTED_nestene_consciousness"
+	adjective = "PRESCRIPTED_adjective_nestene_consciousness"  
+	spawn_enabled = always # always
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_nestene_consciousness"
+
+	playable = has_toxoids
+
+	species = {
+		class = "WHO_AUTON"
+		portrait = whoniverse_nestene
+		name = "WHO_AUTON"
+		plural = "WHO_AUTON_plural"
+		adjective = "WHO_AUTON_adj"
+		species_bio="The Nestene Consciousness, a powerful entity capable of animating plastic, once thrived on its homeworld Polynos until it was destroyed during the Last Great Time War. Now hiding beneath the surface of Nestenia, the Nestene controls its synthetic army of Autons, designed to infiltrate and dominate. With a focus on survival through adaptation, it seeks to expand its reach across the galaxy, viewing biological life as inferior while thriving in polluted environments."
+		name_list = "TOX1"
+		gender = indeterminable
+		trait = "trait_survivor"
+		trait = "trait_hive_mind"
+		trait = "trait_whoniverse_auton"
+	}
+
+	room = "personality_hive_mind_room"
+
+	authority = "auth_hive_mind"
+	civics = { "civic_whoniverse_metamorphic_hive" "civic_hive_toxic_baths" }
+	government = gov_hive_mind
+	advisor_voice_type="l_hivemind"
+	origin = "origin_whoniverse_nestene"
+
+	ethic = "ethic_gestalt_consciousness"
+
+	planet_name = "PRESCRIPTED_planet_name_nestene_consciousness"
+	planet_class = "pc_continental"
+	initializer = "whoniverse_nestenia_system_initializer"
+	system_name = "PRESCRIPTED_system_name_nestene_consciousness"
+
+	graphical_culture = "toxoid_01"
+	city_graphical_culture = "toxoid_01"
+
+	flags = { start_screen_whoniverse_nestene_consciousness whoniverse_nestene_consciousness custom_start_screen }
+
+	empire_flag=
+	{
+		icon=
+		{
+			category="whoniverse"
+			file="whoniverse_flag_11.dds"
+		}
+		background=
+		{
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors=
+		{
+			"intense_orange"
+			"red"
+			"black"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_nestene_consciousness"
+		portrait = "whoniverse_nestene_01"
+		ruler_title = "PRESCRIPTED_ruler_title_nestene_consciousness"
+		heir_title = "PRESCRIPTED_heir_title_nestene_consciousness"
+		texture = 0
+		attachment = 0
+		clothes = 0
+		gender = indeterminable
+ 		trait = "trait_ruler_feedback_loop"
+		leader_class = official
+
+	}
+}
+
+
+# Nestene Consciousness empire (non-Toxoids)
+whoniverse_nestene_consciousness_non_toxoids = {
+	name = "PRESCRIPTED_nestene_consciousness"
+	adjective = "PRESCRIPTED_adjective_nestene_consciousness"  
+	spawn_enabled = always # always
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_nestene_consciousness"
+
+	playable = whoniverse_has_not_toxoids
+
+	species = {
+		class = "WHO_AUTON"
+		portrait = whoniverse_nestene
+		name = "WHO_AUTON"
+		plural = "WHO_AUTON_plural"
+		adjective = "WHO_AUTON_adj"
+		species_bio="The Nestene Consciousness, a powerful entity capable of animating plastic, once thrived on its homeworld Polynos until it was destroyed during the Last Great Time War. Now hiding beneath the surface of Nestenia, the Nestene controls its synthetic army of Autons, designed to infiltrate and dominate. With a focus on survival through adaptation, it seeks to expand its reach across the galaxy, viewing biological life as inferior while thriving in polluted environments."
+		name_list = "HIVE1"
+		gender = indeterminable
+		trait = "trait_survivor"
+		trait = "trait_hive_mind"
+		trait = "trait_whoniverse_auton"
+	}
+
+	room = "personality_hive_mind_room"
+
+	authority = "auth_hive_mind"
+	civics = { "civic_whoniverse_metamorphic_hive" "civic_hive_subsumed_will" }
+	government = gov_hive_mind
+	advisor_voice_type="l_hivemind"
+	origin = "origin_whoniverse_nestene"
+
+	ethic = "ethic_gestalt_consciousness"
+
+	planet_name = "PRESCRIPTED_planet_name_nestene_consciousness"
+	planet_class = "pc_continental"
+	initializer = "whoniverse_nestenia_system_initializer"
+	system_name = "PRESCRIPTED_system_name_nestene_consciousness"
+
+	graphical_culture = "mammalian_01"
+	city_graphical_culture = "mammalian_01"
+
+	flags = { start_screen_whoniverse_nestene_consciousness whoniverse_nestene_consciousness custom_start_screen }
+
+	empire_flag=
+	{
+		icon=
+		{
+			category="whoniverse"
+			file="whoniverse_flag_11.dds"
+		}
+		background=
+		{
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors=
+		{
+			"intense_orange"
+			"red"
+			"black"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_nestene_consciousness"
+		portrait = "whoniverse_nestene_01"
+		ruler_title = "PRESCRIPTED_ruler_title_nestene_consciousness"
+		heir_title = "PRESCRIPTED_heir_title_nestene_consciousness"
+		texture = 0
+		attachment = 0
+		clothes = 0
+		gender = indeterminable
+ 		trait = "trait_ruler_feedback_loop"
+		leader_class = official
+
+	}
+}
+

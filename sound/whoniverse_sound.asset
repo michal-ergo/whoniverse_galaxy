@@ -1,4 +1,34 @@
 # Phenotypes
+
+sound = 
+{
+	name = "whoniverse_doctor_ninth_1"
+	file = "vo/phenotypes/doctor/im_the_doctor_by_the_way.wav"
+	volume = 0.8
+}
+
+sound = 
+{
+	name = "whoniverse_doctor_ninth_2"
+	file = "vo/phenotypes/doctor/run_for_your_life.wav"
+	volume = 0.8
+}
+
+
+sound = 
+{
+	name = "whoniverse_rose_tyler_five_million_cybermen"
+	file = "vo/phenotypes/doctor/five_million_cybermen.wav"
+	volume = 0.8
+}
+
+sound = 
+{
+	name = "whoniverse_rose_tyler_tell_me_who_are_you"
+	file = "vo/phenotypes/doctor/tell_me_who_are_you.wav"
+	volume = 0.9
+}
+
 sound = 
 {
 	name = "whoniverse_exterminate"
@@ -416,6 +446,30 @@ sound =
 	file = "vo/phenotypes/mechanoid/mechanoid_beep.wav"
 	volume = 0.7
 }
+
+sound = 
+{
+	name = "whoniverse_auton_fire"
+	file = "vo/phenotypes/nestene/auton_fire.wav"
+	volume = 0.7
+}
+
+
+sound = 
+{
+	name = "whoniverse_nestene_scream_1"
+	file = "vo/phenotypes/nestene/nestene_1.wav"
+	volume = 0.7
+}
+
+
+sound = 
+{
+	name = "whoniverse_nestene_scream_2"
+	file = "vo/phenotypes/nestene/nestene_2.wav"
+	volume = 0.7
+}
+
 
 
 ### Sound Effects ###

@@ -38,6 +38,12 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "origin_whoniverse_nestene"
+		texturefile = "gfx/event_pictures/origins/origin_whoniverse_nestene.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
 		name = "origin_whoniverse_cybus"
 		texturefile = "gfx/event_pictures/origins/origin_whoniverse_cybus.dds"
 		alwaystransparent = yes
@@ -51,6 +57,13 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 	
+	spriteType = {
+		name = "GFX_evt_whoniverse_ninth_doctor"
+		texturefile = "gfx/event_pictures/whoniverse_ninth_doctor.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
 	spriteType = {
 		name = "GFX_evt_whoniverse_tenth_doctor"
 		texturefile = "gfx/event_pictures/whoniverse_tenth_doctor.dds"
@@ -170,6 +183,24 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_evt_whoniverse_regeneration"
 		texturefile = "gfx/event_pictures/whoniverse_regeneration.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_whoniverse_mechanoid"
+		texturefile = "gfx/event_pictures/whoniverse_mechanoid.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_whoniverse_autons"
+		texturefile = "gfx/event_pictures/whoniverse_autons.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_whoniverse_rose_tyler"
+		texturefile = "gfx/event_pictures/whoniverse_rose_tyler.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}

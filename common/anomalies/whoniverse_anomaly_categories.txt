@@ -30,7 +30,7 @@ whoniverse_necros_cat = {
 	max_once_global = yes
 	
 	spawn_chance = {
-		base = 1
+		base = 0
 	}
 	
 	on_success = {
@@ -49,7 +49,7 @@ whoniverse_telos_minor_cat = {
 	max_once_global = yes
 	
 	spawn_chance = {
-		base = 1
+		base = 0
 	}
 	
 	on_success = {
@@ -68,7 +68,7 @@ whoniverse_zygor_cat = {
 	max_once_global = yes
 	
 	spawn_chance = {
-		base = 1
+		base = 0
 	}
 	
 	on_success = {
@@ -87,7 +87,7 @@ whoniverse_tasak_cat = {
 	max_once_global = yes
 	
 	spawn_chance = {
-		base = 1
+		base = 0
 	}
 	
 	on_success = {
@@ -106,10 +106,48 @@ whoniverse_alfava_metraxis_cat = {
 	max_once_global = yes
 	
 	spawn_chance = {
-		base = 1
+		base = 0
 	}
 	
 	on_success = {
 		1 = whoniverse.170
+	}
+}
+
+whoniverse_mechanus_cat = {
+	should_ai_use = no
+
+	desc = "whoniverse_mechanus_desc"
+	picture = GFX_evt_ancient_alien_temple
+	level = 6
+	null_spawn_chance = 0
+	max_once = yes
+	max_once_global = yes
+	
+	spawn_chance = {
+		base = 0
+	}
+	
+	on_success = {
+		1 = whoniverse.220
+	}
+}
+
+whoniverse_polymos_cat = {
+	should_ai_use = yes
+
+	desc = "whoniverse_polymos_desc"
+	picture = GFX_evt_shattered_planet
+	level = 5
+	null_spawn_chance = 0
+	max_once = yes
+	max_once_global = yes
+	
+	spawn_chance = {
+		base = 0
+	}
+	
+	on_success = {
+		1 = whoniverse.250
 	}
 }

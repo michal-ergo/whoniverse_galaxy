@@ -1,3 +1,7 @@
+concept_whoniverse_auton = {
+	icon = "gfx/interface/icons/traits/trait_whoniverse_auton.dds"
+}
+
 concept_whoniverse_dalek_infertile = {
 	icon = "gfx/interface/icons/traits/trait_whoniverse_dalek_infertile.dds"
 }
@@ -52,4 +56,8 @@ concept_whoniverse_silence = {
 
 concept_whoniverse_seventh_transept = {
 	icon = "gfx/interface/icons/buildings/building_whoniverse_seventh_transept.dds"
+}
+
+concept_whoniverse_metamorphic_hive = {
+	icon = "gfx/interface/icons/governments/civics/civic_whoniverse_metamorphic_hive.dds"
 }

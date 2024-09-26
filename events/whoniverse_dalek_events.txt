@@ -5,8 +5,8 @@ namespace = whoniverse
 # 06 - 07 = Dalek Reinvention of the Dalek Empire event
 # 08 - 12 = Dalek setup events
 # 12 - 17 = Dalek Asylum event chain
-# 19 + 23 = Dalek Necros 
-# 20 - 24 = Dalek Davros event chain
+# 19 + 24 = Dalek Necros 
+# 20 - 23 = Dalek Davros event chain
 # 30 - 39 = Cybermen setup events
 # 40 - 49 = Cybermen Mondasian Colony Ship chain
 # 50 - 59 = Cybermen Cyberiad Origin event chain
@@ -99,7 +99,7 @@ planet_event = {
 	}
 }
 
-# New Dalek Paradigm setup - Reinvention of the Dalek Empire
+# New Dalek Paradigm setup - Ressurection of the Dalek Empire
 country_event = {
     id = whoniverse.6
 	hide_window = yes
@@ -113,12 +113,12 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			country_event = { id = whoniverse.7 days = 32400 random = 3600 } # 80-100 years
+			country_event = { id = whoniverse.7 days = 324 random = 36 } # orig. 32400/3600 (80-100) years
 			}
 	}
 }
 
-# Reinvent the Dalek Empire event
+# Reinvention of the Dalek Empire event
 country_event = {
 	id = whoniverse.7
 	title = "whoniverse.7.name"
@@ -159,7 +159,10 @@ country_event = {
 			}
 			set_name = "PRESCRIPTED_ressurected_dalek_empire"
 		}
-		change_government = auth_dictatorial
+		change_government = {
+			authority = auth_dictatorial
+			remove_invalid_civics = yes
+		}
 		add_monthly_resource_mult = {
 			resource = unity
 			value = @tier1unityreward
@@ -179,7 +182,10 @@ country_event = {
 			}
 			set_name = "PRESCRIPTED_ressurected_dalek_empire"
 		}
-		change_government = auth_dictatorial
+		change_government = {
+			authority = auth_dictatorial
+			remove_invalid_civics = yes
+		}
 		add_monthly_resource_mult = {
 			resource = unity
 			value = @tier1unityreward
@@ -664,7 +670,7 @@ ship_event = {
 			add_deposit = d_whoniverse_tranquil_repose
 				}    	
 		hidden_effect = {
-			owner = { country_event = { id = whoniverse.23 days = 30 random = 10 }
+			owner = { country_event = { id = whoniverse.24 days = 30 random = 10 }
 			}
 		}	
 	}
@@ -699,7 +705,7 @@ ship_event = {
 	}
 		
 
-## Davros event chain - goes .20 > .24 > .21 > .22
+## Davros event chain
 # Time delay - triggered by on press begin event
 country_event = {
 	id = whoniverse.20
@@ -712,32 +718,65 @@ country_event = {
 	}
 
 	immediate = {
-		owner = { country_event = { id = whoniverse.24 days = 27375 random = 18250 } } } # timing 25-125 (27375 days - 18250 days) years
+		owner = { country_event = { id = whoniverse.21 days = 27375 random = 18250 } } } # timing 25-125 (27375 days - 18250 days) years
     }
 
-# 
+# Dalek Davros project enabled - time rift
+country_event = {
+    id = whoniverse.21
+    title = "whoniverse.21.name"
+    desc = "whoniverse.21.desc"
+    picture = GFX_evt_whoniverse_time_vortex
+	show_sound = whoniverse_dalek_explain
+
+	trigger = {
+		is_whoniverse_dalek = yes
+		# is_ai = no
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	option = {
+		name = "whoniverse.21.a"
+		hidden_effect = {
+			random_galaxy_planet = {
+				limit = {
+					has_planet_flag = whoniverse_dalek_skaro
+				}
+				enable_special_project = {
+					name = "whoniverse_dalek_caan_project"
+					owner = root
+					location = this
+					}
+				}    
+		}
+	}
+}
+
+
 # Dalek Caan event
 country_event = {
-	id = whoniverse.21
-	title = "whoniverse.21.name"
-	desc = "whoniverse.21.desc"
+	id = whoniverse.22
+	title = "whoniverse.22.name"
+	desc = "whoniverse.22.desc"
 	picture = GFX_evt_whoniverse_dalek
 	show_sound = whoniverse_dalek_caan_greetings
     is_triggered_only = yes
 
 	option = {
-		name = whoniverse.21.a
+		name = whoniverse.22.a
 		trigger = {
 			owner = {
 				is_whoniverse_dalek = yes
 			}
 		}		
 		hidden_effect = {
-			country_event = { id = whoniverse.22 }
+			country_event = { id = whoniverse.23 }
         }
     }
     option = {
-		name = whoniverse.21.b
+		name = whoniverse.22.b
         owner = {
             add_monthly_resource_mult = {
                 resource = influence
@@ -751,8 +790,8 @@ country_event = {
 
 # Davros: HIRE/DISMISS
 country_event = {
-	id = whoniverse.22
-	title = "whoniverse.22.name"
+	id = whoniverse.23
+	title = "whoniverse.23.name"
  	desc = whoniverse.22.desc
 
 	show_sound = whoniverse_activate_the_holding_cells
@@ -849,20 +888,20 @@ country_event = {
 	}
 
 	option = { # Who are you?
-		name = whoniverse.22.a
+		name = whoniverse.23.a
 		is_dialog_only = yes
-		response_text = whoniverse.22.a.response
+		response_text = whoniverse.23.a.response
 	}
 	option = { # You are not superior!
-		name = whoniverse.22.b
+		name = whoniverse.23.b
 		is_dialog_only = yes
-		response_text = whoniverse.22.b.response
+		response_text = whoniverse.23.b.response
 	}
 
 	option = { # HIRE
-		name = whoniverse.22.c
+		name = whoniverse.23.c
 		tag = hire_leader
-		custom_tooltip = whoniverse.22.c.custom_tooltip # Azaryn joins
+		custom_tooltip = whoniverse.23.c.custom_tooltip # Davros joins
 		sound = whoniverse_activate_the_holding_cells
 
 		hidden_effect = {
@@ -881,7 +920,7 @@ country_event = {
 
 	option = { # DISMISS
 		sound = whoniverse_exterminate
-		name = whoniverse.22.d
+		name = whoniverse.23.d
 		tag = dismiss_leader
 		hidden_effect = {
 			event_target:whoniverse_davros_leader = {
@@ -893,9 +932,9 @@ country_event = {
 
 # Incubation Vats built from Necros
 country_event = {
-	id = whoniverse.23
-	title = "whoniverse.23.name"
-	desc = "whoniverse.23.desc"
+	id = whoniverse.24
+	title = "whoniverse.24.name"
+	desc = "whoniverse.24.desc"
 	picture = GFX_evt_clones
 	show_sound = event_laboratory_sound
     is_triggered_only = yes
@@ -915,40 +954,7 @@ country_event = {
 		 	}
 			}
 	option = {
-		name = whoniverse.23.a
-	}
-}
-
-# Dalek Davros project enabled - time rift
-country_event = {
-    id = whoniverse.24
-    title = "whoniverse.24.name"
-    desc = "whoniverse.24.desc"
-    picture = GFX_evt_whoniverse_time_vortex
-	show_sound = whoniverse_dalek_explain
-
-	trigger = {
-		is_whoniverse_dalek = yes
-		# is_ai = no
-	}
-
-	is_triggered_only = yes	
-	fire_only_once = yes
-
-	option = {
-		name = "whoniverse.24.a"
-		hidden_effect = {
-			random_galaxy_planet = {
-				limit = {
-					has_planet_flag = whoniverse_dalek_skaro
-				}
-				enable_special_project = {
-					name = "whoniverse_dalek_caan_project"
-					owner = root
-					location = this
-					}
-				}    
-		}
+		name = whoniverse.24.a
 	}
 }
 

@@ -11,7 +11,6 @@ trait_whoniverse_dalek_machine = {
 
 	species_potential_add = {
 		OR = {
-			species_portrait = whoniverse_dalek_empire
 			species_portrait = whoniverse_dalek_paradigm
 			species_portrait = whoniverse_dalek_imperial
 			species_portrait = whoniverse_dalek_renegade
@@ -52,7 +51,7 @@ trait_whoniverse_dalek_infertile = {
 	opposites = { "trait_conservational" "trait_wasteful" "trait_slow_breeders" "trait_rapid_breeders" "trait_plantoid_budding" "trait_lithoid_budding" "trait_advanced_budding" "trait_vat_grown" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" }
 	sorting_priority = 20
 
-	initial = no
+	initial = yes
 	randomized = no
 	species_potential_add = {
 		always = no
@@ -150,9 +149,12 @@ trait_whoniverse_time_lord = {
 	
 	modifier = {
 		
-		planet_jobs_specialist_produces_mult = 1
-		planet_resettlement_unemployed_mult = 1
-		pop_growth_speed = -0.9
+		planet_jobs_ruler_produces_mult = 0.5
+		# planet_jobs_specialist_only_produces_mult = 0.5
+		planet_jobs_physics_research_produces_mult = 0.5
+		planet_resettlement_unemployed_mult = 0.5
+		pop_growth_speed = -0.8
+		planet_pop_assembly_organic_mult = -0.8
 	}
 
 	immortal_leaders = yes
@@ -312,4 +314,48 @@ trait_whoniverse_silence = {
 	}
 
 	icon = "gfx/interface/icons/traits/trait_whoniverse_silence.dds"
+}
+
+# Plastic Automaton trait
+trait_whoniverse_auton = {
+	cost = 2
+
+	initial = yes
+	randomized = no
+
+	species_potential_add = {
+		species_portrait = whoniverse_nestene
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+
+	opposites = { "trait_whoniverse_dalek_machine" "trait_whoniverse_dalek_infertile" "trait_whoniverse_cyber_suit" "trait_lithoid" }
+	
+	modifier = {
+
+		# planet_pops_organics_food_upkeep_mult = -0.90
+		# planet_pops_minerals_upkeep_add = 1
+		pop_environment_tolerance = 0.2
+		army_damage_mult = 0.2
+		pop_housing_usage_mult = -0.15
+		spy_network_daily_value_mult = 0.1
+	}
+
+	immortal_leaders = yes
+	infertile = yes
+	potential_crossbreeding_chance = 0
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	custom_tooltip_with_modifiers = trait_whoniverse_auton_tooltip
+
+	ai_weight = {
+		weight = 0
+	}
+
+	icon = "gfx/interface/icons/traits/trait_whoniverse_auton.dds"
 }

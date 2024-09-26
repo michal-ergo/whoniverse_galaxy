@@ -12,3 +12,55 @@
 #  	graphical_culture = mammalian_01	
 #  	move_pop_sound_effect = "machine_pops_move"
 #  }
+
+WHO_DALEK = {
+	archetype = BIOLOGICAL
+
+	possible = {
+	  authority = {
+		  NOT = {
+			  value = auth_machine_intelligence
+			  text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE
+		  }
+	  }
+  }
+  
+	graphical_culture = fungoid_01	
+	move_pop_sound_effect = "fungoid_pops_move"
+
+  trait = trait_cybernetic
+}
+
+WHO_CYBERMAN = {
+	archetype = BIOLOGICAL
+
+	possible = {
+	  ethics = {
+			value = ethic_gestalt_consciousness
+	  	}
+  	}
+  
+	graphical_culture = mammalian_01	
+	move_pop_sound_effect = "robot_pops_move"
+
+  trait = trait_cybernetic
+}
+
+
+WHO_AUTON = {
+  	archetype = BIOLOGICAL
+
+  	possible = {
+		authority = {
+			NOT = {
+				value = auth_machine_intelligence
+				text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE
+			}
+		}
+	}
+	
+  	graphical_culture = mammalian_01	
+  	move_pop_sound_effect = "molluscoid_pops_move"
+
+	trait = "trait_whoniverse_auton"
+}

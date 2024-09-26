@@ -12,10 +12,7 @@ cb_whoniverse_cyber_conversion = {
 	show_in_diplomacy = yes
 	show_notification = yes
 	potential = {
-		OR = {
 			has_valid_civic = civic_whoniverse_cyber_conversion
-			has_valid_civic = civic_whoniverse_cyber_conversion_ai
-		}
 	}
 	is_valid = {
 		#has_total_war_cb = yes
@@ -24,9 +21,8 @@ cb_whoniverse_cyber_conversion = {
 			is_subject = no
 			overlord = { NOT = { is_same_value = from } }
 		from = {
-			NOR = {	
+			NOT = {	
 				has_valid_civic = civic_whoniverse_cyber_conversion
-				has_valid_civic = civic_whoniverse_cyber_conversion_ai
 				}	
 			}
 		}
