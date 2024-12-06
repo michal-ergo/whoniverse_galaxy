@@ -193,7 +193,7 @@ whoniverse_new_dalek_paradigm = {
 	room = "personality_xenophobic_isolationists_room"
 
 	authority = auth_dictatorial
-	civics = { "civic_fanatic_purifiers" "civic_whoniverse_dalek_supremacy" }
+	civics = { "civic_fanatic_purifiers" "civic_whoniverse_new_dalek_paradigm" }
 	government = gov_purity_order
 	origin = "origin_whoniverse_new_dalek_paradigm"
 
@@ -269,7 +269,7 @@ whoniverse_dalek_empire_remnants = {
 	room = "personality_xenophobic_isolationists_room"
 
 	authority = auth_dictatorial
-	civics = { "civic_fanatic_purifiers" "civic_whoniverse_dalek_supremacy" }
+	civics = { "civic_fanatic_purifiers" "civic_whoniverse_dalek_remnants" }
 	government = gov_purity_order
 	origin = "origin_whoniverse_dalek_empire_remnants"
 
@@ -317,6 +317,159 @@ whoniverse_dalek_empire_remnants = {
 
 	}
 }
+
+# Imperial Daleks
+whoniverse_imperial_dalek_faction = {
+	name = "PRESCRIPTED_imperial_dalek_faction"
+	adjective = "PRESCRIPTED_imperial_dalek_faction"
+	spawn_enabled = no # yes / no / always
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_imperial_dalek_faction"
+
+	species = {
+		class = "WHO_DALEK"
+		portrait = "whoniverse_dalek_imperial"
+		name = "PRESCRIPTED_species_name_imperial_dalek_faction"
+		plural = "PRESCRIPTED_species_plural_imperial_dalek_faction"
+		adjective = "PRESCRIPTED_species_adjective_imperial_dalek_faction"
+		species_bio="The Imperial Daleks represent the pinnacle of genetic manipulation and technological superiority, crafted under the iron will of Davros. With loyalty only to their Emperor, they stand apart from the Renegade Daleks, driven by their singular goal to unify and expand the Dalek race under Davros's rule. Clad in white and gold armor, the Imperial Daleks epitomize ruthlessness and strategic precision, unmatched in their quest to exterminate all threats to their dominion."
+		name_list = "DALEK1"
+		gender = indeterminable
+		trait = "trait_survivor"
+		trait = "trait_cybernetic"
+		trait = "trait_whoniverse_dalek_infertile"
+		trait = "trait_whoniverse_dalek_machine"
+		trait = "trait_slow_learners"
+	}
+
+	room = "personality_xenophobic_isolationists_room"
+
+	authority = auth_dictatorial
+	civics = { "civic_fanatic_purifiers" "civic_whoniverse_imperial_daleks" }
+	government = gov_purity_order
+	origin = "origin_whoniverse_dalek_civil_war"
+
+	ethic = "ethic_militarist"
+	ethic = "ethic_fanatic_xenophobe"
+
+	planet_name = "PRESCRIPTED_planet_name_imperial_dalek_faction"
+	planet_class = "pc_continental"
+	initializer="whoniverse_prewar_skaro_system_initializer"
+	system_name = "PRESCRIPTED_system_name_imperial_dalek_faction"
+
+	graphical_culture = "fungoid_01"
+	city_graphical_culture = "fungoid_01"
+
+	flags = { whoniverse_imperial_dalek_faction custom_start_screen }
+
+	empire_flag = {
+		icon= {
+			category = "whoniverse"
+			file = "whoniverse_flag_13.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "circle.dds"
+		}
+		colors={
+			"off_white"
+			"orange"
+			"black"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_imperial_dalek_faction"
+		portrait = "whoniverse_dalek_05_emperor"
+		ruler_title = "PRESCRIPTED_ruler_title_imperial_dalek_faction"
+		heir_title = "PRESCRIPTED_heir_title_imperial_dalek_faction"
+		texture = 0
+		attachment = 0
+		clothes = 0
+		gender = indeterminable
+ 		trait = "leader_trait_principled"
+		leader_class = official
+
+	}
+}
+
+# Renegade Daleks
+whoniverse_renegade_dalek_faction = {
+	name = "PRESCRIPTED_renegade_dalek_faction"
+	adjective = "PRESCRIPTED_renegade_dalek_faction"
+	spawn_enabled = no # yes / no / always
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_renegade_dalek_faction"
+
+	species = {
+		class = "WHO_DALEK"
+		portrait = "whoniverse_dalek_renegade"
+		name = "PRESCRIPTED_species_name_renegade_dalek_faction"
+		plural = "PRESCRIPTED_species_plural_renegade_dalek_faction"
+		adjective = "PRESCRIPTED_species_adjective_renegade_dalek_faction"
+		species_bio="The Renegade Daleks are a formidable faction of the Dalek race, loyal only to the ancient tenets of Dalek supremacy and the authority of the Prime Dalek. Unlike the Imperial Daleks, they reject the rule of Davros, viewing his genetic tampering and technological alterations as a deviation from true Dalek purity. Encased in dark-grey armor with minimalistic design, they embody a relentless commitment to their traditional ideals, valuing the strength and purity of the original Dalek form. With ruthless efficiency, they seek to reclaim control of the Dalek race and restore it to what they see as its rightful path—one where only the strongest survive and no outsider holds power over their ranks."
+		name_list = "DALEK1"
+		gender = indeterminable
+		trait = "trait_survivor"
+		trait = "trait_cybernetic"
+		trait = "trait_whoniverse_dalek_infertile"
+		trait = "trait_whoniverse_dalek_machine"
+		trait = "trait_slow_learners"
+	}
+
+	room = "personality_xenophobic_isolationists_room"
+
+	authority = auth_dictatorial
+	civics = { "civic_fanatic_purifiers" "civic_whoniverse_renegade_daleks" }
+	government = gov_purity_order
+	origin = "origin_whoniverse_dalek_civil_war"
+
+	ethic = "ethic_militarist"
+	ethic = "ethic_fanatic_xenophobe"
+
+	planet_name = "PRESCRIPTED_planet_name_renegade_dalek_faction"
+	planet_class = "pc_continental"
+	initializer="whoniverse_renegade_stronghold_initializer"
+	system_name = "PRESCRIPTED_system_name_renegade_dalek_faction"
+
+	graphical_culture = "fungoid_01"
+	city_graphical_culture = "fungoid_01"
+
+	flags = { whoniverse_renegade_dalek_faction custom_start_screen }
+
+	empire_flag = {
+		icon= {
+			category = "whoniverse"
+			file = "whoniverse_flag_14.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "circle.dds"
+		}
+		colors={
+			"light_grey"
+			"black"
+			"black"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_renegade_dalek_faction"
+		portrait = whoniverse_dalek_06_emperor
+		ruler_title = "PRESCRIPTED_ruler_title_renegade_dalek_faction"
+		heir_title = "PRESCRIPTED_heir_title_renegade_dalek_faction"
+		texture = 0
+		attachment = 0
+		clothes = 0
+		gender = indeterminable
+ 		trait = "leader_trait_principled"
+		leader_class = official
+
+	}
+}
+
 
 # Cybermen Cyberiad empire
 whoniverse_cyberiad = {
@@ -659,3 +812,165 @@ whoniverse_nestene_consciousness_non_toxoids = {
 	}
 }
 
+# Shadow Proclamation empire (Megacorp)
+whoniverse_shadow_proclamation = {
+	name = "PRESCRIPTED_shadow_proclamation"
+	adjective = "PRESCRIPTED_adjective_shadow_proclamation"  
+	spawn_enabled = always # always
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_shadow_proclamation"
+
+	playable = has_megacorp
+
+	species = {
+		class = "MAM"
+		portrait = whoniverse_judoon
+		name = "PRESCRIPTED_species_name_shadow_proclamation"
+		plural = "PRESCRIPTED_species_plural_shadow_proclamation"
+		adjective = "PRESCRIPTED_species_adjective_shadow_proclamation"
+		species_bio="The Judoon, a race of disciplined and methodical enforcers, hail from the arid and orderly world of Judoonia. Known for their unwavering adherence to protocol, they serve as the muscle of the Shadow Proclamation, enforcing its decrees with precision and impartiality. Operating as interstellar peacekeepers, the Judoon are feared for their relentless pursuit of justice and their unyielding commitment to maintaining order. While their rigid approach can appear ruthless, their loyalty to the rule of law is unmatched, ensuring stability in an otherwise chaotic galaxy."
+		name_list = "JUDOON1"
+		gender = not_set
+		trait = "trait_strong"
+		trait = "trait_conformists"
+		trait = "trait_slow_learners"
+	}
+
+	room = "personality_democratic_crusaders_room"
+
+	authority = auth_corporate
+	civics = { "civic_whoniverse_space_police" "civic_private_military_companies" }
+	government = gov_megacorporation
+	advisor_voice_type = "l_authoritarian"
+	origin = "origin_whoniverse_shadow_proclamation"
+
+	ethic = "ethic_militarist"
+	ethic = "ethic_authoritarian"
+	ethic = "ethic_xenophile"
+
+	planet_name = "PRESCRIPTED_planet_name_shadow_proclamation"
+	planet_class = pc_continental
+	initializer = "whoniverse_shadow_proclamation_system_initializer"
+	system_name = "PRESCRIPTED_system_name_shadow_proclamation"
+
+	graphical_culture = "mammalian_01"
+	city_graphical_culture = "mammalian_01"
+
+	flags = { whoniverse_shadow_proclamation custom_start_screen }
+
+	empire_flag = {
+		icon=
+		{
+			category="whoniverse"
+			file="whoniverse_flag_15.dds"
+		}
+		background=
+		{
+			category="backgrounds"
+			file="pattern_01.dds"
+		}
+		colors=
+		{
+			"black"
+			"teal"
+			"black"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_shadow_proclamation"
+		portrait = "whoniverse_shadow_architect"
+		ruler_title = "PRESCRIPTED_ruler_title_shadow_proclamation"
+		heir_title = "PRESCRIPTED_heir_title_shadow_proclamation"
+		texture = 0
+		attachment = 0
+		clothes = 0
+		gender = female
+ 		trait = "trait_ruler_logistic_understanding"
+		leader_class = official
+
+	}
+}
+
+# Shadow Proclamation empire (Oligarchy)
+whoniverse_shadow_proclamation_oligarchy = {
+	name = "PRESCRIPTED_shadow_proclamation"
+	adjective = "PRESCRIPTED_adjective_shadow_proclamation"  
+	spawn_enabled = always # always
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_shadow_proclamation"
+
+	playable = whoniverse_has_not_megacorp
+
+	species = {
+		class = MAM
+		portrait = whoniverse_judoon
+		name = "PRESCRIPTED_species_name_shadow_proclamation"
+		plural = "PRESCRIPTED_species_plural_shadow_proclamation"
+		adjective = "PRESCRIPTED_species_adjective_shadow_proclamation"
+		species_bio="The Judoon, a race of disciplined and methodical enforcers, hail from the arid and orderly world of Judoonia. Known for their unwavering adherence to protocol, they serve as the muscle of the Shadow Proclamation, enforcing its decrees with precision and impartiality. Operating as interstellar peacekeepers, the Judoon are feared for their relentless pursuit of justice and their unyielding commitment to maintaining order. While their rigid approach can appear ruthless, their loyalty to the rule of law is unmatched, ensuring stability in an otherwise chaotic galaxy."
+		name_list = "JUDOON1"
+		gender = not_set
+		trait = "trait_strong"
+		trait = "trait_conformists"
+		trait = "trait_slow_learners"
+	}
+
+	room = "personality_democratic_crusaders_room"
+
+	authority = auth_oligarchic
+	civics = { "civic_corporate_dominion" "civic_shadow_council" }
+	government = gov_plutocratic_oligarchy
+	advisor_voice_type="l_authoritarian"
+	origin = "origin_whoniverse_shadow_proclamation"
+
+	ethic = "ethic_militarist"
+	ethic = "ethic_authoritarian"
+	ethic = "ethic_xenophile"
+
+	planet_name = "PRESCRIPTED_planet_name_shadow_proclamation"
+	planet_class = pc_continental
+	initializer = "whoniverse_shadow_proclamation_system_initializer"
+	system_name = "PRESCRIPTED_system_name_shadow_proclamation"
+
+	graphical_culture = "mammalian_01"
+	city_graphical_culture = "mammalian_01"
+
+	flags = { whoniverse_shadow_proclamation custom_start_screen }
+
+	empire_flag = 
+	{
+		icon=
+		{
+			category="whoniverse"
+			file="whoniverse_flag_15.dds"
+		}
+		background=
+		{
+			category="backgrounds"
+			file="pattern_01.dds"
+		}
+		colors=
+		{
+			"black"
+			"teal"
+			"black"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_shadow_proclamation"
+		portrait = "whoniverse_shadow_architect"
+		ruler_title = "PRESCRIPTED_ruler_title_shadow_proclamation"
+		heir_title = "PRESCRIPTED_heir_title_shadow_proclamation"
+		texture = 0
+		attachment = 0
+		clothes = 0
+		gender = female
+ 		trait = "trait_ruler_logistic_understanding"
+		leader_class = official
+
+	}
+}

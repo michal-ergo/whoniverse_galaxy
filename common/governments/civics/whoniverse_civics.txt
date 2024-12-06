@@ -47,18 +47,25 @@
 #	blocks_random_machine_empire_generation	= yes	# ORIGIN EXCLUSIVE: Makes sure that random empire creation does not create invalid combinations with individualistic machines. Defaults to yes. Required for all origins that should be blocked by individualist machines.
 #}
 civic_whoniverse_dalek_supremacy = {
-	potential = { authority = { NOR = { value = auth_hive_mind value = auth_machine_intelligence } } } # not hivemind or machine
+	potential = { 
+		# authority = { NOR = { value = auth_hive_mind value = auth_machine_intelligence } } 
+		always = no
+	}
 	
 	possible = {
 		# origin = {
 		# 	value = origin_whoniverse_new_dalek_paradigm
 		# }
+		species_class = {
+			value = WHO_DALEK
+		}
 		civics = {
 			NOR = {
 				value = civic_nationalistic_zeal
-				value = civic_whoniverse_cyber_conversion
-				value = civic_whoniverse_silence
-				value = civic_whoniverse_unit_hq
+				value = civic_whoniverse_new_dalek_paradigm
+				value = civic_whoniverse_dalek_remnants
+				value = civic_whoniverse_imperial_daleks
+				value = civic_whoniverse_renegade_daleks
 			}
 		}
 		ethics = {
@@ -75,8 +82,165 @@ civic_whoniverse_dalek_supremacy = {
 	modifier = {
 		country_war_exhaustion_mult = -0.2
 		country_claim_influence_cost_mult = -0.1
-		planet_resettlement_unemployed_mult = 0.25
 		planet_crime_mult = -0.1
+		planet_resettlement_unemployed_mult = 0.25
+	}
+}
+
+civic_whoniverse_new_dalek_paradigm = {
+	potential = { authority = { NOR = { value = auth_hive_mind value = auth_machine_intelligence } } } # not hivemind or machine
+	
+	possible = {
+		# origin = {
+		# 	value = origin_whoniverse_new_dalek_paradigm
+		# }
+		species_class = {
+			value = WHO_DALEK
+		}
+		civics = {
+			NOR = {
+				value = civic_whoniverse_dalek_supremacy
+				value = civic_whoniverse_dalek_remnants
+				value = civic_whoniverse_imperial_daleks
+				value = civic_whoniverse_renegade_daleks
+			}
+		}
+		ethics = {
+			value = ethic_fanatic_xenophobe
+		} 
+	}
+	modification = yes
+	random_weight = {
+		base = 0
+	}
+
+	# description = "civic_tooltip_whoniverse_dalek_supremacy_effects"
+
+	modifier = {
+		country_war_exhaustion_mult = -0.2
+		planet_researchers_physics_research_produces_add = 0.5
+		job_soldier_stability_add = 1
+		planet_resettlement_unemployed_mult = 0.25
+	}
+}
+
+civic_whoniverse_dalek_remnants = {
+	potential = { authority = { NOR = { value = auth_hive_mind value = auth_machine_intelligence } } } # not hivemind or machine
+	
+	possible = {
+		# origin = {
+		# 	value = origin_whoniverse_new_dalek_paradigm
+		# }
+		species_class = {
+			value = WHO_DALEK
+		}
+		civics = {
+			NOR = {
+				value = civic_nationalistic_zeal
+				value = civic_whoniverse_new_dalek_paradigm
+				value = civic_whoniverse_imperial_daleks
+				value = civic_whoniverse_renegade_daleks
+				value = civic_whoniverse_dalek_supremacy
+			}
+		}
+		ethics = {
+			value = ethic_fanatic_xenophobe
+			value = ethic_spiritualist
+		} 
+	}
+	modification = yes
+	random_weight = {
+		base = 0
+	}
+
+	# description = "civic_tooltip_whoniverse_dalek_supremacy_effects"
+
+	modifier = {
+		country_war_exhaustion_mult = -0.2
+		planet_priests_unity_produces_add = 1
+		planet_crime_mult = -0.1
+		planet_resettlement_unemployed_mult = 0.25
+	}
+}
+
+civic_whoniverse_imperial_daleks = {
+	potential = { authority = { NOR = { value = auth_hive_mind value = auth_machine_intelligence } } } # not hivemind or machine
+	
+	possible = {
+		origin = {
+			OR = {
+				value = origin_whoniverse_dalek_civil_war
+				value = origin_separatists
+			}
+		 	
+		}
+		species_class = {
+			value = WHO_DALEK
+		}
+		civics = {
+			NOR = {
+				value = civic_whoniverse_renegade_daleks
+				value = civic_whoniverse_dalek_supremacy
+				value = civic_whoniverse_dalek_remnants
+				value = civic_whoniverse_new_dalek_paradigm
+			}
+		}
+		ethics = {
+			value = ethic_fanatic_xenophobe
+		} 
+	}
+	modification = yes
+	random_weight = {
+		base = 0
+	}
+
+	# description = "civic_tooltip_whoniverse_dalek_supremacy_effects"
+
+	modifier = {
+		country_claim_influence_cost_mult = -0.1
+		country_society_tech_research_speed = 0.1
+		job_soldier_stability_add = 1
+		planet_resettlement_unemployed_mult = 0.25
+	}
+}
+
+civic_whoniverse_renegade_daleks = {
+	potential = { authority = { NOR = { value = auth_hive_mind value = auth_machine_intelligence } } } # not hivemind or machine
+	
+	possible = {
+		origin = {
+			OR = {
+				value = origin_whoniverse_dalek_civil_war
+				value = origin_separatists
+			}
+		}
+		species_class = {
+			value = WHO_DALEK
+		}
+		civics = {
+			NOR = {
+				value = civic_whoniverse_imperial_daleks
+				value = civic_whoniverse_dalek_supremacy
+				value = civic_whoniverse_dalek_remnants
+				value = civic_whoniverse_new_dalek_paradigm
+			}
+		}
+		ethics = {
+			value = ethic_fanatic_xenophobe
+		} 
+	}
+	modification = yes
+	random_weight = {
+		base = 0
+	}
+
+	# description = "civic_tooltip_whoniverse_dalek_supremacy_effects"
+
+	modifier = {
+		country_war_exhaustion_mult = -0.1
+		planet_stability_add = 5
+		planet_soldiers_unity_produces_add = 1
+		planet_resettlement_unemployed_mult = 0.25
 	}
 }
 
@@ -86,6 +250,9 @@ civic_whoniverse_cyber_fleet = {
 	possible = {
 		civics = {
 			value = civic_whoniverse_cyber_conversion
+		}
+		species_class = {
+			value = WHO_CYBERMAN
 		}
 		civics = {
 			NOR = {
@@ -116,6 +283,9 @@ civic_whoniverse_maximum_efficiency = {
 	possible = {
 		civics = {
 			value = civic_whoniverse_cyber_conversion
+		}
+		species_class = {
+			value = WHO_CYBERMAN
 		}
 		civics = {
 			NOR = {
@@ -154,6 +324,9 @@ civic_whoniverse_cyber_conversion = {
 				value = origin_whoniverse_church
 				value = origin_whoniverse_unit
 			}
+		}
+		species_class = {
+			value = WHO_CYBERMAN
 		}
 		civics = {
 			NOR = {
@@ -308,4 +481,33 @@ civic_whoniverse_metamorphic_hive = {
 		spy_network_daily_value_mult = 0.25
 		councilor_gestalt_legion_exp_gain = @gestalt_civic_node_xp_rate
 	}
+}
+
+civic_whoniverse_space_police = {
+	potential = { authority = { value = auth_corporate } } # megacorp
+	
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_crusader_spirit_corporate
+				value = civic_death_cult_corporate
+				value = civic_gospel_of_the_masses
+				value = civic_criminal_heritage
+			}
+		}
+	}
+	modification = yes
+	random_weight = {
+		base = 0
+	}
+
+	# description = "civic_tooltip_whoniverse_cyber_fleet_effects"
+
+	modifier = {
+		local_trade_protection_add = 10
+		planet_sensor_range_add = 2
+		planet_crime_mult = -0.1
+	}
+
+	description = "civic_tooltip_whoniverse_space_police_effects"
 }

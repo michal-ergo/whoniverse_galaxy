@@ -6,6 +6,9 @@ portraits = {
 	whoniverse_rose_tyler = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 				greeting_sound = "whoniverse_rose_tyler_greetings"
 				texturefile = "gfx/models/portraits/whoniverse/doctor_rose_tyler.dds" }
+	whoniverse_doctor_tenth = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_tenth_doctor_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/doctor_tenth.dds" }
 	# Bronze Dalek (Time War) set
 	whoniverse_dalek_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 				greeting_sound = "whoniverse_dalek_greetings"
@@ -46,38 +49,44 @@ portraits = {
 				texturefile = "gfx/models/portraits/whoniverse/dalek_prime_minister.dds" }
 	# Imperial Daleks
 	whoniverse_dalek_05 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
-				greeting_sound = "whoniverse_dalek_greetings" 
+				greeting_sound = "whoniverse_dalek_imperial_greetings" 
 				texturefile = "gfx/models/portraits/whoniverse/dalek_05.dds" }
+	whoniverse_dalek_05_necros_1 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_imperial_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_05_necros_1.dds" }
+	whoniverse_dalek_05_necros_2 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_imperial_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_05_necros_2.dds" }
 	whoniverse_dalek_05_supreme = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
-				greeting_sound = "whoniverse_dalek_greetings" 
+				greeting_sound = "whoniverse_dalek_imperial_greetings" 
 				texturefile = "gfx/models/portraits/whoniverse/dalek_05_supreme.dds" }
 	whoniverse_dalek_05_special = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
-				greeting_sound = "whoniverse_dalek_greetings" 
+				greeting_sound = "whoniverse_dalek_imperial_greetings" 
 				texturefile = "gfx/models/portraits/whoniverse/dalek_05_special.dds" }
 	whoniverse_dalek_05_emperor = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
-				greeting_sound = "whoniverse_dalek_greetings" 
+				greeting_sound = "whoniverse_dalek_imperial_davros_greetings" 
 				texturefile = "gfx/models/portraits/whoniverse/dalek_05_emperor.dds" }
 	# Renegade Daleks
 	whoniverse_dalek_06 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
-				greeting_sound = "whoniverse_dalek_greetings" 
+				greeting_sound = "whoniverse_dalek_renegade_greetings" 
 				texturefile = "gfx/models/portraits/whoniverse/dalek_06.dds" }
 	# whoniverse_dalek_06_black = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	# 			greeting_sound = "whoniverse_dalek_greetings" 
 	# 			texturefile = "gfx/models/portraits/whoniverse/dalek_06_black.dds" }
 	whoniverse_dalek_06_exxilon = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
-				greeting_sound = "whoniverse_dalek_greetings" 
+				greeting_sound = "whoniverse_dalek_renegade_greetings" 
 				texturefile = "gfx/models/portraits/whoniverse/dalek_06_exxilon.dds" }
 	whoniverse_dalek_06_silver = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
-				greeting_sound = "whoniverse_dalek_greetings" 
+				greeting_sound = "whoniverse_dalek_renegade_greetings" 
 				texturefile = "gfx/models/portraits/whoniverse/dalek_06_silver.dds" }
 	whoniverse_dalek_06_gold = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
-				greeting_sound = "whoniverse_dalek_greetings" 
+				greeting_sound = "whoniverse_dalek_renegade_greetings" 
 				texturefile = "gfx/models/portraits/whoniverse/dalek_06_gold.dds" }
 	whoniverse_dalek_06_supreme = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
-				greeting_sound = "whoniverse_dalek_greetings" 
+				greeting_sound = "whoniverse_dalek_renegade_greetings" 
 				texturefile = "gfx/models/portraits/whoniverse/dalek_06_supreme.dds" }
 	whoniverse_dalek_06_emperor = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
-				greeting_sound = "whoniverse_dalek_greetings" 
+				greeting_sound = "whoniverse_dalek_renegade_greetings" 
 				texturefile = "gfx/models/portraits/whoniverse/dalek_06_emperor.dds" }
 	# Davros
 	whoniverse_dalek_davros = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
@@ -194,6 +203,20 @@ portraits = {
 	whoniverse_nestene_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		greeting_sound = "whoniverse_nestene_greetings"
 		texturefile = "gfx/models/portraits/whoniverse/nestene_01.dds" }		
+	# Judoon
+	whoniverse_judoon_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_judoon_greetings"
+		texturefile = "gfx/models/portraits/whoniverse/judoon_01.dds" }
+	whoniverse_judoon_02 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_judoon_greetings"
+		texturefile = "gfx/models/portraits/whoniverse/judoon_02.dds" }
+	whoniverse_shadow_architect = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_shadow_architect_greetings"
+		texturefile = "gfx/models/portraits/whoniverse/shadow_architect.dds" }
+	# Roboform
+	whoniverse_roboform_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_roboform_music"
+		texturefile = "gfx/models/portraits/whoniverse/roboform_01.dds" }		
 	}
 	
 

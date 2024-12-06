@@ -13,7 +13,7 @@ whoniverse_zygor_system = {
 
  	class = "sc_g"
 
- 	flags = { tau_ceti_system whoniverse_tau_ceti_system } # tau_ceti_system whoniverse_tau_ceti_system
+ 	flags = { zygor_system whoniverse_zygor_system } # tau_ceti_system whoniverse_tau_ceti_system
 
  	planet = {
  		name = "Zygor"

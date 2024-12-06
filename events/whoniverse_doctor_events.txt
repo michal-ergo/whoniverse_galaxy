@@ -27,8 +27,15 @@ namespace = whoniverse
 # 220 - 239 = Mechanoid anomalies / Mechanus digsite
 # 240 - 249 = Nestene Consciousness setup events
 # 250 - 259 = Nestene Consciousness system events and anomalies
+# 260 - 269 = Zygor archaelogy site
+# 270 - 299 = Dalek Civil War
+# 310 - 329 = Shadow Proclamation
+# 330 - 339 = Dalek - Necros Archaelogy Digsite
+# 340 - 349 = Dalek - Spiridon Archaelogy Digsite
+# 350 - 359 = Roboform random events (generic)
 # 900 - 909 = The Doctor ascension perk
 # 910 - 919 = Ninth Doctor events, Rose Tyler event chain
+# 920 - 929 = Ninth Doctor / Rose Tyler placeholder
 
 # The Doctor Ascension Perk adoption event
 country_event = {
@@ -272,6 +279,7 @@ country_event = {
 					}
 					create_ship = {
 						design = last_created_design
+						graphical_culture = "whoniverse_timelord_01"
 						name = "NAME_Tardis"
 						prefix = no
 						upgradable = no
@@ -295,6 +303,9 @@ country_event = {
 			event_target:whoniverse_ninth_doctor_leader = {
 				kill_leader = { show_notification = no }
 				}
+			country_event = {
+				id = whoniverse.912 days = 3600 random = 720
+			}
 		}
 	}
 }
@@ -368,12 +379,13 @@ country_event = {
 
 	option = {
 		name = "whoniverse.914.a"
-		trigger = { owner = { resource_stockpile_compare = { resource = consumer_goods value >= 1000 } }}
+		trigger = { owner = { resource_stockpile_compare = { resource = consumer_goods value >= 1000 } } }
         hidden_effect = {
 			country_event = { id = whoniverse.915 days = 45 } } 
 		owner = {
-			add_resource = { consumer_goods = -1000 }}
+			add_resource = { consumer_goods = -1000 }
 		}
+	}
 
 	option = {
 		name = "whoniverse.914.b"
@@ -560,6 +572,7 @@ country_event = {
 				set_leader_flag = whoniverse_rose_tyler_leader
 				set_owner = root
 			}
+			owner = { country_event = { id = whoniverse.918 days = 16200 random = 1800 } } # Rose leaves in 40-50 years
 		}
 	}
 	option = { # DISMISS
@@ -652,3 +665,357 @@ planet_event = {
 	}
 }
 
+# Rose Tyler leaves
+country_event = {
+	id = whoniverse.918
+	title = "whoniverse.918.name"
+	desc = "whoniverse.918.desc"
+	picture = GFX_evt_whoniverse_rose_tyler
+	show_sound = whoniverse_tardis_event
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:whoniverse_rose_tyler_leader
+	}
+
+	immediate = {
+		hidden_effect = {
+			event_target:whoniverse_rose_tyler_leader = {
+                kill_leader = { show_notification = no }
+            }
+		}
+	}
+
+	option = {
+		name = whoniverse.918.a
+		custom_tooltip = "whoniverse.918.a.tooltip"
+		owner = {
+			add_monthly_resource_mult = {
+                resource = unity
+				value = @tier1materialreward
+				min = @tier1materialmin
+				max = @tier1materialmax
+            	}
+			}
+		}
+	}
+
+# Ninth Doctor Death
+country_event = {
+	id = whoniverse.920
+	title = "whoniverse.920.name"
+	desc = "whoniverse.920.desc"
+	picture = GFX_evt_whoniverse_regeneration
+	show_sound = whoniverse_regeneration_event
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			has_leader_flag = whoniverse_ninth_doctor_leader
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = event_target:whoniverse_ninth_doctor_ship
+				}
+				event_target:whoniverse_ninth_doctor_ship = {
+					unassign_leader = this
+					delete_ship = this
+				}
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.920.a
+		custom_tooltip = "whoniverse.920.a.tooltip"
+		owner = {
+			add_monthly_resource_mult = {
+                resource = unity
+				value = @tier1materialreward
+				min = @tier1materialmin
+				max = @tier1materialmax
+            	}
+			}
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = whoniverse.922 days = 60 random = 0
+				}
+			}
+		}
+	}
+}
+
+# Ninth Doctor leaves
+country_event = {
+	id = whoniverse.921
+	title = "whoniverse.921.name"
+	desc = "whoniverse.921.desc"
+	picture = GFX_evt_whoniverse_regeneration
+	show_sound = whoniverse_regeneration_event
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:whoniverse_ninth_doctor_leader
+	}
+
+	immediate = {
+		hidden_effect = {
+			event_target:whoniverse_ninth_doctor_leader = {
+				kill_leader = { show_notification = no }
+            }
+			if = {
+				limit = {
+					exists = event_target:whoniverse_ninth_doctor_ship
+				}
+				event_target:whoniverse_ninth_doctor_ship = {
+					unassign_leader = this
+					delete_ship = this
+				}
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.921.a
+		custom_tooltip = "whoniverse.921.a.tooltip"
+		owner = {
+			add_monthly_resource_mult = {
+                resource = unity
+				value = @tier1materialreward
+				min = @tier1materialmin
+				max = @tier1materialmax
+            	}
+		}
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = whoniverse.922 days = 60 random = 0
+				}
+			}
+		}
+	}
+}
+
+# Tenth Doctor Appears
+country_event = {
+    id = whoniverse.922
+    title = "whoniverse.922.name"
+    desc = "whoniverse.922.desc"
+    picture = GFX_evt_whoniverse_tenth_doctor
+	show_sound = whoniverse_tenth_doctor_greetings
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		is_ai = no
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	option = {
+		name = "whoniverse.922.a"
+        hidden_effect = {
+			country_event = { id = whoniverse.923 }
+		} 
+	}
+}
+
+# Tenth Doctor: HIRE/DISMISS
+country_event = {
+	id = whoniverse.923
+	title = "whoniverse.923.name"
+ 	desc = whoniverse.923.desc
+
+	show_sound = whoniverse_tenth_doctor_greetings
+    location = fromfrom
+	is_triggered_only = yes
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		NOR = { 
+			exists = event_target:whoniverse_ninth_doctor_leader 
+			exists = event_target:whoniverse_tenth_doctor_leader 
+		}
+		is_ai = no
+	}
+
+	auto_opens = yes
+
+	event_window_type = leader_recruit
+	picture_event_data = {
+		portrait = event_target:whoniverse_tenth_doctor_leader
+		room = default_room
+	}
+	picture = GFX_leader_recruitment_bg_whoniverse_ninth
+
+	immediate = {
+		hidden_effect = {
+			create_country = {
+				name = "whoniverse_tenth_doctor_country"
+				type = global_event
+				auto_delete = yes
+				flag = {
+					icon = {
+						category = "special"
+						file = "unknown.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors = {
+						"blue"
+						"yellow"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					save_event_target_as = tenth_doctor_country
+				}
+			}
+			event_target:tenth_doctor_country = {
+				create_species = {
+					name = "NAME_whoniverse_tenth_doctor_species"
+					class = PARAGON
+					portrait = whoniverse_doctor_tenth
+					namelist = "HUMAN2"
+					traits = {
+						trait = trait_whoniverse_time_lord
+						trait = trait_charismatic
+						trait = trait_talented
+						trait = trait_quarrelsome
+					}
+					effect = {
+						save_event_target_as = tenth_doctor_species
+					}
+				}
+				create_leader = {
+					species = event_target:tenth_doctor_species
+					event_leader = yes
+					class = scientist
+					name = "NAME_whoniverse_tenth_doctor_name"
+					skill = 5
+					randomize_traits = no
+					skip_background_generation = yes
+					background_ethic = ethic_fanatic_pacifist
+					custom_catch_phrase = whoniverse_tenth_doctor_catch_phrase
+					custom_description = whoniverse_tenth_doctor_backstory
+					can_manually_change_location = yes
+					traits = {
+						trait = leader_trait_carefree # intuition
+						trait = leader_trait_meticulous # roamer
+						trait = leader_trait_stubborn
+						trait = subclass_scientist_explorer
+					}
+					gender = male
+					set_age = 903
+					immortal = yes
+					effect = {
+						save_global_event_target_as = whoniverse_tenth_doctor_leader
+						set_leader_flag = legendary_leader
+						set_leader_flag = tenth_doctor
+						set_owner = root
+						exile_leader_as = whoniverse_tenth_doctor_leader
+					}
+				}
+			}
+		}
+	}
+
+	option = { # Identify
+		name = whoniverse.923.a
+		is_dialog_only = yes
+		response_text = whoniverse.923.a.response
+	}
+	option = { # Tardis
+		name = whoniverse.923.b
+		is_dialog_only = yes
+		response_text = whoniverse.923.b.response
+	}
+
+	option = { # Time Lords
+	name = whoniverse.923.c
+	is_dialog_only = yes
+	response_text = whoniverse.923.c.response
+	}
+
+	option = { # HIRE
+		name = whoniverse.923.d
+		tag = hire_leader
+		custom_tooltip = whoniverse.923.d.custom_tooltip # Ninth Doctor joins
+		sound = whoniverse_tenth_doctor_greetings
+
+		hidden_effect = {
+			clone_leader = {
+				target = event_target:whoniverse_tenth_doctor_leader
+			}
+			last_created_leader = {
+				set_leader_flag = legendary_leader
+				save_global_event_target_as = whoniverse_tenth_doctor_leader
+				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = whoniverse_tenth_doctor_leader
+				set_owner = root
+			}
+			# owner = { country_event = { id = whoniverse.913 days = 5400 random = 1800 } } # Rose event chain in 10 - 20 years
+			create_fleet = {
+				name = "NAME_Tardis"
+				settings = {
+					can_upgrade = no
+					can_change_composition = no
+					can_change_leader = no
+					can_disband = no
+					spawn_debris = no
+				}
+				effect = {
+					set_owner = root.owner
+					if = {
+						limit = {
+							has_first_contact_dlc = yes
+						}
+						create_ship_design = {
+							design = "NAME_Tardis_Cloaked" # NAME_Tardis_Cloaked
+						}
+					}
+					else = {
+						create_ship_design = {
+							design = "NAME_Tardis" #NAME_Tardis
+						}
+					}
+					create_ship = {
+						design = last_created_design
+						graphical_culture = "whoniverse_timelord_01"
+						name = "NAME_Tardis"
+						prefix = no
+						upgradable = no
+						effect = {
+							set_ship_flag = is_tenth_doctor_ship
+							save_global_event_target_as = whoniverse_tenth_doctor_ship
+							set_ship_flag = special_science_ship
+						}
+					}
+					set_fleet_stance = evasive
+					set_location = root.capital_scope
+					assign_leader = event_target:whoniverse_tenth_doctor_leader
+				}
+			}
+		}
+	}
+	option = { # DISMISS
+		name = whoniverse.923.e
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:whoniverse_tenth_doctor_leader = {
+				kill_leader = { show_notification = no }
+				}
+			country_event = {
+				id = whoniverse.923 days = 3600 random = 720
+				}
+		}
+	}
+}

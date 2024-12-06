@@ -87,3 +87,35 @@ part = {
 		has_country_flag = whoniverse_nestene_consciousness
 	}
 }
+
+# Imperial Daleks start
+part = {
+	location = 0
+	localization = "START_SCREEN_WHONIVERSE_IMPERIAL_DALEKS"
+
+	trigger = {
+		has_origin = origin_whoniverse_dalek_civil_war
+		has_valid_civic = civic_whoniverse_imperial_daleks
+	}
+}
+
+# Imperial Daleks start
+part = {
+	location = 0
+	localization = "START_SCREEN_WHONIVERSE_RENEGADE_DALEKS"
+
+	trigger = {
+		has_origin = origin_whoniverse_dalek_civil_war
+		has_valid_civic = civic_whoniverse_renegade_daleks
+	}
+}
+
+# Shadow Proclamation start
+part = {
+	location = 0
+	localization = "START_SCREEN_WHONIVERSE_SHADOW_PROCLAMATION"
+
+	trigger = {
+		has_origin = origin_whoniverse_shadow_proclamation
+	}
+}

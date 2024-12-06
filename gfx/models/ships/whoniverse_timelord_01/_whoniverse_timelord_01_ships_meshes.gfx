@@ -1,0 +1,16 @@
+objectTypes = {
+	pdxmesh = {
+		name = "tlo_01_science_mesh"
+		file = "gfx/models/ships/whoniverse_timelord_01/whoniverse_timelord_01_science.mesh"
+		scale = 0.1
+
+		meshsettings = {
+			name = "tlo_01_science_hull"
+			index = 0
+			texture_diffuse = "tardis_diffuse.dds"
+			texture_normal = "tardis_normal.dds"
+			texture_specular = "tardis_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

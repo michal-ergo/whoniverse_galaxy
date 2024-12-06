@@ -60,25 +60,25 @@ FUN = {
 	}
 }
 
-PRE_MAM = {
-	WeepingAngel = {
-		name = WHO_WEEPING_ANGEL
-		plural =  WHO_WEEPING_ANGEL_plural
-	    home_planet = WHO_WEEPING_ANGEL_planet
-		home_system = WHO_WEEPING_ANGEL_system
-		name_list = "LITHOID1"
-	}
-}
+# PRE_MAM = {
+# 	WeepingAngel = {
+# 		name = WHO_WEEPING_ANGEL
+# 		plural =  WHO_WEEPING_ANGEL_plural
+# 	    home_planet = WHO_WEEPING_ANGEL_planet
+# 		home_system = WHO_WEEPING_ANGEL_system
+# 		name_list = "LITHOID1"
+# 	}
+# }
 
-PRE_LITHOID = {
-	WeepingAngel = {
-		name = WHO_WEEPING_ANGEL
-		plural =  WHO_WEEPING_ANGEL_plural
-	    home_planet = WHO_WEEPING_ANGEL_planet
-		home_system = WHO_WEEPING_ANGEL_system
-		name_list = "LITHOID1"
-	}
-}
+# PRE_LITHOID = {
+# 	WeepingAngel = {
+# 		name = WHO_WEEPING_ANGEL
+# 		plural =  WHO_WEEPING_ANGEL_plural
+# 	    home_planet = WHO_WEEPING_ANGEL_planet
+# 		home_system = WHO_WEEPING_ANGEL_system
+# 		name_list = "LITHOID1"
+# 	}
+# }
 
 MACHINE = {
 	Mechanoid = {
@@ -97,5 +97,12 @@ ROBOT = {
 	    home_planet = WHO_MECHANOID_planet
 		home_system = WHO_MECHANOID_system
 		name_list = "MACHINE1"
+	}
+	Roboform = {
+		name = WHO_ROBOFORM
+		plural = WHO_ROBOFORM_plural
+		home_planet = WHO_ROBOFORM_planet
+		home_system = WHO_ROBOFORM_system
+		name_list = "MACHINE2"
 	}
 }

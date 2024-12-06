@@ -73,6 +73,65 @@ special_project = {
 	}
 }
 
+special_project = {
+	key = "whoniverse_imperial_remembrence_project"
+	event_chain = whoniverse_dalek_imperial_chain
+	cost = 2000
+	tech_department = physics_technology
+	timelimit = 720
+	picture = GFX_evt_whoniverse_dalek_imperial
+	icon = "gfx/interface/icons/situation_log/situation_log_extradimensional.dds"
+
+	event_scope = country_event
+
+	on_success = {
+		country_event = { 
+			id = whoniverse.284
+		}
+	}
+
+	on_fail = {
+		country_event = { 
+			id = whoniverse.283
+		}
+
+	}
+}
+
+special_project = {
+	key = "whoniverse_imperial_omega_project"
+	event_chain = whoniverse_dalek_imperial_chain
+	cost = 0
+	tech_department = physics_technology
+	days_to_research = 180
+	timelimit = 720
+	picture = GFX_evt_whoniverse_dalek_imperial
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_transport = 1
+		leader = commander
+	}
+
+	on_success = {
+		owner = { 
+			country_event = { 
+				id = whoniverse.286
+			}
+		}
+	}
+
+	on_fail = {
+		owner = {
+			country_event = { 
+				id = whoniverse.285 
+			}
+		}	
+	}
+}
+
 
 special_project = {
 	key = "whoniverse_mondasian_colony_ship_project"
@@ -183,31 +242,31 @@ special_project = {
 }
 
 # Zygon Invasion project
-special_project = {
-	key = "whoniverse_osgood_box_project"
-	event_chain = whoniverse_zygon_invasion_chain
-	cost = 500
-	tech_department = society_technology
-	timelimit = 360
-	picture = GFX_evt_whoniverse_osgood_boxes
-	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+ special_project = {
+ 	key = "whoniverse_osgood_box_project"
+ 	event_chain = whoniverse_zygon_invasion_chain
+ 	cost = 500
+ 	tech_department = society_technology
+ 	timelimit = 360
+ 	picture = GFX_evt_whoniverse_osgood_boxes
+ 	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
 
-	event_scope = planet_event
+ 	event_scope = planet_event
 
-	on_success = {
-		planet_event = { id = whoniverse.87 }
-	}
+ 	on_success = {
+ 		planet_event = { id = whoniverse.87 }
+ 	}
 
 	on_fail = {
-		capital_scope = {
-			planet_event = {
-				id = whoniverse.90
-			}	
-		}
-	}
+ 		capital_scope = {
+ 			planet_event = {
+ 				id = whoniverse.90
+ 			}	
+ 		}
+ 	}
 }
 
-# Zygor planet anomaly event
+# Zygor planet anomaly event - now defunct
 special_project = {
 	key = "whoniverse_zygor_project"
 	cost = 0

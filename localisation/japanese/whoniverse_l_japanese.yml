@@ -3,7 +3,17 @@
 # Flags
  FLAG_CATEGORY_whoniverse:0 "Whoniverse"
 
+# Ship Design
+
+ WHO_TIMELORD:0 "Time Lord"
+
 ### DALEK ORIGIN, SPECIES AND EMPIRE ###
+
+ civic_whoniverse_new_dalek_paradigm:0 "New Dalek Paradigm"
+ civic_whoniverse_new_dalek_paradigm_desc:0 "A revolutionary shift in Dalek evolution, the New Dalek Paradigm embraces genetic and functional diversity, creating specialized variants to ensure the ultimate supremacy of the Dalek race."
+
+ councilor_whoniverse_new_dalek_paradigm:0 "Dalek Eternal"
+ councilor_whoniverse_new_dalek_paradigm_desc:0 "Dalek Eternal is a name given to a specialised Dalek, usually within the Yellow Dalek ranks, to serve the role of a mystical advisor."
 
 # Dalek Origin - no color in desc
  origin_whoniverse_new_dalek_paradigm:0 "New Dalek Paradigm"
@@ -11,7 +21,7 @@
  
  NAME_ressurected_dalek_empire:0 "Ressurected Dalek Empire"
 
- origin_tooltip_whoniverse_new_dalek_paradigm:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor'] $NEW_LINE$- $HOMEWORLD$ ['concept_pc_nuked']$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_dalek_supremacy'] $NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$]$NEW_LINE$- Special Dalek events and recruitable leaders"
+ origin_tooltip_whoniverse_new_dalek_paradigm:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor'] $NEW_LINE$- $HOMEWORLD$ ['concept_pc_nuked']$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_new_dalek_paradigm'] $NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$]$NEW_LINE$- Special New Dalek Paradigm portraits$NEW_LINE$- Special Dalek events and recruitable leaders"
 
 
 # - $HOMEWORLD$ ['concept_whoniverse_dalek_incubation_vats'] +1 
@@ -166,8 +176,8 @@
 
 ## Davros event chain
 # Necros anomaly
- whoniverse_necros_cat:0 "Dalek Ruins"
- whoniverse_necros_desc:0 "We found the remains of a factory on the planet's surface. It shows signs of Dalek technology."
+#  whoniverse_necros_cat:0 "Dalek Ruins"
+#  whoniverse_necros_desc:0 "We found the remains of a factory on the planet's surface. It shows signs of Dalek technology."
 
  whoniverse.19.name:0 "Necros"
  whoniverse.19.desc:0 "The crew of [Root.GetName] identified the planet as §HNecros§!, the long-abandoned headquarters of the ancient §LImperial Daleks§!. On the surface we have discovered the ruins of a large factory where our creator §HDavros§! once produced highly concentrated protein from local populace. Underneath the facility, we found a well-preserved stockpile of nutrients."
@@ -215,12 +225,18 @@
 
 ### DALEK EMPIRE REMNANTS ###
 
+ civic_whoniverse_dalek_remnants:0 "Cult of the Dalek Emperor"
+ civic_whoniverse_dalek_remnants_desc:0 "After the Last Great Time War, a unique deviation emerged among the Daleks - the fanatical worship of their Emperor, the God of All Daleks."
+
+ councilor_whoniverse_dalek_remnants:0 "High Priest"
+ councilor_whoniverse_dalek_remnants_desc:0 "High Priest is a name given to a Dalek, usually within the Grey Dalek ranks, to serve the role of a religious leader."
+
  START_SCREEN_WHONIVERSE_DALEK_EMPIRE_REMNANTS:0 "After being cast through time and the Void following the Last Great Time War, the Dalek Emperor found itself in the 200th millennium. Believed by some to be a resurrected form of Dalek Prime or the Emperor of the Restoration, this mysterious figure declared itself the God of All Daleks and began rebuilding its forces.\n\nThe Emperor first infiltrated Satellite Five, also known as the Game Station, and began harvesting its human population for genetic material. With this newly forged army, the Emperor now sets its sights on Earth, a planet teeming with billions of potential subjects. The invasion is imminent, and the Emperor's ambitions are clear.\n\nOnce Earth is conquered and its population harvested, the Dalek Emperor will have the resources needed to reclaim its lost empire and return to the original timeline. The galaxy stands on the brink of another devastating conflict, as the Daleks prepare to strike once more."
 
  origin_whoniverse_dalek_empire_remnants:0 "The Parting of the Ways"
  origin_whoniverse_dalek_empire_remnants_desc:0 "§RWARNING: Challenging Origin§!\nThe Emperor of the Daleks survived the Last Great Time War by escaping into another space-time. After patiently infiltrating Satellite Five and giving birth to a new breed of Daleks, the Emperor is determined to reclaim its original universe."
 
- origin_tooltip_whoniverse_dalek_empire_remnants:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$-['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor']$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_dalek_supremacy']$NEW_LINE$- $HOMEWORLD$ $TABBED_NEW_LINE$- ['concept_pc_habitat']$TABBED_NEW_LINE$- Starts with §R20§! pops$NEW_LINE$- $HOME_SYSTEM$ $TABBED_NEW_LINE$- Wormhole-locked system $TABBED_NEW_LINE$- Pre-FTL civilization$NEW_LINE$- Guaranteed Research Options: ['concept_wormhole_stabilization', £physics_research£ $tech_wormhole_stabilization$] (§G+75 %§!)$NEW_LINE$- Starting ruler is §YImmortal§!$NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$]$NEW_LINE$- Special Dalek events and recruitable leaders"
+ origin_tooltip_whoniverse_dalek_empire_remnants:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor'] $NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_dalek_remnants']$NEW_LINE$- $HOMEWORLD$ $TABBED_NEW_LINE$- ['concept_pc_habitat']$TABBED_NEW_LINE$- Starts with §R20§! pops$NEW_LINE$- $HOME_SYSTEM$ $TABBED_NEW_LINE$- Wormhole-locked system $TABBED_NEW_LINE$- Pre-FTL civilization$NEW_LINE$- Starting ruler is §YImmortal§!$NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$] $NEW_LINE$- Guaranteed Research Options: ['concept_wormhole_stabilization', £physics_research£ $tech_wormhole_stabilization$] (§G+75 %§!) $NEW_LINE$- Special Dalek events and recruitable leaders"
 
 # Dalek Empire Remnants System
  PRESCRIPTED_system_name_dalek_empire_remnants_NAME:0 "A.D. 200,100"
@@ -250,6 +266,149 @@
  whoniverse.203.a.tooltip:0 "Empire changes name to §SDalek Empire§!"
  whoniverse.203.b:0 "Negative. The Daleks will remain in secrecy!"
 
+### DALEK CIVIL WAR ###
+
+ START_SCREEN_WHONIVERSE_IMPERIAL_DALEKS:0 "Long before the Last Great Time War, Davros gave rise to a new race of Daleks, much to the dismay of the Dalek Prime. Upon arriving on Skaro, he proclaimed himself the new Dalek Emperor, asserting his dominance over the Dalek race. Following the narrow escape of the Dalek Prime and his loyalists to a different point of time and space, Davros branded them as Renegade Daleks, enemies of his regime.\n\nTo further consolidate his power, Davros is currently developing a time corridor that will lead into the reality shaped by the aftermath of the Last Great Time War. Through this corridor, he aims to uncover the hidden stronghold of the Renegades, who continue to oppose his absolute rule.\n\nThe countdown to an all-out Imperial-Renegade Dalek Civil War looms ever closer, as Davros prepares to eliminate his foes and solidify his legacy as the supreme leader of the Daleks."
+
+ START_SCREEN_WHONIVERSE_RENEGADE_DALEKS:0 "Once united under a common purpose, the Dalek race was fractured when Davros engineered a new breed of Daleks, much to the dismay of his original creations. Upon seizing Skaro and proclaiming himself Emperor, Davros drove the Dalek Prime and his loyalists to escape into the depths of time and space, where they found refuge in the hidden Thule system.\n\nNow, in their stronghold within Thule, the Renegade Daleks rally under their unyielding leader, rejecting Davros's altered creations and vowing to reclaim Skaro to restore the purity of their kind.\n\nAs the Renegade Daleks mobilize to defy Davros, the galaxy braces for an all-consuming conflict. With their sights set firmly on Skaro, they prepare to seize their destiny and cleanse the Dalek race of Davros's influence." 
+
+ origin_whoniverse_dalek_civil_war:0 "Dalek Civil War"
+ origin_whoniverse_dalek_civil_war_desc:0 "§RWARNING: Challenging Origin§!\nLong before the Last Great Time War, the Daleks were divided. The Imperial Daleks, led by Davros from Skaro, seek to hunt down the Renegade Daleks, loyal to Dalek Prime and hiding in a different point of time. Both factions aim to use time corridor technology to gain supremacy, with the fate of the Dalek race - and the galaxy - hanging in the balance."
+
+ origin_tooltip_whoniverse_dalek_civil_war:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor'] $NEW_LINE$- $GOVERNMENT_CIVICS$: $TABBED_NEW_LINE$-['concept_whoniverse_imperial_daleks'] $TABBED_NEW_LINE$-['concept_whoniverse_renegade_daleks'] $NEW_LINE$- $HOME_SYSTEM$ $TABBED_NEW_LINE$- Wormhole-locked system $TABBED_NEW_LINE$- §YImperial Dalek Faction§!: Two additional systems $NEW_LINE$- Starting ruler is §GImmortal§! $NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$] $NEW_LINE$- Guaranteed Research Options: ['concept_wormhole_stabilization', £physics_research£ $tech_wormhole_stabilization$] (§G+75 %§!) $NEW_LINE$- Spawns opposing Dalek faction and solar system$NEW_LINE$- Special Dalek events and recruitable leaders"
+
+# Dalek Civil War systems
+
+ whoniverse_prewar_skaro_system_initializer_NAME:0 "Skaro (Pre-war)"
+ whoniverse_prewar_skaro_system_initializer_DESC:0 "A pocket universe containing the Dalek homeworld Skaro before the Last Great Time War."
+ 
+ whoniverse_shrouded_planet:0 "Shrouded Planet"
+
+ whoniverse_prewar_necros_system_initializer_NAME:0 "Necros (Pre-war)"
+ whoniverse_prewar_necros_system_initializer_DESC:0 "A pocket universe containing Necros before the Last Great Time War."
+
+ whoniverse_renegade_stronghold_initializer_NAME:0 "Thule"
+ whoniverse_renegade_stronghold_initializer_DESC:0 "A pocket universe containing the secret Dalek base, Thule."
+ 
+ whoniverse_name_renegade_stronghold_system:0 "Thule"
+ whoniverse_renegade_stronghold:0 "Thule Prime"
+
+ whoniverse_name_prewar_necros_system:0 "Pherra (Pre-war)"
+ whoniverse_imperial_necros:0 "Imperial Necros"
+
+ whoniverse_name_prewar_spiridon_system:0 "Spiridon (Pre-war)"
+ whoniverse_imperial_spiridon:0 "Pre-war Spiridon"
+
+ NAME_whoniverse_spiridon:0 "Spiridon"
+ NAME_whoniverse_spiridon_plural:0 "Spiridons"
+
+ NAME_whoniverse_spiridon_state:0 "Spiridon Union"
+
+ whoniverse_name_prewar_skaro_system:0 "D5-Gamma-Z (Pre-war)"
+ whoniverse_name_prewar_skaro:0 "Skaro (Pre-war)"
+
+ whoniverse_name_imperial_wormhole_system:0 "Time Corridor D-1"
+ whoniverse_imperial_wormhole:0 "D-1 Singularity"
+
+ whoniverse_name_renegade_wormhole_system:0 "Time Corridor D-2"
+ whoniverse_renegade_wormhole:0 "D-2 Singularity"
+
+# Dalek Civil War civics
+
+ civic_whoniverse_imperial_daleks:0 "Imperial Dalek Doctrine"
+ civic_whoniverse_imperial_daleks_desc:0 "This Dalek faction is devoted to the absolute unification of all Daleks under their creator's rule, using advanced biotechnological and time-travel methods to achieve dominance."
+
+ councilor_whoniverse_imperial_daleks:0 "Supreme Dalek"
+ councilor_whoniverse_imperial_daleks_desc:0 "Supreme Dalek is a name given to a Dalek, usually within the Black Dalek ranks, to serve the role of a commander."
+
+ civic_whoniverse_renegade_daleks:0 "Renegade Dalek Resistance"
+ civic_whoniverse_renegade_daleks_desc:0 "Loyal to Dalek Prime, the Renegade Daleks reject the rule of Davros and aim to preserve the original Dalek hierarchy through ruthless military discipline and isolation."
+
+ councilor_whoniverse_renegade_daleks:0 "Supreme Dalek"
+ councilor_whoniverse_renegade_daleks_desc:0 "Supreme Dalek is a name given to a Dalek, usually within the Black Dalek ranks, to serve the role of a commander."
+
+# Dalek Civil War (Imperial) Events
+
+ whoniverse_dalek_imperial_chain_title:0 "Dalek Civil War"
+ whoniverse_dalek_imperial_chain_desc:0 "The Daleks are divided between the Imperial Daleks, loyal to their creator Davros, and the Renegade Daleks, who remain loyal to Dalek Prime. We must find the secret Dalek renegade base and seize it."
+
+ whoniverse_dalek_renegade_chain_title:0 "Dalek Civil War"
+ whoniverse_dalek_renegade_chain_desc:0 "The Daleks are divided between the Imperial Daleks, loyal to their creator Davros, and the Renegade Daleks, who remain loyal to Dalek Prime. We must find way back to Skaro and reclaim it from the Imperials' grasp."
+
+ whoniverse.280.name:0 "Dalek Civil War"
+ whoniverse.280.desc:0 "Our forces have successfully utilized the time corridor, breaching into a timeline existing within a future continuum shaped by the §LLast Great Time War§!. This unexplored space-time offers a unique opportunity to locate and eliminate the §RRenegade Daleks§!, who have hidden themselves beyond the reach of Imperial sensors. The final conflict for control of the Dalek race is approaching!"
+ whoniverse.280.a:0 "Locate and exterminate the Renegade Daleks!"
+
+ whoniverse.282.name:0 "Remembrence of the Daleks"
+ whoniverse.282.desc:0 "Our Emperor, [Root.Owner.GetRulerTitle], has identified the location of the legendary §GHand of Omega§! - a device of incredible power capable of manipulating the very stars. It is believed to be hidden on Earth, in the year 1963, but our efforts to retrieve it are complicated by the presence of §RRenegade Daleks§!, who seek the device for their own purposes.\n\n[Root.Owner.GetRulerTitle] orders the creation of a time corridor to breach this point in space-time. A special project is required to establish this corridor."
+ whoniverse.282.a:0 "Commence the operation to locate the Hand of Omega!"
+ whoniverse.282.b:0 "Negative! Abort the operation."
+
+ whoniverse_imperial_remembrence_project:0 "Remembrence of the Daleks"
+ whoniverse_imperial_remembrence_project_DESC:0 "Open a time corridor to 1963 Earth and locate the Hand of Omega."
+
+ whoniverse.283.name:0 "The Hand Slips Away"
+ whoniverse.283.desc:0 "Our reports indicate that the §RRenegade Daleks§! have successfully claimed the §lHand of Omega§! for themselves. This is a grave setback for the Imperial cause, as the Renegades now hold a significant advantage."
+ whoniverse.283.a:0 "We will destroy them anyway!"
+
+ whoniverse.284.name:0 "Hand of Omega Located"
+ whoniverse.284.desc:0 "The time corridor has been successfully established, leading to Earth, 1963. Our scouts have located the §GHand of Omega§! in London. However, the situation is more complicated than anticipated: both the Doctor and Renegade Daleks are also present.\n\nTo secure the relic, we will need to deploy a military landing party. The Emperor orders an immediate assault."
+ whoniverse.284.a:0 "Prepare the landing party!"
+
+ whoniverse_imperial_omega_project:0 "Retrieve the Hand of Omega"
+ whoniverse_imperial_omega_project_DESC:0 "Send a Dalek landing party through the time corridor to retrieve the Hand of Omega."
+
+ whoniverse_r_hand_of_omega:0 "Hand of Omega"
+ whoniverse_r_hand_of_omega_desc:0 "The Hand of Omega, also known as the Omega device by the Daleks, is a remote stellar manipulator, used by Omega and Rassilon in the antiquity of Gallifrey. It has the ability to turn stars into supernovas in order to fuel Gallifreyan time travel."
+
+ whoniverse.285.name:0 "Destruction of [Root.Owner.Capital.GetName]"
+ whoniverse.285.desc:0 "Our project has failed catastrophically. In a desperate attempt to harness the power of the §GHand of Omega§!, [Root.Owner.Ruler.GetName] activated the device prematurely. However, something went terribly wrong, and one of the stars in the [Root.Owner.Capital.GetName] system has gone supernova, obliterating our homeworld. Initial analysis suggests that an unknown manipulation of the device caused this devastating outcome."
+ whoniverse.285.a:0 "§RDanger! Instability! Reaction out of control!§!"
+
+ whoniverse.286.name:0 "Omega Device Secured"
+ whoniverse.286.desc:0 "The military landing party has successfully retrieved the §GHand of Omega§! from Earth, 1963. Despite interference from the Doctor and Renegade Daleks, our forces managed to escape back through the time corridor with the relic.\n\n[Root.Owner.GetRulerTitle] [Root.Owner.Ruler.GetName] has begun preparations for activating the device, confident that its power can be used to benefit the Imperial Dalek cause. However, there remains uncertainty about its stability. Proceeding hastily could result in catastrophic failure."
+ whoniverse.286.a:0 "Activate the Omega device immediately!"
+ whoniverse.286.b:0 "Delay activation and analyse the device!"
+
+ whoniverse.287.name:0 "The Doctor's Treachery Uncovered"
+ whoniverse.287.desc:0 "Upon delaying the activation of the §GHand of Omega§! and conducting further analysis, our scientists have uncovered subtle alterations to the device's programming. It appears that the Doctor had sabotaged the Hand of Omega, setting it to destroy any star it is used on by triggering a supernova. Thankfully, [Root.Owner.GetRulerTitle] [Root.Owner.Ruler.GetName] has successfully reversed these alterations, and the Hand of Omega is now under Imperial control, ready to harness the energy of stars for our cause."
+ whoniverse.287.a:0 "The Doctor will pay for this!"
+
+ whoniverse.289.name:0 "Renegade Base Captured"
+ whoniverse.289.desc:0 "Our forces have successfully seized the secret base of the §RRenegade Daleks§! in the Thule system. With their leadership fractured and their forces scattered across the galaxy, we now face a pivotal choice: shall we reprogram these Renegade units into loyal Imperial Daleks, or initiate their complete extermination under purge protocols?"
+ whoniverse.289.a:0 "Reprogram the Renegades to serve the Emperor!"
+ whoniverse.289.a.tooltip:0 "§HRenegade Daleks§! on Thule will be immediately converted into §HImperial Daleks§!."
+ whoniverse.289.b:0 "Purge them! The Renegades shall be exterminated!"
+
+ whoniverse_imperial_dalek_victory:0 "Renegade Faction Defeated"
+ whoniverse_renegade_dalek_victory:0 "Imperial Faction Defeated"
+
+ whoniverse.290.name:0 "Losing Himself"
+ whoniverse.290.desc:0 "[Root.Owner.Ruler.GetName], once the genius creator of the Daleks, now teeters on the edge of sanity. His mind is divided between two warring personas: [Root.Owner.Ruler.GetName], the brilliant Kaled scientist, and the §YEmperor Dalek§!, a fully Dalek-like entity who views the original [Root.Owner.Ruler.GetName] as a fool. \n\nIn a desperate attempt to retain his identity, [Root.Owner.Ruler.GetName] created a clone body in hopes of transferring his original personality into it, freeing himself from the influence of the Emperor. However, the Daleks themselves have grown wary of [Root.Owner.Ruler.GetName]' instability. They have destroyed his cloned body before his eyes, causing a severe psychological collapse.\n\nWith his original personality fading, the Emperor Dalek persona threatens to take over completely, leaving only itself to rule over the Imperial forces."
+ whoniverse.290.a:0 "Assist [Root.Owner.Ruler.GetName] in reasserting control!"
+ whoniverse.290.a.tooltip:0 "[Root.Owner.Ruler.GetName] changes portrait."
+ whoniverse.290.b:0 "The Emperor shall reign supreme!"
+
+ whoniverse.291.name: "Dalek Civil War"
+ whoniverse.291.desc: "Our scientists have achieved a breakthrough with the §Ltime controller§!, allowing us to access a time corridor leading into an alternate continuum shaped by the §LLast Great Time War§!. Through this corridor, we may reach the distant timeline where the Imperial Daleks currently control Skaro. This presents an opportunity to confront our enemies head-on, reclaim our homeworld, and restore the purity of the Dalek race."
+ whoniverse.291.a: "Locate the Imperial Daleks!"
+
+ whoniverse.292.name:0 "Omega Device Secured"
+ whoniverse.292.desc:0 "Through meticulous planning, our agents succeeded in infiltrating Earth in the year 1963, securing the §lHand of Omega§! before the §RImperial Daleks§! could lay their claim to it. This invaluable artifact, a relic of the Time Lords, is now under our control. Our scientists quickly stabilized its immense energy and uncovered a trap hidden by §lthe Doctor§! - intended to destroy any who attempted to misuse the device. With precise expertise, we have neutralized this threat, and the Omega device is now fully operational, ready to empower our quest for supremacy."
+ whoniverse.292.a:0 "The Hand of Omega is ours!"
+
+ whoniverse.293.name:0 "Imperial Daleks Secured the Omega Device"
+ whoniverse.293.desc:0 "Our surveillance reports that the §RImperial Daleks§! have successfully obtained the §lHand of Omega§!, a weapon of incalculable power. With this artifact, their strength grows, posing a far greater threat to our efforts. Their ambitions are now even more dangerous, and time is running short. We must act swiftly to counter this new imbalance."
+ whoniverse.293.a:0 "They will pay for this!"
+
+ whoniverse.294.name:0 "Destruction of Skaro"
+ whoniverse.294.desc:0 "Our intelligence confirms that the §RImperial Daleks§! have miscalculated in their use of the §lHand of Omega§!. In their reckless attempts to wield its power, they have triggered a catastrophic event: Skaro's second sun has gone supernova, consuming their capital planet and annihilating their primary base. This misstep marks a momentous victory for the §HRenegade Daleks§!. Without Skaro, the Imperials are crippled and will struggle to recover from such a blow."
+ whoniverse.294.a: "Witness the fall of the false Emperor!"
+
+ whoniverse.295.name: "Victory on Skaro!"
+ whoniverse.295.desc: "Our forces have triumphed on the irradiated plains of Skaro, overcoming the last defenses of the §RImperial Daleks§!. The stronghold of the Emperor has fallen, and Davros's twisted creations have been subdued. With Skaro back in Renegade control, we have the opportunity to reshape the future of the Dalek race. Will we exterminate the remnants of these corrupted Imperials, or repurpose them to strengthen our ranks?"
+ whoniverse.295.a: "Reprogram them into loyal Renegades!" 
+ whoniverse.295.b: "Exterminate the Imperial Daleks!"
 
 ### CYBERMEN ORIGIN, SPECIES AND EMPIRE ###
 
@@ -504,6 +663,7 @@
  whoniverse.59.name:0 "The Time Lord's Escape"
  whoniverse.59.desc:0 "Decades have passed since the cyber-conversion of §lthe Doctor§! into §lMr. Clever§!. However, it has become evident that the Doctor's formidable persona was never fully suppressed. After years of relentless internal struggle, the Doctor managed to temporarily overcome Mr. Clever and regain control of his own body.\n\nSeizing this fleeting opportunity, the Doctor quickly retreated to his §LTARDIS§! and vanished into the unknown reaches of time and space. This abrupt departure severed his connection to the §HCyberiad§!, leaving us without one of our most unique and potent assets."
  whoniverse.59.a:0 "It was inevitable."
+ whoniverse.59.a.tooltip:0 "§lMr. Clever§! stops being your leader."
  
 ### Cybermen Cyberiad system anomalies and events
 # Telos anomaly and event
@@ -680,7 +840,7 @@
  whoniverse_zygon_invasion_chain_desc:0 "[Root.GetName] is infiltrated by Zygons, metamorphic humanoids who can mimic captured specimen. Can we find peaceful coexistence, or will this end in bloodshed?"
 
  whoniverse.81.name:0 "The Zygons"
- whoniverse.81.desc:0 "Our sensors have detected an unusual energy surge emanating from a Gallifreyan painting in the §LNational Gallery§! in §SLondon§!, breaching dimensional barriers. Initial reports confirm the presence of §HZygons§!, shape-shifting aliens notorious for their infiltration tactics.\n\nWithin hours, key §HUNIT§! personnel are replaced by these impostors, throwing our command structure into disarray. Desperate for assistance, we manage to contact §lthe Doctor§!, but his sudden disappearance leaves us alone to face this insidious threat."
+ whoniverse.81.desc:0 "Our sensors have detected an unusual energy surge emanating from a Gallifreyan painting in the National Gallery in §SLondon§!, breaching dimensional barriers. Initial reports confirm the presence of §HZygons§!, shape-shifting aliens notorious for their infiltration tactics.\n\nWithin hours, key §HUNIT§! personnel are replaced by these impostors, throwing our command structure into disarray. Desperate for assistance, we manage to contact §lthe Doctor§!, but his sudden disappearance leaves us alone to face this insidious threat."
  whoniverse.81.a:0 "Regroup our remaining operatives and launch counter-offensive!"
 
  whoniverse.82.name:0 "The Black Archive Standoff"
@@ -785,6 +945,33 @@
  whoniverse.101.desc:0 "Our construction team successfully extracts the §HZygon§! stasis pods and transports them to our capital. Our cryologists carefully begin the process of reviving the Zygon survivors. As they awaken, the Zygons come to terms with the fact that they are the last remnants of their once-mighty empire, now refugees within our own.\n\nDespite their unique abilities and distinct culture, our social experts are confident that with careful management, the integration of the Zygons into our society is achievable. The Zygons, though initially disoriented, express a willingness to adapt and contribute to their new home, seeking a fresh start amidst the ashes of their past."
  whoniverse.101.a:0 "Excellent."
  whoniverse.101.tooltip:0 "2 §HZygon§! pops added to §Y[Root.GetName]§."
+
+# Zygor anomaly, archaeology events
+ whoniverse_zygor_cat:1 "Alien Ruins"
+ whoniverse_zygor_desc:1 "Scans of this burned planet reveal traces of alien biotechnology."
+
+ whoniverse_digsite_zygor:1 "Planet of the Zygons"
+ whoniverse_digsite_zygor_desc:1 "Initial scans reveal traces of ancient biotechnology on [From.Planet.GetName], pointing to a once-advanced civilization that has long since perished. The surface is scarred and burned, with extensive evidence of catastrophic damage. We should investigate further."
+
+ whoniverse.260.name:1 "Planet of the Zygons"
+ whoniverse.260.desc:1 "Initial scans of [From.Planet.GetName] reveal traces of advanced biotechnology and subterranean structures. The surface suggests a cataclysmic event, but deeper investigation may uncover more about the history of its former inhabitants, the §HZygons§!."
+ whoniverse.260.a:1 "Interesting."
+
+ whoniverse.261.name:1 "Skarasen Skeleton"
+ whoniverse.261.desc:1 "Excavation efforts have confirmed that [From.Planet.GetName] was once home to the §HZygons§!, a race of shapeshifters known for their mastery of biotechnology. This planet, originally dominated by vast lakes and seas, was devoid of icecaps and had a mineral-rich atmosphere conducive to bioengineering. However, during the §LLast Great Time War§!, the planet was ravaged, its surface scorched beyond recognition.\n\nAmong the ruins, we have discovered the fossilized remains of a §HSkarasen§! - a colossal creature that the Zygons cybernetically altered to serve as their protectors. The Skarasen's skeleton is fused with an extremely tough alloy, making it resilient to all but the most destructive forces."
+ whoniverse.261.a:0 "Keep digging." 
+
+ whoniverse.262.name:0 "Bioengineered Catacombs"
+ whoniverse.262.desc:0 "Below the planet's surface lies an intricate network of tunnels, originally grown from living Zygon bio-material. The intense heat of Zygor's destruction has left most of it dead and decayed. Burnt-out bio-machinery lines the catacombs, but a large, sealed vault appears to have survived the devastation intact, hinting at preserved Zygon technology within."
+ whoniverse.262.a:0 "Find a way to breach the vault!"
+
+ whoniverse.263.name:0 "The Last Zygons"
+ whoniverse.263.desc:0 "After successfully opening the ancient vault, we discovered thousands of stasis pods, all containing Zygon survivors from Zygor's last days. These pods have been sealed since the destruction of the planet during the Last Great Time War. The Zygons here are the last remaining inhabitants of their homeworld, preserved in hibernation by advanced bio-tech that has remarkably remained functional despite the devastation.\n\nThe technology inside is vastly superior to anything we've seen so far on the surface, and while the Zygons appear dormant, we now face a critical decision: whether to revive these survivors, dismantle their technology, or leave them in peace."
+ whoniverse.263.a:0 "Revive the Zygons and welcome them into our empire."
+ whoniverse.263.a.tooltip:0 "3 §HZygon§! pops added to §Y[From.Planet.GetName]§."
+ whoniverse.263.b:0 "Study their biotechnology and dismantle the vault."
+ whoniverse.263.c:0 "Seal the vault and leave them undisturbed."
+ whoniverse.263.d:0 "Exterminate the Zygon threat and demolish the vault!"
 
  ### WEEPING ANGELS ###
  # Weeping Angel trait, citizenship
@@ -1205,3 +1392,226 @@
  whoniverse.917.desc:0 "Without our help, the Autons surged across [Root.Capital.GetName], mimicking everything from mannequins to household objects and even duplicating some citizens. The chaos quickly overwhelmed local security forces, and full-scale military intervention became necessary.\n\nThe streets of [Root.Capital.GetName] have become battle zones, with armies mobilizing to stop the Auton onslaught. Despite heavy losses, there is still a chance to push back the invaders. However, the situation remains critical."
  whoniverse.917.a:0 "Disconcerting."
 
+# Rose Tyler end event
+ whoniverse.918.name:0 "Rose Tyler's Departure"
+ whoniverse.918.desc:0 "During their travels, §rRose Tyler§! and §lthe Doctor§! stumbled upon a rift between dimensions. As they investigated further, Rose made a shocking discovery - her father, Pete Tyler, was alive in this parallel world. With her mother Jackie also crossing into this universe, Rose felt a deep sense of joy at the reunion of her family. Yet, despite this newfound happiness, her heart ached for the Doctor and the adventures they had shared.\n\nHowever, before she could step back across, the rift closed permanently. Despite the Doctor's attempts to hold it open, the connection between their worlds was severed. In a final holographic connection across the vastness of space, Rose looks into the Doctor's eyes, a mix of hope and sorrow in her voice.\n\n"Am I ever going to see you again?" she asks."
+ whoniverse.918.a:0 "You can't."
+ whoniverse.918.a.tooltip:0 "§rRose Tyler§! stops being your leader."
+
+# Ninth Doctor Death
+ whoniverse.920.name:0 "The Doctor's Regeneration"
+ whoniverse.920.desc:0 "The §lNinth Doctor§! has fallen in the line of duty, but for a Time Lord, this does not mark the end. Within moments of his demise, a powerful process begins: regeneration. This phenomenon, unique to the §LTime Lords§!, allows their biology to heal mortal wounds and renew their form, granting the Doctor a new body and, perhaps, a new personality. A new era is upon us as the Doctor's regeneration begins."
+ whoniverse.920.a:0 "Witness the Ninth Doctor's regeneration!"
+ whoniverse.920.a.tooltip:0 "The §lNinth Doctor§! regenerates."
+
+# Ninth Doctor Disappears
+ whoniverse.921.name:0 "The Ninth Doctor's Fate"
+ whoniverse.921.desc:0 "The §lNinth Doctor§! has traversed the universe, defending the defenseless and challenging the fiercest foes. Yet, each battle has taken its toll. In a distant future, during a final showdown with the §REmperor Dalek§!, the Doctor pushed himself to the brink, holding back the Dalek forces with every ounce of strength. This confrontation has triggered an inevitable change, setting the regeneration process into motion.\n\nFor a Time Lord, regeneration is a bittersweet cycle - a gift of survival at the cost of identity. As the Doctor's cells begin to shift, a golden glow signals the dawn of a new form. With one last look, he prepares for his story to continue, leaving behind this self. §H"Before I go,"§! he murmurs, §H"I just wanna tell you, you were fantastic. Absolutely fantastic."§!"
+ whoniverse.921.a:0 "Embrace the regeneration of the Doctor."
+ whoniverse.921.a.tooltip:0 "The §lNinth Doctor§! regenerates."
+
+# Tenth Doctor Hire
+ whoniverse.922.name:0 "The Tenth Doctor"
+ whoniverse.922.desc:0 "The §lNinth Doctor§! is gone, his transformation complete. A new figure stands where he once was - still the Doctor, yet somehow different. With a spark of curiosity and a flash of energy in his gaze, a new chapter has begun. This Doctor seems ready for whatever challenges lie ahead, with the same zeal but perhaps a bit more flair."
+ whoniverse.922.a:0 "§HOpen communications channel!§!"
+
+ whoniverse.923.name:0 "NAME_whoniverse_tenth_doctor_name"
+ whoniverse.923.desc:0 "Now, then. What do I look like? No. No, no, no-no-no. No. No. No. Don't tell me. Let's see: two legs, two arms, two hands.\n\nGo on, then, tell me. What do you think?"
+
+ whoniverse_tenth_doctor_country:0 "Renegade Time Lord"
+ NAME_whoniverse_tenth_doctor_species:0 "Time Lord"
+ NAME_whoniverse_tenth_doctor_name:0 "Tenth Doctor"
+ whoniverse_tenth_doctor_catch_phrase:0 "Allons-y!"
+
+ whoniverse_tenth_doctor_backstory:0 "Renewed in spirit and form, the §lTenth Doctor§! is ready to continue his travels. With a fiery determination and a wit to match, he is as dedicated as ever to helping those in need and standing against the forces of darkness."
+
+ whoniverse.923.a:0 "Who are you?"
+ whoniverse.923.a.response:0 "I'm the Doctor.\n\nYou saw me, I, I changed... right in front of you."
+
+ whoniverse.923.b:0 "How is it possible?"
+ whoniverse.923.b.response:0 "I was dying. To save my own life I changed my body. Every single cell, but... it's still me."
+
+ whoniverse.923.c:0 "Can you change back?"
+ whoniverse.923.c.response:0 "D'you want me to?\n\nNo."
+
+ whoniverse.923.d:0 "§lEnlist him§!"
+ whoniverse.923.d.custom_tooltip:0 "§Y$NAME_whoniverse_tenth_doctor_name$§! joins our Empire as a §HLeader§!."
+
+ whoniverse.923.e:0 "§RDismiss§!"
+
+# Judoons
+
+ civic_whoniverse_space_police:0 "Outer Space Police"
+ civic_whoniverse_space_police_desc:0 "This Megacorp is known for its strict approach to interstellar law and order. Its forces operate across the galaxy, keeping the peace and providing security force services to realms in need of protection."
+
+ civic_tooltip_whoniverse_space_police_effects:0 "- Can construct ['concept_whoniverse_space_police_station'] holdings"
+
+ councilor_whoniverse_space_police:0 "Constable"
+ councilor_whoniverse_space_police_desc:0 "The $TITLE$ oversees and coordinates our security forces."
+ 
+ holding_whoniverse_space_police_station:0 "Intergalactic Police Station"
+ holding_whoniverse_space_police_station_desc:0 "This station is home to a private police unit that is ready to intervene against any violation of the law."
+
+ name_list_JUDOON1:0 "Judoon 1"
+
+ origin_whoniverse_shadow_proclamation:0 "Shadow Proclamation"
+ origin_whoniverse_shadow_proclamation_desc:0 "As an interstellar authority tasked with upholding law and order, the Shadow Proclamation enforces peace across the stars from its formidable asteroid headquarters, deploying enforcers to mediate disputes and neutralize threats."
+
+ origin_tooltip_whoniverse_shadow_proclamation:0 "- $HOMEWORLD$ ['concept_pc_habitat']$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_space_police']$NEW_LINE$- Additional Starting Technologies: §CAtmospheric Filtering§!$NEW_LINE$- Starting ruler is §YImmortal§!" # $NEW_LINE$- Special Shadow Proclamation events
+
+
+
+# Shadow Proclamation systems, planets, anomalies
+
+ whoniverse_name_shadow_proclamation_system:0 "Shadow Proclamation"
+ whoniverse_name_shadow_proclamation_system_star:0 "SDWPCM-001"
+ whoniverse_name_shadow_proclamation_system_planet:0 "Shadow Proclamation Base"
+
+ whoniverse_name_judoonia_system:0 "Judoonia"
+ whoniverse_name_judoonia_star:0 "Judoonia A"
+ whoniverse_name_judoonia_planet:0 "Judoonia Prime"
+
+ NAME_whoniverse_judoonia:0 "Judoonian Union"
+ NAME_judoonia_army:0 "Judoonian Armed Forces"
+
+ whoniverse_name_polymos_system:0 "Polymos" 
+ whoniverse_name_polymos:0 "Polymos Prime"
+
+ whoniverse_nestenia_system_initializer_NAME:0 "Nestenia System"
+ whoniverse_nestenia_system_initializer_DESC:0 "Star system containing the home world of the Nestene Consciousness, Nestenia.\n\n$system_initializer_DESC$"
+
+ d_whoniverse_polymeric_crust:0 "Polymeric Crust"
+ d_whoniverse_polymeric_crust_desc:0 "The crust of this planet is infused with a complex mixture of pan-polymers."
+
+ whoniverse_polymos_cat:0 "Shattered World"
+ whoniverse_polymos_desc:0 "Initial scans suggest this fragmented world may once have been the ancestral home of the Nestene Consciousness."
+
+ whoniverse.250.name:0 "Crownworld of the Nestene"
+ whoniverse.250.desc:0 "Our exploration team has confirmed that the debris field is all that remains of §HPolymos§!, the original homeworld of the Nestene Consciousness. The planet, once fully infused with the plastic lifeforms of the Nestenes, was utterly destroyed by the Daleks during the §LLast Great Time War§!. The Time Destructor's catastrophic force shattered the world, scattering synthetic debris and annihilating any trace of life. What remains is a graveyard of twisted polymers and lifeless fragments, silently drifting in the void."
+ whoniverse.250.a:0 "Curious."
+ whoniverse.250.b:0 "Harvest the scattered plastics."
+ whoniverse.250.c:0 "Use the plastics to build new Autons."
+ whoniverse.250.c.tooltip:0 "3 [Root.Owner.GetSpeciesName] pops will be added to §Y[Root.Owner.Capital.GetName]§!"
+
+ START_SCREEN_WHONIVERSE_SHADOW_PROCLAMATION:0 "The Shadow Proclamation, the steadfast sentinel of interstellar justice, stands poised at the heart of galactic affairs. From its tri-asteroid command center, it exerts unwavering vigilance over a tumultuous galaxy. The enforcers, led by the formidable Judoon, patrol the stars, mediating disputes and ensuring that order is maintained where diplomacy fails. Their presence is both a promise of protection and a warning to those who seek chaos.\n\nAs tensions escalate and unknown perils emerge, the Shadow Proclamation must strengthen its hold and rally its forces. The path ahead is fraught with challenges, and maintaining peace will test even their enduring resolve."
+
+# Necros anomaly, archaeology digsite events
+ whoniverse_necros_cat:0  "Dalek Technology"
+ whoniverse_necros_desc:0 "Our scanners reveal traces of Dalek technology on this planet."
+
+ whoniverse_digsite_necros:0 "Revelation of the Daleks"
+ whoniverse_digsite_necros_desc:0 "Upon landing on [From.Planet.GetName], our excavation teams uncovered the ruins of a cryogenic mausoleum intertwined with faint traces of Dalek technology. Initial scans suggest this site predates the Last Great Time War, holding secrets tied to the Creator of the Daleks himself."
+
+ whoniverse.330.name:0 "Remnants of Necros"
+ whoniverse.330.desc:0 "Scans of the planet have identified faint traces of Dalek technology amidst the ruins of a planet-wide cryogenic mausoleum. This world, scarred and abandoned, holds echoes of Dalek activity that predate the §LLast Great Time War§!.\n\nThe origin of these readings is unknown, but the potential to uncover lost Dalek secrets demands investigation. We must deploy excavation teams to the surface to uncover the true significance of Necros."
+ whoniverse.330.a:0 "Begin the excavation!"
+
+ whoniverse.331.name:0 "Tranquil Repose"
+ whoniverse.331.desc:0 "Excavations on Necros have revealed the decayed remains of §LTranquil Repose§!, a facility that once specialized in cryogenic preservation. Before the Last Great Time War, this site served as both a mausoleum for wealthy civilizations and a secret hub of activity for the Daleks.\n\nFurther investigation suggests that Tranquil Repose also housed one of the laboratories of §HDavros§!, the Creator of the Daleks. His experiments here advanced the designs of our kind and established Necros as a hidden outpost of the Dalek Empire. Though the surface structures are ruined, evidence of subterranean chambers has reignited our excavation efforts."
+ whoniverse.331.a:0 "Keep digging!"
+
+ whoniverse.332.name:0 "The Laboratory of Davros"
+ whoniverse.332.desc:0 "Beneath the ruins of Tranquil Repose, our excavation teams have uncovered one of Davros's secret laboratories. During the era preceding the Last Great Time War, this facility served as a pivotal site for advancing Dalek evolution and developing new military strategies.\n\nThe laboratory remains dormant but largely intact. While its systems are currently inert, preliminary analysis suggests that reactivating the facility could unlock its full potential. For now, we must dig deeper to uncover the truth of Davros's experiments."
+ whoniverse.332.a:0 "Keep digging."
+ whoniverse.332.a.tooltip:0 "§HDalek Incubation Vats§! will be built on §Y[From.Planet.GetName]§!."
+ whoniverse.332.b:0 "Destroy the facility for good!"
+
+ whoniverse.333.name:0 "Necros Daleks"
+ whoniverse.333.desc:0 "At the heart of Davros's laboratory, we have discovered fully preserved incubation vats and an enormous cryogenic chamber that has survived intact since the era before the Last Great Time War. These chambers house legions of Type VI Daleks, engineered by Davros as elite soldiers. However, their genetic code contains subtle deviations from the pure Dalek template.\n\nThe facility's systems are now operational, and the chambers could be reactivated with minimal effort, allowing these Necros Daleks to bolster our forces. Yet their impurity poses a grave risk to the genetic perfection of the Dalek race. The time has come to decide: Will we harness their power for conquest, or purge them in the name of purity?"
+ whoniverse.333.a:0 "Reawaken the Necros Daleks!"
+ whoniverse.333.a.tooltip:0 "§HDalek Incubation Vats§! will be built on §Y[From.Planet.GetName]§!.\n6 §HDalek§! pops will be added to §Y[From.Planet.GetName]§!."
+ whoniverse.333.b:0 "Purge the Necros Daleks. Imperfection cannot be tolerated!"
+
+# Spiridon anomaly, archaeology digsite events
+
+ whoniverse_name_spiridon_system:0 "Spiridon"
+ whoniverse_name_spiridon_planet:0 "Spiridon"
+ Spiridon:0 "Spiridon"
+
+ whoniverse_name_spiridon:0 "Spiridon"
+ whoniverse_spiridon_cat:0  "Energy Signatures"
+ whoniverse_spiridon_desc:0 "Scanners reveal energy signatures of Dalek technology beneath this planet's dense jungle surface."
+ SPIRIDON_FLEET:0 "Spiridon Dalek Fleet"
+ DALEK_SHUTTLE:0 "Dalek Transport Shuttle"
+ SPIRIDON_DALEK_ARMY:0 "Spiridon Dalek Army"
+
+ whoniverse_digsite_spiridon:0 "Planet of the Daleks"
+ whoniverse_digsite_spiridon_desc:0 "Hidden beneath the dense jungles of [From.Planet.GetName], the ruins of a massive Dalek facility lie entangled in roots and soil, a stark reminder of the battles waged here long ago."
+
+ whoniverse.340.name:0 "Planet of the Daleks"
+ whoniverse.340.desc:0 "Landing on [From.Planet.GetName], our drones are immediately challenged by the dense Spiridon jungle, a chaotic tangle of vegetation teeming with life. Beneath this vibrant surface lie ruins partially submerged in pools of hardened molten ice.\n\nDecayed structures and crumbling walls, entombed in soil and overgrown roots, hint at a catastrophic event that brought this Dalek facility to ruin. The jungle and ice have conspired to hide its secrets, but the scale of the site suggests a massive operation with potentially devastating implications."
+ whoniverse.340.a:0 "Curious."
+
+ whoniverse.341.name:0 "Forgotten Conflict"
+ whoniverse.341.desc:0 "Our teams have uncovered fragments of shattered machinery and scattered Dalek components, entombed in layers of hardened molten ice and vegetation. These remains show clear signs of battle - energy burns, punctures, and marks of sabotage. The §HSpiridon§! natives and their §HThal§! allies, exploiting their invisibility and the cover of the dense jungle, mounted a fierce resistance that culminated in the flooding of this facility with molten ice from deep below the planet's surface.\n\nThe facility itself appears to have been a production site, but its exact purpose remains unclear."
+ whoniverse.341.a:0 "Keep digging."
+
+ whoniverse.342.name:0 "A Vanished Civilization"
+ whoniverse.342.desc:0 "As our teams delve deeper, the scale of the Thals's efforts becomes apparent. Among the ruins are caches of primitive yet effective weapons, likely crafted by the Spiridon natives under Thal guidance. Tactical maps etched onto makeshift materials reveal the jungle's critical role in guerrilla warfare: hidden paths, ambush sites, and areas where the Dalek patrols were most vulnerable.\n\nThis coordinated resistance nearly crippled the Dalek operations, forcing them into defensive tactics. Even so, the Spiridons and their allies faced overwhelming odds as the Daleks' resilience began to take its toll."
+ whoniverse.342.a:0 "Keep digging."
+
+ whoniverse.343.name:0 "The Cost of Resistance"
+ whoniverse.343.desc:0 "Deeper within the jungle ruins, we have uncovered a haunting reminder of the Spiridons' sacrifices. Entire settlements lie buried, with remnants of their society scattered among the remains of Dalek installations. Despite their invisibility, the Daleks adapted quickly, deploying thermal sensors, bacterial weapons and other countermeasures to hunt their foes relentlessly.\n\nRecovered Dalek research logs indicate that the Spiridon natives' natural invisibility was a major focus of their experiments. While the Daleks achieved limited success in adapting this ability to their war machines, the process proved flawed: invisible Daleks were prone to debilitating light wave sickness, rendering them immobile. The jungle's unforgiving environment likely exacerbated these issues, further stalling the Daleks' efforts."
+ whoniverse.343.a:0 "Keep digging!"
+
+ whoniverse.344.name:0 "The Frozen Army"
+ whoniverse.344.desc:0 "In the heart of the abandoned Dalek facility, our team has uncovered a vast cooling chamber containing a massive Dalek army, frozen in stasis for centuries. Records indicate that this force was meant to spearhead a galactic invasion before a catastrophic failure during their reactivation caused molten ice to flood the chamber, freezing them permanently. Among the remnants, evidence of a desperate battle suggests that local resistance sabotaged the revival effort, sealing this army in its icy tomb.\n\nNow, the decision falls to us: Should we dare to reactivate these slumbering warriors, risking the consequences, or allow their frozen silence to persist?"
+ whoniverse.344.a:0 "Reactivate the Dalek army."
+ whoniverse.344.a.tooltip:0 "The Dalek army will be reactivated..."
+ whoniverse.344.b:0 "Destroy the Dalek army for good!"
+ whoniverse.344.c:0 "Purge the Daleks and harvest their technology!"
+ whoniverse.344.d:0 "Seal the chamber and let them rest in eternity."
+
+# Roboform random event
+ whoniverse.351.name:0 "The Christmas Invasion"
+ whoniverse.351.desc:0 "Unusual activity has been detected on §Y[From.Planet.GetName]§!. A group of android scavengers, crudely disguised as mythical §LSanta Claus§! figures, has landed on the surface. These so-called §HRoboforms§! are believed to have been drawn to the planet by the residual energy signatures of incoming invasions. Armed with disguised weapons and malfunctioning cheer protocols, they have begun scavenging resources and alarming the populace.\n\nWhile these units could pose a threat, they also present an opportunity: with proper handling, their systems might be adapted for productive use. The decision lies in how we respond to these seasonal intruders."
+ whoniverse.351.a:0 "Capture and reprogram the Roboforms."
+ whoniverse.351.a.tooltip:0 "1 §HRoboform§! pops added to §Y[From.Planet.GetName]§!."
+ whoniverse.351.b:0 "Recruit the Roboforms into our forces."
+ whoniverse.351.b.tooltip:0 "3 §HRoboform Armies§! appear on §Y[This.GetName]§."
+ whoniverse.351.c:0 "This is too risky. Expel the Roboforms from our planet!"
+ whoniverse.351.d:0 "EXTERMINATE the Roboforms!"
+ whoniverse.351.e:0 "Assimilate the Roboforms into our ranks."
+ whoniverse.351.e.tooltip:0 "2 §HCyberman§! pops will be added to §Y[From.Planet.GetName]§!."
+ 
+ ROBOFORM_FLEET:0 "Roboform Fleet"
+ ROBOFORM_SHUTTLE:0 "Roboform Shuttle"
+ ROBOFORM_ARMY:0 "Roboform Army"
+ SPIRIDON_DALEK_ARMY:0 "Spiridon Dalek Army"
+
+ Ro:0 "Ro"
+ Ty:0 "Ty"
+ Ky:0 "Ky"
+ Pol:0 "Pol"
+ Bo:0 "Bo"
+ Ka:0 "Ka"
+ Mo:0 "Mo"
+ Ko:0 "Ko"
+ Da:0 "Da"
+ Ja:0 "Ja"
+ So:0 "So"
+ Nu:0 "Nu"
+ Fi:0 "Fi"
+ Va:0 "Va"
+ Ze:0 "Ze"
+ Tybo:0 "Tybo"
+ Kybo:0 "Kybo"
+ Juro:0 "Juro"
+ Tymo:0 "Tymo"
+ Poldo:0 "Poldo"
+ Ramko:0 "Ramko"
+ Ma:0 "Ma"
+ Lo:0 "Lo"
+ Don:0 "Don"
+ Fro:0 "Fro"
+ Sho:0 "Sho"
+ Kon:0 "Kon"
+ Sha:0 "Sha"
+ Ra:0 "Ra"
+ Do:0 "Do"
+ Na:0 "Na"
+ Kro:0 "Kro"
+ Vo:0 "Vo"
+ Po:0 "Po"
+ Ga:0 "Ga"
+ Zo:0 "Zo"

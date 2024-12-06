@@ -49,6 +49,19 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 
+	spriteType = {
+		name = "origin_whoniverse_dalek_civil_war"
+		texturefile = "gfx/event_pictures/origins/origin_whoniverse_dalek_civil_war.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "origin_whoniverse_shadow_proclamation"
+		texturefile = "gfx/event_pictures/origins/origin_whoniverse_shadow_proclamation.dds"
+		alwaystransparent = yes
+	}
+
+
 	# Event pictures
 	spriteType = {
 		name = "GFX_evt_whoniverse_time_vortex"
@@ -201,6 +214,24 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_evt_whoniverse_rose_tyler"
 		texturefile = "gfx/event_pictures/whoniverse_rose_tyler.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_whoniverse_dalek_renegade"
+		texturefile = "gfx/event_pictures/whoniverse_dalek_renegade.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_whoniverse_dalek_imperial"
+		texturefile = "gfx/event_pictures/whoniverse_dalek_imperial.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_whoniverse_roboform"
+		texturefile = "gfx/event_pictures/whoniverse_roboform.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}

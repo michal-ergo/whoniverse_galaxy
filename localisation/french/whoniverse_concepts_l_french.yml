@@ -8,7 +8,19 @@
  concept_whoniverse_dalek_machine_desc: "- Pop Food Upkeep: §G-25%§!$NEW_LINE$- Pop Consumer Goods Upkeep: §G-25%§!$NEW_LINE$- Resettlement Cost: §G-25%§!$NEW_LINE$- $MOD_ARMY_DAMAGE_MULT$: §G+25%§!$NEW_LINE$- Pop Housing Usage: §R+10%§!"
 
  concept_whoniverse_dalek_supremacy: "$civic_whoniverse_dalek_supremacy$"
- concept_whoniverse_dalek_supremacy_desc: "- War Exhaustion Gain: §G-20%§!\n- Claim Influence Cost: §G-10%§!\n- Automatic Resettlement Chance: §G+25%§!\n- Crime Rate: §G-10%§! \n\n§L$civic_whoniverse_cyber_conversion_desc$§!"
+ concept_whoniverse_dalek_supremacy_desc: "- War Exhaustion Gain: §G-20%§!\n- Claim Influence Cost: §G-10%§!\n- Crime Rate: §G-10%§!\n- Automatic Resettlement Chance: §G+25%§! \n\n§L$civic_whoniverse_dalek_supremacy_desc$§!"
+
+ concept_whoniverse_new_dalek_paradigm: "$civic_whoniverse_new_dalek_paradigm$"
+ concept_whoniverse_new_dalek_paradigm_desc: "- War Exhaustion Gain: §G-20%§!\n- Physics research from $job_researcher$ Jobs: §G+0.5§!\n- Stability from $job_soldier$ Jobs: §G+1§!\n- Automatic Resettlement Chance: §G+25%§! \n\n§L$civic_whoniverse_dalek_supremacy_desc$§!"
+
+ concept_whoniverse_dalek_remnants: "$civic_whoniverse_dalek_remnants$"
+ concept_whoniverse_dalek_remnants_desc: "- War Exhaustion Gain: §G-20%§!\n- Unity from $job_priest$ Jobs: §G+1§!\n- Crime Rate: §G-10%§!\n- Automatic Resettlement Chance: §G+25%§! \n\n§L$civic_whoniverse_dalek_remnants_desc$§!"
+
+ concept_whoniverse_imperial_daleks: "$civic_whoniverse_imperial_daleks$"
+ concept_whoniverse_imperial_daleks_desc: "- Claim Influence Cost: §G-10%§!\n- Research Speed (Society): §G+10%§!\n- Stability from $job_soldier$ Jobs: §G+1§!\n- Automatic Resettlement Chance: §G+25%§! \n\n§L$civic_whoniverse_imperial_daleks_desc$§!"
+
+ concept_whoniverse_renegade_daleks: "$civic_whoniverse_renegade_daleks$"
+ concept_whoniverse_renegade_daleks_desc: "- War Exhaustion Gain: §G-10%§!\n- Stability: §G+5§!\n- Unity from $job_enforcer$ Jobs: §G+1§!\n- Automatic Resettlement Chance: §G+25%§! \n\n§L$civic_whoniverse_renegade_daleks_desc$§!"
 
  concept_whoniverse_dalek_happiness: "§RThis species is not affected by happiness§!"
  concept_whoniverse_dalek_happiness_desc: "Population of this species is not affected by §HHappiness§!."
@@ -56,3 +68,10 @@
 
  concept_whoniverse_metamorphic_hive: "$civic_whoniverse_metamorphic_hive$"
  concept_whoniverse_metamorphic_hive_desc: "- Codebreaking: §G+1§! $NEW_LINE$- Infiltration Speed: §G+25%§! $NEW_LINE$- Legion Node Experience Gain: §G+25%§! $DOUBLE_NEW_LINE$§L$civic_whoniverse_metamorphic_hive_desc$§!"
+
+# Judoon concepts
+ concept_whoniverse_space_police: "$civic_whoniverse_space_police$"
+ concept_whoniverse_space_police_desc: "- Trade Protection: §G+10§! $NEW_LINE$- Planet Sensor Range: §G+2§! $NEW_LINE$- Crime Rate: §G-10%§!$NEW_LINE$- Can construct ['concept_whoniverse_space_police_station'] building $DOUBLE_NEW_LINE$§L$civic_whoniverse_metamorphic_hive_desc$§!"
+
+ concept_whoniverse_space_police_station: "$building_whoniverse_space_police_station$"
+ concept_whoniverse_space_police_station_desc: "- Enforcer jobs: §G+2§!$NEW_LINE$- Stability: §G+10§!$NEW_LINE$- Diplomatic weight from fleet strength: §G+5%§!\n\n§L$building_whoniverse_space_police_station_desc$§!"

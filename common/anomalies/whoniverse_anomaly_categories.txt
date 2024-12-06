@@ -34,7 +34,26 @@ whoniverse_necros_cat = {
 	}
 	
 	on_success = {
-		1 = whoniverse.19
+		1 = whoniverse.330
+	}
+}
+
+whoniverse_spiridon_cat = {
+	should_ai_use = yes
+
+	desc = "whoniverse_spiridon_desc"
+	picture = GFX_evt_alien_nature
+	level = 3
+	null_spawn_chance = 0
+	max_once = yes
+	max_once_global = yes
+	
+	spawn_chance = {
+		base = 0
+	}
+	
+	on_success = {
+		1 = whoniverse.340
 	}
 }
 
@@ -61,8 +80,8 @@ whoniverse_zygor_cat = {
 	should_ai_use = yes
 
 	desc = "whoniverse_zygor_desc"
-	picture = GFX_evt_city_ruins
-	level = 5
+	picture = GFX_evt_alien_planet
+	level = 6
 	null_spawn_chance = 0
 	max_once = yes
 	max_once_global = yes
@@ -72,7 +91,7 @@ whoniverse_zygor_cat = {
 	}
 	
 	on_success = {
-		1 = whoniverse.100
+		1 = whoniverse.260
 	}
 }
 

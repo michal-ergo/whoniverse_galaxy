@@ -11,6 +11,17 @@ whoniverse_pm_dalek_asylum = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_whoniverse_dalek_asylum.dds"
 }
 
+whoniverse_imperial_dalek_victory = {
+	icon = "gfx/interface/icons/modifiers/mod_unity_gain_mult.dds"
+	country_unity_produces_mult = 0.05
+}
+
+whoniverse_renegade_dalek_victory = {
+	icon = "gfx/interface/icons/modifiers/mod_unity_gain_mult.dds"
+	country_unity_produces_mult = 0.05
+}
+
+
 # Cybermen modifiers
 
 whoniverse_pm_telos = {

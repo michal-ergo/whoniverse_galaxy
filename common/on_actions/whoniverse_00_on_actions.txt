@@ -14,7 +14,11 @@ on_game_start_country = {
 		whoniverse.38 # Cybusmen start wormholes seen
 		whoniverse.200 # Dalek Empire Remnants origin setup
 		whoniverse.201 # Dalek Empire Remnants wormholes seen
-		whoniverse.240 # Nestene origin setup event		
+		whoniverse.270 # Dalek Civil War setup
+		whoniverse.271 # Dalek Civil War setup
+		whoniverse.240 # Nestene origin setup event
+		whoniverse.310 # Shadow Proclamation setup
+		whoniverse.1 # kill Chosen
 	}
 }
 
@@ -27,6 +31,8 @@ empire_init_capital_planet = {
 		# whoniverse.76 # UNIT species setup
 		whoniverse.140 # Church of the Papal Mainframe setup
 		whoniverse.202 # Dalek Empire Remnants setup
+		whoniverse.311 # Shadow Proclamation home planet setup
+		whoniverse.350 # Roboform event
  	}
 }
 
@@ -107,7 +113,14 @@ on_entering_system_fleet = {
 		events = {
 			whoniverse.180 # Pete's World (Parallel Universe) exploration
 			# whoniverse.210 # A.D. 200,100 exploration
+			whoniverse.280 # Imperial Dalek wormhole
 		}
+}
+
+on_leader_death = {
+	events = {
+		whoniverse.920 # Ninth Leader Death
+	}
 }
 
 # Cybermen species policy change to cyber-conversion on acquired planets

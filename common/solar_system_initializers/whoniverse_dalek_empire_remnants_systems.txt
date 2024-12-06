@@ -465,7 +465,7 @@ whoniverse_dalek_empire_remnants_start_initializer = {
 		entity = "continental_planet_earth_entity"
 		deposit_blockers = none
 		modifiers = none
-		flags = { whoniverse_future_earth }
+		flags = { whoniverse_future_earth has_megastructure }
 
 		init_effect = {
 			save_global_event_target_as = whoniverse_future_earth

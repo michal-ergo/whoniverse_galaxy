@@ -14,6 +14,70 @@ councilor_whoniverse_dalek_supremacy = {
 	}
 }
 
+# New Dalek Paradigm Councilor
+councilor_whoniverse_new_dalek_paradigm = {
+	leader_class = { official }
+	is_leader_possible = {
+		leader_class = official
+	}
+	civic = civic_whoniverse_new_dalek_paradigm
+	modifier = {
+		planet_jobs_ruler_produces_mult = 0.02
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+
+# Dalek Remnants Councilor
+councilor_whoniverse_dalek_remnants = {
+	leader_class = { official }
+	is_leader_possible = {
+		leader_class = official
+	}
+	civic = civic_whoniverse_dalek_remnants
+	modifier = {
+		planet_priests_upkeep_mult = -0.01
+		country_naval_cap_mult = 0.01
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+# Imperial Dalek Councilor
+councilor_whoniverse_imperial_daleks = {
+	leader_class = { commander }
+	is_leader_possible = {
+		leader_class = commander
+	}
+	civic = civic_whoniverse_imperial_daleks
+	modifier = {
+		planet_stability_add = 0.5
+
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+# Renegade Dalek Councilor
+councilor_whoniverse_renegade_daleks = {
+	leader_class = { commander }
+	is_leader_possible = {
+		leader_class = commander
+	}
+	civic = civic_whoniverse_renegade_daleks
+	modifier = {
+		planet_stability_add = 0.5
+
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
 # UNIT HQ Councilor
 councilor_whoniverse_unit_hq = {
 	leader_class = { commander  }
@@ -22,7 +86,7 @@ councilor_whoniverse_unit_hq = {
 	}
 	civic = civic_whoniverse_unit_hq
 	modifier = {
-		army_defense_damage_mult = 0.1
+		army_defense_damage_mult = 0.05
 		shipclass_military_station_damage_mult = 0.02
 		shipclass_military_station_hull_mult = 0.02
 	}
@@ -40,6 +104,22 @@ councilor_whoniverse_silence = {
 	civic = civic_whoniverse_silence
 	modifier = {
 		pop_government_ethic_attraction = 0.05
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+# Space Police Councilor
+councilor_whoniverse_space_police = {
+	leader_class = { official }
+	is_leader_possible = {
+		leader_class = official
+	}
+	civic = civic_whoniverse_space_police
+	modifier = {
+		ship_fire_rate_mult = 0.01
+		army_damage_mult = 0.02
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights

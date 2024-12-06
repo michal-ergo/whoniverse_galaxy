@@ -140,3 +140,29 @@ whoniverse_nestene_set = {
 		"whoniverse_nestene"
 	}
 }
+
+whoniverse_judoon_set = {
+	species_class = MAM
+
+	portraits = {
+		"whoniverse_judoon"
+	}
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"whoniverse_judoon"
+	}
+}
+
+whoniverse_roboform_set = {
+	species_class = ROBOT
+
+	portraits = {
+		"whoniverse_roboform"
+	}
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"whoniverse_roboform"
+	}
+}

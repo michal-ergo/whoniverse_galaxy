@@ -1,14 +1,42 @@
+#### Sfxx #####
+
+category = {
+	name = "Sfxx"
+	soundeffects = {
+	
+	   ####### CLOSE
+	   
+	   whoniverse_moving_out_tardis
+   
+	}
+	
+	   compressor = {
+	   enabled = yes
+	   pregain = 0.0
+	   postgain = -7.0
+	   ratio = 1.0
+	   threshold = -10.0
+	   attacktime = 0.0
+	   releasetime = 0.0
+	   }
+   }
+   
 ### Greetings ###
 
 category = {
 	name = "Whoniverse Greeting"
 	soundeffects = {
 		whoniverse_ninth_doctor_greetings
+		whoniverse_tenth_doctor_greetings
+		whoniverse_rose_tyler_greetings
 		whoniverse_dalek_greetings
 		whoniverse_dalek_supreme_greetings
 		whoniverse_dalek_davros_greetings
 		whoniverse_dalek_caan_greetings
 		whoniverse_dalek_emperor_greetings
+		whoniverse_dalek_imperial_greetings
+		whoniverse_dalek_imperial_davros_greetings
+		whoniverse_dalek_renegade_greetings
 		whoniverse_cybermen_classic_greetings
 		whoniverse_cybermen_cybus_greetings
 		whoniverse_cybermen_cyberiad_greetings
@@ -38,6 +66,9 @@ category = {
 		whoniverse_mechanoid_greetings
 		whoniverse_auton_greetings
 		whoniverse_nestene_greetings
+		whoniverse_judoon_greetings
+		whoniverse_shadow_architect_greetings
+		whoniverse_roboform_music
 	}
 }
 
@@ -52,10 +83,54 @@ soundeffect = {
 }
 
 soundeffect = {
+	name = whoniverse_tenth_doctor_greetings
+	sounds = {
+		sound = whoniverse_doctor_allonsy
+		sound = whoniverse_doctor_forget_it_im_the_doctor
+		sound = whoniverse_doctor_time_lord_victorious
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
 	name = whoniverse_rose_tyler_greetings
 	sounds = {
 		sound = whoniverse_rose_tyler_five_million_cybermen
 		sound = whoniverse_rose_tyler_tell_me_who_are_you
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_dalek_renegade_greetings
+	sounds = {
+		sound = whoniverse_insufficient_data
+		sound = whoniverse_you_will_obey_the_daleks
+		sound = whoniverse_exterminate_renegade
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_dalek_imperial_greetings
+	sounds = {
+		sound = whoniverse_stay_where_you_are
+		sound = whoniverse_you_will_be_exterminated
+		sound = whoniverse_exterminate_renegade
+		sound = whoniverse_full_alert
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_dalek_imperial_davros_greetings
+	sounds = {
+		sound = whoniverse_excellent_davros
+		sound = whoniverse_prepare_the_assault_shuttle
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -408,6 +483,35 @@ soundeffect = {
 	max_audible_behaviour = fail
 }
 
+soundeffect = {
+	name = whoniverse_judoon_greetings
+	sounds = {
+		sound = whoniverse_judoon
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_shadow_architect_greetings
+	sounds = {
+		sound = whoniverse_we_have_a_security_breach
+		sound = whoniverse_know_your_business
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_roboform_music
+	sounds = {
+		sound = whoniverse_roboform_music
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+
 # Sound Effects
 
 category = {
@@ -416,6 +520,7 @@ category = {
 		whoniverse_tardis_event
 		whoniverse_dalek_exterminate
 		whoniverse_dalek_explain
+		whoniverse_dalek_full_alert
 		whoniverse_activate_the_holding_cells
 		whoniverse_cybermen_cybus_event
 		whoniverse_cybermen_cyberiad_event
@@ -430,6 +535,7 @@ category = {
 		whoniverse_blink_event
 		whoniverse_the_question_event
 		whoniverse_regeneration_event
+		whoniverse_hand_of_omega_event
 		}
 	}
 
@@ -464,6 +570,15 @@ soundeffect = {
 	name = whoniverse_dalek_explain
 	sounds = {
 		sound = whoniverse_explain
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_dalek_full_alert
+	sounds = {
+		sound = whoniverse_full_alert
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -587,6 +702,15 @@ soundeffect = {
 	name = whoniverse_regeneration_event
 	sounds = {
 		sound = whoniverse_regeneration
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_hand_of_omega_event
+	sounds = {
+		sound = whoniverse_hand_of_omega
 	}
 	max_audible = 1
 	max_audible_behaviour = fail

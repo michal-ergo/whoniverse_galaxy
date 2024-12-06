@@ -398,6 +398,8 @@ portrait_groups = {
 			add = {
 				portraits = {
 					whoniverse_dalek_05
+					whoniverse_dalek_05_necros_1
+					whoniverse_dalek_05_necros_2
 					whoniverse_dalek_05_special
 					whoniverse_dalek_05_supreme
 					whoniverse_dalek_05_emperor
@@ -428,6 +430,8 @@ portrait_groups = {
 			add = {
 				portraits = {
 					whoniverse_dalek_05
+					whoniverse_dalek_05_necros_1
+					whoniverse_dalek_05_necros_2
 					whoniverse_dalek_05_supreme
 					whoniverse_dalek_05_special
 				}
@@ -1269,5 +1273,102 @@ portrait_groups = {
 		}
 	}
 
-	
+	whoniverse_judoon = {
+		default = whoniverse_judoon_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					whoniverse_judoon_01
+					whoniverse_judoon_02
+					whoniverse_shadow_architect
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					whoniverse_judoon_01
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					whoniverse_judoon_01
+				}
+			}
+		}
+
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				portraits = {
+					whoniverse_judoon_01
+					whoniverse_judoon_02
+				}
+			}
+		}
+
+		#ruler scope
+		ruler = {
+			add = {
+				portraits = {
+					whoniverse_judoon_01
+					whoniverse_judoon_02
+					whoniverse_shadow_architect
+				}
+			}
+		}
+	}
+
+	whoniverse_roboform = {
+		default = whoniverse_roboform_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					whoniverse_roboform_01
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					whoniverse_roboform_01
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					whoniverse_roboform_01
+				}
+			}
+		}
+
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				portraits = {
+					whoniverse_roboform_01
+				}
+			}
+		}
+
+		#ruler scope
+		ruler = {
+			add = {
+				portraits = {
+					whoniverse_roboform_01
+				}
+			}
+		}
+	}
 }

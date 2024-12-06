@@ -11,7 +11,7 @@
 whoniverse_skaro_system_initializer = {
 	name = "whoniverse_name_skaro_system"
 	
-	class = "sc_neutron_star"
+	class = rl_binary_starting_stars
 
 	usage = custom_empire
 
@@ -27,16 +27,30 @@ whoniverse_skaro_system_initializer = {
 		generate_home_system_resources = yes
 	}
 
+	max_instances = 1
+
 	planet = {
-		name = "D5-Gamma-Z"
-		class = "pc_neutron_star"
+		name = "D5-Gamma-Za"
+		class = pc_g_star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = 40
+		size = 25
 		has_ring = no
 	}
 
-	change_orbit = 15
+	planet = {
+		name = "D5-Gamma-Zb"
+		class = pc_neutron_star
+		orbit_distance = 20
+		orbit_angle = 20
+		size = 15
+		has_ring = no
+		init_effect = {
+			save_global_event_target_as = imperial_skaro_second_sun
+		}
+	}
+
+	change_orbit = 5
 	
 	planet = {
 		name = "D5-Gamma-Z I"
@@ -135,7 +149,7 @@ whoniverse_skaro_system_initializer = {
 		class = "pc_shattered"
 		orbit_distance = 30
 		orbit_angle = 100
-		size = 20
+		size = 22
 		has_ring = no
 	}
 
@@ -220,6 +234,10 @@ whoniverse_skaro_system_initializer = {
 	neighbor_system = {
 		initializer = whoniverse_necros_system_initializer
 		hyperlane_jumps = { min = 1 max = @jumps }
+	}
+	neighbor_system = {
+		initializer = whoniverse_spiridon_system_initializer
+		hyperlane_jumps = { min = 2 max = @jumps }
 	}
 }
 
@@ -311,7 +329,7 @@ whoniverse_necros_system_initializer = {
 		class = "pc_continental"
 		orbit_distance = 60
 		orbit_angle = 105
-		size = { min = 13 max = 14 }
+		size = { min = 13 max = 15 } # size of Mars
 		has_ring = no
 
 		init_effect = {
@@ -389,6 +407,124 @@ whoniverse_necros_system_initializer = {
 	 	hyperlane_jumps = { min = 3 max = 6 } # 3 - 7
 	}
 
+}
+
+# Prewar Spiridon
+whoniverse_spiridon_system_initializer = {
+	name = "whoniverse_name_spiridon_system"
+
+	init_effect = {
+		every_neighbor_system = { set_star_flag = empire_cluster }
+		save_global_event_target_as = whoniverse_spiridon_system
+	}
+
+	usage = misc_system_init
+	usage_odds = {
+		base = 0
+	}
+	
+	max_instances = 1
+
+	class = "sc_a"
+
+	flags = { whoniverse_spiridon_system }
+
+	planet = {
+		name = "Spiridon"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 32
+		has_ring = no
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 80
+	}
+
+	planet = {
+		name = "Spiridon I"
+		class = "pc_molten"
+		orbit_distance = 20
+		orbit_angle = 90
+		size = 7
+		has_ring = no
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 280
+	}
+
+	planet = {
+		name = "Spiridon II"
+		class = "pc_barren"
+		orbit_distance = 20
+		orbit_angle = 90
+		size = 15
+		has_ring = no
+	}
+
+	# Spiridon
+	planet = {
+		name = "whoniverse_name_spiridon_planet"
+		class = pc_tropical
+		orbit_distance = 70
+		orbit_angle = 140
+		size = { min = 18 max = 25 }
+		has_ring = no
+
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			add_deposit = d_volcanic_active_planet
+			add_deposit = d_fuming_bog
+			add_deposit = d_geothermal_vent
+			add_deposit = d_hot_springs
+			add_deposit = d_underwater_vent
+			add_deposit = d_ore_rich_caverns
+			add_deposit = d_prosperous_mesa
+			add_deposit = d_dense_jungle
+			add_deposit = d_dense_jungle
+			add_deposit = d_lush_jungle
+			add_deposit = d_fungal_forest
+			add_deposit = d_active_volcano
+			add_deposit = d_active_volcano
+			add_deposit = d_massive_glacier
+			add_deposit = d_dangerous_wildlife_blocker
+			add_anomaly = { category = whoniverse_spiridon_cat }
+			set_planet_flag = whoniverse_spiridon
+			if = {
+				limit = {
+					host_has_dlc = "Distant Stars Story Pack"
+				}
+				add_modifier = {
+					modifier = predatory_plants
+				}
+			}
+			
+			save_global_event_target_as = whoniverse_spiridon			
+		}
+	}
+
+	planet = {
+		name = "Spiridon IV"
+		class = "pc_gas_giant"
+		orbit_distance = 110
+		orbit_angle = 90
+		size = 27
+		has_ring = yes
+	}
+
+	planet = {
+		name = "Spiridon V"
+		class = pc_barren_cold
+		orbit_distance = 70
+		orbit_angle = 70
+		size = 10
+		has_ring = yes
+	}
 }
 
 # Dalek Asylum

@@ -5,10 +5,10 @@ ap_whoniverse_dalek = {
 	}
 	possible = {
 		host_has_dlc = "Necroids Species Pack"
-		custom_tooltip = {
-			fail_text = "requires_free_tradition_tree"
-			num_tradition_categories < @max_tradition_trees
-		}
+		# custom_tooltip = {
+		# 	fail_text = "requires_free_tradition_tree"
+		# 	num_tradition_categories < @max_tradition_trees
+		# }
 	}
 
 	potential = {
@@ -38,10 +38,10 @@ ap_whoniverse_cybermen = {
  		# 	fail_text = "requires_not_ap_the_flesh_is_weak"
  		# 	NOT = { has_ascension_perk = ap_the_flesh_is_weak }
  		# }
- 		custom_tooltip = {
- 			fail_text = "requires_free_tradition_tree"
- 			num_tradition_categories < @max_tradition_trees
- 		}
+ 		# custom_tooltip = {
+ 		# 	fail_text = "requires_free_tradition_tree"
+ 		# 	num_tradition_categories < @max_tradition_trees
+ 		# }
  	}
 
  	potential = {
@@ -69,10 +69,10 @@ ap_whoniverse_church = {
 	}
 	possible = {
 		host_has_dlc = "Necroids Species Pack"
-		custom_tooltip = {
-			fail_text = "requires_free_tradition_tree"
-			num_tradition_categories < @max_tradition_trees
-		}
+		# custom_tooltip = {
+		# 	fail_text = "requires_free_tradition_tree"
+		# 	num_tradition_categories < @max_tradition_trees
+		# }
 	}
 
 	potential = {
@@ -89,10 +89,10 @@ ap_whoniverse_church = {
 ap_whoniverse_doctor = {
 
 	possible = {
-		custom_tooltip = {
-			fail_text = "requires_free_tradition_tree"
-			num_tradition_categories < @max_tradition_trees
-		}
+		# custom_tooltip = {
+		# 	fail_text = "requires_free_tradition_tree"
+		# 	num_tradition_categories < @max_tradition_trees
+		# }
 		NOR = {
 			has_ethic = ethic_fanatic_xenophobe
 			has_ethic = ethic_fanatic_militarist

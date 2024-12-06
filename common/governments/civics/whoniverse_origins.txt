@@ -52,6 +52,8 @@ origin_whoniverse_dalek_empire_remnants = {
 
 	starting_colony = pc_habitat
 
+	max_once_global = yes
+
 	playable = {
 		always = yes
 	}
@@ -92,10 +94,62 @@ origin_whoniverse_dalek_empire_remnants = {
 	}
 }
 
+origin_whoniverse_dalek_civil_war = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_whoniverse_dalek_civil_war.dds"
+	picture = origin_whoniverse_dalek_civil_war
+
+	max_once_global = yes
+
+	playable = {
+		always = yes
+	}
+
+	# initializers = { whoniverse_prewar_necros_system_initializer }
+
+	possible = {
+		species_archetype = { NOT = { value = MACHINE } }
+		civics = {
+
+			NOT = {
+				value = civic_agrarian_idyll
+			}
+			NOR = {
+				text = civic_tooltip_not_anglers
+				value = civic_anglers
+				value = civic_corporate_anglers
+				value = civic_machine_anglers
+				value = civic_corporate_machine_anglers
+				value = civic_permanent_employment
+				value = civic_natural_design
+			}
+		}
+	}
+
+	description = "origin_tooltip_whoniverse_dalek_civil_war"
+
+	traits = {
+		trait = trait_survivor
+		trait = trait_cybernetic
+		trait = trait_whoniverse_dalek_infertile
+	}
+
+	flags = { whoniverse_dalek_civil_war custom_start_screen }
+
+	advanced_start = no
+	blocks_random_machine_empire_generation	= yes
+
+	random_weight = {
+		base = 0
+	}
+}
+
 origin_whoniverse_cybermen_cyberiad = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origins_whoniverse_cybermen.dds"
 	picture = origin_whoniverse_cybermen
+
+	max_once_global = yes
 
 	possible = {
 		authority = { value = auth_hive_mind } # auth_machine_intelligence
@@ -132,6 +186,8 @@ origin_whoniverse_cybermen_cybus = {
 	icon = "gfx/interface/icons/origins/origins_whoniverse_cybus.dds"
 	picture = origin_whoniverse_cybus
 
+	max_once_global = yes
+
 	possible = {
 		authority = { value = auth_hive_mind } # auth_machine_intelligence
 		# species_archetype = { value = BIOLOGICAL } # Machine
@@ -167,6 +223,8 @@ origin_whoniverse_unit = {
 	icon = "gfx/interface/icons/origins/origins_whoniverse_unit.dds"
 	picture = origin_whoniverse_unit
 
+	max_once_global = yes
+
 	possible = {
 		# authority = { value = auth_democratic }
 		species_class = { value = HUM }
@@ -197,6 +255,8 @@ origin_whoniverse_church = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origins_whoniverse_church.dds"
 	picture = origin_whoniverse_church
+
+	max_once_global = yes
 
 	possible = {
 		ethics = { 
@@ -276,6 +336,48 @@ origin_whoniverse_nestene = {
 	}
 
 	flags = { whoniverse_nestene_consciousness custom_start_screen }
+
+	advanced_start = no
+	blocks_random_machine_empire_generation	= yes
+
+	random_weight = {
+		base = 0
+	}
+}
+
+origin_whoniverse_shadow_proclamation = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_whoniverse_shadow_proclamation.dds"
+	picture = origin_whoniverse_shadow_proclamation
+
+	starting_colony = pc_habitat
+
+	max_once_global = yes
+
+	playable = {
+		always = yes
+	}
+
+	possible = {
+		authority = { 
+			OR = { 
+				value = auth_corporate
+				value = auth_oligarchic
+				}
+			}
+		civics = {
+			OR = {
+				value = civic_whoniverse_space_police
+				value = civic_corporate_dominion
+			}
+		}
+	}
+
+	description = "origin_tooltip_whoniverse_shadow_proclamation"
+
+	initializers = { whoniverse_shadow_proclamation_system_initializer }
+
+	flags = { whoniverse_shadow_proclamation custom_start_screen }
 
 	advanced_start = no
 	blocks_random_machine_empire_generation	= yes

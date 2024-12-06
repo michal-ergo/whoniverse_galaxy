@@ -84,3 +84,4 @@ headless_monk_army = {
 		base = 100
 	}
 }
+

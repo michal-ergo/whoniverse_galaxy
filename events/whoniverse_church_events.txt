@@ -5,8 +5,8 @@ namespace = whoniverse
 # 06 - 07 = Dalek Reinvention of the Dalek Empire event
 # 08 - 12 = Dalek setup events
 # 12 - 17 = Dalek Asylum event chain
-# 19 + 23 = Dalek Necros 
-# 20 - 24 = Dalek Davros event chain
+# 19 + 24 = Dalek Necros 
+# 20 - 23 = Dalek Davros event chain
 # 30 - 39 = Cybermen setup events
 # 40 - 49 = Cybermen Mondasian Colony Ship chain
 # 50 - 59 = Cybermen Cyberiad Origin event chain
@@ -23,7 +23,19 @@ namespace = whoniverse
 # 180 - 189 = Cybusmen Pete's World events
 # 190 - 199 = Cybusmen Cybus Industries events
 # 200 - 209 = Dalek Empire Remnants setup events
-# 210 - 219 = Dalek Emperor events
+# 210 - 219 = Dalek Empire Remnants events
+# 220 - 239 = Mechanoid anomalies / Mechanus digsite
+# 240 - 249 = Nestene Consciousness setup events
+# 250 - 259 = Nestene Consciousness system events and anomalies
+# 260 - 269 = Zygor archaelogy site
+# 270 - 299 = Dalek Civil War
+# 310 - 329 = Shadow Proclamation
+# 330 - 339 = Dalek - Necros Archaelogy Digsite
+# 340 - 349 = Dalek - Spiridon Archaelogy Digsite
+# 350 - 359 = Roboform random events (generic)
+# 900 - 909 = The Doctor ascension perk
+# 910 - 919 = Ninth Doctor events, Rose Tyler event chain
+# 920 - 929 = Ninth Doctor / Rose Tyler placeholder
 
 
 # Church of the Papal Mainframe setup (Trenzalore)

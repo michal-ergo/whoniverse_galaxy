@@ -1,2 +1,229 @@
+namespace = whoniverse
+
+# 01 - 03 = placeholders
+# 04 - 05 = Dalek Conversion effect
+# 06 - 07 = Dalek Reinvention of the Dalek Empire event
+# 08 - 12 = Dalek setup events
+# 12 - 17 = Dalek Asylum event chain
+# 19 + 24 = Dalek Necros 
+# 20 - 23 = Dalek Davros event chain
+# 30 - 39 = Cybermen setup events
+# 40 - 49 = Cybermen Mondasian Colony Ship chain
+# 50 - 59 = Cybermen Cyberiad Origin event chain
+# 60 - 69 = Cybermen Cyberiad systems events and anomalies
+# 70 - 79 = UNIT setup / Life on Mars project
+# 80 - 99 = UNIT Zygon Invasion event chain
+# 100 - 109 = Zygon system events and anomalies
+# 110 - 119 = Weeping Angels UNIT Blink event chain
+# 120 - 139 = Weeping Angels random events
+# 140 - 149 = Church of the Papal Mainframe setup
+# 150 - 159 = The Question (Trenzalore) event chain
+# 160 - 169 = Kovarian Chapter event chain (planned)
+# 170 - 179 = Alfava Metraxis archaelogy digsite
+# 180 - 189 = Cybusmen Pete's World events
+# 190 - 199 = Cybusmen Cybus Industries events
+# 200 - 209 = Dalek Empire Remnants setup events
+# 210 - 219 = Dalek Empire Remnants events
+# 220 - 239 = Mechanoid anomalies / Mechanus digsite
+# 240 - 249 = Nestene Consciousness setup events
+# 250 - 259 = Nestene Consciousness system events and anomalies
+# 260 - 269 = Zygor archaelogy site
+# 270 - 299 = Dalek Civil War
+# 310 - 329 = Shadow Proclamation
+# 330 - 339 = Dalek - Necros Archaelogy Digsite
+# 340 - 349 = Dalek - Spiridon Archaelogy Digsite
+# 350 - 359 = Roboform random events (generic)
+# 900 - 909 = The Doctor ascension perk
+# 910 - 919 = Ninth Doctor events, Rose Tyler event chain
+# 920 - 929 = Ninth Doctor / Rose Tyler placeholder
+
+# Kill Chosen if they exist
+country_event = {
+    id = whoniverse.1
+	hide_window = yes
+
+	trigger = {
+		is_ai = no
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = { has_country_flag = chosen_empire }
+				every_owned_pop = {
+					kill_pop = yes
+				}
+			}
+			
+		}
+	}
+}
 
 
+# Roboform capital event 1 setup
+planet_event = {
+	id = whoniverse.350
+	hide_window = yes
+	location = ROOT
+
+	pre_triggers = {
+		has_owner = yes
+		is_ai = no
+		# is_homeworld = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			is_ai = no
+			}
+		num_pops > 0
+	}	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		planet_event = { id = whoniverse.351 days = 8994 random = 0 } # 8994 = 24 years + 354
+		}
+	}
+
+
+# Roboform capital event 1
+planet_event = {
+	id = whoniverse.351
+	title = "whoniverse.351.name"
+	desc = "whoniverse.351.desc"
+	picture = GFX_evt_whoniverse_roboform
+	show_sound = whoniverse_roboform_music
+	location = ROOT
+	trackable = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		num_pops > 0
+	}
+
+	immediate = {
+		if = {
+			limit = { NOT = { exists = event_target:roboform_species } }
+			create_species = {
+					name = "WHO_ROBOFORM"
+					class = ROBOT
+					portrait = whoniverse_roboform
+					traits = {
+						trait = trait_wet_planet_preference
+						trait = trait_auto_mod_robotic
+						trait = trait_robot_uncanny
+						}
+					homeworld = root
+					effect = {
+						save_global_event_target_as = roboform_species
+						}
+					}			
+			}
+		}
+
+	option = {
+		name = whoniverse.351.a
+		custom_tooltip = whoniverse.351.a.tooltip
+		trigger = {
+			# owner = { resource_stockpile_compare = { resource = energy value >= 500 } } 
+			NOT = { owner = { has_authority = auth_hive_mind } }
+			owner = { is_whoniverse_dalek = no }
+		}
+		# owner = {
+		# 	add_resource = { energy = -500 }
+		# }
+		hidden_effect = {
+			while = {
+				count = 2
+					create_pop = {
+						species = event_target:roboform_species
+					}
+				}
+		}
+	}
+
+	option = {
+		name = whoniverse.351.b
+		custom_tooltip = whoniverse.351.b.tooltip
+		trigger = {
+			NOT = { owner = { has_authority = auth_hive_mind } }
+		}
+		this = {
+			save_event_target_as = roboform_planet
+		}
+		owner = {
+			create_fleet = {
+				name = "ROBOFORM_FLEET"
+				effect = {
+					set_owner = prev.owner
+					set_location = {
+						target = event_target:roboform_planet 
+						distance = 10
+						angle = random
+						}
+					while = {
+						count = 3
+						create_army_transport = {
+							ship_name = "ROBOFORM_SHUTTLE"
+							army_name = "ROBOFORM_ARMY"
+							army_type = "robotic_army"
+							species = event_target:roboform_species
+							}
+						}
+					}
+				}
+			}
+		}
+
+	option = {
+		trigger = {
+			owner = { is_whoniverse_dalek = no }
+		}
+		name = whoniverse.351.c
+		# custom_tooltip = whoniverse.351.a.tooltip
+	}
+
+	option = {
+		name = whoniverse.351.d
+		# custom_tooltip = whoniverse.351.a.tooltip
+		trigger = {
+			owner = { is_whoniverse_dalek = yes	}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier1influencereward
+				min = @tier1influencemin
+				max = @tier1influencemax
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.351.e
+		custom_tooltip = whoniverse.351.e.tooltip
+		trigger = {
+			owner = { has_whoniverse_cyber_conversion = yes }
+		}
+		hidden_effect = {
+			while = {
+				count = 2
+				create_pop = {
+					species = owner_main_species
+				}
+			}
+		}
+	}
+}

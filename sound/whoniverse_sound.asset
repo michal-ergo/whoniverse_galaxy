@@ -1,4 +1,45 @@
+# TARDIS
+
+sound =
+{
+	name = "whoniverse_moving_out_tardis"
+	file = "whoniverse_moving_out_tardis.wav"
+}
+
+soundeffect = {
+	name = whoniverse_moving_out_tardis
+	falloff = "falloff_400"
+	sounds = {
+		sound = whoniverse_moving_out_tardis
+	}
+	is3d = yes
+	max_audible = 2
+	max_audible_behaviour = fail
+	volume = 0.3
+}
+
 # Phenotypes
+
+sound = 
+{
+	name = "whoniverse_doctor_time_lord_victorious"
+	file = "vo/phenotypes/doctor/time_lord_victorious.wav"
+	volume = 0.8
+}
+
+sound = 
+{
+	name = "whoniverse_doctor_allonsy"
+	file = "vo/phenotypes/doctor/allonsy.wav"
+	volume = 0.8
+}
+
+sound = 
+{
+	name = "whoniverse_doctor_forget_it_im_the_doctor"
+	file = "vo/phenotypes/doctor/forget_it_im_the_doctor.wav"
+	volume = 1.0
+}
 
 sound = 
 {
@@ -105,6 +146,62 @@ sound =
 {
 	name = "whoniverse_dalek_we_waited_here_in_the_dark_space"
 	file = "vo/phenotypes/daleks/we_waited_here_in_the_dark_space.wav"
+	volume = 0.5
+}
+
+sound = 
+{
+	name = "whoniverse_insufficient_data"
+	file = "vo/phenotypes/daleks/insufficient_data_renegade.wav"
+	volume = 0.5
+}
+
+sound = 
+{
+	name = "whoniverse_exterminate_renegade"
+	file = "vo/phenotypes/daleks/exterminate_renegade.wav"
+	volume = 0.5
+}
+
+sound = 
+{
+	name = "whoniverse_you_will_obey_the_daleks"
+	file = "vo/phenotypes/daleks/you_will_obey_the_daleks_renegade.wav"
+	volume = 0.5
+}
+
+sound = 
+{
+	name = "whoniverse_stay_where_you_are"
+	file = "vo/phenotypes/daleks/stay_where_you_are_imperial.wav"
+	volume = 0.5
+}
+
+sound = 
+{
+	name = "whoniverse_full_alert"
+	file = "vo/phenotypes/daleks/full_alert_imperial.wav"
+	volume = 0.5
+}
+
+sound = 
+{
+	name = "whoniverse_you_will_be_exterminated"
+	file = "vo/phenotypes/daleks/you_will_be_exterminated_imperial.wav"
+	volume = 0.5
+}
+
+sound = 
+{
+	name = "whoniverse_prepare_the_assault_shuttle"
+	file = "vo/phenotypes/daleks/prepare_the_assault_shuttle_imperial.wav"
+	volume = 0.5
+}
+
+sound = 
+{
+	name = "whoniverse_excellent_davros"
+	file = "vo/phenotypes/daleks/excellent_imperial.wav"
 	volume = 0.5
 }
 
@@ -471,6 +568,33 @@ sound =
 }
 
 
+sound = 
+{
+	name = "whoniverse_judoon"
+	file = "vo/phenotypes/judoon/judoon.wav"
+	volume = 0.65
+}
+
+sound = 
+{
+	name = "whoniverse_we_have_a_security_breach"
+	file = "vo/phenotypes/shadow/we_have_a_security_breach.wav"
+	volume = 0.8
+}
+
+sound = 
+{
+	name = "whoniverse_know_your_business"
+	file = "vo/phenotypes/shadow/know_your_business.wav"
+	volume = 0.8
+}
+
+sound = 
+{
+	name = "whoniverse_roboform_music"
+	file = "vo/phenotypes/roboform/roboform_music.wav"
+	volume = 1.0
+}
 
 ### Sound Effects ###
 
@@ -514,4 +638,11 @@ sound =
 	name = "whoniverse_regeneration"
 	file = "event/whoniverse_regeneration.wav"
 	volume = 0.8
+}
+
+sound = 
+{
+	name = "whoniverse_hand_of_omega"
+	file = "event/hand_of_omega.wav"
+	volume = 0.7
 }

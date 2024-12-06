@@ -5,8 +5,8 @@ namespace = whoniverse
 # 06 - 07 = Dalek Reinvention of the Dalek Empire event
 # 08 - 12 = Dalek setup events
 # 12 - 17 = Dalek Asylum event chain
-# 19 + 23 = Dalek Necros 
-# 20 - 24 = Dalek Davros event chain
+# 19 + 24 = Dalek Necros 
+# 20 - 23 = Dalek Davros event chain
 # 30 - 39 = Cybermen setup events
 # 40 - 49 = Cybermen Mondasian Colony Ship chain
 # 50 - 59 = Cybermen Cyberiad Origin event chain
@@ -23,7 +23,20 @@ namespace = whoniverse
 # 180 - 189 = Cybusmen Pete's World events
 # 190 - 199 = Cybusmen Cybus Industries events
 # 200 - 209 = Dalek Empire Remnants setup events
-# 210 - 219 = Dalek Emperor events
+# 210 - 219 = Dalek Empire Remnants events
+# 220 - 239 = Mechanoid anomalies / Mechanus digsite
+# 240 - 249 = Nestene Consciousness setup events
+# 250 - 259 = Nestene Consciousness system events and anomalies
+# 260 - 269 = Zygor archaelogy site
+# 270 - 299 = Dalek Civil War
+# 310 - 329 = Shadow Proclamation
+# 330 - 339 = Dalek - Necros Archaelogy Digsite
+# 340 - 349 = Dalek - Spiridon Archaelogy Digsite
+# 350 - 359 = Roboform random events (generic)
+# 900 - 909 = The Doctor ascension perk
+# 910 - 919 = Ninth Doctor events, Rose Tyler event chain
+# 920 - 929 = Ninth Doctor / Rose Tyler placeholder
+
 
 
 # UNIT setup - colonization forbidden
@@ -1053,128 +1066,3 @@ country_event = {
 	}
 }
 
-### Zygon system events and anomalies
-# Zygor anomaly
-ship_event = {
-    id = whoniverse.100
-    title = "whoniverse.100.name"
-    desc = "whoniverse.100.desc"
-    picture = GFX_evt_clones
-    show_sound = event_scanner
-    location = FROM
-            
-    is_triggered_only = yes
-
-	trigger = {
-		owner = { is_ai = no }
-	}
-
-	option = {
-		name = whoniverse.100.a
-		trigger = {
-			owner = {
-				is_whoniverse_dalek = no
-					}
-				}
-		random_galaxy_planet = {
-			limit = { has_planet_flag = whoniverse_zygor }
-			
-			enable_special_project = {
-				name = "whoniverse_zygor_project"
-				owner = root
-				location = this
-				}
-			}
-		}
-	option = {
-		name = whoniverse.100.b
-		owner = {
-			add_monthly_resource_mult = {
-				resource = engineering_research
-				value = @tier3researchreward
-				min = @tier3researchmin
-				max = @tier3researchmax
-				}
-			}
-	   	}
-	option = {
-		name = whoniverse.100.c
-		trigger = {
-			owner = {
-				is_whoniverse_dalek = yes
-					}
-				}
-		owner = {
-			add_monthly_resource_mult = {
-				resource = unity
-				value = @tier3materialreward
-				min = @tier3materialmin
-				max = @tier3materialmax
-				}
-			}
-	}
-}
-
-# Zygor project successful - either creates new Zygon species, or adds extra Zygons if they exist already
-country_event = {
-	id = whoniverse.101
-	title = "PROJECT_COMPLETE"
-	desc = "whoniverse.101.desc"
-	picture = GFX_evt_whoniverse_zygon
-	show_sound = whoniverse_zygon_event
-	location = ROOT
-	fire_only_once = yes
-		
-	is_triggered_only = yes
-		
-	option = {
-		name = whoniverse.101.a
-		custom_tooltip = whoniverse.101.tooltip
-		hidden_effect = {
-			if = {
-				limit = { exists = event_target:zygon_species }
-				while = {
-					count = 2
-					capital_scope = {
-						create_pop = {
-							species = event_target:zygon_species
-							}
-						}
-					}
-			}
-			else_if = {
-				limit = { NOT = { exists = event_target:zygon_species } }
-			capital_scope = {
-				create_species = {
-					name = "WHO_ZYGON"
-					class = FUN
-					portrait = whoniverse_zygon
-					traits = {
-						# trait = "trait_pc_tropical_preference"
-						trait = "trait_whoniverse_zygon"
-						trait = "trait_whoniverse_bio_electricity"
-						trait = "trait_adaptive"
-						trait = "trait_repugnant"
-						trait = "trait_deviants"
-						}
-					homeworld = root
-					effect = {
-						save_global_event_target_as = zygon_species
-						}
-					}
-				while = {
-					count = 2
-					create_pop = {
-						species = event_target:zygon_species
-						}
-					}			
-				last_created_pop = { 
-					set_citizenship_type = {
-						type = citizenship_limited
-						}
-					}
-				}
-			}
-		}
-	}
-}

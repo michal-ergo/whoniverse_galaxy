@@ -11,5 +11,7 @@ whoniverse = {
 		whoniverse_silence_set
 		whoniverse_mechanoid_set
 		whoniverse_nestene_set
+		whoniverse_judoon_set
+		whoniverse_roboform_set
 	}
 }

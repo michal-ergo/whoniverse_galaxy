@@ -76,3 +76,118 @@ whoniverse_digsite_mechanus = {
 		}
 	}
 }
+
+# Necros Digsite
+whoniverse_digsite_necros = {
+	desc = whoniverse_digsite_necros_desc
+	picture = GFX_evt_city_ruins
+	stages = 3
+	max_instances = 1
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		has_country_flag = whoniverse_necros_archaeology
+		is_whoniverse_dalek = yes
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_F1
+		event = whoniverse.331
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_F2
+		event = whoniverse.332
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_F3
+		event = whoniverse.333
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# Spiridon Digsite
+whoniverse_digsite_spiridon = {
+	desc = whoniverse_digsite_spiridon_desc
+	picture = GFX_evt_alien_planet
+	stages = 4
+	max_instances = 1
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		has_country_flag = whoniverse_spiridon_archaeology
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_F1
+		event = whoniverse.341
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_F2
+		event = whoniverse.342
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_F3
+		event = whoniverse.343
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_F4
+		event = whoniverse.344
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+
+# Zygor Digsite
+whoniverse_digsite_zygor = {
+	desc = whoniverse_digsite_zygor_desc
+	picture = GFX_evt_alien_planet
+	stages = 3
+	max_instances = 1
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		has_country_flag = whoniverse_zygor_archaeology
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_F1
+		event = whoniverse.261
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_F2
+		event = whoniverse.262
+	}
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_F3
+		event = whoniverse.263
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}

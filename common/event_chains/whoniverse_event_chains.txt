@@ -33,3 +33,12 @@ whoniverse_rose_chain = {
 	picture = GFX_evt_whoniverse_autons
 }
 
+whoniverse_dalek_imperial_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_whoniverse_dalek_imperial
+}
+
+whoniverse_dalek_renegade_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_whoniverse_dalek_renegade
+}

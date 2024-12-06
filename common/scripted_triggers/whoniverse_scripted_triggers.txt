@@ -15,7 +15,12 @@ is_whoniverse_dalek = {
 	OR = { 
 		has_origin = origin_whoniverse_new_dalek_paradigm
 		has_origin = origin_whoniverse_dalek_empire_remnants
+		has_origin = origin_whoniverse_dalek_civil_war
 		has_civic = civic_whoniverse_dalek_supremacy
+		has_civic = civic_whoniverse_dalek_remnants
+		has_civic = civic_whoniverse_new_dalek_paradigm
+		has_civic = civic_whoniverse_imperial_daleks
+		has_civic = civic_whoniverse_renegade_daleks
 	}
 }
 
@@ -35,6 +40,11 @@ is_whoniverse_human_species = {
 whoniverse_has_not_toxoids = {
 	optimize_memory
 	NOT = { host_has_dlc = "Toxoids Species Pack" }
+}
+
+whoniverse_has_not_megacorp = {
+	optimize_memory
+	NOT = { host_has_dlc = "Megacorp" }
 }
 
 

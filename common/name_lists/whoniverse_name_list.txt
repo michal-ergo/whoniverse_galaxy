@@ -366,7 +366,7 @@ DALEK1 = {
                           "Exxilon"
                           "Movella"
                           "Zaleria"
-                          "Spiridon"
+                          "Kaledion"
                           "Magella"
                           "Archetryx"
                           "Veestrax"
@@ -374,7 +374,7 @@ DALEK1 = {
                           "Kembel"
                           "Vulcan"
                           "Aridius"
-                          "Mechanus"
+                          "Mechanek"
                           "Styre"
                           "Vortisa"
                           "Stronghold"
@@ -400,6 +400,11 @@ DALEK1 = {
                           "Exterria"
                           "Davrax"
                           "Skaronis"
+						  "Imperia"
+						  "Dalekon"
+						  "Davronus"
+						  "Thalion"
+						  "Dalexxon"
 			}
 		}
 
@@ -1118,3 +1123,398 @@ CYBERMAN1 = {
 	}
 }
 
+### Judoon name list
+JUDOON1 = {
+	category = "Mammalian"
+	ship_names = {
+
+		generic = {
+			"Roktar's Shield"
+			"Tybo's Guard"
+			"Pol-Kon Sentinel"
+			"Kybo's Spear"
+			"Frolo Defender"
+			"Judoon Pride"
+			"Krodo Cruiser"
+			"Vektor Blade"
+			"Gorvok Enforcer"
+			"Merlax Patrol"
+			"Dralok Carrier"
+			"Juroxima Lance"
+			"Motoka Hunter"
+			"Veklaar's Wrath"
+			"Zentarus Guard"
+			"Borkon Vanguard"
+			"Kronex Shield"
+			"Nyboria Sentinel"
+			"Kyvoria Protector"
+			"Soril Avenger"
+			"Tremlon Defender"
+			"Palkora's Might"
+			"Relkor Bastion"
+			"Moltaris Scout"
+			"Vortran Spear"
+			"Hydrax Cruiser"
+			"Dalberon Defender"
+			"Mertol Guard"
+			"Protaris Warden"
+			"Zoltrax Enforcer"
+			"Fymo Lance"
+			"Kojo Spear"
+			"Lykos Protector"
+			"Kryllon Shield"
+			"Nexor Scout"
+			"Rultax Avenger"
+			"Zenthoris Sentinel"
+			"Judoon Enforcer"
+			"Pol-Kon Blade"
+			"Braxilon Spear"
+			"Roktar Guard"
+			"Voltaar Patrol"
+			"Frolka Defender"
+			"Tybo Sentinel"
+			"Kylon Protector"
+			"Motoka's Blade"
+			"Dralonis Spear"
+			"Merlax Vanguard"
+			"Gorvok Scout"
+			"Juroxima Cruiser"
+			"Mertol Defender"
+			"Palkora's Shield"
+			"Kryllon Lance"
+			"Tremlon Guard"
+			"Kojo's Protector"
+			"Relkor Hunter"
+			"Nexor's Bastion"
+			"Vortran Warden"
+			"Protaris Avenger"
+			"Zoltrax's Wrath"
+			"Hydrax Defender"
+			"Lykos Sentinel"
+			"Borkon Lance"
+			"Kybo Enforcer"
+			"Rultax Hunter"
+			"Kyvoria Spear"
+			"Zentarus Guard"
+			"Vektor Shield"
+			"Dralok Warden"
+			"Judoon Pride II"
+			"Pol-Kon Sentinel II"
+			"Frolo Enforcer"
+			"Motoka Scout"
+			"Kronex Guard"
+			"Nyboria Protector"
+			"Dalberon Avenger"
+			"Gorvok Blade"
+			"Tremlon Sentinel"
+			"Palkora Warden"
+			"Braxilon Guard"
+			"Merlax's Spear"
+			"Zenthoris Blade"
+			"Nexor Scout II"
+			"Roktar's Sentinel"
+			"Fymo Defender"
+			"Veklaar Avenger"
+			"Tybo's Pride"
+			"Lykos Hunter"
+			"Soril Enforcer"
+			"Zoltrax Defender"
+			"Protaris Scout"
+			"Kojo Enforcer"
+			"Moltaris Guard"
+			"Hydrax Protector"
+			"Vortran Blade"
+			"Judoon Guard"
+			"Kybo's Vanguard"
+			"Mertol Patrol"
+			"Relkor Sentinel"
+			"Judoonia's Wrath"
+}
+
+		corvette = {
+			"Patrol Ship"
+		}
+
+		destroyer = {
+		}
+
+		cruiser = {
+		}
+
+		battleship = {
+		}
+
+		titan = {
+		}
+
+		colossus = {
+		}
+
+		science = {
+			"Detective Ship"
+		}
+
+		colonizer = {
+			"Colony Ship"
+		}
+
+		constructor = {
+			"Constructor"
+		}
+
+		transport = {
+			"Personnel Carrier"		
+		}
+
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+		}
+		sequential_name = JUDOON1_FLEET
+	}
+
+	army_names = {
+
+		generic = {
+			sequential_name = JUDOON1_ARMY
+		}
+
+		machine_defense = {
+			sequential_name = JUDOON1_SURFACEGUARD
+		}
+
+		machine_assault_1 = {
+			sequential_name = JUDOON1_ARMY
+		}
+
+		machine_assault_2 = {
+			sequential_name = JUDOON1_ARMY
+		}
+
+		machine_assault_3 = {
+			sequential_name = JUDOON1_ARMY
+		}
+
+		defense_army = {
+			sequential_name = JUDOON1_SURFACEGUARD
+		}
+
+		assault_army = {
+			sequential_name = JUDOON1_ARMY
+		}
+
+		slave_army = {
+			sequential_name = JUDOON1_SLAVES
+		}
+
+		clone_army = {
+			sequential_name = JUDOON1_CLONEARMY
+		}
+
+		undead_army = {
+			sequential_name = JUDOON1_UNDEAD
+		}
+
+		robotic_army = {
+			sequential_name = JUDOON1_ROBOTARMY
+		}
+
+		robotic_defense_army = {
+			sequential_name = JUDOON1_ROBOTGUARD
+		}
+
+		psionic_army = {
+			sequential_name = JUDOON1_PSYCHICARMY
+		}
+
+		xenomorph_army = {
+			sequential_name = JUDOON1_XENO
+		}
+
+		gene_warrior_army = {
+			sequential_name = JUDOON1_SUPER
+		}
+
+		occupation_army = {
+			sequential_name = JUDOON1_OCCUPATIONGUARD
+		}
+
+		individual_machine_occupation_army = {
+			sequential_name = JUDOON1_OCCUPATIONGUARD
+		}
+
+		robotic_occupation_army = {
+			sequential_name = JUDOON1_OCCUPATIONNEXUS
+		}
+
+		primitive_army = {
+			sequential_name = JUDOON1_PRIMITIVEARMY
+		}
+
+		industrial_army = {
+			sequential_name = JUDOON1_INDUSTRIALARMY
+		}
+
+		postatomic_army = {
+			sequential_name = JUDOON1_POSTATOMICARMY
+		}
+
+		warpling_army = {
+			sequential_name = seq_warpling_army
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"Judoo"
+				"Roktar"
+				"Frolka"
+				"Tybonis"
+				"Kylon"
+				"Voltaar"
+				"Shadoris"
+				"Pol-Kon"
+				"Dozakra"
+				"Merlax"
+				"Borkon"
+				"Zentarus"
+				"Kryllon"
+				"Nexor"
+				"Braxilon"
+				"Gorvok"
+				"Rultax"
+				"Juroxima"
+				"Karto-Terra"
+				"Fymo"
+				"Dralonis"
+				"Motoka"
+				"Kronex"
+				"Soril"
+				"Veklaar"
+				"Nyboria"
+				"Kyvoria"
+				"Zoltrax"
+				"Palkora"
+				"Mertol"
+				"Kojo"
+				"Dalberon"
+				"Hydrax"
+				"Zenthoris"
+				"Protaris"
+				"Lykos"
+				"Tremlon"
+				"Vortran"
+				"Moltaris"
+				"Relkor"
+			}
+		}
+
+		pc_desert = {
+			names = {
+			}
+		}
+
+		pc_tropical = {
+			names = {
+			}
+		}
+
+		pc_arid = {
+			names = {
+			}
+		}
+
+		pc_continental = {
+			names = {
+			}
+		}
+
+		pc_ocean = {
+			names = {
+			}
+		}
+
+		pc_tundra = {
+			names = {
+			}
+		}
+
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+
+	}
+
+	
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+
+			}
+
+			# Always combined with a second name
+			first_names = {
+				"Ro"
+				"Ty"
+				"Ky"
+				"Pol"
+				"Bo"
+				"Ka"
+				"Mo"
+				"Ko"
+				"Da"
+				"Ja"
+				"So"
+				"Nu"
+				"Fi"
+				"Va"
+				"Ze"
+				"Tybo"
+				"Kybo"
+				"Juro"
+				"Tymo"
+				"Poldo"
+				"Ramko"
+			}
+
+			# Always combined with a first name
+			second_names = {
+				"Ma"
+				"Lo"
+				"Don"
+				"Fro"
+				"Sho"
+				"Kon"
+				"Sha"
+				"Ra"
+				"Do"
+				"Na"
+				"Kro"
+				"Vo"
+				"Po"
+				"Ga"
+				"Zo"
+			}
+		}
+	}
+}

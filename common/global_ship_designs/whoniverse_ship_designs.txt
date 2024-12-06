@@ -1,6 +1,6 @@
 ship_design = {
 	name = "NAME_Tardis_Cloaked"
-	ship_size = tardis_ship
+	ship_size = science
 
 	section = {
 		template = "DEFAULT_SCIENCESHIP_SECTION"
