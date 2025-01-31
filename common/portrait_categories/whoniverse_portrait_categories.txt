@@ -4,6 +4,9 @@ whoniverse = {
 	sets = {
 		# whoniverse_unit_set
 		whoniverse_human_set
+		whoniverse_silurian_set
+		whoniverse_sea_devil_set
+		whoniverse_judoon_set
 		whoniverse_dalek_set
 		whoniverse_cyberman_set
 		whoniverse_zygon_set
@@ -11,7 +14,6 @@ whoniverse = {
 		whoniverse_silence_set
 		whoniverse_mechanoid_set
 		whoniverse_nestene_set
-		whoniverse_judoon_set
 		whoniverse_roboform_set
-	}
+	} 
 }

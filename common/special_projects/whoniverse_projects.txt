@@ -313,6 +313,73 @@ special_project = {
 	}
 }
 
+# Plasmavore first project
+special_project = {
+	key = "whoniverse_plasmavore_project"
+	event_chain = whoniverse_plasmavore_chain
+	cost = 1000
+	tech_department = society_technology
+	timelimit = 1080
+	picture = GFX_evt_whoniverse_judoon
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = country_event
+	
+	on_success = {
+		owner = {
+			random_controlled_planet = {
+				limit = { num_pops > 0 }
+				planet_event = {
+					id = whoniverse.317
+				}
+				save_global_event_target_as = plasmavore_planet
+			}
+		}
+	}
+
+	on_fail = {
+		random_controlled_planet = {
+			planet_event = {
+				id = whoniverse.319
+			}
+		}
+	}
+}
+
+# Plasmavore strike project
+special_project = {
+	key = "whoniverse_plasmavore_strike_project"
+	event_chain = whoniverse_plasmavore_chain
+	cost = 0
+	tech_department = society_technology
+	days_to_research = 90
+	timelimit = 720
+	picture = GFX_evt_whoniverse_judoon
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_transport = 2
+	}
+	
+	on_success = {
+		event_target:plasmavore_planet = {
+			planet_event = {
+				id = whoniverse.318
+			}
+		}
+	}
+	
+	on_fail = {
+		event_target:plasmavore_planet = {
+			planet_event = {
+				id = whoniverse.319
+			}
+		}
+	}
+}
+
 # Ninth Doctor recruit project
 special_project = {
 	key = "whoniverse_ninth_doctor_project"
@@ -375,4 +442,58 @@ special_project = {
 	}
 }
 
+# Martha Jones recruit project
+special_project = {
+	key = "whoniverse_martha_project"
+	event_chain = whoniverse_martha_chain
+	cost = 0
+	tech_department = physics_technology
+	days_to_research = 180
+	timelimit = 1800
+	picture = GFX_evt_whoniverse_time_vortex
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
 
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		has_trait = leader_trait_whoniverse_the_doctor
+		
+	}
+
+	on_success = {
+		owner = {
+			country_event = { 
+				id = whoniverse.926 
+			}
+		}
+	}
+
+	on_fail = {
+		country_event = { id = whoniverse.929 }
+	}
+}
+
+# Coming Cataclysm (Silurian Hibernation) project
+special_project = {
+	key = "whoniverse_silurian_hibernation_project"
+	event_chain = whoniverse_coming_cataclysm_chain
+	cost = 500
+	tech_department = society_technology
+	timelimit = 630
+	picture = GFX_evt_clones
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = planet_event
+
+	on_success = {
+		planet_event = { id = whoniverse.368 }
+	}
+
+	on_fail = {
+		owner = {
+			end_event_chain = "whoniverse_coming_cataclysm_chain"
+			}
+	}
+}

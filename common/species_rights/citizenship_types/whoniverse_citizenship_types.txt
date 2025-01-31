@@ -39,10 +39,10 @@ citizenship_whoniverse_cyber_conversion = {
 		custom_tooltip = {
 			fail_text = whoniverse_not_human
 			OR = {
-		 	this = {
-				is_whoniverse_human_species = yes
+		 		this = {
+					is_whoniverse_human_species = yes
 			 	}
-		 	from = { has_ascension_perk = ap_whoniverse_cybermen }
+			 	from = { has_ascension_perk = ap_whoniverse_cybermen }
 			}
 		}
 	}

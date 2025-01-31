@@ -1,3 +1,4 @@
+# Check Dalek events .4 and .5 for conversion effect
 purge_whoniverse_dalek_conversion = {
 	pop_escape_chance = 0.20
 	pop_decline_rate = 25 # 1 pop per 4 months, overrides BASE_POP_DECLINE, will only work on purge types
@@ -10,7 +11,7 @@ purge_whoniverse_dalek_conversion = {
 		exists = from
 		from = {
 			is_whoniverse_dalek = yes
-			has_ascension_perk = ap_whoniverse_dalek
+			has_tradition = tr_whoniverse_dalek_conversion
 		}
 	}
 

@@ -25,14 +25,15 @@ building_whoniverse_dalek_incubation_vats = {
 				free_building_slots = 0
 				free_housing <= 0
 				free_jobs <= 0
-				NOT = { owner = { has_trait = trait_whoniverse_dalek_infertile } }
+				NOT = { owner = { is_whoniverse_dalek = yes } }
 			}
+			NOT = { owner = { is_whoniverse_dalek = yes } }
 		}
 	}
 
 	ruined_trigger = {
 		exists = owner
-		NOT = { owner = { has_trait = trait_whoniverse_dalek_infertile } }
+		NOT = { owner = { is_whoniverse_dalek = yes } }
 		}
 
 	planet_modifier = {
@@ -44,7 +45,7 @@ building_whoniverse_dalek_incubation_vats = {
 		potential = {
 			exists = owner
 			owner = {
-				has_ascension_perk = ap_whoniverse_dalek
+				has_tradition = tr_whoniverse_dalek_nanocloud
 			}
 		}
 		modifier = {
@@ -79,7 +80,7 @@ building_whoniverse_dalek_incubation_vats = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_genetics_efficient_cloning }
+			owner = { has_tradition = tr_whoniverse_dalek_conversion }
 		}
 		modifier = {
 			planet_pop_assembly_organic_add = 2

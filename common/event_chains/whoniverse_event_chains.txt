@@ -28,9 +28,19 @@ whoniverse_trenzalore_chain = {
 	picture = GFX_evt_whoniverse_dalek_fleet
 }
 
+whoniverse_plasmavore_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_whoniverse_judoon
+}
+
 whoniverse_rose_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_whoniverse_autons
+}
+
+whoniverse_martha_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_whoniverse_time_vortex
 }
 
 whoniverse_dalek_imperial_chain = {
@@ -41,4 +51,9 @@ whoniverse_dalek_imperial_chain = {
 whoniverse_dalek_renegade_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_whoniverse_dalek_renegade
+}
+
+whoniverse_coming_cataclysm_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_asteroid_approaching_planet
 }

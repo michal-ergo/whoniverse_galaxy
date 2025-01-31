@@ -99,7 +99,7 @@ origin_whoniverse_dalek_civil_war = {
 	icon = "gfx/interface/icons/origins/origins_whoniverse_dalek_civil_war.dds"
 	picture = origin_whoniverse_dalek_civil_war
 
-	max_once_global = yes
+	# max_once_global = yes
 
 	playable = {
 		always = yes
@@ -384,5 +384,50 @@ origin_whoniverse_shadow_proclamation = {
 
 	random_weight = {
 		base = 0
+	}
+}
+
+# Silurian origin
+origin_whoniverse_silurian = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_whoniverse_silurian.dds"
+	picture = origin_whoniverse_silurian
+	flags = { whoniverse_silurian custom_start_screen }
+	playable = {
+		always = yes
+	}
+
+	description = "origin_tooltip_whoniverse_silurian"
+
+	advanced_start = no
+
+	potential = {
+		species_archetype = { NOT = { value = MACHINE } }
+	}
+
+	possible = {
+		species_archetype = { NOT = { value = MACHINE } }
+	}
+
+	# traits = {
+	# 	trait = trait_cave_dweller
+	# }
+
+	modifier = {
+		mining_district_housing_add = 2
+		mining_district_buildings_add = 0.34
+		district_mining_max = 4
+		# planet_miners_minerals_produces_add = 0.5
+		planet_orbital_bombardment_damage = -0.5
+		planet_building_build_speed_mult = -0.10
+		planet_storm_devastation_mult = -0.25
+	}
+
+	initializers = { whoniverse_silurian_start_initializer }
+
+	blocks_random_machine_empire_generation	= yes
+
+	random_weight = {
+		base = 5
 	}
 }

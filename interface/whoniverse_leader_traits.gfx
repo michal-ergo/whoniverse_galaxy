@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_whoniverse_leader_trait_the_doctor"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_whoniverse_the_doctor.dds"
+	}
+}

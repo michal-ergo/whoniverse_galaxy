@@ -351,3 +351,8 @@
  WHO_ROBOFORM_remnant_plural:0 "parts"
  WHO_ROBOFORM_planet:0 "Roboform planet"
  WHO_ROBOFORM_system:0 "Roboform systemm"
+
+ WHO_SILURIAN:0 "Silurian"
+ WHO_SILURIAN_pl:0 "Silurians"
+ WHO_SILURIAN_planet:0 "Prehistoric Earth"
+ WHO_SILURIAN_system:0 "Prehistoric Sol"

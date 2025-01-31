@@ -79,6 +79,9 @@ planet_event = {
 				is_mechanical_species = yes
 				is_whoniverse_human_species = no
 			}
+			has_purge_type = {
+				type = purge_whoniverse_dalek_conversion
+			}
 		}
 	}
 	
@@ -545,17 +548,17 @@ country_event = {
                 max = @tier4unitymax
                 }
             }
-            random_galaxy_planet = {
-                limit = {
-                    has_planet_flag = whoniverse_dalek_asylum
-                    }
-                    change_pc = pc_shattered
-			        clear_deposits = yes
+        random_galaxy_planet = {
+            limit = {
+                has_planet_flag = whoniverse_dalek_asylum
+    	        }
+            change_pc = pc_shattered
+			clear_deposits = yes
 					# add_modifier = {
 					# 	modifier = "whoniverse_pm_dalek_asylum"
 					# }
-	           }
 		}
+	}
 }
 
 # Dalek Asylum creating puppet armies
@@ -1270,6 +1273,7 @@ country_event = {
 			plural = "PRESCRIPTED_species_plural_renegade_dalek_faction"
 		 	class = WHO_DALEK
 		 	portrait = whoniverse_dalek_renegade
+			gender = indeterminable
 		 	namelist = "DALEK1"
 		 	traits = {
 		 		trait = "trait_cybernetic"
@@ -1545,6 +1549,7 @@ country_event = {
 			plural = "PRESCRIPTED_species_plural_imperial_dalek_faction"
 		 	class = WHO_DALEK
 		 	portrait = whoniverse_dalek_imperial
+			gender = indeterminable
 		 	namelist = "DALEK1"
 		 	traits = {
 		 		trait = "trait_cybernetic"
@@ -2018,7 +2023,7 @@ country_event = {
 					has_valid_civic = civic_whoniverse_renegade_daleks
 				}
 				country_event = {
-					id = whoniverse.293
+					id = whoniverse.294
 				}
 			}	
 		}
@@ -2085,7 +2090,7 @@ country_event = {
 					has_valid_civic = civic_whoniverse_renegade_daleks
 				}
 				country_event = {
-					id = whoniverse.292
+					id = whoniverse.293
 				}
 			}	
 		}
@@ -2174,7 +2179,7 @@ country_event = {
 						kill_pop = yes
 					}
 					create_pop = {
-						species = renegade_species
+						species = event_target:renegade_species
 						ethos = root.owner
 					}		
 				}
@@ -2612,9 +2617,9 @@ fleet_event = {
 					add_trait = trait_deviants
 					effect = {
 						save_event_target_as = necros_species
-						}
 					}
-			}	
+				}
+			}
 		}
 		owner = {
 			add_monthly_resource_mult = {
@@ -2701,7 +2706,7 @@ fleet_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = whoniverse.341.a
+		name = DIG
 		small_artifact_reward = yes
 		owner = {
 			add_monthly_resource_mult = {
@@ -2714,7 +2719,7 @@ fleet_event = {
 	}
 }
 
-# Spiridon Stage 2 - A Vanished Civilization
+# Spiridon Stage 2 - Weapons of Desperation
 fleet_event = {
 	id = whoniverse.342
 	title = "whoniverse.342.name"
@@ -2733,9 +2738,9 @@ fleet_event = {
 		owner = {
 			add_monthly_resource_mult = {
 				resource = society_research
-				value = @tier1researchreward
-				min = @tier1researchmin
-				max = @tier1researchmax
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
 			}
 		}
 	}
@@ -2773,7 +2778,7 @@ fleet_event = {
 	id = whoniverse.344
 	title = "whoniverse.344.name"
 	desc = whoniverse.344.desc
-	picture = GFX_evt_clones
+	picture = GFX_evt_whoniverse_dalek_spiridon_army
 	show_sound = event_mysterious_signal
 	location = from
 
@@ -2826,10 +2831,28 @@ fleet_event = {
 									army_name = "SPIRIDON_DALEK_ARMY"
 									army_type = "assault_army"
 									species = owner_main_species
-									}
 								}
 							}
-						}	
+						}
+					}	
+				}
+				event_target:spiridon_event = {
+					set_owner = root.owner
+					while = {
+						count = 3
+						create_pop = {
+							species = owner_main_species
+						}
+					}
+					modify_species = {
+						species = owner_main_species
+						portrait = whoniverse_dalek_type_iii
+						remove_trait = trait_slow_learners
+						add_trait = trait_sedentary
+						effect = {
+							save_event_target_as = spiridon_species
+						}
+					}
 				}
 			}
 			else = {

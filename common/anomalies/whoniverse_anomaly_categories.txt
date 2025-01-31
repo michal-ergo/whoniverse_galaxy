@@ -170,3 +170,22 @@ whoniverse_polymos_cat = {
 		1 = whoniverse.250
 	}
 }
+
+whoniverse_siluria_cat = {
+	should_ai_use = no
+
+	desc = "whoniverse_siluria_desc"
+	picture = GFX_evt_alien_wildlife
+	level = 4
+	null_spawn_chance = 0
+	max_once = yes
+	max_once_global = yes
+	
+	spawn_chance = {
+		base = 0
+	}
+	
+	on_success = {
+		1 = whoniverse.370
+	}
+}

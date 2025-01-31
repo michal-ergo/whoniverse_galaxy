@@ -19,6 +19,8 @@ on_game_start_country = {
 		whoniverse.240 # Nestene origin setup event
 		whoniverse.310 # Shadow Proclamation setup
 		whoniverse.1 # kill Chosen
+		whoniverse.362 # Silurian Origin setup
+		whoniverse.363 # Prehistoric Sol wormholes seen
 	}
 }
 
@@ -33,7 +35,14 @@ empire_init_capital_planet = {
 		whoniverse.202 # Dalek Empire Remnants setup
 		whoniverse.311 # Shadow Proclamation home planet setup
 		whoniverse.350 # Roboform event
+		whoniverse.360 # Dinosaur Tamers setup	
  	}
+}
+
+on_press_begin = {
+	events = {
+		whoniverse.361 # Silurian Origin setup
+	}
 }
 
 on_mid_game_pulse_country = {
@@ -114,6 +123,7 @@ on_entering_system_fleet = {
 			whoniverse.180 # Pete's World (Parallel Universe) exploration
 			# whoniverse.210 # A.D. 200,100 exploration
 			whoniverse.280 # Imperial Dalek wormhole
+			whoniverse.371 # Prehistoric Sol exploration
 		}
 }
 

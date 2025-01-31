@@ -9,6 +9,9 @@ portraits = {
 	whoniverse_doctor_tenth = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 				greeting_sound = "whoniverse_tenth_doctor_greetings"
 				texturefile = "gfx/models/portraits/whoniverse/doctor_tenth.dds" }
+	whoniverse_martha_jones = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_martha_jones_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/doctor_martha_jones.dds" }
 	# Bronze Dalek (Time War) set
 	whoniverse_dalek_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 				greeting_sound = "whoniverse_dalek_greetings"
@@ -88,6 +91,17 @@ portraits = {
 	whoniverse_dalek_06_emperor = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 				greeting_sound = "whoniverse_dalek_renegade_greetings" 
 				texturefile = "gfx/models/portraits/whoniverse/dalek_06_emperor.dds" }
+	# Classic set - Type III
+	whoniverse_dalek_07 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_renegade_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/dalek_07.dds" }
+	whoniverse_dalek_07_supreme = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_renegade_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_07_supreme.dds" }
+	# Human-Dalek Hybrid
+	whoniverse_dalek_hybrid_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_dalek_hybrid_greetings" 
+				texturefile = "gfx/models/portraits/whoniverse/dalek_hybrid.dds" }
 	# Davros
 	whoniverse_dalek_davros = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 				greeting_sound = "whoniverse_dalek_davros_greetings" 
@@ -217,6 +231,30 @@ portraits = {
 	whoniverse_roboform_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		greeting_sound = "whoniverse_roboform_music"
 		texturefile = "gfx/models/portraits/whoniverse/roboform_01.dds" }		
+	# Silurian
+	whoniverse_silurian_m_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_silurian_male_greetings"
+		texturefile = "gfx/models/portraits/whoniverse/silurian_m_01.dds" }
+	whoniverse_silurian_m_02 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_silurian_leader_greetings"
+		texturefile = "gfx/models/portraits/whoniverse/silurian_m_02.dds" }
+	whoniverse_silurian_f_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_silurian_hiss"
+		texturefile = "gfx/models/portraits/whoniverse/silurian_f_01.dds" }
+	whoniverse_silurian_f_02 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_silurian_female_greetings"
+		texturefile = "gfx/models/portraits/whoniverse/silurian_f_02.dds" }
+	whoniverse_silurian_vastra = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_silurian_vastra_greetings"
+		texturefile = "gfx/models/portraits/whoniverse/silurian_f_vastra.dds" }
+	# Sea Devil
+	whoniverse_sea_devil_m_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_silurian_hiss"
+		texturefile = "gfx/models/portraits/whoniverse/sea_devil_m_01.dds" }
+	whoniverse_sea_devil_f_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_silurian_hiss"
+		texturefile = "gfx/models/portraits/whoniverse/sea_devil_f_01.dds" }
 	}
+
 	
 

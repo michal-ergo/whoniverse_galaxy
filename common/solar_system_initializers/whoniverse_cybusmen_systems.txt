@@ -363,20 +363,20 @@ whoniverse_cybusmen_initializer = {
 		has_ring = no
 	}
 
-	init_effect = {
-		solar_system = {
-			every_neighbor_system = {
-				remove_hyperlane = {
-					from = this
-					to = prev
-				}
-				add_hyperlane = {
-					from = this
-					to = event_target:cybus_system
-				}
-			}
-		}
-	}
+	# init_effect = {
+	# 	solar_system = {
+	# 		every_neighbor_system = {
+	# 			remove_hyperlane = {
+	# 				from = this
+	# 				to = prev
+	# 			}
+	# 			add_hyperlane = {
+	# 				from = this
+	# 				to = event_target:cybus_system
+	# 			}
+	# 		}
+	# 	}
+	# }
 
 }
 

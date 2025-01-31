@@ -87,8 +87,12 @@ planet_event = {
 
 	immediate = {
 		planet_event = { id = whoniverse.351 days = 8994 random = 0 } # 8994 = 24 years + 354
+		random_list = {
+			25 = { planet_event = { id = whoniverse.351 days = 8994 random = 0 } } # 8994 = 24 years + 354
+			75 = { }
 		}
 	}
+}
 
 
 # Roboform capital event 1
@@ -227,3 +231,4 @@ planet_event = {
 		}
 	}
 }
+

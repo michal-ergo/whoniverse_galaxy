@@ -511,3 +511,33 @@ civic_whoniverse_space_police = {
 
 	description = "civic_tooltip_whoniverse_space_police_effects"
 }
+
+# Silurian Dinosaur Tamers
+civic_whoniverse_dinosaur_tamers = {
+	potential = { 
+		authority = {
+			NOR = {
+				value = auth_machine_intelligence
+				value = auth_hive_mind
+			}
+		}
+	}
+	
+	possible = {
+		# origin = {
+		# 	value = origin_whoniverse_new_dalek_paradigm
+		# }
+		civics = {
+			NOT = {
+				value = civic_fanatic_purifiers
+			}
+		}	 
+	}
+	modification = yes
+	random_weight = {
+		base = 0
+	}
+
+	description = "civic_whoniverse_dinosaur_tamers_effects"
+	
+}

@@ -35,7 +35,7 @@ namespace = whoniverse
 # 350 - 359 = Roboform random events (generic)
 # 900 - 909 = The Doctor ascension perk
 # 910 - 919 = Ninth Doctor events, Rose Tyler event chain
-# 920 - 929 = Ninth Doctor / Rose Tyler placeholder
+# 920 - 929 = Tenth Doctor hire, Martha Jones event chain
 
 
 # Shadow Proclamation setup
@@ -57,6 +57,7 @@ country_event = {
 		ruler = {
 			set_immortal = yes
 		}
+		country_event = { id = whoniverse.315 } # Plasmavore event chain
 	}
 }
 
@@ -94,5 +95,178 @@ planet_event = {
 				value = 500
 			}
 		}
+	}
+}
+
+# Plasmavore Setup
+country_event = {
+    id = whoniverse.315
+    hide_window = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_origin = origin_whoniverse_shadow_proclamation
+			}
+	}
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	immediate = { 
+		country_event = { id = whoniverse.316 days = 14400 random = 7200 }  # timing 20-60 years
+	}
+}
+
+# Plasmavore intro event
+country_event = {
+    id = whoniverse.316
+    title = "whoniverse.316.name"
+    desc = "whoniverse.316.desc"
+    picture = GFX_evt_bribery
+	event_chain = whoniverse_plasmavore_chain
+	show_sound = event_sensor_ping
+
+	trigger = {
+		has_origin = origin_whoniverse_shadow_proclamation
+		is_ai = no
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	option = {
+		name = "whoniverse.316.a"
+		begin_event_chain = {
+			event_chain = "whoniverse_plasmavore_chain"
+			target = this
+		}
+		enable_special_project = {
+			name = "whoniverse_plasmavore_project"
+			owner = root
+		}
+	}
+
+	option = {
+		name = "whoniverse.316.b"
+		hidden_effect = {
+			random_controlled_planet = {
+				planet_event = { id = whoniverse.319 days = 1080 random = 0 }	
+			}			
+		}
+	}
+}
+
+# Plasmavore project finished
+planet_event = {
+	id = whoniverse.317
+	title = "whoniverse.317.name"
+	desc = "whoniverse.317.desc"
+	picture = GFX_evt_black_market
+	show_sound = event_criminal_activity
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_plasmavore_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_ai = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_shadow_proclamation
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.317.a
+		enable_special_project = {
+			name = "whoniverse_plasmavore_strike_project"
+			owner = root
+			location = this
+		}
+	}
+
+	option = {
+		name = whoniverse.317.b
+		hidden_effect = {
+			planet_event = { id = whoniverse.319 days = 720 random = 0 }
+		}
+	}
+}
+
+# Plasmavore strike project finished
+planet_event = {
+	id = whoniverse.318
+	title = "whoniverse.318.name"
+	desc = "whoniverse.318.desc"
+	picture = GFX_evt_whoniverse_judoon
+	show_sound = whoniverse_judoon_greetings
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_plasmavore_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_ai = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_shadow_proclamation
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whoniverse.318.a
+		owner = {
+			end_event_chain = "whoniverse_plasmavore_chain"
+			add_monthly_resource_mult = {
+				resource = energy
+				value = @tier3materialreward
+				min = @tier3materialmin
+				max = @tier3materialmax
+				}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2unityreward
+				min = @tier2unitymin
+				max = @tier2unitymax
+				}
+		}
+	}
+}
+
+# Plasmavore project failed
+planet_event = {
+	id = whoniverse.319
+	title = "whoniverse.319.name"
+	desc = "whoniverse.319.desc"
+	picture = GFX_evt_planet_beam
+	show_sound = event_air_raid_siren
+	location = ROOT
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DISCONCERTING
+		add_modifier = { 
+			modifier = whoniverse_unit_devastation
+			years = 10
+		}
+		while = {
+			count = 5
+				random_owned_pop = {
+					kill_pop = yes
+				}
+			}
+		add_planet_devastation = 35
 	}
 }

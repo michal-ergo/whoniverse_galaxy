@@ -35,7 +35,7 @@ namespace = whoniverse
 # 350 - 359 = Roboform random events (generic)
 # 900 - 909 = The Doctor ascension perk
 # 910 - 919 = Ninth Doctor events, Rose Tyler event chain
-# 920 - 929 = Ninth Doctor / Rose Tyler placeholder
+# 920 - 929 = Tenth Doctor hire, Martha Jones event chain
 
 # The Doctor Ascension Perk adoption event
 country_event = {
@@ -190,7 +190,7 @@ country_event = {
 					event_leader = yes
 					class = scientist
 					name = "NAME_whoniverse_ninth_doctor_name"
-					skill = 5
+					skill = 4
 					randomize_traits = no
 					skip_background_generation = yes
 					background_ethic = ethic_fanatic_pacifist
@@ -198,6 +198,7 @@ country_event = {
 					custom_description = whoniverse_ninth_doctor_backstory
 					can_manually_change_location = yes
 					traits = {
+						trait = leader_trait_whoniverse_the_doctor
 						trait = leader_trait_carefree # intuition
 						trait = leader_trait_meticulous # roamer
 						trait = leader_trait_traumatized
@@ -253,6 +254,7 @@ country_event = {
 				set_owner = root
 			}
 			owner = { country_event = { id = whoniverse.913 days = 5400 random = 1800 } } # Rose event chain in 10 - 20 years
+			owner = { country_event = { id = whoniverse.921 days = 36000 random = 7200 } } # Doctor leaves in 80 - 120 years
 			create_fleet = {
 				name = "NAME_Tardis"
 				settings = {
@@ -750,7 +752,7 @@ country_event = {
 	}
 }
 
-# Ninth Doctor leaves
+# Ninth Doctor leaves (possibly move to midgame crisis)
 country_event = {
 	id = whoniverse.921
 	title = "whoniverse.921.name"
@@ -900,7 +902,7 @@ country_event = {
 					event_leader = yes
 					class = scientist
 					name = "NAME_whoniverse_tenth_doctor_name"
-					skill = 5
+					skill = 6
 					randomize_traits = no
 					skip_background_generation = yes
 					background_ethic = ethic_fanatic_pacifist
@@ -908,6 +910,7 @@ country_event = {
 					custom_description = whoniverse_tenth_doctor_backstory
 					can_manually_change_location = yes
 					traits = {
+						trait = leader_trait_whoniverse_the_doctor
 						trait = leader_trait_carefree # intuition
 						trait = leader_trait_meticulous # roamer
 						trait = leader_trait_stubborn
@@ -962,7 +965,7 @@ country_event = {
 				set_leader_flag = whoniverse_tenth_doctor_leader
 				set_owner = root
 			}
-			# owner = { country_event = { id = whoniverse.913 days = 5400 random = 1800 } } # Rose event chain in 10 - 20 years
+			owner = { country_event = { id = whoniverse.925 days = 5400 random = 1800 } } # Martha Jones event chain in 10 - 20 years
 			create_fleet = {
 				name = "NAME_Tardis"
 				settings = {
@@ -1017,5 +1020,294 @@ country_event = {
 				id = whoniverse.923 days = 3600 random = 720
 				}
 		}
+	}
+}
+
+# Martha Jones intro event
+country_event = {
+    id = whoniverse.925
+    title = "whoniverse.925.name"
+    desc = "whoniverse.925.desc"
+    picture = GFX_evt_whoniverse_time_vortex
+	event_chain = whoniverse_martha_chain
+	show_sound = whoniverse_tardis_event
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		any_controlled_planet = {
+			has_planet_flag = planet_earth
+		}
+		exists = event_target:whoniverse_tenth_doctor_leader
+		is_human_species = yes
+		is_ai = no
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	option = {
+		name = "whoniverse.925.a"
+		begin_event_chain = {
+			event_chain = "whoniverse_martha_chain"
+			target = this
+		}
+		random_controlled_planet = {
+			limit = { has_planet_flag = planet_earth }
+			save_global_event_target_as = event_martha_jones
+			enable_special_project = {
+				name = "whoniverse_martha_project"
+				owner = root
+				location = this
+			}
+		}
+	}
+
+	option = {
+		name = "whoniverse.925.b"
+		country_event = { id = whoniverse.929 days = 60 random = 0 }
+	}
+}
+
+# Martha Jones investigation project finished event
+country_event = {
+    id = whoniverse.926
+    title = "whoniverse.926.name"
+    desc = "whoniverse.926.desc"
+    picture = GFX_evt_whoniverse_judoon
+	event_chain = whoniverse_martha_chain
+	show_sound = whoniverse_judoon_greetings
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		is_ai = no
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "whoniverse.926.a"
+        hidden_effect = {
+			country_event = { id = whoniverse.927 days = 45 } } 
+	}
+
+	option = {
+		name = "whoniverse.926.b"
+		hidden_effect = {
+			country_event = { id = whoniverse.929 days = 45 random = 0 }	
+		}
+	}
+}
+
+# Martha Jones continued
+country_event = {
+    id = whoniverse.927
+    title = "whoniverse.927.name"
+    desc = "whoniverse.927.desc"
+    picture = GFX_evt_whoniverse_martha
+	event_chain = whoniverse_martha_chain
+	show_sound = whoniverse_martha_jones_greetings
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		is_ai = no
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "whoniverse.927.a"
+        hidden_effect = {
+			country_event = { id = whoniverse.928 days = 1 } } 
+	}
+
+	option = {
+		name = "whoniverse.927.b"
+		owner = {
+			end_event_chain = "whoniverse_martha_chain"
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier3unityreward
+				min = @tier3unitymin
+				max = @tier3unitymax
+				}
+		}
+	}
+}
+
+# Martha Jones: HIRE/DISMISS
+country_event = {
+	id = whoniverse.928
+	title = "whoniverse.928.name"
+ 	desc = whoniverse.928.desc
+
+	show_sound = whoniverse_martha_jones_greetings
+    location = event_target:event_martha_jones
+	is_triggered_only = yes
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		NOT = { exists = event_target:whoniverse_martha_jones_leader }
+		is_ai = no
+	}
+
+	event_window_type = leader_recruit
+	picture_event_data = {
+		portrait = event_target:whoniverse_martha_jones_leader
+		room = default_room
+	}
+	picture = GFX_leader_recruitment_bg_renowned
+
+	immediate = {
+		hidden_effect = {
+			create_country = {
+				name = "whoniverse_martha_jones_country"
+				type = global_event
+				auto_delete = yes
+				flag = {
+					icon = {
+						category = "special"
+						file = "unknown.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors = {
+						"blue"
+						"yellow"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					save_event_target_as = martha_jones_country
+				}
+			}
+			event_target:martha_jones_country = {
+				create_species = {
+					name = "NAME_whoniverse_martha_jones_species"
+					class = PARAGON
+					portrait = whoniverse_martha_jones
+					namelist = "HUMAN1"
+					traits = {
+						trait = trait_adaptive
+						trait = trait_nomadic
+						trait = trait_wasteful
+					}
+					effect = {
+						save_event_target_as = martha_jones_species
+					}
+				}
+				create_leader = {
+					species = event_target:martha_jones_species
+					event_leader = yes
+					class = scientist
+					name = "NAME_whoniverse_martha_jones_name"
+					skill = 4
+					randomize_traits = no
+					skip_background_generation = yes
+					background_ethic = ethic_materialist
+					custom_catch_phrase = whoniverse_martha_jones_catch_phrase
+					custom_description = whoniverse_martha_jones_backstory
+					can_manually_change_location = yes
+					traits = {
+						trait = leader_trait_carefree
+						trait = leader_trait_adaptable
+						trait = leader_trait_opinionated # Stubborness
+						trait = subclass_scientist_scholar
+					}
+					gender = female
+					set_age = 19
+					immortal = no
+					effect = {
+						save_global_event_target_as = whoniverse_martha_jones_leader
+						set_leader_flag = legendary_leader
+						set_leader_flag = martha_jones
+						set_owner = root
+						exile_leader_as = whoniverse_martha_jones_leader
+					}
+				}
+			}
+		}
+	}
+
+	option = { # Identify
+		name = whoniverse.928.a
+		is_dialog_only = yes
+		response_text = whoniverse.928.a.response
+	}
+	option = { # Why help
+		name = whoniverse.928.b
+		is_dialog_only = yes
+		response_text = whoniverse.928.b.response
+	}
+
+	option = { # More about yourself
+	name = whoniverse.928.c
+	is_dialog_only = yes
+	response_text = whoniverse.928.c.response
+	}
+
+	option = { # HIRE
+		name = whoniverse.928.d
+		tag = hire_leader
+		custom_tooltip = whoniverse.928.d.custom_tooltip # Martha Jones joins
+		sound = whoniverse_martha_jones_greetings
+
+		hidden_effect = {
+			clone_leader = {
+				target = event_target:whoniverse_martha_jones_leader
+			}
+			last_created_leader = {
+				set_leader_flag = legendary_leader
+				save_global_event_target_as = whoniverse_martha_jones_leader
+				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = whoniverse_martha_jones_leader
+				set_owner = root
+			}
+			# owner = { country_event = { id = whoniverse.918 days = 16200 random = 1800 } } # Rose leaves in 40-50 years
+		}
+	}
+	option = { # DISMISS
+		name = whoniverse.928.e
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:whoniverse_martha_jones_leader = {
+				kill_leader = { show_notification = no }
+				}
+		}
+	}
+}
+
+# Martha Jones project failed
+country_event = {
+	id = whoniverse.929
+	title = "whoniverse.929.name"
+	desc = "whoniverse.929.desc"
+	picture = GFX_evt_planet_beam
+	show_sound = event_air_raid_siren
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DISCONCERTING
+		owner = {
+			add_modifier = { 
+				modifier = whoniverse_unit_devastation
+				years = 20
+			}
+			random_controlled_planet = {
+				limit = { has_planet_flag = planet_earth }
+				while = {
+					count = 15
+					random_owned_pop = {
+						kill_pop = yes
+					}
+				}
+				add_planet_devastation = 50
+			}
+		}	
 	}
 }

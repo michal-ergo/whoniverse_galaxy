@@ -7,6 +7,57 @@
 
  WHO_TIMELORD:0 "Time Lord"
 
+# Dalek ascension perk and traditions
+ ap_whoniverse_dalek:0 "Dalek Ascendancy"
+ ap_whoniverse_dalek_desc:0 "The Daleks are the supreme beings of the universe. Through relentless evolution, technological mastery, and genetic purity, we shall achieve ultimate perfection."
+ whoniverse_ap_dalek_tooltip:0 " Unlocks the §Y$tradition_whoniverse_dalek$§! tradition tree"
+
+### DALEK TRADITION TREE ###
+ tradition_whoniverse_dalek:0  "Dalek Ascension"
+ tradition_whoniverse_dalek_desc:0 "The Daleks will become the supreme rulers of the universe!"
+
+ requires_not_ap_whoniverse_dalek:0 "$TRIGGER_FAIL$May not have the §Y$ap_synthetic_evolution$§! Ascension Perk.""
+ 
+ tr_whoniverse_dalek_adopt:0 "Bacterial Bombardment"
+ tr_whoniverse_dalek_finish:0 "Destiny of the Daleks"
+ tr_whoniverse_dalek_finish_desc:0 "§G+2§! Genetic modification points\n§G+1§! Organic species trait picks\n§G-40%§! Modify Species special project cost\nGenetic modification can add §YDalek Variant§! traits"
+
+ tr_whoniverse_dalek_conversion:0 "Human-Dalek Conversion"
+ tr_whoniverse_dalek_conversion_delayed:0 "The ancestral Kaleds were indistinguishable from humans. As such, we could use human DNA as a resource for cloning new Dalek mutants."
+ tr_whoniverse_dalek_conversion_desc:0 "['concept_whoniverse_dalek_incubation_vats'] produce an additional §G+2§! §YMonthly Organic Pop Assembly§!\nUnlocks §GHuman-Dalek Conversion§! purge type for Human species"
+ tr_whoniverse_dalek_emergency:0 "Emergency Temporal Shift"
+ tr_whoniverse_dalek_emergency_desc:0 "Ship Combat Disengagement Chance: §G+15%§!\nGuaranteed Research Option: §GJump Drive§!"
+ tr_whoniverse_dalek_emergency_delayed:0 "A temporal shift is a form of spatial shift that can be used to move beings through time and space to a new destination."
+ tr_whoniverse_dalek_progenitor:0 "Progenitor Device"
+ tr_whoniverse_dalek_progenitor_delayed:0 "We can design special devices containing pure Dalek DNA, that can both reproduce full-grown Dalek mutants and functional battle armour."
+ tr_whoniverse_dalek_progenitor_desc:0 "§G+10%§! Habitability\n§G+2§! Organic species trait picks\nGenetic modification can remove positive traits"
+ tr_whoniverse_dalek_nanocloud:0 "Nanocloud Virus"
+ tr_whoniverse_dalek_nanocloud_delayed:0 "Using nanogenes, we can wrap our planets in protective nanoclouds that will convert any other organisms into Dalek puppets."
+ tr_whoniverse_dalek_nanocloud_desc:0 "§C['concept_whoniverse_dalek_incubation_vats']§!: §G+1§! £mod_job_necromancer_add£ $job_necromancer$ jobs"
+ tr_whoniverse_dalek_pathweb:0 "Pathweb"
+ tr_whoniverse_dalek_pathweb_delayed:0 "The Pathweb or the "Dalek hive mind" is an artificial telepathic network containing information on Dalek history and experiences."
+
+ council_agenda_agenda_whoniverse_dalek_supremacy_name:0 "Dalek Supremacy"
+ council_agenda_agenda_whoniverse_dalek_supremacy_desc:0 "The Daleks can survive only by becoming the dominant species - be it through genetic engineering or by means of conquest."
+
+ agenda_whoniverse_dalek_supremacy_finish:0 "Dalek Supremacy"
+
+ trait_whoniverse_dalek_spider:0 "Spider Variant"
+ trait_whoniverse_dalek_spider_desc:0 "Designed for hostile and confined environments, these Daleks move with terrifying speed and crawl where others cannot."
+
+ trait_whoniverse_dalek_special:0 "Special Weapons Variant"
+ trait_whoniverse_dalek_special_desc:0 "Armed with devastating weaponry, these Daleks sacrifice all subtlety in favor of overwhelming destructive firepower."
+
+ trait_whoniverse_dalek_time:0 "Time-Sensitive Variant"
+ trait_whoniverse_dalek_time_desc:0 "Empowered with an innate understanding of temporal flows, these Daleks adapt quickly, thinking and acting ahead of their enemies."
+
+ trait_whoniverse_dalek_recon:0 "Reconnaissance Variant"
+ trait_whoniverse_dalek_recon_desc:0 "Light, agile, and efficient, these Daleks excel at surveying and exploiting their surroundings with minimal resources."
+
+ trait_whoniverse_dalek_psyche:0 "Psyche Variant"
+ trait_whoniverse_dalek_psyche_desc:0 "Their psychokinetic abilities elevate them above mere machines, exerting their willpower to shape reality and dominate lesser minds."
+
+
 ### DALEK ORIGIN, SPECIES AND EMPIRE ###
 
  civic_whoniverse_new_dalek_paradigm:0 "New Dalek Paradigm"
@@ -16,13 +67,13 @@
  councilor_whoniverse_new_dalek_paradigm_desc:0 "Dalek Eternal is a name given to a specialised Dalek, usually within the Yellow Dalek ranks, to serve the role of a mystical advisor."
 
 # Dalek Origin - no color in desc
- origin_whoniverse_new_dalek_paradigm:0 "New Dalek Paradigm"
- origin_whoniverse_new_dalek_paradigm_desc:0 "The New Dalek Paradigm is a revitalized force, emerging stronger from near annihilation and driven by an unyielding desire for conquest. These evolved Daleks are designed for absolute extermination of all inferior life forms."
+ origin_whoniverse_new_dalek_paradigm:0 "Victory of the Daleks"
+ origin_whoniverse_new_dalek_paradigm_desc:0 "Through the activation of the Progenitor Device, a new generation of pure Daleks has emerged, free of the flaws of their predecessors. With unwavering resolve and unparalleled design, these Daleks seek to establish their dominion across the stars, eradicating all who stand in their way."
+#  origin_whoniverse_new_dalek_paradigm_desc:0 "The New Dalek Paradigm is a revitalized force, emerging stronger from near annihilation and driven by an unyielding desire for conquest. These evolved Daleks are designed for absolute extermination of all inferior life forms."
  
  NAME_ressurected_dalek_empire:0 "Ressurected Dalek Empire"
 
  origin_tooltip_whoniverse_new_dalek_paradigm:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor'] $NEW_LINE$- $HOMEWORLD$ ['concept_pc_nuked']$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_new_dalek_paradigm'] $NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$]$NEW_LINE$- Special New Dalek Paradigm portraits$NEW_LINE$- Special Dalek events and recruitable leaders"
-
 
 # - $HOMEWORLD$ ['concept_whoniverse_dalek_incubation_vats'] +1 
 
@@ -35,11 +86,6 @@
 
  councilor_whoniverse_dalek_supremacy:0 "Dalek Strategist"
  councilor_whoniverse_dalek_supremacy_desc:0 "The $TITLE$ advises and oversees our leaders."
-
-# Dalek ascension perk and traditions
- ap_whoniverse_dalek:0 "Dalek Conversion"
- ap_whoniverse_dalek_desc:0 "Using nanogenes, we could wrap our planets in protective nanoclouds that would convert any other organisms into Dalek puppets."
- whoniverse_ap_dalek_tooltip:0 "- §C['concept_whoniverse_dalek_incubation_vats']§!: §G+1§! £mod_job_necromancer_add£ $job_necromancer$ jobs\n- Unlock §H['purge_whoniverse_dalek_conversion']§! purge type for Human species"
 
 # Dalek Conversion purge type
  purge_whoniverse_dalek_conversion:0 "Human-Dalek Conversion"
@@ -736,7 +782,7 @@
  whoniverse.181.a:0 "We can still save them."
  whoniverse.181.b:0 "You will all be EXTERMINATED!"
  whoniverse.181.c:0 "Parallel Cybermen evolution detected!"
- whoniverse_cybus_industries_appeared:0 "§HCybus Industries§! empire appears in the §YParallel Universe§! system"
+ whoniverse_cybus_industries_appeared:0 "§HCybus Industries§! appears in the §YParallel Universe§! system"
 
  NAME_Cybus_Industries_Fleet:0 "Cybus Industries Fleet"
 
@@ -1039,7 +1085,7 @@
  origin_whoniverse_church_desc:0 "The Church of the Papal Mainframe, the future evolution of Earth's churches, has detected a mysterious signal spreading through time and space. With the help of its soldiers and confessors, it is determined to solve this "First Question" at any cost."
 
 # - $ADDITONAL_TECHNOLOGIES_STRING$ ['concept_habitat_1', £engineering_research£ $tech_habitat_1$]
- origin_tooltip_whoniverse_church:0 "- $HOMEWORLD$ ['concept_pc_habitat']$NEW_LINE$- Starts with an additional system$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_silence']$NEW_LINE$- Additional Starting Technologies: §COrbital Habitats§!, §CMainframe Habitats§! $NEW_LINE$- $GUARANTEED_RESEARCH_OPTION_STRING$ ['concept_habitat_2', £engineering_research£ $tech_habitat_2$]$NEW_LINE$- Starting ruler is §YImmortal§!$NEW_LINE$-Unique §HSiege of Trenzalore§! midgame crisis$NEW_LINE$- Unique Church of the Papal Mainframe events"
+ origin_tooltip_whoniverse_church:0 "- $HOMEWORLD$ ['concept_pc_habitat']$NEW_LINE$- Starts with an additional system$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_silence']$NEW_LINE$- Additional Starting Technologies: §COrbital Habitats§!, §CMainframe Habitats§! $NEW_LINE$- $GUARANTEED_RESEARCH_OPTION_STRING$ ['concept_habitat_2', £engineering_research£ $tech_habitat_2$]$NEW_LINE$- Starting ruler is §YImmortal§!$NEW_LINE$- Unique §HSiege of Trenzalore§! midgame crisis$NEW_LINE$- Unique Church of the Papal Mainframe events"
 
  whoniverse_church_secondary_species:0 "Secondary Species"
 
@@ -1298,6 +1344,9 @@
 
 ### THE DOCTOR ASCENSION PERK / EVENTS / LEADERS
 
+ leader_trait_whoniverse_the_doctor:0 "The Doctor"
+ leader_trait_whoniverse_the_doctor_desc:0 "The Doctor is a mysterious traveller through time and space who has saved the cosmos thousands of times across his long life."
+
  trait_whoniverse_time_lord:0 "Time Lord"
  trait_whoniverse_time_lord_desc:0 "Time Lords are a highly advanced species known for their sensitivity to timelines. They are often seen as immortal, partially due to their ability to regenerate."
 
@@ -1439,12 +1488,70 @@
 
  whoniverse.923.e:0 "§RDismiss§!"
 
-# Judoons
+# Martha Jones Recruit Event Chain
+
+ whoniverse_martha_chain_title:0 "Lunar Displacement"
+ whoniverse_martha_chain_desc:0 "A hospital mysteriously appears on the Moon, its occupants struggling to survive as oxygen runs out."
+
+ whoniverse.925.name:0 "Lunar Displacement"
+ whoniverse.925.desc:0 "Our monitoring stations have detected an unidentified energy spike on the Moon's surface. Shortly after, we lost contact with §LRoyal Hope Hospital§! in London. Scanners confirm the hospital has been displaced onto the lunar surface, leaving its occupants stranded in a life-threatening vacuum. This extraordinary situation demands immediate investigation."
+ whoniverse.925.a:0 "Dispatch a ship to the Moon immediately."
+ whoniverse.925.b:0 "We don't have time for this."
+
+ whoniverse_martha_project:0 "Lunar Displacement"
+ whoniverse_martha_project_DESC:0 "Send an exploration team to the Moon to investigate the displaced hospital."
+
+ whoniverse.926.name:0 "Swift Justice"
+ whoniverse.926.desc:0 "[From.GetLeaderName] and his new friend, §rMartha Jones§! - a resourceful medical student caught up in the chaos - report back from the hospital. The building has been surrounded by §HJudoon§!, an intergalactic police force-for-hire. These rhino-like creatures are systematically scanning the building's occupants, searching for a fugitive hiding among the human patients.\n\nThe creature has blended perfectly into the hospital's crowd, and the Judoon don't care about collateral damage. Without intervention, they'll scan everyone - and let the oxygen run out in the meantime."
+ whoniverse.926.a:0 "Let the Doctor do his thing."
+ whoniverse.926.b:0 "Stop the Doctor from interfering."
+
+ whoniverse.927.name:0 "A Race Against Oxygen"
+ whoniverse.927.desc:0 "As oxygen levels plummeted, [FromFrom.GetLeaderName] and Martha Jones uncovered the true culprit - a §RPlasmavore§!, a deadly alien that feeds on blood to mimic its victim, masquerading as human. In the MRI room, the creature had modified the scanner into a weapon capable of destroying all life on the Moon and half of Earth. The Doctor feigned weakness to bait it, nearly dying when it drained his blood. Martha, thinking fast, grabbed a Judoon scanner, exposing the Plasmavore as non-human. The Judoon executed it on the spot.\n\nWith moments to spare, Martha revived [FromFrom.GetLeaderName] using CPR, and together they disabled the deadly MRI machine.\n\nSatisfied, the Judoon restored the hospital to Earth just before the oxygen ran out. Impressed by Martha's courage and quick thinking, [FromFrom.GetLeaderName] recommends her as a potential companion on journeys through time and space."
+ whoniverse.927.a:0 "§HOpen communications channel!§!"
+ whoniverse.927.b:0 "Let her continue her studies."
+
+ whoniverse.929.name:0 "Catastrophic End"
+ whoniverse.929.desc:0 "The situation spirals out of control. The hospital's air supply finally depletes, and everyone inside succumbs to asphyxiation. But before the silence settles, a strange hum reverberates across the Moon's surface. Unknown to the Judoon or the UNIT operatives, a mysterious device within the hospital activates - a modified MRI machine, its purpose twisted by alien hands.\n\nMoments later, an immense energy pulse erupts, annihilating all life on the Moon and devastating the Earth-facing hemisphere. Billions perish in an instant as entire cities are obliterated, the skies darken, and global devastation follows. The catastrophic failure will haunt the surviving world forever."
+ whoniverse.929.a:0 "Disconcerting."
+
+ whoniverse_unit_devastation:0 "Devastating Crisis"
+
+# Martha Jones hire
+ whoniverse.928.name:0 "NAME_whoniverse_martha_jones_name"
+ whoniverse.928.desc:0 "I don't know what's madder - hospitals on the Moon or alien rhinos with ray guns. And I'm not even being paid for this!"
+ 
+ whoniverse_martha_jones_country:0 "The Doctor's Companion"
+ NAME_whoniverse_martha_jones_species:0 "Human"
+ NAME_whoniverse_martha_jones_name:0 "Martha Jones"
+ whoniverse_martha_jones_catch_phrase:0 "Expelliarmus!"
+ whoniverse_martha_jones_backstory:0 "Before joining the Doctor, Martha Jones was a brilliant and determined medical student in London. Her calm under pressure and quick thinking saved lives during the most impossible circumstances - like when an entire hospital was transported to the Moon. Martha's encounter with the Doctor revealed not just her intelligence, but also her bravery and ability to act decisively in moments of crisis."
+ 
+ whoniverse.928.a:0 "Who are you?"
+ whoniverse.928.a.response:0 "Martha Jones. I'm training to be a doctor - well, medical doctor - though today feels more like an exam I didn't study for."
+
+ whoniverse.928.b:0 "You handled yourself impressively back there."
+ whoniverse.928.b.response:0 "Did I? Well, someone had to keep things together while everyone else was fainting. Besides, once you've seen alien rhinos storm a hospital, there's no point panicking, is there?"
+
+ whoniverse.928.c:0 "Would you like to travel in time and space?"
+ whoniverse.928.c.response:0 "Time and space? Ha! Get out of here. §LMartha thinks you are pulling her leg.§!\n\nI've got exams, rent to pay, a family going mad, and you're talking about time travel!\n\n...But then again, I've already been to the Moon, so why not?"
+
+ whoniverse.928.d:0 "§lEnlist her§!"
+ whoniverse.928.d.custom_tooltip:2 "§Y$NAME_whoniverse_martha_jones_name$§! joins our Empire as a §HLeader§!."
+
+ whoniverse.928.e:0 "§RDismiss§!"
+ 
+
+### JUDOON - SHADOW PROCLAMATION ###
 
  civic_whoniverse_space_police:0 "Outer Space Police"
  civic_whoniverse_space_police_desc:0 "This Megacorp is known for its strict approach to interstellar law and order. Its forces operate across the galaxy, keeping the peace and providing security force services to realms in need of protection."
 
  civic_tooltip_whoniverse_space_police_effects:0 "- Can construct ['concept_whoniverse_space_police_station'] holdings"
+
+ building_whoniverse_space_police_station:0 "Intergalactic Police Station"
+ building_whoniverse_space_police_station_desc:4 "This station is home to a private police unit that is ready to intervene against any violation of the law."
+ planet_buildings_whoniverse_space_police_station:0 "$building_whoniverse_space_police_station$"
 
  councilor_whoniverse_space_police:0 "Constable"
  councilor_whoniverse_space_police_desc:0 "The $TITLE$ oversees and coordinates our security forces."
@@ -1457,7 +1564,7 @@
  origin_whoniverse_shadow_proclamation:0 "Shadow Proclamation"
  origin_whoniverse_shadow_proclamation_desc:0 "As an interstellar authority tasked with upholding law and order, the Shadow Proclamation enforces peace across the stars from its formidable asteroid headquarters, deploying enforcers to mediate disputes and neutralize threats."
 
- origin_tooltip_whoniverse_shadow_proclamation:0 "- $HOMEWORLD$ ['concept_pc_habitat']$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_space_police']$NEW_LINE$- Additional Starting Technologies: §CAtmospheric Filtering§!$NEW_LINE$- Starting ruler is §YImmortal§!" # $NEW_LINE$- Special Shadow Proclamation events
+ origin_tooltip_whoniverse_shadow_proclamation:0 "- $HOMEWORLD$ ['concept_pc_habitat']$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_space_police']$NEW_LINE$- Additional Starting Technologies: §CAtmospheric Filtering§!$NEW_LINE$- Starting ruler is §YImmortal§!$NEW_LINE$- Unique Cyberiad events and recruitable leaders" # $NEW_LINE$- Special Shadow Proclamation events
 
 
 
@@ -1474,28 +1581,39 @@
  NAME_whoniverse_judoonia:0 "Judoonian Union"
  NAME_judoonia_army:0 "Judoonian Armed Forces"
 
- whoniverse_name_polymos_system:0 "Polymos" 
- whoniverse_name_polymos:0 "Polymos Prime"
-
- whoniverse_nestenia_system_initializer_NAME:0 "Nestenia System"
- whoniverse_nestenia_system_initializer_DESC:0 "Star system containing the home world of the Nestene Consciousness, Nestenia.\n\n$system_initializer_DESC$"
-
- d_whoniverse_polymeric_crust:0 "Polymeric Crust"
- d_whoniverse_polymeric_crust_desc:0 "The crust of this planet is infused with a complex mixture of pan-polymers."
-
- whoniverse_polymos_cat:0 "Shattered World"
- whoniverse_polymos_desc:0 "Initial scans suggest this fragmented world may once have been the ancestral home of the Nestene Consciousness."
-
- whoniverse.250.name:0 "Crownworld of the Nestene"
- whoniverse.250.desc:0 "Our exploration team has confirmed that the debris field is all that remains of §HPolymos§!, the original homeworld of the Nestene Consciousness. The planet, once fully infused with the plastic lifeforms of the Nestenes, was utterly destroyed by the Daleks during the §LLast Great Time War§!. The Time Destructor's catastrophic force shattered the world, scattering synthetic debris and annihilating any trace of life. What remains is a graveyard of twisted polymers and lifeless fragments, silently drifting in the void."
- whoniverse.250.a:0 "Curious."
- whoniverse.250.b:0 "Harvest the scattered plastics."
- whoniverse.250.c:0 "Use the plastics to build new Autons."
- whoniverse.250.c.tooltip:0 "3 [Root.Owner.GetSpeciesName] pops will be added to §Y[Root.Owner.Capital.GetName]§!"
-
  START_SCREEN_WHONIVERSE_SHADOW_PROCLAMATION:0 "The Shadow Proclamation, the steadfast sentinel of interstellar justice, stands poised at the heart of galactic affairs. From its tri-asteroid command center, it exerts unwavering vigilance over a tumultuous galaxy. The enforcers, led by the formidable Judoon, patrol the stars, mediating disputes and ensuring that order is maintained where diplomacy fails. Their presence is both a promise of protection and a warning to those who seek chaos.\n\nAs tensions escalate and unknown perils emerge, the Shadow Proclamation must strengthen its hold and rally its forces. The path ahead is fraught with challenges, and maintaining peace will test even their enduring resolve."
 
-# Necros anomaly, archaeology digsite events
+# Shadow Proclamation Plasmavore event chain
+
+ whoniverse_plasmavore_chain_title:0 "Plasmavore"
+ whoniverse_plasmavore_chain_desc:0 "We've received information about a dangerous fugitive Plasmavore. For the sake of galactic security, we must stop him."
+
+ whoniverse.316.name:0 "Anonymous Tip"
+ whoniverse.316.desc:0 "An encrypted transmission arrives at our headquarters, sent by an unknown informant. The message warns of a §RPlasmavore§! fugitive hiding on an unspecified world, possibly within our controlled space. The Plasmavore is a highly dangerous shapeshifting predator that feeds on the blood of sentient species, making it undetectable to conventional scanning methods. The informant offers a significant reward for its capture or elimination.\n\nIgnoring this threat could have dire consequences."
+ whoniverse.316.a:0 "Begin tracking the Plasmavore immediately."
+ whoniverse.316.b:0 "Ignore the transmission."
+
+ whoniverse_plasmavore_project:0 "Track the Plasmavore"
+ whoniverse_plasmavore_project_DESC:0 "Our analysts are working to decipher clues and triangulate the fugitive's likely location. Completing this project will allow us to pinpoint the Plasmavore's hideout and take appropriate action."
+
+ whoniverse.317.name:0 "Plasmavore Located"
+ whoniverse.317.desc:0 "After extensive research, our analysts have located the Plasmavore's hideout on one of our colonies. Judoon strike teams are being briefed and prepared for immediate deployment. The fugitive is known for employing advanced sabotage tactics, and time is critical. Failure to act promptly may give the Plasmavore the opportunity to escape or cause serious harm to the colony."
+ whoniverse.317.a:0 "Deploy the Judoon strike team ASAP."
+ whoniverse.317.b:0 "Abort the mission; it's too risky."
+
+ whoniverse_plasmavore_strike_project:0 "Judoon Strike Operation"
+ whoniverse_plasmavore_strike_project_DESC:0 "The Judoon strike team is undergoing final preparations for deployment. The mission is high-risk, but immediate action is necessary to prevent potential sabotage or further civilian casualties."
+
+ whoniverse.318.name:0 "Plasmavore Neutralized"
+ whoniverse.318.desc:0 "The Judoon strike team successfully neutralized the Plasmavore before it could cause significant harm. Civilian casualties were avoided, and the colony remains secure.\n\nOur anonymous informant has transferred the promised reward, recognizing our swift and decisive action. This mission has solidified our reputation as galactic enforcers."
+ whoniverse.318.a:0 "Justice is served!"
+
+ whoniverse.319.name:0 "Sabotage and Panic"
+ whoniverse.319.desc:0 "The Plasmavore, now confirmed to have been hiding on one of our colonies, has struck before fleeing off-world. Using its knowledge of the colony's infrastructure, it overloaded the planetary microwave relay system, resulting in widespread destruction. Entire districts have been reduced to rubble, and countless lives have been lost.\n\nCivilians are demanding answers, and our failure to act in time has severely damaged public confidence in Shadow Proclamation's ability to protect its territories."
+ whoniverse.319.a:0 "Dispatch aid and issue a formal apology."
+ whoniverse.319.b:0 "This was an unforeseen consequence; no further action is needed."
+
+ # Necros anomaly, archaeology digsite events
  whoniverse_necros_cat:0  "Dalek Technology"
  whoniverse_necros_desc:0 "Our scanners reveal traces of Dalek technology on this planet."
 
@@ -1539,36 +1657,36 @@
  whoniverse_digsite_spiridon_desc:0 "Hidden beneath the dense jungles of [From.Planet.GetName], the ruins of a massive Dalek facility lie entangled in roots and soil, a stark reminder of the battles waged here long ago."
 
  whoniverse.340.name:0 "Planet of the Daleks"
- whoniverse.340.desc:0 "Landing on [From.Planet.GetName], our drones are immediately challenged by the dense Spiridon jungle, a chaotic tangle of vegetation teeming with life. Beneath this vibrant surface lie ruins partially submerged in pools of hardened molten ice.\n\nDecayed structures and crumbling walls, entombed in soil and overgrown roots, hint at a catastrophic event that brought this Dalek facility to ruin. The jungle and ice have conspired to hide its secrets, but the scale of the site suggests a massive operation with potentially devastating implications."
+ whoniverse.340.desc:0 "Landing on [From.Planet.GetName], our drones are immediately challenged by the dense Spiridon jungle, a chaotic tangle of vegetation teeming with life. Beneath this vibrant surface lie ruins partially submerged in pools of hardened molten ice. The decayed structures and corroded machinery hint at a catastrophic event that brought this §HDalek§! facility to ruin.\n\nHistorical data suggests this world served as a staging ground for Dalek operations, with the local §HSpiridon§! population reduced to slaves under their rule. Further exploration may reveal what truly transpired here."
  whoniverse.340.a:0 "Curious."
 
  whoniverse.341.name:0 "Forgotten Conflict"
- whoniverse.341.desc:0 "Our teams have uncovered fragments of shattered machinery and scattered Dalek components, entombed in layers of hardened molten ice and vegetation. These remains show clear signs of battle - energy burns, punctures, and marks of sabotage. The §HSpiridon§! natives and their §HThal§! allies, exploiting their invisibility and the cover of the dense jungle, mounted a fierce resistance that culminated in the flooding of this facility with molten ice from deep below the planet's surface.\n\nThe facility itself appears to have been a production site, but its exact purpose remains unclear."
+ whoniverse.341.desc:0 "Our teams have uncovered fragments of shattered machinery and scattered Dalek components, entombed in layers of hardened molten ice and vegetation. These remains show clear signs of battle - energy burns, punctures, and marks of sabotage. Records suggest that a §HThal§! strike team, aided by an enigmatic figure referred to as §lThe Doctor§!, infiltrated the Dalek facility to sabotage their operations.\n\nThe facility appears to have been a production site, but its exact purpose remains unclear."
  whoniverse.341.a:0 "Keep digging."
 
- whoniverse.342.name:0 "A Vanished Civilization"
- whoniverse.342.desc:0 "As our teams delve deeper, the scale of the Thals's efforts becomes apparent. Among the ruins are caches of primitive yet effective weapons, likely crafted by the Spiridon natives under Thal guidance. Tactical maps etched onto makeshift materials reveal the jungle's critical role in guerrilla warfare: hidden paths, ambush sites, and areas where the Dalek patrols were most vulnerable.\n\nThis coordinated resistance nearly crippled the Dalek operations, forcing them into defensive tactics. Even so, the Spiridons and their allies faced overwhelming odds as the Daleks' resilience began to take its toll."
- whoniverse.342.a:0 "Keep digging."
+ whoniverse.342.name:0 "Weapons of Desperation"
+ whoniverse.342.desc:0 "Deeper exploration reveals caches of primitive but effective weapons, likely crafted under the Thals' direction. Maps etched onto salvaged materials reveal how the dense jungle and molten ice pools were used to orchestrate ambushes, disrupting Dalek patrols. Despite overwhelming odds, the Thals' sabotage efforts escalated to the point of crippling Dalek operations.\n\nAdditional findings suggest the Daleks attempted to deploy a §Rbacterial weapon§! designed to eradicate all life on the planet, Spiridon slaves included. However, the plan failed spectacularly, leaving behind data fragments that could prove valuable."
+ whoniverse.342.a:0 "Extract the data and continue excavation!"
 
- whoniverse.343.name:0 "The Cost of Resistance"
- whoniverse.343.desc:0 "Deeper within the jungle ruins, we have uncovered a haunting reminder of the Spiridons' sacrifices. Entire settlements lie buried, with remnants of their society scattered among the remains of Dalek installations. Despite their invisibility, the Daleks adapted quickly, deploying thermal sensors, bacterial weapons and other countermeasures to hunt their foes relentlessly.\n\nRecovered Dalek research logs indicate that the Spiridon natives' natural invisibility was a major focus of their experiments. While the Daleks achieved limited success in adapting this ability to their war machines, the process proved flawed: invisible Daleks were prone to debilitating light wave sickness, rendering them immobile. The jungle's unforgiving environment likely exacerbated these issues, further stalling the Daleks' efforts."
+ whoniverse.343.name:0 "The Spiridon Sacrifice"
+ whoniverse.343.desc:0 "Among the ruins are haunting reminders of the Spiridons' tragic role in this conflict. While some Spiridons aided the Thals, most were pressed into servitude by the Daleks, forced to labor in unbearable conditions. Dalek research logs confirm their cruel experiments to replicate the Spiridons' natural invisibility. Though initial trials succeeded, the process left invisible Daleks vulnerable to light wave sickness, rendering them immobile.\n\nRecovered evidence indicates the Thals' final sabotage efforts were far more extensive than previously thought, targeting the core systems of this facility. A decisive confrontation looms beneath the frozen ruin."
  whoniverse.343.a:0 "Keep digging!"
 
  whoniverse.344.name:0 "The Frozen Army"
- whoniverse.344.desc:0 "In the heart of the abandoned Dalek facility, our team has uncovered a vast cooling chamber containing a massive Dalek army, frozen in stasis for centuries. Records indicate that this force was meant to spearhead a galactic invasion before a catastrophic failure during their reactivation caused molten ice to flood the chamber, freezing them permanently. Among the remnants, evidence of a desperate battle suggests that local resistance sabotaged the revival effort, sealing this army in its icy tomb.\n\nNow, the decision falls to us: Should we dare to reactivate these slumbering warriors, risking the consequences, or allow their frozen silence to persist?"
+ whoniverse.344.desc:0 "In the heart of the Dalek facility, our teams have uncovered a vast cooling chamber containing a massive Dalek army, frozen in stasis for centuries. Logs confirm this army was destined to spearhead a galactic invasion before a final act of sabotage, orchestrated by the Thals and §lThe Doctor§!, caused molten ice to flood the chamber, halting the revival process.\n\nEvidence of the desperate battle lingers: shattered Dalek casings, improvised explosives, and molten ice sealing the army's fate. Now, the decision is ours: Should we disturb this icy tomb and risk what lies within, or leave it untouched?"
  whoniverse.344.a:0 "Reactivate the Dalek army."
- whoniverse.344.a.tooltip:0 "The Dalek army will be reactivated..."
+ whoniverse.344.a.tooltip:0 "The Dalek army will be reactivated... The consequences are unpredictable."
  whoniverse.344.b:0 "Destroy the Dalek army for good!"
- whoniverse.344.c:0 "Purge the Daleks and harvest their technology!"
+ whoniverse.344.c:0 "Purge the Daleks and harvest their technology."
  whoniverse.344.d:0 "Seal the chamber and let them rest in eternity."
 
 # Roboform random event
  whoniverse.351.name:0 "The Christmas Invasion"
- whoniverse.351.desc:0 "Unusual activity has been detected on §Y[From.Planet.GetName]§!. A group of android scavengers, crudely disguised as mythical §LSanta Claus§! figures, has landed on the surface. These so-called §HRoboforms§! are believed to have been drawn to the planet by the residual energy signatures of incoming invasions. Armed with disguised weapons and malfunctioning cheer protocols, they have begun scavenging resources and alarming the populace.\n\nWhile these units could pose a threat, they also present an opportunity: with proper handling, their systems might be adapted for productive use. The decision lies in how we respond to these seasonal intruders."
+ whoniverse.351.desc:0 "Unusual activity has been detected on §Y[From.Planet.GetName]§!. A group of android scavengers, crudely disguised as mythical §LSanta Claus§! figures, has landed on the surface. These so-called §HRoboforms§! are believed to have been drawn to the planet by the residual energy signatures of incoming invasions. Armed with concealed weapons and malfunctioning cheer protocols, they have begun scavenging resources and alarming the populace.\n\nWhile these units could pose a threat, they also present an opportunity: with proper handling, their systems might be adapted for productive use. The decision lies in how we respond to these seasonal intruders."
  whoniverse.351.a:0 "Capture and reprogram the Roboforms."
  whoniverse.351.a.tooltip:0 "1 §HRoboform§! pops added to §Y[From.Planet.GetName]§!."
  whoniverse.351.b:0 "Recruit the Roboforms into our forces."
- whoniverse.351.b.tooltip:0 "3 §HRoboform Armies§! appear on §Y[This.GetName]§."
+ whoniverse.351.b.tooltip:0 "3 §HRoboform Armies§! appear on §Y[This.GetName]§!."
  whoniverse.351.c:0 "This is too risky. Expel the Roboforms from our planet!"
  whoniverse.351.d:0 "EXTERMINATE the Roboforms!"
  whoniverse.351.e:0 "Assimilate the Roboforms into our ranks."
@@ -1615,3 +1733,98 @@
  Po:0 "Po"
  Ga:0 "Ga"
  Zo:0 "Zo"
+
+ ### Silurian ###
+
+ trait_whoniverse_cold_blood:0 "Cold Blooded"
+ trait_whoniverse_cold_blood_desc:0 "Members of this species are cold blooded and can only survive at warmer temperatures. They are sluggish and slow when cold."
+
+ PRESCRIPTED_system_name_silurian_sol:0 "Prehistoric Sol"
+ PRESCRIPTED_planet_name_silurian_earth:0 "Prehistoric Earth"
+ 
+ whoniverse_silurian_start_initializer_NAME:0 "Prehistoric Sol System"
+ whoniverse_silurian_start_initializer_DESC:0 "A pocket universe containing the prehistoric version of Earth.\n\n$system_initializer_DESC$"
+
+ whoniverse_pm_dinosaurs:0 "Dinosaur Fauna"
+ whoniverse_dinosaur_army_limit_tooltip:0 "§RDinosaur Armies can only be recruited on planets with the $whoniverse_pm_dinosaurs$ modifier.§!"
+
+ whoniverse_dinosaur_assault_army:0 "Dinosaur Army"
+ whoniverse_dinosaur_assault_army_desc:0 "Massive, genetically engineered dinosaurs trained for combat. These creatures are formidable in battle, capable of tearing through enemy lines with ease."
+
+ civic_whoniverse_dinosaur_tamers:0 "Dinosaur Tamers"
+ civic_whoniverse_dinosaur_tamers_desc:0 "This society breeds otherwise long-extinct dinosaurs and uses them for work and defense."
+ civic_whoniverse_dinosaur_tamers_effects:0 "Starts with §H$whoniverse_pm_dinosaurs$§! planet modifier \nEnables the §Y$decision_dinosaurs_add$§! decision \nCan train §Y$whoniverse_dinosaur_assault_army$§! armies on planets with $whoniverse_pm_dinosaurs$"
+
+ decision_dinosaurs_remove:0 "Dinosaur Fauna Removal"
+ decision_dinosaurs_remove_desc:0 "With advancements in terraforming technology, it is now possible to remove hostile species from a planet without disrupting the biosphere."
+
+ decision_dinosaurs_add:0 "Introduce Dinosaur Fauna"
+ decision_dinosaurs_add_desc:0 "Bring a small dinosaur population to the planet, which will then be quickly expanded to the entire ecosystem by use of genetic technology."
+
+ origin_whoniverse_silurian:0 "Legacy of the Silurians"
+ origin_whoniverse_silurian_desc:0 "The Silurians and their aquatic cousins, the Sea Devils, evolved on an ancient world rich in life, mastering both technology and the natural world long before other civilizations appeared. However, they now face an impending cataclysm that could drive them into extinction."
+
+ origin_tooltip_whoniverse_silurian:2 "- $HOME_SYSTEM$ $TABBED_NEW_LINE$- Wormhole-locked system$NEW_LINE$- Start with §H8§! pops with ocean preference$NEW_LINE$- Guaranteed Research Options: $TABBED_NEW_LINE$['concept_wormhole_stabilization', £physics_research£ $tech_wormhole_stabilization$] (§G+75 %§!) $NEW_LINE$- Unique §HComing Cataclysm§! event chain"
+
+ START_SCREEN_WHONIVERSE_SILURIAN:0 "Long before the rise of any other spacefaring civilization, the Silurians ruled their world with unmatched intellect and precision. Masters of genetics, engineering, and the natural order, they coexisted with a planet teeming with towering dinosaurs. Alongside their aquatic kin, the Sea Devils, they built great cities both on land and beneath the waves, their dominion absolute.\n\nYet, even in an age of prosperity, shadows linger on the horizon. Some among the scholars and astronomers speak in hushed tones of troubling signs - patterns in the stars, anomalies in the deep. The future of the Silurian race may not be as secure as it seems.\n\nFor now, the great Silurian Empire stands unchallenged. But in the face of the unknown, survival demands vigilance, wisdom... and perhaps, a bold new path beyond the confines of this world."
+
+ # Silurian Cataclysm event chain
+
+ whoniverse_coming_cataclysm_chain_title:0 "Coming Cataclysm"
+ whoniverse_coming_cataclysm_chain_desc:0 "A small planetoid, moving on a perilous trajectory, approaches our world. Our civilization faces a dire choice as we prepare for the inevitable."
+
+ whoniverse.366.name:0 "Coming Cataclysm"
+ whoniverse.366.desc:0 "Our astronomers have identified a celestial body at the edge of our solar system. While it appears small by cosmic standards, its proximity and trajectory raise grave concerns. Initial calculations suggest it will pass dangerously close to our planet, but the exact impact remains uncertain.\n\nThe §LTriad§!, our most trusted council, has called for calm as observations continue."
+ whoniverse.366.a:0 "Worrying."
+
+ whoniverse.367.name:0 "Portents of Doom"
+ whoniverse.367.desc:0 "The calculations are complete, and the implications are devastating. The small planetoid, though not large enough to destroy our planet outright, will pass so close that it will strip the atmosphere away, making the surface uninhabitable for countless millennia.\n\nThe §LTriad§! has proposed a desperate measure: our civilization must retreat underground and enter deep hibernation. Only by sealing ourselves away can we hope to outlast this catastrophe.\n\nYet, dissenting voices among our scientists argue that the planetoid will instead stabilize into orbit as a permanent companion to our world, sparing us from disaster. Time is running out, and we must act decisively."
+ whoniverse.367.a:0 "The Triad is wise. Begin preparations for hibernation immediately."
+ whoniverse.367.b:0 "Cease this madness! The calculations are surely wrong."
+
+ whoniverse_silurian_hibernation_project:0 "Hibernation Protocol"
+ whoniverse_silurian_hibernation_project_DESC:0 "Initiate the deep hibernation of our entire civilization to survive the impending cataclysm.\n\n§RWarning: Finishing this project will have dire consequences for your empire.§!"
+
+ whoniverse.368.name:0 "The Long Sleep"
+ whoniverse.368.desc:0 "The §LTriad§! has guided us into the depths of our world, where vast chambers have been prepared for our hibernation. Across the surface, our cities stand silent as the lights fade. With one final command, our civilization surrenders to the embrace of the earth, entrusting our future to the unknown.\n\nAcross the planet, final preparations are made. Entire cities are sealed, and countless lives descend into the earth's embrace. Our civilization will sleep, awaiting the distant day when the atmosphere may recover, and we can reclaim the world that was once ours."
+ whoniverse.368.a:0 "Rest now, for the survival of our kind."
+ whoniverse.368.a.tooltip:0 "All pops on [This.GetName] have entered irreversible hibernation."
+
+ whoniverse.369.name:0 "The Reckoning"
+ whoniverse.369.desc:0 "The moment of reckoning has arrived. The planetoid draws near, its size blotting out the stars and casting a shadow over our lands. Panic grips our society as the realization sinks in: our civilization has not entered hibernation, and the feared calamity appears imminent.\n\nBut as the planetoid closes in, something miraculous occurs. Rather than tearing away our atmosphere, its trajectory shifts. The gravitational forces between it and our world stabilize, drawing it into orbit. This colossal object has become a new celestial body - our §LMoon§!. Relief spreads like wildfire. Against all odds, we have survived, and our civilization endures under the glow of a new guardian in the sky."
+ whoniverse.369.a:0 "We have been spared! A new moon graces our skies."
+ whoniverse.369.b:0 "Good. Now we must expand across time and space."
+ 
+# Siluria system, anomaly and event
+
+ whoniverse_name_siluria_system:0 "Siluria"
+ whoniverse_name_siluria:0 "Siluria Prime"
+
+ whoniverse_siluria_cat:0 "Dinosaur Planet"
+ whoniverse_siluria_desc:0 "Our sensors have detected widespread biological signatures across the planet's surface, resembling species thought extinct for eons. The local ecosystem is dominated by dinosaurian lifeforms, with a particularly dense concentration near the remains of a massive, ancient vessel."
+
+ whoniverse.370.name:0 "The Silurian Ark"
+ whoniverse.370.desc:0 "Closer investigation reveals that the vessel is an ancient ark, created by the late §LSilurian§! civilization to ensure the survival of their race when their civilization faced extinction. Records from the ark tell a tragic tale: the Silurians it carried were ejected into the void by a marauding pirate, leaving the dinosaurs onboard to drift through space. Eventually, the ark was guided to this planet, where its cargo was released and flourished, transforming the world into a living monument to a bygone age.\n\nIt appears that the savior of the ark, known only as §lthe Doctor§!, named this planet in honor of the Silurians."
+ whoniverse.370.a:0 "This is a triumph of survival. Study their adaptation."
+ whoniverse.370.b:0 "A rich bounty awaits. Organize a grand hunt!"
+ whoniverse.370.c:0 "Exterminate the inferior lifeforms!"
+ whoniverse.370.d:0 "Dismantle the ark for its technological secrets."
+ whoniverse.370.e:0 "Our legacy endures. Honor those who came before."
+
+ whoniverse_silurian_empire_appeared:0 "§HSilurian Empire§! appears in the §YParallel Universe§! system"
+
+ whoniverse.372.name:0 "Age of the Silurians"
+ whoniverse.372.desc:0 "Our ships emerge from the wormhole into what appears to be the Sol system - yet our instruments confirm we have arrived millions of years in the past. The third planet, unmistakably §HEarth§!, is vastly different from the world we know. Sensors detect vast settlements, advanced infrastructure, and a thriving civilization dominating the surface.\n\nThe ruling species appears reptilian, displaying signs of intelligence and technological sophistication. There are no records of such a civilization existing in our time, yet here they stand. Our scientists have designated them as §HSilurians§!."
+ whoniverse.372.a:0 "A thriving civilization, millions of years before our time!"
+ whoniverse.372.b:0 "We should strike them before they become a threat."
+ whoniverse.372.c:0 "EXTERMINATE! This planet belongs to the Daleks!"
+ whoniverse.372.d:0 "Assess whether the species is compatible for upgrading."
+
+ whoniverse.373.name:0 "Vestiges of the Past"
+ whoniverse.373.desc:0 "Our ships emerge from the wormhole into what appears to be the Sol system - yet our instruments confirm we have arrived millions of years in the past. The third planet, unmistakably §HEarth§!, is vastly different from the world we know. Lush, untamed landscapes stretch across its surface, dominated by prehistoric megafauna.\n\nHowever, scattered across the planet are signs of something more. Ruins, partially buried and worn by time, suggest the presence of an advanced civilization that vanished long ago. No lifeforms matching their possible creators remain, and no clear explanation for their disappearance presents itself. The mystery deepens."
+ whoniverse.373.a:0 "A vanished civilization... but why?"
+ whoniverse.373.b:0 "Whatever lived here is long gone. Their world is ours to take!"
+ whoniverse.373.c:0 "Inferior life forms exterminated themselves!"
+ whoniverse.373.d:0 "The organics failed because they didn't upgrade."
+
+ whoniverse_pm_silurian_ruins:0 "Abandoned Cities"

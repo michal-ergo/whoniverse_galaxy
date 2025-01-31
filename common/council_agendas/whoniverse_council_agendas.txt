@@ -1,16 +1,26 @@
-# Agenda for Cybermen to replace councilor
-# agenda_whoniverse_cybermen = {
-# 	agenda_cost = @base_agenda_cost
-# 	potential = {
-# 		is_machine_empire = yes
-# 	}
-# 	allow = {
-# 		has_civic = civic_whoniverse_cyber_conversion
-# 	}
-# 	effect = {
-# 		unlock_council_selection = yes
-# 	}
-# 	ai_weight = {
-# 		base = 0
-# 	}
-# }
+@base_tradition_agenda_cost = 7000
+@ascension_agenda_cost = 3500		# Same as short_agenda_cost from traditions
+@ascension_agenda_cooldown = 1080	# 3 Years
+
+agenda_whoniverse_dalek_supremacy = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_whoniverse_dalek_adopt
+	}
+	potential = {
+		is_whoniverse_dalek = yes
+		NOR = {
+			has_cybernetic_ascension = yes
+			has_psionic_ascension = yes
+			has_synthetic_ascension = yes
+			is_natural_design_empire = yes
+			is_individual_machine = yes
+		}
+	}
+	modifier = {
+		country_unity_produces_mult = 0.05
+		planet_pop_assembly_organic_mult = 0.025
+		rivalries_influence_produces_mult = 0.2
+	}
+	finish_modifier = agenda_whoniverse_dalek_supremacy_finish
+}

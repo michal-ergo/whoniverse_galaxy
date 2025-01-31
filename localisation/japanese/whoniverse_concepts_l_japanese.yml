@@ -1,6 +1,6 @@
 ﻿l_japanese:
 
-# Dalek origin concepts
+# Dalek concepts
  concept_whoniverse_dalek_infertile: "$trait_whoniverse_dalek_infertile$"
  concept_whoniverse_dalek_infertile_desc: "- $MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$: §G+50%§! $NEW_LINE$- Leader Maximum Negative Traits: §G-1§!$NEW_LINE$$TRAIT_IMPROVES_LEADERS$ $NEW_LINE$- $TRAIT_INFERTILE$ $DOUBLE_NEW_LINE$§L$trait_whoniverse_dalek_infertile_desc$§! "
 
@@ -33,6 +33,9 @@
 
  concept_wormhole_stabilization: "$tech_wormhole_stabilization$"
  concept_wormhole_stabilization_desc: "- Science ships can stabilize wormholes"
+
+ concept_purge_whoniverse_dalek_conversion: "$purge_whoniverse_dalek_conversion$"
+ concept_purge_whoniverse_dalek_conversion_desc: "$purge_whoniverse_dalek_conversion_tooltip$"
 
 # Cybermen concepts
 

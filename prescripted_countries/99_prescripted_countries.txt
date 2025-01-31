@@ -974,3 +974,78 @@ whoniverse_shadow_proclamation_oligarchy = {
 
 	}
 }
+
+# Silurian Empire
+whoniverse_silurian_empire = {
+	name = "PRESCRIPTED_silurian_empire"
+	adjective = "PRESCRIPTED_adjective_silurian_empire"
+	spawn_enabled = no # yes / no / always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_silurian_empire"
+
+	species = {
+		class = "REP"
+		portrait = "whoniverse_silurian"
+		name = PRESCRIPTED_species_name_silurian_empire
+		plural = PRESCRIPTED_species_plural_silurian_empire
+		adjective = PRESCRIPTED_species_adjective_silurian_empire
+		species_bio = "The Silurians were a species native to Earth that pre-dated humanity. Silurians were cold blooded and could only survive at warmer temperatures. Unlike other species, Silurians showed an important intraspecific variation, with vast differentiation between breeds, such as the number of eyes, the formation of their pupils and the colour of their skin."
+		name_list = "REP2"
+		trait = "trait_whoniverse_cold_blood"
+		trait = "trait_communal"
+		trait = "trait_enduring"
+		trait = "trait_quarrelsome"
+	}
+
+	room = "personality_honorbound_warriors_room"
+
+	authority = "auth_oligarchic"
+	civics = { "civic_whoniverse_dinosaur_tamers" "civic_warrior_culture" }
+	government = gov_war_council
+	advisor_voice_type = l_militarist
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_spiritualist"
+	ethic = "ethic_militarist"
+
+	origin = "origin_whoniverse_silurian"
+
+	# flags = { start_screen_whoniverse_unit custom_start_screen }
+
+	planet_name = "PRESCRIPTED_planet_name_silurian_empire"
+	planet_class = "pc_savannah"
+	initializer = "whoniverse_silurian_start_initializer"
+	system_name = "PRESCRIPTED_system_name_silurian_empire"
+
+	graphical_culture = "reptilian_01"
+	city_graphical_culture = "reptilian_01"
+
+	empire_flag = {
+		icon= {
+			category = "whoniverse"
+			file = "whoniverse_flag_12.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "rounded_middle.dds"
+		}
+		colors={
+			"swamp_green"
+			"shadow_green"
+			"black"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_silurian_empire"
+		gender = male
+		portrait = whoniverse_silurian_m_02
+		texture = 0
+		attachment = 1
+		clothes = 0
+		trait = trait_ruler_charismatic
+		leader_class = official
+	}
+}

@@ -1962,6 +1962,7 @@ country_event = {
 			hidden_effect = {
 				last_created_country = {
 					set_country_flag = whoniverse_cybus_industries_flag
+					add_seen_bypass_type = wormhole
 				}
 			}
 			while = {
@@ -2276,6 +2277,7 @@ country_event = {
 			hidden_effect = {
 				last_created_country = {
 					set_country_flag = whoniverse_cybus_industries_flag
+					add_seen_bypass_type = wormhole
 				}
 			}
 			while = {
@@ -2506,6 +2508,7 @@ country_event = {
 				}
 			last_created_country = {
 				set_graphical_culture = industrial_01
+				add_seen_bypass_type = wormhole
 				set_country_flag = early_space_age
 			#	set_country_flag = humans_early_space_age
 				set_pre_ftl_age = early_space_age

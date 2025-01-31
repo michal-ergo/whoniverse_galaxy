@@ -17,6 +17,8 @@ whoniverse_dalek_set = {
 		"whoniverse_dalek_paradigm"
 		"whoniverse_dalek_imperial"
 		"whoniverse_dalek_renegade"
+		"whoniverse_dalek_type_iii"
+		"whoniverse_dalek_hybrid"
 	}
 
 	# These should not be used for randomly generated species
@@ -24,6 +26,8 @@ whoniverse_dalek_set = {
 		"whoniverse_dalek_paradigm"
 		"whoniverse_dalek_imperial"
 		"whoniverse_dalek_renegade"
+		"whoniverse_dalek_type_iii"
+		"whoniverse_dalek_hybrid"
 		}
 }
 
@@ -101,6 +105,37 @@ whoniverse_human_set = {
 		"whoniverse_human"
 	}
 }
+
+whoniverse_silurian_set = {
+	species_class = REP
+
+	portraits = {
+		# "whoniverse_church"
+		# "whoniverse_unit"
+		"whoniverse_silurian"
+	}
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"whoniverse_silurian"
+	}
+}
+
+whoniverse_sea_devil_set = {
+	species_class = REP
+
+	portraits = {
+		# "whoniverse_church"
+		# "whoniverse_unit"
+		"whoniverse_sea_devil"
+	}
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"whoniverse_sea_devil"
+	}
+}
+
 
 whoniverse_silence_set = {
 	species_class = HUM

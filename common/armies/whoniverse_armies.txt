@@ -85,3 +85,79 @@ headless_monk_army = {
 	}
 }
 
+# Titanic life troops
+# Can build on planets with titanic life if you get event + special project there
+# Should be very strong and quite expensive, but cannot get attachments and can be built only in limited numbers
+# Currently limited to 3. Ideally it would be X * Num of planets you have done the project one, but that is too complex for scripts
+whoniverse_dinosaur_assault_army = {
+	damage = 2.0
+	health = 2.5
+	morale = 2.0
+	morale_damage = 1.5
+	collateral_damage = 3.0
+	war_exhaustion = 1.5
+	time = 150
+	icon = GFX_army_type_gene_warrior
+	has_species = no
+
+	resources = {
+		category = armies
+		cost = {
+			food = 250
+		}
+
+		upkeep = {
+			food = 2
+		}
+	}
+
+	potential_country = {
+		has_valid_civic = civic_whoniverse_dinosaur_tamers
+	}
+	potential = {
+	# 	# custom_tooltip = {
+	# 	# 	text = whoniverse_dinosaur_army_limit_tooltip
+	# 	# 	planet = { has_modifier = whoniverse_pm_dinosaurs }
+	# 	# }
+	 	planet = { has_modifier = whoniverse_pm_dinosaurs }
+	}
+
+	allow = {
+		custom_tooltip = {
+			text = whoniverse_dinosaur_army_limit_tooltip
+			planet = { has_modifier = whoniverse_pm_dinosaurs }
+		}
+		
+		# custom_tooltip = {
+		# 	text = titanic_troop_limit_tooltip
+		# 	planet = { has_modifier = whoniverse_pm_dinosaurs }
+		# 	owner = {
+		# 		has_valid_civic = civic_whoniverse_dinosaur_tamers
+		# 		NOT = {
+		# 			 check_variable = {
+		# 				which = "dinosaur_soldier_count"
+		# 				value = 9
+		# 			}
+		# 		}
+		# 	}
+		# }
+	}
+
+	# on_queued = {
+	# 	owner = {
+	# 		change_variable = {
+	# 			which = "dinosaur_soldier_count"
+	# 			value = 1
+	# 		}
+	# 	}
+	# }
+
+	# on_unqueued = {
+	# 	owner = {
+	# 		change_variable = {
+	# 			which = "dinosaur_soldier_count"
+	# 			value = -1
+	# 		}
+	# 	}
+	# }
+}

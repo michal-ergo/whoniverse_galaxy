@@ -85,3 +85,6 @@ concept_whoniverse_space_police = {
 concept_whoniverse_space_police_station = {
 	icon = "gfx/interface/icons/buildings/holding_whoniverse_space_police_station.dds"
 }
+
+concept_purge_whoniverse_dalek_conversion = {
+}

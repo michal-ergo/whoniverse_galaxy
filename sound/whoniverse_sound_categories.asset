@@ -29,6 +29,7 @@ category = {
 		whoniverse_ninth_doctor_greetings
 		whoniverse_tenth_doctor_greetings
 		whoniverse_rose_tyler_greetings
+		whoniverse_martha_jones_greetings
 		whoniverse_dalek_greetings
 		whoniverse_dalek_supreme_greetings
 		whoniverse_dalek_davros_greetings
@@ -37,6 +38,7 @@ category = {
 		whoniverse_dalek_imperial_greetings
 		whoniverse_dalek_imperial_davros_greetings
 		whoniverse_dalek_renegade_greetings
+		whoniverse_dalek_hybrid_greetings
 		whoniverse_cybermen_classic_greetings
 		whoniverse_cybermen_cybus_greetings
 		whoniverse_cybermen_cyberiad_greetings
@@ -69,6 +71,11 @@ category = {
 		whoniverse_judoon_greetings
 		whoniverse_shadow_architect_greetings
 		whoniverse_roboform_music
+		whoniverse_silurian_hiss
+		whoniverse_silurian_female_greetings
+		whoniverse_silurian_male_greetings
+		whoniverse_silurian_leader_greetings
+		whoniverse_silurian_vastra_greetings
 	}
 }
 
@@ -104,6 +111,18 @@ soundeffect = {
 }
 
 soundeffect = {
+	name = whoniverse_martha_jones_greetings
+	sounds = {
+		sound = whoniverse_martha_extraterrestrial
+		sound = whoniverse_martha_how_does_that_work
+		sound = whoniverse_martha_listen
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+
+soundeffect = {
 	name = whoniverse_dalek_renegade_greetings
 	sounds = {
 		sound = whoniverse_insufficient_data
@@ -121,6 +140,15 @@ soundeffect = {
 		sound = whoniverse_you_will_be_exterminated
 		sound = whoniverse_exterminate_renegade
 		sound = whoniverse_full_alert
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_dalek_hybrid_greetings
+	sounds = {
+		sound = whoniverse_human_dalek
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -511,6 +539,56 @@ soundeffect = {
 	max_audible_behaviour = fail
 }
 
+# Silurian Greetings
+
+soundeffect = {
+	name = whoniverse_silurian_hiss
+	sounds = {
+		sound = whoniverse_silurian_hiss
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_silurian_female_greetings
+	sounds = {
+		sound = whoniverse_silurian_hiss
+		sound = whoniverse_silurian_primitive_apes
+		sound = whoniverse_silurian_this_is_now_tribunal
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_silurian_male_greetings
+	sounds = {
+		sound = whoniverse_silurian_decontaminating_now
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_silurian_leader_greetings
+	sounds = {
+		sound = whoniverse_silurian_if_i_could_get_a_word
+		sound = whoniverse_silurian_we_were_a_civilization
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_silurian_vastra_greetings
+	sounds = {
+		sound = whoniverse_silurian_truth_is_singular
+		sound = whoniverse_silurian_im_a_lizard_woman
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
 
 # Sound Effects
 

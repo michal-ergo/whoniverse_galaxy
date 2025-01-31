@@ -1,0 +1,68 @@
+##########################################################################
+# Planet Modifier Decisions
+##########################################################################
+
+decision_dinosaurs_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = whoniverse_decision_dinosaurs
+	enactment_time = 900
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		NOT = {
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		has_modifier = whoniverse_pm_dinosaurs
+		owner = {
+			has_technology = tech_terrestrial_sculpting
+		}
+	}
+
+	effect = {
+		remove_modifier = whoniverse_pm_dinosaurs
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+decision_dinosaurs_add = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = whoniverse_decision_dinosaurs
+	enactment_time = 800
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+			food = 500
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = civic_whoniverse_dinosaur_tamers }
+		NOT = { has_modifier = whoniverse_pm_dinosaurs }
+	}
+
+	effect = {
+		add_modifier = { modifier = "whoniverse_pm_dinosaurs" days = -1 }
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+
+

@@ -72,6 +72,29 @@ sound =
 
 sound = 
 {
+	name = "whoniverse_martha_extraterrestrial"
+	file = "vo/phenotypes/doctor/martha_extraterrestrial.wav"
+	volume = 0.9
+}
+
+sound = 
+{
+	name = "whoniverse_martha_listen"
+	file = "vo/phenotypes/doctor/martha_listen.wav"
+	volume = 0.9
+}
+
+sound = 
+{
+	name = "whoniverse_martha_how_does_that_work"
+	file = "vo/phenotypes/doctor/martha_how_does_that_work.wav"
+	volume = 0.9
+}
+
+
+
+sound = 
+{
 	name = "whoniverse_exterminate"
 	file = "vo/phenotypes/daleks/exterminate.wav"
 	volume = 0.2
@@ -153,56 +176,63 @@ sound =
 {
 	name = "whoniverse_insufficient_data"
 	file = "vo/phenotypes/daleks/insufficient_data_renegade.wav"
-	volume = 0.5
+	volume = 0.6
 }
 
 sound = 
 {
 	name = "whoniverse_exterminate_renegade"
 	file = "vo/phenotypes/daleks/exterminate_renegade.wav"
-	volume = 0.5
+	volume = 0.6
 }
 
 sound = 
 {
 	name = "whoniverse_you_will_obey_the_daleks"
 	file = "vo/phenotypes/daleks/you_will_obey_the_daleks_renegade.wav"
-	volume = 0.5
+	volume = 0.6
 }
 
 sound = 
 {
 	name = "whoniverse_stay_where_you_are"
 	file = "vo/phenotypes/daleks/stay_where_you_are_imperial.wav"
-	volume = 0.5
+	volume = 0.6
 }
 
 sound = 
 {
 	name = "whoniverse_full_alert"
 	file = "vo/phenotypes/daleks/full_alert_imperial.wav"
-	volume = 0.5
+	volume = 0.6
 }
 
 sound = 
 {
 	name = "whoniverse_you_will_be_exterminated"
 	file = "vo/phenotypes/daleks/you_will_be_exterminated_imperial.wav"
-	volume = 0.5
+	volume = 0.6
 }
 
 sound = 
 {
 	name = "whoniverse_prepare_the_assault_shuttle"
 	file = "vo/phenotypes/daleks/prepare_the_assault_shuttle_imperial.wav"
-	volume = 0.5
+	volume = 0.6
 }
 
 sound = 
 {
 	name = "whoniverse_excellent_davros"
 	file = "vo/phenotypes/daleks/excellent_imperial.wav"
-	volume = 0.5
+	volume = 0.6
+}
+
+sound = 
+{
+	name = "whoniverse_human_dalek"
+	file = "vo/phenotypes/daleks/i_am_a_human_dalek.wav"
+	volume = 0.57
 }
 
 sound = 
@@ -572,7 +602,7 @@ sound =
 {
 	name = "whoniverse_judoon"
 	file = "vo/phenotypes/judoon/judoon.wav"
-	volume = 0.65
+	volume = 0.61
 }
 
 sound = 
@@ -595,6 +625,62 @@ sound =
 	file = "vo/phenotypes/roboform/roboform_music.wav"
 	volume = 1.0
 }
+
+sound = 
+{
+	name = "whoniverse_silurian_hiss"
+	file = "vo/phenotypes/silurian/hiss.wav"
+	volume = 0.8
+}
+
+sound = 
+{
+		name = "whoniverse_silurian_we_were_a_civilization"
+	file = "vo/phenotypes/silurian/we_were_a_civilization.wav"
+	volume = 0.8
+}
+
+sound = 
+{
+	name = "whoniverse_silurian_primitive_apes"
+	file = "vo/phenotypes/silurian/primitive_apes.wav"
+	volume = 0.8
+}
+
+sound = 
+{
+	name = "whoniverse_silurian_decontaminating_now"
+	file = "vo/phenotypes/silurian/decontaminating_now.wav"
+	volume = 0.8
+}
+
+sound = 
+{
+	name = "whoniverse_silurian_if_i_could_get_a_word"
+	file = "vo/phenotypes/silurian/if_i_could_get_a_word.wav"
+	volume = 0.8
+}
+
+sound = 
+{
+	name = "whoniverse_silurian_this_is_now_tribunal"
+	file = "vo/phenotypes/silurian/this_is_now_tribunal.wav"
+	volume = 0.8
+}
+sound = 
+{
+	name = "whoniverse_silurian_truth_is_singular"
+	file = "vo/phenotypes/silurian/truth_is_singular.wav"
+	volume = 0.9
+}
+
+sound = 
+{
+	name = "whoniverse_silurian_im_a_lizard_woman"
+	file = "vo/phenotypes/silurian/im_a_lizard_woman.wav"
+	volume = 0.95
+}
+
 
 ### Sound Effects ###
 

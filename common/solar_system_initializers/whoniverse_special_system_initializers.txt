@@ -8,7 +8,7 @@ whoniverse_zygor_system = {
  	name = "whoniverse_zygor_system" # Renamed from Tau Ceti
 
  	usage = misc_system_init
- 	usage_odds = 100
+ 	usage_odds = 500
  	max_instances = 1
 
  	class = "sc_g"
@@ -72,47 +72,113 @@ whoniverse_zygor_system = {
  	}
 }
 
-# # Dalek Asylum - moved back to prescripted species systems
-# whoniverse_asylum_system = {
-# 	name = "whoniverse_name_asylum_system"
-
-# 	usage = misc_system_init
-# 	#usage = custom_empire
-# 	usage_odds = 100
-# 	max_instances = 1
-
-# 	class = "sc_b"
-
-# 	flags = { whoniverse_dalek_asylum_system }
-
-# 	planet = {
-# 		name = "D-4-Lambda-E"
-# 		class = "pc_b_star"
-# 		orbit_distance = 0
-# 		orbit_angle = 1
-# 		size = 25
-# 		has_ring = no
-# 	}
-
-# 	# Dalek Asylum
-# 	planet = {
-# 		name = "D-4-Lambda-E I"
-# 		class = "pc_shielded"
-# 		orbit_distance = 65
-# 		orbit_angle = 220
-# 		size = { min = 20 max = 24 }
-# 		has_ring = no
-
-# 		init_effect = {
-# 			clear_deposits = yes
-# 			add_deposit = d_society_5
-# 			add_anomaly = { category = whoniverse_asylum_cat }
-# 			set_planet_flag = whoniverse_dalek_asylum
-# 		}
-# 	}
+# Siluria System
+whoniverse_siluria_system_initializer = {
+	name = "whoniverse_name_siluria_system"
 	
-# 	asteroid_belt = {
-# 		type = rocky_asteroid_belt
-# 		radius = 140
-# 	}
-# }
+	class = "sc_g"
+
+	usage = misc_system_init
+	usage_odds = 500
+	max_instances = 1
+
+	flags = { whoniverse_siluria_system }
+
+	planet = {
+		name = "whoniverse_name_siluria_system"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+	}
+
+	change_orbit = 30
+	
+	planet = {
+		name = "Siluria I"
+		class = "pc_molten"
+		orbit_distance = 10
+		orbit_angle = 70
+		size = 6
+		has_ring = no
+	}
+
+	planet = {
+		name = "Siluria II"
+		class = "pc_toxic"
+		orbit_distance = 35
+		orbit_angle = 85
+		size = 11
+		has_ring = no
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 200
+	}
+	
+	# Siluria
+	planet = {
+		name = "whoniverse_name_siluria"
+		class = "pc_savannah"
+		orbit_distance = 40
+		orbit_angle = 120
+		size = { min = 18 max = 23 }
+		has_ring = no
+
+		anomaly = whoniverse_siluria_cat
+
+		init_effect = {
+			# add_anomaly = { category = whoniverse_siluria_cat }
+			set_planet_flag = whoniverse_siluria
+			add_modifier = {
+				modifier = whoniverse_pm_dinosaurs
+			}
+		}
+
+		moon = {
+			name = "Jura"
+			class = "pc_barren_cold"
+			size = 4
+			orbit_distance = 13
+			orbit_angle = 40
+			has_ring = no
+		}
+	}
+
+	change_orbit = 10
+
+	planet = {
+		name = "Siluria IV"
+		class = "pc_barren"
+		orbit_distance = 65
+		orbit_angle = 185
+		size = 14
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Siluria V"
+		class = "pc_gas_giant"
+		orbit_distance = 50
+		orbit_angle = 140
+		size = 22
+		has_ring = yes
+	}
+
+	planet = {
+		name = "Siluria VI"
+		class = "pc_gas_giant"
+		orbit_distance = 20
+		orbit_angle = 80
+		size = 17
+		has_ring = yes
+	}
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 300
+	}
+
+}

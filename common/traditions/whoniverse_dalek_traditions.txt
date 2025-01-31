@@ -1,0 +1,99 @@
+tr_whoniverse_dalek_adopt = {
+	possible = {
+		has_ascension_perk = ap_whoniverse_dalek
+		has_technology = tech_gene_tailoring
+	}
+	unlocks_agenda = agenda_whoniverse_dalek_supremacy
+	ai_weight = { factor = 5000 }
+}
+
+tr_whoniverse_dalek_finish = {
+	# Unlocks Dalek Variant traits
+	modifier = {
+		ascension_perks_add = 1
+		BIOLOGICAL_species_trait_points_add = 2
+		BIOLOGICAL_species_trait_picks_add = 1
+		modify_species_cost_mult = -0.40
+	}
+	custom_tooltip = tr_whoniverse_dalek_finish_desc
+}
+
+
+tr_whoniverse_dalek_conversion = {
+	custom_tooltip = tr_whoniverse_dalek_conversion_desc
+	# unlocks_agenda = agenda_psionic_supremacy
+	# modifier = {
+	# 	custom_tooltip = tr_psionics_adopt_tooltip
+	# }
+	# on_enabled = {
+	# 	hidden_effect = {
+	# 		country_event = { id = utopia.2600 }
+	# 	}
+	# }
+	# Grants the Latent Psionic trait
+
+	# tradition_swap = {
+	# 	name = tr_psionics_adopt_shroudwalker
+	# 	inherit_name = yes
+	# 	inherit_icon = yes
+	# 	trigger = {
+	# 		has_origin = origin_shroudwalker_apprentice
+	# 	}
+	# 	modifier = {
+	# 		custom_tooltip = tr_psionics_adopt_shroudwalker_tooltip
+	# 	}
+	# 	on_enabled = {
+	# 		add_research_option = tech_telepathy
+	# 		hidden_effect = {
+	# 			country_event = { id = utopia.2600 }
+	# 		}
+	# 	}
+	# 	weight = {
+	# 		factor = 1
+		
+	# }}
+}
+
+tr_whoniverse_dalek_emergency = {
+	on_enabled = {
+		hidden_effect = {
+			add_research_option = tech_jump_drive_1
+		}
+	}
+	custom_tooltip = tr_whoniverse_dalek_emergency_desc
+	modifier = {
+		ship_disengage_chance_mult = 0.15
+	}
+}
+
+tr_whoniverse_dalek_progenitor = {
+	possible = {
+		has_tradition = tr_whoniverse_dalek_conversion
+	}
+	modifier = {
+		pop_environment_tolerance = 0.10
+		BIOLOGICAL_species_trait_points_add = 2
+	}
+	custom_tooltip = tr_whoniverse_dalek_progenitor_desc
+}
+
+tr_whoniverse_dalek_nanocloud = {
+	possible = {
+		has_tradition = tr_whoniverse_dalek_progenitor
+	}
+	custom_tooltip = tr_whoniverse_dalek_nanocloud_desc
+}
+
+tr_whoniverse_dalek_pathweb = {
+	possible = {
+		has_tradition = tr_whoniverse_dalek_emergency
+	}
+	modifier = {
+		add_base_country_intel = 10
+		intel_decryption_add = 1
+		intel_encryption_add = 1
+	}
+}
+
+
+

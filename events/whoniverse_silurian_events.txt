@@ -1,0 +1,997 @@
+namespace = whoniverse
+
+# 01 - 03 = placeholders
+# 04 - 05 = Dalek Conversion effect
+# 06 - 07 = Dalek Reinvention of the Dalek Empire event
+# 08 - 12 = Dalek setup events
+# 12 - 17 = Dalek Asylum event chain
+# 19 + 24 = Dalek Necros 
+# 20 - 23 = Dalek Davros event chain
+# 30 - 39 = Cybermen setup events
+# 40 - 49 = Cybermen Mondasian Colony Ship chain
+# 50 - 59 = Cybermen Cyberiad Origin event chain
+# 60 - 69 = Cybermen Cyberiad systems events and anomalies
+# 70 - 79 = UNIT setup / Life on Mars project
+# 80 - 99 = UNIT Zygon Invasion event chain
+# 100 - 109 = Zygon system events and anomalies
+# 110 - 119 = Weeping Angels UNIT Blink event chain
+# 120 - 139 = Weeping Angels random events
+# 140 - 149 = Church of the Papal Mainframe setup
+# 150 - 159 = The Question (Trenzalore) event chain
+# 160 - 169 = Kovarian Chapter event chain (planned)
+# 170 - 179 = Alfava Metraxis archaelogy digsite
+# 180 - 189 = Cybusmen Pete's World events
+# 190 - 199 = Cybusmen Cybus Industries events
+# 200 - 209 = Dalek Empire Remnants setup events
+# 210 - 219 = Dalek Empire Remnants events
+# 220 - 239 = Mechanoid anomalies / Mechanus digsite
+# 240 - 249 = Nestene Consciousness setup events
+# 250 - 259 = Nestene Consciousness system events and anomalies
+# 260 - 269 = Zygor archaelogy site
+# 270 - 299 = Dalek Civil War
+# 310 - 329 = Shadow Proclamation
+# 330 - 339 = Dalek - Necros Archaelogy Digsite
+# 340 - 349 = Dalek - Spiridon Archaelogy Digsite
+# 350 - 359 = Roboform random events (generic)
+# 360 - 369 = Silurian setup events
+# 370 - 379 = Siluria, other Silurian events
+# 900 - 909 = The Doctor ascension perk
+# 910 - 919 = Ninth Doctor events, Rose Tyler event chain
+# 920 - 929 = Tenth Doctor hire, Martha Jones event chain
+
+# Dinosaur Fauna added at the beginning of the game
+planet_event = {
+	id = whoniverse.360
+	hide_window = yes
+	location = ROOT
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		has_ground_combat = no
+		is_capital = yes
+	}
+
+	trigger = {
+		owner = {
+			has_valid_civic = civic_whoniverse_dinosaur_tamers
+			}
+		NOT = { has_modifier = whoniverse_pm_dinosaurs }
+		num_pops > 0
+		}
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = whoniverse_pm_dinosaurs
+		}
+	}
+}
+
+country_event = {
+	id = whoniverse.361
+	hide_window = yes
+	
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_silurian
+		}
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		
+		capital_scope = {
+			while = {
+			 	count = 8
+			 	random_owned_pop = {
+			 		kill_pop = yes
+			 	}
+			}
+			random_owned_pop = {
+				modify_species = {
+					species = owner_main_species
+					portrait = whoniverse_sea_devil
+					remove_trait = trait_pc_savannah_preference
+					remove_trait = trait_enduring
+					remove_trait = trait_quarrelsome
+					add_trait = trait_pc_ocean_preference
+					effect = {
+						save_event_target_as = sea_devil_species
+					}
+				}
+			}			
+			while = {
+				count = 7
+				create_pop = {
+					species = event_target:sea_devil_species
+				}
+			}
+		}
+	}
+}
+
+# Cataclysm event setup
+country_event = {
+    id = whoniverse.362
+    hide_window = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_origin = origin_whoniverse_silurian
+			}
+	}
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	immediate = { 
+		capital_scope = {
+			planet_event = { id = whoniverse.366 days = 360 random = 90 }  # year after start	
+		}
+	}
+}
+
+# Add "seen bypass wormholes" to empires starting on prehistoric Earth, wormhole tech, immortal ruler
+country_event = {
+	id = whoniverse.363
+	hide_window = yes
+	
+	trigger = { 
+		owner = { 
+			any_system = {
+				has_star_flag = whoniverse_silurian_start_system
+				}
+			}
+		}
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = encountered_first_primitive
+		add_seen_bypass_type = wormhole
+		add_research_option = tech_wormhole_stabilization
+		add_tech_progress = {
+			tech = tech_wormhole_stabilization
+			progress = 0.75
+		}
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			give_technology = {
+				tech = tech_wormhole_stabilization
+			}
+		}
+	}
+}
+
+# Coming Cataclysm event chain begins
+planet_event = {
+	id = whoniverse.366
+	title = "whoniverse.366.name"
+	desc = "whoniverse.366.desc"
+	picture = GFX_evt_asteroid_approaching_planet
+	show_sound = event_bad_omen
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_coming_cataclysm_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_silurian
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		begin_event_chain = {
+			event_chain = "whoniverse_coming_cataclysm_chain"
+			target = ROOT
+		}
+		
+	}
+ 
+	option = {
+		name = whoniverse.366.a
+		hidden_effect = {
+			planet_event = { id = whoniverse.367 days = 90 random = 0 }
+		}
+	}
+}
+
+# Coming Cataclysm event project available
+planet_event = {
+	id = whoniverse.367
+	title = "whoniverse.367.name"
+	desc = "whoniverse.367.desc"
+	picture = GFX_evt_asteroid_approaching_planet
+	show_sound = event_air_raid_siren
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_coming_cataclysm_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_silurian
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		enable_special_project = {
+			name = "whoniverse_silurian_hibernation_project"
+			owner = root
+			location = this
+			}
+		hidden_effect = {
+			planet_event = { id = whoniverse.369 days = 630 random = 0 }
+		}
+	}
+ 
+	option = {
+		name = whoniverse.367.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward
+				min = @tier1unitymin
+				max = @tier1unitymax
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.367.b
+		owner = {
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier1influencereward
+				min = @tier1influencemin
+				max = @tier1influencemax
+			}
+		}
+	}
+}
+
+# Coming Cataclysm event project complete
+planet_event = {
+	id = whoniverse.368
+	title = "whoniverse.368.name"
+	desc = "whoniverse.368.desc"
+	picture = GFX_evt_clones
+	show_sound = event_airlock
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_coming_cataclysm_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_silurian
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_owned_pop = {
+				kill_pop = yes
+			}
+		}	
+	}
+ 
+	option = {
+		name = whoniverse.368.a
+		custom_tooltip = whoniverse.368.a.tooltip
+		owner = {
+			end_event_chain = "whoniverse_coming_cataclysm_chain"
+		}
+	}
+}
+
+# Coming Cataclysm event project not made in time
+planet_event = {
+	id = whoniverse.369
+	title = "whoniverse.369.name"
+	desc = "whoniverse.369.desc"
+	picture = GFX_evt_announcement
+	show_sound = event_celebration
+	location = ROOT
+	trackable = yes
+	event_chain = whoniverse_coming_cataclysm_chain
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		is_ai = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			has_origin = origin_whoniverse_silurian
+		}
+		num_pops > 0
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			abort_special_project = {
+				type = whoniverse_silurian_hibernation_project
+			}
+		}
+	}
+ 
+	option = {
+		name = whoniverse.369.a
+		owner = {
+			end_event_chain = "whoniverse_coming_cataclysm_chain"
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4unitymin
+				max = @tier4unitymax
+			}
+		}
+	}
+	option = {
+		name = whoniverse.369.b
+		owner = {
+			end_event_chain = "whoniverse_coming_cataclysm_chain"
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier3influencereward
+				min = @tier3influencemin
+				max = @tier3influencemax
+			}
+		}
+	}
+}
+
+# Siluria anomaly
+ship_event = {
+    id = whoniverse.370
+    title = "whoniverse.370.name"
+    desc = "whoniverse.370.desc"
+    picture = GFX_evt_alien_wildlife
+	location = from
+	show_sound = event_alien_nature
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			is_ai = no
+		}
+		solar_system = { has_star_flag = whoniverse_siluria_system }
+		FROM = {
+			has_planet_flag = whoniverse_siluria
+		}
+	}
+
+	immediate = {
+		from = { prevent_anomaly = yes }
+	}
+
+	option = {
+		name = whoniverse.370.a
+		trigger = {
+			owner = { is_whoniverse_dalek = no }
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+		}
+	}
+	option = {
+		name = whoniverse.370.b
+		trigger = {
+			owner = {
+				NOT = { is_whoniverse_dalek = yes }
+				OR = {
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_xenophobe
+				}
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = energy
+				value = @tier2materialreward
+				min = @tier2materialmin
+				max = @tier2materialmax
+			}
+			add_monthly_resource_mult = {
+				resource = food
+				value = @tier2materialreward
+				min = @tier2materialmin
+				max = @tier2materialmax
+			}
+		}
+	}
+	option = {
+		name = whoniverse.370.c
+		trigger = {
+			owner = { is_whoniverse_dalek = yes }
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2unityreward
+				min = @tier2unitymin
+				max = @tier2unitymax
+			}
+		}
+	}
+	option = {
+		name = whoniverse.370.d
+		trigger = {
+			owner = { NOT = { has_origin = origin_whoniverse_silurian } }
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.370.e
+		trigger = {
+			owner = { has_origin = origin_whoniverse_silurian }
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier3unityreward
+				min = @tier3unitymin
+				max = @tier3unitymax
+			}
+		}
+	}
+}
+
+### Prehistoric Earth - exploration events ###
+# Scope = Fleet
+# From = System
+fleet_event = {
+	id = whoniverse.371
+	hide_window = yes
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		from = { has_star_flag = whoniverse_silurian_system }
+		NOT = {
+			any_country = {
+				has_origin = origin_whoniverse_silurian
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			save_global_event_target_as = whoniverse_prehistoric_sol_explorer
+		}
+		random_galaxy_planet = {
+			limit = {
+				has_planet_flag = whoniverse_silurian_earth
+			}
+			save_global_event_target_as = whoniverse_silurian_earth
+		}
+		if = {
+			limit = {
+				exists = event_target:whoniverse_silurian_earth
+			}
+			owner = {
+				random_list = {
+					1 = {
+						country_event = {
+							id = whoniverse.372
+						}
+					}
+					1 = {
+						country_event = {
+							id = whoniverse.373
+						}
+					}
+				}
+			}
+		}
+	}	
+}
+
+# Prehistoric Sol - Event 1 - Silurian Earth
+country_event = {
+	id = whoniverse.372
+	title = "whoniverse.372.name"
+	desc = "whoniverse.372.desc"
+	picture = GFX_evt_whoniverse_silurians
+	show_sound = whoniverse_silurian_hiss
+	location = event_target:whoniverse_silurian_earth
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	trigger = {
+		exists = event_target:whoniverse_silurian_earth
+	}
+
+	immediate = {
+		event_target:whoniverse_silurian_earth = {
+			create_species = {
+				name = WHO_SILURIAN
+				plural = WHO_SILURIAN_pl
+				class = REP
+				portrait = whoniverse_silurian
+				namelist = "REP2"
+				traits = {
+					trait = "trait_whoniverse_cold_blood"
+					trait = "trait_communal"
+					trait = "trait_enduring"
+					trait = "trait_quarrelsome"
+				}
+				effect = {
+					save_event_target_as = silurian_species
+				}
+			}
+			create_country = {
+				name = "PRESCRIPTED_silurian_empire"
+				species = last_created_species
+				type = default
+				ethos = {
+					ethic = "ethic_xenophobe"
+					ethic = "ethic_spiritualist"
+					ethic = "ethic_militarist"
+				}
+				authority = auth_oligarchic
+				origin = origin_whoniverse_silurian
+				civics = {
+					civic = civic_whoniverse_dinosaur_tamers
+					civic = civic_warrior_culture
+				}
+				flag = {
+					icon = {
+						category = "whoniverse"
+						file = "whoniverse_flag_12.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "rounded_middle.dds"
+					}
+					colors = {
+						"swamp_green"
+						"shadow_green"
+						"black"
+						"null"
+					}
+				}
+				effect = {
+					set_graphical_culture = reptilian_01
+					establish_contact = { who = root.owner location = event_target:whoniverse_silurian_earth }
+					establish_communications = root.owner
+					save_global_event_target_as = whoniverse_silurian_empire_global
+					add_seen_bypass_type = wormhole
+				##Copy technology
+					if = {
+						limit = {
+							any_country = { is_ai = no }
+						}
+						random_country = {
+							limit = { is_ai = no }
+							save_event_target_as = tech_country
+						}
+						copy_techs_from = {
+							target = event_target:tech_country
+							except = {
+								# Horizon Signal
+								tech_akx_worm_1
+								tech_akx_worm_2
+								tech_akx_worm_3
+							}
+						}
+					}
+					else = {
+						random_country = {
+							limit = { is_country_type = default	}
+							save_event_target_as = tech_country
+						}
+						copy_techs_from = {
+							target = event_target:tech_country
+							except = {
+								# Horizon Signal
+								tech_akx_worm_1
+								tech_akx_worm_2
+								tech_akx_worm_3
+							}
+						}
+					}
+					if = {
+						limit = {
+							NOT = { has_technology = tech_starbase_2 }
+						}
+						give_technology = { tech = tech_starbase_2 }
+					}
+					if = {
+						limit = {
+							NOT = { has_technology = tech_destroyers }
+						}
+						give_technology = { tech = tech_destroyers }
+					}
+					if = {
+						limit = {
+							NOT = { has_technology = tech_cruisers }
+						}
+						give_technology = { tech = tech_cruisers }
+					}
+				}
+			}
+			set_owner = last_created_country
+			set_capital = yes
+
+			hidden_effect = {
+				last_created_country = {
+					set_country_flag = whoniverse_silurian_empire_flag
+				}
+			}
+			while = {
+				count = 26
+				create_pop = {
+					species = event_target:silurian_species
+				}
+			}
+					
+			##Build Starbases
+			
+			# starbase = {
+			# 	set_owner = last_created_country
+			# 		}
+	
+			create_starbase = {
+				size = starbase_starport
+				owner = last_created_country
+				module = shipyard
+				building = crew_quarters
+					effect = {
+					set_starbase_module = {
+						slot = 1
+							module = anchorage
+						}
+						set_starbase_module = {
+							slot = 2
+							module = anchorage
+						}
+					}
+				}
+		
+				while = {
+					count = 10
+					create_army = {
+						name = "Silurian Army"
+						owner = last_created_country
+						species = last_created_species
+						type = "defense_army"
+					}
+				}
+
+				while = {
+					count = 4
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_city
+					}
+				}
+				while = {
+					count = 2
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_industrial
+					}
+				}
+				while = {
+					count = 3
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_farming
+					}
+				}
+				while = {
+					count = 3
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_mining
+					}
+				}
+				while = {
+					count = 3
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_generator
+					}
+				}
+				
+			add_building = building_capital
+			add_building = building_research_lab_1
+			add_building = building_foundry_1
+			add_building = building_commercial_zone
+			add_building = building_stronghold
+			add_building = building_energy_grid
+			add_building = building_mineral_purification_plant
+			add_building = building_autochthon_monument
+			add_building = building_holo_theatres
+		
+			last_created_country = {
+				add_resource = {
+					minerals = 15000
+					energy = 15000
+					food = 15000
+					consumer_goods = 10000
+					alloys = 10000
+					rare_crystals = 1000
+					volatile_motes = 1000
+					exotic_gases = 1000
+					influence = 1000
+					unity = 10000
+				}
+				create_fleet_from_naval_cap = 0.75
+				while = {
+					count = 2
+					create_leader = {
+						class = scientist
+						species = last_created_species
+						name = random
+						skill = 3
+						}
+				}
+				while = {
+					count = 1
+					create_leader = {
+						class = commander
+						species = last_created_species
+						name = random
+						skill = 3
+					}
+				}
+				create_leader = {
+					class = official
+					species = last_created_species
+					name = random
+					skill = 3
+				}			
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.372.a
+		custom_tooltip = whoniverse_silurian_empire_appeared
+		trigger = {
+			owner = {
+				is_whoniverse_dalek = no
+				has_whoniverse_cyber_conversion = no
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+				}
+		}
+	}
+	option = {
+		name = whoniverse.372.b
+		custom_tooltip = whoniverse_silurian_empire_appeared
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_authoritarian
+				}
+				is_whoniverse_dalek = no
+				has_whoniverse_cyber_conversion = no
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward
+				min = @tier1unitymin
+				max = @tier1unitymax
+			}
+		}
+	}	
+	option = {
+		name = whoniverse.372.c
+		custom_tooltip = whoniverse_silurian_empire_appeared
+		trigger = {
+			owner = {
+				is_whoniverse_dalek = yes
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward
+				min = @tier1unitymin
+				max = @tier1unitymax
+			}
+		}
+	}
+	option = {
+		name = whoniverse.372.d
+		custom_tooltip = whoniverse_silurian_empire_appeared
+		trigger = {
+			owner = {
+				has_whoniverse_cyber_conversion = yes
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward
+				min = @tier1unitymin
+				max = @tier1unitymax
+			}
+		}
+	}		
+}
+
+# Prehistoric Earth - No Silurians
+country_event = {
+	id = whoniverse.373
+	title = "whoniverse.373.name"
+	desc = "whoniverse.373.desc"
+	picture = GFX_evt_alien_nature
+	show_sound = event_alien_nature
+	location = event_target:whoniverse_silurian_earth
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	trigger = {
+		exists = event_target:whoniverse_silurian_earth
+	}
+
+	option = {
+		name = whoniverse.373.a
+		trigger = {
+			owner = {
+				is_whoniverse_dalek = no
+				has_whoniverse_cyber_conversion = no
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+				}
+		}
+		event_target:whoniverse_silurian_earth = {	
+			add_modifier = {
+				modifier = whoniverse_pm_silurian_ruins
+			}
+		}
+	}
+	option = {
+		name = whoniverse.373.b
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_authoritarian
+				}
+				is_whoniverse_dalek = no
+				has_whoniverse_cyber_conversion = no
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier1influencereward
+				min = @tier1influencemin
+				max = @tier1influencemax
+			}
+		}
+		event_target:whoniverse_silurian_earth = {	
+			add_modifier = {
+				modifier = whoniverse_pm_silurian_ruins
+			}
+		}
+	}	
+	option = {
+		name = whoniverse.373.c
+		trigger = {
+			owner = {
+				is_whoniverse_dalek = yes
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward
+				min = @tier1unitymin
+				max = @tier1unitymax
+			}
+		}
+		event_target:whoniverse_silurian_earth = {	
+			add_modifier = {
+				modifier = whoniverse_pm_silurian_ruins
+			}
+		}
+	}
+	option = {
+		name = whoniverse.373.d
+		trigger = {
+			owner = {
+				has_whoniverse_cyber_conversion = yes
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward
+				min = @tier1unitymin
+				max = @tier1unitymax
+			}
+		}
+		event_target:whoniverse_silurian_earth = {	
+			add_modifier = {
+				modifier = whoniverse_pm_silurian_ruins
+			}
+		}
+	}		
+}
+
