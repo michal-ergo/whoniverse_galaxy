@@ -1,0 +1,14 @@
+animation = {
+	name = "dalekportraits_01_ndp_idle01_animation"
+	file = "ndp_idle_01.anim"
+}
+
+animation = {
+	name = "dalekportraits_01_ndp_idle02_animation"
+	file = "ndp_idle_02.anim"
+}
+
+animation = {
+	name = "dalekportraits_01_ndp_idle03_animation"
+	file = "ndp_idle_03.anim"
+}

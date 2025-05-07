@@ -78,3 +78,10 @@
 
  concept_whoniverse_space_police_station: "$building_whoniverse_space_police_station$"
  concept_whoniverse_space_police_station_desc: "- Enforcer jobs: §G+2§!$NEW_LINE$- Stability: §G+10§!$NEW_LINE$- Diplomatic weight from fleet strength: §G+5%§!\n\n§L$building_whoniverse_space_police_station_desc$§!"
+
+# Sontaran concepts
+ concept_whoniverse_sontaran_infertile: "$trait_whoniverse_sontaran_infertile$"
+ concept_whoniverse_sontaran_infertile_desc: "- $MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$: §G+50%§! $NEW_LINE$- Army Damage: §G+50%§! $NEW_LINE$- Leader Lifespan: §R-20 years§! $NEW_LINE$- $TRAIT_INFERTILE$ $DOUBLE_NEW_LINE$§L$trait_whoniverse_sontaran_infertile_desc$§!"
+
+ concept_whoniverse_pm_sontaran_gravity: "$whoniverse_pm_sontaran_gravity$"
+ concept_whoniverse_pm_sontaran_gravity_desc: "Building Cost: §R+20%§! $NEW_LINE$District Cost: §R+20%§! $NEW_LINE$Habitability: §R-10%§! $NEW_LINE$Max Districts: §G+4§!"

@@ -14,9 +14,7 @@ whoniverse_asylum_cat = {
 		}
 	}
 	
-	on_success = {
-		1 = whoniverse.12
-	}
+	on_success = whoniverse.12
 }
 
 whoniverse_necros_cat = {

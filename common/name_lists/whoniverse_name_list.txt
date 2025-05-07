@@ -1518,3 +1518,363 @@ JUDOON1 = {
 		}
 	}
 }
+
+### Sontaran name list
+SONTARAN1 = {
+	category = "Humanoid"
+	ship_names = {
+
+		generic = {
+			"Sontar's Wrath"
+			"Glory of Sontar"
+			"Relentless Assault"
+			"Invincible Spear"
+			"Battleborn"
+			"Storm of Strax"
+			"Eternal Conquest"
+			"Victory March"
+			"Unyielding Force"
+			"Death from the Stars"
+			"Unstoppable Legion"
+			"Indomitable Honor"
+			"Warrior's Vow"
+			"Fist of Sontar"
+			"Shield of the Marshal"
+			"Vengeance Protocol"
+			"Crimson Onslaught"
+			"Glorious Devastation"
+			"Honorbound Strike"
+			"First in Battle"
+			"Endless Advance"
+			"Supreme Tactic"
+			"Code of War"
+			"Triumphant Roar"
+			"Absolute Discipline"
+			"Fury of the Clones"
+			"Battletested"
+			"Frontline Sentinel"
+			"Cloned for War"
+			"Undaunted Charge"
+			"Blazing Honor"
+			"Undying Assault"
+			"Victory is Inevitable"
+			"Strategic Domination"
+			"Martial Thunder"
+			"Ruthless Doctrine"
+			"Line Breaker"
+			"Fearless Incursion"
+			"Ultimate Soldier"
+			"Warrior's Fate"
+}
+
+		corvette = {
+			"Scout Ship"
+		}
+
+		destroyer = {
+		}
+
+		cruiser = {
+		}
+
+		battleship = {
+		}
+
+		titan = {
+		}
+
+		colossus = {
+		}
+
+		science = {
+			"Science Ship"
+		}
+
+		colonizer = {
+			"Colony Ship"
+		}
+
+		constructor = {
+			"Constructor"
+		}
+
+		transport = {
+			"Boarding Craft"		
+		}
+
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+		}
+		sequential_name = SONTARAN1_FLEET
+	}
+
+	army_names = {
+
+		generic = {
+			sequential_name = SONTARAN1_ARMY
+		}
+
+		machine_defense = {
+			sequential_name = SONTARAN1_SURFACEGUARD
+		}
+
+		machine_assault_1 = {
+			sequential_name = SONTARAN1_ARMY
+		}
+
+		machine_assault_2 = {
+			sequential_name = SONTARAN1_ARMY
+		}
+
+		machine_assault_3 = {
+			sequential_name = SONTARAN1_ARMY
+		}
+
+		defense_army = {
+			sequential_name = SONTARAN1_SURFACEGUARD
+		}
+
+		assault_army = {
+			sequential_name = SONTARAN1_ARMY
+		}
+
+		slave_army = {
+			sequential_name = SONTARAN1_SLAVES
+		}
+
+		clone_army = {
+			sequential_name = SONTARAN1_CLONEARMY
+		}
+
+		undead_army = {
+			sequential_name = SONTARAN1_UNDEAD
+		}
+
+		robotic_army = {
+			sequential_name = SONTARAN1_ROBOTARMY
+		}
+
+		robotic_defense_army = {
+			sequential_name = SONTARAN1_ROBOTGUARD
+		}
+
+		psionic_army = {
+			sequential_name = SONTARAN1_PSYCHICARMY
+		}
+
+		xenomorph_army = {
+			sequential_name = SONTARAN1_XENO
+		}
+
+		gene_warrior_army = {
+			sequential_name = SONTARAN1_SUPER
+		}
+
+		occupation_army = {
+			sequential_name = SONTARAN1_OCCUPATIONGUARD
+		}
+
+		individual_machine_occupation_army = {
+			sequential_name = SONTARAN1_OCCUPATIONGUARD
+		}
+
+		robotic_occupation_army = {
+			sequential_name = SONTARAN1_OCCUPATIONNEXUS
+		}
+
+		primitive_army = {
+			sequential_name = SONTARAN1_PRIMITIVEARMY
+		}
+
+		industrial_army = {
+			sequential_name = SONTARAN1_INDUSTRIALARMY
+		}
+
+		postatomic_army = {
+			sequential_name = SONTARAN1_POSTATOMICARMY
+		}
+
+		warpling_army = {
+			sequential_name = seq_warpling_army
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"Pandora"
+				"New Sontar"
+				"Battleworld Theta"
+				"Kastorak"
+				"Vorskarn"
+				"Glorious Conquest"
+				"Vandrak Major"
+				"Korshan"
+				"Unyielding Front"
+				"Draskor"
+				"Morgath Hold"
+				"Fortress Sontar"
+				"Straknos"
+				"Bloodied Soil"
+				"Jarnok"
+				"Endless Legion"
+				"Varask"
+				"Stormhold"
+				"Conquest Eternal"
+				"Tharvok"
+				"Tactical Nexus"
+				"Warforged Bastion"
+				"Indomitable Stronghold"
+				"Vornak"
+				"Battleborn Citadel"
+				"Kraghast"
+				"First Strike"
+				"Relentless Vanguard"
+				"Glory's Threshold"
+				"Unconquered Ground"
+				"Soldier's Redemption"
+				"Warlord's Legacy"
+				"Cloneforge Alpha"
+				"Siege Eternal"
+				"Korrnak Prime"
+				"Legion's Forge"
+				"Relentless Front"
+				"Impervious Hold"
+				"Undying Assault"
+				"Kroshar"
+				"Final Advance"
+			}
+		}
+
+		pc_desert = {
+			names = {
+			}
+		}
+
+		pc_tropical = {
+			names = {
+			}
+		}
+
+		pc_arid = {
+			names = {
+			}
+		}
+
+		pc_continental = {
+			names = {
+			}
+		}
+
+		pc_ocean = {
+			names = {
+			}
+		}
+
+		pc_tundra = {
+			names = {
+			}
+		}
+
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+
+	}
+
+	
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				"Kaagh"
+				"Starn"
+				"Stonn"
+				"Sarg"
+				"Jingo Linx"
+				"Styre"
+				"Stor"
+				"Stike"
+				"Stave"
+				"Steg"
+				"Brilox"
+				"Brak"
+				"Lerox"
+				"Staal"
+				"Stomm"
+				"Stark"
+				"Kragar" # last lore name
+				"Strag"
+				"Krox"
+				"Varg"
+				"Brak"
+				"Stok"
+				"Drax"
+				"Gorn"
+				"Thrak"
+				"Krul"
+				"Zarn"
+				"Stovak"
+				"Tarnok"
+				"Vorlax"
+				"Brilok"
+				"Kraghor"
+				"Stomvik"
+				"Dornak"
+				"Morgash"
+				"Zorvik"
+				"Bragthar"
+				"Sten"
+				"Lork"
+				"Drak"
+				"Threx"
+				"Grax"
+				"Ston"
+				"Jarg"
+				"Trok"
+				"Krag"
+				"Vark"
+				"Stranik"
+				"Torlek"
+				"Granth"
+				"Velgarn"
+				"Bragnar"
+				"Styrak"
+				"Vandrik"
+				"Korshak"
+				"Stavik"
+				"Tharnok"
+				"Brux"
+				"Drok"
+				"Staz"
+				"Vrek"
+				"Gornak"
+				"Trolk"
+				"Zargan"
+				"Stirn"
+				"Kradax"
+				"Jorvok"
+			}
+
+		}
+	}
+}

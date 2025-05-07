@@ -431,3 +431,62 @@ origin_whoniverse_silurian = {
 		base = 5
 	}
 }
+
+# Sontaran origin
+origin_whoniverse_sontaran = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_whoniverse_sontaran.dds"
+	picture = origin_whoniverse_sontaran
+	flags = { whoniverse_sontaran custom_start_screen }
+	playable = {
+		always = yes
+	}
+
+	description = "origin_tooltip_whoniverse_sontaran"
+
+	advanced_start = no
+
+	potential = {
+		species_archetype = { NOT = { value = MACHINE } }
+		species_class = { 
+			NOR = {
+				value = WHO_DALEK
+				value = WHO_CYBERMAN
+				value = WHO_AUTON
+				}
+			}
+		}
+
+	possible = {
+		species_archetype = { NOT = { value = MACHINE } }
+		species_class = { 
+			NOR = {
+				value = WHO_DALEK
+				value = WHO_CYBERMAN
+				value = WHO_AUTON
+				}
+			}
+		}
+
+	traits = {
+	 	trait = trait_whoniverse_sontaran_infertile
+	}
+
+	# modifier = {
+	# 	mining_district_housing_add = 2
+	# 	mining_district_buildings_add = 0.34
+	# 	district_mining_max = 4
+	# 	# planet_miners_minerals_produces_add = 0.5
+	# 	planet_orbital_bombardment_damage = -0.5
+	# 	planet_building_build_speed_mult = -0.10
+	# 	planet_storm_devastation_mult = -0.25
+	# }
+
+	initializers = { whoniverse_sontar_system_initializer }
+
+	blocks_random_machine_empire_generation	= yes
+
+	random_weight = {
+		base = 0
+	}
+}

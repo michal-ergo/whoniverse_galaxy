@@ -10,15 +10,23 @@ trait_whoniverse_dalek_machine = {
 	randomized = no
 
 	species_potential_add = {
-		OR = {
-			species_portrait = whoniverse_dalek_paradigm
-			species_portrait = whoniverse_dalek_imperial
-			species_portrait = whoniverse_dalek_renegade
-			species_portrait = whoniverse_dalek_type_iii
-		}
-		NOT = {
-			species_portrait = whoniverse_dalek_hybrid
-		}
+		always = yes
+		# OR = {
+		# 	species_portrait = whoniverse_dalek_paradigm
+		# 	species_portrait = whoniverse_dalek_imperial
+		# 	species_portrait = whoniverse_dalek_renegade
+		# 	species_portrait = whoniverse_dalek_type_iii
+		# }
+		# NOR = {
+		# 	species_portrait = whoniverse_human
+		# 	species_portrait = whoniverse_time_lord
+		# 	species_portrait = whoniverse_dalek_hybrid
+		# 	species_portrait = whoniverse_cyberman_classic
+		# 	species_portrait = whoniverse_cyberman_cybus
+		# 	species_portrait = whoniverse_cyberman_cyberiad
+		# 	species_portrait = whoniverse_cyberman_mondasian
+		# 	species_portrait = whoniverse_cyberman_warrior
+		# }
 	}
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
@@ -26,6 +34,8 @@ trait_whoniverse_dalek_machine = {
 	species_possible_merge_add = {
 		always = no
 	}
+	
+	species_class = { WHO_DALEK }
 
 	opposites = { "trait_adaptive" "trait_extremely_adaptive" "trait_whoniverse_cyber_suit" "trait_whoniverse_time_lord" }
 	
@@ -34,7 +44,7 @@ trait_whoniverse_dalek_machine = {
 		#pop_environment_tolerance = 0.10
 		planet_pops_organics_food_upkeep_mult = -0.25
 		planet_pops_consumer_goods_upkeep_mult = -0.25
-		army_damage_mult = 0.25
+		army_damage_mult = 0.5
 		pop_housing_usage_mult = 0.1
 	}
 	potential_crossbreeding_chance = 0
@@ -52,7 +62,7 @@ trait_whoniverse_dalek_machine = {
 trait_whoniverse_dalek_infertile = {
 	cost = 0
 	potential_crossbreeding_chance = 0
-	opposites = { "trait_conservational" "trait_wasteful" "trait_slow_breeders" "trait_rapid_breeders" "trait_plantoid_budding" "trait_lithoid_budding" "trait_advanced_budding" "trait_vat_grown" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" }
+	opposites = { "trait_whoniverse_time_lord" "trait_whoniverse_cyber_suit"  "trait_conservational" "trait_wasteful" "trait_slow_breeders" "trait_rapid_breeders" "trait_plantoid_budding" "trait_lithoid_budding" "trait_advanced_budding" "trait_vat_grown" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" }
 	sorting_priority = 20
 
 	initial = yes
@@ -66,8 +76,6 @@ trait_whoniverse_dalek_infertile = {
 	species_possible_merge_add = {
 		always = no
 	}
-
-	opposites = { "trait_whoniverse_time_lord" "trait_whoniverse_cyber_suit" }
 
 	immortal_leaders = no
 	infertile = yes
@@ -172,7 +180,7 @@ trait_whoniverse_dalek_time = {
 
 	initial = no
 	randomized = no
-	improves_leaders = yes
+	improves_leaders = no
 
 	species_potential_add = {
 		from = { has_tradition = tr_whoniverse_dalek_finish }
@@ -210,7 +218,7 @@ trait_whoniverse_dalek_recon = {
 
 	initial = no
 	randomized = no
-	improves_leaders = yes
+	improves_leaders = no
 
 	species_potential_add = {
 		from = { has_tradition = tr_whoniverse_dalek_finish }
@@ -284,7 +292,7 @@ trait_whoniverse_dalek_psyche = {
 
 # Cyber Suit trait
 trait_whoniverse_cyber_suit = {
-	cost = 2
+	cost = 3
 
 	initial = yes
 	randomized = no
@@ -305,9 +313,9 @@ trait_whoniverse_cyber_suit = {
 
 		planet_pops_organics_food_upkeep_mult = -0.75
 		pop_environment_tolerance = 0.10
-		army_damage_mult = 0.25
+		army_damage_mult = 0.50
 		planet_pops_organics_energy_upkeep_mult = 0.15
-		pop_housing_usage_mult = 0.25
+		# pop_housing_usage_mult = 0.25
 	}
 
 	infertile = yes
@@ -594,4 +602,50 @@ trait_whoniverse_cold_blood = {
 	}
 
 	icon = "gfx/interface/icons/traits/trait_whoniverse_cold_blood.dds"
+}
+
+# Sontaran DNA trait
+trait_whoniverse_sontaran_infertile = {
+	cost = 0
+	potential_crossbreeding_chance = 0
+	opposites = { "trait_clone_soldier_infertile" "trait_whoniverse_dalek_infertile" "trait_slow_breeders" "trait_rapid_breeders" "trait_plantoid_budding" "trait_lithoid_budding" "trait_advanced_budding" "trait_vat_grown" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" }
+	sorting_priority = 20
+
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+
+	immortal_leaders = no
+	infertile = yes
+
+	leader_age_min = 5
+	leader_age_max = 25
+
+	potential_crossbreeding_chance = 0
+
+	allowed_archetypes = { BIOLOGICAL }
+	ai_weight = {
+		weight = 0
+	}
+
+	icon = "gfx/interface/icons/traits/trait_whoniverse_clone_warrior.dds"
+	
+	modifier = {
+		# Leader modifiers		
+		leader_lifespan_add = -20
+
+		# Pop modifiers
+		pop_government_ethic_attraction = 0.5
+		army_damage_mult = 0.33
+	}
+
+	#custom_tooltip_with_modifiers = trait_necrophage_gestalt_tooltip
 }

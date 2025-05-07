@@ -72,7 +72,7 @@ civic_whoniverse_dalek_supremacy = {
 			value = ethic_fanatic_xenophobe
 		} 
 	}
-	modification = yes
+	modification = no
 	random_weight = {
 		base = 0
 	}
@@ -82,7 +82,7 @@ civic_whoniverse_dalek_supremacy = {
 	modifier = {
 		country_war_exhaustion_mult = -0.2
 		country_claim_influence_cost_mult = -0.1
-		planet_crime_mult = -0.1
+		planet_crime_mult = -0.15
 		planet_resettlement_unemployed_mult = 0.25
 	}
 }
@@ -109,7 +109,7 @@ civic_whoniverse_new_dalek_paradigm = {
 			value = ethic_fanatic_xenophobe
 		} 
 	}
-	modification = yes
+	modification = no
 	random_weight = {
 		base = 0
 	}
@@ -118,6 +118,7 @@ civic_whoniverse_new_dalek_paradigm = {
 
 	modifier = {
 		country_war_exhaustion_mult = -0.2
+		planet_crime_mult = -0.15
 		planet_researchers_physics_research_produces_add = 0.5
 		job_soldier_stability_add = 1
 		planet_resettlement_unemployed_mult = 0.25
@@ -148,7 +149,7 @@ civic_whoniverse_dalek_remnants = {
 			value = ethic_spiritualist
 		} 
 	}
-	modification = yes
+	modification = no
 	random_weight = {
 		base = 0
 	}
@@ -157,8 +158,9 @@ civic_whoniverse_dalek_remnants = {
 
 	modifier = {
 		country_war_exhaustion_mult = -0.2
+		planet_crime_mult = -0.15
+		country_edict_fund_add = 100
 		planet_priests_unity_produces_add = 1
-		planet_crime_mult = -0.1
 		planet_resettlement_unemployed_mult = 0.25
 	}
 }
@@ -189,7 +191,7 @@ civic_whoniverse_imperial_daleks = {
 			value = ethic_fanatic_xenophobe
 		} 
 	}
-	modification = yes
+	modification = no
 	random_weight = {
 		base = 0
 	}
@@ -198,6 +200,7 @@ civic_whoniverse_imperial_daleks = {
 
 	modifier = {
 		country_claim_influence_cost_mult = -0.1
+		planet_crime_mult = -0.15
 		country_society_tech_research_speed = 0.1
 		job_soldier_stability_add = 1
 		planet_resettlement_unemployed_mult = 0.25
@@ -229,7 +232,7 @@ civic_whoniverse_renegade_daleks = {
 			value = ethic_fanatic_xenophobe
 		} 
 	}
-	modification = yes
+	modification = no
 	random_weight = {
 		base = 0
 	}
@@ -238,6 +241,7 @@ civic_whoniverse_renegade_daleks = {
 
 	modifier = {
 		country_war_exhaustion_mult = -0.1
+		planet_crime_mult = -0.15
 		planet_stability_add = 5
 		planet_soldiers_unity_produces_add = 1
 		planet_resettlement_unemployed_mult = 0.25
@@ -440,7 +444,7 @@ civic_whoniverse_silence = {
 			}
 		}
 	}
-	modification = yes
+	modification = no
 	random_weight = {
 		base = 0
 	}
@@ -496,7 +500,7 @@ civic_whoniverse_space_police = {
 			}
 		}
 	}
-	modification = yes
+	modification = no
 	random_weight = {
 		base = 0
 	}
@@ -539,5 +543,41 @@ civic_whoniverse_dinosaur_tamers = {
 	}
 
 	description = "civic_whoniverse_dinosaur_tamers_effects"
+}
+
+civic_whoniverse_glory_in_battle = {
+	potential = { authority = { NOR = { value = auth_hive_mind value = auth_machine_intelligence } } } # not hivemind or machine
 	
+	possible = {
+		species_class = {
+			NOT = {
+				value = WHO_DALEK
+			}
+		}
+		civics = {
+			NOR = { 
+				value = civic_fanatic_purifiers
+				value = civic_citizen_service
+			}
+		}
+		ethics = { 
+			OR = {
+				value = ethic_fanatic_militarist
+				value = ethic_militarist
+			} 
+		}
+	}
+	modification = yes
+	random_weight = {
+		base = 0
+	}
+
+	# description = "civic_tooltip_whoniverse_dalek_supremacy_effects"
+
+	modifier = {
+		ship_fire_rate_mult = 0.1
+		country_war_exhaustion_mult = -0.25
+		planet_soldiers_unity_produces_add = 1
+		commander_exp_gain = 0.25
+	}
 }

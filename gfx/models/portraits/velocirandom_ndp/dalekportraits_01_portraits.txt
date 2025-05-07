@@ -1,0 +1,103 @@
+# portraits = {
+
+# ####	dalekportrait1_f = {	texturefile = "gfx/models/portraits/dalekportraits_01/dalek.dds" clothes_selector = "no_texture" attachment_selector = "no_texture"		greeting_sound = "dalekportraits_01_dalek_greetings"}
+
+# ####	dalekportrait1_m = {	texturefile = "gfx/models/portraits/dalekportraits_01/dalek.dds" clothes_selector = "no_texture" attachment_selector = "no_texture"		greeting_sound = "dalekportraits_01_dalek_greetings"}
+
+# 	dalekportrait1_m = {
+# 		entity = "dalekportraits_01_dalek_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "dalekportraits_01_dalek_greetings" 
+# 	}
+
+# 	#New Dalek Paradigm
+# 	dalekportrait1_ndp_strategist_m = {
+# 		entity = "dalekportraits_01_ndp_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "dalekportraits_01_dalek_greetings" 
+# 		character_textures = { 
+# 			"gfx/models/portraits/dalekportraits_01/NDP_Strategist_M.dds"
+# 		}
+# 	}
+# 	dalekportrait1_ndp_strategist_g = {
+# 		entity = "dalekportraits_01_ndp_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "dalekportraits_01_dalek_greetings" 
+# 		character_textures = { 
+# 			"gfx/models/portraits/dalekportraits_01/NDP_Strategist_G.dds"
+# 		}
+# 	}
+# 	dalekportrait1_ndp_drone_g = {
+# 		entity = "dalekportraits_01_ndp_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "dalekportraits_01_dalek_greetings" 
+# 		character_textures = { 
+# 			"gfx/models/portraits/dalekportraits_01/NDP_Drone_G.dds"
+# 		}
+# 	}
+# 	dalekportrait1_ndp_drone_m = {
+# 		entity = "dalekportraits_01_ndp_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "dalekportraits_01_dalek_greetings" 
+# 		character_textures = { 
+# 			"gfx/models/portraits/dalekportraits_01/NDP_Drone_M.dds"
+# 		}
+# 	}
+# 	dalekportrait1_ndp_scientist_g = {
+# 		entity = "dalekportraits_01_ndp_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "dalekportraits_01_dalek_greetings" 
+# 		character_textures = { 
+# 			"gfx/models/portraits/dalekportraits_01/NDP_Scientist_G.dds"
+# 		}
+# 	}
+# 	dalekportrait1_ndp_eternal_g = {
+# 		entity = "dalekportraits_01_ndp_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "dalekportraits_01_dalek_greetings" 
+# 		character_textures = { 
+# 			"gfx/models/portraits/dalekportraits_01/NDP_Eternal_G.dds"
+# 		}
+# 	}
+# 	dalekportrait1_ndp_supreme = {
+# 		entity = "dalekportraits_01_ndp_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "dalekportraits_01_dalek_greetings" 
+# 		character_textures = { 
+# 			"gfx/models/portraits/dalekportraits_01/NDP_Supreme.dds"
+# 		}
+# 	}
+
+
+
+# }
+
+
+# portrait_groups = {								#vvvvv
+
+# 	dalekportrait1 = {
+# 		default = dalekportrait1_m
+# 		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+# 			add = {
+# 				portraits = {
+# 					dalekportrait1_ndp_drone_g			#New Dalek Paradigm
+# 					dalekportrait1_ndp_drone_m
+# 					dalekportrait1_ndp_strategist_g
+# 					dalekportrait1_ndp_strategist_m
+# 					dalekportrait1_ndp_scientist_g
+# 					dalekportrait1_ndp_eternal_g
+# 					dalekportrait1_ndp_supreme
+
+# 				}
+# 			}									#^^^^^
+# 			#set = {
+# 			#	trigger = { ... }
+# 			#	portraits = { ... }
+# 			#	#using "set =" instead of "add" will first clear any portraits already added
+# 			#}
+# 		}
+
+# 		#species scope
+# 		species = { #generic portrait for a species
+# 			add = {
+# 				trigger = {
+# 					exists = species
+# 				}
+# 				portraits = {
+# 					dalekportrait1_m
+# 				}
+# 			}
+# 		}
+
+# 		#pop scope
+# 		pop = { #for a specific pop
+# 			add = {
+# 				portraits = {
+# 					dalekportrait1_m
+# 				}
+# 			}
+# 		}

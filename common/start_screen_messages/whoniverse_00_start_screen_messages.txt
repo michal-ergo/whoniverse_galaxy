@@ -130,3 +130,12 @@ part = {
 	}
 }
 
+# Sontaran start
+part = {
+	location = 0
+	localization = "START_SCREEN_WHONIVERSE_SONTARAN"
+
+	trigger = {
+		has_origin = origin_whoniverse_sontaran
+	}
+}

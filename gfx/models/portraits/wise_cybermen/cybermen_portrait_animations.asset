@@ -1,0 +1,84 @@
+# cybermen 01 - Mondasian Cybermen
+
+entity = {
+	name = "portrait_cyberman_mondas"
+	pdxmesh = "Mondas"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "Mondas_idle" }
+}
+
+animation = {
+	name = "Mondas_portrait_idle"
+	file = "Mondas_portrait_idle1.anim"
+}
+
+# cybermen 02 - Telosian Cybermen
+entity = {
+	name = "portrait_cyberman_telos"
+	pdxmesh = "Telos"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "Telos_idle" }
+}
+
+animation = {
+	name = "Telos_portrait_idle1"
+	file = "Telos_portrait_idle1.anim"
+}
+
+# cybermen 03 - Faction Cybermen
+entity = {
+	name = "portrait_cyberman_faction"
+	pdxmesh = "Faction"
+	scale = 2.5
+	default_state = "idle"
+	state = { name = "idle"       animation = "Faction_idle" }
+}
+
+animation = {
+	name = "Faction_portrait_idle1"
+	file = "Faction_portrait_idle1.anim"
+}
+
+# cybermen 04 - Neomorph Cybermen
+entity = {
+	name = "portrait_cyberman_neomorph"
+	pdxmesh = "Neomorph"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "Neomorph_idle" }
+}
+
+animation = {
+	name = "Neomorph_portrait_idle1"
+	file = "Neomorph_portrait_idle1.anim"
+}
+
+# cybermen 05 - Cybus Cybermen
+entity = {
+	name = "portrait_cyberman_cybus"
+	pdxmesh = "Cybus"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "Cybus_idle" }
+}
+
+animation = {
+	name = "Cybus_portrait_idle1"
+	file = "Cybus_portrait_idle1.anim"
+}
+
+# cybermen 06 - Cyberiad Cybermen
+entity = {
+	name = "portrait_cyberman_cyberiad"
+	pdxmesh = "Cyberiad"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "Cyberiad_idle" }
+}
+
+animation = {
+	name = "Cyberiad_portrait_idle1"
+	file = "Cyberiad_portrait_idle1.anim"
+}

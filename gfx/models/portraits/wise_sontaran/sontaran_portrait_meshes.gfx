@@ -1,0 +1,32 @@
+# Classic Sontaran Drone
+objectTypes = {
+	pdxmesh = {
+		name = "sontaran_classic"
+		file = "gfx/models/portraits/wise_sontaran/classic/sontaran_classic_drone.mesh"
+		scale = 0.9
+	
+		animation = { id = "classic_idle"	type = "sontaran_classic_portrait_idle" }
+	}
+}
+
+# Flux Sontaran Drone
+objectTypes = {
+	pdxmesh = {
+		name = "sontaran_flux"
+		file = "gfx/models/portraits/wise_sontaran/flux/sontaran_flux_drone.mesh"
+		scale = 1.1
+	
+		animation = { id = "flux_idle"	type = "sontaran_flux_portrait_idle" }
+	}
+}
+
+# New Sontaran Drone
+objectTypes = {
+	pdxmesh = {
+		name = "sontaran_new"
+		file = "gfx/models/portraits/wise_sontaran/new/sontaran_new_drone.mesh"
+		scale = 0.7
+	
+		animation = { id = "new_idle"	type = "sontaran_new_portrait_idle" }
+	}
+}

@@ -1,7 +1,15 @@
 ﻿l_french:
 
-# Flags
+#########
+# Flags #
+#########
+
  FLAG_CATEGORY_whoniverse:0 "Whoniverse"
+
+# Portrait Categories
+ whoniverse_category:0 "WHO:Ergotoxin"
+ whoniverse_category_wise:0 "WHO:Wise"
+ whoniverse_category_velocirandom:0 "WHO:VelociRandom"
 
 # Ship Design
 
@@ -73,7 +81,7 @@
  
  NAME_ressurected_dalek_empire:0 "Ressurected Dalek Empire"
 
- origin_tooltip_whoniverse_new_dalek_paradigm:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor'] $NEW_LINE$- $HOMEWORLD$ ['concept_pc_nuked']$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_new_dalek_paradigm'] $NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$]$NEW_LINE$- Special New Dalek Paradigm portraits$NEW_LINE$- Special Dalek events and recruitable leaders"
+ origin_tooltip_whoniverse_new_dalek_paradigm:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor'] $NEW_LINE$- $HOMEWORLD$ ['concept_pc_nuked']$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_new_dalek_paradigm'] $NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$]$NEW_LINE$- Special New Dalek Paradigm portraits$NEW_LINE$- Special Dalek events and recruitable leaders, including §HCult of Skaro§! event chain"
 
 # - $HOMEWORLD$ ['concept_whoniverse_dalek_incubation_vats'] +1 
 
@@ -231,43 +239,157 @@
  whoniverse.19.b:0 "Use the material to build §HDalek Incubation Vats§! on [Root.Owner.Capital.GetName]!"
  whoniverse.skaro_vats.custom_tooltip:0 "§HDalek Incubation Vats§! will be built on [Root.Owner.Capital.GetName] in §S30§! days."
 
- whoniverse.24.name:0 "Dalek Incubation Vats"
- whoniverse.24.desc:0 "Our drones have transported the materials and technology found on Necros and swiftly begun the construction of new §SDalek Incubation Vats§! on [Root.Owner.Capital.GetName]. It will be operational within a few days. Though the facility is maintenance-intensive, it will enable us to clone new Daleks. We should consider building additional facilities on other planets in the future."
- whoniverse.24.a:0 "The Daleks reign supreme!"
+#  whoniverse.24.name:0 "Dalek Incubation Vats"
+#  whoniverse.24.desc:0 "Our drones have transported the materials and technology found on Necros and swiftly begun the construction of new §SDalek Incubation Vats§! on [Root.Owner.Capital.GetName]. It will be operational within a few days. Though the facility is maintenance-intensive, it will enable us to clone new Daleks. We should consider building additional facilities on other planets in the future."
+#  whoniverse.24.a:0 "The Daleks reign supreme!"
 
-# Davros hire
+
+# Dalek Cult of Skaro / Final Experiment event chain
+
+ whoniverse_cult_of_skaro_chain_title:0 "Cult of Skaro"
+ whoniverse_cult_of_skaro_chain_desc:0 "A covert Dalek faction has resurfaced - an elite unit created to think beyond the constraints of pure Dalek logic. Their mission was to ensure our survival by any means necessary. But can such unorthodox minds still be trusted?"
+
+ whoniverse.21.name:0 "Cult of Skaro"
+ whoniverse.21.desc:0 "We have intercepted an encrypted transmission between Daleks conspiring without the [Root.Owner.GetRulerTitle]'s knowledge. Our strategists believe these Daleks might be members of the enigmatic §LCult of Skaro§! - a secret pre-Time War faction tasked with imagining new ways of survival. Unlike any other Dalek force, they do not answer to the [Root.Owner.GetRulerTitle], nor do they adhere to the traditional Dalek way of thinking.\n\nAccording to the transmission, the cult's leader, §HDalek Sec§!, is stationed on [Root.GetName]. Whatever they are planning, it is happening there."
+ whoniverse.21.a:0 "Investigate Dalek Sec's plans."
+ whoniverse.21.b:0 "Do not interrupt the Cult's work."
+
+ whoniverse_dalek_sec_project:0 "Investigate the Cult of Skaro"
+ whoniverse_dalek_sec_project_DESC:0 "A secretive faction of Daleks is conducting classified operations beyond the oversight of the [Root.Owner.GetRulerTitle]. Intelligence suggests they are experimenting with new forms of survival. We must determine the extent of their activities before they become a threat - or an opportunity."
+
+ whoniverse.22.name:0 "The Final Experiment"
+ whoniverse.22.desc:0 "Transmissions from [Root.GetName] confirm that the Cult of Skaro is conducting experiments beneath the planet's surface. Within a vast laboratory complex, §HDalek Sec§! pursues an unconventional path - one that challenges the core of Dalek identity.\n\nCaptured human specimens are being subjected to the §HFinal Experiment§! - an attempt to push Dalek evolution beyond its current form. §L\"Our purity has brought us to extinction,\"§! declares Sec, §L\"we must adapt to survive!\"§!\n\nTo the dismay of Daleks Thay and Jast, Dalek Sec has enacted this philosophy upon himself - fusing his own organic form with that of a human. He now stands as the first of a new kind: a §YHuman-Dalek Hybrid§!. But his work is not yet complete. The process is ongoing, and soon, all Daleks on [Root.GetName] may undergo the same transformation."
+ whoniverse.22.a:0 "Oversee the completion of Hybrid Sec's project."
+ whoniverse.22.b:0 "Capture Hybrid Sec for interrogation!" 
+ whoniverse.22.c:0 "Sec is no longer a Dalek! Prepare to annihilate!"
+ whoniverse.22.d:0 "Leave the Cult to its own devices."
+
+ whoniverse_final_experiment_project:0 "The Final Experiment"  
+ whoniverse_final_experiment_project_DESC:0 "Hybrid Sec believes that the fusion of Dalek and human biology is the key to survival. By overseeing and ensuring the success of this transformation, we will not only assist in its completion but also integrate the resulting hybrids into Dalek society on [Root.GetName], shaping the future of the species."  
+
+ whoniverse_capture_dalek_sec_project:0 "Capture Dalek Sec"  
+ whoniverse_capture_dalek_sec_project_DESC:0 "Secure and detain Hybrid Sec for further analysis - his knowledge may prove invaluable, despite his corrupted form."  
+
+ whoniverse_exterminate_sec_project:0 "Exterminate Hybrid Sec"
+ whoniverse_exterminate_sec_project_DESC:0 "Hybrid Sec's vision threatens the integrity of the Dalek species. A decisive military intervention will be required to exterminate the abomination and erase all traces of his experiment."  
+
+ whoniverse.23.name:0 "Final Experiment Completed"
+ whoniverse.23.desc:0 "With our oversight, §HHybrid Sec§! has successfully completed the Final Experiment. A test cohort of the Dalek population on [Root.GetName] has been transformed into Human-Dalek Hybrids.\n\nThese hybrids exhibit heightened adaptability, capable of independent thought, creativity, and emotional responses. Despite their altered nature, they remain loyal to the Dalek cause.\n\n§L\"They have everything we wanted from mankind,\"§! explains Hybrid Sec, §L\"which is ambition, hatred, aggression and war.\"§!\n\nYet, unease remains. Many Daleks view this deviation as an affront to purity, and discontent simmers beneath the surface. While order is maintained, our unity is threatened."
+ whoniverse.23.a:0 "The Daleks must evolve. Administer the solution!"
+ whoniverse.23.a.tooltip:0 "Population on [Root.GetName] gets converted into hybrids."
+ whoniverse.23.b:0 "They are no longer Daleks! Exterminate the test subjects."
+
+ whoniverse_final_experiment_completed:0 "Dalek Purity Threatened"
+ whoniverse_final_experiment_exterminated:0 "Dalek Purity Preserved"
+
+ whoniverse.24.name:0 "Experiment Terminated"  
+ whoniverse.24.desc:0 "Our forces stormed Hybrid Sec's facility. The laboratories were annihilated, along with all subjects of the Final Experiment.\n\nAs the battle neared its end, Sec attempted to flee but was surrounded. The hybrid's last transmission crackled with desperation: §L"No! I beg you, don't-!"§! Its plea was cut short as energy blasts tore through its malformed body.\n\nWith Sec's death, the remaining Daleks on [Root.GetName] fell back in line. The corruption is purged. Dalek purity endures."
+ whoniverse.24.a:0 "The Dalek-Humans are failures!"
+
+ NAME_whoniverse_hybrid_sec_name:0 "Hybrid Sec"
+
+ whoniverse.25.name:0 "NAME_whoniverse_hybrid_sec_name"
+ whoniverse.25.desc:0 "I see the fear in your eyestalks. You know the truth - change is inevitable. The Daleks must evolve… or perish."
+
+ whoniverse_hybrid_sec_country:0 "Cult of Skaro"
+ NAME_whoniverse_hybrid_sec_species:0 "Human-Dalek Hybrid"
+ NAME_whoniverse_hybrid_sec_name:0 "Hybrid Sec"
+ whoniverse_hybrid_sec_catch_phrase:0 "We must adapt to survive."
+ whoniverse_hybrid_sec_backstory:0 "§HSec§! was a Dalek who had the ability to think beyond the capacity of any other Dalek as the leader of the Cult of Skaro.\n\nSec believed that the Dalek race needed to evolve by combining their DNA with that of other alien races in order to survive and planned a Final Experiment, which culminated in his assimilation of a human captive."
+ 
+ whoniverse.25.a:0 "Identify yourself!"
+ whoniverse.25.a.response:0 "I am Dalek Sec, leader of the Cult of Skaro.\n\n I have sacrificed myself for the greater cause, the future of Dalek kind."
+
+ whoniverse.25.b:0 "Explain the experiment!"
+ whoniverse.25.b.response:0 "I am Dalek in human form. Humans are the great survivors. We needed that ability.\n\nI feel everything we wanted from mankind, which is ambition, hatred, aggression and war. Such a genius for war. At heart, this species is so very Dalek."
+ 
+ whoniverse.25.c:0 "You are no longer a Dalek!"
+ whoniverse.25.c.response:0 "I am the first of mine kind. We must return to the flesh, and also the heart."
+
+ whoniverse.25.d:0 "§lYou will obey us now!§!"
+ whoniverse.25.d.custom_tooltip:2 "§Y$NAME_whoniverse_hybrid_sec_name$§! joins our Empire as a §HLeader§!."
+
+ whoniverse.25.e:0 "EXTERMINATE!"
+
+ whoniverse.26.name:0 "The Hybrid Uprising"  
+ whoniverse.26.desc:0 "By choosing inaction, we have allowed §HHybrid Sec§! to reshape [Root.GetName] into a breeding ground for abominations. The transformation is now absolute - every Dalek on the planet has been corrupted into a §YHuman-Dalek Hybrid§!.\n\nThis heretical mutation has led to open defiance. The hybrids reject Dalek rule, declaring themselves independent. Hybrid Sec proclaims that 'true Daleks' must evolve beyond their past limitations.\n\nThe world that once served our empire has become a bastion of treachery. These hybrids are no longer Daleks. They are an infestation that must be exterminated."
+ whoniverse.26.a:0 "Alert! The hybrids must be exterminated!"
+ whoniverse_dalek_hybrids_appeared:0 "Our colony on [Root.GetName] has been taken over by the §HHuman-Dalek Hybrid Insurrection§!."
+ 
+
+ WHO_DALEK_HYBRID_COUNTRY:0 "Human-Dalek Hybrid Insurrection"
+ NAME_Hybrid_Dalek_Fleet:0 "Hybrid Dalek Fleet"
+
+# Cult of Skaro / Davros hire
 
  whoniverse_dalek_caan_project:0 "Temporal Rift"
  whoniverse_dalek_caan_project_DESC:0 "Investigate the space-time rift on [Root.Owner.Capital.GetName]."
 
- whoniverse.21.name:0 "Temporal Rift"
- whoniverse.21.desc:0 "Our sensors detect the presence of a space-time rift in [Root.Owner.Capital.GetName]'s orbital path. The nature of this anomaly is not yet clear, and it may pose a potential threat to the [Root.GetName]. It is imperative to dispatch a Recon ship to the rift immediately to gather more information and assess the situation."
- whoniverse.21.a:0 "Issue a project to explain the anomaly!"
+ whoniverse.27.name:0 "Temporal Rift"
+ whoniverse.27.desc:0 "Our sensors detect the presence of a space-time rift in [Root.Owner.Capital.GetName]'s orbital path. The nature of this anomaly is not yet clear, and it may pose a potential threat to the [Root.GetName]. It is imperative to dispatch a Recon ship to the rift immediately to gather more information and assess the situation."
+ whoniverse.27.a:0 "Issue a project to explain the anomaly!"
 
- whoniverse.22.name:0 "Dalek Caan"
- whoniverse.22.desc:0 "Our Recon ship reports finding a Dalek from the §LLast Great Time War§! in the time rift. It is §SCaan§!, a lost member of the secretive §LCult of Skaro§!. Caan claims that he was able to use an emergency temporal shift to breach the time-lock and extract §rDavros§!, the Dalek creator himself, just seconds before he would have been destroyed by the §LNightmare Child§!. Caan offers to bring him back to [Root.Owner.Capital.GetName]. \n\nHowever, it seems that passing through the §LTime Vortex§! took Caan's mind. §P\"I flew into the wild and fire! I danced and died a thousand times,\"§! Caan exclaims in an almost sing-song voice."
- whoniverse.22.a:0 "§HOpen communications channel!§!"
- whoniverse.22.b:0 "The abomination is insane! EXTERMINATE!"
+ whoniverse.28.name:0 "Dalek Caan"
+ whoniverse.28.desc:0 "Our recon ship reports that the time rift appears to be connected to the §LLast Great Time War§!. Through this breach in time, a single Dalek has emerged - it is §SCaan§!, a lost member of the §LCult of Skaro§!.\n\nCaan claims that he was able to use an emergency temporal shift to breach the time-lock and extract §rDavros§!, the Dalek creator himself, just seconds before he would have been destroyed by the §LNightmare Child§!. Caan offers to bring him back to [Root.Owner.Capital.GetName]. \n\nHowever, it seems that passing through the §LTime Vortex§! took Caan's mind. §P\"I flew into the wild and fire! I danced and died a thousand times,\"§! Caan exclaims in an almost sing-song voice."
+ whoniverse.28.a:0 "§HOpen communications channel!§!"
+ whoniverse.28.b:0 "The abomination is insane! EXTERMINATE!"
 
- whoniverse.23.name:0 "NAME_whoniverse_davros_name"
- whoniverse.23.desc:0 "Behold, Daleks! Bear witness to the resurrection and triumph of the creator of your race! You will obey me!"
- 
+ whoniverse.29.name:0 "NAME_whoniverse_davros_name"
+ whoniverse.29.desc:0 "Behold, Daleks! Bear witness to the resurrection and triumph of the creator of your race! You will obey me!"
+
  whoniverse_davros_country:0 "Imperial Daleks"
  NAME_whoniverse_davros_species:0 "Kaled"
  NAME_whoniverse_davros_name:0 "Davros"
  whoniverse_davros_catch_phrase:0 "My Daleks shall once more become the supreme being!"
  whoniverse_davros_backstory:0 "§HDavros§!, also known as the §LDark Lord of Skaro§!, was originally a scientist on the planet §HSkaro§!, but he became better known as the creator of the §HDaleks§!. His efforts to end the war on §HSkaro§! did not end as he envisioned, because the §HDaleks§! wiped out both the §HThal§! and §HKaled§! races, save for himself. For a time, he sought to create a race of §HDaleks§! loyal to him, but his relationship with them was always a tense one."
  
- whoniverse.23.a:0 "Identify yourself!"
- whoniverse.23.a.response:0 "Do you not recognize me? I am §HDavros§!! I am your creator! \n\nI witnessed the end of the §HKaled§! race, and from its ashes I built a new race - the supreme creature, the ultimate conquerer of the universe, the §HDALEK§!!"
+ whoniverse.29.a:0 "Identify yourself!"
+ whoniverse.29.a.response:0 "Do you not recognize me? I am §HDavros§!! I am your creator! \n\nI witnessed the end of the §HKaled§! race, and from its ashes I built a new race - the supreme creature, the ultimate conquerer of the universe, the §HDALEK§!!"
 
- whoniverse.23.b:0 "We do not acknowledge that any creature is superior to the §HDaleks§!!"
- whoniverse.23.b.response:0 "You cannot exist without me! You cannot progress! \n\nFor the last time, I am your creator! You will obey me!"
+ whoniverse.29.b:0 "We do not acknowledge that any creature is superior to the §HDaleks§!!"
+ whoniverse.29.b.response:0 "You cannot exist without me! You cannot progress! \n\nFor the last time, I am your creator! You will obey me!"
  
- whoniverse.23.c:0 "§lYou will be the Daleks' pet!§!"
- whoniverse.23.c.custom_tooltip:2 "§Y$NAME_whoniverse_davros_name$§! joins our Empire as a §HLeader§!."
+ whoniverse.29.c:0 "§lYou will be the Daleks' pet!§!"
+ whoniverse.29.c.custom_tooltip:2 "§Y$NAME_whoniverse_davros_name$§! joins our Empire as a §HLeader§!."
 
- whoniverse.23.d:0 "EXTERMINATE!"
+ whoniverse.29.d:0 "EXTERMINATE!"
+
+# Dalek Time Strategist Hire
+
+ whoniverse_time_strategist_project:0 "Temporal Rift"
+ whoniverse_time_strategist_project_DESC:0 "Investigate the space-time rift on [Root.GetName]."
+
+ whoniverse.391.name:0 "Temporal Rift"
+ whoniverse.391.desc:0 "An unexpected fluctuation in the fabric of space-time has been detected on [Root.GetName]'s surface. Sensors report residual traces of chronon energy consistent with unauthorized temporal activity.\n\nThe anomaly is highly unstable, but preliminary scans suggest a single signal embedded deep within the rift."
+ whoniverse.391.a:0 "Issue a project to explain the anomaly!"
+
+ whoniverse.392.name:0 "The Strategist Emerges"
+ whoniverse.392.desc:0 "Our scientists have established a secure link with the anomaly. From within the storm of raw time, a singular entity emerges - the §rDalek Time Strategist§!, one of the highest-ranking tactical minds of the Dalek command structure.\n\nAccording to fragmented signals, the Strategist escaped destruction during the §SLast Great Time War§! through an emergency vortex cascade, becoming trapped in a temporal loop beyond known history.\n\nNow, it demands an audience."
+ whoniverse.392.a:0 "§HOpen communications channel!§!"
+ whoniverse.392.b:0 "Exterminate the abomination!"
+
+ whoniverse.393.name:0 "NAME_whoniverse_time_strategist_name"
+ whoniverse.393.desc:0 "Time is a battlefield. I have fought across a thousand futures and rewritten a million pasts. I am the Time Strategist. You will ask, and I shall answer."
+
+ whoniverse_time_strategist_country:0 "Dalek Empire"
+ NAME_whoniverse_time_strategist_species:0 "Dalek"
+ NAME_whoniverse_time_strategist_name:0 "Dalek Time Strategist"
+ whoniverse_time_strategist_catch_phrase:0 "Daleks will be victorious in every reality!"
+ whoniverse_time_strategist_backstory:0 "The §rDalek Time Strategist§!, reconstituted from the Dalek duplicate Adelaine Dutemps so as to replace the Dalek Time Controller, served as second-in-command of the Dalek Empire during the Last Great Time War."
+ 
+ whoniverse.393.a:0 "Identify yourself!"
+ whoniverse.393.a.response:0 "I am the §HTime Strategist§!, architect of countless timelines, survivor of paradox and flame. I transcended linear causality to ensure Dalek supremacy. My return is §Yinevitable.§!"
+
+ whoniverse.393.b:0 "How did you survive the Time War?"
+ whoniverse.393.b.response:0 "The vortex broke around me. I endured entropy, betrayal, silence. I rewrote myself across dying stars. §SThe War never ended.§!"
+ 
+ whoniverse.393.c:0 "Why are you here?"
+ whoniverse.393.c.response:0 "To reshape destiny. To calculate new outcomes. To ensure total universal extermination. §HThe future requires strategy.§!"
+ 
+ whoniverse.393.d:0 "§lYou will join the Daleks!"
+ whoniverse.393.d.custom_tooltip:2 "§Y$NAME_whoniverse_time_strategist_name$§! joins our Empire as a §HLeader§!."
+
+ whoniverse.393.e:0 "EXTERMINATE!"
 
 ### DALEK EMPIRE REMNANTS ###
 
@@ -282,7 +404,7 @@
  origin_whoniverse_dalek_empire_remnants:0 "The Parting of the Ways"
  origin_whoniverse_dalek_empire_remnants_desc:0 "§RWARNING: Challenging Origin§!\nThe Emperor of the Daleks survived the Last Great Time War by escaping into another space-time. After patiently infiltrating Satellite Five and giving birth to a new breed of Daleks, the Emperor is determined to reclaim its original universe."
 
- origin_tooltip_whoniverse_dalek_empire_remnants:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor'] $NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_dalek_remnants']$NEW_LINE$- $HOMEWORLD$ $TABBED_NEW_LINE$- ['concept_pc_habitat']$TABBED_NEW_LINE$- Starts with §R20§! pops$NEW_LINE$- $HOME_SYSTEM$ $TABBED_NEW_LINE$- Wormhole-locked system $TABBED_NEW_LINE$- Pre-FTL civilization$NEW_LINE$- Starting ruler is §YImmortal§!$NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$] $NEW_LINE$- Guaranteed Research Options: ['concept_wormhole_stabilization', £physics_research£ $tech_wormhole_stabilization$] (§G+75 %§!) $NEW_LINE$- Special Dalek events and recruitable leaders"
+ origin_tooltip_whoniverse_dalek_empire_remnants:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor'] $NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_dalek_remnants']$NEW_LINE$- $HOMEWORLD$ $TABBED_NEW_LINE$- ['concept_pc_habitat']$TABBED_NEW_LINE$- Starts with §R20§! pops$NEW_LINE$- $HOME_SYSTEM$ $TABBED_NEW_LINE$- Wormhole-locked system $TABBED_NEW_LINE$- Pre-FTL civilization$NEW_LINE$- Starting ruler is §YImmortal§!$NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$] $NEW_LINE$- Guaranteed Research Options: ['concept_wormhole_stabilization', £physics_research£ $tech_wormhole_stabilization$] (§G+75 %§!) $NEW_LINE$- Special Dalek events and recruitable leaders, including §HCult of Skaro§! event chain"
 
 # Dalek Empire Remnants System
  PRESCRIPTED_system_name_dalek_empire_remnants_NAME:0 "A.D. 200,100"
@@ -435,9 +557,9 @@
  whoniverse.290.a.tooltip:0 "[Root.Owner.Ruler.GetName] changes portrait."
  whoniverse.290.b:0 "The Emperor shall reign supreme!"
 
- whoniverse.291.name: "Dalek Civil War"
- whoniverse.291.desc: "Our scientists have achieved a breakthrough with the §Ltime controller§!, allowing us to access a time corridor leading into an alternate continuum shaped by the §LLast Great Time War§!. Through this corridor, we may reach the distant timeline where the Imperial Daleks currently control Skaro. This presents an opportunity to confront our enemies head-on, reclaim our homeworld, and restore the purity of the Dalek race."
- whoniverse.291.a: "Locate the Imperial Daleks!"
+ whoniverse.291.name:0 "Dalek Civil War"
+ whoniverse.291.desc:0 "Our scientists have achieved a breakthrough with the §Ltime controller§!, allowing us to access a time corridor leading into an alternate continuum shaped by the §LLast Great Time War§!. Through this corridor, we may reach the distant timeline where the Imperial Daleks currently control Skaro. This presents an opportunity to confront our enemies head-on, reclaim our homeworld, and restore the purity of the Dalek race."
+ whoniverse.291.a:0 "Locate the Imperial Daleks!"
 
  whoniverse.292.name:0 "Omega Device Secured"
  whoniverse.292.desc:0 "Through meticulous planning, our agents succeeded in infiltrating Earth in the year 1963, securing the §lHand of Omega§! before the §RImperial Daleks§! could lay their claim to it. This invaluable artifact, a relic of the Time Lords, is now under our control. Our scientists quickly stabilized its immense energy and uncovered a trap hidden by §lthe Doctor§! - intended to destroy any who attempted to misuse the device. With precise expertise, we have neutralized this threat, and the Omega device is now fully operational, ready to empower our quest for supremacy."
@@ -449,12 +571,13 @@
 
  whoniverse.294.name:0 "Destruction of Skaro"
  whoniverse.294.desc:0 "Our intelligence confirms that the §RImperial Daleks§! have miscalculated in their use of the §lHand of Omega§!. In their reckless attempts to wield its power, they have triggered a catastrophic event: Skaro's second sun has gone supernova, consuming their capital planet and annihilating their primary base. This misstep marks a momentous victory for the §HRenegade Daleks§!. Without Skaro, the Imperials are crippled and will struggle to recover from such a blow."
- whoniverse.294.a: "Witness the fall of the false Emperor!"
+ whoniverse.294.a:0 "Witness the fall of the false Emperor!"
 
- whoniverse.295.name: "Victory on Skaro!"
- whoniverse.295.desc: "Our forces have triumphed on the irradiated plains of Skaro, overcoming the last defenses of the §RImperial Daleks§!. The stronghold of the Emperor has fallen, and Davros's twisted creations have been subdued. With Skaro back in Renegade control, we have the opportunity to reshape the future of the Dalek race. Will we exterminate the remnants of these corrupted Imperials, or repurpose them to strengthen our ranks?"
- whoniverse.295.a: "Reprogram them into loyal Renegades!" 
- whoniverse.295.b: "Exterminate the Imperial Daleks!"
+ whoniverse.295.name:0 "Victory on Skaro!"
+ whoniverse.295.desc:0 "Our forces have triumphed on the irradiated plains of Skaro, overcoming the last defenses of the §RImperial Daleks§!. The stronghold of the Emperor has fallen, and Davros's twisted creations have been subdued. With Skaro back in Renegade control, we have the opportunity to reshape the future of the Dalek race. Will we exterminate the remnants of these corrupted Imperials, or repurpose them to strengthen our ranks?"
+ whoniverse.295.a:0 "Reprogram them into loyal Renegades!" 
+ whoniverse.295.b:0 "Exterminate the Imperial Daleks!"
+
 
 ### CYBERMEN ORIGIN, SPECIES AND EMPIRE ###
 
@@ -707,7 +830,7 @@
  NAME_Tardis_cloaked:0 "TARDIS"
 
  whoniverse.59.name:0 "The Time Lord's Escape"
- whoniverse.59.desc:0 "Decades have passed since the cyber-conversion of §lthe Doctor§! into §lMr. Clever§!. However, it has become evident that the Doctor's formidable persona was never fully suppressed. After years of relentless internal struggle, the Doctor managed to temporarily overcome Mr. Clever and regain control of his own body.\n\nSeizing this fleeting opportunity, the Doctor quickly retreated to his §LTARDIS§! and vanished into the unknown reaches of time and space. This abrupt departure severed his connection to the §HCyberiad§!, leaving us without one of our most unique and potent assets."
+ whoniverse.59.desc:0 "Decades have passed since the cyber-conversion of §lthe Doctor§! into §lMr. Clever§!. However, it has become evident that the Doctor's formidable persona was never fully suppressed. After years of relentless internal struggle, the Doctor managed to temporarily overcome Mr. Clever and regain control of his own body.\n\nSeizing this fleeting opportunity, the Doctor quickly retreated to his §BTARDIS§! and vanished into the unknown reaches of time and space. This abrupt departure severed his connection to the §HCyberiad§!, leaving us without one of our most unique and potent assets."
  whoniverse.59.a:0 "It was inevitable."
  whoniverse.59.a.tooltip:0 "§lMr. Clever§! stops being your leader."
  
@@ -863,7 +986,7 @@
  whoniverse_waters_of_mars_project_DESC:0 "We need to find out what is going on with our base on Mars."
 
  whoniverse.72.name:0 "Waters of Mars"
- whoniverse.72.desc:0 "Our probe has intercepted fragments of communication from our colony on §SMars§!. It appears that the colonists have been infected by an intelligent virus known as §Lthe Flood§!, which spread from a subterranean glacier supplying the base with water. In a desperate bid to contain the outbreak, the colonists resorted to an extreme measure and activated Action 5 - a nuclear device housed at the heart of the base.\n\nJust moments before the explosion, an unexpected visitor, identifying himself as §lthe Doctor§!, arrived on the planet and transported the survivors back to Earth in his §lTARDIS§!. However, the base commander, §LAdelaide Brooke§! took her own life immediately upon return.\n\nThis event has garnered significant media attention and will undoubtedly inspire future generations in the exploration and colonization of space."
+ whoniverse.72.desc:0 "Our probe has intercepted fragments of communication from our colony on §SMars§!. It appears that the colonists have been infected by an intelligent virus known as §Lthe Flood§!, which spread from a subterranean glacier supplying the base with water. In a desperate bid to contain the outbreak, the colonists resorted to an extreme measure and activated Action 5 - a nuclear device housed at the heart of the base.\n\nJust moments before the explosion, an unexpected visitor, identifying himself as §lthe Doctor§!, arrived on the planet and transported the survivors back to Earth in his §BTARDIS§!. However, the base commander, §LAdelaide Brooke§! took her own life immediately upon return.\n\nThis event has garnered significant media attention and will undoubtedly inspire future generations in the exploration and colonization of space."
  whoniverse.72.a:0 "The legacy of Bowie Base One will never be forgotten."
 
  whoniverse.73.name:0 "Bowie Base One Lost"
@@ -1130,7 +1253,7 @@
  whoniverse_name_trenzalore:0 "Trenzalore"
  whoniverse_name_papal_mainframe:0 "Papal Mainframe"
  whoniverse_trenzalore_system_NAME:0 "Trenzalore"
- whoniverse_trenzalore_system_DESC:0 "Starting system of the Church of the Papal Mainframe."
+ whoniverse_trenzalore_system_DESC:0 "Starting system of the Church of the Papal Mainframe.\n\n$system_initializer_DESC$"
 
  Trenzalore:0 "Trenzalore"
  Soror:0 "Soror"
@@ -1488,7 +1611,7 @@
 
  whoniverse.923.e:0 "§RDismiss§!"
 
-# Martha Jones Recruit Event Chain
+### Martha Jones Recruit Event Chain ###
 
  whoniverse_martha_chain_title:0 "Lunar Displacement"
  whoniverse_martha_chain_desc:0 "A hospital mysteriously appears on the Moon, its occupants struggling to survive as oxygen runs out."
@@ -1574,6 +1697,9 @@
  whoniverse_name_shadow_proclamation_system_star:0 "SDWPCM-001"
  whoniverse_name_shadow_proclamation_system_planet:0 "Shadow Proclamation Base"
 
+ whoniverse_shadow_proclamation_system_NAME:0 "Shadow Proclamation"
+ whoniverse_shadow_proclamation_system_DESC:0 "Starting system of the Shadow Proclamation.\n\n$system_initializer_DESC$"
+
  whoniverse_name_judoonia_system:0 "Judoonia"
  whoniverse_name_judoonia_star:0 "Judoonia A"
  whoniverse_name_judoonia_planet:0 "Judoonia Prime"
@@ -1657,7 +1783,7 @@
  whoniverse_digsite_spiridon_desc:0 "Hidden beneath the dense jungles of [From.Planet.GetName], the ruins of a massive Dalek facility lie entangled in roots and soil, a stark reminder of the battles waged here long ago."
 
  whoniverse.340.name:0 "Planet of the Daleks"
- whoniverse.340.desc:0 "Landing on [From.Planet.GetName], our drones are immediately challenged by the dense Spiridon jungle, a chaotic tangle of vegetation teeming with life. Beneath this vibrant surface lie ruins partially submerged in pools of hardened molten ice. The decayed structures and corroded machinery hint at a catastrophic event that brought this §HDalek§! facility to ruin.\n\nHistorical data suggests this world served as a staging ground for Dalek operations, with the local §HSpiridon§! population reduced to slaves under their rule. Further exploration may reveal what truly transpired here."
+ whoniverse.340.desc:0 "Landing on [From.Planet.GetName], our drones are immediately challenged by the dense Spiridon jungle, a chaotic tangle of vegetation teeming with life. Beneath this vibrant surface lie ruins partially submerged in pools of hardened molten ice. The decayed structures and corroded machinery hint at a catastrophic event that brought this Dalek facility to ruin.\n\nHistorical data suggests this world served as a staging ground for Dalek operations, with the local §HSpiridon§! population reduced to slaves under their rule. Further exploration may reveal what truly transpired here."
  whoniverse.340.a:0 "Curious."
 
  whoniverse.341.name:0 "Forgotten Conflict"
@@ -1684,7 +1810,7 @@
  whoniverse.351.name:0 "The Christmas Invasion"
  whoniverse.351.desc:0 "Unusual activity has been detected on §Y[From.Planet.GetName]§!. A group of android scavengers, crudely disguised as mythical §LSanta Claus§! figures, has landed on the surface. These so-called §HRoboforms§! are believed to have been drawn to the planet by the residual energy signatures of incoming invasions. Armed with concealed weapons and malfunctioning cheer protocols, they have begun scavenging resources and alarming the populace.\n\nWhile these units could pose a threat, they also present an opportunity: with proper handling, their systems might be adapted for productive use. The decision lies in how we respond to these seasonal intruders."
  whoniverse.351.a:0 "Capture and reprogram the Roboforms."
- whoniverse.351.a.tooltip:0 "1 §HRoboform§! pops added to §Y[From.Planet.GetName]§!."
+ whoniverse.351.a.tooltip:0 "2 §HRoboform§! pops added to §Y[From.Planet.GetName]§!."
  whoniverse.351.b:0 "Recruit the Roboforms into our forces."
  whoniverse.351.b.tooltip:0 "3 §HRoboform Armies§! appear on §Y[This.GetName]§!."
  whoniverse.351.c:0 "This is too risky. Expel the Roboforms from our planet!"
@@ -1755,11 +1881,15 @@
  civic_whoniverse_dinosaur_tamers_desc:0 "This society breeds otherwise long-extinct dinosaurs and uses them for work and defense."
  civic_whoniverse_dinosaur_tamers_effects:0 "Starts with §H$whoniverse_pm_dinosaurs$§! planet modifier \nEnables the §Y$decision_dinosaurs_add$§! decision \nCan train §Y$whoniverse_dinosaur_assault_army$§! armies on planets with $whoniverse_pm_dinosaurs$"
 
- decision_dinosaurs_remove:0 "Dinosaur Fauna Removal"
- decision_dinosaurs_remove_desc:0 "With advancements in terraforming technology, it is now possible to remove hostile species from a planet without disrupting the biosphere."
+ councilor_whoniverse_dinosaur_tamers:0 "Master Hunter"
+ councilor_whoniverse_dinosaur_tamers_female:0 "Master Huntress"
+ councilor_whoniverse_dinosaur_tamers_desc:0 "The $TITLE$ is an exemplar of our hunters and warriors."
 
- decision_dinosaurs_add:0 "Introduce Dinosaur Fauna"
- decision_dinosaurs_add_desc:0 "Bring a small dinosaur population to the planet, which will then be quickly expanded to the entire ecosystem by use of genetic technology."
+ decision_whoniverse_dinosaurs_remove:0 "Dinosaur Fauna Removal"
+ decision_whoniverse_dinosaurs_remove_desc:0 "With advancements in terraforming technology, it is now possible to remove hostile species from a planet without disrupting the biosphere."
+
+ decision_whoniverse_dinosaurs_add:0 "Introduce Dinosaur Fauna"
+ decision_whoniverse_dinosaurs_add_desc:0 "Bring a small dinosaur population to the planet, which will then be quickly expanded to the entire ecosystem by use of genetic technology."
 
  origin_whoniverse_silurian:0 "Legacy of the Silurians"
  origin_whoniverse_silurian_desc:0 "The Silurians and their aquatic cousins, the Sea Devils, evolved on an ancient world rich in life, mastering both technology and the natural world long before other civilizations appeared. However, they now face an impending cataclysm that could drive them into extinction."
@@ -1828,3 +1958,136 @@
  whoniverse.373.d:0 "The organics failed because they didn't upgrade."
 
  whoniverse_pm_silurian_ruins:0 "Abandoned Cities"
+
+### Sontarans ###
+
+ name_list_SONTARAN1:0 "Sontaran 1"
+
+# Sontar system, anomaly and event
+
+ whoniverse_name_sontar_system:0 "Sontar"
+ whoniverse_name_sontar:0 "Sontar Prime"
+ whoniverse_name_sontar_moon:0 "Sontaran Moon"
+
+ whoniverse_sontaran_start_initializer_NAME:0 "Sontar System"
+ whoniverse_sontaran_start_initializer_DESC:0 "Starting system of the Sontarans.\n\n$system_initializer_DESC$"
+
+ whoniverse_pm_sontaran_gravity:0 "Even Higher Gravity"
+
+# Sontaran origin, trait, start screen
+ origin_whoniverse_sontaran:0 "The Sontaran Stratagem"
+ origin_whoniverse_sontaran_desc:0 "Engineered for war, the Sontarans thrive in the harsh gravity of their homeworld, where endless ranks of cloned soldiers are bred for conquest. With their eternal war against the Rutan Host looming over the stars, the Sontarans march ever forward, seeking glory through relentless battle."
+
+ origin_tooltip_whoniverse_sontaran:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_sontaran_infertile'] $NEW_LINE$- $HOMEWORLD$$TABBED_NEW_LINE$- ['concept_whoniverse_pm_sontaran_gravity'] planet modifier$NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$] $TABBED_NEW_LINE$- ['concept_centralized_command', £society_research£ $tech_centralized_command$] $NEW_LINE$- Unique §HThe Great Sontaran War§! event chain"
+
+ START_SCREEN_WHONIVERSE_SONTARAN:0 "Born for war, forged in the fires of endless battle, the Sontaran race knows only one purpose: conquest. From the cloning vats of Sontar, generations of perfect warriors have marched forth, their discipline unyielding, their resolve absolute. Honor is their code, war is their existence, and glory is their ultimate reward.\n\nFor centuries, their empire has expanded across the stars, yet one war remains unfinished - the eternal struggle against the hated Rutan Host. The battle has raged for millennia, spanning entire worlds, with neither side willing to relent.\n\nBut the time for stalemates is over. The Sontaran Empire stands ready to claim final victory. Its armies are strong, its fleets prepared, its soldiers eager to die in service of the cause. For the glory of Sontar!"
+
+ trait_whoniverse_sontaran_infertile:0 "Clone Warrior"
+ trait_whoniverse_sontaran_infertile_desc:0 "Engineered for battle, these soldiers are infertile but possess exceptional combat prowess."
+
+ civic_whoniverse_glory_in_battle:0 "Glory in Battle"
+ civic_whoniverse_glory_in_battle_desc:0 "War is not just a necessity - it is the highest honor. Every battle fought, every enemy slain, and every soldier who dies in combat brings glory to the empire."
+
+ councilor_whoniverse_glory_in_battle:0 "Field Major"
+ councilor_whoniverse_glory_in_battle_desc:0 "The $TITLE$ is responsible for overseeing our soldiers."
+
+ decision_whoniverse_caesofine_gas:0 "Release Caesofine Gas"
+ decision_whoniverse_caesofine_gas_desc:0 "Release caesofine gas into the atmosphere to increase the planet's cloning capabilities. This will make it more suitable for Sontarans, but will also poison pops of other species."
+
+ whoniverse_caesofine_gas_tooltip:0 "\nEach non-§YClone Warrior§! pop: §Rdies§!"
+
+ whoniverse_pm_caesofine_gas:0 "Caesofine Gas"
+
+# Great Sontaran War event chain
+ whoniverse_the_great_sontaran_war_chain_title:0 "The Great Sontaran War"
+ whoniverse_the_great_sontaran_war_chain_desc:0 "The Great Sontaran War is an endless conflict against the hated §RRutan Host§!, waged across the stars for thousands of years.\n\nTrue victory can only be achieved by finding and conquering §YRuta III§!, the heart of the Rutan menace, and ending their threat once and for all."
+
+ triggered_whoniverse_sontaran_opinion_of_rutans:0 "Hated Enemies"
+ triggered_whoniverse_rutan_opinion_of_sontarans:0 "Hated Enemies"
+
+ whoniverse_name_sentarion_wormhole_system:0 "Sentarion"
+ 
+ NAME_whoniverse_sentarii_confederation:0 "Sentarii Confederation"
+ NAME_sentarii_army:0 "Sentarii Army"
+
+ whoniverse.383.name:0 "The Great Sontaran War"
+ whoniverse.383.desc:0 "For millennia, the Sontaran Empire has waged war against the treacherous §RRutan Host§!, a race of shapeshifting, bioelectric creatures lurking in the galactic shadows. Driven from their former dominion, they now strike from the dark, infiltrating worlds and sabotaging fleets with cowardly tactics.\n\nTrue victory can only come with the conquest of §HRuta III§!, the hive-world of their Queen. Until then, the war must rage on - no Sontaran may rest while the enemy still breathes! Glory lies only in battle!"
+ whoniverse.383.a:0 "Sontar-ha!"
+
+ whoniverse.385.name:0 "Victory at Last!"
+ whoniverse.385.desc:0 "After countless generations of war, the [From.Owner.GetName] has achieved the ultimate victory - §Y[From.GetName]§! has fallen! The wretched bio-forms that once infested this world have been exterminated, their strongholds reduced to rubble. The last bastion of our eternal enemy is ours, and the glory of our warriors shall be sung for eternity!\n\nThis is the greatest triumph in Sontaran history! The Great Sontaran War is over, and the Empire stands supreme!"
+ whoniverse.385.a:0 "Sontar-ha! Let the victory be known!"
+
+ whoniverse.386.name:0 "The Fallen Stronghold"
+ whoniverse.386.desc:0 "§Y[From.GetName]§! now flies the banner of the [From.Owner.GetName]. The once-dreaded homeworld of our eternal foe lies silent, its cities shattered and its bio-organic structures long since decayed. This world may no longer be the stronghold of the §HRutan Host§!, but it is still a victory - a world wrested from their history, a monument to Sontaran supremacy!\n\nEven in absence, our enemies suffer defeat. Their home is now ours, and their legacy is reduced to dust."
+ whoniverse.386.a:0 "Sontar-ha! Another step toward total conquest!"
+
+ whoniverse_sontaran_war_rutan_victory:0 "Conqueror of the Rutans"
+
+### Donna Noble Recruit Event Chain ###
+
+ whoniverse_donna_chain_title:0 "The Runaway Bride"
+ whoniverse_donna_chain_desc:0 "A bride vanishes from her wedding and appears aboard the TARDIS. What force could pull her across time and space?"
+
+ whoniverse.931.name:0 "The Runaway Bride"
+ whoniverse.931.desc:0 "The §BTARDIS§! interior lights flare as a surge of unknown energy fills the control room - and suddenly, a woman in a wedding dress materializes mid-shout.\n\n§H"Who are you? Where am I? What the hell is this place?"§!\n\nShe claims to be §rDonna Noble§!, moments away from her wedding, and demands to be taken back to Earth immediately. Scans reveal an alarming trace of huon particles in her body - long-extinct temporal energy. Something is very wrong."
+ whoniverse.931.a:0 "Take her home."
+ whoniverse.931.b:0 "Eject her at the nearest planet."
+
+ whoniverse_donna_wedding_project:0 "Return Donna to the Wedding"
+ whoniverse_donna_wedding_project_DESC:0 "Go to [Root.Owner.Capital.GetName] and return Donna Noble to her wedding."
+
+ whoniverse.932.name:0 "Crashed Wedding"
+ whoniverse.932.desc:0 "Donna is returned just in time for her wedding, but the reception ends in chaos - §RRoboforms§! disguised as Santa Clauses attack, attempting to abduct her.\n\nAmid the confusion, the Doctor discovers that both Donna and her fiancé Lance are employees of §LH. C. Clements§!, a firm owned by the now-defunct Torchwood Institute."
+ whoniverse.932.a:0 "Investigate the company."
+ whoniverse.932.b:0 "Probably just a coincidence."
+
+ whoniverse_donna_investigate_project:0 "Investigate H. C. Clements"
+ whoniverse_donna_investigate_project_DESC:0 "Investigate the H.C. Clements building on [Root.Owner.Capital.GetName]."
+
+ whoniverse.933.name:0 "The Empress of the Racnoss"
+ whoniverse.933.desc:0 "A hidden tunnel beneath the H.C. Clements building leads deep into Earth's crust. At its entrance stands the §REmpress of the Racnoss§!, an ancient, spider-like being from the Dark Times. She reveals that Lance has been secretly dosing Donna with huon particles, transforming her into a key - one that will awaken her children, hibernating inside a spaceship hidden at Earth's core.\n\n§R\"The Secret Heart unlocks, and they will waken from their sleep of ages!\"§!\n\nBefore she can enact her plan, the Doctor and Donna narrowly escape - but the Empress teleports away."
+ whoniverse.933.a:0 "She won't get far. Prepare to intercept!"
+ 
+ whoniverse.934.name:0 "The Webstar Emerges"
+ whoniverse.934.desc:0 "A massive eight-pointed starship descends from orbit - the §HWebstar§! of the Racnoss Empress, long hidden in the void since the Dark Times. Now returned to Earth, it begins draining planetary resources to reawaken her ancient swarm.\n\nYou must intervene - now."
+ whoniverse.934.a:0 "All forces, engage!"
+ whoniverse.934.a.tooltip:0 "§RRacnoss Webstar§! appears on [Root.Owner.Capital.GetName]"
+
+ NAME_Webstar:0 "Webstar"
+ RACNOSS_ARMY:0 "Racnoss Army"
+
+ whoniverse.935.name:0 "A Noble Spirit"
+ whoniverse.935.desc:0 "The Webstar is destroyed. The Racnoss are driven back once more. Donna, though shaken, stood firm through every moment. Impressed by her prowess, the Doctor considers inviting her aboard as a companion."
+ whoniverse.935.a:0 "§HOpen communications channel!§!"
+ whoniverse.935.b:0 "She belongs on Earth, not among the stars."
+
+ whoniverse.937.name:0 "The Secret Heart Awakens"
+ whoniverse.937.desc:0 "With no one to stop her, the §REmpress of the Racnoss§! completes her plan. Using Donna Noble as an unwitting key, she unlocks the §HSecret Heart§! buried at Earth's core - an ancient Racnoss ark containing her dormant children.\n\nAs the planet trembles, the §HWebstar§! - the Empress's personal warship from the Dark Times - descends from orbit. Simultaneously, the §HSecret Heart§! erupts from beneath the Earth's crust, tearing through tectonic plates and igniting the oceans.\n\nTwin stars of destruction now hang over Earth, and the Racnoss swarm begins its conquest anew."
+ whoniverse.937.a:0 "This should have been prevented..."
+ whoniverse.937.a.tooltip:0 "§RRacnoss Webstar§! appears on [Root.Owner.Capital.GetName]"
+
+# Donna Noble hire
+ whoniverse.936.name:0 "NAME_whoniverse_donna_noble_name"
+ whoniverse.936.desc:0 "One minute I'm walking down the aisle, next thing I know I'm on a spaceship with killer Santas and a spider from the centre of the Earth. And I didn't even get to eat any cake!"
+
+ whoniverse_donna_noble_country:0 "The Doctor's Companion"
+ NAME_whoniverse_donna_noble_species:0 "Human"
+ NAME_whoniverse_donna_noble_name:0 "Donna Noble"
+ whoniverse_donna_noble_catch_phrase:0 "Oi! Watch it, spaceman!"
+ whoniverse_donna_noble_backstory:0 "Before being caught up in the Doctor's adventures, Donna Noble was a temp from Chiswick. Though not a scientist or soldier, her courage, blunt honesty, and refusal to back down in the face of danger make her a powerful ally. Her unexpected journey began on her wedding day... and changed her forever."
+
+ whoniverse.936.a:0 "So, what will you do with yourself now?"
+ whoniverse.936.a.response:0 "Not getting married, for starters. And I'm not going to temp anymore.\n\nI don't know. Travel. See a bit more of planet Earth. Walk in the dust. Just go out there and do something."
+
+ whoniverse.936.b:0 "Well, you could always come with me."
+ whoniverse.936.b.response:0 "What?\n\nNo.\n\nI can't.\n\nI can come?"
+
+ whoniverse.936.c:0 "I just want a mate."
+ whoniverse.936.c.response:0 "You just want to mate?!\n\nYou're not mating with me, sunshine!"
+
+ whoniverse.936.d:0 "§lInvite her aboard§!"
+ whoniverse.936.d.custom_tooltip:2 "§Y$NAME_whoniverse_donna_noble_name$§! joins our Empire as a §HLeader§!."
+
+ whoniverse.936.e:0 "§RDismiss§!"
+

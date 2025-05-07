@@ -34,6 +34,7 @@ is_whoniverse_human_species = {
 		species_portrait = whoniverse_unit
 		species_portrait = whoniverse_church
 		species_portrait = whoniverse_human
+		species_portrait = whoniverse_time_lord
  	}
 }
 

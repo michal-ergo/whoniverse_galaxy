@@ -247,7 +247,7 @@ whoniverse_necros_system_initializer = {
 	
 	class = "sc_g"
 
-	flags = { empire_home_system whoniverse_necros_system }
+	flags = { empire_home_system suppress_archaeological_sites whoniverse_necros_system }
 
 	init_effect = {
 		every_neighbor_system = { set_star_flag = empire_cluster }
@@ -409,7 +409,7 @@ whoniverse_necros_system_initializer = {
 
 }
 
-# Prewar Spiridon
+# Spiridon
 whoniverse_spiridon_system_initializer = {
 	name = "whoniverse_name_spiridon_system"
 
@@ -427,7 +427,7 @@ whoniverse_spiridon_system_initializer = {
 
 	class = "sc_a"
 
-	flags = { whoniverse_spiridon_system }
+	flags = { suppress_archaeological_sites whoniverse_spiridon_system }
 
 	planet = {
 		name = "Spiridon"

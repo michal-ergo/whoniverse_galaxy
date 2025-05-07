@@ -1,0 +1,173 @@
+objectTypes = {
+
+	#######  civilian frame  #######
+	
+	
+	####### stations #######	
+	
+######	pdxmesh = {
+######		name = "dalekships_01_terraforming_station_mesh"
+######		file = "gfx/models/ships/mammalian_01/mammalian_01_terraforming_station.mesh"
+######		scale = 1.00
+######	}
+	
+######	pdxmesh = {
+######		name = "dalekships_01_orbital_station_mesh"
+######		file = "gfx/models/ships/dalekships_01/Civilian_Assets/starbase/dalekships_01_outpost_frame.mesh"
+######		scale = 1.00
+######	}
+		
+######	pdxmesh = {
+######		name = "dalekships_01_orbital_station_frame_mesh"
+######		file = "gfx/models/ships/dalekships_01/dalekships_01_invis.mesh"
+######		scale = 1.00
+######	}		
+			
+######	pdxmesh = {
+######		name = "dalekships_01_orbital_station_assemblyyard_section_mesh"
+######		file = "gfx/models/ships/dalekships_01/dalekships_01_invis.mesh"
+######		scale = 1.00
+######	}
+	
+######	pdxmesh = {
+######		name = "dalekships_01_orbital_station_hangarbay_section_mesh"
+######		file = "gfx/models/ships/dalekships_01/dalekships_01_invis.mesh"
+######		scale = 1.00
+######	}
+	
+######	pdxmesh = {
+######		name = "dalekships_01_orbital_station_refinery_section_mesh"
+######		file = "gfx/models/ships/dalekships_01/dalekships_01_invis.mesh"
+######		scale = 1.00
+######	}
+	
+######	pdxmesh = {
+######		name = "dalekships_01_orbital_station_science_section_mesh"
+######		file = "gfx/models/ships/dalekships_01/dalekships_01_invis.mesh"
+######		scale = 1.00
+######	}
+	
+######	pdxmesh = {
+######		name = "dalekships_01_science_station_mesh"
+######		file = "gfx/models/ships/dalekships_01/Civilian_Assets/research_station/dalekships_01_research_frame.mesh"
+######		scale = 1.00
+######	}
+
+######	pdxmesh = {
+######		name = "dalekships_01_science_station_frame_mesh"
+######		file = "gfx/models/ships/dalekships_01/dalekships_01_invis.mesh"	
+######	}
+	
+######	pdxmesh = {
+######		name = "dalekships_01_military_station_mesh"
+######		file = "gfx/models/ships/dalekships_01/dalekships_01_invis.mesh"
+######		scale = 1.00
+######	}
+	
+#####	pdxmesh = {
+#####		name = "dalekships_01_military_station_large_mesh"
+#####		file = "gfx/models/ships/dalekships_01/Civilian_Assets/starbase/dalekships_01_defplatform_frame.mesh"
+#####		scale = 1.00
+#####	}	
+	
+#####	pdxmesh = {
+#####		name = "dalekships_01_military_station_medium_mesh"
+#####		file = "gfx/models/ships/dalekships_01/Civilian_Assets/starbase/dalekships_01_defplatform_frame.mesh"
+#####		scale = 1.00
+#####	}	
+	
+	pdxmesh = {
+		name = "dalekships_01_military_station_small_mesh"
+		file = "gfx/models/ships/dalekships_01/Civilian_Assets/starbase/dalekships_01_defplatform_core.mesh"
+		scale = 1.00
+	}	
+	
+	pdxmesh = {
+		name = "dalekships_01_military_station_section_heavy_mesh"
+		file = "gfx/models/ships/dalekships_01/Civilian_Assets/starbase/dalekships_01_defplatform_section_heavy.mesh"
+		scale = 1.00
+	}
+		
+	pdxmesh = {
+		name = "dalekships_01_military_station_section_medium_mesh"
+		file = "gfx/models/ships/dalekships_01/Civilian_Assets/starbase/dalekships_01_defplatform_section_medium.mesh"
+		scale = 1.00
+	}
+
+	pdxmesh = {
+		name = "dalekships_01_military_station_section_light_mesh"
+		file = "gfx/models/ships/dalekships_01/Civilian_Assets/starbase/dalekships_01_defplatform_section_light.mesh"
+		scale = 1.00
+	}
+	
+
+	
+######	pdxmesh = {
+######		name = "dalekships_01_mining_station_mesh"
+######		file = "gfx/models/ships/dalekships_01/Civilian_Assets/mining_station/dalekships_01_mining_frame.mesh"
+######		scale = 1.00
+######	}
+
+######	pdxmesh = {
+######		name = "dalekships_01_mining_station_frame_mesh"
+######		file = "gfx/models/ships/dalekships_01/dalekships_01_invis.mesh"
+######		scale = 1.00
+######	}
+	
+	####### civilian ships  #######	
+	
+pdxmesh = {
+	name = "dalekships_01_science_mesh"
+	file = "gfx/models/ships/dalekships_01/Civilian_Assets/science_ship/dalekships_01_science_ship.mesh"
+	scale = 1.4
+}
+	
+pdxmesh = {
+	name = "dalekships_01_construction_mesh"
+	file = "gfx/models/ships/dalekships_01/Civilian_Assets/construction_ship/dalekships_01_construction.mesh"
+	scale = 1.0
+
+	animation = { id = "idle"						type = "dalekships_01_construction_idle_animation" }
+	animation = { id = "working"					type = "dalekships_01_construction_working_animation" }
+	animation = { id = "working_looping"			type = "dalekships_01_construction_working_looping_animation" }
+	scale = 1.0
+}
+	
+	
+pdxmesh = {
+	name = "dalekships_01_transport_mesh"
+	file = "gfx/models/ships/dalekships_01/Civilian_Assets/transport_ship/dalekships_01_transport.mesh"
+	scale = 1
+}
+	
+pdxmesh = {
+	name = "dalekships_01_colony_mesh"
+	file = "gfx/models/ships/dalekships_01/Civilian_Assets/colony_ship/dalekships_01_colony.mesh"
+	scale = 1
+}	
+
+
+
+####### small ships  #######	
+ 	pdxmesh = {
+ 		name = "dalekships_01_bomber_mesh"
+ 		file = "gfx/models/ships/dalekships_01/StrikeCraft_Assets/dalekships_01_fighter.mesh"
+ 		scale = 1.0
+ 	}
+	
+pdxmesh = {
+	name = "dalekships_01_launcher_mesh"
+	file = "gfx/models/ships/dalekships_01/Civilian_Assets/transport_ship/dalekships_01_launcher.mesh"
+	scale = 1.0
+}
+	
+ 		pdxmesh = {
+ 		name = "dalekships_01_fighter_mesh"
+ 		file = "gfx/models/ships/dalekships_01/StrikeCraft_Assets/dalekships_01_fighter.mesh"
+ 		scale = 1.0
+ 	}
+	
+	
+	
+	
+}

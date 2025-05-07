@@ -1,0 +1,109 @@
+# NuWho Dalek Drone
+objectTypes = {
+	pdxmesh = {
+		name = "Empire"
+		file = "gfx/models/portraits/wise_dalek/empire/dalek_empire_drone.mesh"
+		scale = 0.8
+	
+		animation = { id = "empire_idle"	type = "empire_portrait_idle" }
+	}
+}
+
+# NuWho Dalek Supreme
+objectTypes = {
+	pdxmesh = {
+		name = "Supreme"
+		file = "gfx/models/portraits/wise_dalek/empire/dalek_empire_supreme.mesh"
+		scale = 0.8
+	
+		animation = { id = "supreme_idle"	type = "supreme_portrait_idle" }
+	}
+}
+
+# NuWho Dalek SWD
+objectTypes = {
+	pdxmesh = {
+		name = "Dalek_empire_SWD"
+		file = "gfx/models/portraits/wise_dalek/empire/dalek_empire_SWD.mesh"
+		scale = 0.8
+	
+		animation = { id = "empire_SWD_idle"	type = "empire_SWD_portrait_idle" }
+	}
+}
+
+# NuWho Davros
+objectTypes = {
+	pdxmesh = {
+		name = "Davros_empire"
+		file = "gfx/models/portraits/wise_dalek/empire/dalek_empire_davros.mesh"
+		scale = 0.8
+	
+		animation = { id = "davros_empire_idle"	type = "Davros_empire_portrait_idle" }
+	}
+}
+
+# NuWho Emperor
+objectTypes = {
+	pdxmesh = {
+		name = "Dalek_empire_emperor"
+		file = "gfx/models/portraits/wise_dalek/empire/dalek_empire_emperor.mesh"
+		scale = 0.4
+	
+		animation = { id = "Dalek_emperor_idle"	type = "Dalek_emperor_portrait_idle" }
+	}
+}
+
+# Classic Who Davros
+	objectTypes = {
+		pdxmesh = {
+			name = "Davros_original"
+			file = "gfx/models/portraits/wise_dalek/skaro/dalek_skaro_davros.mesh"
+			scale = 0.5
+	
+			animation = { id = "Davros_original_idle"	type = "Davros_original_portrait_idle" }
+	}
+}
+
+# Classic Who Dalek
+objectTypes = {
+	pdxmesh = {
+		name = "Dalek_original_drone"
+		file = "gfx/models/portraits/wise_dalek/skaro/dalek_skaro_drone.mesh"
+		scale = 0.8
+
+		animation = { id = "Dalek_original_idle"	type = "Dalek_original_portrait_idle" }
+	}
+}
+
+# Classic Who SWD
+objectTypes = {
+	pdxmesh = {
+		name = "Dalek_original_SWD"
+		file = "gfx/models/portraits/wise_dalek/skaro/dalek_skaro_swd.mesh"
+		scale = 1.0
+
+		animation = { id = "Dalek_SWD_idle"	type = "Dalek_SWD_portrait_idle" }
+	}
+}
+
+# NuWho Paradigm Drone
+objectTypes = {
+	pdxmesh = {
+		name = "Dalek_paradigm_drone"
+		file = "gfx/models/portraits/wise_dalek/paradigm/dalek_paradigm_drone.mesh"
+		scale = 0.9 # Increased to 0.9 from 0.8 - Paradigm Daleks are big
+
+		animation = { id = "Dalek_paradigm_idle"	type = "Dalek_paradigm_portrait_idle" }
+	}
+}
+
+# Classic Who Emperor
+objectTypes = {
+	pdxmesh = {
+		name = "Dalek_retro_emperor"
+		file = "gfx/models/portraits/wise_dalek/retro/dalek_retro_emperor.mesh"
+		scale = 0.8
+
+		animation = { id = "Retro_emperor_idle"	type = "Retro_emperor_portrait_idle" }
+	}
+}

@@ -1,0 +1,14 @@
+animation = {
+name = "dalekships_01_construction_idle_animation"
+file = "dalekships_01_construction_idle.anim"
+}
+
+animation = {
+name = "dalekships_01_construction_working_looping_animation"
+file = "dalekships_01_construction_working.anim"
+}
+
+animation = {
+name = "dalekships_01_construction_working_animation"
+file = "dalekships_01_construction_working_start.anim"
+}

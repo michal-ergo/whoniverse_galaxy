@@ -1,0 +1,10 @@
+entity = {
+	name = "dalekportraits_01_ndp_entity"
+	pdxmesh = "dalekportraits_01_ndp_mesh"
+	
+default_state = "ndp_idle"
+	state = { name = "ndp_idle"		animation = "ndp_idle1"	chance = 1 looping = no next_state = ndp_idle}
+	state = { name = "ndp_idle"		animation = "ndp_idle2"	chance = 1 looping = no next_state = ndp_idle}
+	state = { name = "ndp_idle"		animation = "ndp_idle3"	chance = 1 looping = no next_state = ndp_idle}
+    scale = 1.25
+}

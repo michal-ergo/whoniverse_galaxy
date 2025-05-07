@@ -1,0 +1,52 @@
+objectTypes = {
+
+#######  Turrets  #######
+
+	pdxmesh = {
+		name = "dalekships_01_turret_projectile_large_mesh"
+		file = "gfx/models/ships/dalekships_01/dalekships_01_invis.mesh"
+		scale = 0.5
+	}	
+	
+	pdxmesh = {
+		name = "dalekships_01_turret_projectile_medium_mesh"
+		file = "gfx/models/ships/dalekships_01/dalekships_01_invis.mesh"
+		scale = 0.50
+	}	
+	
+	pdxmesh = {
+		name = "dalekships_01_turret_projectile_small_mesh"
+		file = "gfx/models/ships/dalekships_01/dalekships_01_invis.mesh"
+		scale = 0.5
+	}	
+	
+	pdxmesh = {
+		name = "dalekships_01_turret_missile_large_mesh"
+		file = "gfx/models/ships/dalekships_01/dalekships_01_invis.mesh"
+		scale = 0.75
+	}	
+	
+	pdxmesh = {
+		name = "dalekships_01_turret_missile_medium_mesh"
+		file = "gfx/models/ships/dalekships_01/dalekships_01_invis.mesh"
+		scale = 0.50
+	}	
+	
+	pdxmesh = {
+		name = "dalekships_01_turret_missile_small_mesh"
+		file = "gfx/models/ships/dalekships_01/dalekships_01_invis.mesh"
+		scale = 0.5
+	}	
+	
+	pdxmesh = {
+		name = "dalekships_01_turret_point_defence_mesh"
+		file = "gfx/models/ships/dalekships_01/dalekships_01_invis.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "dalekships_01_turret_xl_mesh"
+		file = "gfx/models/ships/dalekships_01/dalekships_01_invis.mesh"
+		scale = 0.75
+	}
+}

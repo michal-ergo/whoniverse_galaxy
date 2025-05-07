@@ -12,6 +12,9 @@ portraits = {
 	whoniverse_martha_jones = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 				greeting_sound = "whoniverse_martha_jones_greetings"
 				texturefile = "gfx/models/portraits/whoniverse/doctor_martha_jones.dds" }
+	whoniverse_donna_noble = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+				greeting_sound = "whoniverse_donna_noble_greetings"
+				texturefile = "gfx/models/portraits/whoniverse/doctor_donna_noble.dds" }
 	# Bronze Dalek (Time War) set
 	whoniverse_dalek_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 				greeting_sound = "whoniverse_dalek_greetings"
@@ -224,6 +227,9 @@ portraits = {
 	whoniverse_judoon_02 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		greeting_sound = "whoniverse_judoon_greetings"
 		texturefile = "gfx/models/portraits/whoniverse/judoon_02.dds" }
+	whoniverse_judoon_03 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_judoon_greetings"
+		texturefile = "gfx/models/portraits/whoniverse/judoon_03.dds" }
 	whoniverse_shadow_architect = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		greeting_sound = "whoniverse_shadow_architect_greetings"
 		texturefile = "gfx/models/portraits/whoniverse/shadow_architect.dds" }
@@ -254,6 +260,36 @@ portraits = {
 	whoniverse_sea_devil_f_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		greeting_sound = "whoniverse_silurian_hiss"
 		texturefile = "gfx/models/portraits/whoniverse/sea_devil_f_01.dds" }
+	# Time Lords
+	whoniverse_time_lord_m_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_time_lord_soldier_greetings"
+		texturefile = "gfx/models/portraits/whoniverse/time_lord_m_01.dds" }
+	whoniverse_time_lord_m_02 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_time_lord_general_greetings"
+		texturefile = "gfx/models/portraits/whoniverse/time_lord_m_02.dds" }
+	whoniverse_time_lord_f_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_time_lord_oliha_greetings"
+		texturefile = "gfx/models/portraits/whoniverse/time_lord_f_01.dds" }
+	whoniverse_time_lord_f_02 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_time_lord_female_greetings"
+		texturefile = "gfx/models/portraits/whoniverse/time_lord_f_02.dds" }
+	whoniverse_time_lord_m_03 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_time_lord_president_greetings"
+		texturefile = "gfx/models/portraits/whoniverse/time_lord_m_03.dds" }
+	# Sontaran Static
+	whoniverse_sontaran_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_sontaran_new_greetings"
+		texturefile = "gfx/models/portraits/whoniverse/sontaran_01.dds" }
+	whoniverse_sontaran_02 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_sontaran_new_greetings"
+		texturefile = "gfx/models/portraits/whoniverse/sontaran_02.dds" }
+	whoniverse_sontaran_03 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_sontaran_new_greetings"
+		texturefile = "gfx/models/portraits/whoniverse/sontaran_03.dds" }
+	# Rutan
+	whoniverse_rutan_01 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
+	greeting_sound = "molluscoid_01_greetings"
+	texturefile = "gfx/models/portraits/whoniverse/rutan_01.dds" }
 	}
 
 	

@@ -31,6 +31,32 @@ whoniverse_dalek_set = {
 		}
 }
 
+whoniverse_dalek_set_velocirandom = {
+	species_class = WHO_DALEK
+
+	portraits = {
+		"velocirandom_dalek_01"
+		"velocirandom_dalek_paradigm"
+	}
+	non_randomized_portraits = {
+		"velocirandom_dalek_01"
+		"velocirandom_dalek_paradigm"
+	}
+}
+
+whoniverse_dalek_set_wise = {
+	species_class = WHO_DALEK
+
+	portraits = {
+		"wise_dalek"
+		"wise_dalek_paradigm"
+	}
+	non_randomized_portraits = {
+		"wise_dalek"
+		"wise_dalek_paradigm"
+	}
+}
+
 whoniverse_cyberman_set = {
 	species_class = WHO_CYBERMAN
 
@@ -48,6 +74,38 @@ whoniverse_cyberman_set = {
 		"whoniverse_cyberman_warrior"
 		"whoniverse_cyberman_classic"
 		"whoniverse_cyberman_mondasian"
+	}
+}
+
+whoniverse_cyberman_set_wise = {
+	species_class = WHO_CYBERMAN
+
+	portraits = {
+		"wise_cyberman_cybus"
+		"wise_cyberman_legion"
+		"wise_cyberman_cyberiad"
+		"wise_cyberman_warrior"
+	}
+	non_randomized_portraits = {
+		"wise_cyberman_cybus"
+		"wise_cyberman_legion"
+		"wise_cyberman_cyberiad"
+		"wise_cyberman_warrior"
+	}
+}
+
+whoniverse_sontaran_set_wise = {
+	species_class = HUM
+
+	portraits = {
+		"wise_sontaran_classic"
+		"wise_sontaran_new"
+		"wise_sontaran_flux"
+	}
+	non_randomized_portraits = {
+		"wise_sontaran_classic"
+		"wise_sontaran_new"
+		"wise_sontaran_flux"
 	}
 }
 
@@ -103,6 +161,21 @@ whoniverse_human_set = {
 		"whoniverse_church"
 		"whoniverse_unit"
 		"whoniverse_human"
+	}
+}
+
+whoniverse_time_lord_set = {
+	species_class = HUM
+
+	portraits = {
+		# "whoniverse_church"
+		# "whoniverse_unit"
+		"whoniverse_time_lord"
+	}
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"whoniverse_time_lord"
 	}
 }
 
@@ -199,5 +272,35 @@ whoniverse_roboform_set = {
 	# These should not be used for randomly generated species
 	non_randomized_portraits = {
 		"whoniverse_roboform"
+	}
+}
+
+whoniverse_sontaran_set = {
+	species_class = HUM
+
+	portraits = {
+		# "whoniverse_church"
+		# "whoniverse_unit"
+		"whoniverse_sontaran"
+	}
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"whoniverse_sontaran"
+	}
+}
+
+whoniverse_rutan_set = {
+	species_class = MOL
+
+	portraits = {
+		# "whoniverse_church"
+		# "whoniverse_unit"
+		"whoniverse_rutan"
+	}
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"whoniverse_rutan"
 	}
 }

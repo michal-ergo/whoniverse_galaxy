@@ -1,9 +1,30 @@
+whoniverse_wise = {
+	name = "whoniverse_category_wise"
+
+	sets = {
+		# whoniverse_unit_set
+		whoniverse_cyberman_set_wise
+		whoniverse_dalek_set_wise
+		whoniverse_sontaran_set_wise
+	} 
+}
+
+whoniverse_velocirandom = {
+	name = "whoniverse_category_velocirandom"
+
+	sets = {
+		# whoniverse_unit_set
+		whoniverse_dalek_set_velocirandom
+	} 
+}
+
 whoniverse = {
-	name = Whoniverse
+	name = "whoniverse_category"
 
 	sets = {
 		# whoniverse_unit_set
 		whoniverse_human_set
+		whoniverse_time_lord_set
 		whoniverse_silurian_set
 		whoniverse_sea_devil_set
 		whoniverse_judoon_set
@@ -15,5 +36,8 @@ whoniverse = {
 		whoniverse_mechanoid_set
 		whoniverse_nestene_set
 		whoniverse_roboform_set
+		whoniverse_sontaran_set
+		whoniverse_rutan_set
 	} 
 }
+

@@ -36,6 +36,7 @@ namespace = whoniverse
 # 900 - 909 = The Doctor ascension perk
 # 910 - 919 = Ninth Doctor events, Rose Tyler event chain
 # 920 - 929 = Tenth Doctor hire, Martha Jones event chain
+# 930 - 939 = Donna Noble event chain
 
 
 # Shadow Proclamation setup

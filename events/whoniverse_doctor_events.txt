@@ -36,6 +36,7 @@ namespace = whoniverse
 # 900 - 909 = The Doctor ascension perk
 # 910 - 919 = Ninth Doctor events, Rose Tyler event chain
 # 920 - 929 = Tenth Doctor hire, Martha Jones event chain
+# 930 - 939 = Donna Noble event chain
 
 # The Doctor Ascension Perk adoption event
 country_event = {
@@ -381,11 +382,11 @@ country_event = {
 
 	option = {
 		name = "whoniverse.914.a"
-		trigger = { owner = { resource_stockpile_compare = { resource = consumer_goods value >= 1000 } } }
+		trigger = { owner = { resource_stockpile_compare = { resource = consumer_goods value >= 250 } } }
         hidden_effect = {
 			country_event = { id = whoniverse.915 days = 45 } } 
 		owner = {
-			add_resource = { consumer_goods = -1000 }
+			add_resource = { consumer_goods = -250 }
 		}
 	}
 
@@ -965,7 +966,10 @@ country_event = {
 				set_leader_flag = whoniverse_tenth_doctor_leader
 				set_owner = root
 			}
-			owner = { country_event = { id = whoniverse.925 days = 5400 random = 1800 } } # Martha Jones event chain in 10 - 20 years
+			owner = { 
+				country_event = { id = whoniverse.925 days = 5400 random = 1800 } # Martha Jones event chain in 10 - 20 years
+				country_event = { id = whoniverse.930 days = 7200 random = 1800 } # Donna Noble event chain in 15 - 35 years
+			}
 			create_fleet = {
 				name = "NAME_Tardis"
 				settings = {
@@ -1255,6 +1259,9 @@ country_event = {
 		tag = hire_leader
 		custom_tooltip = whoniverse.928.d.custom_tooltip # Martha Jones joins
 		sound = whoniverse_martha_jones_greetings
+		owner = {
+			end_event_chain = "whoniverse_donna_chain"	
+		}
 
 		hidden_effect = {
 			clone_leader = {
@@ -1273,6 +1280,9 @@ country_event = {
 	option = { # DISMISS
 		name = whoniverse.928.e
 		tag = dismiss_leader
+		owner = {
+			end_event_chain = "whoniverse_donna_chain"	
+		}
 		hidden_effect = {
 			event_target:whoniverse_martha_jones_leader = {
 				kill_leader = { show_notification = no }
@@ -1298,6 +1308,7 @@ country_event = {
 				modifier = whoniverse_unit_devastation
 				years = 20
 			}
+			end_event_chain = "whoniverse_donna_chain"
 			random_controlled_planet = {
 				limit = { has_planet_flag = planet_earth }
 				while = {
@@ -1309,5 +1320,570 @@ country_event = {
 				add_planet_devastation = 50
 			}
 		}	
+	}
+}
+
+### Donna Noble Event Chain ###
+
+# Donna Noble pre-event
+country_event = {
+    id = whoniverse.930
+    hide_window = yes
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		any_controlled_planet = {
+			has_planet_flag = planet_earth
+		}
+		exists = event_target:whoniverse_tenth_doctor_leader
+		is_human_species = yes
+		is_ai = no
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	immediate = {
+		country_event = { id = whoniverse.931 days = 90 random = 0 }
+	}
+}
+
+# Donna Noble intro event
+country_event = {
+    id = whoniverse.931
+    title = "whoniverse.931.name"
+    desc = "whoniverse.931.desc"
+    picture = GFX_evt_whoniverse_donna_wedding
+	event_chain = whoniverse_donna_chain
+	show_sound = whoniverse_donna_noble_this_place
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		any_controlled_planet = {
+			has_planet_flag = planet_earth
+		}
+		exists = event_target:whoniverse_tenth_doctor_leader
+		is_human_species = yes
+		is_ai = no
+	}
+
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	option = {
+		name = "whoniverse.931.a"
+		begin_event_chain = {
+			event_chain = whoniverse_donna_chain
+			target = this
+		}
+		random_controlled_planet = {
+			limit = { has_planet_flag = planet_earth }
+			save_global_event_target_as = event_donna_noble
+			enable_special_project = {
+				name = whoniverse_donna_wedding_project
+				owner = root
+				location = this
+			}
+		}
+	}
+
+	option = {
+		name = "whoniverse.931.b"
+		hidden_effect = {
+			country_event = { id = whoniverse.937 days = 90 random = 0 }
+		}
+	}
+}
+
+# Donna Noble wedding project finished event
+country_event = {
+    id = whoniverse.932
+    title = "whoniverse.932.name"
+    desc = "whoniverse.932.desc"
+    picture = GFX_evt_whoniverse_roboform
+	event_chain = whoniverse_donna_chain
+	show_sound = whoniverse_roboform_music
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		is_ai = no
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "whoniverse.932.a"
+		hidden_effect = {
+			country_event = { id = whoniverse.933 days = 45 random = 0 }	
+		}
+	}
+
+	option = {
+		name = "whoniverse.932.b"
+		hidden_effect = {
+			country_event = { id = whoniverse.937 days = 120 random = 0 }	
+		}
+	}
+}
+
+# Empress of the Racnoss
+country_event = {
+    id = whoniverse.933
+    title = "whoniverse.933.name"
+    desc = "whoniverse.933.desc"
+    picture = GFX_evt_whoniverse_racnoss
+	event_chain = whoniverse_donna_chain
+	show_sound = whoniverse_racnoss_empress
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		is_ai = no
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "whoniverse.933.a"
+        hidden_effect = {
+				country_event = {
+					id = whoniverse.934 days = 10 random = 0
+				}
+		}
+	}
+}
+
+# Webstar Attacks on Earth
+country_event = {
+	id = whoniverse.934
+	title = "whoniverse.934.name"
+	desc = "whoniverse.934.desc"
+	picture = GFX_evt_whoniverse_webstar
+	show_sound = event_air_raid_siren
+	location = event_target:event_donna_noble
+	event_chain = whoniverse_donna_chain
+
+	is_triggered_only = yes
+	fire_only_once = yes	
+
+	auto_opens = yes
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		is_ai = no
+	}
+
+	immediate = {
+		create_species = {
+			name = "WHO_RACNOSS"
+			plural = "WHO_RACNOSS_pl"
+			class = ART
+			portrait = art17
+			namelist = ART1
+			traits = {
+				trait = "trait_strong"
+			}
+		}
+		create_country = {
+			name = "Racnoss Invaders"
+			species = last_created_species
+			type = faction
+			name_list = ART1
+			auto_delete = no
+			flag = {
+				icon = {
+					category = "zoological"
+					file = "flag_zoological_13.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"red"
+					"red"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_country_flag = racnoss_empire
+				set_graphical_culture = arthropoid_01
+				establish_communications_no_message = root
+				establish_contact = { who = root.owner }
+				create_leader = {
+					class = commander
+					species = owner_main_species
+					name = "Empress of the Racnoss"
+					skill = 5
+				}
+				create_fleet = {
+					name = "NAME_Webstar" # cca 10k strength
+					effect = {
+						set_owner = prev
+						while = {
+							count = 1
+							create_ship = {
+							name = "Racnoss Webstar"
+							design = "NAME_Large_Crystal_Entity_Blue_Elite"
+								}
+							}
+						set_location = event_target:event_donna_noble
+						set_fleet_stance = aggressive
+						# set_aggro_range_measure_from = return_point
+						# set_aggro_range = 50
+						assign_leader = last_created_leader
+						# queue_actions = {
+						# 	repeat = {
+						# 		wait = {
+						# 			duration = 100
+						# 		}
+						# 	}
+						# }
+					}
+				}
+				save_global_event_target_as = whoniverse_racnoss_invaders
+				set_country_flag = whoniverse_racnoss_invaders_flag
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.934.a
+		custom_tooltip = whoniverse.934.a.tooltip		
+	}
+}
+
+country_event = {
+	id = whoniverse.935
+	title = "whoniverse.935.name"
+	desc = "whoniverse.935.desc"
+	picture = GFX_evt_whoniverse_webstar
+	show_sound = event_faceoff_in_space
+	event_chain = whoniverse_donna_chain
+
+	is_triggered_only = yes
+	fire_only_once = yes	
+
+	auto_opens = yes
+
+	trigger = {
+		from = {
+			has_country_flag = whoniverse_racnoss_invaders_flag
+		}
+		this = {
+			has_ascension_perk = ap_whoniverse_doctor
+			NOT = { has_country_flag = whoniverse_donna_not_saved_flag } 
+		}
+	}
+
+	immediate = {
+		end_event_chain = "whoniverse_donna_chain"
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier3unityreward
+			min = @tier3unitymin
+			max = @tier3unitymax
+			}
+	}
+
+	option = {
+		name = "whoniverse.935.a"
+        hidden_effect = {
+				country_event = {
+					id = whoniverse.936 days = 1 random = 0
+				}
+		}
+	}
+	option = {
+		name = "whoniverse.935.b"
+		add_monthly_resource_mult = {
+			resource = influence
+			value = @tier1influencereward
+			min = @tier1influencemin
+			max = @tier1influencemax
+		}
+	}
+}
+
+# Donna Noble: HIRE/DISMISS
+country_event = {
+	id = whoniverse.936
+	title = "whoniverse.936.name"
+ 	desc = whoniverse.936.desc
+
+	show_sound = whoniverse_donna_noble_greetings
+    location = event_target:event_donna_noble
+	is_triggered_only = yes
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		NOT = { exists = event_target:whoniverse_donna_noble_leader }
+		is_ai = no
+	}
+
+	event_window_type = leader_recruit
+	picture_event_data = {
+		portrait = event_target:whoniverse_donna_noble_leader
+		room = default_room
+	}
+	picture = GFX_leader_recruitment_bg_renowned
+
+	immediate = {
+		hidden_effect = {
+			create_country = {
+				name = "whoniverse_donna_noble_country"
+				type = global_event
+				auto_delete = yes
+				flag = {
+					icon = {
+						category = "special"
+						file = "unknown.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors = {
+						"blue"
+						"yellow"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					save_event_target_as = donna_noble_country
+				}
+			}
+			event_target:donna_noble_country = {
+				create_species = {
+					name = "NAME_whoniverse_donna_noble_species"
+					class = PARAGON
+					portrait = whoniverse_donna_noble
+					namelist = "HUMAN1"
+					traits = {
+						trait = trait_adaptive
+						trait = trait_nomadic
+						trait = trait_wasteful
+					}
+					effect = {
+						save_event_target_as = donna_noble_species
+					}
+				}
+				create_leader = {
+					species = event_target:donna_noble_species
+					event_leader = yes
+					class = official
+					name = "NAME_whoniverse_donna_noble_name"
+					skill = 4
+					randomize_traits = no
+					skip_background_generation = yes
+					background_ethic = ethic_egalitarian
+					custom_catch_phrase = whoniverse_martha_jones_catch_phrase
+					custom_description = whoniverse_martha_jones_backstory
+					can_manually_change_location = yes
+					traits = {
+						trait = leader_trait_resilient
+						trait = leader_trait_ambassador_whisper_networks # Blabbermouth
+						trait = leader_trait_opinionated # Stubborness
+						trait = subclass_official_delegate
+					}
+					gender = female
+					set_age = 32
+					immortal = no
+					effect = {
+						save_global_event_target_as = whoniverse_donna_noble_leader
+						set_leader_flag = legendary_leader
+						set_leader_flag = donna_noble
+						set_owner = root
+						exile_leader_as = whoniverse_donna_noble_leader
+					}
+				}
+			}
+		}
+	}
+
+	option = { # What are you going to do?
+		name = whoniverse.936.a
+		is_dialog_only = yes
+		response_text = whoniverse.936.a.response
+	}
+	option = { # Come with me
+		name = whoniverse.936.b
+		is_dialog_only = yes
+		response_text = whoniverse.936.b.response
+	}
+
+	option = { # Let's mate
+	name = whoniverse.936.c
+	is_dialog_only = yes
+	response_text = whoniverse.936.c.response
+	}
+
+	option = { # HIRE
+		name = whoniverse.936.d
+		tag = hire_leader
+		custom_tooltip = whoniverse.936.d.custom_tooltip # Donna Noble joins
+		sound = whoniverse_donna_noble_greetings
+
+		hidden_effect = {
+			clone_leader = {
+				target = event_target:whoniverse_donna_noble_leader
+			}
+			owner = {
+				end_event_chain = "whoniverse_donna_chain"	
+			}
+			last_created_leader = {
+				set_leader_flag = legendary_leader
+				save_global_event_target_as = whoniverse_donna_noble_leader
+				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = whoniverse_donna_noble_leader
+				set_owner = root
+			}
+			# owner = { country_event = { id = whoniverse.918 days = 16200 random = 1800 } } # Rose leaves in 40-50 years
+		}
+	}
+	option = { # DISMISS
+		name = whoniverse.936.e
+		tag = dismiss_leader
+		owner = {
+			end_event_chain = "whoniverse_donna_chain"	
+		}
+		hidden_effect = {
+			event_target:whoniverse_donna_noble_leader = {
+				kill_leader = { show_notification = no }
+				}
+		}
+	}
+}
+
+# Racnoss Attacks on Earth
+country_event = {
+	id = whoniverse.937
+	title = "whoniverse.937.name"
+	desc = "whoniverse.937.desc"
+	picture = GFX_evt_whoniverse_webstar
+	show_sound = event_air_raid_siren
+	location = event_target:event_donna_noble
+	event_chain = whoniverse_donna_chain
+
+	is_triggered_only = yes
+	fire_only_once = yes	
+
+	auto_opens = yes
+
+	trigger = {
+		has_ascension_perk = ap_whoniverse_doctor
+		is_ai = no
+	}
+
+	immediate = {
+		random_controlled_planet = {
+			limit = { has_planet_flag = planet_earth }
+			save_global_event_target_as = event_donna_noble
+
+		}
+		create_species = {
+			name = "WHO_RACNOSS"
+			plural = "WHO_RACNOSS_pl"
+			class = ART
+			portrait = art17
+			namelist = ART1
+			traits = {
+				trait = "trait_strong"
+			}
+		}
+		create_country = {
+			name = "Racnoss Invaders"
+			species = last_created_species
+			type = faction
+			name_list = ART1
+			auto_delete = no
+			flag = {
+				icon = {
+					category = "zoological"
+					file = "flag_zoological_13.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"red"
+					"red"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_country_flag = racnoss_empire
+				set_graphical_culture = arthropoid_01
+				establish_communications_no_message = root
+				establish_contact = { who = root.owner }
+				create_leader = {
+					class = commander
+					species = owner_main_species
+					name = "Empress of the Racnoss"
+					skill = 5
+				}
+				create_fleet = {
+					name = "NAME_Webstar" # cca 300 strength
+					effect = {
+						set_owner = prev
+						while = {
+							count = 2
+							create_ship = {
+							name = "Racnoss Webstar"
+							design = "NAME_Large_Crystal_Entity_Blue_Elite"
+								}
+							}
+						set_location = event_target:event_donna_noble
+						set_fleet_stance = aggressive
+						# set_aggro_range_measure_from = return_point
+						# set_aggro_range = 50
+						assign_leader = last_created_leader
+						# queue_actions = {
+						# 	repeat = {
+						# 		wait = {
+						# 			duration = 100
+						# 		}
+						# 	}
+						# }
+					}
+				}
+				save_global_event_target_as = whoniverse_racnoss_invaders
+				set_country_flag = whoniverse_racnoss_invaders_flag
+			}
+		}
+		event_target:event_donna_noble = {
+			while = {
+				count = 10
+				random_owned_pop = {
+					kill_pop = yes
+				}
+			}
+			add_planet_devastation = 35
+			while = {
+				count = 20
+				create_army = {
+					name = "RACNOSS_ARMY"
+					owner = last_created_country
+					species = last_created_species
+					type = "xenomorph_army"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = whoniverse.937.a
+		custom_tooltip = whoniverse.937.a.tooltip
+		end_event_chain = "whoniverse_donna_chain"
+		hidden_effect = {
+			owner = {
+				set_country_flag = whoniverse_donna_not_saved_flag
+			}
+		}
 	}
 }

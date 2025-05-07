@@ -1,0 +1,182 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+### Portraits by Wise
+
+# Cybermen Portraits by Wise
+portraits = {
+	# cybus by Wise
+	wise_cyberman_cybus_drone = {	
+		entity = "portrait_cyberman_cybus"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_cybermen_cybus_greetings"
+		character_textures = {	"gfx/models/portraits/wise_cybermen/Cybus/CybusCyberman.dds"	}
+		}
+
+	wise_cyberman_cybus_leader = {	
+		entity = "portrait_cyberman_cybus"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_cybermen_cybus_greetings"
+		character_textures = {	"gfx/models/portraits/wise_cybermen/Cybus/CybusLeader.dds"	}
+		}
+
+	wise_cyberman_cybus_controller = {	
+		entity = "portrait_cyberman_cybus"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_cybermen_cybus_greetings"
+		character_textures = {	"gfx/models/portraits/wise_cybermen/Cybus/CybusController.dds"	}
+		}
+	# cyberiad by Wise
+	wise_cyberman_cyberiad_01 = {	
+		entity = "portrait_cyberman_cybus"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_cybermen_cyberiad_greetings"
+		character_textures = {	"gfx/models/portraits/wise_cybermen/Cyberiad/CyberiadCyberman.dds"	}
+		}
+	# cybermen legion by Wise
+	wise_cyberman_legion_01 = {	
+		entity = "portrait_cyberman_cybus"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_cybermen_cybus_greetings"
+		character_textures = {	"gfx/models/portraits/wise_cybermen/Cyberiad/CyberiadCybusman.dds"	}
+		}
+	# cybermen legion leader by Wise
+	wise_cyberman_legion_02 = {	
+		entity = "portrait_cyberman_cybus"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_cybermen_cybus_greetings"
+		character_textures = {	"gfx/models/portraits/wise_cybermen/Cyberiad/CyberiadCybusmanLeader.dds"	}
+		}
+	# cybermen legion controller by Wise
+	wise_cyberman_legion_03 = {	
+		entity = "portrait_cyberman_cybus"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_cybermen_cybus_greetings"
+		character_textures = {	"gfx/models/portraits/wise_cybermen/Cyberiad/CyberiadCybusmanController.dds"	}
+		}
+	# cyberwarrior by Wise
+	wise_cyberman_warrior_01 = {	
+		entity = "portrait_cyberman_cyberiad"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_cybermen_cyberiad_greetings"
+		character_textures = {	"gfx/models/portraits/wise_cybermen/Cyberiad/CyberiadLeader.dds"	}
+		}
+	}
+
+# Dalek Portraits by Wise
+portraits = {
+	# Dalek Empire
+	wise_dalek_empire_drone = {	
+		entity = "portrait_dalek_empire"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_dalek_greetings"
+		character_textures = {	"gfx/models/portraits/wise_dalek/empire/Dalek_empire_drone.dds" }
+		}
+
+	wise_dalek_empire_guard = {	
+		entity = "portrait_dalek_empire"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_dalek_greetings"
+		character_textures = {	"gfx/models/portraits/wise_dalek/empire/Dalek_empire_guard.dds" }
+		}
+
+	wise_dalek_empire_sec = {	
+		entity = "portrait_dalek_empire"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_dalek_greetings"
+		character_textures = {	"gfx/models/portraits/wise_dalek/empire/Dalek_empire_sec.dds" }
+		}
+
+	wise_dalek_empire_supreme = {	
+		entity = "portrait_dalek_supreme"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_dalek_supreme_greetings"
+		character_textures = {	"gfx/models/portraits/wise_dalek/empire/Dalek_empire_supreme.dds" }
+		}
+
+	wise_dalek_empire_special = {	
+		entity = "portrait_dalek_empire_SWD"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_dalek_greetings"
+		character_textures = {	"gfx/models/portraits/wise_dalek/empire/Dalek_Empire_SWD.dds" }
+		}
+
+	wise_dalek_empire_davros = {	
+		entity = "portrait_dalek_davros_empire"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_dalek_davros_greetings"
+		character_textures = {	"gfx/models/portraits/wise_dalek/empire/Dalek_empire_davros.dds" }
+		}
+
+	wise_dalek_empire_emperor = {	
+		entity = "portrait_dalek_empire_emperor"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_dalek_emperor_greetings"
+		character_textures = {	"gfx/models/portraits/wise_dalek/empire/dalek_empire_emperor.dds" }
+		}
+
+	# Dalek New Paradigm
+	wise_dalek_paradigm_drone = {	
+		entity = "portrait_dalek_paradigm_drone"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_dalek_supreme_greetings"
+		character_textures = {	"gfx/models/portraits/wise_dalek/paradigm/Dalek_paradigm_red.dds" }
+		}
+
+	wise_dalek_paradigm_yellow = {	
+		entity = "portrait_dalek_paradigm_drone"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_dalek_supreme_greetings"
+		character_textures = {	"gfx/models/portraits/wise_dalek/paradigm/Dalek_paradigm_yellow.dds" }
+		}
+
+	wise_dalek_paradigm_orange = {	
+		entity = "portrait_dalek_paradigm_drone"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_dalek_supreme_greetings"
+		character_textures = {	"gfx/models/portraits/wise_dalek/paradigm/Dalek_paradigm_orange.dds" }
+		}
+
+	wise_dalek_paradigm_blue = {	
+		entity = "portrait_dalek_paradigm_drone"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_dalek_supreme_greetings"
+		character_textures = {	"gfx/models/portraits/wise_dalek/paradigm/Dalek_paradigm_blue.dds" }
+		}
+
+	wise_dalek_paradigm_white = {	
+		entity = "portrait_dalek_paradigm_drone"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_dalek_supreme_greetings"
+		character_textures = {	"gfx/models/portraits/wise_dalek/paradigm/Dalek_paradigm_white.dds" }
+		}
+
+		
+}

@@ -176,7 +176,7 @@ whoniverse_new_dalek_paradigm = {
 
 	species = {
 		class = "WHO_DALEK"
-		portrait = "whoniverse_dalek_paradigm"
+		portrait = "velocirandom_dalek_01"
 		name = "PRESCRIPTED_species_name_new_dalek_paradigm"
 		plural = "PRESCRIPTED_species_plural_new_dalek_paradigm"
 		adjective = "PRESCRIPTED_species_adjective_new_dalek_paradigm"
@@ -202,10 +202,10 @@ whoniverse_new_dalek_paradigm = {
 
 	planet_name = "PRESCRIPTED_planet_name_new_dalek_paradigm"
 	planet_class = "pc_continental"
-	initializer="whoniverse_skaro_system_initializer"
+	initializer = "whoniverse_skaro_system_initializer"
 	system_name = "PRESCRIPTED_system_name_new_dalek_paradigm"
 
-	graphical_culture = "fungoid_01"
+	graphical_culture = "dalekships_01"
 	city_graphical_culture = "fungoid_01"
 
 	flags = { whoniverse_new_dalek_paradigm custom_start_screen }
@@ -229,7 +229,7 @@ whoniverse_new_dalek_paradigm = {
 
 	ruler = {
 		name = "PRESCRIPTED_ruler_name_new_dalek_paradigm"
-		portrait = "whoniverse_dalek_03_white"
+		portrait = "velocirandom_dalek_paradigm_supreme"
 		ruler_title = "PRESCRIPTED_ruler_title_new_dalek_paradigm"
 		heir_title = "PRESCRIPTED_heir_title_new_dalek_paradigm"
 		texture = 0
@@ -252,7 +252,7 @@ whoniverse_dalek_empire_remnants = {
 
 	species = {
 		class = "WHO_DALEK"
-		portrait = "whoniverse_dalek_paradigm"
+		portrait = "velocirandom_dalek_01"
 		name = "PRESCRIPTED_species_name_dalek_empire_remnants"
 		plural = "PRESCRIPTED_species_plural_dalek_empire_remnants"
 		adjective = "PRESCRIPTED_species_adjective_dalek_empire_remnants"
@@ -278,10 +278,10 @@ whoniverse_dalek_empire_remnants = {
 
 	planet_name = "PRESCRIPTED_planet_name_dalek_empire_remnants"
 	planet_class = "pc_continental"
-	initializer="whoniverse_dalek_empire_remnants_start_initializer"
+	initializer = "whoniverse_dalek_empire_remnants_start_initializer"
 	system_name = "PRESCRIPTED_system_name_dalek_empire_remnants"
 
-	graphical_culture = "fungoid_01"
+	graphical_culture = "dalekships_01"
 	city_graphical_culture = "fungoid_01"
 
 	flags = { whoniverse_dalek_empire_remnants custom_start_screen }
@@ -305,7 +305,7 @@ whoniverse_dalek_empire_remnants = {
 
 	ruler = {
 		name = "PRESCRIPTED_ruler_name_dalek_empire_remnants"
-		portrait = "whoniverse_dalek_01_emperor"
+		portrait = "velocirandom_dalek_01_emperor"
 		ruler_title = "PRESCRIPTED_ruler_title_dalek_empire_remnants"
 		heir_title = "PRESCRIPTED_heir_title_dalek_empire_remnants"
 		texture = 0
@@ -354,10 +354,10 @@ whoniverse_imperial_dalek_faction = {
 
 	planet_name = "PRESCRIPTED_planet_name_imperial_dalek_faction"
 	planet_class = "pc_continental"
-	initializer="whoniverse_prewar_skaro_system_initializer"
+	initializer = "whoniverse_prewar_skaro_system_initializer"
 	system_name = "PRESCRIPTED_system_name_imperial_dalek_faction"
 
-	graphical_culture = "fungoid_01"
+	graphical_culture = "dalekships_01"
 	city_graphical_culture = "fungoid_01"
 
 	flags = { whoniverse_imperial_dalek_faction custom_start_screen }
@@ -430,10 +430,10 @@ whoniverse_renegade_dalek_faction = {
 
 	planet_name = "PRESCRIPTED_planet_name_renegade_dalek_faction"
 	planet_class = "pc_continental"
-	initializer="whoniverse_renegade_stronghold_initializer"
+	initializer = "whoniverse_renegade_stronghold_initializer"
 	system_name = "PRESCRIPTED_system_name_renegade_dalek_faction"
 
-	graphical_culture = "fungoid_01"
+	graphical_culture = "dalekships_01"
 	city_graphical_culture = "fungoid_01"
 
 	flags = { whoniverse_renegade_dalek_faction custom_start_screen }
@@ -481,15 +481,15 @@ whoniverse_cyberiad = {
 
 	species = {
 		class = "WHO_CYBERMAN"
-		portrait = "whoniverse_cyberman_cyberiad"
+		portrait = "wise_cyberman_cyberiad"
 		name = "PRESCRIPTED_species_name_cybermanempire"
 		plural = "PRESCRIPTED_species_plural_cybermanempire"
 		adjective = "PRESCRIPTED_species_adjective_cybermanempire"
 		species_bio="The Cyberiad represents the cold, calculating nature of the Cybermen, whose origins trace back to the planet Mondas. These Cybermen, constantly seeking to upgrade themselves and others, have formed a collective consciousness driven by logic and efficiency. Ruthless in their quest to eliminate emotions and individuality, the Cyberiad seeks to convert all organic life into their ranks, viewing this as the ultimate form of survival and superiority. Their mechanical minds are dedicated to the expansion of their collective, with each new conversion marking another step toward their goal of universal domination."
 		name_list = "CYBERMAN1"
 		gender = indeterminable
-		trait = "trait_hive_mind"
 		trait = "trait_cybernetic"
+		trait = "trait_hive_mind"
 		trait = "trait_whoniverse_cyber_suit"
 		trait = "trait_cyborg_durable"
 		trait = "trait_cyborg_neural_limiters"
@@ -503,6 +503,9 @@ whoniverse_cyberiad = {
 		adjective = "PRESCRIPTED_secondary_species_adjective_cybermanempire"
 		# species_bio = "Humans are a species of sentient primates. Though humans could trace their evolutionary past to Earth, many billions of humans were born on other worlds after humanity spread through the cosmos."
 		name_list = "HUMAN1"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
 	}
 
 	room = "machine_room"
@@ -520,7 +523,7 @@ whoniverse_cyberiad = {
 	initializer="whoniverse_cyberiad_system_initializer"
 	system_name = "PRESCRIPTED_system_name_cybermanempire"
 
-	graphical_culture = "mammalian_01"
+	graphical_culture = "cyber_01"
 	city_graphical_culture = "mammalian_01"
 
 	flags = { whoniverse_cyberiad custom_start_screen }
@@ -548,7 +551,7 @@ whoniverse_cyberiad = {
 
 	ruler = {
 		name = "PRESCRIPTED_ruler_name_cybermanempire"
-		portrait = "whoniverse_cyberman_02"
+		portrait = "wise_cyberman_cyberiad_01"
 		ruler_title = "PRESCRIPTED_ruler_title_cybermanempire"
 		heir_title = "PRESCRIPTED_heir_title_cybermanempire"
 		texture = 0
@@ -571,7 +574,7 @@ whoniverse_cybus_industries = {
 
 	species = {
 		class = "WHO_CYBERMAN"
-		portrait = whoniverse_cyberman_cybus
+		portrait = wise_cyberman_cybus
 		name = "WHO_CYBUSMAN"
 		plural = "WHO_CYBUSMAN_plural"
 		adjective = "WHO_CYBUSMAN_adj"
@@ -593,6 +596,9 @@ whoniverse_cybus_industries = {
 		adjective = "PRESCRIPTED_secondary_species_adjective_cybermanempire"
 		# species_bio = "Humans are a species of sentient primates. Though humans could trace their evolutionary past to Earth, many billions of humans were born on other worlds after humanity spread through the cosmos."
 		name_list = "HUMAN1"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
 	}
 
 	room = "machine_room"
@@ -610,7 +616,7 @@ whoniverse_cybus_industries = {
 	initializer="whoniverse_cybusmen_start_initializer"
 	system_name = "PRESCRIPTED_system_name_cybus_industries"
 
-	graphical_culture = "mammalian_01"
+	graphical_culture = "cyber_01"
 	city_graphical_culture = "mammalian_01"
 
 	flags = { start_screen_whoniverse_cybusmen whoniverse_cybusmen custom_start_screen }
@@ -638,7 +644,7 @@ whoniverse_cybus_industries = {
 
 	ruler = {
 		name = "PRESCRIPTED_ruler_name_cybus_industries"
-		portrait = "whoniverse_cyberman_01_controller"
+		portrait = "wise_cyberman_cybus_controller"
 		ruler_title = "PRESCRIPTED_ruler_title_cybus_industries"
 		heir_title = "PRESCRIPTED_heir_title_cybus_industries"
 		texture = 0
@@ -648,6 +654,80 @@ whoniverse_cybus_industries = {
  		trait = "trait_ruler_logistic_understanding"
 		leader_class = official
 
+	}
+}
+
+# Sontaran Empire
+whoniverse_sontaran_empire = {
+	name = "PRESCRIPTED_sontaran_empire"
+	adjective = "PRESCRIPTED_adjective_sontaran_empire"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_sontaran_empire"
+
+	species = {
+		class = "HUM"
+		portrait = "wise_sontaran_new"
+		name = PRESCRIPTED_species_name_sontaran_empire
+		plural = PRESCRIPTED_species_plural_sontaran_empire
+		adjective = PRESCRIPTED_species_adjective_sontaran_empire
+		gender = male
+		species_bio = "The Sontarans are a humanoid race of belligerent and militaristic clones from the planet Sontar, created by the Kaveetch. They wage an eternal war throughout Mutter's Spiral against the Rutans."
+		name_list = "SONTARAN1"
+		trait = "trait_whoniverse_sontaran_infertile"
+		trait = "trait_strong"
+		trait = "trait_communal"
+	}
+
+	room = "personality_honorbound_warriors_room"
+
+	authority = "auth_dictatorial"
+	civics = { "civic_whoniverse_glory_in_battle" "civic_warrior_culture" }
+	government = gov_martial_dictatorship
+	advisor_voice_type = l_xenophobe
+
+	ethic = "ethic_fanatic_militarist"
+	ethic = "ethic_authoritarian"
+
+	origin = "origin_whoniverse_sontaran"
+
+	# flags = { start_screen_whoniverse_unit custom_start_screen }
+
+	planet_name = "PRESCRIPTED_planet_name_sontaran_empire"
+	planet_class = "pc_continental"
+	initializer = "whoniverse_sontar_system_initializer"
+	system_name = "PRESCRIPTED_system_name_sontaran_empire"
+
+	graphical_culture = "fungoid_01"
+	city_graphical_culture = "fungoid_01"
+
+	empire_flag = {
+		icon= {
+			category = "whoniverse"
+			file = "whoniverse_flag_16.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"shadow_blue"
+			"ochre_brown"
+			"black"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_sontaran_empire"
+		gender = male
+		portrait = "wise_sontaran_new"
+		texture = 0
+		attachment = 0
+		clothes = 0
+		trait = "trait_ruler_warlike"
+		leader_class = commander
 	}
 }
 
@@ -811,6 +891,8 @@ whoniverse_nestene_consciousness_non_toxoids = {
 
 	}
 }
+
+
 
 # Shadow Proclamation empire (Megacorp)
 whoniverse_shadow_proclamation = {

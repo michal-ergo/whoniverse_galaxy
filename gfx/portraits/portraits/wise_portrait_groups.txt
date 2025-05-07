@@ -1,0 +1,452 @@
+portrait_groups = {
+	
+	wise_cyberman_cybus = {
+		default = wise_cyberman_cybus_drone
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					wise_cyberman_cybus_drone
+					wise_cyberman_cybus_leader
+					wise_cyberman_cybus_controller
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			set = {
+				portraits = {
+					wise_cyberman_cybus_drone
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					wise_cyberman_cybus_drone
+					wise_cyberman_cybus_leader
+					wise_cyberman_cybus_controller
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, officials, commanders
+			add = {
+				portraits = {
+					wise_cyberman_cybus_drone
+					wise_cyberman_cybus_leader
+					wise_cyberman_cybus_controller
+				}
+			}
+		}
+
+		#ruler scope
+		ruler = {
+			add = {
+				portraits = {
+					wise_cyberman_cybus_drone
+					wise_cyberman_cybus_leader
+					wise_cyberman_cybus_controller
+				}
+			}
+		}			
+	}
+
+	wise_cyberman_legion = {
+		default = wise_cyberman_legion_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					wise_cyberman_legion_01
+					wise_cyberman_legion_02
+					wise_cyberman_legion_03
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					wise_cyberman_legion_01
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					wise_cyberman_legion_01
+				}
+			}
+		}
+
+		#leader scope
+		leader = { #scientists, officials, commanders
+			add = {
+				portraits = {
+					wise_cyberman_legion_01
+					wise_cyberman_legion_02
+					wise_cyberman_legion_03
+				}
+			}
+		}
+
+		#ruler scope
+		ruler = {
+			add = {
+				portraits = {
+					wise_cyberman_legion_01
+					wise_cyberman_legion_02
+					wise_cyberman_legion_03
+				}
+			}
+		}
+	}
+
+	wise_cyberman_cyberiad = {
+		default = wise_cyberman_cyberiad_01
+		game_setup = { #will run with a limited country scope. species and government is set but the 		country does not actually exist
+			add = {
+				portraits = {
+					wise_cyberman_cyberiad_01
+					whoniverse_cyberman_02_mrclever
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			set = {
+				portraits = {
+					wise_cyberman_cyberiad_01
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					wise_cyberman_cyberiad_01
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, officials, commanders
+			
+			set = {
+				trigger = {
+					leader_class = commander
+				}
+				portraits = {
+					wise_cyberman_cyberiad_01
+				}
+			}
+			
+			add = {
+				trigger = {
+					leader_class = scientist
+				}
+				portraits = {
+					wise_cyberman_cyberiad_01
+				}
+			}
+			
+			add = {
+				trigger = {
+					leader_class = official
+				}
+				portraits = {
+					wise_cyberman_cyberiad_01
+				}
+			}
+			
+		}		
+		ruler = {
+			add = {
+				portraits = {
+					whoniverse_cyberman_02_mrclever
+				}
+			}
+		}	
+	}
+
+	wise_cyberman_warrior = {
+		default = wise_cyberman_warrior_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					wise_cyberman_warrior_01
+					whoniverse_cyberman_03_ashad
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					wise_cyberman_warrior_01
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					wise_cyberman_warrior_01
+				}
+			}
+		}
+
+		#leader scope
+		leader = { #scientists, officials, commanders
+			add = {
+				portraits = {
+					wise_cyberman_warrior_01
+				}
+			}
+		}
+
+		#ruler scope
+		ruler = {
+			add = {
+				portraits = {
+					wise_cyberman_warrior_01
+					whoniverse_cyberman_03_ashad
+				}
+			}
+		}
+	}
+
+	# Post-Time War Dalek Set by Wise
+	wise_dalek = {
+		default = wise_dalek_empire_drone
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					wise_dalek_empire_drone
+					wise_dalek_empire_guard
+					wise_dalek_empire_sec
+					wise_dalek_empire_supreme
+					wise_dalek_empire_special
+					wise_dalek_empire_davros
+					wise_dalek_empire_emperor
+					wise_dalek_paradigm_drone
+					wise_dalek_paradigm_yellow
+					wise_dalek_paradigm_orange
+					wise_dalek_paradigm_blue
+					wise_dalek_paradigm_white
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+				}
+				portraits = {
+					wise_dalek_empire_drone
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					wise_dalek_empire_drone
+				}
+			}
+		}
+
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					owner = { has_valid_civic = civic_whoniverse_new_dalek_paradigm }
+					leader_class = commander
+				}
+				portraits = {
+					wise_dalek_paradigm_blue
+				}
+			}
+			add = {
+				trigger = {
+					NOT = {
+						owner = { has_valid_civic = civic_whoniverse_new_dalek_paradigm }
+					}
+					leader_class = commander
+				}
+				portraits = {
+					wise_dalek_empire_guard
+					wise_dalek_empire_sec
+					wise_dalek_empire_supreme
+					wise_dalek_empire_special
+				}
+			}
+			add = {
+				trigger = {
+					owner = { has_valid_civic = civic_whoniverse_new_dalek_paradigm }
+					leader_class = official
+				}
+				portraits = {
+					wise_dalek_paradigm_drone
+					wise_dalek_paradigm_yellow
+				}
+			}
+			add = {
+				trigger = {
+					NOT = {
+						owner = { has_valid_civic = civic_whoniverse_new_dalek_paradigm }
+						leader_class = official
+					}
+				}
+				portraits = {
+					wise_dalek_empire_guard
+					wise_dalek_empire_sec
+					wise_dalek_empire_supreme
+					wise_dalek_empire_special
+				}
+			}
+			add = {
+				trigger = {
+					owner = { has_valid_civic = civic_whoniverse_new_dalek_paradigm }
+					leader_class = scientist
+				}
+				portraits = {
+					wise_dalek_paradigm_orange
+				}
+			}
+			add = {
+				trigger = {
+					NOT = {
+						owner = { has_valid_civic = civic_whoniverse_new_dalek_paradigm }
+						leader_class = scientist
+					}
+				}
+				portraits = {
+					wise_dalek_empire_guard
+					wise_dalek_empire_sec
+					wise_dalek_empire_supreme
+					wise_dalek_empire_special
+				}
+			}
+		}		
+	
+
+		#Leader Scope
+		ruler = {
+			add = {
+				trigger = {
+					owner = { has_valid_civic = civic_whoniverse_new_dalek_paradigm }
+				}
+				portraits = {
+					wise_dalek_paradigm_white
+				}
+			}
+			add = {
+				portraits = {
+					wise_dalek_empire_supreme
+					wise_dalek_empire_davros
+					wise_dalek_empire_emperor
+				}
+			}
+		}
+	}	
+
+
+	# New Dalek Paradigm
+	wise_dalek_paradigm = {
+		default = wise_dalek_paradigm_drone
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {			
+					wise_dalek_paradigm_drone
+					wise_dalek_paradigm_yellow
+					wise_dalek_paradigm_orange
+					wise_dalek_paradigm_blue
+					wise_dalek_paradigm_white
+					wise_dalek_empire_davros
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					wise_dalek_paradigm_drone
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					wise_dalek_paradigm_drone
+				}
+			}
+		}
+
+		#leader scope
+		leader = { #scientists, officials, commanders
+			
+			set = {
+				trigger = {
+					leader_class = commander
+				}
+				portraits = {
+					wise_dalek_paradigm_blue
+				}
+			}
+			
+			add = {
+				trigger = {
+					leader_class = scientist
+				}
+				portraits = {
+					wise_dalek_paradigm_orange
+				}
+			}
+			
+			add = {
+				trigger = {
+					leader_class = official
+				}
+				portraits = {
+					wise_dalek_paradigm_drone
+					wise_dalek_paradigm_yellow
+				}
+			}
+			
+		}
+
+		#ruler scope
+		ruler = {
+			add = {
+				portraits = {
+					wise_dalek_paradigm_white
+					wise_dalek_empire_davros
+				}
+			}
+		}
+	}
+}
+
+

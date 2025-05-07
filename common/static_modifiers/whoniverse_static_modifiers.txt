@@ -8,7 +8,7 @@ agenda_whoniverse_dalek_supremacy_finish = {
 	rivalries_influence_produces_mult = 0.5
 }
 
-#Dalek Asylum modifiers
+#Dalek modifiers
 
 whoniverse_dalek_panic = {
 	icon = "gfx/interface/icons/modifiers/mod_unity_loss_mult.dds"
@@ -30,6 +30,15 @@ whoniverse_renegade_dalek_victory = {
 	country_unity_produces_mult = 0.05
 }
 
+whoniverse_final_experiment_completed = {
+	icon = "gfx/interface/icons/modifiers/mod_unity_loss_mult.dds"
+	country_unity_produces_mult = -0.1
+}
+
+whoniverse_final_experiment_exterminated = {
+	icon = "gfx/interface/icons/modifiers/mod_unity_gain_mult.dds"
+	country_unity_produces_mult = 0.05
+}
 
 # Cybermen modifiers
 
@@ -102,4 +111,27 @@ whoniverse_pm_silurian_ruins = {
 	planet_jobs_society_research_produces_mult = 0.1
 	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
 	icon_frame = 2
+}
+
+# Sontaran Modifiers
+
+whoniverse_pm_sontaran_gravity = {
+	planet_buildings_cost_mult = 0.2
+	planet_districts_cost_mult = 0.2
+	pop_environment_tolerance = -0.1
+	planet_max_districts_add = 4
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_whoniverse_sontaran_gravity.dds"
+	icon_frame = 2
+}
+
+whoniverse_pm_caesofine_gas = {
+	planet_pop_assembly_organic_mult = 0.50
+	icon = "gfx/interface/icons/planet_modifiers/pm_whoniverse_caesofine_gas.dds"
+	icon_frame = 2
+}
+
+whoniverse_sontaran_war_rutan_victory = {
+	icon = "gfx/interface/icons/modifiers/mod_unity_gain_mult.dds"
+	country_unity_produces_mult = 0.05
 }

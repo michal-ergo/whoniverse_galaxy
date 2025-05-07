@@ -1,0 +1,240 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+############################
+
+portraits = {
+	# Sontaran Classic
+	wise_sontaran_classic_drone = {	
+		entity = "portrait_sontaran_classic"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_sontaran_classic_greetings"
+		character_textures = {	
+			"gfx/models/portraits/wise_sontaran/classic/sontaran_classic_drone.dds"
+			"gfx/models/portraits/wise_sontaran/classic/sontaran_classic_helmet.dds"
+			}
+		}
+	}
+
+portrait_groups = {
+	
+	wise_sontaran_classic = {
+		default = wise_sontaran_classic_drone
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					wise_sontaran_classic_drone
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			set = {
+				portraits = {
+					wise_sontaran_classic_drone
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					wise_sontaran_classic_drone
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			
+			set = {
+				trigger = {
+					leader_class = commander
+				}
+				portraits = {
+					wise_sontaran_classic_drone
+				}
+			}
+			
+			add = {
+				trigger = {
+					leader_class = scientist
+				}
+				portraits = {
+					wise_sontaran_classic_drone
+				}
+			}
+			
+			add = {
+				trigger = {
+					leader_class = official
+				}
+				portraits = {
+					wise_sontaran_classic_drone
+				}
+			}
+		}		
+	}
+}
+
+portraits = {
+	# Sontaran Flux
+	wise_sontaran_flux_drone = {	
+		entity = "portrait_sontaran_flux"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_sontaran_flux_greetings"
+		character_textures = {	"gfx/models/portraits/wise_sontaran/flux/sontaran_flux_drone.dds"
+					"gfx/models/portraits/wise_sontaran/flux/sontaran_flux_helmet.dds" }
+		}
+	}
+
+portrait_groups = {
+	
+	wise_sontaran_flux = {
+		default = wise_sontaran_flux_drone
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					wise_sontaran_flux_drone
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			set = {
+				portraits = {
+					wise_sontaran_flux_drone
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					wise_sontaran_flux_drone
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			
+			set = {
+				trigger = {
+					leader_class = official
+				}
+				portraits = {
+					wise_sontaran_flux_drone
+				}
+			}
+			
+			add = {
+				trigger = {
+					leader_class = scientist
+				}
+				portraits = {
+					wise_sontaran_flux_drone
+				}
+			}
+			
+			add = {
+				trigger = {
+					leader_class = commander
+				}
+				portraits = {
+					wise_sontaran_flux_drone
+				}
+			}
+		}		
+	}
+}
+
+
+portraits = {
+	# Sontaran New
+	wise_sontaran_new_drone = {	
+		entity = "portrait_sontaran_new"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_sontaran_new_greetings"
+		character_textures = {	"gfx/models/portraits/wise_sontaran/new/sontaran_new_drone.dds"
+					"gfx/models/portraits/wise_sontaran/new/sontaran_new_helmet.dds" }
+		}
+	}
+
+portrait_groups = {
+	
+	wise_sontaran_new = {
+		default = wise_sontaran_new_drone
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					wise_sontaran_new_drone
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			set = {
+				portraits = {
+					wise_sontaran_new_drone
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					wise_sontaran_new_drone
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			
+			set = {
+				trigger = {
+					leader_class = official
+				}
+				portraits = {
+					wise_sontaran_new_drone
+				}
+			}
+			
+			add = {
+				trigger = {
+					leader_class = scientist
+				}
+				portraits = {
+					wise_sontaran_new_drone
+				}
+			}
+			
+			add = {
+				trigger = {
+					leader_class = commander
+				}
+				portraits = {
+					wise_sontaran_new_drone
+				}
+			}
+			
+		}		
+	}
+}

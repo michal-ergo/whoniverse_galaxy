@@ -35,8 +35,8 @@ namespace = whoniverse
 # 350 - 359 = Roboform random events (generic)
 # 900 - 909 = The Doctor ascension perk
 # 910 - 919 = Ninth Doctor events, Rose Tyler event chain
-# 920 - 929 = Ninth Doctor / Rose Tyler placeholder
-
+# 920 - 929 = Tenth Doctor hire, Martha Jones event chain
+# 930 - 939 = Donna Noble event chain
 
 # Church of the Papal Mainframe setup (Trenzalore)
 planet_event = {
@@ -392,7 +392,7 @@ country_event = {
 			}
 			effect = {
 				set_country_flag = trenzalore_invaders
-				set_graphical_culture = fungoid_01
+				set_graphical_culture = dalekships_01
 				establish_communications_no_message = root
 				establish_contact = { who = root.owner }
 				create_leader = {

@@ -244,6 +244,7 @@ portrait_groups = {
 			# }
 		}
 	}
+	
 
 	# # Delete this in later patch - merged with whoniverse_dalek_paradigm
 	# whoniverse_dalek_empire = {
@@ -297,6 +298,144 @@ portrait_groups = {
 	# 		}
 	# 	}
 	# }
+
+	whoniverse_time_lord = {
+		default = whoniverse_time_lord_f_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					whoniverse_time_lord_m_01
+					whoniverse_time_lord_m_02
+					whoniverse_time_lord_m_03
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					whoniverse_time_lord_f_01
+					whoniverse_time_lord_f_02
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					whoniverse_time_lord_m_01
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					whoniverse_time_lord_f_01
+				}
+			}					
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					whoniverse_time_lord_f_01
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					whoniverse_time_lord_m_01
+				}
+			}	
+			
+		}
+
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					whoniverse_time_lord_f_01
+					whoniverse_time_lord_f_02
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					whoniverse_time_lord_m_01
+					whoniverse_time_lord_m_02
+				}
+			}
+		}
+
+
+		#leader scope
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					whoniverse_time_lord_m_03
+				}
+			}
+			# add = {
+			# 	trigger = {
+			# 		OR = {
+			# 			gender = male
+			# 			gender = indeterminable
+			# 		}
+			# 	}
+			# 	portraits = {
+			# 		whoniverse_unit_alistair
+			# 	}
+			# }
+		}
+	}
 
 	# New Dalek Paradigm (also includes Cult of Skaro and Dalek Emperor)
 	whoniverse_dalek_paradigm = {
@@ -558,6 +697,7 @@ portrait_groups = {
 			add = {
 				portraits = {
 					whoniverse_dalek_hybrid_01
+					# whoniverse_dalek_hybrid_animated
 				}
 			}
 		}
@@ -800,6 +940,7 @@ portrait_groups = {
 			add = {
 				portraits = {
 					whoniverse_cyberman_05
+					# whoniverse_cybermondasian_animated
 				}
 			}
 		}
@@ -808,6 +949,7 @@ portrait_groups = {
 		species = { #generic portrait for a species
 			add = {
 				portraits = {
+					# whoniverse_cyberman_05
 					whoniverse_cyberman_05
 				}
 			}
@@ -817,6 +959,7 @@ portrait_groups = {
 		pop = { #for a specific pop
 			add = {
 				portraits = {
+					# whoniverse_cyberman_05
 					whoniverse_cyberman_05
 				}
 			}
@@ -826,6 +969,7 @@ portrait_groups = {
 		leader = { #scientists, generals, admirals, governor
 			add = {
 				portraits = {
+					# whoniverse_cyberman_05
 					whoniverse_cyberman_05
 				}
 			}
@@ -835,6 +979,7 @@ portrait_groups = {
 		ruler = {
 			add = {
 				portraits = {
+					# whoniverse_cyberman_05
 					whoniverse_cyberman_05
 				}
 			}
@@ -1080,21 +1225,21 @@ portrait_groups = {
 			add = {
 				trigger = {
 					exists = species
-					NOT = { species = { species_gender = female } }
-				}
-				portraits = {
-					whoniverse_silurian_m_01
-				}
-			}
-			add = {
-				trigger = {
-					exists = species
 					NOT = { species = { species_gender = male } }
 				}
 				portraits = {
 					whoniverse_silurian_f_01
 				}
 			}					
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					whoniverse_silurian_m_01
+				}
+			}
 		}
 
 		#pop scope
@@ -1647,6 +1792,7 @@ portrait_groups = {
 				portraits = {
 					whoniverse_judoon_01
 					whoniverse_judoon_02
+					whoniverse_judoon_03
 					whoniverse_shadow_architect
 				}
 			}
@@ -1676,6 +1822,7 @@ portrait_groups = {
 				portraits = {
 					whoniverse_judoon_01
 					whoniverse_judoon_02
+					whoniverse_judoon_03
 				}
 			}
 		}
@@ -1686,6 +1833,7 @@ portrait_groups = {
 				portraits = {
 					whoniverse_judoon_01
 					whoniverse_judoon_02
+					whoniverse_judoon_03
 					whoniverse_shadow_architect
 				}
 			}
@@ -1734,6 +1882,104 @@ portrait_groups = {
 			add = {
 				portraits = {
 					whoniverse_roboform_01
+				}
+			}
+		}
+	}
+	whoniverse_sontaran = {
+		default = whoniverse_sontaran_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					whoniverse_sontaran_01
+					whoniverse_sontaran_02
+					whoniverse_sontaran_03
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					whoniverse_sontaran_01
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					whoniverse_sontaran_01
+				}
+			}
+		}
+
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				portraits = {
+					whoniverse_sontaran_01
+					whoniverse_sontaran_02
+					whoniverse_sontaran_03
+				}
+			}
+		}
+
+		#ruler scope
+		ruler = {
+			add = {
+				portraits = {
+					whoniverse_sontaran_01
+					whoniverse_sontaran_02
+					whoniverse_sontaran_03
+				}
+			}
+		}
+	}
+	whoniverse_rutan = {
+		default = whoniverse_rutan_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					whoniverse_rutan_01
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					whoniverse_rutan_01
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					whoniverse_rutan_01
+				}
+			}
+		}
+
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				portraits = {
+					whoniverse_rutan_01
+				}
+			}
+		}
+
+		#ruler scope
+		ruler = {
+			add = {
+				portraits = {
+					whoniverse_rutan_01
 				}
 			}
 		}

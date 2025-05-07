@@ -88,3 +88,11 @@ concept_whoniverse_space_police_station = {
 
 concept_purge_whoniverse_dalek_conversion = {
 }
+
+concept_whoniverse_sontaran_infertile = {
+	icon = "gfx/interface/icons/traits/trait_whoniverse_clone_warrior.dds"
+}
+
+concept_whoniverse_pm_sontaran_gravity = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_whoniverse_sontaran_gravity.dds"
+}

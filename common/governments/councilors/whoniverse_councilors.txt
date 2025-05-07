@@ -125,3 +125,35 @@ councilor_whoniverse_space_police = {
 		inline_script = councilor_leader_weights
 	}
 }
+
+# Dinosaur Tamers Councilor
+councilor_whoniverse_dinosaur_tamers = {
+	leader_class = { commander }
+	is_leader_possible = {
+		leader_class = commander
+	}
+	civic = civic_whoniverse_dinosaur_tamers
+	modifier = {
+		pop_ethic_militarist_attraction_mult = 0.075
+		army_starting_experience_add = 25
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+# Glory in Battle Councilor
+councilor_whoniverse_glory_in_battle = {
+	leader_class = { commander }
+	is_leader_possible = {
+		leader_class = commander
+	}
+	civic = civic_whoniverse_glory_in_battle
+	modifier = {
+		army_damage_mult = 0.02
+		armies_upkeep_mult = -0.015
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}

@@ -1,0 +1,11 @@
+objectTypes = {
+		pdxmesh = {
+		name = "dalekportraits_01_ndp_mesh"
+		file = "gfx/models/portraits/velocirandom_ndp/dalekportraits_01_ndp.mesh"
+		animation = { id = "ndp_idle1"	type = "dalekportraits_01_ndp_idle01_animation" }
+		animation = { id = "ndp_idle2"	type = "dalekportraits_01_ndp_idle02_animation" }
+		animation = { id = "ndp_idle3"	type = "dalekportraits_01_ndp_idle03_animation" }
+		scale = 1.15
+	}
+
+}

@@ -1,4 +1,119 @@
-# Dalek Asylum special project
+# Cult of Skaro Projects
+
+special_project = {
+	key = "whoniverse_dalek_sec_project"
+	event_chain = whoniverse_cult_of_skaro_chain
+	cost = 0
+	tech_department = society_technology
+	days_to_research = 180
+	timelimit = 1080
+	picture = GFX_evt_whoniverse_dalek
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+	}
+
+	on_success = {
+		event_target:dalek_sec_planet = {
+			planet_event = { id = whoniverse.22 }
+		}
+	}
+
+	on_fail = {
+		event_target:dalek_sec_planet = {
+			planet_event = { id = whoniverse.26 days = 360 random = 0 }
+		}
+	}
+}
+
+special_project = {
+	key = "whoniverse_final_experiment_project"
+	event_chain = whoniverse_cult_of_skaro_chain
+	cost = 1000
+	tech_department = society_technology
+	timelimit = 1080
+	picture = GFX_evt_whoniverse_dalek_hybrid
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = planet_event
+
+	on_success = {
+		event_target:dalek_sec_planet = {
+			planet_event = { id = whoniverse.23 }
+		}
+	}
+
+	on_fail = {
+		event_target:dalek_sec_planet = {
+			planet_event = { id = whoniverse.26 days = 1 random = 0 }
+		}
+	}
+}
+
+special_project = {
+	key = "whoniverse_capture_dalek_sec_project"
+	event_chain = whoniverse_cult_of_skaro_chain
+	cost = 0
+	tech_department = society_technology
+	days_to_research = 180
+	timelimit = 720
+	picture = GFX_evt_whoniverse_dalek_hybrid
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_transport = 1
+	}
+	
+	on_success = {
+		owner = {
+			country_event = { id = whoniverse.25 }
+		}
+	}
+
+	on_fail = {
+		event_target:dalek_sec_planet = {
+			planet_event = { id = whoniverse.26 days = 1 random = 0 }
+		}
+	}
+}
+
+special_project = {
+	key = "whoniverse_exterminate_sec_project"
+	event_chain = whoniverse_cult_of_skaro_chain
+	cost = 0
+	tech_department = society_technology
+	days_to_research = 180
+	timelimit = 720
+	picture = GFX_evt_whoniverse_dalek_hybrid
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_military = 1
+	}
+	
+	on_success = {
+		event_target:dalek_sec_planet = {
+			planet_event = { id = whoniverse.24 }
+		}
+	}
+
+	on_fail = {
+		event_target:dalek_sec_planet = {
+			planet_event = { id = whoniverse.26 days = 1 random = 0 }
+		}
+	}
+}
+
+
+
+# Cult of Skaro Davros special project
 
 special_project = {
 	key = "whoniverse_dalek_caan_project"
@@ -19,7 +134,7 @@ special_project = {
 	on_success = {
 		owner = {
 			country_event = { 
-				id = whoniverse.22 
+				id = whoniverse.28 
 			}
 		}
 	}
@@ -67,6 +182,35 @@ special_project = {
 	on_success = {
 		country_event = { id = whoniverse.14 }
 		owner = { end_event_chain = "whoniverse_dalek_asylum_chain" }
+	}
+
+	on_fail = {
+	}
+}
+
+# Dalek Time Strategist
+special_project = {
+	key = "whoniverse_time_strategist_project"
+	cost = 0
+	tech_department = physics_technology
+	days_to_research = 180
+	timelimit = 1080
+	picture = GFX_evt_whoniverse_time_vortex
+	icon = "gfx/interface/icons/situation_log/situation_log_extradimensional.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		owner = {
+			country_event = { 
+				id = whoniverse.392 
+			}
+		}
 	}
 
 	on_fail = {
@@ -448,7 +592,7 @@ special_project = {
 	event_chain = whoniverse_martha_chain
 	cost = 0
 	tech_department = physics_technology
-	days_to_research = 180
+	days_to_research = 150
 	timelimit = 1800
 	picture = GFX_evt_whoniverse_time_vortex
 	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
@@ -472,6 +616,39 @@ special_project = {
 
 	on_fail = {
 		country_event = { id = whoniverse.929 }
+	}
+}
+
+# Donna Noble wedding project
+special_project = {
+	key = "whoniverse_donna_wedding_project"
+	event_chain = whoniverse_donna_chain
+	cost = 0
+	tech_department = physics_technology
+	days_to_research = 150
+	timelimit = 1800
+	picture = GFX_evt_whoniverse_time_vortex
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		has_trait = leader_trait_whoniverse_the_doctor
+		
+	}
+
+	on_success = {
+		owner = {
+			country_event = { 
+				id = whoniverse.932 
+			}
+		}
+	}
+
+	on_fail = {
+		country_event = { id = whoniverse.937 }
 	}
 }
 

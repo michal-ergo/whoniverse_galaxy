@@ -35,8 +35,8 @@ namespace = whoniverse
 # 350 - 359 = Roboform random events (generic)
 # 900 - 909 = The Doctor ascension perk
 # 910 - 919 = Ninth Doctor events, Rose Tyler event chain
-# 920 - 929 = Ninth Doctor / Rose Tyler placeholder
-
+# 920 - 929 = Tenth Doctor hire, Martha Jones event chain
+# 930 - 939 = Donna Noble event chain
 
 ### Weeping Angels
 # Kill organic pops on Yearly Pulse
@@ -437,14 +437,15 @@ planet_event = {
 				}
 			}
 		num_pops > 0
-	}	
+	}
+
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	immediate = {
 		planet_event = { id = whoniverse.131 days = 365 random = 90 }
 		}
-	}
+}
 
 
 # Weeping Angels random colony event 1

@@ -356,3 +356,38 @@
  WHO_SILURIAN_pl:0 "Silurians"
  WHO_SILURIAN_planet:0 "Prehistoric Earth"
  WHO_SILURIAN_system:0 "Prehistoric Sol"
+
+ WHO_DALEK_HYBRID:0 "Human-Dalek Hybrid"
+ WHO_DALEK_HYBRID_pl:0 "Human-Dalek Hybrids"
+ WHO_DALEK_HYBRID_planet:0 "Earth"
+ WHO_DALEK_HYBRID_system:0 "Sol"
+
+ WHO_SENTARIAN:0 "Sentari"
+ WHO_SENTARIAN_pl:0 "Sentarii"
+ WHO_SENTARIAN_planet:0 "Sentarian Prime"
+ WHO_SENTARIAN_system:0 "Sentarian"
+
+ WHO_RACNOSS:0 "Racnoss"
+ WHO_RACNOSS_pl:0 "Racnoss"
+ WHO_RACNOSS_planet:0 "Racnoss"
+ WHO_RACNOSS_system:0 "Racnoss"
+
+# Sequential name formats
+ SONTARAN1_FLEET:0 "$ORD$ Space Fleet"
+ SONTARAN1_SURFACEGUARD:0 "$ORD$ Garrison"
+ SONTARAN1_ARMY:0 "$ORD$ Assault Battalion"
+ SONTARAN1_SLAVES:0 "$ORD$ Penal Battalion"
+ SONTARAN1_CLONEARMY:0 "$ORD$ Clone Battalion"
+ SONTARAN1_UNDEAD:0 "$ORD$ Necrotic Battalion"
+ SONTARAN1_ROBOTARMY:0 "$ORD$ Robotic Battalion"
+ SONTARAN1_ROBOTGUARD:0 "$ORD$ Robotic Garrison"
+ SONTARAN1_PSYCHICARMY:0 "$ORD$ Psychic Battalion"
+ SONTARAN1_XENO:0 "$ORD$ Xenomorph Battalion"
+ SONTARAN1_SUPER:0 "$ORD$ Super-Soldier Battalion"
+ SONTARAN1_OCCUPATIONGUARD:0 "$ORD$ Occupation Battalion"
+ SONTARAN1_OCCUPATIONNEXUS:0 "$ORD$ Occupation Garrison"
+ SONTARAN1_PRIMITIVEARMY:0 "Primitive Battalion $C$"
+ SONTARAN1_INDUSTRIALARMY:0 "Industrial Battalion $C$"
+ SONTARAN1_POSTATOMICARMY:0 "Post-Atomic Battalion $C$"
+
+ 

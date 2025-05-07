@@ -1,0 +1,37 @@
+objectTypes = {
+		pdxmesh = {
+		name = "dalekportraits_01_dalek_mesh"
+		file = "gfx/models/portraits/velocirandom_dalekportraits_01/dalekportraits_01_drone.mesh"
+		animation = { id = "idle"	type = "dalekportraits_01_dalek_idle01_animation" }
+		animation = { id = "idle2"	type = "dalekportraits_01_dalek_idle02_animation" }
+		animation = { id = "idle3"	type = "dalekportraits_01_dalek_idle03_animation" }
+		scale = 1.25
+	}
+
+	pdxmesh = {
+		name = "dalekportraits_01_supreme_mesh"
+		file = "gfx/models/portraits/velocirandom_dalekportraits_01/SupremeTest1.mesh"
+		animation = { id = "idle"	type = "dalekportraits_01_dalek_idle01_animation" }
+		animation = { id = "idle2"	type = "dalekportraits_01_dalek_idle02_animation" }
+		animation = { id = "idle3"	type = "dalekportraits_01_dalek_idle03_animation" }
+		scale = 1.25
+	}
+
+	pdxmesh = {
+		name = "dalekportraits_01_time_strategist_mesh"
+		file = "gfx/models/portraits/velocirandom_dalekportraits_01/TimeStrategist1.mesh"
+		animation = { id = "idle"	type = "dalekportraits_01_dalek_idle01_animation" }
+		animation = { id = "idle2"	type = "dalekportraits_01_dalek_idle02_animation" }
+		animation = { id = "idle3"	type = "dalekportraits_01_dalek_idle03_animation" }
+		scale = 1.25
+	}
+
+	pdxmesh = {
+		name = "dalekportraits_01_emperor_mesh"
+		file = "gfx/models/portraits/velocirandom_dalekportraits_01/EmperorBodge.mesh"
+		animation = { id = "idle"	type = "dalekportraits_01_dalek_idle01_animation" }
+		animation = { id = "idle2"	type = "dalekportraits_01_dalek_idle02_animation" }
+		animation = { id = "idle3"	type = "dalekportraits_01_dalek_idle03_animation" }
+		scale = 1.25
+	}
+}

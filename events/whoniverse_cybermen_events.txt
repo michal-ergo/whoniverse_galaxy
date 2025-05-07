@@ -35,8 +35,8 @@ namespace = whoniverse
 # 350 - 359 = Roboform random events (generic)
 # 900 - 909 = The Doctor ascension perk
 # 910 - 919 = Ninth Doctor events, Rose Tyler event chain
-# 920 - 929 = Ninth Doctor / Rose Tyler placeholder
-
+# 920 - 929 = Tenth Doctor hire, Martha Jones event chain
+# 930 - 939 = Donna Noble event chain
 
 ### Cybermen events
 # Assimilate Pops on Yearly Pulse
@@ -621,7 +621,7 @@ planet_event = {
 			}
 			
 			effect = {
-				set_graphical_culture = mammalian_01
+				set_graphical_culture = cyber_01
 				establish_contact = { who = event_target:old_empire location = root.solar_system }
 				establish_communications = event_target:old_empire
 				save_global_event_target_as = whoniverse_cybermondian_global
@@ -1898,7 +1898,7 @@ country_event = {
 					}
 				}
 				effect = {
-					set_graphical_culture = mammalian_01
+					set_graphical_culture = cyber_01
 					establish_contact = { who = root.owner location = event_target:whoniverse_petes_world }
 					establish_communications = root.owner
 					save_global_event_target_as = whoniverse_cybus_industries_global
@@ -2207,7 +2207,7 @@ country_event = {
 					}
 				}	
 				effect = {
-					set_graphical_culture = mammalian_01
+					set_graphical_culture = cyber_01
 					establish_contact = { who = root.owner location = event_target:whoniverse_petes_world }
 					establish_communications = root.owner
 					save_global_event_target_as = whoniverse_cybus_empire_global

@@ -321,6 +321,7 @@ building_whoniverse_seventh_transept = {
 		has_upgraded_capital = yes
 		hidden_trigger = {
 			owner = {
+				has_valid_civic = civic_whoniverse_silence
 				OR = {
 					is_ai = no
 					resource_stockpile_compare = { resource = minerals value >= 800 }

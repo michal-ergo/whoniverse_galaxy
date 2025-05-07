@@ -1,6 +1,6 @@
 @jumps = 3
 
-# Trenzalore System
+# Shadow Proclamation System
 whoniverse_shadow_proclamation_system_initializer = {
 	name = "whoniverse_name_shadow_proclamation_system"
 	class = "sc_t"

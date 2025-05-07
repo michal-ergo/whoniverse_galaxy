@@ -1,0 +1,50 @@
+# cybermen 01 - Mondasian Cybermen
+objectTypes = {
+	pdxmesh = {
+		name = "Mondas"
+		file = "gfx/models/portraits/wise_cybermen/Mondas.mesh"
+		scale = 1.1
+	
+		animation = { id = "Mondas_idle"	type = "Mondas_portrait_idle" }
+	}
+	
+		pdxmesh = {
+		name = "Telos"
+		file = "gfx/models/portraits/wise_cybermen/Telos.mesh"
+		scale = 1.2
+	
+		animation = { id = "Telos_idle"	type = "Telos_portrait_idle1" }
+	}	
+	
+		pdxmesh = {
+		name = "Faction"
+		file = "gfx/models/portraits/wise_cybermen/Faction.mesh"
+		scale = 1.1
+	
+		animation = { id = "Faction_idle"	type = "Faction_portrait_idle1" }
+	}	
+	
+		pdxmesh = {
+		name = "Cybus"
+		file = "gfx/models/portraits/wise_cybermen/Cybus.mesh"
+		scale = 1.1
+	
+		animation = { id = "Cybus_idle"	type = "Cybus_portrait_idle1" }
+	}	
+	
+		pdxmesh = {
+		name = "Neomorph"
+		file = "gfx/models/portraits/wise_cybermen/Neomorph.mesh"
+		scale = 1.1
+	
+		animation = { id = "Neomorph_idle"	type = "Neomorph_portrait_idle1" }
+	}
+	
+		pdxmesh = {
+		name = "Cyberiad"
+		file = "gfx/models/portraits/wise_cybermen/Cyberiad.mesh"
+		scale = 1.1
+	
+		animation = { id = "Cyberiad_idle"	type = "Cyberiad_portrait_idle1" }
+	}
+}

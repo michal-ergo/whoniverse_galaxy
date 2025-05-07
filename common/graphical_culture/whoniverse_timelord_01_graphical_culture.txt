@@ -1,3 +1,5 @@
+# Tardis by Wise
+
 whoniverse_timelord_01 = {
     fallback = reptilian_01
     ship_color = no

@@ -1,3 +1,8 @@
+whoniverse_cult_of_skaro_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_whoniverse_dalek
+}
+
 whoniverse_dalek_asylum_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_whoniverse_dalek
@@ -43,6 +48,11 @@ whoniverse_martha_chain = {
 	picture = GFX_evt_whoniverse_time_vortex
 }
 
+whoniverse_donna_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_whoniverse_donna_wedding
+}
+
 whoniverse_dalek_imperial_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_whoniverse_dalek_imperial
@@ -56,4 +66,9 @@ whoniverse_dalek_renegade_chain = {
 whoniverse_coming_cataclysm_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_asteroid_approaching_planet
+}
+
+whoniverse_the_great_sontaran_war_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_whoniverse_sontarans
 }

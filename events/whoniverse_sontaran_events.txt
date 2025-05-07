@@ -1,0 +1,484 @@
+namespace = whoniverse
+
+# 01 - 03 = placeholders
+# 04 - 05 = Dalek Conversion effect
+# 06 - 07 = Dalek Reinvention of the Dalek Empire event
+# 08 - 12 = Dalek setup events
+# 12 - 17 = Dalek Asylum event chain
+# 19 + 24 = Dalek Necros 
+# 20 - 23 = Dalek Davros event chain
+# 30 - 39 = Cybermen setup events
+# 40 - 49 = Cybermen Mondasian Colony Ship chain
+# 50 - 59 = Cybermen Cyberiad Origin event chain
+# 60 - 69 = Cybermen Cyberiad systems events and anomalies
+# 70 - 79 = UNIT setup / Life on Mars project
+# 80 - 99 = UNIT Zygon Invasion event chain
+# 100 - 109 = Zygon system events and anomalies
+# 110 - 119 = Weeping Angels UNIT Blink event chain
+# 120 - 139 = Weeping Angels random events
+# 140 - 149 = Church of the Papal Mainframe setup
+# 150 - 159 = The Question (Trenzalore) event chain
+# 160 - 169 = Kovarian Chapter event chain (planned)
+# 170 - 179 = Alfava Metraxis archaelogy digsite
+# 180 - 189 = Cybusmen Pete's World events
+# 190 - 199 = Cybusmen Cybus Industries events
+# 200 - 209 = Dalek Empire Remnants setup events
+# 210 - 219 = Dalek Empire Remnants events
+# 220 - 239 = Mechanoid anomalies / Mechanus digsite
+# 240 - 249 = Nestene Consciousness setup events
+# 250 - 259 = Nestene Consciousness system events and anomalies
+# 260 - 269 = Zygor archaelogy site
+# 270 - 299 = Dalek Civil War
+# 310 - 329 = Shadow Proclamation
+# 330 - 339 = Dalek - Necros Archaelogy Digsite
+# 340 - 349 = Dalek - Spiridon Archaelogy Digsite
+# 350 - 359 = Roboform random events (generic)
+# 900 - 909 = The Doctor ascension perk
+# 910 - 919 = Ninth Doctor events, Rose Tyler event chain
+# 920 - 929 = Tenth Doctor hire, Martha Jones event chain
+# 930 - 939 = Donna Noble event chain
+
+# High Gravity added at the beginning of the game
+planet_event = {
+	id = whoniverse.380
+	hide_window = yes
+	location = ROOT
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		has_ground_combat = no
+		is_capital = yes
+	}
+
+	trigger = {
+		owner = {
+		 	has_origin = origin_whoniverse_sontaran
+			}
+		# NOT = { has_modifier = high_gravity }
+		num_pops > 0
+		}
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = whoniverse_pm_sontaran_gravity
+		}
+	}
+}
+
+# Sontaran Empire player setup
+country_event = {
+    id = whoniverse.381
+    hide_window = yes
+	trigger = {
+		has_origin = origin_whoniverse_sontaran
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = encountered_first_primitive
+		give_technology = { tech = tech_genome_mapping message = no}
+		give_technology = { tech = tech_cloning message = no }
+		give_technology = { tech = tech_centralized_command message = no }
+		country_event = { id = whoniverse.382 } # Create Rutan Empire
+		hidden_effect = {
+			country_event = { id = whoniverse.383 days = 90 random = 0 }
+			}
+		capital_scope = {
+			add_building = building_clone_vats
+		}
+	}
+}
+
+# Rutan Empire setup (from Sontaran origin)
+country_event = {
+    id = whoniverse.382
+    hide_window = yes
+	trigger = {
+		has_origin = origin_whoniverse_sontaran
+	}
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	immediate = {
+		create_species = {
+			name = "PRESCRIPTED_species_name_rutan_empire"
+			plural = "PRESCRIPTED_species_plural_rutan_empire"
+		 	class = MOL
+		 	portrait = whoniverse_rutan
+			gender = indeterminable
+		 	namelist = "MOL3"
+		 	traits = {
+		 		trait = "trait_hive_mind"
+		 		trait = "trait_whoniverse_bio_electricity"
+		 		trait = "trait_adaptive"
+		 		trait = "trait_slow_learners"
+				trait = "trait_sedentary"
+		 	}
+		}
+		event_target:whoniverse_start_rutan_empire_ai = {
+			create_country = {
+				name = "PRESCRIPTED_rutan_empire"
+				species = last_created_species
+				type = default
+				ethos = {
+					ethic = ethic_gestalt_consciousness
+				}
+				authority = auth_hive_mind
+				origin = origin_default
+				civics = {
+					civic = civic_hive_one_mind
+					civic = civic_hive_ascetic
+				}
+				flag = {
+					icon = {
+						category = "aquatic"
+						file = "aquatic_04.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "flag_BG_10.dds"
+					}
+					colors = {
+						"sick_green"
+						"shadow_blue"
+						"black"
+						"null"
+					}
+				}
+				effect = {
+					set_graphical_culture = molluscoid_01
+					establish_communications_no_message = root.owner
+					establish_contact = { who = root.owner location = event_target:whoniverse_imperial_skaro }
+					save_global_event_target_as = whoniverse_rutan_empire_global
+				##Copy technology
+					if = {
+						limit = {
+							any_country = { is_ai = no }
+						}
+						random_country = {
+							limit = { is_ai = no }
+							save_event_target_as = tech_country
+						}
+						copy_techs_from = {
+							target = event_target:tech_country
+							except = {
+								# Horizon Signal
+								tech_akx_worm_1
+								tech_akx_worm_2
+								tech_akx_worm_3
+							}
+						}
+					}
+					else = {
+						random_country = {
+							limit = { is_country_type = default	}
+							save_event_target_as = tech_country
+						}
+						copy_techs_from = {
+							target = event_target:tech_country
+							except = {
+								# Horizon Signal
+								tech_akx_worm_1
+								tech_akx_worm_2
+								tech_akx_worm_3
+							}
+						}
+					}
+					add_seen_bypass_type = wormhole
+					# add_research_option = tech_wormhole_stabilization
+					# add_tech_progress = {
+					# 	tech = tech_wormhole_stabilization
+					# 	progress = 0.9
+					# }
+					give_technology = {
+						tech = tech_wormhole_stabilization
+					}
+					if = {
+						limit = {
+							NOT = { has_technology = tech_starbase_2 }
+						}
+						give_technology = { tech = tech_starbase_2 }
+					}
+					if = {
+						limit = {
+							NOT = { has_technology = tech_destroyers }
+						}
+						give_technology = { tech = tech_destroyers }
+					}
+					if = {
+						limit = {
+							NOT = { has_technology = tech_cruisers }
+						}
+						give_technology = { tech = tech_cruisers }
+					}
+					# create_leader = {
+					# 	class = official
+					# 	species = last_created_species
+					# 	name = "PRESCRIPTED_ruler_name_rutan_empire"
+					# 	immortal = yes
+					# 	skill = 4
+					# 	traits = {
+					# 		trait = leader_trait_politician
+					# 	}
+					# 	effect = {
+					# 		event_target:whoniverse_renegade_dalek_faction_global = { assign_leader = prev }
+					# 	}
+					# }
+				}
+			}
+			set_owner = last_created_country
+			set_capital = yes
+
+			hidden_effect = {
+				last_created_country = {
+					set_country_flag = whoniverse_rutan_empire_flag
+				}
+			}
+			while = {
+				count = 28
+				create_pop = {
+					species = last_created_species
+				}
+			}
+					
+			##Build Starbases
+			
+			starbase = {
+			 	set_owner = last_created_country
+			}
+	
+			create_starbase = {
+				size = starbase_starport
+				owner = last_created_country
+				module = shipyard
+				building = crew_quarters
+					effect = {
+					set_starbase_module = {
+						slot = 1
+							module = anchorage
+						}
+					set_starbase_module = {
+						slot = 2
+						module = anchorage
+					}
+				}
+			}
+		
+			while = {
+				count = 10
+				create_army = {
+					name = "Rutan Host Army"
+					owner = last_created_country
+					species = last_created_species
+					type = "defense_army"
+				}
+			}
+
+				while = {
+					count = 4
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_city
+					}
+				}
+				while = {
+					count = 2
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_industrial
+					}
+				}
+				while = {
+					count = 3
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_farming
+					}
+				}
+				while = {
+					count = 3
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_mining
+					}
+				}
+				while = {
+					count = 3
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_generator
+					}
+				}
+				
+			add_building = building_hive_capital
+			add_building = building_research_lab_1
+			add_building = building_hive_node
+			add_building = building_foundry_1
+			add_building = building_hive_cluster
+			add_building = building_hive_warren
+		
+			last_created_country = {
+				add_resource = {
+					minerals = 15000
+					energy = 15000
+					food = 15000
+					consumer_goods = 10000
+					alloys = 10000
+					rare_crystals = 1000
+					volatile_motes = 1000
+					exotic_gases = 1000
+					influence = 1000
+					unity = 10000
+				}
+				create_fleet_from_naval_cap = 0.8
+				while = {
+					count = 2
+					create_leader = {
+						class = scientist
+						species = last_created_species
+						name = random
+						skill = 3
+						}
+				}
+				while = {
+					count = 1
+					create_leader = {
+						class = commander
+						species = last_created_species
+						name = random
+						skill = 3
+					}
+				}
+				create_leader = {
+					class = official
+					species = last_created_species
+					name = random
+					skill = 3
+				}		
+			}
+		}
+	}
+}
+
+# The Great Sontaran War intro text
+country_event = {
+    id = whoniverse.383
+    title = "whoniverse.383.name"
+    desc = "whoniverse.383.desc"
+    picture = GFX_evt_whoniverse_sontarans
+	show_sound = whoniverse_sontaran_new_greetings
+	event_chain = whoniverse_the_great_sontaran_war_chain
+	location = event_target:whoniverse_start_rutan_empire_ai
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = whoniverse.383.a
+		trigger = {
+			owner = {
+				has_origin = origin_whoniverse_sontaran
+			}
+		}
+		owner = {
+			begin_event_chain = {
+				event_chain = "whoniverse_the_great_sontaran_war_chain"
+				target = ROOT
+			}
+		}
+    }
+}
+
+# Ruta III Conquered from Rutan Host - setup
+planet_event = {
+	id = whoniverse.384
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+  
+	pre_triggers = {
+		has_owner = yes
+	}
+
+	trigger = { 
+		from = { has_origin = origin_whoniverse_sontaran } 
+		has_planet_flag = whoniverse_rutan_empire_planet
+	}
+
+	immediate = {
+		
+		if = {
+			limit = {
+				fromfrom = {
+					has_country_flag = whoniverse_rutan_empire_flag
+				}
+			}
+			from = { country_event = { id = whoniverse.385 days = 1 random = 0}  }
+		}
+		else = {
+			from = { country_event = { id = whoniverse.386 days = 1 random = 0}  }
+		}
+	}
+}
+
+# Ruta III conquered from Rutan Host
+country_event = {
+	id = whoniverse.385
+	title = "whoniverse.385.name"
+	desc = "whoniverse.385.desc"
+	picture = GFX_evt_whoniverse_sontarans
+	show_sound = whoniverse_sontaran_new_greetings
+	event_chain = whoniverse_the_great_sontaran_war_chain
+
+	trigger = { has_origin = origin_whoniverse_sontaran }
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = whoniverse.385.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier4influencereward
+				min = @tier4influencemin
+				max = @tier4influencemax
+				}
+			add_modifier = {
+				modifier = whoniverse_sontaran_war_rutan_victory days = -1
+			}
+			end_event_chain = "whoniverse_the_great_sontaran_war_chain"
+		}
+   	}
+}
+
+
+
+# Ruta III conquered NOT from Rutan Host
+country_event = {
+	id = whoniverse.386
+	title = "whoniverse.386.name"
+	desc = "whoniverse.386.desc"
+	picture = GFX_evt_whoniverse_sontarans
+	show_sound = whoniverse_sontaran_new_greetings
+	event_chain = whoniverse_the_great_sontaran_war_chain
+
+	trigger = { has_origin = origin_whoniverse_sontaran }
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = whoniverse.386.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier3influencereward
+				min = @tier3influencemin
+				max = @tier3influencemax
+				}
+			add_modifier = {
+				modifier = whoniverse_sontaran_war_rutan_victory days = 3600
+			}
+			end_event_chain = "whoniverse_the_great_sontaran_war_chain"
+		}
+   	}
+}

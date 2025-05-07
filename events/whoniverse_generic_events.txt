@@ -35,7 +35,9 @@ namespace = whoniverse
 # 350 - 359 = Roboform random events (generic)
 # 900 - 909 = The Doctor ascension perk
 # 910 - 919 = Ninth Doctor events, Rose Tyler event chain
-# 920 - 929 = Ninth Doctor / Rose Tyler placeholder
+# 920 - 929 = Tenth Doctor hire, Martha Jones event chain
+# 930 - 939 = Donna Noble event chain
+
 
 # Kill Chosen if they exist
 country_event = {
@@ -123,6 +125,7 @@ planet_event = {
 			create_species = {
 					name = "WHO_ROBOFORM"
 					class = ROBOT
+					namelist = MACHINE1
 					portrait = whoniverse_roboform
 					traits = {
 						trait = trait_wet_planet_preference

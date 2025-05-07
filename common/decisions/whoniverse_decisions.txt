@@ -2,10 +2,10 @@
 # Planet Modifier Decisions
 ##########################################################################
 
-decision_dinosaurs_remove = {
+decision_whoniverse_dinosaurs_remove = {
 	owned_planets_only = yes
 	sound = event_administrative_work
-	icon = whoniverse_decision_dinosaurs
+	icon = whoniverse_decision_ceasofine_gas
 	enactment_time = 900
 
 	resources = {
@@ -35,10 +35,10 @@ decision_dinosaurs_remove = {
 	}
 }
 
-decision_dinosaurs_add = {
+decision_whoniverse_dinosaurs_add = {
 	owned_planets_only = yes
 	sound = event_administrative_work
-	icon = whoniverse_decision_dinosaurs
+	icon = whoniverse_decision_ceasofine_gas
 	enactment_time = 800
 
 	resources = {
@@ -63,6 +63,43 @@ decision_dinosaurs_add = {
 		weight = 100
 	}
 }
+
+decision_whoniverse_caesofine_gas = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = whoniverse_decision_caesofine_gas
+	enactment_time = 360
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+			food = 500
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_whoniverse_sontaran }
+		NOT = { has_modifier = whoniverse_pm_caesofine_gas }
+	}
+
+	effect = {
+		add_modifier = { modifier = "whoniverse_pm_caesofine_gas" days = 3600 }
+		custom_tooltip = whoniverse_caesofine_gas_tooltip
+		hidden_effect = {
+			every_owned_pop = {
+				limit = { NOT = { has_trait = trait_whoniverse_sontaran_infertile } }
+				kill_pop = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
 
 
 

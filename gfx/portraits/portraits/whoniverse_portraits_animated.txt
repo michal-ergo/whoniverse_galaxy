@@ -1,0 +1,21 @@
+# simple animated portraits - retexture attempts of Wise's entities
+
+portraits = {
+	# CyberMondasian
+	whoniverse_cybermondasian_animated = {	
+		entity = "portrait_cyberman_cybus"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_cybermen_mondasian_greetings"
+		character_textures = {	"gfx/models/portraits/whoniverse_animated/whoniverse_cybermondasian.dds"	}
+	}
+	# Dalek Hybrid
+	whoniverse_dalek_hybrid_animated = {	
+		entity = "portrait_cyberman_cybus"
+		clothes_selector = "no_texture" 
+		attachment_selector = "no_texture" 
+		greeting_sound = "whoniverse_cybermen_mondasian_greetings"
+		character_textures = {	"gfx/models/portraits/whoniverse_animated/whoniverse_dalek_hybrid.dds"	}
+	}
+}
+

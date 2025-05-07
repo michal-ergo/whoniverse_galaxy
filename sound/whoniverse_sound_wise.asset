@@ -1,0 +1,98 @@
+category = {
+	name = "Effects"
+	soundeffects = {
+   
+	   ########## PHENOTYPES
+	   
+	   	whoniverse_sontaran_classic_greetings
+		whoniverse_sontaran_flux_greetings
+	   	whoniverse_sontaran_new_greetings
+		}
+   }
+   
+   ########### SOUND Effects
+   
+   ##### CLASSIC SONTARAN
+   
+   soundeffect = {
+	   name = whoniverse_sontaran_classic_greetings
+	   sounds = {
+		   sound = whoniverse_sontaran_classic_greeting1
+		   sound = whoniverse_sontaran_classic_greeting2
+	   }  
+	   volume = 0.45
+   }
+   
+   ##### FLUX SONTARAN
+   
+   soundeffect = {
+	   name = whoniverse_sontaran_flux_greetings
+	   sounds = {
+		   sound = whoniverse_sontaran_flux_greeting1
+		   sound = whoniverse_sontaran_flux_greeting2
+		   sound = whoniverse_sontaran_flux_greeting3
+	   }  
+	   volume = 0.45
+   }
+   
+   #### NEW SONTARAN
+   
+   soundeffect = {
+	   name = whoniverse_sontaran_new_greetings
+	   sounds = {
+		   sound = whoniverse_sontaran_new_greeting1
+		   sound = whoniverse_sontaran_new_greeting2
+		   sound = whoniverse_sontaran_new_greeting3
+		   sound = whoniverse_sontaran_new_greeting4
+	   }  
+	   volume = 0.45
+   }
+   
+   ##### SONTARAN EMPIRES
+   
+   ########## SOUND ASSETS
+   
+   ##### CLASSIC SONTARAN
+   
+   sound = {
+	   name = "whoniverse_sontaran_classic_greeting1"
+	   file = "vo/phenotypes/sontaran_wise/sontaran_classic_greeting1.wav"
+   }
+   sound = {
+	   name = "whoniverse_sontaran_classic_greeting2"
+	   file = "vo/phenotypes/sontaran_wise/sontaran_classic_greeting2.wav"
+   }
+
+   ##### FLUX SONTARAN
+   
+   sound = {
+	   name = "whoniverse_sontaran_flux_greeting1"
+	   file = "vo/phenotypes/sontaran_wise/sontaran_flux_greeting1.wav"
+   }
+   sound = {
+	   name = "whoniverse_sontaran_flux_greeting2"
+	   file = "vo/phenotypes/sontaran_wise/sontaran_flux_greeting2.wav"
+   }
+   sound = {
+	   name = "whoniverse_sontaran_flux_greeting3"
+	   file = "vo/phenotypes/sontaran_wise/sontaran_flux_greeting3.wav"
+   }
+   
+   ##### NEW SONTARAN
+   
+   sound = {
+	   name = "whoniverse_sontaran_new_greeting1"
+	   file = "vo/phenotypes/sontaran_wise/sontaran_new_greeting1.wav"
+   }
+   sound = {
+	   name = "whoniverse_sontaran_new_greeting2"
+	   file = "vo/phenotypes/sontaran_wise/sontaran_new_greeting2.wav"
+   }
+   sound = {
+	   name = "whoniverse_sontaran_new_greeting3"
+	   file = "vo/phenotypes/sontaran_wise/sontaran_new_greeting3.wav"
+   }
+   sound = {
+		name = "whoniverse_sontaran_new_greeting4"
+		file = "vo/phenotypes/sontaran_wise/sontaran_new_greeting4.wav"
+	}

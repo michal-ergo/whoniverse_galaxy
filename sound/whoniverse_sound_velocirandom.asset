@@ -1,0 +1,232 @@
+# Categories by Velocirandom
+
+category = {
+	name = "Dalek Greetings by VelociRandom"
+	soundeffects = {
+		whoniverse_dalek_greetings_velocirandom
+		whoniverse_dalek_supreme_greetings_velocirandom
+		whoniverse_dalek_emperor_greetings_velocirandom
+		whoniverse_dalek_x_greetings_velocirandom
+	}
+}
+
+
+soundeffect = {
+	name = whoniverse_dalek_greetings_velocirandom
+	sounds = {
+		sound = velocirandom_dalek_greeting_01
+#		sound = velocirandom_dalek_greeting_02
+		sound = velocirandom_dalek_greeting_03
+#		sound = velocirandom_dalek_greeting_04
+		sound = velocirandom_dalek_greeting_05
+		sound = velocirandom_dalek_greeting_06
+		sound = velocirandom_dalek_greeting_07
+		sound = velocirandom_dalek_greeting_08
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_dalek_emperor_greetings_velocirandom
+	sounds = {
+		sound = velocirandom_dalek_emperor_greeting_01
+		sound = velocirandom_dalek_emperor_greeting_02
+		sound = velocirandom_dalek_emperor_greeting_03
+		sound = velocirandom_dalek_emperor_greeting_04
+		#sound = dalek_emperor_greeting_05
+		#sound = dalek_emperor_greeting_06
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_dalek_supreme_greetings_velocirandom
+	sounds = {
+		sound = velocirandom_dalek_supreme_greeting_01
+		sound = velocirandom_dalek_supreme_greeting_02
+		sound = velocirandom_dalek_supreme_greeting_03
+		sound = velocirandom_dalek_supreme_greeting_04
+		sound = velocirandom_dalek_supreme_greeting_05
+		sound = velocirandom_dalek_supreme_greeting_06
+		sound = velocirandom_dalek_supreme_greeting_07
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+
+soundeffect = {
+	name = whoniverse_dalek_x_greetings_velocirandom
+	sounds = {
+#		sound = velocirandom_dalek_supreme_greeting_01
+		sound = velocirandom_dalek_supreme_greeting_02
+		sound = velocirandom_dalek_supreme_greeting_03
+		sound = velocirandom_dalek_supreme_greeting_04
+#		sound = velocirandom_dalek_supreme_greeting_05
+#		sound = velocirandom_dalek_supreme_greeting_06
+		sound = velocirandom_dalek_supreme_greeting_07
+		sound = velocirandom_dalek_x_greeting_01
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+# Sounds by VelociRandom
+
+sound = 
+{
+	name = "velocirandom_dalek_greeting_01"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_greeting_exterminate_01.wav"
+	volume = 0.15
+}
+
+sound = 
+{
+	name = "velocirandom_dalek_greeting_02"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_greeting_exterminate_02.wav"
+	volume = 0.15
+}
+
+sound = 
+{
+	name = "velocirandom_dalek_greeting_03"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_greeting_exterminate_03.wav"
+	volume = 0.15
+}
+
+sound = 
+{
+	name = "velocirandom_dalek_greeting_04"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_greeting_exterminate_04.wav"
+	volume = 0.15
+}
+
+sound = 
+{
+	name = "velocirandom_dalek_greeting_05"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_greeting_contact_established.wav"
+	volume = 0.15
+}
+sound = 
+{
+	name = "velocirandom_dalek_greeting_06"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_greeting_enemyofthedaleks.wav"
+	volume = 0.15
+}
+sound = 
+{
+	name = "velocirandom_dalek_greeting_07"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_greeting_proceed.wav"
+	volume = 0.15
+}
+sound = 
+{
+	name = "velocirandom_dalek_greeting_08"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_greeting_speak.wav"
+	volume = 0.15
+}
+
+
+
+
+
+
+###Dalek Emperor
+sound = 
+{
+	name = "velocirandom_dalek_emperor_greeting_01"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_emperor_greeting_godofalldaleks.wav"
+	volume = 0.15
+}
+sound = 
+{
+	name = "velocirandom_dalek_emperor_greeting_02"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_emperor_greeting_ididnothing.wav"
+	volume = 0.075
+}
+sound = 
+{
+	name = "velocirandom_dalek_emperor_greeting_03"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_emperor_greeting_exterminate.wav"
+	volume = 0.15
+}
+sound = 
+{
+	name = "velocirandom_dalek_emperor_greeting_04"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_emperor_greeting_immortal.wav"
+	volume = 0.15
+}
+#sound = 																###Sounds crap. Needs tweaking to match better.
+#{
+#	name = "dalek_emperor_greeting_05"
+#	file = "vo/daleks/dalek_emperor_greeting_dim_nomatch.wav"
+#	volume = 0.1
+#}
+#sound = 
+#{
+#	name = "dalek_emperor_greeting_06"
+#	file = "vo/daleks/dalek_emperor_greeting_dim_truepower.wav"
+#	volume = 0.1
+#}
+
+
+
+
+
+
+
+###Supreme Dalek
+sound = 
+{
+	name = "velocirandom_dalek_supreme_greeting_01"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_supreme_greeting_explain.wav"
+	volume = 0.15
+}
+sound = 
+{
+	name = "velocirandom_dalek_supreme_greeting_02"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_x_greeting_continue.wav"
+	volume = 0.15
+}
+sound = 
+{
+	name = "velocirandom_dalek_supreme_greeting_03"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_x_greeting_expectnomercy.wav"
+	volume = 0.15
+}
+sound = 
+{
+	name = "velocirandom_dalek_supreme_greeting_04"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_x_greeting_explain.wav"
+	volume = 0.15
+}
+sound = 
+{
+	name = "velocirandom_dalek_supreme_greeting_05"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_x_greeting_exterminate.wav"
+	volume = 0.15
+}
+sound = 
+{
+	name = "velocirandom_dalek_supreme_greeting_06"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_x_greeting_report.wav"
+	volume = 0.15
+}
+sound = 
+{
+	name = "velocirandom_dalek_supreme_greeting_07"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_x_greeting_youunderestimate.wav"
+	volume = 0.15
+}
+
+
+
+###Dalek X
+sound = 
+{
+	name = "velocirandom_dalek_x_greeting_01"
+	file = "vo/phenotypes/daleks_velocirandom/dalek_x_greeting_iamdalekx.wav"
+	volume = 0.15
+}

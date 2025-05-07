@@ -1,0 +1,236 @@
+# Portrait Groups by VelociRandom
+portrait_groups = {
+
+	# Post-Time War Dalek Set
+	velocirandom_dalek_01 = {
+		default = velocirandom_dalek_01_m
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					velocirandom_dalek_01_m
+					velocirandom_dalek_01_admiral
+					velocirandom_dalek_01_general
+					velocirandom_dalek_01_governor
+					velocirandom_dalek_01_scientist
+					velocirandom_dalek_01_emperor
+					velocirandom_dalek_01_extra_dalek_x		#Extras
+					velocirandom_dalek_01_extra_commander2
+					velocirandom_dalek_01_extra_time_strategist
+					velocirandom_dalek_paradigm_drone_g
+					velocirandom_dalek_paradigm_drone_m
+					velocirandom_dalek_paradigm_strategist_g
+					velocirandom_dalek_paradigm_strategist_m
+					velocirandom_dalek_paradigm_scientist_g
+					velocirandom_dalek_paradigm_eternal_g
+					velocirandom_dalek_paradigm_supreme
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+				}
+				portraits = {
+					velocirandom_dalek_01_m
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					velocirandom_dalek_01_m
+				}
+			}
+		}
+
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					owner = { has_valid_civic = civic_whoniverse_new_dalek_paradigm }
+					leader_class = commander
+				}
+				portraits = {
+					velocirandom_dalek_paradigm_strategist_g
+					velocirandom_dalek_paradigm_strategist_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = {
+						owner = { has_valid_civic = civic_whoniverse_new_dalek_paradigm }
+					}
+					leader_class = commander
+				}
+				portraits = {
+					velocirandom_dalek_01_admiral
+					velocirandom_dalek_01_general
+				}
+			}
+			add = {
+				trigger = {
+					owner = { has_valid_civic = civic_whoniverse_new_dalek_paradigm }
+					leader_class = official
+				}
+				portraits = {
+					velocirandom_dalek_paradigm_eternal_g
+					velocirandom_dalek_paradigm_drone_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = {
+						owner = { has_valid_civic = civic_whoniverse_new_dalek_paradigm }
+						leader_class = official
+					}
+				}
+				portraits = {
+					velocirandom_dalek_01_governor
+				}
+			}
+			add = {
+				trigger = {
+					owner = { has_valid_civic = civic_whoniverse_new_dalek_paradigm }
+					leader_class = scientist
+				}
+				portraits = {
+					velocirandom_dalek_paradigm_scientist_g
+				}
+			}
+			add = {
+				trigger = {
+					NOT = {
+						owner = { has_valid_civic = civic_whoniverse_new_dalek_paradigm }
+						leader_class = scientist
+					}
+				}
+				portraits = {
+					velocirandom_dalek_01_scientist
+				}
+			}
+		}		
+	
+
+		#Leader Scope
+		ruler = {
+			add = {
+				trigger = {
+					owner = { has_valid_civic = civic_whoniverse_new_dalek_paradigm }
+				}
+				portraits = {
+					velocirandom_dalek_paradigm_supreme
+				}
+			}
+			add = {
+				portraits = {
+					velocirandom_dalek_01_admiral
+					velocirandom_dalek_01_extra_dalek_x	
+					velocirandom_dalek_01_extra_commander2
+					velocirandom_dalek_01_extra_time_strategist
+				}
+			}
+		}
+	}	
+}
+
+portrait_groups = {
+
+#New Dalek Paradigm
+velocirandom_dalek_paradigm = {
+		default = velocirandom_dalek_paradigm_drone_g
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {			
+					velocirandom_dalek_paradigm_drone_g
+					velocirandom_dalek_paradigm_drone_m
+					velocirandom_dalek_paradigm_strategist_g
+					velocirandom_dalek_paradigm_strategist_m
+					velocirandom_dalek_paradigm_scientist_g
+					velocirandom_dalek_paradigm_eternal_g
+					velocirandom_dalek_paradigm_supreme
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+				}
+				portraits = {
+					velocirandom_dalek_paradigm_drone_m
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					velocirandom_dalek_paradigm_drone_m
+				}
+			}
+		}
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			
+			add = {
+				trigger = {
+					leader_class = commander
+				}
+				portraits = {
+					velocirandom_dalek_paradigm_strategist_g
+					velocirandom_dalek_paradigm_strategist_m
+				}
+			}
+
+			add = {
+				trigger = {
+					leader_class = official
+				}
+				portraits = {
+					velocirandom_dalek_paradigm_eternal_g
+					velocirandom_dalek_paradigm_drone_m
+				}
+			}
+
+			add = {
+				trigger = {
+					leader_class = scientist
+				}
+				portraits = {
+					velocirandom_dalek_paradigm_scientist_g
+				}
+			}
+
+		}		
+	
+
+		#Leader Scope
+		ruler = {
+			add = {
+				portraits = {
+					velocirandom_dalek_paradigm_supreme
+				}
+			}
+		}
+	}
+	}
+	
+}

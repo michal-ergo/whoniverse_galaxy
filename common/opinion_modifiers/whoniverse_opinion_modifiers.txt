@@ -75,7 +75,7 @@ triggered_whoniverse_opinion_assimilators_cybermen = {
 triggered_whoniverse_cybermen_negative_opinion_of_preftl = {
 	trigger = {
 		is_country_type = default
-			has_valid_civic = civic_whoniverse_cyber_conversion
+		has_valid_civic = civic_whoniverse_cyber_conversion
 		FROM = { is_country_type = primitive }
 	}
 	opinion = {
@@ -86,7 +86,7 @@ triggered_whoniverse_cybermen_negative_opinion_of_preftl = {
 triggered_whoniverse_cybermen_opinion_of_humans = {
 	trigger = {
 		is_country_type = default
-			has_valid_civic = civic_whoniverse_cyber_conversion
+		has_valid_civic = civic_whoniverse_cyber_conversion
 		FROM = { 
 			owner_main_species = {
 				is_whoniverse_human_species = yes
@@ -95,5 +95,35 @@ triggered_whoniverse_cybermen_opinion_of_humans = {
 	}
 	opinion = {
 		base = -100
+	}
+}
+
+triggered_whoniverse_sontaran_opinion_of_rutans = {
+	trigger = {
+		is_country_type = default
+		has_origin = origin_whoniverse_sontaran
+		FROM = { 
+			owner_main_species = {
+				species_portrait = whoniverse_rutan
+			}
+		}
+	}
+	opinion = {
+		base = -1000
+	}
+}
+
+triggered_whoniverse_rutan_opinion_of_sontarans = {
+	trigger = {
+		is_country_type = default
+		owner_main_species = {
+			species_portrait = whoniverse_rutan
+		}
+		FROM = { 
+			has_origin = origin_whoniverse_sontaran
+		}
+	}
+	opinion = {
+		base = -1000
 	}
 }

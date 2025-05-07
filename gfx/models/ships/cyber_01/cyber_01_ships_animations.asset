@@ -1,0 +1,75 @@
+
+#animation = {
+#	name = "cyber_01_corvette_frame_idle_animation"
+#	file = "corvette_frame_idle.anim"
+#}
+#
+#animation = {
+#	name = "cyber_01_corvette_frame_death_animation"
+#	file = "corvette_frame_death.anim"
+#}
+#
+#animation = {
+#	name = "cyber_01_corvette_frame_moving_animation"
+#	file = "corvette_frame_moving.anim"
+#}
+#
+#animation = {
+#	name = "cyber_01_destroyer_frame_death_animation"
+#	file = "destroyer_frame_death.anim"
+#}
+#
+#animation = {
+#	name = "cyber_01_destroyer_frame_idle_animation"
+#	file = "destroyer_frame_idle.anim"
+#}
+#
+#animation = {
+#	name = "cyber_01_destroyer_frame_moving_animation"
+#	file = "destroyer_frame_moving.anim"
+#}
+
+animation = {
+	name = "cyber_01_cruiser_frame_death_animation"
+	file = "Cruiser_Assets/cyber_01_cruiser_frame_death.anim"
+}
+
+animation = {
+	name = "cyber_01_cruiser_frame_death2_animation"
+	file = "Cruiser_Assets/cyber_01_cruiser_frame_death2.anim"
+}
+
+animation = {
+	name = "cyber_01_cruiser_frame_death3_animation"
+	file = "Cruiser_Assets/cyber_01_cruiser_frame_death3.anim"
+}
+
+animation = {
+	name = "cyber_01_cruiser_frame_idle_animation"
+	file = "Cruiser_Assets/cyber_01_cruiser_frame_idle.anim"
+}
+
+animation = {
+	name = "cyber_01_battleship_frame_death_animation"
+	file = "Battleship_Assets/cyber_01_battleship_frame_death.anim"
+}
+
+animation = {
+	name = "cyber_01_battleship_frame_death2_animation"
+	file = "Battleship_Assets/cyber_01_battleship_frame_death2.anim"
+}
+
+animation = {
+	name = "cyber_01_battleship_frame_death3_animation"
+	file = "Battleship_Assets/cyber_01_battleship_frame_death3.anim"
+}
+
+animation = {
+	name = "cyber_01_battleship_frame_idle_animation"
+	file = "Battleship_Assets/cyber_01_battleship_frame_idle.anim"
+}
+
+animation = {
+	name = "cyber_01_cruiser_mid_idle_animation"
+	file = "cyber_01_cruiser_mid_idle_animation.anim"
+}

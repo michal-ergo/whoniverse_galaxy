@@ -1,0 +1,21 @@
+objectTypes = {
+#######  corvette frame  #######
+	
+	#######  corvette sections  #######	
+	
+	pdxmesh = {
+		name = "dalekships_01_corvette_M1S1_mesh"
+		file = "gfx/models/ships/dalekships_01/01_Corvette_Assets/dalekships_01_corvette_M1S1.mesh"
+		scale = 1
+	}
+		pdxmesh = {
+		name = "dalekships_01_corvette_S1_mesh"
+		file = "gfx/models/ships/dalekships_01/01_Corvette_Assets/dalekships_01_corvette_S1.mesh"
+		scale = 1
+	}
+		pdxmesh = {
+		name = "dalekships_01_corvette_S3_mesh"
+		file = "gfx/models/ships/dalekships_01/01_Corvette_Assets/dalekships_01_corvette_S3.mesh"
+		scale = 1
+	}
+}

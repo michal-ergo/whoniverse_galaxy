@@ -1,0 +1,59 @@
+objectTypes = {	
+		
+	#######  cruiser sections  #######	
+	
+	pdxmesh = {
+		name = "dalekships_01_cruiser_bow_L1_mesh"
+		file = "gfx/models/ships/dalekships_01/04_Cruiser_Assets/dalekships_01_cruiser_bow_L1.mesh"
+		scale = 1
+	}
+
+	pdxmesh = {
+		name = "dalekships_01_cruiser_bow_M1S2_mesh"
+		file = "gfx/models/ships/dalekships_01/04_Cruiser_Assets/dalekships_01_cruiser_bow_M1S2.mesh"
+		scale = 1
+	}
+
+		pdxmesh = {
+		name = "dalekships_01_cruiser_bow_M2_mesh"
+		file = "gfx/models/ships/dalekships_01/04_Cruiser_Assets/dalekships_01_cruiser_bow_M2.mesh"
+		scale = 1
+	}
+
+		pdxmesh = {
+		name = "dalekships_01_cruiser_mid_L1M1_mesh"
+		file = "gfx/models/ships/dalekships_01/04_Cruiser_Assets/dalekships_01_cruiser_mid_L1M1.mesh"
+		scale = 1
+	}
+		
+			pdxmesh = {
+		name = "dalekships_01_cruiser_mid_M2S2_mesh"
+		file = "gfx/models/ships/dalekships_01/04_Cruiser_Assets/dalekships_01_cruiser_mid_M2S2.mesh"
+		scale = 1
+	}
+	
+		pdxmesh = {
+		name = "dalekships_01_cruiser_mid_M3_mesh"
+		file = "gfx/models/ships/dalekships_01/04_Cruiser_Assets/dalekships_01_cruiser_mid_M3.mesh"
+		scale = 1
+	}
+	
+		pdxmesh = {
+		name = "dalekships_01_cruiser_mid_S2HB_mesh"
+		file = "gfx/models/ships/dalekships_01/04_Cruiser_Assets/dalekships_01_cruiser_mid_S2HB.mesh"
+		scale = 1
+	}
+	
+		pdxmesh = {
+		name = "dalekships_01_cruiser_stern_M1_mesh"
+		file = "gfx/models/ships/dalekships_01/04_Cruiser_Assets/dalekships_01_cruiser_stern_M1.mesh"
+		scale = 1
+	}
+	
+		pdxmesh = {
+		name = "dalekships_01_cruiser_stern_S2_mesh"
+		file = "gfx/models/ships/dalekships_01/04_Cruiser_Assets/dalekships_01_cruiser_stern_S2.mesh"
+		scale = 1
+	}
+	
+}

@@ -25,8 +25,8 @@ WHO_DALEK = {
 	  }
   }
   
-	graphical_culture = fungoid_01	
-	move_pop_sound_effect = "fungoid_pops_move"
+	graphical_culture = dalekships_01
+	move_pop_sound_effect = "moving_pop_confirmation"
 
   trait = trait_cybernetic
 }
@@ -40,7 +40,7 @@ WHO_CYBERMAN = {
 	  	}
   	}
   
-	graphical_culture = mammalian_01	
+	graphical_culture = cyber_01
 	move_pop_sound_effect = "robot_pops_move"
 
   trait = trait_cybernetic
@@ -59,7 +59,7 @@ WHO_AUTON = {
 		}
 	}
 	
-  	graphical_culture = mammalian_01	
+  	graphical_culture = molluscoid_01	
   	move_pop_sound_effect = "molluscoid_pops_move"
 
 	trait = "trait_whoniverse_auton"

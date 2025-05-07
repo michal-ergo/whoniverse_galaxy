@@ -1,0 +1,126 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+### Portraits by VelociRandom
+
+portraits = {
+
+####	dalekportrait1_f = {	texturefile = "gfx/models/portraits/dalekportraits_01/dalek.dds" clothes_selector = "no_texture" attachment_selector = "no_texture"		greeting_sound = "dalekportraits_01_dalek_greetings"}
+
+####	dalekportrait1_m = {	texturefile = "gfx/models/portraits/dalekportraits_01/dalek.dds" clothes_selector = "no_texture" attachment_selector = "no_texture"		greeting_sound = "dalekportraits_01_dalek_greetings"}
+
+	velocirandom_dalek_01_m = {
+		entity = "dalekportraits_01_dalek_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "whoniverse_dalek_greetings_velocirandom" 
+	}
+
+	velocirandom_dalek_01_admiral = {
+		entity = "dalekportraits_01_supreme_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "whoniverse_dalek_supreme_greetings_velocirandom" 
+		character_textures = { 
+			"gfx/models/portraits/velocirandom_dalekportraits_01/_CombinedSupreme.dds"
+		}
+	}
+	velocirandom_dalek_01_general = {
+		entity = "dalekportraits_01_dalek_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "whoniverse_dalek_greetings_velocirandom" 
+		character_textures = { 
+			"gfx/models/portraits/velocirandom_dalekportraits_01/Rank_BlackDome.dds"
+		}
+	}
+	velocirandom_dalek_01_governor = {
+		entity = "dalekportraits_01_dalek_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "whoniverse_dalek_greetings_velocirandom" 
+		character_textures = { 
+			"gfx/models/portraits/velocirandom_dalekportraits_01/Rank_AllBlack.dds"
+		}
+	}
+	velocirandom_dalek_01_scientist = {
+		entity = "dalekportraits_01_dalek_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "whoniverse_dalek_greetings_velocirandom"
+		character_textures = { 
+			"gfx/models/portraits/velocirandom_dalekportraits_01/Rank_Scientist.dds"
+		}
+	}
+	velocirandom_dalek_01_emperor = {
+		entity = "dalekportraits_01_emperor_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "whoniverse_dalek_emperor_greetings_velocirandom"
+	}
+
+
+	
+	#Extra Leader Variants
+	velocirandom_dalek_01_extra_dalek_x = {
+		entity = "dalekportraits_01_dalek_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "whoniverse_dalek_x_greetings_velocirandom" 
+		character_textures = { 
+			"gfx/models/portraits/velocirandom_dalekportraits_01/Extra_DalekX.dds"
+		}
+	}
+	velocirandom_dalek_01_extra_commander2 = {
+		entity = "dalekportraits_01_dalek_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "whoniverse_dalek_greetings_velocirandom" 
+		character_textures = { 
+			"gfx/models/portraits/velocirandom_dalekportraits_01/Extra_Commander2.dds"
+		}
+	}
+	# Time Strategist - originally had supreme greeting sound
+	velocirandom_dalek_01_extra_time_strategist = {
+		entity = "dalekportraits_01_time_strategist_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "whoniverse_dalek_time_strategist_greetings" 
+		character_textures = { 
+			"gfx/models/portraits/velocirandom_dalekportraits_01/Extra_TimeStrategist.dds"
+		}
+	}
+
+}
+
+# New Dalek Paradigm by VelociRandom
+portraits = {
+
+		#New Dalek Paradigm
+		velocirandom_dalek_paradigm_strategist_m = {
+			entity = "dalekportraits_01_ndp_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "whoniverse_dalek_greetings_velocirandom" 
+			character_textures = { 
+				"gfx/models/portraits/velocirandom_ndp/NDP_Strategist_M.dds"
+			}
+		}
+		velocirandom_dalek_paradigm_strategist_g = {
+			entity = "dalekportraits_01_ndp_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "whoniverse_dalek_greetings_velocirandom" 
+			character_textures = { 
+				"gfx/models/portraits/velocirandom_ndp/NDP_Strategist_G.dds"
+			}
+		}
+		velocirandom_dalek_paradigm_drone_g = {
+			entity = "dalekportraits_01_ndp_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "whoniverse_dalek_greetings_velocirandom" 
+			character_textures = { 
+				"gfx/models/portraits/velocirandom_ndp/NDP_Drone_G.dds"
+			}
+		}
+		velocirandom_dalek_paradigm_drone_m = {
+			entity = "dalekportraits_01_ndp_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "whoniverse_dalek_greetings_velocirandom" 
+			character_textures = { 
+				"gfx/models/portraits/velocirandom_ndp/NDP_Drone_M.dds"
+			}
+		}
+		velocirandom_dalek_paradigm_scientist_g = {
+			entity = "dalekportraits_01_ndp_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "whoniverse_dalek_greetings_velocirandom" 
+			character_textures = { 
+				"gfx/models/portraits/velocirandom_ndp/NDP_Scientist_G.dds"
+			}
+		}
+		velocirandom_dalek_paradigm_eternal_g = {
+			entity = "dalekportraits_01_ndp_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "whoniverse_dalek_greetings_velocirandom" 
+			character_textures = { 
+				"gfx/models/portraits/velocirandom_ndp/NDP_Eternal_G.dds"
+			}
+		}
+		velocirandom_dalek_paradigm_supreme = {
+			entity = "dalekportraits_01_ndp_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "whoniverse_dalek_supreme_greetings_velocirandom" 
+			character_textures = { 
+				"gfx/models/portraits/velocirandom_ndp/NDP_Supreme.dds"
+			}
+		}
+	
+	
+	
+	}
+	

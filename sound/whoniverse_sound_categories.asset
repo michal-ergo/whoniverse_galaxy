@@ -30,11 +30,13 @@ category = {
 		whoniverse_tenth_doctor_greetings
 		whoniverse_rose_tyler_greetings
 		whoniverse_martha_jones_greetings
+		whoniverse_donna_noble_greetings
 		whoniverse_dalek_greetings
 		whoniverse_dalek_supreme_greetings
 		whoniverse_dalek_davros_greetings
 		whoniverse_dalek_caan_greetings
 		whoniverse_dalek_emperor_greetings
+		whoniverse_dalek_time_strategist_greetings
 		whoniverse_dalek_imperial_greetings
 		whoniverse_dalek_imperial_davros_greetings
 		whoniverse_dalek_renegade_greetings
@@ -76,6 +78,11 @@ category = {
 		whoniverse_silurian_male_greetings
 		whoniverse_silurian_leader_greetings
 		whoniverse_silurian_vastra_greetings
+		whoniverse_time_lord_soldier_greetings
+		whoniverse_time_lord_general_greetings
+		whoniverse_time_lord_president_greetings
+		whoniverse_time_lord_female_greetings
+		whoniverse_time_lord_oliha_greetings
 	}
 }
 
@@ -121,6 +128,16 @@ soundeffect = {
 	max_audible_behaviour = fail
 }
 
+soundeffect = {
+	name = whoniverse_donna_noble_greetings
+	sounds = {
+		sound = whoniverse_donna_spaceman
+		sound = whoniverse_donna_this_place
+		sound = whoniverse_donna_timeboy
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
 
 soundeffect = {
 	name = whoniverse_dalek_renegade_greetings
@@ -210,6 +227,15 @@ soundeffect = {
 		sound = whoniverse_dalek_I_am_the_god_of_all_daleks
 		sound = whoniverse_dalek_they_survived_through_me
 		sound = whoniverse_dalek_we_waited_here_in_the_dark_space
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_dalek_time_strategist_greetings
+	sounds = {
+		sound = whoniverse_dalek_time_strategist_every_reality
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -590,12 +616,65 @@ soundeffect = {
 	max_audible_behaviour = fail
 }
 
+# Time Lord Greetings
+
+soundeffect = {
+	name = whoniverse_time_lord_soldier_greetings
+	sounds = {
+		sound = whoniverse_time_lord_soldier_saying
+		sound = whoniverse_time_lord_soldier_step_away
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_time_lord_general_greetings
+	sounds = {
+		sound = whoniverse_time_lord_general_greetings
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_time_lord_president_greetings
+	sounds = {
+		sound = whoniverse_time_lord_president_take_aim
+		sound = whoniverse_time_lord_president_firing_squad
+		sound = whoniverse_time_lord_president_im_rassilon
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_time_lord_female_greetings
+	sounds = {
+		sound = whoniverse_time_lord_female_last_body
+		sound = whoniverse_time_lord_female_ego
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_time_lord_oliha_greetings
+	sounds = {
+		sound = whoniverse_time_lord_oliha_blame_gallifrey
+		sound = whoniverse_time_lord_oliha_blames_you
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
 # Sound Effects
 
 category = {
 	name = "Whoniverse Sound Effects"
 	soundeffects = {
 		whoniverse_tardis_event
+		whoniverse_donna_noble_this_place
 		whoniverse_dalek_exterminate
 		whoniverse_dalek_explain
 		whoniverse_dalek_full_alert
@@ -614,6 +693,7 @@ category = {
 		whoniverse_the_question_event
 		whoniverse_regeneration_event
 		whoniverse_hand_of_omega_event
+		whoniverse_racnoss_empress
 		}
 	}
 
@@ -621,6 +701,15 @@ soundeffect = {
 	name = whoniverse_tardis_event
 	sounds = {
 		sound = whoniverse_tardis
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_donna_noble_this_place
+	sounds = {
+		sound = whoniverse_donna_this_place
 	}
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -789,6 +878,15 @@ soundeffect = {
 	name = whoniverse_hand_of_omega_event
 	sounds = {
 		sound = whoniverse_hand_of_omega
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = whoniverse_racnoss_empress
+	sounds = {
+		sound = whoniverse_empress_of_the_racnoss
 	}
 	max_audible = 1
 	max_audible_behaviour = fail

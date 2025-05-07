@@ -33,11 +33,10 @@ namespace = whoniverse
 # 330 - 339 = Dalek - Necros Archaelogy Digsite
 # 340 - 349 = Dalek - Spiridon Archaelogy Digsite
 # 350 - 359 = Roboform random events (generic)
-# 360 - 369 = Silurian setup events
-# 370 - 379 = Siluria, other Silurian events
 # 900 - 909 = The Doctor ascension perk
 # 910 - 919 = Ninth Doctor events, Rose Tyler event chain
 # 920 - 929 = Tenth Doctor hire, Martha Jones event chain
+# 930 - 939 = Donna Noble event chain
 
 # Dinosaur Fauna added at the beginning of the game
 planet_event = {

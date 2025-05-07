@@ -1,0 +1,48 @@
+
+## SONTARAN CLASSIC MESHES ##
+# Sontaran 01 - Sontaran Classic Drone
+
+entity = {
+	name = "portrait_sontaran_classic"
+	pdxmesh = "sontaran_classic"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "classic_idle" }
+}
+
+animation = {
+	name = "sontaran_classic_portrait_idle"
+	file = "classic/sontaran_classic_portrait_idle1.anim"
+}
+
+## SONTARAN FLUX MESHES ##
+# Sontaran 02 - Sontaran Flux Drone
+
+entity = {
+	name = "portrait_sontaran_flux"
+	pdxmesh = "sontaran_flux"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "flux_idle" }
+}
+
+animation = {
+	name = "sontaran_flux_portrait_idle"
+	file = "flux/sontaran_flux_portrait_idle1.anim"
+}
+
+## SONTARAN NEW MESHES ##
+# Sontaran 03 - Sontaran New Drone
+
+entity = {
+	name = "portrait_sontaran_new"
+	pdxmesh = "sontaran_new"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "new_idle" }
+}
+
+animation = {
+	name = "sontaran_new_portrait_idle"
+	file = "new/sontaran_new_portrait_idle1.anim"
+}

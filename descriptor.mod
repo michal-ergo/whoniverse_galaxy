@@ -1,8 +1,9 @@
-version="0.8"
+version="0.91"
 tags={
 	"Events"
 	"Gameplay"
 	"Leaders"
+	"Spaceships"
 	"Species"
 	"Total Conversion"
 }

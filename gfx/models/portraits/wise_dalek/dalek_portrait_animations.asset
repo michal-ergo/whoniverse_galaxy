@@ -1,0 +1,154 @@
+
+## DALEK EMPIRE MESHES ##
+# Dalek 01 - Dalek Empire Drone
+
+entity = {
+	name = "portrait_dalek_empire"
+	pdxmesh = "Empire"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "empire_idle" }
+}
+
+animation = {
+	name = "empire_portrait_idle"
+	file = "empire/dalek_empire_drone_portrait_idle1.anim"
+}
+
+# Dalek 01 - Dalek Empire Supreme
+
+entity = {
+	name = "portrait_dalek_supreme"
+	pdxmesh = "Supreme"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "supreme_idle" }
+}
+
+animation = {
+	name = "supreme_portrait_idle"
+	file = "empire/dalek_empire_supreme_portrait_idle1.anim"
+}
+
+# Dalek Empire DavroS (NuWho)
+entity = {
+	name = "portrait_dalek_davros_empire"
+	pdxmesh = "Davros_empire"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "davros_empire_idle" }
+}
+
+animation = {
+	name = "Davros_empire_portrait_idle"
+	file = "empire/dalek_empire_davros_portrait_idle1.anim"
+}
+
+# Dalek Empire SWD
+
+entity = {
+	name = "portrait_dalek_empire_SWD"
+	pdxmesh = "Dalek_empire_SWD"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "empire_SWD_idle" }
+}
+
+animation = {
+	name = "empire_SWD_portrait_idle"
+	file = "empire/dalek_empire_swd_portrait_idle1.anim"
+}
+
+# NuWho Dalek Emperor
+
+entity = {
+	name = "portrait_dalek_empire_emperor"
+	pdxmesh = "Dalek_empire_emperor"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "Dalek_emperor_idle" }
+}
+
+animation = {
+	name = "Dalek_emperor_portrait_idle"
+	file = "empire/dalek_empire_emperor_portrait_idle1.anim"
+}
+
+## CLASSIC WHO DALEK EMPIRE - POST DAVROS ##
+
+# Classic Who Davros
+
+entity = {
+	name = "portrait_dalek_original_davros"
+	pdxmesh = "Davros_original"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "Davros_original_idle" }
+}
+
+animation = {
+	name = "Davros_original_portrait_idle"
+	file = "skaro/dalek_skaro_davros_portrait_idle1.anim"
+}
+
+# Classic Who Daleks
+
+entity = {
+	name = "portrait_dalek_original_drone"
+	pdxmesh = "Dalek_original_drone"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "Dalek_original_idle" }
+}
+
+animation = {
+	name = "Dalek_original_portrait_idle"
+	file = "skaro/dalek_skaro_drone_portrait_idle1.anim"
+}
+
+# Classic Who SWD
+
+entity = {
+	name = "portrait_dalek_original_SWD"
+	pdxmesh = "Dalek_original_SWD"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "Dalek_SWD_idle" }
+}
+
+animation = {
+	name = "Dalek_SWD_portrait_idle"
+	file = "skaro/dalek_skaro_swd_portrait_idle1.anim"
+}
+
+# Classic Who Emperor
+
+entity = {
+	name = "portrait_dalek_retro_emperor"
+	pdxmesh = "Dalek_retro_emperor"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "Retro_emperor_idle" }
+}
+
+animation = {
+	name = "Retro_emperor_portrait_idle"
+	file = "retro/dalek_retro_emperor_portrait_idle1.anim"
+}
+
+## DALEK PARADIGM ## 
+
+## Dalek Paradigm - Drone
+
+entity = {
+	name = "portrait_dalek_paradigm_drone"
+	pdxmesh = "Dalek_paradigm_drone"
+	scale = 3.0
+	default_state = "idle"
+	state = { name = "idle"       animation = "Dalek_paradigm_idle" }
+}
+
+animation = {
+	name = "Dalek_paradigm_portrait_idle"
+	file = "paradigm/dalek_paradigm_drone_portrait_idle1.anim"
+}

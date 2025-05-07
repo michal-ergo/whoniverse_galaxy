@@ -1,0 +1,44 @@
+
+entity = {
+	name = "dalekportraits_01_dalek_entity"
+	pdxmesh = "dalekportraits_01_dalek_mesh"
+	
+default_state = "idle"
+	state = { name = "idle"		animation = "idle"	chance = 1 looping = no next_state = idle}
+	state = { name = "idle"		animation = "idle2"	chance = 1 looping = no next_state = idle}
+	state = { name = "idle"		animation = "idle3"	chance = 1 looping = no next_state = idle}
+    scale = 1.25
+}
+
+entity = {
+	name = "dalekportraits_01_supreme_entity"
+	pdxmesh = "dalekportraits_01_supreme_mesh"
+	
+default_state = "idle"
+	state = { name = "idle"		animation = "idle"	chance = 1 looping = no next_state = idle}
+	state = { name = "idle"		animation = "idle2"	chance = 1 looping = no next_state = idle}
+	state = { name = "idle"		animation = "idle3"	chance = 1 looping = no next_state = idle}
+    scale = 1.25
+}
+
+entity = {
+	name = "dalekportraits_01_time_strategist_entity"
+	pdxmesh = "dalekportraits_01_time_strategist_mesh"
+	
+default_state = "idle"
+	state = { name = "idle"		animation = "idle"	chance = 1 looping = no next_state = idle}
+	state = { name = "idle"		animation = "idle2"	chance = 1 looping = no next_state = idle}
+	state = { name = "idle"		animation = "idle3"	chance = 1 looping = no next_state = idle}
+    scale = 1.25
+}
+
+entity = {
+	name = "dalekportraits_01_emperor_entity"
+	pdxmesh = "dalekportraits_01_emperor_mesh"
+	
+default_state = "idle"
+	state = { name = "idle"		animation = "idle"	chance = 1 looping = no next_state = idle}
+	state = { name = "idle"		animation = "idle2"	chance = 1 looping = no next_state = idle}
+	state = { name = "idle"		animation = "idle3"	chance = 1 looping = no next_state = idle}
+    scale = 1.25
+}

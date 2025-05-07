@@ -67,6 +67,12 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 
+	spriteType = {
+		name = "origin_whoniverse_sontaran"
+		texturefile = "gfx/event_pictures/origins/origin_whoniverse_sontaran.dds"
+		alwaystransparent = yes
+	}
+
 
 	# Event pictures
 	spriteType = {
@@ -262,6 +268,41 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_evt_whoniverse_silurians"
 		texturefile = "gfx/event_pictures/whoniverse_silurians.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_whoniverse_dalek_hybrid"
+		texturefile = "gfx/event_pictures/whoniverse_dalek_hybrid.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_whoniverse_sontarans"
+		texturefile = "gfx/event_pictures/whoniverse_sontarans.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_whoniverse_racnoss"
+		texturefile = "gfx/event_pictures/whoniverse_racnoss.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_whoniverse_donna_wedding"
+		texturefile = "gfx/event_pictures/whoniverse_donna_wedding.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_whoniverse_webstar"
+		texturefile = "gfx/event_pictures/whoniverse_webstar.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
