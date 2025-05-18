@@ -141,12 +141,9 @@ portrait_groups = {
 			}
 		}
 	}	
-}
 
-portrait_groups = {
-
-#New Dalek Paradigm
-velocirandom_dalek_paradigm = {
+	#New Dalek Paradigm
+	velocirandom_dalek_paradigm = {
 		default = velocirandom_dalek_paradigm_drone_g
 		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
 			add = {
@@ -231,6 +228,5 @@ velocirandom_dalek_paradigm = {
 			}
 		}
 	}
-	}
-	
 }
+	

@@ -6,27 +6,18 @@
 trait_whoniverse_dalek_machine = {
 	cost = 3
 
+	localized_tags = {
+		SPECIES_TRAIT_CYBORG
+	}
+	
+	allowed_archetypes = { BIOLOGICAL }
+	tags = { organic positive cybernetic drawbacks consumer_goods food upkeep pop_output }
+
 	initial = yes
 	randomized = no
 
 	species_potential_add = {
 		always = yes
-		# OR = {
-		# 	species_portrait = whoniverse_dalek_paradigm
-		# 	species_portrait = whoniverse_dalek_imperial
-		# 	species_portrait = whoniverse_dalek_renegade
-		# 	species_portrait = whoniverse_dalek_type_iii
-		# }
-		# NOR = {
-		# 	species_portrait = whoniverse_human
-		# 	species_portrait = whoniverse_time_lord
-		# 	species_portrait = whoniverse_dalek_hybrid
-		# 	species_portrait = whoniverse_cyberman_classic
-		# 	species_portrait = whoniverse_cyberman_cybus
-		# 	species_portrait = whoniverse_cyberman_cyberiad
-		# 	species_portrait = whoniverse_cyberman_mondasian
-		# 	species_portrait = whoniverse_cyberman_warrior
-		# }
 	}
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
@@ -47,9 +38,19 @@ trait_whoniverse_dalek_machine = {
 		army_damage_mult = 0.5
 		pop_housing_usage_mult = 0.1
 	}
-	potential_crossbreeding_chance = 0
 
-	allowed_archetypes = { BIOLOGICAL }
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
+
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
+
+	slave_cost = {
+		energy = 500
+	}
 
 	ai_weight = {
 		weight = 0
@@ -61,9 +62,12 @@ trait_whoniverse_dalek_machine = {
 # Dalek DNA trait
 trait_whoniverse_dalek_infertile = {
 	cost = 0
-	potential_crossbreeding_chance = 0
-	opposites = { "trait_whoniverse_time_lord" "trait_whoniverse_cyber_suit"  "trait_conservational" "trait_wasteful" "trait_slow_breeders" "trait_rapid_breeders" "trait_plantoid_budding" "trait_lithoid_budding" "trait_advanced_budding" "trait_vat_grown" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" }
+	
+	opposites = { "trait_whoniverse_time_lord" "trait_whoniverse_cyber_suit"  "trait_conservational" "trait_wasteful" "trait_slow_breeders" "trait_rapid_breeders" "trait_plantoid_budding" "trait_lithoid_budding" "trait_vat_grown" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" }
 	sorting_priority = 20
+
+	allowed_archetypes = { BIOLOGICAL }
+	tags = { organic negative cybernetic leader drawbacks ethic_attraction }
 
 	initial = yes
 	randomized = no
@@ -80,9 +84,6 @@ trait_whoniverse_dalek_infertile = {
 	immortal_leaders = no
 	infertile = yes
 
-	potential_crossbreeding_chance = 0
-
-	allowed_archetypes = { BIOLOGICAL }
 	ai_weight = {
 		weight = 0
 	}
@@ -103,6 +104,12 @@ trait_whoniverse_dalek_infertile = {
 # Dalek Ascendancy: Spider Variant trait
 trait_whoniverse_dalek_spider = {
 	cost = 2
+
+	tags = { organic positive cybernetic habitability army housing production }
+
+	localized_tags = {
+		SPECIES_TRAIT_CYBORG
+	}
 
 	initial = no
 	randomized = no
@@ -126,7 +133,6 @@ trait_whoniverse_dalek_spider = {
 		planet_jobs_worker_produces_mult = 0.05
 		pop_housing_usage_mult = 0.1
 	}
-	potential_crossbreeding_chance = 0
 
 	allowed_archetypes = { BIOLOGICAL }
 
@@ -135,11 +141,30 @@ trait_whoniverse_dalek_spider = {
 	}
 
 	icon = "gfx/interface/icons/traits/trait_whoniverse_dalek_spider.dds"
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
+
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
+
+	slave_cost = {
+		energy = 500
+	}
 }
 
 # Dalek Ascendancy: Special Weapons Variant trait
 trait_whoniverse_dalek_special = {
 	cost = 2
+
+	tags = { organic positive cybernetic army research pop_output energy }
+
+	localized_tags = {
+		SPECIES_TRAIT_CYBORG
+	}
 
 	initial = no
 	randomized = no
@@ -163,7 +188,6 @@ trait_whoniverse_dalek_special = {
 		planet_jobs_specialist_produces_mult = 0.05
 		planet_jobs_energy_upkeep_mult = 0.10
 	}
-	potential_crossbreeding_chance = 0
 
 	allowed_archetypes = { BIOLOGICAL }
 
@@ -172,11 +196,31 @@ trait_whoniverse_dalek_special = {
 	}
 
 	icon = "gfx/interface/icons/traits/trait_whoniverse_dalek_special.dds"
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
+
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
+
+	slave_cost = {
+		energy = 500
+	}
+
 }
 
 # Dalek Ascendancy: Time Variant trait
 trait_whoniverse_dalek_time = {
 	cost = 2
+
+	tags = { organic positive cybernetic leader research drawbacks }
+
+	localized_tags = {
+		SPECIES_TRAIT_CYBORG
+	}
 
 	initial = no
 	randomized = no
@@ -201,7 +245,6 @@ trait_whoniverse_dalek_time = {
 		species_leader_exp_gain = 0.10
 		pop_government_ethic_attraction = -0.1
 	}
-	potential_crossbreeding_chance = 0
 
 	allowed_archetypes = { BIOLOGICAL }
 
@@ -210,11 +253,31 @@ trait_whoniverse_dalek_time = {
 	}
 
 	icon = "gfx/interface/icons/traits/trait_whoniverse_dalek_time.dds"
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
+
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
+
+	slave_cost = {
+		energy = 500
+	}
+
 }
 
 # Dalek Ascendancy: Recon Variant trait
 trait_whoniverse_dalek_recon = {
 	cost = 2
+
+	tags = { organic positive cybernetic habitability research pop_output migration drawbacks }
+
+	localized_tags = {
+		SPECIES_TRAIT_CYBORG
+	}
 
 	initial = no
 	randomized = no
@@ -239,7 +302,6 @@ trait_whoniverse_dalek_recon = {
 		pop_resettlement_cost_mult = -0.25
 		planet_jobs_unity_produces_mult = -0.05
 	}
-	potential_crossbreeding_chance = 0
 
 	allowed_archetypes = { BIOLOGICAL }
 
@@ -248,11 +310,31 @@ trait_whoniverse_dalek_recon = {
 	}
 
 	icon = "gfx/interface/icons/traits/trait_whoniverse_dalek_recon.dds"
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
+
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
+
+	slave_cost = {
+		energy = 500
+	}
+
 }
 
 # Dalek Ascendancy: Psyche Variant trait
 trait_whoniverse_dalek_psyche = {
 	cost = 2
+
+	tags = { organic positive cybernetic unity research pop_output happiness drawbacks }
+
+	localized_tags = {
+		SPECIES_TRAIT_CYBORG
+	}
 
 	initial = no
 	randomized = no
@@ -276,9 +358,8 @@ trait_whoniverse_dalek_psyche = {
 		planet_jobs_society_research_produces_mult = 0.05
 		planet_jobs_engineering_research_produces_mult = 0.05
 		pop_happiness = 0.05
-		planet_pop_assembly_organic_mult = -0.1
+		bonus_pop_growth_mult = -0.1
 	}
-	potential_crossbreeding_chance = 0
 
 	allowed_archetypes = { BIOLOGICAL }
 
@@ -287,21 +368,43 @@ trait_whoniverse_dalek_psyche = {
 	}
 
 	icon = "gfx/interface/icons/traits/trait_whoniverse_dalek_psyche.dds"
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
+
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
+
+	slave_cost = {
+		energy = 500
+	}
+
 }
 
 
 # Cyber Suit trait
 trait_whoniverse_cyber_suit = {
-	cost = 3
+	cost = 2
 
 	initial = yes
 	randomized = no
 
+	localized_tags = {
+		SPECIES_TRAIT_CYBORG
+	}
+
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
+
+	tags = { organic positive cybernetic upkeep habitability army }
+
 	species_potential_add = {
-		always = no
+		from = { has_whoniverse_cyber_conversion = yes }
 	}
 	species_possible_remove = {
-		can_remove_beneficial_genetic_traits = yes
+		can_remove_cybernetic_traits = yes
 	}
 	species_possible_merge_add = {
 		always = no
@@ -312,14 +415,22 @@ trait_whoniverse_cyber_suit = {
 	modifier = {
 
 		planet_pops_organics_food_upkeep_mult = -0.75
+		pop_amenities_usage_add = -0.25
 		pop_environment_tolerance = 0.10
-		army_damage_mult = 0.50
-		planet_pops_organics_energy_upkeep_mult = 0.15
+		army_damage_mult = 0.25
+		# planet_pops_organics_energy_upkeep_mult = 0.15
+		# worker_and_simple_drone_cat_bonus_workforce_mult = 0.025
 		# pop_housing_usage_mult = 0.25
 	}
 
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
+
 	infertile = yes
-	potential_crossbreeding_chance = 0
 
 	allowed_archetypes = { BIOLOGICAL }
 
@@ -330,9 +441,52 @@ trait_whoniverse_cyber_suit = {
 	icon = "gfx/interface/icons/traits/trait_whoniverse_cyber_suit.dds"
 }
 
+trait_whoniverse_emotion_inhibitors = {
+	cost = -1
+
+	opposites = { "trait_cyborg_learning_algorithms" }
+
+	allowed_archetypes = { BIOLOGICAL }
+	
+	localized_tags = { SPECIES_TRAIT_CYBORG }
+	
+	tags = { organic negative leader cybernetic }
+	initial = yes
+	species_potential_add = {
+		from = { has_whoniverse_cyber_conversion = yes }
+	}
+	species_possible_remove = {
+			can_remove_cybernetic_traits = yes
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	randomized = no
+	category = cyborg
+	modifier = {
+		species_leader_exp_gain = -0.15
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			years_passed > 5
+		}
+	}
+	slave_cost = {
+		energy = -250
+	}
+	# allowed_origins = {
+	# 	origin_unplugged
+	# }
+}
+
 # Time Lord trait
 trait_whoniverse_time_lord = {
 	cost = 1
+
+	tags = { organic positive research migration drawbacks pop_output }
 
 	initial = yes
 	randomized = no
@@ -351,21 +505,24 @@ trait_whoniverse_time_lord = {
 	
 	modifier = {
 		
-		planet_jobs_ruler_produces_mult = 0.5
+		pop_cat_ruler_bonus_workforce_mult = 0.15
 		# planet_jobs_specialist_only_produces_mult = 0.5
-		planet_jobs_physics_research_produces_mult = 0.5
-		planet_resettlement_unemployed_mult = 0.5
-		pop_growth_speed = -0.8
-		planet_pop_assembly_organic_mult = -0.8
+		physicist_jobs_bonus_workforce_mult = 0.15
+		pop_resettlement_cost_mult = 0.5
+		# pop_growth_speed = -0.75
+		bonus_pop_growth_mult = -0.75
 	}
 
 	immortal_leaders = yes
-	potential_crossbreeding_chance = 0
 
 	allowed_archetypes = { BIOLOGICAL }
 
 	ai_weight = {
 		weight = 0
+	}
+
+	slave_cost = {
+		energy = 1500
 	}
 
 	icon = "gfx/interface/icons/traits/trait_whoniverse_time_lord.dds"
@@ -374,6 +531,8 @@ trait_whoniverse_time_lord = {
 # Zygon electricity trait
 trait_whoniverse_bio_electricity = {
 	cost = 2
+
+	tags = { organic positive pop_output army energy }
 
 	initial = yes
 	randomized = no
@@ -392,7 +551,7 @@ trait_whoniverse_bio_electricity = {
 	
 	modifier = {
 		
-		planet_jobs_energy_produces_mult = 0.1
+		technician_jobs_bonus_workforce_mult = 0.1
 		army_damage_mult = 0.25
 	}
 
@@ -408,6 +567,8 @@ trait_whoniverse_bio_electricity = {
 # Zygon shapeshifter trait
 trait_whoniverse_zygon = {
 	cost = 1
+
+	tags = { organic positive pop_output }
 
 	initial = yes
 	randomized = no
@@ -425,8 +586,8 @@ trait_whoniverse_zygon = {
 	opposites = { "trait_whoniverse_dalek_infertile" "trait_whoniverse_dalek_machine" "trait_whoniverse_cyber_suit" "trait_hive_mind" }
 
 	custom_tooltip_with_modifiers = trait_whoniverse_zygon_tooltip
-	triggered_pop_modifier = {
-		planet_jobs_specialist_produces_mult = @whoniverse_zygon_bonus
+	triggered_pop_group_modifier = {
+		pop_cat_specialist_bonus_workforce_mult = @whoniverse_zygon_bonus
 		mult = planet.value:counter_whoniverse_not_zygon
 	}
 
@@ -446,6 +607,8 @@ trait_whoniverse_zygon = {
 # Weeping Angel trait
 trait_whoniverse_weeping_angel = {
 	cost = 2
+
+	tags = { organic positive pop_output habitability army }
 
 	initial = yes
 	randomized = no
@@ -471,7 +634,6 @@ trait_whoniverse_weeping_angel = {
 
 	immortal_leaders = yes
 	infertile = yes
-	potential_crossbreeding_chance = 0
 
 	allowed_archetypes = { BIOLOGICAL LITHOID PRESAPIENT }
 
@@ -485,6 +647,8 @@ trait_whoniverse_weeping_angel = {
 # Silence trait
 trait_whoniverse_silence = {
 	cost = 0
+
+	tags = { organic pop_output unity }
 
 	initial = yes
 	randomized = no
@@ -503,11 +667,11 @@ trait_whoniverse_silence = {
 	# custom_tooltip = trait_whoniverse_silence_tooltip
 	
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.1
+		# bureaucrat_jobs_bonus_workforce_mult = 0.1
+		enforcer_jobs_bonus_workforce_mult = 0.1
 	}
 
 	infertile = yes
-	potential_crossbreeding_chance = 0
 
 	allowed_archetypes = { BIOLOGICAL }
 
@@ -521,6 +685,8 @@ trait_whoniverse_silence = {
 # Plastic Automaton trait
 trait_whoniverse_auton = {
 	cost = 2
+
+	tags = { organic habitability army positive drawbacks }
 
 	initial = yes
 	randomized = no
@@ -549,7 +715,6 @@ trait_whoniverse_auton = {
 
 	immortal_leaders = yes
 	infertile = yes
-	potential_crossbreeding_chance = 0
 
 	allowed_archetypes = { BIOLOGICAL }
 
@@ -566,6 +731,8 @@ trait_whoniverse_auton = {
 # Plastic Automaton trait
 trait_whoniverse_cold_blood = {
 	cost = 1
+
+	tags = { organic habitability drawbacks positive }
 
 	initial = yes
 	randomized = no
@@ -607,11 +774,12 @@ trait_whoniverse_cold_blood = {
 # Sontaran DNA trait
 trait_whoniverse_sontaran_infertile = {
 	cost = 0
-	potential_crossbreeding_chance = 0
-	opposites = { "trait_clone_soldier_infertile" "trait_whoniverse_dalek_infertile" "trait_slow_breeders" "trait_rapid_breeders" "trait_plantoid_budding" "trait_lithoid_budding" "trait_advanced_budding" "trait_vat_grown" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" }
+	opposites = { "trait_clone_soldier_infertile" "trait_whoniverse_dalek_infertile" "trait_slow_breeders" "trait_rapid_breeders" "trait_plantoid_budding" "trait_lithoid_budding" "trait_vat_grown" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" }
 	sorting_priority = 20
 
-	initial = yes
+	tags = { organic positive leader ethic_attraction army drawbacks }
+
+	initial = no
 	randomized = no
 	species_potential_add = {
 		always = no
@@ -628,8 +796,6 @@ trait_whoniverse_sontaran_infertile = {
 
 	leader_age_min = 5
 	leader_age_max = 25
-
-	potential_crossbreeding_chance = 0
 
 	allowed_archetypes = { BIOLOGICAL }
 	ai_weight = {

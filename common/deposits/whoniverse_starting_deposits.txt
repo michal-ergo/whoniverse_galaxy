@@ -19,6 +19,7 @@
 d_whoniverse_petrified_jungle = {
 	is_for_colonizable = yes
 	icon = d_whoniverse_petrified_jungle
+	category = deposit_cat_rare
 
 	planet_modifier = {
 		district_farming_max = 1
@@ -41,6 +42,7 @@ d_whoniverse_petrified_jungle = {
 d_whoniverse_kaalann = {
 	is_for_colonizable = yes
 	icon = d_whoniverse_kaalann
+	category = deposit_cat_rare
 
 	planet_modifier = {
 		district_generator_max = 2
@@ -63,6 +65,7 @@ d_whoniverse_kaalann = {
 d_whoniverse_skaro_sewers = {
 	is_for_colonizable = yes
 	icon = d_whoniverse_skaro_sewers
+	category = deposit_cat_rare
 
 	planet_modifier = {
 		district_farming_max = 1
@@ -85,6 +88,7 @@ d_whoniverse_skaro_sewers = {
 d_whoniverse_tranquil_repose = {
 	is_for_colonizable = yes
 	icon = d_whoniverse_tranquil_repose
+	category = deposit_cat_rare
 
 	planet_modifier = {
 		district_farming_max = 2
@@ -107,6 +111,7 @@ d_whoniverse_tranquil_repose = {
 d_whoniverse_spacey_zoomer_ride = {
 	is_for_colonizable = yes
 	icon = d_whoniverse_spacey_zoomer_ride
+	category = deposit_cat_rare
 
 	planet_modifier = {
 		district_generator_max = 2
@@ -128,6 +133,7 @@ d_whoniverse_spacey_zoomer_ride = {
 d_whoniverse_polymeric_crust = {
 	is_for_colonizable = yes
 	icon = d_whoniverse_polymeric_crust
+	category = deposit_cat_rare
 
 	planet_modifier = {
 		district_generator_max = 2

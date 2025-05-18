@@ -25,6 +25,7 @@
  concept_whoniverse_dalek_happiness: "§RThis species is not affected by happiness§!"
  concept_whoniverse_dalek_happiness_desc: "Population of this species is not affected by §HHappiness§!."
 
+## Needs updating (jobs)
  concept_whoniverse_dalek_incubation_vats: "$building_whoniverse_dalek_incubation_vats$"
  concept_whoniverse_dalek_incubation_vats_desc: "Planet Limit: §I1§! $NEW_LINE$$MOD_PLANET_POP_ASSEMBLY_ORGANIC_ADD$: §G+4-10§!$NEW_LINE$£mod_job_healthcare_add£ $job_healthcare$ Jobs: §G+1§! $NEW_LINE$$building_whoniverse_dalek_incubation_vats_effect_desc$"
 
@@ -52,18 +53,20 @@
  concept_whoniverse_cyber_suit_desc: "- Pop Food Upkeep: §G-90%§!$NEW_LINE$- Habitability: §G+10%§!$NEW_LINE$- $MOD_ARMY_DAMAGE_MULT$: §G+25%§!$NEW_LINE$- Pop Energy Upkeep: §R+25%§!$NEW_LINE$- $TRAIT_INFERTILE$\n\n§L$civic_whoniverse_cyber_conversion_desc$§!"
 
 # UNIT concepts
+## Needs updating (jobs)
  concept_whoniverse_black_archive: "$building_whoniverse_black_archive$"
- concept_whoniverse_black_archive_desc: "- Empire Limit: §I1§! $NEW_LINE$- Research speed: §G+5%§! $NEW_LINE$- Scientist Capacity: §G+1§! $NEW_LINE$- Science Director jobs: §G+1§! \n\n§L$building_whoniverse_black_archive_desc$§!"
+ concept_whoniverse_black_archive_desc: "- Empire Limit: §I1§! $NEW_LINE$- Empire Modifier: $TABBED_NEW_LINE$- Research Speed: §G+5%§!$TABBED_NEW_LINE$- Scientist Capacity: §G+1§!$NEW_LINE$- Planet Modifier: $TABBED_NEW_LINE$- Job Efficiency for Physicists: §G+10%§! $TABBED_NEW_LINE$- Job Efficiency for Biologists: §G+10%§! $TABBED_NEW_LINE$- Job Efficiency for Engineers: §G+10%§! \n\n§L$building_whoniverse_black_archive_desc$§!"
 
  concept_whoniverse_unit_hq: "$civic_whoniverse_unit_hq$"
  concept_whoniverse_unit_hq_desc: "- Planet Sensor Range: §G+2§! $NEW_LINE$- Effective Councilor Skill: §G+1§! $NEW_LINE$- Ship Build Speed: §G+10%§! $NEW_LINE$- Starts with a unique ['concept_whoniverse_black_archive'] building \n\n§L$civic_whoniverse_unit_hq_desc$§!"
 
-# Church concepts
+# Church - The Silence Civic
  concept_whoniverse_silence: "$civic_whoniverse_silence$"
- concept_whoniverse_silence_desc: "- Army Damage: §G+15%§!$NEW_LINE$- Codebreaking: §G+1§!$NEW_LINE$- Infiltration Speed: §G+10%§!$NEW_LINE$- Stability: §G+5§! \n\n§L$civic_whoniverse_silence_desc$§!"
+ concept_whoniverse_silence_desc: "- Army Damage: §G+15%§!$NEW_LINE$- Codebreaking: §G+1§!$NEW_LINE$- Infiltration Speed: §G+10%§!$NEW_LINE$- Stability: §G+5§!$NEW_LINE$- Starts with a unique ['concept_whoniverse_seventh_transept'] building  \n\n§L$civic_whoniverse_silence_desc$§!"
 
+# Seventh Transept
  concept_whoniverse_seventh_transept: "$building_whoniverse_seventh_transept$"
- concept_whoniverse_seventh_transept_desc: "- Empire Limit: §I1§! $NEW_LINE$- $i_unity$ from Priests: §G+1§! $NEW_LINE$- Allows recruitment of §HHeadless Monk§! armies§! $NEW_LINE$- Necromancer jobs: §G+4§!\n\n§L$building_whoniverse_seventh_transept_desc$§!"
+ concept_whoniverse_seventh_transept_desc: "- Empire Limit: §I1§! $NEW_LINE$- Empire Modifier: $TABBED_NEW_LINE$- Monthly $i_unity$: §G+5%§!$NEW_LINE$- Planet Modifier: $TABBED_NEW_LINE$- Spiritualist Ethics Attraction: §G+25%§! $TABBED_NEW_LINE$- Necrophyte Jobs: §G+400§! $NEW_LINE$- Allows recruitment of §HHeadless Monk§! armies§! \n\n§L$building_whoniverse_seventh_transept_desc$§!"
 
 # Nestene concepts
  concept_whoniverse_auton: "$trait_whoniverse_auton$"
@@ -74,8 +77,9 @@
 
 # Judoon concepts
  concept_whoniverse_space_police: "$civic_whoniverse_space_police$"
- concept_whoniverse_space_police_desc: "- Trade Protection: §G+10§! $NEW_LINE$- Planet Sensor Range: §G+2§! $NEW_LINE$- Crime Rate: §G-10%§!$NEW_LINE$- Can construct ['concept_whoniverse_space_police_station'] building $DOUBLE_NEW_LINE$§L$civic_whoniverse_metamorphic_hive_desc$§!"
+ concept_whoniverse_space_police_desc: "- Starbase Capacity: §G+2§! $NEW_LINE$- Planet Sensor Range: §G+2§! $NEW_LINE$- Crime Rate: §G-10%§!$NEW_LINE$- Can construct ['concept_whoniverse_space_police_station'] building $DOUBLE_NEW_LINE$§L$civic_whoniverse_metamorphic_hive_desc$§!"
 
+## Needs updating (jobs)
  concept_whoniverse_space_police_station: "$building_whoniverse_space_police_station$"
  concept_whoniverse_space_police_station_desc: "- Enforcer jobs: §G+2§!$NEW_LINE$- Stability: §G+10§!$NEW_LINE$- Diplomatic weight from fleet strength: §G+5%§!\n\n§L$building_whoniverse_space_police_station_desc$§!"
 

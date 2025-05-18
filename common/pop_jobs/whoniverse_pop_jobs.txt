@@ -2,12 +2,13 @@
 
 whoniverse_cyber_conversion = {
 	category = assimilation
-	icon = assimilation
+	# icon = assimilation
 	is_capped_by_modifier = no
-	clothes_texture_index = 2
+	# clothes_texture_index = 2
 
 	possible_pre_triggers = {
 		is_sapient = yes
+		is_robotic = no
 	}
 
 	ignores_sapience = yes
@@ -15,49 +16,14 @@ whoniverse_cyber_conversion = {
 	possible = {
 		exists = owner
 		has_citizenship_type = { type = citizenship_whoniverse_cyber_conversion country = owner }
+		is_lithoid = no
+		is_phototrophic = no
 	}
 
 	resources = {
 		category = planet_jobs
 		upkeep = {
-			trigger = {
-				has_phototrophic_energy_upkeep = yes
-			}
-			energy = @living_standard_phototrophic_normal
-		}
-		upkeep = {
-			trigger = {
-				has_food_upkeep = yes
-				is_phototrophic = no
-			}
 			food = @living_standard_food_normal
-		}
-		upkeep = {
-			trigger = {
-				has_food_upkeep = yes
-				is_phototrophic = yes
-			}
-			food = @living_standard_phototrophic_normal
-		}
-		upkeep = {
-			trigger = {
-				has_mineral_upkeep = yes
-				is_phototrophic = no
-			}
-			minerals = @living_standard_food_normal
-		}
-		upkeep = {
-			trigger = {
-				has_mineral_upkeep = yes
-				is_phototrophic = yes
-			}
-			minerals = @living_standard_phototrophic_normal
-		}
-		upkeep = {
-			trigger = {
-				is_robotic_or_voidspawn_species = yes
-			}
-			energy = @living_standard_energy_normal
 		}
 	}
 
@@ -73,9 +39,9 @@ whoniverse_cyber_conversion = {
 
 whoniverse_predator = {
 	category = criminal
-	icon = criminal
+	# icon = criminal
 	is_capped_by_modifier = no
-	clothes_texture_index = 2
+	# clothes_texture_index = 2
 
 	possible_pre_triggers = {
 		is_sapient = yes
@@ -92,44 +58,7 @@ whoniverse_predator = {
 	resources = {
 		category = planet_jobs
 		upkeep = {
-			trigger = {
-				has_phototrophic_energy_upkeep = yes
-			}
-			energy = @living_standard_phototrophic_normal
-		}
-		upkeep = {
-			trigger = {
-				has_food_upkeep = no
-				is_phototrophic = no
-			}
-			food = @living_standard_food_normal
-		}
-		upkeep = {
-			trigger = {
-				has_food_upkeep = yes
-				is_phototrophic = yes
-			}
-			food = @living_standard_phototrophic_normal
-		}
-		upkeep = {
-			trigger = {
-				has_mineral_upkeep = yes
-				is_phototrophic = no
-			}
-			minerals = @living_standard_food_normal
-		}
-		upkeep = {
-			trigger = {
-				has_mineral_upkeep = yes
-				is_phototrophic = yes
-			}
-			minerals = @living_standard_phototrophic_normal
-		}
-		upkeep = {
-			trigger = {
-				is_robotic_or_voidspawn_species = yes
-			}
-			energy = @living_standard_energy_normal
+			energy = 1
 		}
 	}
 

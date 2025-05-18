@@ -33,7 +33,6 @@ citizenship_whoniverse_cyber_conversion = {
 			NOR = {
 				has_trait = trait_whoniverse_dalek_infertile
 				has_trait = trait_whoniverse_cyber_suit
-				has_trait = trait_whoniverse_cyber_suit
 			}
 		}
 		custom_tooltip = {

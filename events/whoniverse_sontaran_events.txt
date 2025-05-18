@@ -56,7 +56,7 @@ planet_event = {
 		 	has_origin = origin_whoniverse_sontaran
 			}
 		# NOT = { has_modifier = high_gravity }
-		num_pops > 0
+		pop_amount > 0
 		}
 
 	is_triggered_only = yes
@@ -120,6 +120,9 @@ country_event = {
 		 	}
 		}
 		event_target:whoniverse_start_rutan_empire_ai = {
+			solar_system = {
+				save_event_target_as = whoniverse_rutan_system
+			}
 			create_country = {
 				name = "PRESCRIPTED_rutan_empire"
 				species = last_created_species
@@ -152,7 +155,7 @@ country_event = {
 				effect = {
 					set_graphical_culture = molluscoid_01
 					establish_communications_no_message = root.owner
-					establish_contact = { who = root.owner location = event_target:whoniverse_imperial_skaro }
+					establish_contact = { who = root.owner location = event_target:whoniverse_start_rutan_empire_ai }
 					save_global_event_target_as = whoniverse_rutan_empire_global
 				##Copy technology
 					if = {
@@ -240,33 +243,35 @@ country_event = {
 			}
 			while = {
 				count = 28
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}
 					
 			##Build Starbases
-			
-			starbase = {
-			 	set_owner = last_created_country
-			}
-	
-			create_starbase = {
-				size = starbase_starport
-				owner = last_created_country
-				module = shipyard
-				building = crew_quarters
+			event_target:whoniverse_rutan_system = {
+				create_starbase = {
+					size = starbase_starport
+					owner = last_created_country
+					module = shipyard
+					building = crew_quarters
 					effect = {
 					set_starbase_module = {
 						slot = 1
-							module = anchorage
-						}
+						module = anchorage
+					}
 					set_starbase_module = {
 						slot = 2
 						module = anchorage
 					}
 				}
 			}
+				# starbase = {
+			 	# 	set_owner = last_created_country
+				# }
+			}
+			
+			
 		
 			while = {
 				count = 10
@@ -281,15 +286,10 @@ country_event = {
 				while = {
 					count = 4
 					add_district_and_planet_size_if_needed_effect = {
-						district = district_city
+						district = district_hive
 					}
 				}
-				while = {
-					count = 2
-					add_district_and_planet_size_if_needed_effect = {
-						district = district_industrial
-					}
-				}
+				
 				while = {
 					count = 3
 					add_district_and_planet_size_if_needed_effect = {

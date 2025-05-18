@@ -472,7 +472,8 @@ special_project = {
 	on_success = {
 		owner = {
 			random_controlled_planet = {
-				limit = { num_pops > 0 }
+				# limit = { num_pops > 0 }
+				limit = { pop_amount > 1 }
 				planet_event = {
 					id = whoniverse.317
 				}

@@ -565,8 +565,8 @@ whoniverse_gamma_forests_system_initializer = {
 				authority = auth_democratic
 				day_zero_contact = no
 				civics = {
-					civic = civic_landed_nobility
-					civic = civic_flat_world_theory
+					civic = civic_increasing_urbanization
+					civic = civic_atmospheric_pollution
 					}
 				species = last_created_species
 					ethos = {
@@ -574,6 +574,8 @@ whoniverse_gamma_forests_system_initializer = {
 						ethic = "ethic_militarist"
 						ethic = "ethic_egalitarian"
 						}
+				name_list = "MAM1"
+				ship_prefix = "GFS"
 				origin = origin_default_pre_ftl
 				flag = {
 					icon = {
@@ -601,11 +603,9 @@ whoniverse_gamma_forests_system_initializer = {
 			}
 			set_owner = last_created_country
 
-			while = {
-				count = @machine_age_pops
-				create_pop = {
-					species = last_created_species
-				}
+			create_pop_group = {
+				species = last_created_species
+				size = @industrial_age_pops
 			}
 
 			while = {
@@ -618,12 +618,12 @@ whoniverse_gamma_forests_system_initializer = {
 				}
 			}
 
-			add_building = building_primitive_capital
-			add_building = building_urban_dwellings
+			add_building = building_primitive_farm
 			add_building = building_primitive_factory
 			add_building = building_primitive_mine
 			add_building = building_primitive_power_plant
-			add_building = building_primitive_farm
+			add_building = building_primitive_capital
+			add_building = building_urban_dwellings
 
 			last_created_country = {
 				capital_scope = { set_name = "whoniverse_name_gamma_forests_planet" }

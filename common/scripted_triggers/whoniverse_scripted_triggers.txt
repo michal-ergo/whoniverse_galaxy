@@ -48,3 +48,9 @@ whoniverse_has_not_megacorp = {
 	NOT = { host_has_dlc = "Megacorp" }
 }
 
+is_silurian_species = {
+	OR = {
+		species_portrait = whoniverse_silurian
+		species_portrait = whoniverse_sea_devil
+	}
+}

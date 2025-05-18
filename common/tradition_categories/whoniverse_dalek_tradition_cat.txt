@@ -14,7 +14,7 @@ tradition_whoniverse_dalek = {
 			has_psionic_ascension = yes
 			has_synthetic_ascension = yes
 			is_natural_design_empire = yes
-			# is_individual_machine = yes
+			is_individual_machine = yes
 		}
 	}
 

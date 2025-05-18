@@ -88,6 +88,7 @@ ap_whoniverse_cybermen = {
 			has_origin = "origin_whoniverse_cybermen_cybus"
 		}
 		is_natural_design_empire = no
+		NOT = { has_ascension_perk = ap_whoniverse_cybermen }
  	}
 
  	ai_weight = {

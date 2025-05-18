@@ -6,14 +6,18 @@ whoniverse_digsite_alfava_metraxis = {
 	picture = GFX_evt_alien_ruins
 	stages = 3
 	max_instances = 1
+	weight = 0
 	allow = {
-		is_ship_class = shipclass_science_ship
 		exists = leader
+		leader = { leader_class = scientist }
 	}
 	visible = {
 		has_country_flag = whoniverse_alfava_metraxis_archaeology
 		default_site_visible_trigger = yes
 	}
+	# on_visible = {
+	# 	country_event = { id = story.5 days = 30 }
+	# }
 	stage = {
 		difficulty = 3
 		icon = GFX_archaeology_runes_F1
@@ -42,9 +46,10 @@ whoniverse_digsite_mechanus = {
 	picture = GFX_evt_ancient_alien_temple
 	stages = 4
 	max_instances = 1
+	weight = 0
 	allow = {
-		is_ship_class = shipclass_science_ship
 		exists = leader
+		leader = { leader_class = scientist }
 	}
 	visible = {
 		has_country_flag = whoniverse_mechanus_archaeology
@@ -83,9 +88,10 @@ whoniverse_digsite_necros = {
 	picture = GFX_evt_city_ruins
 	stages = 3
 	max_instances = 1
+	weight = 0
 	allow = {
-		is_ship_class = shipclass_science_ship
 		exists = leader
+		leader = { leader_class = scientist }
 	}
 	visible = {
 		has_country_flag = whoniverse_necros_archaeology
@@ -120,9 +126,10 @@ whoniverse_digsite_spiridon = {
 	picture = GFX_evt_alien_planet
 	stages = 4
 	max_instances = 1
+	weight = 0
 	allow = {
-		is_ship_class = shipclass_science_ship
 		exists = leader
+		leader = { leader_class = scientist }
 	}
 	visible = {
 		has_country_flag = whoniverse_spiridon_archaeology
@@ -162,9 +169,10 @@ whoniverse_digsite_zygor = {
 	picture = GFX_evt_alien_planet
 	stages = 3
 	max_instances = 1
+	weight = 0
 	allow = {
-		is_ship_class = shipclass_science_ship
 		exists = leader
+		leader = { leader_class = scientist }
 	}
 	visible = {
 		has_country_flag = whoniverse_zygor_archaeology

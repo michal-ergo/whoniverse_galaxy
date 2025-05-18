@@ -38,10 +38,30 @@ namespace = whoniverse
 # 920 - 929 = Tenth Doctor hire, Martha Jones event chain
 # 930 - 939 = Donna Noble event chain
 
+# Game start inline scripts
+country_event = {
+    id = whoniverse.1
+	hide_window = yes
+
+	trigger = {
+		is_country_type = default
+	}
+
+	is_triggered_only = yes	
+
+	immediate = {
+		hidden_effect = {
+			capital_scope = {
+				inline_script = "whoniverse/whoniverse_game_start"		
+			}
+		}
+	}
+}
+
 
 # Kill Chosen if they exist
 country_event = {
-    id = whoniverse.1
+    id = whoniverse.2
 	hide_window = yes
 
 	trigger = {
@@ -55,8 +75,8 @@ country_event = {
 		hidden_effect = {
 			every_country = {
 				limit = { has_country_flag = chosen_empire }
-				every_owned_pop = {
-					kill_pop = yes
+				every_owned_pop_group = {
+					kill_single_pop = yes
 				}
 			}
 			
@@ -82,7 +102,7 @@ planet_event = {
 		owner = {
 			is_ai = no
 			}
-		num_pops > 0
+		pop_amount > 0
 	}	
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -116,7 +136,7 @@ planet_event = {
 	}
 
 	trigger = {
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	immediate = {
@@ -154,7 +174,7 @@ planet_event = {
 		hidden_effect = {
 			while = {
 				count = 2
-					create_pop = {
+					create_pop_group = {
 						species = event_target:roboform_species
 					}
 				}
@@ -227,7 +247,7 @@ planet_event = {
 		hidden_effect = {
 			while = {
 				count = 2
-				create_pop = {
+				create_pop_group = {
 					species = owner_main_species
 				}
 			}

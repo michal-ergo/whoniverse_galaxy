@@ -284,4 +284,39 @@ objectTypes = {
 		name = "cyber_01_titan_stern_mesh"
 		file = "gfx/models/ships/cyber_01/Titan_Assets/cyber_01_titan_stern.mesh"
 		}
+
+####### starbase ships  #######	
+
+pdxmesh = {
+	name = "cyber_01_starbase_frame"
+	file = "gfx/models/ships/cyber_01/Starbase_Assets/cyber_01_starbase_frame.mesh"
 }
+
+pdxmesh = {
+	name = "cyber_01_starbase_outpost"
+	file = "gfx/models/ships/cyber_01/Starbase_Assets/cyber_01_starbase_outpost.mesh"
+}
+
+pdxmesh = {
+	name = "cyber_01_construction_ship_mesh"
+	file = "gfx/models/ships/cyber_01/Constructor_Assets/cyber_01_constructor.mesh"
+	scale = 1.0
+	
+	animation = { id = "idle"				type = "humanoid_01_construction_ship_idle_animation" }
+	animation = { id = "working_looping"	type = "humanoid_01_construction_ship_working_looping_animation" }
+	animation = { id = "working"			type = "humanoid_01_construction_ship_working_animation" }
+
+	meshsettings = {
+		shader = "PdxMeshShip"
+	}
+}
+
+pdxmesh = {
+	name = "cyber_01_construction_forcefield_mesh"
+	file = "gfx/models/ships/cyber_01/Constructor_Assets/cyber_01_constructorshield.mesh"
+}
+
+}
+
+#### CONSTRUCTION SHIP ####
+

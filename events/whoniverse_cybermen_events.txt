@@ -92,7 +92,7 @@ planet_event = {
 				while = {
 					count = 1
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							has_citizenship_type = {
 								type = citizenship_whoniverse_cyber_conversion
 								country = root.owner
@@ -114,7 +114,7 @@ planet_event = {
 				while = {
 					count = 3
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							has_citizenship_type = {
 								type = citizenship_whoniverse_cyber_conversion
 								country = root.owner
@@ -136,7 +136,7 @@ planet_event = {
 				while = {
 					count = 6
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							has_citizenship_type = {
 								type = citizenship_whoniverse_cyber_conversion
 								country = root.owner
@@ -158,7 +158,7 @@ planet_event = {
 				while = {
 					count = 12
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							has_citizenship_type = {
 								type = citizenship_whoniverse_cyber_conversion
 								country = root.owner
@@ -178,6 +178,7 @@ planet_event = {
 }
 
 # Cybermen start secondary species setup event, remove spawning pools
+# Spawning Pools are currently vanilla modified, no need to remove here
 planet_event = {
     id = whoniverse.32
     is_triggered_only = yes
@@ -188,8 +189,13 @@ planet_event = {
 	}
     immediate = {
         whoniverse_generate_cybermen_pops = yes
-    }
+		# add_building = building_hive_node # to replace spawning pool
+		owner = {
+			add_resource = { food = 1000 }
+		}
+	}
 }
+
 
 # changes an empire's policy (Cybermen AI event)
 country_event = {
@@ -379,7 +385,7 @@ planet_event = {
 		owner = {
 			has_whoniverse_cyber_conversion = no
 		}
-		num_pops > 0
+		pop_amount > 0
 		OR = {
 			is_planet_class = pc_continental
 			is_planet_class = pc_tropical
@@ -558,7 +564,7 @@ planet_event = {
 
 	trigger = {
 		has_planet_flag = whoniverse_mondasian_colony_ship_planet
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	immediate = {
@@ -567,9 +573,9 @@ planet_event = {
 			save_event_target_as = old_empire
 		}
 		while = {
-            limit = { num_pops > 1 }
-            random_owned_pop = {
-                kill_pop = yes
+            limit = { pop_amount > 1 }
+            random_owned_pop_group = {
+                kill_single_pop = yes
             }
         }
 		# every_country = {
@@ -690,7 +696,7 @@ planet_event = {
 		}
 		while = {
 			count = 20
-			create_pop = {
+			create_pop_group = {
 				species = last_created_species
 			}
 		}
@@ -752,45 +758,7 @@ planet_event = {
 				}
 			}
 
-			while = {
-				count = 4
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_city
-				}
-			}
-			while = {
-				count = 2
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_industrial
-				}
-			}
-			while = {
-				count = 3
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_farming
-				}
-			}
-			while = {
-				count = 3
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_mining
-				}
-			}
-			while = {
-				count = 3
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_generator
-				}
-			}
-		
-		add_building = building_capital
-		add_building = building_research_lab_1
-		add_building = building_foundry_1
-		add_building = building_commercial_zone
-		add_building = building_food_processing_facility
-		add_building = building_energy_grid
-		add_building = building_mineral_purification_plant
-		add_building = building_bureaucratic_1
+		inline_script = "whoniverse/whoniverse_game_start_cybermen"
 
 		last_created_country = {
 			add_resource = { minerals = 7000 }
@@ -878,7 +846,7 @@ planet_event = {
 
 	trigger = {
 		has_planet_flag = whoniverse_mondasian_colony_ship_planet
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	immediate = {
@@ -1029,7 +997,7 @@ planet_event = {
 		owner = {
 			has_whoniverse_cyber_conversion = yes
 		}
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	is_triggered_only = yes
@@ -1083,7 +1051,7 @@ planet_event = {
 		owner = {
 			has_whoniverse_cyber_conversion = yes
 		}
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	is_triggered_only = yes
@@ -1189,7 +1157,7 @@ planet_event = {
 		owner = {
 			has_whoniverse_cyber_conversion = yes
 		}
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	is_triggered_only = yes
@@ -1426,7 +1394,7 @@ planet_event = {
 		name = whoniverse.57.a
 		while = {
 			count = 1
-			create_pop = {
+			create_pop_group = {
 				species = event_target:owner_species
 			}
 		owner = {
@@ -1444,7 +1412,7 @@ planet_event = {
 		name = whoniverse.57.b
 		while = {
 			count = 1
-			create_pop = {
+			create_pop_group = {
 				species = event_target:owner_species
 			}
 		}
@@ -1482,7 +1450,7 @@ planet_event = {
 			has_origin = origin_whoniverse_cybermen_cyberiad
 			is_ai = yes
 		}
-		num_pops > 0
+		pop_amount > 0
 		}
 
 	is_triggered_only = yes
@@ -1600,7 +1568,7 @@ planet_event = {
 		owner = {
 			has_whoniverse_cyber_conversion = yes
 		}
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = whoniverse_pm_telos
 		}
 	
@@ -1631,7 +1599,7 @@ planet_event = {
 		owner = {
 			has_whoniverse_cyber_conversion = yes
 			}
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = whoniverse_pm_telos
 			}
 		
@@ -1647,7 +1615,7 @@ planet_event = {
 			}
 			modify_species = {
 				species = owner_main_species
-				portrait = whoniverse_cyberman_04
+				portrait = whoniverse_cyberman_classic
 				remove_trait = trait_pc_continental_preference
 				add_trait = trait_pc_arctic_preference
 				effect = {
@@ -1656,11 +1624,12 @@ planet_event = {
 				}
 			while = {
 				count = 5
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
+					effect = { save_event_target_as = cybertelosian_pop_group }
 					}
 				}			
-			last_created_pop = { 
+			event_target:cybertelosian_pop_group = { 
 				set_citizenship_type = {
 					type = citizenship_full cooldown = yes
 				}
@@ -1695,7 +1664,7 @@ planet_event = {
 		owner = {
 			has_whoniverse_cyber_conversion = yes
 			}
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = whoniverse_pm_cyber_tomb
 			}
 		
@@ -1707,25 +1676,26 @@ planet_event = {
 		hidden_effect = {
 			modify_species = {
 				species = owner_main_species
-				portrait = whoniverse_cyberman_04
+				portrait = whoniverse_cyberman_classic
 				remove_trait = trait_pc_continental_preference
 				add_trait = trait_pc_arctic_preference
 				effect = {
 					save_event_target_as = cybertalosian_species
 					}
 				}
-			last_created_pop = { 
+			event_target:cybertalosian_species = { 
 				set_citizenship_type = {
 					type = citizenship_full cooldown = yes
 				}
 			}
 			while = {
 				count = 2
-				create_pop = {
+				create_pop_group = {
 					species = event_target:cybertalosian_species
+					effect = { save_event_target_as = cybertelosian_pop_group}
 					}
 				}
-			last_created_pop = { 
+			event_target:cybertelosian_pop_group = { 
 				set_citizenship_type = {
 					type = citizenship_full
 					}
@@ -1967,7 +1937,7 @@ country_event = {
 			}
 			while = {
 				count = 4
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}
@@ -1985,7 +1955,7 @@ country_event = {
 				}
 			while = {
 				count = 24
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}
@@ -2023,45 +1993,7 @@ country_event = {
 					}
 				}
 
-				while = {
-					count = 4
-					add_district_and_planet_size_if_needed_effect = {
-						district = district_city
-					}
-				}
-				while = {
-					count = 2
-					add_district_and_planet_size_if_needed_effect = {
-						district = district_industrial
-					}
-				}
-				while = {
-					count = 3
-					add_district_and_planet_size_if_needed_effect = {
-						district = district_farming
-					}
-				}
-				while = {
-					count = 3
-					add_district_and_planet_size_if_needed_effect = {
-						district = district_mining
-					}
-				}
-				while = {
-					count = 3
-					add_district_and_planet_size_if_needed_effect = {
-						district = district_generator
-					}
-				}
-				
-			add_building = building_capital
-			add_building = building_research_lab_1
-			add_building = building_foundry_1
-			add_building = building_hive_warren
-			add_building = building_stronghold
-			add_building = building_energy_grid
-			add_building = building_mineral_purification_plant
-			add_building = building_hive_node
+				inline_script = "whoniverse/whoniverse_game_start_cybermen"
 		
 			last_created_country = {
 				add_resource = {
@@ -2282,7 +2214,7 @@ country_event = {
 			}
 			while = {
 				count = 28
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}
@@ -2322,45 +2254,7 @@ country_event = {
 				}
 			}	
 
-			while = {
-				count = 4
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_city
-				}
-			}
-			while = {
-				count = 2
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_industrial
-				}
-			}
-			while = {
-				count = 3
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_farming
-				}
-			}
-			while = {
-				count = 3
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_mining
-				}
-			}
-			while = {
-				count = 3
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_generator
-				}
-			}
-				
-			add_building = building_capital
-			add_building = building_research_lab_1
-			add_building = building_foundry_1
-			add_building = building_hive_warren
-			add_building = building_stronghold
-			add_building = building_energy_grid
-			add_building = building_mineral_purification_plant
-			add_building = building_hive_node
+			inline_script = "whoniverse/whoniverse_game_start_cybermen"
 		
 			last_created_country = {
 				add_resource = {
@@ -2542,7 +2436,7 @@ country_event = {
 			}
 			while = {
 				count = @atomic_age_pops
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}

@@ -609,7 +609,7 @@ planet_event = {
 	}
 
 	trigger = {
-		num_pops > 0
+		pop_amount > 0
 		has_planet_flag = whoniverse_rose_autons_planet
 	}
 
@@ -1313,8 +1313,8 @@ country_event = {
 				limit = { has_planet_flag = planet_earth }
 				while = {
 					count = 15
-					random_owned_pop = {
-						kill_pop = yes
+					random_owned_pop_group = {
+						kill_single_pop = yes
 					}
 				}
 				add_planet_devastation = 50
@@ -1859,8 +1859,8 @@ country_event = {
 		event_target:event_donna_noble = {
 			while = {
 				count = 10
-				random_owned_pop = {
-					kill_pop = yes
+				random_owned_pop_group = {
+					kill_single_pop = yes
 				}
 			}
 			add_planet_devastation = 35

@@ -9,8 +9,11 @@ origin_whoniverse_new_dalek_paradigm = {
 		always = yes
 	}
 
+	initializers = { whoniverse_skaro_system_initializer }
+
 	possible = {
-		species_archetype = { NOT = { value = MACHINE } }
+		# species_archetype = { NOT = { value = MACHINE } }
+		species_class = { value = WHO_DALEK }
 		civics = {
 			NOT = {
 				value = civic_agrarian_idyll
@@ -59,7 +62,8 @@ origin_whoniverse_dalek_empire_remnants = {
 	}
 
 	possible = {
-		species_archetype = { NOT = { value = MACHINE } }
+		# species_archetype = { NOT = { value = MACHINE } }
+		species_class = { value = WHO_DALEK }
 		civics = {
 			NOT = {
 				value = civic_agrarian_idyll
@@ -108,7 +112,8 @@ origin_whoniverse_dalek_civil_war = {
 	# initializers = { whoniverse_prewar_necros_system_initializer }
 
 	possible = {
-		species_archetype = { NOT = { value = MACHINE } }
+		# species_archetype = { NOT = { value = MACHINE } }
+		species_class = { value = WHO_DALEK }
 		civics = {
 
 			NOT = {
@@ -167,8 +172,8 @@ origin_whoniverse_cybermen_cyberiad = {
 	traits = {
 		trait = trait_cybernetic
 		trait = trait_whoniverse_cyber_suit
-		trait = trait_cyborg_durable
-		trait = trait_cyborg_neural_limiters
+		# trait = trait_cyborg_durable
+		# trait = trait_cyborg_neural_limiters
 	}
 
 	flags = { whoniverse_cyber_empire1 custom_start_screen }
@@ -204,8 +209,8 @@ origin_whoniverse_cybermen_cybus = {
 	traits = {
 		trait = trait_cybernetic
 		trait = trait_whoniverse_cyber_suit
-		trait = trait_cyborg_durable
-		trait = trait_cyborg_neural_limiters
+		# trait = trait_cyborg_durable
+		# trait = trait_cyborg_neural_limiters
 	}
 
 	flags = { whoniverse_cybermen_cybus custom_start_screen }
@@ -414,8 +419,8 @@ origin_whoniverse_silurian = {
 	# }
 
 	modifier = {
-		mining_district_housing_add = 2
-		mining_district_buildings_add = 0.34
+		mining_district_housing_add = 200 # from 2
+		# mining_district_buildings_add = 0.34
 		district_mining_max = 4
 		# planet_miners_minerals_produces_add = 0.5
 		planet_orbital_bombardment_damage = -0.5
@@ -471,16 +476,6 @@ origin_whoniverse_sontaran = {
 	traits = {
 	 	trait = trait_whoniverse_sontaran_infertile
 	}
-
-	# modifier = {
-	# 	mining_district_housing_add = 2
-	# 	mining_district_buildings_add = 0.34
-	# 	district_mining_max = 4
-	# 	# planet_miners_minerals_produces_add = 0.5
-	# 	planet_orbital_bombardment_damage = -0.5
-	# 	planet_building_build_speed_mult = -0.10
-	# 	planet_storm_devastation_mult = -0.25
-	# }
 
 	initializers = { whoniverse_sontar_system_initializer }
 

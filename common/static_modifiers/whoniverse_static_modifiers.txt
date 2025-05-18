@@ -1,12 +1,15 @@
 #WHONIVERSE MODIFIERS
 
-# Traditions modifiers
-
+### Traditions modifiers
+# Dalek Supremacy
 agenda_whoniverse_dalek_supremacy_finish = {
-	country_unity_produces_mult = 0.2
-	planet_pop_assembly_organic_mult = 0.1
+	country_unity_produces_mult = 0.1
+	bonus_pop_growth_mult = 0.2
+	fake_pop_growth_mod = 0.2
 	rivalries_influence_produces_mult = 0.5
 }
+
+### Species modifiers
 
 #Dalek modifiers
 
@@ -72,7 +75,7 @@ whoniverse_pm_zygon_invasion = {
 
 whoniverse_unit_guilt_of_genocide = {
 	icon = "gfx/interface/icons/modifiers/mod_pop_decline_speed.dds"
-	pop_citizen_happiness = -0.15
+	pop_happiness = -0.15
 }
 
 whoniverse_unit_devastation = {
@@ -126,7 +129,8 @@ whoniverse_pm_sontaran_gravity = {
 }
 
 whoniverse_pm_caesofine_gas = {
-	planet_pop_assembly_organic_mult = 0.50
+	planet_pop_assembly_mult = 0.50
+	bonus_pop_growth = 0.50
 	icon = "gfx/interface/icons/planet_modifiers/pm_whoniverse_caesofine_gas.dds"
 	icon_frame = 2
 }

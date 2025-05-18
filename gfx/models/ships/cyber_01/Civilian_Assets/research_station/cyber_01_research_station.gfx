@@ -1,0 +1,19 @@
+objectTypes = {
+
+pdxmesh = {
+    name = "cyber_01_science_station_frame_mesh"
+	file = "gfx/models/ships/cyber_01/Starbase_Assets/cyber_01_starbase_frame.mesh"
+    scale = 1.0
+    }
+
+pdxmesh = {
+    name = "cyber_01_science_station_mesh"
+    file = "gfx/models/ships/cyber_01/Civilian_Assets/research_station/cyber_01_hive.mesh"
+    scale = 1.0
+    meshsettings = {
+        shader = "PdxMeshShip"
+    }    
+            animation = { id = "idle"			type = "cyber_01_hive_idle_animation" }
+            animation = { id = "death"			type = "cyber_01_hive_death_animation" }	
+    }
+}

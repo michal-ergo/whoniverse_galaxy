@@ -1,7 +1,12 @@
 living_standard_whoniverse_cyber_conversion = {
-	pop_modifier = {
+	triggered_pop_group_modifier = {
+		# Triggered to hide from the auto-generated tooltip
+		potential = {
+			always = yes
+		}
 		pop_happiness = -0.40
 	}
+	
 	potential = {
 		# Changed: Display for all empires
 		# Changed: Check for all DLC that allows any sort of assimilation
@@ -13,9 +18,7 @@ living_standard_whoniverse_cyber_conversion = {
 		exists = from
 	}
 	allow = {
-		hidden_trigger = {
-			exists = from
-		}
+		hidden_trigger = { exists = from }
 		custom_tooltip = {
 			fail_text = SPECIES_MUST_BE_CYBER_CONVERTING
 			has_citizenship_type = {
@@ -30,9 +33,14 @@ living_standard_whoniverse_cyber_conversion = {
 }
 
 living_standard_whoniverse_predator = {
-	pop_modifier = {
+	triggered_pop_group_modifier = {
+		# Triggered to hide from the auto-generated tooltip
+		potential = {
+			always = yes
+		}
 		pop_happiness = 0
 	}
+
 	potential = {
 		# Changed: Display for all empires
 		# Changed: Check for all DLC that allows any sort of assimilation
@@ -42,9 +50,7 @@ living_standard_whoniverse_predator = {
 			}
 	}
 	allow = {
-		hidden_trigger = {
-			exists = from
-		}
+		hidden_trigger = { exists = from }
 		custom_tooltip = {
 			fail_text = SPECIES_MUST_BE_PREDATING
 			has_citizenship_type = {

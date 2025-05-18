@@ -33,10 +33,13 @@ is_human_species = {
 	}
 }
 
-is_silurian_species = {
+is_low_tech_start = {
 	OR = {
-		species_portrait = whoniverse_silurian
-		species_portrait = whoniverse_sea_devil
+		is_primitive = yes
+		has_origin = origin_broken_shackles
+		has_origin = origin_payback
+		has_origin = origin_whoniverse_unit
+		is_eager_explorer_empire = yes
 	}
 }
 
@@ -65,8 +68,33 @@ has_food_upkeep = {
 can_do_advanced_gene_modding = {
 	hidden_trigger = { exists = from }
 	from = {
+		if = {
+			limit = {
+				OR = {
+					has_biogenesis_dlc = no
+					has_tradition = tr_genetics_adopt
+				}
+			}
+			has_tradition = tr_genetics_enhanced_expression
+		}
+		else = {
+			OR = {
+				has_tradition = tr_purity_exemplary_genetics
+				has_tradition = tr_cloning_somatic_synthesization
+				has_tradition = tr_mutation_unnatural_selection
+				has_tradition = tr_whoniverse_dalek_progenitor # Dalek Tradition Tree
+			}
+		}
+	}
+}
+
+owner_can_do_advanced_gene_modding = {
+	owner = {
 		OR = {
-			has_tradition = tr_genetics_resequencing
+			has_tradition = tr_genetics_enhanced_expression
+			has_tradition = tr_purity_exemplary_genetics
+			has_tradition = tr_cloning_somatic_synthesization
+			has_tradition = tr_mutation_unnatural_selection
 			has_tradition = tr_whoniverse_dalek_progenitor # Dalek Tradition Tree
 		}
 	}
@@ -76,9 +104,55 @@ can_do_advanced_gene_modding = {
 can_remove_beneficial_genetic_traits = {
 	hidden_trigger = { exists = from }
 	from = {
-		OR = {
+		if = {
+			limit = {
+				OR = {
+					has_biogenesis_dlc = no
+					has_tradition = tr_genetics_adopt
+				}
+			}
 			has_tradition = tr_genetics_resequencing
-			has_tradition = tr_whoniverse_dalek_progenitor # Dalek Tradition Tree
+		}
+		else = {
+			OR = { 
+				has_tradition = tr_purity_genotype_regeneration
+				has_tradition = tr_whoniverse_dalek_progenitor # Dalek Tradition Tree
+			}
+		}
+	}
+}
+
+#this = species, from = country
+can_add_cybernetic_traits = {
+	hidden_trigger = { exists = from }
+	has_trait = trait_cybernetic
+	custom_tooltip = {
+		text = requires_tr_cybernetics_integrated_anatomy
+		from = {
+			OR = {
+				has_active_tradition = tr_cybernetics_integrated_anatomy
+				has_active_tradition = tr_cybernetics_assimilator_integrated_anatomy
+				has_whoniverse_cyber_conversion = yes
+			}
+		}
+	}
+}
+
+#this = species, from = country
+can_add_unplugged_traits = {
+	hidden_trigger = { exists = from }
+	OR = {
+		has_trait = trait_unplugged_cybernetic_positives_3
+		has_trait = trait_unplugged_cybernetic_positives_2
+		has_trait = trait_unplugged_cybernetic_positives_1
+		has_trait = trait_whoniverse_cyber_suit
+	}
+	OR = {
+		from = {
+			has_origin = origin_unplugged
+		}
+		from = {
+			has_whoniverse_cyber_conversion = yes
 		}
 	}
 }

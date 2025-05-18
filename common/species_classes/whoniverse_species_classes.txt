@@ -43,7 +43,7 @@ WHO_CYBERMAN = {
 	graphical_culture = cyber_01
 	move_pop_sound_effect = "robot_pops_move"
 
-  trait = trait_cybernetic
+  	trait = trait_cybernetic
 }
 
 

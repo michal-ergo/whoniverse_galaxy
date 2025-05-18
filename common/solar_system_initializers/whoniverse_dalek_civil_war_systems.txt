@@ -681,12 +681,10 @@ whoniverse_prewar_spiridon_system_initializer = {
 
 			create_pre_ftl_blockers = yes
 
-			while = {
-				count = @late_medieval_age_pops
-				create_pop = {
-					species = last_created_species
-				}
-			}
+			create_pop_group = {
+						species = last_created_species
+						size = @late_medieval_age_pops
+					}
 			add_building = building_primitive_dwellings
 			add_building = building_primitive_dwellings
 			add_building = building_stone_palace
@@ -1817,12 +1815,10 @@ whoniverse_prewar_spiridon_system_ai_initializer = {
 
 			create_pre_ftl_blockers = yes
 
-			while = {
-				count = @late_medieval_age_pops
-				create_pop = {
-					species = last_created_species
-				}
-			}
+			create_pop_group = {
+						species = last_created_species
+						size = @late_medieval_age_pops
+					}
 			add_building = building_primitive_dwellings
 			add_building = building_primitive_dwellings
 			add_building = building_stone_palace

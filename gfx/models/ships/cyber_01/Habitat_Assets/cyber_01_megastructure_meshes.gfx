@@ -1,0 +1,28 @@
+objectTypes = {
+
+    pdxmesh = {
+		name = "cyber_01_habitat_core_1_mesh"
+		file = "gfx/models/ships/cyber_01/Habitat_Assets/cyber_01_habitat_core_1.mesh"
+			animation = { id = "idle" 			type = "cyber_01_habitat_idle_animation" }
+			animation = { id = "death" 			type = "cyber_01_habitat_idle_animation" }
+	}    
+
+	pdxmesh = {
+		name = "cyber_01_habitat_core_2_mesh"
+		file = "gfx/models/ships/cyber_01/Habitat_Assets/cyber_01_habitat_core_2.mesh"
+			animation = { id = "idle" 			type = "cyber_01_habitat_idle_animation" }
+			animation = { id = "death" 			type = "cyber_01_habitat_idle_animation" }
+	}   
+
+	pdxmesh = {
+		name = "cyber_01_habitat_core_3_mesh"
+		file = "gfx/models/ships/cyber_01/Habitat_Assets/cyber_01_habitat_core_3.mesh"
+			animation = { id = "idle" 			type = "cyber_01_habitat_idle_animation" }
+			animation = { id = "death" 			type = "cyber_01_habitat_idle_animation" }
+	}   
+	
+	pdxmesh = {
+		name = "cyber_01_habitat_frame_mesh"
+		file = "gfx/models/ships/cyber_01/Habitat_Assets/cyber_01_habitat_frame.mesh"
+	}   
+}

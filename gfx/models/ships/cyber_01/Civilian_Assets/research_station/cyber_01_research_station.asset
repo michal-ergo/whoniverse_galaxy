@@ -1,0 +1,36 @@
+entity = {
+	name = "cyber_01_research_station_entity"
+	pdxmesh = "humanoid_01_orbital_station_frame_mesh"
+	cull_radius = 1.0
+
+	state = { name = "idle" state_time = 5 }
+
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 4.9 particle = "large_player_ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+	}
+
+	game_data = {
+		emissive_recolor_crunch = 5.0
+	}
+}
+
+ animation = {
+	name = "cyber_01_hive_idle_animation"
+	file = "cyber_01_hive_idle.anim"
+}
+
+animation = {
+	name = "cyber_01_hive_death_animation"
+	file = "cyber_01_hive_death.anim"
+}
+
+entity = {
+	name = "cyber_01_research_station_section_entity"
+	pdxmesh = "cyber_01_science_station_mesh"
+	locator = { name = "part1" 			position = { 0 	0 	0 } }
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "death" animation = "death" looping = no
+		event = { time = 0.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } } }	
+		scale = 1.4
+}

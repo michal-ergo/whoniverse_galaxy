@@ -4,14 +4,15 @@ tech_whoniverse_church_habitats = {
 	area = society
 	tier = 3
 	category = { new_worlds }
-	prerequisites = { "tech_space_exploration" }
+	prerequisites = { "tech_habitat_1" }
 	start_tech = no
 	is_rare = yes
+	weight = @tier3weight2
 
 	icon = tech_habitat_1
 
 	weight_modifier = {
-		factor = 0
+		factor = 0.01
 	}
 
 	modifier = {
@@ -22,6 +23,7 @@ tech_whoniverse_church_habitats = {
 		OR = {
 			has_origin = origin_whoniverse_church
 			has_origin = origin_separatists
+			has_civic = civic_whoniverse_silence
 		}
 	}
 

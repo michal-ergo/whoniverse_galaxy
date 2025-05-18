@@ -1,0 +1,15 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "cyber_01_juggernaut_mesh"
+		file = "gfx/models/ships/cyber_01/Juggernaut_Assets/cyber_01_juggernaut.mesh"
+		animation = { id = "idle" 			type = "cyber_01_juggernaut_idle_animation" }
+		animation = { id = "death" 			type = "cyber_01_juggernaut_death_animation" }
+	}
+
+	pdxmesh = {
+		name = "cyber_01_juggernaut_cylinder_mesh"
+		file = "gfx/models/ships/cyber_01/Juggernaut_Assets/cyber_01_juggernaut_cylinder.mesh"
+	}
+}
+

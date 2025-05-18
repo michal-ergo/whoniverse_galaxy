@@ -46,6 +46,8 @@
 #	ai_playable = {}								# Similar to "playable", for AI
 #	blocks_random_machine_empire_generation	= yes	# ORIGIN EXCLUSIVE: Makes sure that random empire creation does not create invalid combinations with individualistic machines. Defaults to yes. Required for all origins that should be blocked by individualist machines.
 #}
+
+# currently disabled (included for legacy reasons - not anymore)
 civic_whoniverse_dalek_supremacy = {
 	potential = { 
 		# authority = { NOR = { value = auth_hive_mind value = auth_machine_intelligence } } 
@@ -87,6 +89,7 @@ civic_whoniverse_dalek_supremacy = {
 	}
 }
 
+# New Dalek Paradigm
 civic_whoniverse_new_dalek_paradigm = {
 	potential = { authority = { NOR = { value = auth_hive_mind value = auth_machine_intelligence } } } # not hivemind or machine
 	
@@ -119,7 +122,8 @@ civic_whoniverse_new_dalek_paradigm = {
 	modifier = {
 		country_war_exhaustion_mult = -0.2
 		planet_crime_mult = -0.15
-		planet_researchers_physics_research_produces_add = 0.5
+		# planet_researchers_physics_research_produces_add = 0.5
+		planet_physicists_physics_research_produces_add = 0.5
 		job_soldier_stability_add = 1
 		planet_resettlement_unemployed_mult = 0.25
 	}
@@ -160,7 +164,8 @@ civic_whoniverse_dalek_remnants = {
 		country_war_exhaustion_mult = -0.2
 		planet_crime_mult = -0.15
 		country_edict_fund_add = 100
-		planet_priests_unity_produces_add = 1
+		# planet_priests_unity_produces_add = 1
+		planet_civilians_unity_produces_add = 1
 		planet_resettlement_unemployed_mult = 0.25
 	}
 }
@@ -351,7 +356,13 @@ civic_whoniverse_cyber_conversion = {
 	}
 	modifier = {
 		councilor_gestalt_growth_exp_gain = @gestalt_civic_node_xp_rate
-		planet_pop_assembly_organic_mult = -10.00
+		# planet_pop_assembly_organic_mult = -10.00
+		fake_pop_growth_mod = -1000
+	}
+
+	traits = {
+		trait = trait_whoniverse_cyber_suit
+		trait = trait_whoniverse_emotion_inhibitors
 	}
 }
 
@@ -487,6 +498,7 @@ civic_whoniverse_metamorphic_hive = {
 	}
 }
 
+# Space Police
 civic_whoniverse_space_police = {
 	potential = { authority = { value = auth_corporate } } # megacorp
 	
@@ -508,7 +520,8 @@ civic_whoniverse_space_police = {
 	# description = "civic_tooltip_whoniverse_cyber_fleet_effects"
 
 	modifier = {
-		local_trade_protection_add = 10
+		# local_trade_protection_add = 10
+		country_starbase_capacity_add = 2
 		planet_sensor_range_add = 2
 		planet_crime_mult = -0.1
 	}

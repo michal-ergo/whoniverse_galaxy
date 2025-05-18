@@ -5,7 +5,7 @@
 decision_whoniverse_dinosaurs_remove = {
 	owned_planets_only = yes
 	sound = event_administrative_work
-	icon = whoniverse_decision_ceasofine_gas
+	icon = whoniverse_decision_dinosaurs
 	enactment_time = 900
 
 	resources = {
@@ -38,7 +38,7 @@ decision_whoniverse_dinosaurs_remove = {
 decision_whoniverse_dinosaurs_add = {
 	owned_planets_only = yes
 	sound = event_administrative_work
-	icon = whoniverse_decision_ceasofine_gas
+	icon = whoniverse_decision_dinosaurs
 	enactment_time = 800
 
 	resources = {
@@ -88,9 +88,9 @@ decision_whoniverse_caesofine_gas = {
 		add_modifier = { modifier = "whoniverse_pm_caesofine_gas" days = 3600 }
 		custom_tooltip = whoniverse_caesofine_gas_tooltip
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { NOT = { has_trait = trait_whoniverse_sontaran_infertile } }
-				kill_pop = yes
+				kill_single_pop = yes
 			}
 		}
 	}

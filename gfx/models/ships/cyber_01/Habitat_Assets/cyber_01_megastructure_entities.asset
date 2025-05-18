@@ -1,0 +1,105 @@
+
+entity = {
+	name = "cyber_01_habitat_phase_01_core_entity"
+	pdxmesh = "cyber_01_habitat_core_1_mesh"
+	scale = 0.3
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "death" animation = "death" looping = no
+		event = { time = 0.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } } }	
+	game_data = {
+		shader_type = ship
+		emissive_recolor_crunch = 5.0
+	}
+}
+
+entity = {
+	name = "cyber_01_habitat_phase_02_section_entity"
+	pdxmesh = "cyber_01_habitat_core_2_mesh"
+	scale = 0.3
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "death" animation = "death" looping = no
+		event = { time = 0.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } } }	
+	game_data = {
+		shader_type = ship
+		emissive_recolor_crunch = 5.0
+	}
+}
+
+entity = {
+	name = "cyber_01_habitat_phase_03_section_entity"
+	pdxmesh = "cyber_01_habitat_core_3_mesh"
+	scale = 0.3
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "death" animation = "death" looping = no
+		event = { time = 0.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } } }	
+	game_data = {
+		shader_type = ship
+		emissive_recolor_crunch = 5.0
+	}
+}
+
+
+entity = {
+	name = "cyber_01_habitat_phase_01_entity"
+	pdxmesh = "fungoid_01_orbital_station_frame_mesh"
+	attach = { "part1" 		 		= "cyber_01_habitat_phase_01_core_entity" }
+	scale = 1.5
+	default_state = "habitat_idle"
+	state = { name = "habitat_idle" looping = yes }
+	state = { name = "construction" looping = yes }
+	
+	game_data = {
+	shader_type = ship
+	emissive_recolor_crunch = 5.0
+	}
+	
+	meshsettings = {
+	shader = "PdxMeshTerra"
+	}
+}
+
+entity = {
+	name = "cyber_01_habitat_phase_02_entity"
+	pdxmesh = "fungoid_01_orbital_station_frame_mesh"
+	attach = { "part1" 		 		= "cyber_01_habitat_phase_02_section_entity" }
+	scale = 1.5
+	default_state = "habitat_idle"
+	state = { name = "habitat_idle" looping = yes }
+	state = { name = "construction" looping = yes }
+	
+	game_data = {
+	shader_type = ship
+	emissive_recolor_crunch = 5.0
+	}
+	
+	meshsettings = {
+	shader = "PdxMeshTerra"
+	}
+}
+
+entity = {
+	name = "cyber_01_habitat_phase_03_entity"
+	pdxmesh = "fungoid_01_orbital_station_frame_mesh"
+	attach = { "part1" 		 		= "cyber_01_habitat_phase_03_section_entity" }
+	scale = 1.5
+	default_state = "habitat_idle"
+	state = { name = "habitat_idle" looping = yes }
+	state = { name = "construction" looping = yes }
+	
+	game_data = {
+	shader_type = ship
+	emissive_recolor_crunch = 5.0
+	}
+	
+	meshsettings = {
+	shader = "PdxMeshTerra"
+	}
+}
+
+animation = {
+	name = "cyber_01_habitat_idle_animation"
+	file = "cyber_01_habitat_idle.anim"
+}

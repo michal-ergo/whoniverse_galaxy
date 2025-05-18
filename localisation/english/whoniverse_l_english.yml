@@ -32,19 +32,24 @@
 
  tr_whoniverse_dalek_conversion:0 "Human-Dalek Conversion"
  tr_whoniverse_dalek_conversion_delayed:0 "The ancestral Kaleds were indistinguishable from humans. As such, we could use human DNA as a resource for cloning new Dalek mutants."
- tr_whoniverse_dalek_conversion_desc:0 "['concept_whoniverse_dalek_incubation_vats'] produce an additional §G+2§! §YMonthly Organic Pop Assembly§!\nUnlocks §GHuman-Dalek Conversion§! purge type for Human species"
+#  tr_whoniverse_dalek_conversion_desc:0 "['concept_whoniverse_dalek_incubation_vats'] produce an additional §G+2§! §YMonthly Organic Pop Assembly§!\nUnlocks §YHuman-Dalek Conversion§! purge type for Human species"
+ tr_whoniverse_dalek_conversion_desc:0 "§CClone Vats§!: produce an additional §G+2.5§! §YMonthly Organic Pop Assembly§!\nUnlocks §YHuman-Dalek Conversion§! purge type for Human species"
  tr_whoniverse_dalek_emergency:0 "Emergency Temporal Shift"
- tr_whoniverse_dalek_emergency_desc:0 "Ship Combat Disengagement Chance: §G+15%§!\nGuaranteed Research Option: §GJump Drive§!"
+ tr_whoniverse_dalek_emergency_desc:0 "Ship Combat Disengagement Chance: §G+15%§!\nGuaranteed Research Option: §YJump Drive§!"
  tr_whoniverse_dalek_emergency_delayed:0 "A temporal shift is a form of spatial shift that can be used to move beings through time and space to a new destination."
  tr_whoniverse_dalek_progenitor:0 "Progenitor Device"
  tr_whoniverse_dalek_progenitor_delayed:0 "We can design special devices containing pure Dalek DNA, that can both reproduce full-grown Dalek mutants and functional battle armour."
- tr_whoniverse_dalek_progenitor_desc:0 "§G+10%§! Habitability\n§G+2§! Organic species trait picks\nGenetic modification can remove positive traits"
+ tr_whoniverse_dalek_progenitor_desc:0 "§G+10%§! Habitability\n§G+2§! Genetic modification points\nGenetic modification can remove positive traits"
  tr_whoniverse_dalek_nanocloud:0 "Nanocloud Virus"
  tr_whoniverse_dalek_nanocloud_delayed:0 "Using nanogenes, we can wrap our planets in protective nanoclouds that will convert any other organisms into Dalek puppets."
- tr_whoniverse_dalek_nanocloud_desc:0 "§C['concept_whoniverse_dalek_incubation_vats']§!: §G+1§! £mod_job_necromancer_add£ $job_necromancer$ jobs"
+#  tr_whoniverse_dalek_nanocloud_desc:0 "§C['concept_whoniverse_dalek_incubation_vats']§!: §G+1§! £mod_job_necromancer_add£ $job_necromancer$ jobs"
+ tr_whoniverse_dalek_nanocloud_desc:0 "§CClone Vats§! spawn defensive §YDalek Puppet§! armies"
  tr_whoniverse_dalek_pathweb:0 "Pathweb"
  tr_whoniverse_dalek_pathweb_delayed:0 "The Pathweb or the "Dalek hive mind" is an artificial telepathic network containing information on Dalek history and experiences."
 
+ dalek_puppet_army:0 "Dalek Puppet Army"
+ dalek_puppet_army_desc:0 "Dalek puppets are beings who had been taken by the Daleks and partially converted via nanogenes to serve them as slaves. The Dalek nanogenes automatically convert any organism it comes in contact with, living or dead, making them into a Dalek puppet."
+ 
  council_agenda_agenda_whoniverse_dalek_supremacy_name:0 "Dalek Supremacy"
  council_agenda_agenda_whoniverse_dalek_supremacy_desc:0 "The Daleks can survive only by becoming the dominant species - be it through genetic engineering or by means of conquest."
 
@@ -81,9 +86,9 @@
  
  NAME_ressurected_dalek_empire:0 "Ressurected Dalek Empire"
 
- origin_tooltip_whoniverse_new_dalek_paradigm:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor'] $NEW_LINE$- $HOMEWORLD$ ['concept_pc_nuked']$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_new_dalek_paradigm'] $NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$]$NEW_LINE$- Special New Dalek Paradigm portraits$NEW_LINE$- Special Dalek events and recruitable leaders, including §HCult of Skaro§! event chain"
+ origin_tooltip_whoniverse_new_dalek_paradigm:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor'] $NEW_LINE$- $HOMEWORLD$ ['concept_pc_nuked']$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_new_dalek_paradigm'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$]$NEW_LINE$- Special New Dalek Paradigm portraits$NEW_LINE$- Special Dalek events and recruitable leaders, including §HCult of Skaro§! event chain"
 
-# - $HOMEWORLD$ ['concept_whoniverse_dalek_incubation_vats'] +1 
+# - $HOMEWORLD$ ['concept_whoniverse_dalek_incubation_vats'] +1 $NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats']
 
 # Dalek Civic
 
@@ -219,13 +224,13 @@
 
 # Reinvention of the Dalek Empire
 
- whoniverse.7.name:0 "Reinvention of the Dalek Empire"
- whoniverse.7.desc:0 "As the numbers of Bronze Daleks within the Dalek Parliament grow, discontent with the leadership of the [Root.Owner.GetName] intensifies. Murmurs of rebellion echo through the metallic halls, focusing on [Root.Owner.Ruler.GetName], whose rule is seen as weak and inadequate for the supreme ambition of the Dalek race. Calls for the overthrow of [Root.Owner.Ruler.GetName] and a reinvention of the §HDalek Empire§! grow louder, threatening the unity of the Daleks.\n\nWe must decide how to respond to this internal threat and secure the future of the Dalek race. The course of Dalek supremacy hinges on this critical moment."
- whoniverse.7.a:0 "EXTERMINATE all dissidents!"
- whoniverse.7.b:0 "[Root.Owner.Ruler.GetName] must abdicate! All hail the Dalek Empire!"
- whoniverse.7.b.tooltip:0 "[Root.Owner.Ruler.GetName] dies\nEmpire name changes to §SRessurected Dalek Empire§!"
- whoniverse.7.c:0 "Rebuild [Root.Owner.Ruler.GetName] into a new Dalek Emperor!"
- whoniverse.7.c.tooltip:0 "[Root.Owner.Ruler.GetName] becomes the new Dalek Emperor\nEmpire name changes to §SRessurected Dalek Empire§!"
+ whoniverse.211.name:0 "Reinvention of the Dalek Empire"
+ whoniverse.211.desc:0 "As the numbers of Bronze Daleks within the Dalek Parliament grow, discontent with the leadership of the [Root.Owner.GetName] intensifies. Murmurs of rebellion echo through the metallic halls, focusing on [Root.Owner.Ruler.GetName], whose rule is seen as weak and inadequate for the supreme ambition of the Dalek race. Calls for the overthrow of [Root.Owner.Ruler.GetName] and a reinvention of the §HDalek Empire§! grow louder, threatening the unity of the Daleks.\n\nWe must decide how to respond to this internal threat and secure the future of the Dalek race. The course of Dalek supremacy hinges on this critical moment."
+ whoniverse.211.a:0 "EXTERMINATE all dissidents!"
+ whoniverse.211.b:0 "[Root.Owner.Ruler.GetName] must abdicate! All hail the Dalek Empire!"
+ whoniverse.211.b.tooltip:0 "[Root.Owner.Ruler.GetName] dies\nEmpire name changes to §SRessurected Dalek Empire§!"
+ whoniverse.211.c:0 "Rebuild [Root.Owner.Ruler.GetName] into a new Dalek Emperor!"
+ whoniverse.211.c.tooltip:0 "[Root.Owner.Ruler.GetName] becomes the new Dalek Emperor\nEmpire name changes to §SRessurected Dalek Empire§!"
 
 
 ## Davros event chain
@@ -233,6 +238,7 @@
 #  whoniverse_necros_cat:0 "Dalek Ruins"
 #  whoniverse_necros_desc:0 "We found the remains of a factory on the planet's surface. It shows signs of Dalek technology."
 
+# removed Necros event
  whoniverse.19.name:0 "Necros"
  whoniverse.19.desc:0 "The crew of [Root.GetName] identified the planet as §HNecros§!, the long-abandoned headquarters of the ancient §LImperial Daleks§!. On the surface we have discovered the ruins of a large factory where our creator §HDavros§! once produced highly concentrated protein from local populace. Underneath the facility, we found a well-preserved stockpile of nutrients."
  whoniverse.19.a:0 "All hail the Daleks!"
@@ -404,7 +410,8 @@
  origin_whoniverse_dalek_empire_remnants:0 "The Parting of the Ways"
  origin_whoniverse_dalek_empire_remnants_desc:0 "§RWARNING: Challenging Origin§!\nThe Emperor of the Daleks survived the Last Great Time War by escaping into another space-time. After patiently infiltrating Satellite Five and giving birth to a new breed of Daleks, the Emperor is determined to reclaim its original universe."
 
- origin_tooltip_whoniverse_dalek_empire_remnants:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor'] $NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_dalek_remnants']$NEW_LINE$- $HOMEWORLD$ $TABBED_NEW_LINE$- ['concept_pc_habitat']$TABBED_NEW_LINE$- Starts with §R20§! pops$NEW_LINE$- $HOME_SYSTEM$ $TABBED_NEW_LINE$- Wormhole-locked system $TABBED_NEW_LINE$- Pre-FTL civilization$NEW_LINE$- Starting ruler is §YImmortal§!$NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$] $NEW_LINE$- Guaranteed Research Options: ['concept_wormhole_stabilization', £physics_research£ $tech_wormhole_stabilization$] (§G+75 %§!) $NEW_LINE$- Special Dalek events and recruitable leaders, including §HCult of Skaro§! event chain"
+ origin_tooltip_whoniverse_dalek_empire_remnants:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor'] $NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_dalek_remnants']$NEW_LINE$- $HOMEWORLD$ $TABBED_NEW_LINE$- ['concept_pc_habitat']$TABBED_NEW_LINE$- Starts with §R20§! pops$NEW_LINE$- $HOME_SYSTEM$ $TABBED_NEW_LINE$- Wormhole-locked system $TABBED_NEW_LINE$- Pre-FTL civilization$NEW_LINE$- Starting ruler is §YImmortal§!$NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$] $NEW_LINE$- Guaranteed Research Options: ['concept_wormhole_stabilization', £physics_research£ $tech_wormhole_stabilization$] (§G+75 %§!) $NEW_LINE$- Special Dalek events and recruitable leaders, including §HCult of Skaro§! event chain"
+# $NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] 
 
 # Dalek Empire Remnants System
  PRESCRIPTED_system_name_dalek_empire_remnants_NAME:0 "A.D. 200,100"
@@ -443,7 +450,8 @@
  origin_whoniverse_dalek_civil_war:0 "Dalek Civil War"
  origin_whoniverse_dalek_civil_war_desc:0 "§RWARNING: Challenging Origin§!\nLong before the Last Great Time War, the Daleks were divided. The Imperial Daleks, led by Davros from Skaro, seek to hunt down the Renegade Daleks, loyal to Dalek Prime and hiding in a different point of time. Both factions aim to use time corridor technology to gain supremacy, with the fate of the Dalek race - and the galaxy - hanging in the balance."
 
- origin_tooltip_whoniverse_dalek_civil_war:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor'] $NEW_LINE$- $GOVERNMENT_CIVICS$: $TABBED_NEW_LINE$-['concept_whoniverse_imperial_daleks'] $TABBED_NEW_LINE$-['concept_whoniverse_renegade_daleks'] $NEW_LINE$- $HOME_SYSTEM$ $TABBED_NEW_LINE$- Wormhole-locked system $TABBED_NEW_LINE$- §YImperial Dalek Faction§!: Two additional systems $NEW_LINE$- Starting ruler is §GImmortal§! $NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats'] $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$] $NEW_LINE$- Guaranteed Research Options: ['concept_wormhole_stabilization', £physics_research£ $tech_wormhole_stabilization$] (§G+75 %§!) $NEW_LINE$- Spawns opposing Dalek faction and solar system$NEW_LINE$- Special Dalek events and recruitable leaders"
+ origin_tooltip_whoniverse_dalek_civil_war:2 "- $SPECIES_TRAITS$ $TABBED_NEW_LINE$- ['concept_whoniverse_dalek_infertile'] $TABBED_NEW_LINE$- ['concept_survivor'] $NEW_LINE$- $GOVERNMENT_CIVICS$: $TABBED_NEW_LINE$-['concept_whoniverse_imperial_daleks'] $TABBED_NEW_LINE$-['concept_whoniverse_renegade_daleks'] $NEW_LINE$- $HOME_SYSTEM$ $TABBED_NEW_LINE$- Wormhole-locked system $TABBED_NEW_LINE$- §YImperial Dalek Faction§!: Two additional systems $NEW_LINE$- Starting ruler is §GImmortal§! $NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['concept_genome_mapping', £society_research£ $tech_genome_mapping$] $TABBED_NEW_LINE$- ['concept_cloning', £society_research£ $tech_cloning$] $NEW_LINE$- Guaranteed Research Options: ['concept_wormhole_stabilization', £physics_research£ $tech_wormhole_stabilization$] (§G+75 %§!) $NEW_LINE$- Spawns opposing Dalek faction and solar system$NEW_LINE$- Special Dalek events and recruitable leaders"
+# $NEW_LINE$- Can build ['concept_whoniverse_dalek_incubation_vats']
 
 # Dalek Civil War systems
 
@@ -628,8 +636,11 @@
  whoniverse_cybermen_secondary_species: "Cyber-Converted Species"
 
 # Cybermen species trait
- trait_whoniverse_cyber_suit:0 "Cyber-Suit"
- trait_whoniverse_cyber_suit_desc:0 "§LThe §HCyberman§! form is known as a cyber-body or cyber-suit. Usually, the only required biological component inside is the host's brain.§!"
+ trait_whoniverse_cyber_suit:0 "Cyber-suit"
+ trait_whoniverse_cyber_suit_desc:0 "§LThe Cyber-body, also known as the Cyber-suit is a suit of Cyberarmour which functions as the cybernetic body of the Cybermen. There are still some organic components beneath the Cyber-suit - mainly, the wearer's organic brain.§!"
+
+ trait_whoniverse_emotion_inhibitors:0 "Emotion Inhibitors"
+ trait_whoniverse_emotion_inhibitors_desc:0 "§LAn emotional inhibitor is a device fitted into all Cybermen. It allows a human brain to exist without suffering a meltdown of overwhelming emotions at what it has become.§!"
 
 # Cybermen ascension perk and traditions
  ap_whoniverse_cybermen:0 "Upgraded Cyber-Conversion"
@@ -956,6 +967,9 @@
 
  origin_tooltip_whoniverse_unit:0 "- Starts without §YHyperspace Travel§!, §YNew Worlds Protocol§! and §YCorvettes§! technologies$NEW_LINE$- Starts with a temporary §RFirst Steps To Interstellar Colonization§! modifier which reduces colonization speed and increases Outpost construction cost$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_unit_hq']$NEW_LINE$- Unique UNIT events and recruitable leaders"
 
+ origin_tooltip_whoniverse_unit:1 "- Starts without §YScientific Method§!, §YPlanetery Government§! and §YCorvettes§! technologies$NEW_LINE$- Starts with a temporary §RFirst Steps To Interstellar Colonization§! modifier which reduces colonization speed and increases Outpost construction cost$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_unit_hq']$NEW_LINE$- Unique UNIT events and recruitable leaders"
+
+
  whoniverse_unit_colonization_forbidden:0 "First Steps To Interstellar Colonization"
 
  mod_ship_colonizer_influence_cost_add:0 "Colony Ship Influence Cost"
@@ -1252,8 +1266,8 @@
 #  building_whoniverse_seventh_transept_desc:0 "Technology left behind by the Church. Can be taken apart and reassembled, but its inner components and workings are much too alien to replicate."
 
  headless_limit_tooltip:0 "You control the maximum number of Headless Monk armies (7)."
- headless_monk_army:0 "Headless Monk Army"
- headless_monk_army_desc:0 "The Headless Monks are a religious order who believes in listening to their hearts rather than their minds, to the point of having themselves beheaded."
+ whoniverse_headless_monk_army:0 "Headless Monk Army"
+ whoniverse_headless_monk_army_desc:0 "The Headless Monks are a religious order who believes in listening to their hearts rather than their minds, to the point of having themselves beheaded."
  
 
 # Trenzalore system
@@ -1437,7 +1451,7 @@
 # Nestene Traits, Origin, Civic
  trait_whoniverse_auton:0 "Plastic Automaton"
  trait_whoniverse_auton_desc:0 "§LMembers of this species are animated plastic robots that are controlled by a fragment of the collective Consciousness.§!"
- trait_whoniverse_auton_tooltip:0 "\nReplaces Food upkeep with §HEnergy§!"
+ trait_whoniverse_auton_tooltip:0 "\n- Replaces Food upkeep with §YEnergy§!"
 
  civic_whoniverse_metamorphic_hive:0 "Metamorphic Drones"
  civic_whoniverse_metamorphic_hive_desc:0 "Drones of this hive are metamorphic and can use their elastic form to change the shape of their features and limbs."
@@ -1695,7 +1709,7 @@
  origin_whoniverse_shadow_proclamation:0 "Shadow Proclamation"
  origin_whoniverse_shadow_proclamation_desc:0 "As an interstellar authority tasked with upholding law and order, the Shadow Proclamation enforces peace across the stars from its formidable asteroid headquarters, deploying enforcers to mediate disputes and neutralize threats."
 
- origin_tooltip_whoniverse_shadow_proclamation:0 "- $HOMEWORLD$ ['concept_pc_habitat']$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_space_police']$NEW_LINE$- Additional Starting Technologies: §CAtmospheric Filtering§!$NEW_LINE$- Starting ruler is §YImmortal§!$NEW_LINE$- Unique Cyberiad events and recruitable leaders" # $NEW_LINE$- Special Shadow Proclamation events
+ origin_tooltip_whoniverse_shadow_proclamation:0 "- $HOMEWORLD$ ['concept_pc_habitat']$NEW_LINE$- $GOVERNMENT_CIVICS$: ['concept_whoniverse_space_police']$NEW_LINE$- Additional Starting Technologies: §COrbital Habitats§!, §CAtmospheric Filtering§!$NEW_LINE$- Starting ruler is §YImmortal§!$NEW_LINE$- Unique Cyberiad events and recruitable leaders" # $NEW_LINE$- Special Shadow Proclamation events
 
 
 
@@ -1765,13 +1779,13 @@
  whoniverse.332.name:0 "The Laboratory of Davros"
  whoniverse.332.desc:0 "Beneath the ruins of Tranquil Repose, our excavation teams have uncovered one of Davros's secret laboratories. During the era preceding the Last Great Time War, this facility served as a pivotal site for advancing Dalek evolution and developing new military strategies.\n\nThe laboratory remains dormant but largely intact. While its systems are currently inert, preliminary analysis suggests that reactivating the facility could unlock its full potential. For now, we must dig deeper to uncover the truth of Davros's experiments."
  whoniverse.332.a:0 "Keep digging."
- whoniverse.332.a.tooltip:0 "§HDalek Incubation Vats§! will be built on §Y[From.Planet.GetName]§!."
+ whoniverse.332.a.tooltip:0 "§HClone Vats§! will be built on §Y[From.Planet.GetName]§!."
  whoniverse.332.b:0 "Destroy the facility for good!"
 
  whoniverse.333.name:0 "Necros Daleks"
  whoniverse.333.desc:0 "At the heart of Davros's laboratory, we have discovered fully preserved incubation vats and an enormous cryogenic chamber that has survived intact since the era before the Last Great Time War. These chambers house legions of Type VI Daleks, engineered by Davros as elite soldiers. However, their genetic code contains subtle deviations from the pure Dalek template.\n\nThe facility's systems are now operational, and the chambers could be reactivated with minimal effort, allowing these Necros Daleks to bolster our forces. Yet their impurity poses a grave risk to the genetic perfection of the Dalek race. The time has come to decide: Will we harness their power for conquest, or purge them in the name of purity?"
  whoniverse.333.a:0 "Reawaken the Necros Daleks!"
- whoniverse.333.a.tooltip:0 "§HDalek Incubation Vats§! will be built on §Y[From.Planet.GetName]§!.\n6 §HDalek§! pops will be added to §Y[From.Planet.GetName]§!."
+ whoniverse.333.a.tooltip:0 "§HClone Vats§! will be built on §Y[From.Planet.GetName]§!.\n6 §HDalek§! pops will be added to §Y[From.Planet.GetName]§!."
  whoniverse.333.b:0 "Purge the Necros Daleks. Imperfection cannot be tolerated!"
 
 # Spiridon anomaly, archaeology digsite events
@@ -1887,7 +1901,7 @@
 
  civic_whoniverse_dinosaur_tamers:0 "Dinosaur Tamers"
  civic_whoniverse_dinosaur_tamers_desc:0 "This society breeds otherwise long-extinct dinosaurs and uses them for work and defense."
- civic_whoniverse_dinosaur_tamers_effects:0 "Starts with §H$whoniverse_pm_dinosaurs$§! planet modifier \nEnables the §Y$decision_dinosaurs_add$§! decision \nCan train §Y$whoniverse_dinosaur_assault_army$§! armies on planets with $whoniverse_pm_dinosaurs$"
+ civic_whoniverse_dinosaur_tamers_effects:0 "Starts with §Y$whoniverse_pm_dinosaurs$§! planet modifier \nEnables the §Y$decision_whoniverse_dinosaurs_add$§! decision \nCan train §Y$whoniverse_dinosaur_assault_army$§! armies on planets with $whoniverse_pm_dinosaurs$"
 
  councilor_whoniverse_dinosaur_tamers:0 "Master Hunter"
  councilor_whoniverse_dinosaur_tamers_female:0 "Master Huntress"

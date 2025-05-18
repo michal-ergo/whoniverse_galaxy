@@ -231,7 +231,7 @@ fleet_event = {
 				add_district = district_city
 				while = {
 					count = 12
-					create_pop = {
+					create_pop_group = {
 						species = event_target:mechanoid_robots
 					}
 				}
@@ -251,7 +251,7 @@ fleet_event = {
 				add_district = district_nexus
 				while = {
 					count = 12
-					create_pop = {
+					create_pop_group = {
 						species = event_target:mechanoid_machines
 					}
 				}
@@ -313,22 +313,20 @@ fleet_event = {
 				}
 				while = {
 					count = 24
-					create_pop = {
+					create_pop_group = {
 						species = event_target:mechanoid_machines
 					}
 				}
+				# Starting buildings and district
 				while = {
-					count = 6
-					add_district = district_nexus
-				}
-				while = {
-					count = 2
-					add_district = district_industrial
-					add_district = district_generator_uncapped
-					add_district = district_mining_uncapped
+					count = 3
+					add_district_and_planet_size_if_needed_effect = { district = district_nexus }
+					add_district_and_planet_size_if_needed_effect = { district = district_generator }
+					add_district_and_planet_size_if_needed_effect = { district = district_mining }
 				}
 				add_building = building_machine_major_capital
 				add_building = building_machine_assembly_complex
+				
 			}
 		}
 	}

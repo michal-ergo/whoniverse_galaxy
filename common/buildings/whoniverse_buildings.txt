@@ -8,12 +8,28 @@ building_whoniverse_dalek_incubation_vats = {
 	category = pop_assembly
 
 	base_cap_amount = 1
-
+	
+	building_sets = {
+		government
+		urban
+	}
+	
 	potential = {
-		exists = owner
-		owner = {
-			is_whoniverse_dalek = yes
-		}
+		always = no # replaced by Clone Vats for now
+		# exists = owner
+		# NOT = { has_modifier = resort_colony }
+		# owner = {
+		# 	is_whoniverse_dalek = yes
+		# }
+		# OR = {
+		# 	owner = { is_ai = no }
+		# 	NAND = {
+		# 		free_district_slots = 0
+		# 		free_building_slots <= 1
+		# 		free_housing <= 0
+		# 		free_jobs <= 0
+		# 	}
+		# }
 	}
 
 	destroy_trigger = {
@@ -25,7 +41,7 @@ building_whoniverse_dalek_incubation_vats = {
 				free_building_slots = 0
 				free_housing <= 0
 				free_jobs <= 0
-				NOT = { owner = { is_whoniverse_dalek = yes } }
+				# NOT = { owner = { is_whoniverse_dalek = yes } }
 			}
 			NOT = { owner = { is_whoniverse_dalek = yes } }
 		}
@@ -37,8 +53,19 @@ building_whoniverse_dalek_incubation_vats = {
 		}
 
 	planet_modifier = {
-		planet_pop_assembly_organic_add = 3
-		job_healthcare_add = 1
+		# planet_pop_assembly_organic_add = 3
+		job_healthcare_add = 100
+		fake_pop_growth_mod = 1.5
+	}
+
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			owner = { has_trait = "trait_whoniverse_dalek_infertile" }
+			# planet.owner = {
+			# 	is_whoniverse_dalek = yes
+			# }
+		}
+		bonus_pop_growth = 1.5
 	}
 
 	triggered_planet_modifier = {
@@ -49,7 +76,8 @@ building_whoniverse_dalek_incubation_vats = {
 			}
 		}
 		modifier = {
-			job_necromancer_add = 1
+			# job_necromancer_add = 1
+			job_necro_apprentice_add = 100
 		}
 	}
 
@@ -61,7 +89,18 @@ building_whoniverse_dalek_incubation_vats = {
 			}
 		}
 		modifier = {
-			planet_pop_assembly_organic_add = 3
+			# planet_pop_assembly_organic_add = 3
+			fake_pop_growth_mod = 1.5
+		}
+	}
+
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			owner = { has_trait = "trait_whoniverse_dalek_infertile" }
+		}
+		modifier = {
+			# planet_pop_assembly_organic_add = 3
+			bonus_pop_growth = 1.5
 		}
 	}
 
@@ -73,7 +112,18 @@ building_whoniverse_dalek_incubation_vats = {
 			}
 		}
 		modifier = {
-			planet_pop_assembly_organic_add = 2
+			# planet_pop_assembly_organic_add = 2
+			fake_pop_growth_mod = 2
+		}
+	}
+
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			owner = { has_trait = "trait_whoniverse_dalek_infertile" }
+		}
+		modifier = {
+			# planet_pop_assembly_organic_add = 3
+			bonus_pop_growth = 2
 		}
 	}
 
@@ -83,7 +133,18 @@ building_whoniverse_dalek_incubation_vats = {
 			owner = { has_tradition = tr_whoniverse_dalek_conversion }
 		}
 		modifier = {
-			planet_pop_assembly_organic_add = 2
+			# planet_pop_assembly_organic_add = 2
+			fake_pop_growth_mod = 2
+		}
+	}
+
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			owner = { has_trait = "trait_whoniverse_dalek_infertile" }
+		}
+		modifier = {
+			# planet_pop_assembly_organic_add = 3
+			bonus_pop_growth = 2
 		}
 	}
 
@@ -162,6 +223,7 @@ holding_whoniverse_space_police_station = {
 	base_cap_amount = 1
 
 	owner_type = corporate
+
 	category = government
 
 	resources = {
@@ -187,7 +249,7 @@ holding_whoniverse_space_police_station = {
 			exists = planet.owner
 			planet.owner = { is_gestalt = no }
 		}
-		job_enforcer_add = 2
+		job_enforcer_add = 200 # increased from 2
 	}
 
 	triggered_planet_modifier = {
@@ -236,10 +298,15 @@ building_whoniverse_black_archive = {
 		}
 	}
 
+	building_sets = {
+		government
+		research
+	}
+
 	position_priority = 100
 
 	allow = {
-		has_upgraded_capital = yes
+		# has_upgraded_capital = yes
 		hidden_trigger = {
 			owner = {
 				OR = {
@@ -274,7 +341,10 @@ building_whoniverse_black_archive = {
 	}
 	
 	planet_modifier = {
-		job_head_researcher_add = 1
+		# job_head_researcher_add = 1
+		pop_physicist_bonus_workforce_mult = 0.1
+		pop_biologist_bonus_workforce_mult = 0.1
+		pop_engineer_bonus_workforce_mult = 0.1
 	}
 
 	# inline_script = {
@@ -282,17 +352,17 @@ building_whoniverse_black_archive = {
 	# 	AMOUNT = 2
 	# }
 
-	ai_resource_production = {
-		trigger = {
-			planet_resource_compare = {
-				resource = physics_research
-				value >= 30
-			}
-		}
-		physics_research = 5
-		society_research = 5
-		engineering_research = 5
-	}
+	# ai_resource_production = {
+	# 	trigger = {
+	# 		planet_resource_compare = {
+	# 			resource = physics_research
+	# 			value >= 30
+	# 		}
+	# 	}
+	# 	physics_research = 5
+	# 	society_research = 5
+	# 	engineering_research = 5
+	# }
 }
 
 #############
@@ -301,18 +371,23 @@ building_whoniverse_black_archive = {
 
 building_whoniverse_seventh_transept = {
 	base_buildtime = @b2_time
-	base_cap_amount = 1
 	empire_limit = 1
 	category = army
 	can_demolish = yes
 	can_be_ruined = yes
 	can_be_disabled = yes
 	is_essential = yes
+
 	destroy_trigger = {
 		exists = owner
 		owner = {
 			NOT = { has_ascension_perk = ap_whoniverse_church }
 		}
+	}
+
+	building_sets = {
+		government
+		unity
 	}
 
 	position_priority = 100
@@ -349,12 +424,15 @@ building_whoniverse_seventh_transept = {
 	}
 
 	country_modifier = {
-		planet_priests_unity_produces_add = 1
+		# planet_priests_unity_produces_add = 1
+		country_unity_produces_mult = 0.05 # new
 	}
 	
+	
 	planet_modifier = {
-		job_necromancer_add = 4
-		# job_death_chronicler_add = 1
+		# job_necromancer_add = 4
+		pop_ethic_spiritualist_attraction_mult = 0.25 # new
+		job_necro_apprentice_add = 400
 	}
 
 	triggered_desc = {

@@ -1,11 +1,12 @@
 # UNIT Start primary pop creation
 whoniverse_generate_unit_pops = {
+	optimize_memory
     if = {
         limit = { owner = { has_origin = origin_whoniverse_unit } }
 		
-		every_owned_pop = {
-			save_event_target_as = unit_starting_pop
-		}
+		# every_owned_pop_group = {
+		# 	save_event_target_as = unit_starting_pop
+		# }
 
 		create_species = {
 			name = PRESCRIPTED_species_name_whoniverse_human
@@ -34,50 +35,53 @@ whoniverse_generate_unit_pops = {
 
 		## MAIN ##
 		while = {
-			count = 28
-			create_pop = {
+			# count = 28
+			limit = { pop_amount < 4800 }
+			# create_pop = {
+			create_pop_group = {
 				species = event_target:unit_species
-				ethos = random
+				# ethos = random
 			}
 		}
 
         ## CLEAR ##
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { NOT = { species = { has_species_flag = unit_starting_pop } } }
-			kill_pop = yes
+			kill_single_pop = yes
 		}
 	}
 }
 
+# works
 # Cybermen Start primary and secondary pop creation
 whoniverse_generate_cybermen_pops = {
+	optimize_memory
     if = {
         limit = { owner = { has_whoniverse_cyber_conversion = yes } }
       
         ## CLEAR ##
         while = {
-            limit = { num_pops > 1 }
-            random_owned_pop = {
-                kill_pop = yes
+            # limit = { num_pops > 1 }
+			limit = { pop_amount > 1 }
+            random_owned_pop_group = {
+                kill_single_pop = yes
             }
         }
       
         ## MAIN ##
         while = {
             count = 12
-            create_pop = {
+            create_pop_group = {
                 species = owner_main_species
-                ethos = random
             }
         }         
 
-        ## UPGRADED HUMAN ##
+        ## CONVERTED HUMAN ##
         last_created_species = { set_species_flag = upgraded_species@root.owner }         
         while = {
-            count = 20
-            create_pop = {
+            count = 36
+            create_pop_group = {
                 species = last_created_species
-                ethos = random
                 }
         } 
     }
@@ -85,14 +89,14 @@ whoniverse_generate_cybermen_pops = {
 
 # Cybermen assimilation effect
 whoniverse_cybermen_assimilation_effect = {
-	random_owned_pop = {
+	random_owned_pop_group = {
 		limit = {
 			has_citizenship_type = {
 				type = citizenship_whoniverse_cyber_conversion
 				country = root.owner
 			}
 		}
-		kill_pop = yes
+		kill_single_pop = yes
 		root = {
 			create_pop = {
 				species = root.owner
@@ -108,7 +112,7 @@ whoniverse_cybermen_assimilation_effect = {
 	}
 }
 
-# The Silence Origin - Church of the Papal Mainframe Setup
+# The Silence Origin - Habitat Setup
 
 whoniverse_church_home_planet_setup = {
 	optimize_memory
@@ -120,42 +124,547 @@ whoniverse_church_home_planet_setup = {
 		random_system_planet = {
 			limit = { has_planet_flag = whoniverse_church_habitat_1_planet }
 			save_event_target_as = whoniverse_church_habitat_1_planet
+			solar_system = {
+				spawn_orbital_effect = {
+					TYPE = major
+					HABITAT_OWNER = event_target:whoniverse_church_owner
+					TARGET_PLANET = event_target:whoniverse_church_habitat_1_planet
+				}
+			}
 		}
-		spawn_megastructure = {
-			type = "major_orbital"
-			planet = event_target:whoniverse_church_habitat_1_planet
-			coords_from = event_target:whoniverse_church_habitat_1_planet
-			owner = event_target:whoniverse_church_owner
-			graphical_culture = event_target:whoniverse_church_owner
-		}
+
 		random_system_planet = {
 			limit = { has_planet_flag = whoniverse_church_habitat_2_planet }
 			save_event_target_as = whoniverse_church_habitat_2_planet
+			solar_system = {
+				spawn_orbital_effect = {
+					TYPE = major
+					HABITAT_OWNER = event_target:whoniverse_church_owner
+					TARGET_PLANET = event_target:whoniverse_church_habitat_2_planet
+				}
+			}
 		}
-		spawn_megastructure = {
-			type = "major_orbital"
-			planet = event_target:whoniverse_church_habitat_2_planet
-			coords_from = event_target:whoniverse_church_habitat_2_planet
-			owner = event_target:whoniverse_church_owner
-			graphical_culture = event_target:whoniverse_church_owner
-		}
+
 		random_system_planet = {
 			limit = { has_planet_flag = whoniverse_church_habitat_3_planet }
 			save_event_target_as = whoniverse_church_habitat_3_planet
+			solar_system = {
+				spawn_orbital_effect = {
+					TYPE = major
+					HABITAT_OWNER = event_target:whoniverse_church_owner
+					TARGET_PLANET = event_target:whoniverse_church_habitat_3_planet
+				}
+			}
 		}
-		spawn_megastructure = {
-			type = "major_orbital"
-			planet = event_target:whoniverse_church_habitat_3_planet
-			coords_from = event_target:whoniverse_church_habitat_3_planet
-			owner = event_target:whoniverse_church_owner
-			graphical_culture = event_target:whoniverse_church_owner
-		}
+
 		every_system_planet = {
 			limit = { has_planet_flag = mining_planet }
 			create_mining_station = { owner = event_target:whoniverse_church_owner }
 		}
 	}
 	event_target:whoniverse_church_habitat_1_planet = {
+		set_planet_flag = habitat@PREV
+	}
+	owner = {
+		# give_starting_resources_effect = yes
+		give_technology = {
+			tech = tech_habitat_1
+			message = no
+		}
+		add_research_option = tech_habitat_2
+
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						is_lithoid_empire = no
+						is_mechanical_species = no
+					}
+					is_catalytic_empire = yes
+				}
+			}
+			give_technology = {
+				tech = tech_eco_simulation
+				message = no
+			}
+			give_technology = {
+				tech = tech_hydroponics
+				message = no
+			}
+			root.solar_system.starbase = {
+				remove_starbase_building = {
+					slot = 1
+				}
+				set_starbase_building = {
+					slot = 1
+					building = hydroponics_bay
+				}
+			}
+		}
+		else = {
+			give_technology = {
+				tech = tech_powered_exoskeletons
+				message = no
+			}
+			give_technology = {
+				tech = tech_space_mining_1
+				message = no
+			}
+
+		}
+		if = {
+			limit = {
+				has_valid_civic = civic_private_healthcare_corporate
+			}
+			give_technology = { message = no tech = tech_frontier_health }
+			add_research_option = tech_subdermal_stimulation
+		}
+
+		give_technology = {
+			tech = tech_whoniverse_church_habitats
+			message = no
+		}
+
+	}
+
+	if = {
+        limit = { owner = { has_origin = origin_whoniverse_church } }
+      
+        ## CLEAR ##
+        while = {
+            limit = { pop_amount > 1 }
+            random_owned_pop_group = {
+                kill_single_pop = yes
+            }
+        }
+      
+        ## MAIN ##
+        while = {
+            count = 12
+            create_pop_group = {
+                species = owner_main_species
+            }
+        }         
+
+        ## SILENCE ##
+        # last_created_species = { set_species_flag = upgraded_species@root.owner }         
+        while = {
+            count = 4
+            create_pop_group = {
+                species = last_created_species
+                ethos = random
+                }
+        }
+    }
+
+	if = {
+		limit = {
+			owner = {
+				has_valid_civic = civic_permanent_employment
+			}
+		}
+		while = {
+			count = 4
+			weighted_random_owned_pop_group = {
+				limit = {
+					is_pop_category = worker
+					is_robotic_species = no
+				}
+				modify_species = {
+					species = this
+					add_trait = trait_zombie
+					add_traits_at_start_of_list = yes
+				}
+				if = {
+					limit = {
+						has_trait = trait_syncretic_proles
+					}
+					modify_species = {
+						species = this
+						remove_trait = trait_syncretic_proles
+					}
+				}
+			}
+		}
+	}
+
+	set_planet_entity = {
+		entity = "habitat_phase_03_entity"
+		graphical_culture = owner
+	}
+	set_planet_size = 10
+
+	inline_script = "game_start/rural_districts_initializer"
+
+	add_building = building_hab_major_capital
+
+	add_district_and_planet_size_if_needed_effect_amount = {
+		amount = 2
+		district = district_hab_housing
+	}
+
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					is_regular_empire = yes
+					has_valid_civic = civic_machine_servitor
+					has_valid_civic = civic_machine_obsessional_directive
+				}
+			}
+		}
+		add_zone = {
+			district = district_hab_housing
+			zone = zone_industrial
+			zone_slot = 1
+		}
+		add_building = {
+			building = building_factory_1
+			zone = zone_industrial
+		}
+	}
+	else = {
+		add_zone = {
+			district = district_hab_housing
+			zone = zone_foundry
+			zone_slot = 1
+		}
+	}
+
+	add_district_and_planet_size_if_needed_effect_amount = {
+		amount = 1
+		district = district_hab_science
+	}
+
+	add_zone = {
+		district = district_hab_science
+		zone = zone_habitat_research_unity
+		zone_slot = 0
+	}
+
+	# Shipsets
+	inline_script = "game_start/shipsets"
+
+	# Species
+	inline_script = "game_start/species_lithoids"
+	inline_script = "game_start/species_hive_void_dwellers"
+	inline_script = "game_start/species_machine_void_dwellers"
+	inline_script = "game_start/species_individual_machine_void_dwellers"
+	inline_script = "game_start/species_subspecies" ## Set subspecies flags
+
+	## Ethic
+	inline_script = "game_start/ethic_spiritualist"
+	inline_script = "game_start/ethic_materialist"
+	inline_script = "game_start/ethic_pacifist"
+	inline_script = "game_start/ethic_militarist"
+	inline_script = "game_start/ethic_egalitarian"
+	inline_script = "game_start/ethic_authoritarian"
+	inline_script = "game_start/ethic_xenophile"
+	inline_script = "game_start/ethic_xenophobe"
+
+	##Civics
+	inline_script = "game_start/civics"
+
+	# Apply rural districts depending on variable count
+	inline_script = "game_start/rural_districts_placement"
+
+	# set_planet_size = 6
+
+	give_starting_resources_effect = yes
+	
+}
+
+# Dalek Empire Remnants Origin - Habitat Setup
+
+whoniverse_dalek_empire_remnants_home_planet_setup = {
+	optimize_memory
+	set_planet_flag = habitat_level_2
+	owner = {
+		save_event_target_as = whoniverse_dalek_empire_remnants_owner
+	}
+	solar_system = {
+		random_system_planet = {
+			limit = { has_planet_flag = dalek_empire_remnants_habitat_1_planet }
+			save_event_target_as = dalek_empire_remnants_habitat_1_planet
+			solar_system = {
+				spawn_orbital_effect = {
+					TYPE = major
+					HABITAT_OWNER = event_target:whoniverse_dalek_empire_remnants_owner
+					TARGET_PLANET = event_target:dalek_empire_remnants_habitat_1_planet
+				}
+			}
+		}
+
+		random_system_planet = {
+			limit = { has_planet_flag = dalek_empire_remnants_habitat_2_planet }
+			save_event_target_as = dalek_empire_remnants_habitat_2_planet
+			solar_system = {
+				spawn_orbital_effect = {
+					TYPE = major
+					HABITAT_OWNER = event_target:whoniverse_dalek_empire_remnants_owner
+					TARGET_PLANET = event_target:dalek_empire_remnants_habitat_2_planet
+				}
+			}
+		}
+
+		random_system_planet = {
+			limit = { has_planet_flag = dalek_empire_remnants_habitat_3_planet }
+			save_event_target_as = dalek_empire_remnants_habitat_3_planet
+			solar_system = {
+				spawn_orbital_effect = {
+					TYPE = major
+					HABITAT_OWNER = event_target:whoniverse_dalek_empire_remnants_owner
+					TARGET_PLANET = event_target:dalek_empire_remnants_habitat_3_planet
+				}
+			}
+		}
+
+		every_system_planet = {
+			limit = { has_planet_flag = mining_planet }
+			create_mining_station = { owner = event_target:whoniverse_dalek_empire_remnants_owner }
+		}
+	}
+	
+	event_target:dalek_empire_remnants_habitat_1_planet = {
+		set_planet_flag = habitat@PREV
+	}
+	owner = {
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						is_lithoid_empire = no
+						is_mechanical_species = no
+					}
+					is_catalytic_empire = yes
+				}
+			}
+			give_technology = {
+				tech = tech_eco_simulation
+				message = no
+			}
+			give_technology = {
+				tech = tech_hydroponics
+				message = no
+			}
+			root.solar_system.starbase = {
+				remove_starbase_building = {
+					slot = 1
+				}
+				set_starbase_building = {
+					slot = 1
+					building = hydroponics_bay
+				}
+			}
+		}
+		else = {
+			give_technology = {
+				tech = tech_powered_exoskeletons
+				message = no
+			}
+			give_technology = {
+				tech = tech_space_mining_1
+				message = no
+			}
+
+		}
+		if = {
+			limit = {
+				has_valid_civic = civic_private_healthcare_corporate
+			}
+			give_technology = { message = no tech = tech_frontier_health }
+			add_research_option = tech_subdermal_stimulation
+		}
+	}
+
+    ## CLEAR ##
+        while = {
+            limit = { pop_amount > 1 }
+            random_owned_pop_group = {
+                kill_single_pop = yes
+            }
+        }
+      
+    ## MAIN ##
+        while = {
+            count = 20
+            create_pop_group = {
+                species = owner_main_species
+            }
+        }          
+
+	if = {
+		limit = {
+			owner = {
+				has_valid_civic = civic_permanent_employment
+			}
+		}
+		while = {
+			count = 4
+			weighted_random_owned_pop_group = {
+				limit = {
+					is_pop_category = worker
+					is_robotic_species = no
+				}
+				modify_species = {
+					species = this
+					add_trait = trait_zombie
+					add_traits_at_start_of_list = yes
+				}
+				if = {
+					limit = {
+						has_trait = trait_syncretic_proles
+					}
+					modify_species = {
+						species = this
+						remove_trait = trait_syncretic_proles
+					}
+				}
+			}
+		}
+	}
+
+	set_planet_entity = {
+		entity = "habitat_phase_03_entity"
+		graphical_culture = owner
+	}
+	set_planet_size = 10
+	inline_script = "game_start/rural_districts_initializer"
+
+	add_building = building_hab_major_capital
+
+	add_district_and_planet_size_if_needed_effect_amount = {
+		amount = 2
+		district = district_hab_housing
+	}
+
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					is_regular_empire = yes
+					has_valid_civic = civic_machine_servitor
+					has_valid_civic = civic_machine_obsessional_directive
+				}
+			}
+		}
+		add_zone = {
+			district = district_hab_housing
+			zone = zone_industrial
+			zone_slot = 1
+		}
+		add_building = {
+			building = building_factory_1
+			zone = zone_industrial
+		}
+	}
+	else = {
+		add_zone = {
+			district = district_hab_housing
+			zone = zone_foundry
+			zone_slot = 1
+		}
+	}
+
+	add_district_and_planet_size_if_needed_effect_amount = {
+		amount = 1
+		district = district_hab_science
+	}
+
+	add_zone = {
+		district = district_hab_science
+		zone = zone_habitat_research_unity
+		zone_slot = 0
+	}
+
+	# Whoniverse
+	inline_script = "whoniverse/whoniverse_game_start_dalek"
+
+	# Shipsets
+	inline_script = "game_start/shipsets"
+
+	# Species
+	inline_script = "game_start/species_lithoids"
+	inline_script = "game_start/species_hive_void_dwellers"
+	inline_script = "game_start/species_machine_void_dwellers"
+	inline_script = "game_start/species_individual_machine_void_dwellers"
+	inline_script = "game_start/species_subspecies" ## Set subspecies flags
+
+	## Ethic
+	inline_script = "game_start/ethic_spiritualist"
+	inline_script = "game_start/ethic_materialist"
+	inline_script = "game_start/ethic_pacifist"
+	inline_script = "game_start/ethic_militarist"
+	inline_script = "game_start/ethic_egalitarian"
+	inline_script = "game_start/ethic_authoritarian"
+	inline_script = "game_start/ethic_xenophile"
+	inline_script = "game_start/ethic_xenophobe"
+
+	##Civics
+	inline_script = "game_start/civics"
+
+	# Apply rural districts depending on variable count
+	inline_script = "game_start/rural_districts_placement"
+
+	# set_planet_size = 6
+
+	give_starting_resources_effect = yes
+	
+}
+
+# Shadow Proclamation Origin - Habitat Setup
+
+whoniverse_shadow_proclamation_home_planet_setup = {
+	optimize_memory
+	set_planet_flag = habitat_level_2
+	owner = {
+		save_event_target_as = shadow_proclamation_owner
+	}
+	solar_system = {
+		random_system_planet = {
+			limit = { has_planet_flag = shadow_proclamation_habitat_1_planet }
+			save_event_target_as = shadow_proclamation_habitat_1_planet
+			solar_system = {
+				spawn_orbital_effect = {
+					TYPE = major
+					HABITAT_OWNER = event_target:shadow_proclamation_owner
+					TARGET_PLANET = event_target:shadow_proclamation_habitat_1_planet
+				}
+			}
+		}
+
+		random_system_planet = {
+			limit = { has_planet_flag = shadow_proclamation_habitat_2_planet }
+			save_event_target_as = shadow_proclamation_habitat_2_planet
+			solar_system = {
+				spawn_orbital_effect = {
+					TYPE = major
+					HABITAT_OWNER = event_target:shadow_proclamation_owner
+					TARGET_PLANET = event_target:shadow_proclamation_habitat_2_planet
+				}
+			}
+		}
+
+		random_system_planet = {
+			limit = { has_planet_flag = shadow_proclamation_habitat_3_planet }
+			save_event_target_as = shadow_proclamation_habitat_3_planet
+			solar_system = {
+				spawn_orbital_effect = {
+					TYPE = major
+					HABITAT_OWNER = event_target:shadow_proclamation_owner
+					TARGET_PLANET = event_target:shadow_proclamation_habitat_3_planet
+				}
+			}
+		}
+
+		every_system_planet = {
+			limit = { has_planet_flag = mining_planet }
+			create_mining_station = { owner = event_target:shadow_proclamation_owner }
+		}
+	}
+	
+	
+	event_target:shadow_proclamation_habitat_1_planet = {
 		set_planet_flag = habitat@PREV
 	}
 	owner = {
@@ -219,37 +728,22 @@ whoniverse_church_home_planet_setup = {
 		}
 	}
 
-	if = {
-        limit = { owner = { has_origin = origin_whoniverse_church } }
-      
-        ## CLEAR ##
+    ## CLEAR ##
         while = {
-            limit = { num_pops > 1 }
-            random_owned_pop = {
-                kill_pop = yes
+            limit = { pop_amount > 1 }
+            random_owned_pop_group = {
+                kill_single_pop = yes
             }
         }
       
-        ## MAIN ##
+    ## MAIN ##
         while = {
-            count = 10
-            create_pop = {
+            count = 20
+            create_pop_group = {
                 species = owner_main_species
-                ethos = random
             }
         }         
 
-        ## SILENCE ##
-        last_created_species = { set_species_flag = upgraded_species@root.owner }         
-        while = {
-            count = 4
-            create_pop = {
-                species = last_created_species
-                ethos = random
-                }
-        }
-    }
-
 	if = {
 		limit = {
 			owner = {
@@ -258,14 +752,9 @@ whoniverse_church_home_planet_setup = {
 		}
 		while = {
 			count = 4
-			random_owned_pop = {
+			weighted_random_owned_pop_group = {
 				limit = {
-					OR = {
-						has_job = clerk
-						has_job = technician
-						has_job = miner
-						has_job = farmer
-					}
+					is_pop_category = worker
 					is_robotic_species = no
 				}
 				modify_species = {
@@ -291,966 +780,83 @@ whoniverse_church_home_planet_setup = {
 		graphical_culture = owner
 	}
 	set_planet_size = 10
-	add_deposit = d_arcane_replicator
-	while = {
-		count = 2
-		add_district = {
-			district_type = district_hab_housing
-			ignore_cap = yes
-		}
-	}
-	add_district = {
-		district_type = district_hab_industrial
-		ignore_cap = yes
-	}
-	while = {
-		count = 2
-		add_district = {
-			district_type = district_hab_mining
-			ignore_cap = yes
-		}
-	}
-	add_district = {
-		district_type = district_hab_energy
-		ignore_cap = yes
-	}
+
+	inline_script = "game_start/rural_districts_initializer"
+
 	add_building = building_hab_major_capital
-	if = {
-		limit = {
-			owner = {
-				is_eager_explorer_empire = no
-			}
-		}
-		add_district = {
-			district_type = district_hab_science
-			ignore_cap = yes
-		}
+
+	add_district_and_planet_size_if_needed_effect_amount = {
+		amount = 2
+		district = district_hab_housing
 	}
+
 	if = {
 		limit = {
 			owner = {
 				OR = {
-					AND = {
-						is_lithoid_empire = no
-						is_mechanical_species = no
-					}
-					is_catalytic_empire = yes
-					has_country_flag = non_lithoid_subspecies
+					is_regular_empire = yes
+					has_valid_civic = civic_machine_servitor
+					has_valid_civic = civic_machine_obsessional_directive
 				}
 			}
 		}
-		add_building = building_hydroponics_farm
-	}
-	#Tactical Cogitators
-	if = {
-		limit = {
-			owner = {
-				has_valid_civic = civic_machine_tactical_algorithms
-			}
+		add_zone = {
+			district = district_hab_housing
+			zone = zone_industrial
+			zone_slot = 1
 		}
-		owner = {
-			give_technology = {
-				tech = tech_centralized_command
-				message = no
-			}
+		add_building = {
+			building = building_factory_1
+			zone = zone_industrial
 		}
-		add_building = building_military_academy
-	}
-	if = {
-		limit = {
-			owner = {
-				is_gestalt = no
-			}
-		}
-		# Unity Building - Admin/Sacrificial Temple/Temple
-		if = {
-			limit = {
-				owner = {
-					is_spiritualist = no
-				}
-			}
-			add_building = building_bureaucratic_1
-		}
-		if = {
-			limit = {
-				owner = {
-					is_spiritualist = yes
-					OR = {
-						has_valid_civic = civic_death_cult
-						has_valid_civic = civic_death_cult_corporate
-					}
-				}
-			}
-			add_building = building_sacrificial_temple_1
-		}
-		if = {
-			limit = {
-				owner = {
-					is_spiritualist = yes
-					NOR = {
-						has_valid_civic = civic_death_cult
-						has_valid_civic = civic_death_cult_corporate
-					}
-				}
-			}
-			add_building = building_temple
-		}
-
-		# Amenity Building - Holo-Theatres/Clinc/Sacrificial Temple/Temple/Commercial Zone
-		if = {
-			limit = {
-				owner = {
-					is_spiritualist = no
-					is_pleasure_seeker = yes
-				}
-			}
-			add_building = building_holo_theatres
-		}
-		#Aug Bazaar
-		else_if = {
-			limit = {
-				owner = {
-					has_valid_civic = civic_augmentation_bazaars
-				}
-				free_building_slots > 0
-			}
-			add_building = building_augmentation_bazaars
-		}
-		# Pharma State
-		else_if = {
-			limit = {
-				owner = {
-					has_valid_civic = civic_private_healthcare_corporate
-				}
-			}
-			add_building = building_clinic
-		}
-		else_if = {
-			limit = {
-				owner = {
-					is_spiritualist = yes
-					OR = {
-						has_valid_civic = civic_death_cult
-						has_valid_civic = civic_death_cult_corporate
-					}
-				}
-			}
-			add_building = building_sacrificial_temple_1
-		}
-		else_if = {
-			limit = {
-				owner = {
-					is_megacorp = no
-					is_spiritualist = yes
-				}
-			}
-			add_building = building_temple
-		}
-		else = {
-			add_building = building_commercial_zone
-		}
-
-		# Permanent Employment
-		if = {
-			limit = {
-				owner = {
-					has_valid_civic = civic_permanent_employment
-				}
-				free_building_slots > 0
-			}
-			add_building = building_posthumous_employment_center
-		}
-
-		# Relentless Industrialists
-		if = {
-			limit = {
-				owner = {
-					is_relentless_industrialist_empire = yes
-				}
-				free_building_slots > 0
-			}
-			add_building = building_coordinated_fulfillment_center_1
-		}
-		if = {
-			limit = {
-				owner = { is_individual_machine = yes }
-			}
-		add_building = building_machine_assembly_plant
-		}
-	}
-	else_if = {
-		limit = {
-			owner = {
-				is_hive_empire = yes
-			}
-		}
-		add_building = building_hive_node
-		add_building = building_spawning_pool
 	}
 	else = {
-		add_building = building_machine_assembly_plant
-		if = {
-			limit = {
-				owner = {
-					has_valid_civic = civic_machine_servitor
-				}
-			}
-			add_building = building_organic_sanctuary
-		}
-		else = {
-			add_building = building_uplink_node
-		}
-	}
-}
-
-# Dalek Empire Remnants Origin - Church of the Papal Mainframe Setup
-
-whoniverse_dalek_empire_remnants_home_planet_setup = {
-	optimize_memory
-	set_planet_flag = habitat_level_2
-	owner = {
-		save_event_target_as = whoniverse_dalek_empire_remnants_owner
-	}
-	solar_system = {
-		random_system_planet = {
-			limit = { has_planet_flag = dalek_empire_remnants_habitat_1_planet }
-			save_event_target_as = dalek_empire_remnants_habitat_1_planet
-		}
-		spawn_megastructure = {
-			type = "major_orbital"
-			planet = event_target:dalek_empire_remnants_habitat_1_planet
-			coords_from = event_target:dalek_empire_remnants_habitat_1_planet
-			owner = event_target:whoniverse_dalek_empire_remnants_owner
-			graphical_culture = event_target:whoniverse_dalek_empire_remnants_owner
-		}
-		random_system_planet = {
-			limit = { has_planet_flag = dalek_empire_remnants_habitat_2_planet }
-			save_event_target_as = dalek_empire_remnants_habitat_2_planet
-		}
-		spawn_megastructure = {
-			type = "major_orbital"
-			planet = event_target:dalek_empire_remnants_habitat_2_planet
-			coords_from = event_target:dalek_empire_remnants_habitat_2_planet
-			owner = event_target:whoniverse_dalek_empire_remnants_owner
-			graphical_culture = event_target:whoniverse_dalek_empire_remnants_owner
-		}
-		random_system_planet = {
-			limit = { has_planet_flag = dalek_empire_remnants_habitat_3_planet }
-			save_event_target_as = dalek_empire_remnants_habitat_3_planet
-		}
-		spawn_megastructure = {
-			type = "major_orbital"
-			planet = event_target:dalek_empire_remnants_habitat_3_planet
-			coords_from = event_target:dalek_empire_remnants_habitat_3_planet
-			owner = event_target:whoniverse_dalek_empire_remnants_owner
-			graphical_culture = event_target:whoniverse_dalek_empire_remnants_owner
-		}
-	}
-	event_target:dalek_empire_remnants_habitat_1_planet = {
-		set_planet_flag = habitat@PREV
-	}
-	owner = {
-		# give_starting_resources_effect = yes
-		# give_technology = {
-		# 	tech = tech_habitat_1
-		# 	message = no
-		# }
-		# add_research_option = tech_habitat_2
-
-		# give_technology = {
-		# 	tech = tech_whoniverse_church_habitats
-		# 	message = no
-		# }
-
-		if = {
-			limit = {
-				OR = {
-					AND = {
-						is_lithoid_empire = no
-						is_mechanical_species = no
-					}
-					is_catalytic_empire = yes
-				}
-			}
-			give_technology = {
-				tech = tech_eco_simulation
-				message = no
-			}
-			give_technology = {
-				tech = tech_hydroponics
-				message = no
-			}
-			root.solar_system.starbase = {
-				remove_starbase_building = {
-					slot = 1
-				}
-				set_starbase_building = {
-					slot = 1
-					building = hydroponics_bay
-				}
-			}
-		}
-		else = {
-			give_technology = {
-				tech = tech_powered_exoskeletons
-				message = no
-			}
-			give_technology = {
-				tech = tech_space_mining_1
-				message = no
-			}
-
-		}
-		if = {
-			limit = {
-				has_valid_civic = civic_private_healthcare_corporate
-			}
-			give_technology = { message = no tech = tech_frontier_health }
-			add_research_option = tech_subdermal_stimulation
+		add_zone = {
+			district = district_hab_housing
+			zone = zone_foundry
+			zone_slot = 1
 		}
 	}
 
-    while = {
-        limit = { num_pops > 1 }
-        random_owned_pop = {
-            kill_pop = yes
-        }
-    }
-      
-    ## MAIN ##
-    while = {
-        count = 20
-        create_pop = {
-            species = owner_main_species
-            ethos = random
-        }
-    }         
-
-	if = {
-		limit = {
-			owner = {
-				has_valid_civic = civic_permanent_employment
-			}
-		}
-		while = {
-			count = 4
-			random_owned_pop = {
-				limit = {
-					OR = {
-						has_job = clerk
-						has_job = technician
-						has_job = miner
-						has_job = farmer
-					}
-					is_robotic_species = no
-				}
-				modify_species = {
-					species = this
-					add_trait = trait_zombie
-					add_traits_at_start_of_list = yes
-				}
-				if = {
-					limit = {
-						has_trait = trait_syncretic_proles
-					}
-					modify_species = {
-						species = this
-						remove_trait = trait_syncretic_proles
-					}
-				}
-			}
-		}
+	add_district_and_planet_size_if_needed_effect_amount = {
+		amount = 1
+		district = district_hab_science
 	}
 
-	set_planet_entity = {
-		entity = "habitat_phase_03_entity"
-		graphical_culture = owner
-	}
-	set_planet_size = 10
-	add_deposit = d_arcane_replicator
-	while = {
-		count = 2
-		add_district = {
-			district_type = district_hab_housing
-			ignore_cap = yes
-		}
-	}
-	add_district = {
-		district_type = district_hab_industrial
-		ignore_cap = yes
-	}
-	while = {
-		count = 2
-		add_district = {
-			district_type = district_hab_mining
-			ignore_cap = yes
-		}
-	}
-	add_district = {
-		district_type = district_hab_energy
-		ignore_cap = yes
-	}
-	add_building = building_hab_major_capital
-	if = {
-		limit = {
-			owner = {
-				is_eager_explorer_empire = no
-			}
-		}
-		add_district = {
-			district_type = district_hab_science
-			ignore_cap = yes
-		}
-	}
-	if = {
-		limit = {
-			owner = {
-				OR = {
-					AND = {
-						is_lithoid_empire = no
-						is_mechanical_species = no
-					}
-					is_catalytic_empire = yes
-					has_country_flag = non_lithoid_subspecies
-				}
-			}
-		}
-		add_building = building_hydroponics_farm
-	}
-	#Tactical Cogitators
-	if = {
-		limit = {
-			owner = {
-				has_valid_civic = civic_machine_tactical_algorithms
-			}
-		}
-		owner = {
-			give_technology = {
-				tech = tech_centralized_command
-				message = no
-			}
-		}
-		add_building = building_military_academy
-	}
-	if = {
-		limit = {
-			owner = {
-				is_gestalt = no
-			}
-		}
-		# Unity Building - Admin/Sacrificial Temple/Temple
-		if = {
-			limit = {
-				owner = {
-					is_spiritualist = no
-				}
-			}
-			add_building = building_bureaucratic_1
-		}
-		if = {
-			limit = {
-				owner = {
-					is_spiritualist = yes
-					OR = {
-						has_valid_civic = civic_death_cult
-						has_valid_civic = civic_death_cult_corporate
-					}
-				}
-			}
-			add_building = building_sacrificial_temple_1
-		}
-		if = {
-			limit = {
-				owner = {
-					is_spiritualist = yes
-					NOR = {
-						has_valid_civic = civic_death_cult
-						has_valid_civic = civic_death_cult_corporate
-					}
-				}
-			}
-			add_building = building_temple
-		}
-
-		# Amenity Building - Holo-Theatres/Clinc/Sacrificial Temple/Temple/Commercial Zone
-		if = {
-			limit = {
-				owner = {
-					is_spiritualist = no
-					is_pleasure_seeker = yes
-				}
-			}
-			add_building = building_holo_theatres
-		}
-		#Aug Bazaar
-		else_if = {
-			limit = {
-				owner = {
-					has_valid_civic = civic_augmentation_bazaars
-				}
-				free_building_slots > 0
-			}
-			add_building = building_augmentation_bazaars
-		}
-		# Pharma State
-		else_if = {
-			limit = {
-				owner = {
-					has_valid_civic = civic_private_healthcare_corporate
-				}
-			}
-			add_building = building_clinic
-		}
-		else_if = {
-			limit = {
-				owner = {
-					is_spiritualist = yes
-					OR = {
-						has_valid_civic = civic_death_cult
-						has_valid_civic = civic_death_cult_corporate
-					}
-				}
-			}
-			add_building = building_sacrificial_temple_1
-		}
-		else_if = {
-			limit = {
-				owner = {
-					is_megacorp = no
-					is_spiritualist = yes
-				}
-			}
-			add_building = building_temple
-		}
-		else = {
-			add_building = building_commercial_zone
-		}
-
-		# Permanent Employment
-		if = {
-			limit = {
-				owner = {
-					has_valid_civic = civic_permanent_employment
-				}
-				free_building_slots > 0
-			}
-			add_building = building_posthumous_employment_center
-		}
-
-		# Relentless Industrialists
-		if = {
-			limit = {
-				owner = {
-					is_relentless_industrialist_empire = yes
-				}
-				free_building_slots > 0
-			}
-			add_building = building_coordinated_fulfillment_center_1
-		}
-		if = {
-			limit = {
-				owner = { is_individual_machine = yes }
-			}
-		add_building = building_machine_assembly_plant
-		}
-	}
-	else_if = {
-		limit = {
-			owner = {
-				is_hive_empire = yes
-			}
-		}
-		add_building = building_hive_node
-		add_building = building_spawning_pool
-	}
-	else = {
-		add_building = building_machine_assembly_plant
-		if = {
-			limit = {
-				owner = {
-					has_valid_civic = civic_machine_servitor
-				}
-			}
-			add_building = building_organic_sanctuary
-		}
-		else = {
-			add_building = building_uplink_node
-		}
-	}
-}
-
-# Shadow Proclamation Origin - Habitat Setup
-
-whoniverse_shadow_proclamation_home_planet_setup = {
-	optimize_memory
-	set_planet_flag = habitat_level_2
-	owner = {
-		save_event_target_as = shadow_proclamation_owner
-	}
-	solar_system = {
-		random_system_planet = {
-			limit = { has_planet_flag = shadow_proclamation_habitat_1_planet }
-			save_event_target_as = shadow_proclamation_habitat_1_planet
-		}
-		spawn_megastructure = {
-			type = "major_orbital"
-			planet = event_target:shadow_proclamation_habitat_1_planet
-			coords_from = event_target:shadow_proclamation_habitat_1_planet
-			owner = event_target:shadow_proclamation_owner
-			graphical_culture = event_target:shadow_proclamation_owner
-		}
-		random_system_planet = {
-			limit = { has_planet_flag = shadow_proclamation_habitat_2_planet }
-			save_event_target_as = shadow_proclamation_habitat_2_planet
-		}
-		spawn_megastructure = {
-			type = "major_orbital"
-			planet = event_target:shadow_proclamation_habitat_2_planet
-			coords_from = event_target:shadow_proclamation_habitat_2_planet
-			owner = event_target:shadow_proclamation_owner
-			graphical_culture = event_target:shadow_proclamation_owner
-		}
-		random_system_planet = {
-			limit = { has_planet_flag = shadow_proclamation_habitat_3_planet }
-			save_event_target_as = shadow_proclamation_habitat_3_planet
-		}
-		spawn_megastructure = {
-			type = "major_orbital"
-			planet = event_target:shadow_proclamation_habitat_3_planet
-			coords_from = event_target:shadow_proclamation_habitat_3_planet
-			owner = event_target:shadow_proclamation_owner
-			graphical_culture = event_target:shadow_proclamation_owner
-		}
-	}
-	event_target:shadow_proclamation_habitat_1_planet = {
-		set_planet_flag = habitat@PREV
-	}
-	owner = {
-		# give_starting_resources_effect = yes
-		# give_technology = {
-		# 	tech = tech_habitat_1
-		# 	message = no
-		# }
-		# add_research_option = tech_habitat_2
-
-		# give_technology = {
-		# 	tech = tech_whoniverse_church_habitats
-		# 	message = no
-		# }
-
-		if = {
-			limit = {
-				OR = {
-					AND = {
-						is_lithoid_empire = no
-						is_mechanical_species = no
-					}
-					is_catalytic_empire = yes
-				}
-			}
-			give_technology = {
-				tech = tech_eco_simulation
-				message = no
-			}
-			give_technology = {
-				tech = tech_hydroponics
-				message = no
-			}
-			root.solar_system.starbase = {
-				remove_starbase_building = {
-					slot = 1
-				}
-				set_starbase_building = {
-					slot = 1
-					building = hydroponics_bay
-				}
-			}
-		}
-		else = {
-			give_technology = {
-				tech = tech_powered_exoskeletons
-				message = no
-			}
-			give_technology = {
-				tech = tech_space_mining_1
-				message = no
-			}
-
-		}
-		if = {
-			limit = {
-				has_valid_civic = civic_private_healthcare_corporate
-			}
-			give_technology = { message = no tech = tech_frontier_health }
-			add_research_option = tech_subdermal_stimulation
-		}
+	add_zone = {
+		district = district_hab_science
+		zone = zone_habitat_research_unity
+		zone_slot = 0
 	}
 
-    while = {
-        limit = { num_pops > 1 }
-        random_owned_pop = {
-            kill_pop = yes
-        }
-    }
-      
-    ## MAIN ##
-    while = {
-        count = 20
-        create_pop = {
-            species = owner_main_species
-            ethos = random
-        }
-    }         
+	# Shipsets
+	inline_script = "game_start/shipsets"
 
-	if = {
-		limit = {
-			owner = {
-				has_valid_civic = civic_permanent_employment
-			}
-		}
-		while = {
-			count = 4
-			random_owned_pop = {
-				limit = {
-					OR = {
-						has_job = clerk
-						has_job = technician
-						has_job = miner
-						has_job = farmer
-					}
-					is_robotic_species = no
-				}
-				modify_species = {
-					species = this
-					add_trait = trait_zombie
-					add_traits_at_start_of_list = yes
-				}
-				if = {
-					limit = {
-						has_trait = trait_syncretic_proles
-					}
-					modify_species = {
-						species = this
-						remove_trait = trait_syncretic_proles
-					}
-				}
-			}
-		}
-	}
+	# Species
+	inline_script = "game_start/species_lithoids"
+	inline_script = "game_start/species_hive_void_dwellers"
+	inline_script = "game_start/species_machine_void_dwellers"
+	inline_script = "game_start/species_individual_machine_void_dwellers"
+	inline_script = "game_start/species_subspecies" ## Set subspecies flags
 
-	set_planet_entity = {
-		entity = "habitat_phase_03_entity"
-		graphical_culture = owner
-	}
-	set_planet_size = 10
-	add_deposit = d_arcane_replicator
-	while = {
-		count = 2
-		add_district = {
-			district_type = district_hab_housing
-			ignore_cap = yes
-		}
-	}
-	add_district = {
-		district_type = district_hab_industrial
-		ignore_cap = yes
-	}
-	while = {
-		count = 2
-		add_district = {
-			district_type = district_hab_mining
-			ignore_cap = yes
-		}
-	}
-	add_district = {
-		district_type = district_hab_energy
-		ignore_cap = yes
-	}
-	add_building = building_hab_major_capital
-	if = {
-		limit = {
-			owner = {
-				is_eager_explorer_empire = no
-			}
-		}
-		add_district = {
-			district_type = district_hab_science
-			ignore_cap = yes
-		}
-	}
-	if = {
-		limit = {
-			owner = {
-				OR = {
-					AND = {
-						is_lithoid_empire = no
-						is_mechanical_species = no
-					}
-					is_catalytic_empire = yes
-					has_country_flag = non_lithoid_subspecies
-				}
-			}
-		}
-		add_building = building_hydroponics_farm
-	}
-	#Tactical Cogitators
-	if = {
-		limit = {
-			owner = {
-				has_valid_civic = civic_machine_tactical_algorithms
-			}
-		}
-		owner = {
-			give_technology = {
-				tech = tech_centralized_command
-				message = no
-			}
-		}
-		add_building = building_military_academy
-	}
-	if = {
-		limit = {
-			owner = {
-				is_gestalt = no
-			}
-		}
-		# Unity Building - Admin/Sacrificial Temple/Temple
-		if = {
-			limit = {
-				owner = {
-					is_spiritualist = no
-				}
-			}
-			add_building = building_bureaucratic_1
-		}
-		if = {
-			limit = {
-				owner = {
-					is_spiritualist = yes
-					OR = {
-						has_valid_civic = civic_death_cult
-						has_valid_civic = civic_death_cult_corporate
-					}
-				}
-			}
-			add_building = building_sacrificial_temple_1
-		}
-		if = {
-			limit = {
-				owner = {
-					is_spiritualist = yes
-					NOR = {
-						has_valid_civic = civic_death_cult
-						has_valid_civic = civic_death_cult_corporate
-					}
-				}
-			}
-			add_building = building_temple
-		}
+	## Ethic
+	inline_script = "game_start/ethic_spiritualist"
+	inline_script = "game_start/ethic_materialist"
+	inline_script = "game_start/ethic_pacifist"
+	inline_script = "game_start/ethic_militarist"
+	inline_script = "game_start/ethic_egalitarian"
+	inline_script = "game_start/ethic_authoritarian"
+	inline_script = "game_start/ethic_xenophile"
+	inline_script = "game_start/ethic_xenophobe"
 
-		# Amenity Building - Holo-Theatres/Clinc/Sacrificial Temple/Temple/Commercial Zone
-		if = {
-			limit = {
-				owner = {
-					is_spiritualist = no
-					is_pleasure_seeker = yes
-				}
-			}
-			add_building = building_holo_theatres
-		}
-		#Aug Bazaar
-		else_if = {
-			limit = {
-				owner = {
-					has_valid_civic = civic_augmentation_bazaars
-				}
-				free_building_slots > 0
-			}
-			add_building = building_augmentation_bazaars
-		}
-		# Pharma State
-		else_if = {
-			limit = {
-				owner = {
-					has_valid_civic = civic_private_healthcare_corporate
-				}
-			}
-			add_building = building_clinic
-		}
-		else_if = {
-			limit = {
-				owner = {
-					is_spiritualist = yes
-					OR = {
-						has_valid_civic = civic_death_cult
-						has_valid_civic = civic_death_cult_corporate
-					}
-				}
-			}
-			add_building = building_sacrificial_temple_1
-		}
-		else_if = {
-			limit = {
-				owner = {
-					is_megacorp = no
-					is_spiritualist = yes
-				}
-			}
-			add_building = building_temple
-		}
-		else = {
-			add_building = building_commercial_zone
-		}
+	##Civics
+	inline_script = "game_start/civics"
 
-		# Permanent Employment
-		if = {
-			limit = {
-				owner = {
-					has_valid_civic = civic_permanent_employment
-				}
-				free_building_slots > 0
-			}
-			add_building = building_posthumous_employment_center
-		}
+	# Apply rural districts depending on variable count
+	inline_script = "game_start/rural_districts_placement"
 
-		# Relentless Industrialists
-		if = {
-			limit = {
-				owner = {
-					is_relentless_industrialist_empire = yes
-				}
-				free_building_slots > 0
-			}
-			add_building = building_coordinated_fulfillment_center_1
-		}
-		if = {
-			limit = {
-				owner = { is_individual_machine = yes }
-			}
-		add_building = building_machine_assembly_plant
-		}
-	}
-	else_if = {
-		limit = {
-			owner = {
-				is_hive_empire = yes
-			}
-		}
-		add_building = building_hive_node
-		add_building = building_spawning_pool
-	}
-	else = {
-		add_building = building_machine_assembly_plant
-		if = {
-			limit = {
-				owner = {
-					has_valid_civic = civic_machine_servitor
-				}
-			}
-			add_building = building_organic_sanctuary
-		}
-		else = {
-			add_building = building_uplink_node
-		}
-	}
+	# set_planet_size = 6
+
+	give_starting_resources_effect = yes
+	
 }

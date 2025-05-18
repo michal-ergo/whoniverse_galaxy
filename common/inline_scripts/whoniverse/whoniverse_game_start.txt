@@ -1,0 +1,22 @@
+# Dalek Initial Setup
+# Buildings Added:
+#	* Clone Vats
+
+if = {
+	limit = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_whoniverse_cyber_conversion
+		}
+	}
+	add_building = building_hive_node
+}
+if = {
+	limit = {
+		exists = owner
+		owner = {
+			is_whoniverse_dalek = yes
+		}
+	}
+	add_building = building_clone_vats
+}

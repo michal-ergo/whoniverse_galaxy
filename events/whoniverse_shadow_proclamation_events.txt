@@ -177,7 +177,7 @@ planet_event = {
 		owner = {
 			has_origin = origin_whoniverse_shadow_proclamation
 		}
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	is_triggered_only = yes
@@ -220,7 +220,7 @@ planet_event = {
 		owner = {
 			has_origin = origin_whoniverse_shadow_proclamation
 		}
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	is_triggered_only = yes
@@ -264,8 +264,8 @@ planet_event = {
 		}
 		while = {
 			count = 5
-				random_owned_pop = {
-					kill_pop = yes
+				random_owned_pop_group = {
+					kill_single_pop = yes
 				}
 			}
 		add_planet_devastation = 35

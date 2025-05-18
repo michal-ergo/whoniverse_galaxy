@@ -2,6 +2,16 @@
 
 whoniverse_timelord_01 = {
     fallback = reptilian_01
+
+	ship_kinds = {
+		default_ship
+		space_amoeba
+		tiyanki
+		voidworm
+		cutholoid
+		crystalline_entity
+	}
+	
     ship_color = no
 	ship_lighting = {
 		cam_light_1_dir = { 0.6 -0.2 0.1 }

@@ -2,7 +2,13 @@
 can_be_part_of_galactic_community = {
 	custom_tooltip = {
 		fail_text = "community_default_failtext"
-		is_country_type = default
+		OR = {
+			is_country_type = default
+			AND = {
+				is_country_type = awakened_fallen_empire
+				has_country_flag = fallen_empire_hive_control
+			}
+		}
 	}
 	custom_tooltip = {
 		fail_text = "community_homicidal_failtext"
@@ -10,8 +16,9 @@ can_be_part_of_galactic_community = {
 			has_civic = civic_fanatic_purifiers
 			has_civic = civic_hive_devouring_swarm
 			has_civic = civic_machine_terminator
-			is_whoniverse_dalek = yes
-			has_whoniverse_cyber_conversion = yes
+			has_menace_perk = menp_behemoth_ever_hungry
+			is_whoniverse_dalek = yes # added
+			has_whoniverse_cyber_conversion = yes # added
 		}
 	}
 	custom_tooltip = {
@@ -27,23 +34,33 @@ can_be_part_of_galactic_community = {
 		}
 	}
 }
+	
 
 #This, root = country
 can_remove_positive_traits_organic = {
-    OR = {
-        AND = {
-            has_utopia = yes
-            OR = {
-                has_tradition = tr_genetics_resequencing
-				has_tradition = tr_whoniverse_dalek_progenitor
-                has_active_tradition = tr_cybernetics_integrated_anatomy
-                has_active_tradition = tr_cybernetics_assimilator_integrated_anatomy
-            }
-        }
-        AND = {
-            has_toxoids = yes
-            has_origin = origin_overtuned
-        }
-        has_technology = tech_epigenetic_triggers
-    }
+	OR = {
+		AND = {
+			OR = {
+				has_utopia = yes
+				has_biogenesis_dlc = yes
+			}
+			OR = {
+				has_tradition = tr_genetics_resequencing
+				has_active_tradition = tr_cybernetics_integrated_anatomy
+				has_active_tradition = tr_cybernetics_assimilator_integrated_anatomy
+				has_active_tradition = tr_purity_genotype_regeneration
+				has_active_tradition = tr_purity_genotype_regeneration_wilderness
+				has_active_tradition = tr_cloning_somatic_synthesization
+				has_active_tradition = tr_cloning_somatic_synthesization_clone_army
+				has_active_tradition = tr_mutation_unnatural_selection
+				has_tradition = tr_whoniverse_dalek_progenitor # added
+			}
+		}
+		AND = {
+			has_toxoids = yes
+			has_origin = origin_overtuned
+		}
+		has_technology = tech_gene_expressions
+		has_technology = tech_epigenetic_triggers
+	}
 }

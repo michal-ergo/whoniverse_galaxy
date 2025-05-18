@@ -1,5 +1,48 @@
+# Dalek Puppets Defense Army
+dalek_puppet_army = {
+	defensive = yes
+	is_pop_spawned = yes
+	health = 1.75
+	damage = 1.50
+	collateral_damage = 0.0
+	has_morale = no
+	morale_damage = 1.75
+	war_exhaustion = 0.0
+	icon = GFX_army_type_undead
+	use_armynames_from = undead_army
+
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		planet = {
+			has_active_building = building_clone_vats
+			owner = { has_tradition = tr_whoniverse_dalek_nanocloud }
+		}
+	}
+
+	resources = {
+		category = armies
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_active_tradition = tr_unyielding_resistance_is_frugal }
+			}
+			unity = 0.5
+		}
+	}
+
+	spawn_chance = {
+		factor = 100
+	}
+}
+
 # Headless Monk Army
-headless_monk_army = {
+whoniverse_headless_monk_army = {
 	damage = 1.25
 	health = 1.25
 	has_morale = no
@@ -85,10 +128,8 @@ headless_monk_army = {
 	}
 }
 
-# Titanic life troops
-# Can build on planets with titanic life if you get event + special project there
-# Should be very strong and quite expensive, but cannot get attachments and can be built only in limited numbers
-# Currently limited to 3. Ideally it would be X * Num of planets you have done the project one, but that is too complex for scripts
+# Dinosaur armies
+# Can build on planets with dinosaur fauna
 whoniverse_dinosaur_assault_army = {
 	damage = 2.0
 	health = 2.5

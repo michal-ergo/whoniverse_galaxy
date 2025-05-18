@@ -56,7 +56,7 @@ planet_event = {
 		owner = {
 			has_origin = origin_whoniverse_church
 			}
-		# num_pops > 0
+		# pop_amount > 0
 		}
 
 	is_triggered_only = yes
@@ -127,40 +127,41 @@ country_event = {
 			starbase = {
 				set_owner = event_target:whoniverse_church_owner
 					}
-			
 			random_system_planet = {
 				limit = { has_planet_flag = whoniverse_demons_run_habitat_1_planet }
 				save_event_target_as = whoniverse_demons_run_habitat_1_planet
+				solar_system = {
+					spawn_orbital_effect = {
+						TYPE = major
+						HABITAT_OWNER = event_target:whoniverse_church_owner
+						TARGET_PLANET = event_target:whoniverse_demons_run_habitat_1_planet
+					}
+				}
 			}
-			spawn_megastructure = {
-				type = "major_orbital"
-				planet = event_target:whoniverse_demons_run_habitat_1_planet
-				coords_from = event_target:whoniverse_demons_run_habitat_1_planet
-				owner = event_target:whoniverse_church_owner
-				graphical_culture = event_target:whoniverse_church_owner
-			}
+
 			random_system_planet = {
 				limit = { has_planet_flag = whoniverse_demons_run_habitat_2_planet }
 				save_event_target_as = whoniverse_demons_run_habitat_2_planet
+				solar_system = {
+					spawn_orbital_effect = {
+						TYPE = major
+						HABITAT_OWNER = event_target:whoniverse_church_owner
+						TARGET_PLANET = event_target:whoniverse_demons_run_habitat_2_planet
+					}
+				}
 			}
-			spawn_megastructure = {
-				type = "major_orbital"
-				planet = event_target:whoniverse_demons_run_habitat_2_planet
-				coords_from = event_target:whoniverse_demons_run_habitat_2_planet
-				owner = event_target:whoniverse_church_owner
-				graphical_culture = event_target:whoniverse_church_owner
-			}
+
 			random_system_planet = {
 				limit = { has_planet_flag = whoniverse_demons_run_habitat_3_planet }
 				save_event_target_as = whoniverse_demons_run_habitat_3_planet
-			}
-			spawn_megastructure = {
-				type = "major_orbital"
-				planet = event_target:whoniverse_demons_run_habitat_3_planet
-				coords_from = event_target:whoniverse_demons_run_habitat_3_planet
-				owner = event_target:whoniverse_church_owner
-				graphical_culture = event_target:whoniverse_church_owner
-			}
+				solar_system = {
+					spawn_orbital_effect = {
+						TYPE = major
+						HABITAT_OWNER = event_target:whoniverse_church_owner
+						TARGET_PLANET = event_target:whoniverse_demons_run_habitat_3_planet
+					}
+				}
+			}			
 			every_system_planet = {
 				limit = { has_planet_flag = mining_planet }
 				create_mining_station = { owner = event_target:whoniverse_church_owner }
@@ -190,21 +191,11 @@ country_event = {
 				limit = { has_planet_flag = habitat }
 				save_event_target_as = demons_run_habitat_1
 				set_owner = event_target:whoniverse_church_owner
-				add_district = district_hab_housing
-				add_district = district_hab_housing
-				add_district = district_hab_industrial
-				add_district = district_hab_industrial
-				add_district = district_hab_energy
-				add_district = district_hab_energy
-				add_building = building_hab_capital
-				add_building = building_holo_theatres
-				add_building = building_precinct_house
-				save_global_event_target_as = kovarian_planet
-
+				
 				## MAIN ##
 				while = {
 					count = 11
-					create_pop = {
+					create_pop_group = {
 					species = owner_main_species
 					ethos = random
 					}
@@ -213,11 +204,94 @@ country_event = {
 				## SILENCE ##
 				while = {
 					count = 3
-					create_pop = {
+					create_pop_group = {
 						species = event_target:silence_species
 						ethos = random
 						}
         		}
+
+				set_planet_entity = {
+					entity = "habitat_phase_03_entity"
+					graphical_culture = owner
+				}
+				set_planet_size = 10
+
+				inline_script = "game_start/rural_districts_initializer"
+
+			add_building = building_hab_major_capital
+
+			add_district_and_planet_size_if_needed_effect_amount = {
+				amount = 2
+				district = district_hab_housing
+			}
+
+			if = {
+				limit = {
+					owner = {
+						OR = {
+							is_regular_empire = yes
+							has_valid_civic = civic_machine_servitor
+							has_valid_civic = civic_machine_obsessional_directive
+						}
+					}
+				}
+				add_zone = {
+					district = district_hab_housing
+					zone = zone_industrial
+					zone_slot = 1
+				}
+				add_building = {
+					building = building_factory_1
+					zone = zone_industrial
+				}
+			}
+			else = {
+				add_zone = {
+					district = district_hab_housing
+					zone = zone_foundry
+					zone_slot = 1
+				}
+			}
+
+			add_district_and_planet_size_if_needed_effect_amount = {
+				amount = 1
+				district = district_hab_science
+			}
+
+			add_zone = {
+				district = district_hab_science
+				zone = zone_habitat_research_unity
+				zone_slot = 0
+			}
+
+			# Shipsets
+			inline_script = "game_start/shipsets"
+
+			# Species
+			inline_script = "game_start/species_lithoids"
+			inline_script = "game_start/species_hive_void_dwellers"
+			inline_script = "game_start/species_machine_void_dwellers"
+			inline_script = "game_start/species_individual_machine_void_dwellers"
+			inline_script = "game_start/species_subspecies" ## Set subspecies flags
+
+			## Ethic
+			inline_script = "game_start/ethic_spiritualist"
+			inline_script = "game_start/ethic_materialist"
+			inline_script = "game_start/ethic_pacifist"
+			inline_script = "game_start/ethic_militarist"
+			inline_script = "game_start/ethic_egalitarian"
+			inline_script = "game_start/ethic_authoritarian"
+			inline_script = "game_start/ethic_xenophile"
+			inline_script = "game_start/ethic_xenophobe"
+
+			##Civics
+			inline_script = "game_start/civics"
+
+			# Apply rural districts depending on variable count
+			inline_script = "game_start/rural_districts_placement"
+
+			# set_planet_size = 6
+
 			}
 		}
 	}
@@ -259,7 +333,7 @@ planet_event = {
 		owner = {
 			has_origin = origin_whoniverse_church
 		}
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	option = {
@@ -296,7 +370,7 @@ planet_event = {
 		owner = {
 			has_origin = origin_whoniverse_church
 		}
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	option = {
@@ -454,7 +528,7 @@ country_event = {
 			capital_scope = {
 				while = {
 					count = 3
-					create_pop = {
+					create_pop_group = {
 						species = event_target:silence_species
 						ethos = random
 						}
@@ -546,7 +620,7 @@ planet_event = {
 		owner = {
 			has_origin = origin_whoniverse_church
 		}
-		num_pops > 0
+		pop_amount > 0
 	}
 	
 	immediate = {
@@ -646,7 +720,7 @@ planet_event = {
 
 		while = {
 			count = 5
-			create_pop = {
+			create_pop_group = {
 				species = event_target:silence_species
 				ethos = random
 				}
@@ -880,7 +954,7 @@ country_event = {
 				clear_deposits = yes
 				while = {
 					count = 2
-						create_pop = {
+						create_pop_group = {
 							species = event_target:owner_main_species
 					}
 				}
@@ -1226,7 +1300,7 @@ fleet_event = {
 		hidden_effect = {
 			event_target:alfava_metraxis_event = {
 				set_owner = root.owner
-				create_pop = {
+				create_pop_group = {
 					species = owner_main_species
 				}
 			}
@@ -1253,7 +1327,7 @@ fleet_event = {
 				limit = { exists = event_target:weeping_angel_species }
 				while = {
 					count = 8
-						create_pop = {
+						create_pop_group = {
 							species = event_target:weeping_angel_species
 						}
 					}
@@ -1298,12 +1372,13 @@ fleet_event = {
 				}
 				while = {
 					count = 8
-					create_pop = {
+					create_pop_group = {
 						species = event_target:weeping_angel_species
+						effect = { save_event_target_as = weeping_angels_pop_group }
 						}
 					}			
 				}
-			last_created_pop = { 
+			event_target:weeping_angels_pop_group = { 
 				set_citizenship_type = {
 					type = citizenship_whoniverse_predator cooldown = yes
 					}
@@ -1351,11 +1426,11 @@ fleet_event = {
 
 	immediate = {
 		event_target:alfava_metraxis_event = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 						has_trait = trait_whoniverse_weeping_angel
 				}
-				kill_pop = yes
+				kill_single_pop = yes
 			}
 		}
 	}

@@ -6,6 +6,15 @@
 
 dalekships_01 = {
 	fallback = fungoid_01
+	
+	ship_kinds = {
+		default_ship
+		space_amoeba
+		tiyanki
+		voidworm
+		cutholoid
+		crystalline_entity
+	}
 
 	has_city_graphics = no
 	ship_color = yes

@@ -244,13 +244,6 @@ fleet_event = {
 
 
 
-
-
-
-
-
-
-
 # Zygor project successful - either creates new Zygon species, or adds extra Zygons if they exist already
 country_event = {
 	id = whoniverse.101
@@ -300,13 +293,15 @@ country_event = {
 					}
 				while = {
 					count = 2
-					create_pop = {
+					create_pop_group = {
 						species = event_target:zygon_species
-						}
-					}			
-				last_created_pop = { 
+						effect = { save_event_target_as = zygon_pop_group }
+					}	
+				}			
+				event_target:zygon_pop_group = { 
 					set_citizenship_type = {
 						type = citizenship_limited
+						cooldown = no
 						}
 					}
 				}

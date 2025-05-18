@@ -38,7 +38,8 @@ councilor_whoniverse_dalek_remnants = {
 	}
 	civic = civic_whoniverse_dalek_remnants
 	modifier = {
-		planet_priests_upkeep_mult = -0.01
+		# planet_priests_upkeep_mult = -0.01
+		planet_bureaucrats_upkeep_mult = -0.01
 		country_naval_cap_mult = 0.01
 	}
 	ai_hiring_weight = {

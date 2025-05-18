@@ -547,11 +547,9 @@ whoniverse_dalek_empire_remnants_start_initializer = {
 				species = last_created_species
 				type = "postatomic_army"
 			}
-			while = {
-				count = @early_space_age_pops
-				create_pop = {
-					species = last_created_species
-				}
+			create_pop_group = {
+				species = last_created_species
+				size = @early_space_age_pops
 			}
 			add_building = building_primitive_farm
 			add_building = building_primitive_factory

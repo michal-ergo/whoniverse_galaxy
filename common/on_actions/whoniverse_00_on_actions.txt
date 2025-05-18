@@ -2,6 +2,8 @@
 # Origin setup events
 on_game_start_country = {
 	events = {
+		whoniverse.1 # Game Start inline scripts
+		whoniverse.2 # kill Chosen
 		whoniverse.10 # New Dalek Paradigm origin setup
 		whoniverse.35 # Cyberiad origin setup event
 		whoniverse.50 # Cyberiad origin event chain
@@ -18,7 +20,6 @@ on_game_start_country = {
 		whoniverse.271 # Dalek Civil War setup
 		whoniverse.240 # Nestene origin setup event
 		whoniverse.310 # Shadow Proclamation setup
-		whoniverse.1 # kill Chosen
 		whoniverse.362 # Silurian Origin setup
 		whoniverse.363 # Prehistoric Sol wormholes seen
 		whoniverse.381 # Sontaran origin setup event
@@ -49,7 +50,7 @@ on_press_begin = {
 
 on_mid_game_pulse_country = {
 	events = {
-		whoniverse.6 # Reinvention of the Dalek Empire
+		whoniverse.210 # Reinvention of the Dalek Empire
 		whoniverse.77 # UNIT rename event
 		whoniverse.150 # Silence Will Fall event chain
 		whoniverse.390 # Dalek Time Strategist
@@ -59,14 +60,14 @@ on_mid_game_pulse_country = {
 # Dalek Incubation Vats planet transfer
 on_planet_transfer = {
 	events = {
-		whoniverse.9
+		# whoniverse.9 # enable organic assembly for Daleks - currently disabled
 	}
 }
 
-# Planet Conquer: Dalek Vats for AI .9, Cyber-Conversion message .37
+# Planet Conquer: Cyber-Conversion message .37
 on_planet_conquer = {
     events = { 
-		whoniverse.9
+		# whoniverse.9 # enable organic assembly for Daleks - currently disabled
 		whoniverse.37
 		whoniverse.190 # Cybusmen rename event
 		whoniverse.203 # Dalek rename event
@@ -122,8 +123,15 @@ on_colony_5_year_pulse = {
 	}
 }
 
+# Triggers event when each country first sends a ship into the system (once per country)
+# Scope = Ship
+# From = System
+# FromFrom = Country
+# on_entering_system_first_time - graygoo.160, leviathans.3000...
+
 # Scope = Fleet
 # From = System
+# A fleet has entered a system | See also: on_fleet_auto_move_arrival
 on_entering_system_fleet = {
 		events = {
 			whoniverse.180 # Pete's World (Parallel Universe) exploration

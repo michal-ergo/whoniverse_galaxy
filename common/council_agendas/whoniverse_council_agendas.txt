@@ -18,8 +18,9 @@ agenda_whoniverse_dalek_supremacy = {
 		}
 	}
 	modifier = {
-		country_unity_produces_mult = 0.05
-		planet_pop_assembly_organic_mult = 0.025
+		country_unity_produces_mult = 0.025
+		bonus_pop_growth_mult = 0.05
+		fake_pop_growth_mod = 0.05
 		rivalries_influence_produces_mult = 0.2
 	}
 	finish_modifier = agenda_whoniverse_dalek_supremacy_finish

@@ -488,11 +488,13 @@ whoniverse_cyberiad = {
 		species_bio="The Cyberiad represents the cold, calculating nature of the Cybermen, whose origins trace back to the planet Mondas. These Cybermen, constantly seeking to upgrade themselves and others, have formed a collective consciousness driven by logic and efficiency. Ruthless in their quest to eliminate emotions and individuality, the Cyberiad seeks to convert all organic life into their ranks, viewing this as the ultimate form of survival and superiority. Their mechanical minds are dedicated to the expansion of their collective, with each new conversion marking another step toward their goal of universal domination."
 		name_list = "CYBERMAN1"
 		gender = indeterminable
-		trait = "trait_cybernetic"
 		trait = "trait_hive_mind"
+		trait = "trait_cybernetic"
 		trait = "trait_whoniverse_cyber_suit"
-		trait = "trait_cyborg_durable"
-		trait = "trait_cyborg_neural_limiters"
+		trait = "trait_whoniverse_emotion_inhibitors"
+		trait = "trait_strong"
+		# trait = "trait_cyborg_durable"
+		# trait = "trait_cyborg_neural_limiters"
 	}
 
 	secondary_species = {
@@ -584,8 +586,10 @@ whoniverse_cybus_industries = {
 		trait = "trait_hive_mind"
 		trait = "trait_cybernetic"
 		trait = "trait_whoniverse_cyber_suit"
-		trait = "trait_cyborg_durable"
-		trait = "trait_cyborg_neural_limiters"
+		trait = "trait_whoniverse_emotion_inhibitors"
+		trait = "trait_strong"
+		# trait = "trait_cyborg_durable"
+		# trait = "trait_cyborg_neural_limiters"
 	}
 
 	secondary_species = {

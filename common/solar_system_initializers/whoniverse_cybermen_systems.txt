@@ -265,11 +265,9 @@ whoniverse_tiestus_system_initializer = {
 				species = last_created_species
 				type = "postatomic_army"
 			}
-			while = {
-				count = @atomic_age_pops
-				create_pop = {
-					species = last_created_species
-				}
+			create_pop_group = {
+				species = last_created_species
+				size = @early_space_age_pops
 			}
 			add_building = building_primitive_farm
 			add_building = building_primitive_factory
@@ -491,11 +489,9 @@ whoniverse_tasak_system_initializer = {
 
 			create_pre_ftl_blockers = yes
 
-			while = {
-				count = @late_medieval_age_pops
-				create_pop = {
-					species = last_created_species
-				}
+			create_pop_group = {
+				species = last_created_species
+				size = @late_medieval_age_pops
 			}
 			add_building = building_primitive_dwellings
 			add_building = building_primitive_dwellings

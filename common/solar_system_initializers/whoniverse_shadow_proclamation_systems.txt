@@ -217,12 +217,10 @@ whoniverse_judoonia_system_initializer = {
 			}
 			set_owner = last_created_country
 
-			while = {
-				count = @atomic_age_pops
-				create_pop = {
-					species = last_created_species
-				}
-			}
+			create_pop_group = {
+						species = last_created_species
+						size = @early_space_age_pops
+					}
 
 			while = {
 				count = 6

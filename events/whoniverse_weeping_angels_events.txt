@@ -48,7 +48,7 @@ event = {
 	trigger = {
 		any_playable_country = {
 			num_unique_species > 1
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_trait = trait_whoniverse_weeping_angel
 			}
 		}
@@ -58,7 +58,7 @@ event = {
 		every_playable_country = {
 			limit = {
 				num_unique_species > 1
-				any_owned_pop = {
+				any_owned_pop_group = {
 					has_trait = trait_whoniverse_weeping_angel
 				}
 			}
@@ -92,7 +92,7 @@ planet_event = {
 				while = {
 					count = 1
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							NOT = {
 								has_trait = trait_whoniverse_weeping_angel
 							}
@@ -102,12 +102,12 @@ planet_event = {
 							value > 0
 							}
 						}
-					random_owned_pop = {
+					random_owned_pop_group = {
 						limit = {
 							is_organic_species = yes
 							NOT = { has_trait = trait_whoniverse_weeping_angel }
 							}
-						kill_pop = yes
+						kill_single_pop = yes
 						}
 					}
 				}
@@ -119,7 +119,7 @@ planet_event = {
 				while = {
 					count = 1
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							NOT = {
 								has_trait = trait_whoniverse_weeping_angel
 							}
@@ -129,18 +129,18 @@ planet_event = {
 							value > 0
 							}
 						}
-					random_owned_pop = {
+					random_owned_pop_group = {
 						limit = {
 							is_organic_species = yes
 							NOT = { has_trait = trait_whoniverse_weeping_angel }
 							}
-						kill_pop = yes
+						kill_single_pop = yes
 						}
-					random_owned_pop = {
+					random_owned_pop_group = {
 						limit = {
 							has_trait = trait_whoniverse_weeping_angel
 							}
-						kill_pop = yes
+						kill_single_pop = yes
 						}
 					}
 				}
@@ -152,7 +152,7 @@ planet_event = {
 				while = {
 					count = 1
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							NOT = {
 								has_trait = trait_whoniverse_weeping_angel
 							}
@@ -162,12 +162,12 @@ planet_event = {
 							value > 0
 							}
 						}
-					random_owned_pop = {
+					random_owned_pop_group = {
 						limit = {
 							is_organic_species = yes
 							NOT = { has_trait = trait_whoniverse_weeping_angel }
 							}
-						kill_pop = yes
+						kill_single_pop = yes
 						}
 					random_owned_species = {
 						limit = {
@@ -175,7 +175,7 @@ planet_event = {
 							}
 						save_global_event_target_as = weeping_angel_species
 						}
-					create_pop = {
+					create_pop_group = {
 						species = event_target:weeping_angel_species
 						}
 					}
@@ -231,7 +231,7 @@ planet_event = {
 		owner = {
 			has_origin = origin_whoniverse_unit
 		}
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	is_triggered_only = yes
@@ -241,11 +241,11 @@ planet_event = {
 			limit = { exists = event_target:weeping_angel_species }
 			while = {
 				count = 3
-					create_pop = {
-						species = event_target:weeping_angel_species
-					}
+				create_pop_group = {
+					species = event_target:weeping_angel_species
 				}
 			}
+		}
 		else_if = {
 			limit = { NOT = { exists = event_target:weeping_angel_species } }
 			if = {
@@ -286,12 +286,13 @@ planet_event = {
 			}
 			while = {
 				count = 3
-				create_pop = {
+				create_pop_group = {
 					species = event_target:weeping_angel_species
+					effect = { save_event_target_as = weeping_angels_pop_group }
 					}
 				}			
 			}
-		last_created_pop = { 
+		event_target:weeping_angels_pop_group = { 
 			set_citizenship_type = {
 				type = citizenship_whoniverse_predator cooldown = yes
 				}
@@ -352,7 +353,7 @@ planet_event = {
 		owner = {
 			has_origin = origin_whoniverse_unit
 		}
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	is_triggered_only = yes
@@ -391,18 +392,18 @@ planet_event = {
 		owner = {
 			has_origin = origin_whoniverse_unit
 		}
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	is_triggered_only = yes
 
 	option = {
 		name = whoniverse.123.a
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 					has_trait = trait_whoniverse_weeping_angel
 			}
-			kill_pop = yes
+			kill_single_pop = yes
 		}
 		owner = {
 			end_event_chain = "whoniverse_blink_chain"
@@ -436,7 +437,7 @@ planet_event = {
 				has_authority = auth_hive_mind
 				}
 			}
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	is_triggered_only = yes
@@ -473,7 +474,7 @@ planet_event = {
 				has_authority = auth_hive_mind
 				}
 			}
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	immediate = {
@@ -481,7 +482,7 @@ planet_event = {
 			limit = { exists = event_target:weeping_angel_species }
 			while = {
 				count = 1
-					create_pop = {
+					create_pop_group = {
 						species = event_target:weeping_angel_species
 					}
 				}
@@ -526,12 +527,13 @@ planet_event = {
 			}
 			while = {
 				count = 1
-				create_pop = {
+				create_pop_group = {
 					species = event_target:weeping_angel_species
+					effect = { save_event_target_as = weeping_angels_pop_group }
 					}
 				}			
 			}
-		last_created_pop = { 
+		event_target:weeping_angels_pop_group = { 
 			set_citizenship_type = {
 				type = citizenship_whoniverse_predator cooldown = yes
 				}
@@ -579,7 +581,7 @@ planet_event = {
 		NOT = {
 			has_planet_flag = colony_event
 		}
-		num_pops > 0
+		pop_amount > 0
 	}	
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -615,7 +617,7 @@ planet_event = {
 				has_authority = auth_hive_mind
 				}
 			}
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	immediate = {
@@ -623,7 +625,7 @@ planet_event = {
 			limit = { exists = event_target:weeping_angel_species }
 			while = {
 				count = 5
-					create_pop = {
+					create_pop_group = {
 						species = event_target:weeping_angel_species
 					}
 				}
@@ -668,12 +670,13 @@ planet_event = {
 			}
 			while = {
 				count = 5
-				create_pop = {
+				create_pop_group = {
 					species = event_target:weeping_angel_species
+					effect = { save_event_target_as = weeping_angel_pop_group }
 					}
 				}			
 			}
-		last_created_pop = { 
+		event_target:weeping_angel_pop_group = { 
 			set_citizenship_type = {
 				type = citizenship_whoniverse_predator cooldown = yes
 				}
@@ -721,7 +724,7 @@ planet_event = {
 		NOT = {
 			has_planet_flag = colony_event
 		}
-		num_pops > 0
+		pop_amount > 0
 	}	
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -757,7 +760,7 @@ planet_event = {
 				has_authority = auth_hive_mind
 				}
 			}
-		num_pops > 2
+		pop_amount > 2
 	}
 
 	immediate = {
@@ -765,7 +768,7 @@ planet_event = {
 			limit = { exists = event_target:weeping_angel_species }
 			while = {
 				count = 1
-					create_pop = {
+					create_pop_group = {
 						species = event_target:weeping_angel_species
 					}
 				}
@@ -810,12 +813,13 @@ planet_event = {
 			}
 			while = {
 				count = 1
-				create_pop = {
+				create_pop_group = {
 					species = event_target:weeping_angel_species
+					effect = { save_event_target_as = weeping_angels_pop_group }
 					}
 				}			
 			}
-		last_created_pop = { 
+		event_target:weeping_angels_pop_group = { 
 			set_citizenship_type = {
 				type = citizenship_whoniverse_predator cooldown = yes
 				}
@@ -837,32 +841,45 @@ planet_event = {
 	option = {
 		name = DISCONCERTING
 		custom_tooltip = whoniverse.135.tooltip
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = {
 				NOR = {
 					has_ethic = "ethic_fanatic_spiritualist"
-					pop_has_trait = trait_whoniverse_weeping_angel
+					has_trait = trait_whoniverse_weeping_angel
 				}
 			}
-			pop_change_ethic = ethic_fanatic_spiritualist
+			# pop_change_ethic = ethic_fanatic_spiritualist
+			pop_group_transfer_ethic = {
+					POP_GROUP = this
+					ETHOS = ethic_fanatic_spiritualist
+					PERCENTAGE = 100 # or 1 ?
+				}
 		}
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = {
 				NOR = {
 					has_ethic = "ethic_fanatic_spiritualist"
-					pop_has_trait = trait_whoniverse_weeping_angel
+					has_trait = trait_whoniverse_weeping_angel
 				}
 			}
-			pop_change_ethic = ethic_fanatic_spiritualist
+			pop_group_transfer_ethic = {
+					POP_GROUP = this
+					ETHOS = ethic_fanatic_spiritualist
+					PERCENTAGE = 100
+				}
 		}
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = {
 				NOR = {
 					has_ethic = "ethic_fanatic_spiritualist"
-					pop_has_trait = trait_whoniverse_weeping_angel
+					has_trait = trait_whoniverse_weeping_angel
 				}
 			}
-			pop_change_ethic = ethic_fanatic_spiritualist
+			pop_group_transfer_ethic = {
+					POP_GROUP = this
+					ETHOS = ethic_fanatic_spiritualist
+					PERCENTAGE = 100
+				}
 		}
 	}
 }

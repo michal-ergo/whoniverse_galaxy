@@ -1,0 +1,47 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "cyber_01_outpost_frame_mesh"
+		file = "gfx/models/ships/cyber_01/Starbase_Assets/cyber_01_starbase_frame.mesh"
+	}
+
+	pdxmesh = {
+		name = "cyber_01_outpost_mesh"
+		file = "gfx/models/ships/cyber_01/Starbase_Assets/cyber_01_starbase_outpost.mesh"
+		animation = { id = "idle" 			type = "cyber_01_starbase_idle_animation" }
+		animation = { id = "death" 			type = "cyber_01_starbase_death_animation" }
+	}
+
+	pdxmesh = {
+		name = "cyber_01_starport_mesh"
+		file = "gfx/models/ships/cyber_01/Starbase_Assets/cyber_01_starbase_starport.mesh"		
+		animation = { id = "idle" 			type = "cyber_01_starbase_idle_animation" }
+		animation = { id = "death" 			type = "cyber_01_starbase_death_animation" }
+	}
+
+	pdxmesh = {
+		name = "cyber_01_starhold_mesh"
+		file = "gfx/models/ships/cyber_01/Starbase_Assets/cyber_01_starbase_starhold.mesh"		
+		animation = { id = "idle" 			type = "cyber_01_starbase_idle_animation" }
+		animation = { id = "death" 			type = "cyber_01_starbase_death_animation" }
+	}
+
+	pdxmesh = {
+		name = "cyber_01_starfort_mesh"
+		file = "gfx/models/ships/cyber_01/Starbase_Assets/cyber_01_starbase_starfort.mesh"		
+		animation = { id = "idle" 			type = "cyber_01_starbase_idle_animation" }
+		animation = { id = "death" 			type = "cyber_01_starbase_death_animation" }
+	}
+
+	pdxmesh = {
+		name = "cyber_01_citadel_mesh"
+		file = "gfx/models/ships/cyber_01/Starbase_Assets/cyber_01_starbase_citadel.mesh"		
+		animation = { id = "idle" 			type = "cyber_01_starbase_idle_animation" }
+		animation = { id = "death" 			type = "cyber_01_starbase_death_animation" }
+	}
+}
+
+animation = {
+	name = "cyber_01_habitat_idle_animation"
+	file = "cyber_01_habitat_idle.anim"
+}
